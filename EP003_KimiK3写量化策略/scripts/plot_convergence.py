@@ -9,7 +9,7 @@ EP003 · hyperopt 收敛曲线
                    这正是过拟合的方向，所以我故意没追。
 
 用法（在容器里跑）：
-  cd /d/freqtrade_demo/ft_userdata
+  cd <你的 freqtrade 工作目录>
   docker compose run --rm --entrypoint bash freqtrade -c \
     "pip install -q matplotlib; python /freqtrade/user_data/plot_convergence.py"
 

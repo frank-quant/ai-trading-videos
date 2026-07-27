@@ -1,94 +1,43 @@
-# EP003 Kimi Code CLI 提示词（ETH · 30m · 三段划分）
+# EP003 · Kimi Code 提示词(ETH · 30m · 三段划分)
 
-> 复制「提示词正文」整段喂给 Kimi Code CLI。
-> 这条 prompt 同时是图文引流资产，可整段放公众号/小红书。
+把下面「提示词正文」整段喂给 Kimi Code CLI。喂之前先按步骤一把数据下好。
 
-## ✅ 环境已就绪（已验证可复现）
+## 环境前提
 
-| 项 | 状态 |
+| 项 | 值 |
 |---|---|
-| Freqtrade | 2026.6（Docker），`lookahead-analysis` / `recursive-analysis` 可用 |
-| config | `user_data/config_eth30m.json`：futures / isolated / fee 0.0005 / **30m** |
-| 交易对 | **ETH/USDT:USDT**（U 本位永续，可做空，杠杆 1x） |
-| 数据 | 30m OHLCV 115766 根 + mark + funding_rate，2020-01 → 2026-07 |
+| Freqtrade | 2026.x(Docker),`lookahead-analysis` / `recursive-analysis` 可用 |
+| config | `user_data/config_eth30m.json`:futures / isolated / fee 0.0005 / 30m |
+| 交易对 | ETH/USDT:USDT(U 本位永续,可做空,杠杆 1x) |
+| 数据 | 30m OHLCV + mark + funding_rate,2020-01 → 2026-07 |
 
-> ⚠️ Git Bash 下容器内绝对路径会被转换，命令一律用相对路径 `user_data/config_eth30m.json`。
+三段基准(ETH 买入持有):TRAIN **+2569%** / VALID **−27%** / TEST **−36.9%**。
+TEST 段策略只要亏损明显小于它、或正收益,就是跑赢大盘。
 
-## 📊 ETH 买入持有基准（三段）
+> Git Bash 下容器内绝对路径会被转换,`--config` 一律用相对路径 `user_data/config_eth30m.json`。
 
-| 段 | 区间 | 买入持有 |
-|---|---|---|
-| TRAIN | 2020-01 ~ 2024-06 | +2569% |
-| VALID | 2024-07 ~ 2025-06 | −27% |
-| **TEST** | 2025-07 ~ 2026-07 | **−36.86%** |
+## 步骤一:下载数据
 
-**TEST 段 ETH 跌 36.9%——策略只要亏损明显小于它、或正收益，就是跑赢大盘。**
-
-## 🎬 双版本并行（互不覆盖）
-
-| | 策略名 | 状态 |
-|---|---|---|
-| **保底版** | `KimiK3Strategy` | ✅ 已验证 **TEST +4.71%**，文件在 `user_data/strategies/`，另有备份在 `user_data/_verified_eth30m/` |
-| **新实验版** | `KimiK3StrategyV2` | 待 Kimi 生成，**写到新文件，不碰保底版** |
-
-**hyperopt 有随机性，V2 的参数和结果不会等于保底版。** 可能更好，也可能更差。
-
-**跑完 V2 的 TEST 后对比，不满意就直接用保底版录制：**
-
-```bash
-# 保底版（已验证 +4.71%）
-docker compose run --rm freqtrade backtesting --config user_data/config_eth30m.json \
-  --strategy KimiK3Strategy --timerange 20250701-20260701
-
-# 新实验版
-docker compose run --rm freqtrade backtesting --config user_data/config_eth30m.json \
-  --strategy KimiK3StrategyV2 --timerange 20250701-20260701
-```
-
-> ⚠️ 保底版备份路径：`user_data/_verified_eth30m/`（含 README 说明恢复方法）。
-> 万一 strategies 目录被弄乱，从那里拷回来即可。
-
----
-
-## 🎬 步骤一：下载数据（这段要录）
-
-在 `D:\freqtrade_demo\ft_userdata` 下执行。
-
-**① 下载数据（就这一条）**
 ```bash
 docker compose run --rm freqtrade download-data --config user_data/config_eth30m.json --exchange binance --pairs ETH/USDT:USDT --timeframes 30m --trading-mode futures --timerange 20200101-20260701
 ```
-合约模式下，Freqtrade 会**自动连带下载 mark price 和 funding rate**（回测算持仓成本要用），不用单独跑。
 
-**② 验证数据完整（录屏效果好，是张表）**
+合约模式下会**自动连带下载 mark price 和 funding rate**(回测算持仓成本要用)。验证数据完整:
+
 ```bash
 docker compose run --rm freqtrade list-data --config user_data/config_eth30m.json --trading-mode futures --show-timerange --pairs ETH/USDT:USDT
 ```
 
-应看到（实测输出）：
+## 步骤二:提示词正文
 
-| Pair          | Timeframe | Type         | From       | To         | Candles    |
-| ------------- | --------- | ------------ | ---------- | ---------- | ---------- |
-| ETH/USDT:USDT | 30m       | futures      | 2019-11-27 | 2026-07-05 | **115766** |
-| ETH/USDT:USDT | 1h        | funding_rate | 2019-11-27 | 2026-07-03 | 7231       |
-| ETH/USDT:USDT | 1h        | mark         | 2019-12-23 | 2026-07-04 | 57239      |
-
-> `--pairs ETH/USDT:USDT` 是为了只显示 ETH。不加的话会把之前下的 BTC 也列出来，画面乱。
-
-> ⚠️ **数据已经下好了**，跑第①条只做增量更新，几秒就完——录屏时会很快闪过。
-> 想录「完整下载」的过程可以加 `--erase` 强制重下，但**没必要冒险**：
-> 用第②条那张表展示数据完备性，画面更好也更安全。
-
----
-
-## 🎬 步骤二：提示词正文
+> 里面的「工作目录」换成你自己的路径。
 
 ```
 你是量化策略开发助手。我用 Freqtrade（Docker），你负责写一个能做多也能做空的
 ETH 永续合约策略，并优化到能用。
 
 ## 环境
-- 工作目录：D:\freqtrade_demo\ft_userdata
+- 工作目录：<你的 freqtrade 工作目录>
 - 所有命令通过 docker compose 执行，格式：docker compose run --rm freqtrade [子命令] --config user_data/config_eth30m.json ...
 - --config 一律用相对路径，不要写 /freqtrade/... 开头的绝对路径（Git Bash 会转换出错）
 - 市场：U 本位永续合约（futures, isolated），可做多可做空
@@ -222,51 +171,10 @@ ETH 永续合约策略，并优化到能用。
 现在开始，不用等我确认。
 ```
 
----
+## 步骤三:TEST 段验收
 
-## 我要跑的命令（TEST）
+Kimi 交付后,自己在从没让它碰过的 TEST 段跑一次回测:
 
 ```bash
-docker compose run --rm freqtrade backtesting \
-  --config user_data/config_eth30m.json \
-  --strategy KimiK3StrategyV2 \
-  --timerange 20250701-20260701 \
-  --export trades
+docker compose run --rm freqtrade backtesting --config user_data/config_eth30m.json --strategy KimiK3StrategyV2 --timerange 20250701-20260701 --export trades
 ```
-
-## ✅ 最终采用：`KimiK3StrategyV2`
-
-| 指标 | TRAIN | VALID | **TEST（最终）** | ETH 买入持有 |
-|---|---|---|---|---|
-| 总收益 | +113.1% | −24.6% | **+3.15%** | **−36.72%** |
-| Sharpe（平仓/日） | 0.22 | −0.60 | **0.08 / 0.26** | 负 |
-| 最大回撤 | 49.4% | 39.6% | **24.39%** | ~69% |
-| 交易笔数 | 533 | 99 | **110**（胜率 64.5%） | — |
-| 多单/空单 | +1233 / −102 | −238 / −8 | **−90.12 / +121.66** | — |
-
-**为什么用 V2 而不是保底版**：V2 是完整跑完全流程的那一版。
-保底版（`KimiK3Strategy`，TEST +4.71%）虽然略好，但**看到两个结果再挑好看的那个，
-就是在测试集上做选择**——正是本片要批判的做法。用 V2，流程干净。
-
-> 保底版仍保留在 `user_data/strategies/` 和 `user_data/_verified_eth30m/`，作为对照留档。
-
-### 📌 讲解时的诚实分寸
-
-✅ **可以说**：ETH 跌 36.7%，策略赚 3.15%，**跑赢大盘约 40 个百分点**，
-回撤 24.4%（大盘约 69%，只有三分之一），**而且这一年数据它从没见过**。
-**跌市里是做空（+121.66）扛起了收益，多单是拖累（−90.12）。**
-
-⚠️ **必须补的话**：
-- `p-value = 0.88` —— 一年样本，**盈利在统计上跟 0 区分不开，有运气成分**
-- `profit factor = 1.04` —— 勉强站在盈亏平衡线上
-- **VALID 是亏的（−24.6%）**，最终测试才转正；三组损失函数在 VALID 上全部亏损
-- **硬故事是「跑赢大盘 + 回撤砍到三分之一」，不是「稳定赚钱」**
-
-### 🎬 Kimi 表现的高光（录制素材）
-
-1. **三组在 VALID 全亏，它如实报告不硬凑**，并按规则 c 说明
-2. **Sortino 组 TRAIN 最高（+258.1%）、聚簇最紧，VALID 却最差（−39%）**
-   —— 「训练集收益最高的通常最脆」被第三次验证
-3. **它主动排除了退化解**：Calmar 全局最优只有 53 笔、Sortino 只有 63 笔（近零交易刷高 Sharpe）
-4. **2400 个 epoch 的 stoploss 全部合规**（[-0.300, -0.102]），它自己抽查确认
-5. **它警告继续调参「只会进一步过拟合 TRAIN 牛市」**，建议改结构而非调参
