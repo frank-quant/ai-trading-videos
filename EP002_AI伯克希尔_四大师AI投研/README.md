@@ -1,5 +1,7 @@
 # EP002 · AI 伯克希尔 · 四大师 AI 投研
 
+📺 看视频:[B站](https://www.bilibili.com/video/BV1nwKc6pEmi/) · [YouTube](https://www.youtube.com/watch?v=YtfBUUh4hnA)
+
 别再直接问 AI「这股能不能买」了。同样一个问题,随手问 chatbot 给你的是一段正确的废话;
 用对方法,给你的是一份带交叉验证、四个视角、明确标注不确定性的投研报告。
 

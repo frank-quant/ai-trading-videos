@@ -1,5 +1,7 @@
 # EP001 · Claude 操控 Freqtrade 机器人
 
+📺 看视频:[B站](https://www.bilibili.com/video/BV1RhNA6jELx/) · [YouTube](https://www.youtube.com/watch?v=HXz_TcSSAMc)
+
 让 Claude Code 自己读配置、写策略、跑回测、再迭代——你只动嘴。
 
 这期讲清两条路子的分工:
@@ -27,6 +29,12 @@
 1. **timeframe 三处要一致**:`config.json`、策略的 `timeframe` 属性、下载/回测的周期,统一成 5m,否则报错或对不上。
 2. **下数据慢且要联网**:建议先 `download-data` 把数据下好,再跑回测更顺。
 3. **迭代要真做**:先自己跑一遍,确认"第一版回撤偏大 → 加 ATR 后改善"确实成立,别把没验证的改进当结论。
+
+## 策略文件(结果)
+
+[`strategy/MyMeanReversion.py`](strategy/MyMeanReversion.py) 是照上面提示词跑出来的成品:
+布林带触下轨 + RSI 超卖进场,加了一层 EMA200 趋势过滤(只在均线上方买回调),回中轨出场,固定止损。
+直接丢进 `user_data/strategies/` 就能回测。
 
 ## ⚠️ 合规提醒
 
