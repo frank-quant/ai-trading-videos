@@ -26,7 +26,7 @@ TEST 段(最后一年)全程不许它碰,拿来当最终考卷。
 
 ## 怎么复现
 
-1. 按 [`prompts/kimi-code-提示词.md`](prompts/kimi-code-提示词.md) 先下好数据,再把「提示词正文」整段喂给 Kimi Code CLI。
+1. 按 [`prompts/kimi-code-prompt.md`](prompts/kimi-code-prompt.md) 先下好数据,再把「提示词正文」整段喂给 Kimi Code CLI。
    提示词里写死了三段划分、硬约束(必须真用 hyperopt、止损不得紧于 -10%、三种损失函数用 VALID 选)、
    未来函数禁令和自检步骤。
 2. 等它交出策略 + 参数对比表 + 三种损失函数对比 + 平台判断。

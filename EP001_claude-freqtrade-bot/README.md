@@ -20,7 +20,7 @@
 
 1. 装好 Freqtrade,确认 `docker compose run --rm freqtrade --version` 能跑通。
 2. 打开 Claude Code,进到 `user_data` 所在目录。
-3. 把 [`prompts/claude-code-实操提示词.md`](prompts/claude-code-实操提示词.md) 里的四段依次贴进去:
+3. 把 [`prompts/claude-code-prompts.md`](prompts/claude-code-prompts.md) 里的四段依次贴进去:
    改配置 → 写策略(布林带 + RSI 均值回归)→ 下数据回测 → 加 ATR 移动止损再对比。
 4. Claude Code 执行命令时会弹权限,点允许即可。
 

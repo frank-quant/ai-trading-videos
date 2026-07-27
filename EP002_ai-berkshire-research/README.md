@@ -30,7 +30,7 @@
 
 - 项目地址:https://github.com/xbtlin/ai-berkshire (MIT 许可)
 - 安装:`git clone` 后跑项目自带的 `install-claude-commands.sh`
-- 命令用法见 → [`命令速查.md`](命令速查.md)
+- 命令用法见 → [`command-cheatsheet.md`](command-cheatsheet.md)
 
 ## ⚠️ 合规提醒
 
