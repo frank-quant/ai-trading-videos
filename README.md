@@ -9,11 +9,11 @@
 
 ## 分期目录
 
-| 期号 | 主题 | 一句话 | 配套 | 视频 |
-| --- | --- | --- | --- | --- |
-| EP001 | [Claude 操控 Freqtrade 机器人](EP001_Claude操控Freqtrade机器人/) | 让 Claude Code 自己写策略、跑回测、迭代 | 提示词 + 策略 | [B站](https://www.bilibili.com/video/BV1RhNA6jELx/) · [YouTube](https://www.youtube.com/watch?v=HXz_TcSSAMc) |
-| EP002 | [AI 伯克希尔 · 四大师 AI 投研](EP002_AI伯克希尔_四大师AI投研/) | 别再直接问 AI「这股能不能买」,把它变成投研团队 | 命令速查 | [B站](https://www.bilibili.com/video/BV1nwKc6pEmi/) · [YouTube](https://www.youtube.com/watch?v=YtfBUUh4hnA) |
-| EP003 | [Kimi K3 写量化策略](EP003_KimiK3写量化策略/) | 让 Kimi 写一个能做空的 ETH 合约策略,严守样本内外纪律 | 提示词 + 策略 + 脚本 | [B站](https://www.bilibili.com/video/BV1Np3j6QEQc/) · [YouTube](https://www.youtube.com/watch?v=vNC-_rIajrw) |
+| 期号    | 主题                                                     | 一句话                              | 配套            | 视频                                                                                                          |
+| ----- | ------------------------------------------------------ | -------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------- |
+| EP001 | [Claude 操控 Freqtrade 机器人](EP001_Claude操控Freqtrade机器人/) | 让 Claude Code 自己写策略、跑回测、迭代       | 提示词 + 策略      | [B站](https://www.bilibili.com/video/BV1RhNA6jELx/) · [YouTube](https://www.youtube.com/watch?v=HXz_TcSSAMc) |
+| EP002 | [AI 伯克希尔 · 四大师 AI 投研](EP002_AI伯克希尔_四大师AI投研/)           | 别再直接问 AI「这股能不能买」,把它变成投研团队        | 命令速查          | [B站](https://www.bilibili.com/video/BV1nwKc6pEmi/) · [YouTube](https://www.youtube.com/watch?v=YtfBUUh4hnA) |
+| EP003 | [Kimi K3 写量化策略](EP003_KimiK3写量化策略/)                    | 让 Kimi 写一个能做空的 ETH 合约策略,严守样本内外纪律 | 提示词 + 策略 + 脚本 | [B站](https://www.bilibili.com/video/BV1Np3j6QEQc/) · [YouTube](https://www.youtube.com/watch?v=vNC-_rIajrw) |
 
 ## 每期目录里有什么
 

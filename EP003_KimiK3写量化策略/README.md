@@ -34,10 +34,11 @@ TEST 段(最后一年)全程不许它碰,拿来当最终考卷。
 
 ## 策略文件(结果)
 
-`strategy/` 里是跑出来的两个策略,丢进 `user_data/strategies/` 就能回测:
+[`strategy/KimiK3StrategyV2.py`](strategy/KimiK3StrategyV2.py) 是最终采用版,丢进 `user_data/strategies/` 就能回测:
+趋势(EMA20/50 + ADX)+ 震荡过滤(Choppiness + EMA 间距/ATR),双向交易,宽止损,`leverage()` 固定 1x。TEST +3.15%。
 
-- [`strategy/KimiK3StrategyV2.py`](strategy/KimiK3StrategyV2.py) — **最终采用版**。完整跑完全流程:趋势(EMA20/50 + ADX)+ 震荡过滤(Choppiness + EMA 间距/ATR),双向交易,宽止损,`leverage()` 固定 1x。TEST +3.15%。
-- [`strategy/KimiK3Strategy.py`](strategy/KimiK3Strategy.py) — **基线对照版**。TEST +4.71%,略好,但没采用——因为"看到两个结果再挑好看的那个",本身就是在测试集上做选择,正是这期要批判的做法。留作对照。
+> 其实还跑过一个基线版(TEST +4.71%,略好),但没用它——因为"看到两个结果再挑好看的那个",
+> 本身就是在测试集上做选择,正是这期要批判的做法。所以采用完整跑完全流程的 V2。
 
 ## 两张证据图(脚本在 `scripts/`)
 
