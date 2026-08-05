@@ -1,0 +1,77 @@
+{
+  "$schema": "https://schema.freqtrade.io/schema.json",
+  "_comment": "EP004 统一 config 骨架 · 四家一模一样 · 模型只写策略与 hyperopt 空间,不改这里",
+  "_ep004_final": {
+    "strategy": "XSRiskMomentum",
+    "timeframe": "4h",
+    "seed": 42,
+    "hyperopt_random_state": 42,
+    "epochs_used": 300,
+    "chosen_epoch": 276,
+    "final_params": {
+      "mom_days": 11,
+      "skip_days": 2,
+      "n_long": 5,
+      "n_short": 1,
+      "exit_buffer": 0.16,
+      "min_hold": 29
+    },
+    "_note": "Params also stored in strategies/XSRiskMomentum.json (freqtrade loads them from there). Chosen epoch 276 over top epoch 273: near-identical objective (2.056 vs 2.111) with 6 concurrent positions instead of 3 and higher train Sharpe (0.79 vs 0.30) — see design.md."
+  },
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.99,
+  "max_open_trades": 20,
+  "dry_run": true,
+  "dry_run_wallet": 10000,
+  "_timeframe_note": "刻意不在 config 里设 timeframe —— 否则会覆盖策略自己的设定。周期由各模型在策略类里选(30m/1h/4h/1d 数据均已备好)。",
+  "fee": 0.0006,
+  "_fee_comment": "统一真实成本:0.06% = Binance 永续 taker(~0.045%) + 滑点代理。验证复现也用这个,不用模型自报。",
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "pair_whitelist": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "SOL/USDT:USDT",
+      "BNB/USDT:USDT",
+      "XRP/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "ADA/USDT:USDT",
+      "LINK/USDT:USDT",
+      "LTC/USDT:USDT",
+      "BCH/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "DOT/USDT:USDT",
+      "UNI/USDT:USDT",
+      "ATOM/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "FIL/USDT:USDT",
+      "ETC/USDT:USDT",
+      "TRX/USDT:USDT",
+      "XLM/USDT:USDT",
+      "AAVE/USDT:USDT"
+    ],
+    "pair_blacklist": []
+  },
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather"
+}

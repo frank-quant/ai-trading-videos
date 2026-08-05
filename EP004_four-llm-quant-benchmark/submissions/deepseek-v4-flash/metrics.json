@@ -1,0 +1,36 @@
+{
+  "model": "deepseek_momentum_xs",
+  "seed": 42,
+  "factors": ["momentum_13d"],
+  "timeframe": "1d",
+  "epochs_used": 500,
+  "strategy_family": "cross-sectional",
+  "turnover_control": "rank hysteresis (exit_buffer=0.15) + min_hold=10d on 1d bars",
+  "fee_bps": 6,
+  "slippage_bps": 0,
+  "funding_included": true,
+  "train": {
+    "ann_return": 0.1915,
+    "sharpe": 0.6888,
+    "sortino": 1.1102,
+    "calmar": 0.9119,
+    "max_drawdown": 0.2101,
+    "win_rate": 0.4496,
+    "profit_factor": 1.1184,
+    "turnover_per_year": 48.99,
+    "n_trades": 1399,
+    "sharpe_net_of_costs": 0.6888
+  },
+  "valid": {
+    "ann_return": 0.7108,
+    "sharpe": 2.1486,
+    "sortino": 6.5877,
+    "calmar": 6.1692,
+    "max_drawdown": 0.1152,
+    "win_rate": 0.4905,
+    "profit_factor": 1.5336,
+    "turnover_per_year": 53.08,
+    "n_trades": 420,
+    "sharpe_net_of_costs": 2.1486
+  }
+}
