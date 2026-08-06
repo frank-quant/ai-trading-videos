@@ -1,6 +1,6 @@
 # EP004 · 四个大模型同一道量化题
 
-📺 看视频:B站 · YouTube(链接待补)
+📺 看视频:[B站](https://www.bilibili.com/video/BV15HMS6DETZ/) · [YouTube](https://youtu.be/eLvZ_S8D3jU)
 
 把 **Kimi K3 / Claude Opus 5 / Claude Fable 5 / DeepSeek V4 Flash** 关进同一场考试:
 同一份题目、同一份数据、同一笔手续费、同一个目标函数,各自用**自己的官方 CLI** 写一套
