@@ -16,7 +16,7 @@
 | **底座** | [TradingAgents-CN](https://github.com/hsliuping/TradingAgents-CN) —— LLM 驱动的多 Agent 交易框架,A 股适配版 |
 | **模型** | 智谱 GLM-5.3 |
 | **编程工具** | ZCode |
-| **产出** | `studio/` 四个模块:digest / notify / replay / compare |
+| **产出** | [**TradingAgents-CN-studio**](https://github.com/frank-quant/TradingAgents-CN-studio) —— 四个模块:digest / notify / replay / compare(独立仓库,MIT) |
 
 原生 TradingAgents 只是个**分析工具**,不是能自动运转的流水线。中间差四样:
 
@@ -33,13 +33,15 @@
 
 ```
 prompts/     给 ZCode 的提示词原文，可直接复制
-studio/      四个模块的完整代码（MIT，可独立使用）
 report/      本期演示的完整报告 + 辩论回放（比亚迪 002594）
 RUNBOOK.md   从零复现的完整步骤
 ```
 
-`studio/` 是能独立跑的完整插件，不改 TradingAgents-CN 任何文件。
-装法和用法见 [`studio/README.md`](studio/README.md)。
+四个模块的代码在**独立仓库**里，不改 TradingAgents-CN 任何文件：
+
+### 👉 [frank-quant/TradingAgents-CN-studio](https://github.com/frank-quant/TradingAgents-CN-studio)
+
+装法、配置、命令行用法都在那边的 README。
 
 ---
 
@@ -50,7 +52,7 @@ RUNBOOK.md   从零复现的完整步骤
 1. **装底座** —— 把 [`prompts/01-install.md`](prompts/01-install.md) 丢给 ZCode,让它读 README 用 Docker 部署
 2. **接模型** —— Web UI 里加自定义厂家,厂家 ID 填 `zhipu`,模型名 `glm-5.3`
 3. **跑一只票** —— 分析深度拉满,等五六分钟出报告
-4. **装 studio** —— 直接用 [`studio/`](studio/) 里的代码，或者把 [`prompts/03-design-studio.md`](prompts/03-design-studio.md) 丢给 ZCode 自己生成一遍
+4. **装 studio** —— 直接用 [现成的仓库](https://github.com/frank-quant/TradingAgents-CN-studio)，或者把 [`prompts/03-design-studio.md`](prompts/03-design-studio.md) 丢给 ZCode 自己生成一遍
 
 **前置**:Docker Desktop、一个智谱 API Key、一个 Tushare Token(免费额度够用)。
 

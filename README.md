@@ -15,7 +15,7 @@
 | EP002 | [AI 伯克希尔 · 四大师 AI 投研](EP002_ai-berkshire-research/)           | 别再直接问 AI「这股能不能买」,把它变成投研团队        | 命令速查          | [B站](https://www.bilibili.com/video/BV1nwKc6pEmi/) · [YouTube](https://www.youtube.com/watch?v=YtfBUUh4hnA) |
 | EP003 | [Kimi K3 写量化策略](EP003_kimi-k3-strategy/)                    | 让 Kimi 写一个能做空的 ETH 合约策略,严守样本内外纪律 | 提示词 + 策略 + 脚本 | [B站](https://www.bilibili.com/video/BV1Np3j6QEQc/) · [YouTube](https://www.youtube.com/watch?v=vNC-_rIajrw) |
 | EP004 | [四个大模型同一道量化题](EP004_four-llm-quant-benchmark/) | 同题同数据,四家写量化策略,扔进跌 45% 的样本外年份 | 题目 + 四家交付物 + 验证脚本 + 完整报告 | [B站](https://www.bilibili.com/video/BV15HMS6DETZ/) · [YouTube](https://youtu.be/eLvZ_S8D3jU) |
-| EP007 | [用 GLM-5.3 搭 A 股投研工作流](EP007_glm53-tradingagents-workflow/) | 给多 Agent 交易框架补四个模块,每天早上自动推手机 | 提示词 + 四模块代码 + 复现步骤 | 〔待补〕 |
+| EP007 | [用 GLM-5.3 搭 A 股投研工作流](EP007_glm53-tradingagents-workflow/) | 给多 Agent 交易框架补四个模块,每天早上自动推手机 | 提示词 + 复现步骤 + 报告样本 · 插件另开仓库 [studio](https://github.com/frank-quant/TradingAgents-CN-studio) | 〔待补〕 |
 
 ## 每期目录里有什么
 

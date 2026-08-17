@@ -51,7 +51,9 @@
 
 ## 四、装 studio(约 3 小时)
 
-把 [`prompts/03-design-studio.md`](prompts/03-design-studio.md) 丢给 ZCode,
+**想直接用现成的**:[frank-quant/TradingAgents-CN-studio](https://github.com/frank-quant/TradingAgents-CN-studio),clone 下来按那边的 README 装。
+
+**想自己生成一遍**:把 [`prompts/03-design-studio.md`](prompts/03-design-studio.md) 丢给 ZCode,
 先要设计。结构确认之后,按 [`prompts/04-build-modules.md`](prompts/04-build-modules.md)
 **一个模块一个 prompt** 地要实现。
 
