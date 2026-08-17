@@ -11,6 +11,21 @@
 
 ---
 
+## 三模型对比报告（models/）
+
+[`models/`](models/) 下是三个模型对同一次行情（比亚迪 002594）的完整分析产物，每个模型一个目录，
+各 Agent 的报告（市场/基本面/多空辩论/风控/最终决策）一份一个 markdown 文件：
+
+| 目录 | 模型 | 最终决策 | 目标价 |
+|---|---|---|---|
+| [`models/glm-5.3/`](models/glm-5.3/) | glm-5.3（全面深度） | 持有 | ¥96 |
+| [`models/deepseek-v4-pro/`](models/deepseek-v4-pro/) | deepseek-v4-pro（标准深度） | 买入（战术性轻仓） | ¥92 |
+| [`models/kimi-k3/`](models/kimi-k3/) | kimi-k3（标准深度） | 卖出（事件前规避） | ¥85 |
+
+汇总见 [`models/comparison.md`](models/comparison.md)。
+
+---
+
 ## ⚠️ 这份报告怎么看
 
 这是**模型生成的样本**,放在这里是为了让你看清楚一份完整报告长什么样、
