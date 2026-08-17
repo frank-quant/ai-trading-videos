@@ -1,0 +1,46 @@
+# ============================================================
+# TradingAgents Studio — Docker 补丁（叠加文件，不改原项目任何文件）
+#
+# 用法（在 TradingAgents-CN 部署目录下执行）：
+#   docker compose -f docker-compose.hub.nginx.yml \
+#                  -f path/to/studio/docker/docker-compose.studio.yml up -d studio
+#
+# 注意：叠加文件里的相对路径基于第一个 -f 文件所在目录（即 TradingAgents-CN 部署目录）。
+# 默认假设 studio 仓库与其平级（../studio）；不同布局用环境变量覆盖：
+#   STUDIO_DIR   studio 仓库位置（默认 ../studio）
+#   TA_NETWORK   原项目 compose 网络名（默认 tradingagents-cn_tradingagents-network，
+#                可用 `docker network ls | grep trading` 查）
+#   TA_DATA_DIR  原项目 data 卷宿主路径（默认 ./data）
+# ============================================================
+services:
+  studio:
+    build:
+      context: ${STUDIO_DIR:-../studio}
+      dockerfile: docker/Dockerfile
+    image: tradingagents/studio:latest
+    container_name: tradingagents-studio
+    restart: unless-stopped
+    ports:
+      - "${STUDIO_REPORT_PORT:-8890}:8890"   # 飞书卡片"查看完整报告"按钮的落点
+    environment:
+      TZ: Asia/Shanghai
+      STUDIO_CONFIG: /etc/studio/studio.yaml
+      # 密钥走环境变量，studio.yaml 里用 ${ZHIPU_API_KEY} / ${STUDIO_API_PASSWORD} 引用
+      ZHIPU_API_KEY: ${ZHIPU_API_KEY:-}
+      STUDIO_API_PASSWORD: ${STUDIO_API_PASSWORD:-}
+      FEISHU_WEBHOOK: ${FEISHU_WEBHOOK:-}
+    volumes:
+      - ${STUDIO_DIR:-../studio}/${STUDIO_YAML:-studio.yaml}:/etc/studio/studio.yaml:ro
+      - ${TA_DATA_DIR:-./data}:/data/ta:ro   # 原项目数据卷，只读
+      - studio_data:/data/studio
+    networks:
+      - tradingagents-network
+
+networks:
+  tradingagents-network:
+    name: ${TA_NETWORK:-tradingagents-cn_tradingagents-network}
+    external: true
+
+volumes:
+  studio_data:
+    driver: local

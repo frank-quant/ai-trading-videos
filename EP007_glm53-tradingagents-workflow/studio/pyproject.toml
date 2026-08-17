@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tradingagents-studio"
+version = "0.1.0"
+description = "Enhancement suite for TradingAgents-CN: digest / notify / compare / replay"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "studio contributors" }]
+dependencies = [
+    "typer>=0.12",
+    "httpx>=0.27",
+    "pyyaml>=6.0",
+    "rich>=13.7",
+    "croniter>=2.0",
+    "markdown>=3.5",
+]
+
+[project.scripts]
+studio = "studio.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/studio"]
