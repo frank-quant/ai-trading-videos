@@ -5,7 +5,7 @@
 >
 > 底座是开源的多 Agent 交易框架,外面补的四个模块基本是 AI 写的,前后不到两天。
 
-**视频**:〔B站链接〕 · 〔YouTube 链接〕
+**视频**:[B站](https://www.bilibili.com/video/BV1kHbY6MEmF/) · [YouTube](https://youtu.be/hc3jkzYEwXo)
 
 ---
 
