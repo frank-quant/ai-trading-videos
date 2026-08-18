@@ -10,7 +10,7 @@
 |---|---|---|
 | Docker Desktop | [docker.com](https://www.docker.com/products/docker-desktop/) | Windows 要 WSL2 后端 |
 | 智谱 API Key | [open.bigmodel.cn](https://open.bigmodel.cn/) | 注册 → 控制台 → 新建 Key |
-| Tushare Token | [tushare.pro](https://tushare.pro/) | 免费额度够跑 |
+| Tushare Token | [tushare.pro（我的邀请链接）](https://tushare.pro/weborder/#/login?reg=1240909) | 可选。免费档只有非复权日线，财报/估值接口要 2000 积分（¥200/年）；不配 Token 会自动降级 akshare，也能跑 |
 | ZCode | [智谱官网](https://open.bigmodel.cn/) | 也可以换成别的 Agent 编程工具 |
 
 这个项目要跑 **MongoDB + Redis**,所以必须走 Docker,`pip install` 完是起不来的。
