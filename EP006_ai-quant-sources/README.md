@@ -1,7 +1,7 @@
 # EP006 · 用 AI 做量化交易，一定要开眼看世界
 
 
-**视频**：[B站](https://www.bilibili.com/video/BV1QWhc6eEnW) · 〔YouTube 待补〕
+**视频**：[B站](https://www.bilibili.com/video/BV1QWhc6eEnW) · [YouTube](https://youtu.be/ar5Z2yffHx8)
 
 ---
 
