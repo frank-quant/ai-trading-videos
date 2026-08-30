@@ -1,0 +1,12 @@
+# GitHub 语言统计修正(linguist)
+# 仓库里的 HTML 都是工具导出的研报/回测报告,不是手写前端代码。
+# 不做标记的话 GitHub 会把整个项目识别成 HTML 项目,盖掉真正的 Python。
+
+# 导出的报告页一律按文档处理,不计入语言统计
+*.html linguist-documentation=true
+
+# EP005 的研报是 TradingAgents 跑出来的生成物,额外标 generated,diff 里默认折叠
+EP005_glm53-tradingagents-workflow/report/*.html linguist-generated=true
+
+# EP004 的 PDF 评测报告按文档处理
+*.pdf linguist-documentation=true
