@@ -129,6 +129,12 @@ docker run --rm -v "<模型目录>:/freqtrade/user_data" -v "<完整数据目录
 
 ## 6. 统计检验(在宿主机跑,不进 Docker)
 
+先在宿主机装依赖(和容器无关,建议开个 venv):
+
+```bash
+python -m pip install -r requirements.txt
+```
+
 **Deflated Sharpe**
 
 ```bash

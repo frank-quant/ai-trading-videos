@@ -30,7 +30,19 @@ TEST 段(最后一年)全程不许它碰,拿来当最终考卷。
    提示词里写死了三段划分、硬约束(必须真用 hyperopt、止损不得紧于 -10%、三种损失函数用 VALID 选)、
    未来函数禁令和自检步骤。
 2. 等它交出策略 + 参数对比表 + 三种损失函数对比 + 平台判断。
-3. 自己在 TEST 段跑一次 backtesting 验收(命令见提示词末尾)。
+3. 自己在 TEST 段跑一次 backtesting 验收:
+
+   ```bash
+   # 策略先放进 user_data/strategies/
+   cp strategy/KimiK3StrategyV2.py <你的 freqtrade 目录>/user_data/strategies/
+
+   docker compose run --rm freqtrade backtesting \
+     --strategy KimiK3StrategyV2 --config user_data/config_eth30m.json \
+     --timerange 20250701-20260701 --cache none
+   ```
+
+   > `--cache none` 必须带,否则改了代码结果也不变。
+   > 看夏普用报告里 **Sharpe (daily wallet balance)** 那一行。
 
 ## 策略文件(结果)
 
@@ -45,7 +57,23 @@ TEST 段(最后一年)全程不许它碰,拿来当最终考卷。
 - [`scripts/plot_convergence.py`](scripts/plot_convergence.py) — **hyperopt 收敛曲线**,回答"800 轮够不够"。曲线早早走平就是够了的硬证据。
 - [`scripts/mc_blockbootstrap.py`](scripts/mc_blockbootstrap.py) — **Block Bootstrap 蒙特卡洛**,按 10 天一块重采样重拼几百条资金曲线,测路径稳健性。
 
-> 脚本读的是容器内路径,先复制到 `user_data/` 下再跑。容器无中文字体,中文标题可能渲染不出。
+两个脚本都在**容器里**跑(读的是 `/freqtrade/user_data/...` 路径),先复制进去:
+
+```bash
+cp scripts/*.py <你的 freqtrade 目录>/user_data/
+
+# hyperopt 收敛曲线 —— 读 user_data/hyperopt_results/,出 hyperopt_convergence.png
+docker compose run --rm --entrypoint bash freqtrade -c \
+  "pip install -q matplotlib; python /freqtrade/user_data/plot_convergence.py"
+
+# Block Bootstrap 蒙特卡洛 —— 读 30m 的 feather 行情,出 mc_demo.png
+docker compose run --rm --entrypoint bash freqtrade -c \
+  "pip install -q matplotlib; python /freqtrade/user_data/mc_blockbootstrap.py"
+```
+
+宿主机不用装任何 Python 包;`numpy`/`pandas` 镜像里自带,只有 `matplotlib` 要临时补。
+
+> 容器无中文字体,中文标题可能渲染不出。
 > `mc_blockbootstrap.py` 内置的是演示用 EMA100 近似策略,换成你真实策略的日收益序列才是成品。
 
 ## 怎么诚实地看这个结果

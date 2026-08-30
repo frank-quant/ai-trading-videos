@@ -27,6 +27,34 @@
 - `submissions/` — 多模型对比类选题里,各家的完整交付物(有的话)
 - `results/` — 实验结果与图表(有的话)
 
+## 环境与运行
+
+绝大部分代码跑在 **Freqtrade 官方 Docker 镜像**里(EP003/EP004 用的是 2026.6),
+镜像自带 `pandas` / `numpy` / `talib` / `technical`,**宿主机不用配 Python 环境**。
+只有 EP004 的统计检验和画图脚本是在宿主机跑的,那里单独有一份 `requirements.txt`。
+
+| 期号 | 有什么代码 | 在哪跑 | 依赖 | 命令在哪 |
+|---|---|---|---|---|
+| EP001 | 1 个 Freqtrade 策略 | 容器 | 镜像自带 | [README](EP001_claude-freqtrade-bot/) |
+| EP002 | 无代码(命令速查) | — | — | — |
+| EP003 | 1 个策略 + 2 个分析脚本 | 容器 | 镜像自带 + 临时装 `matplotlib` | [README](EP003_kimi-k3-strategy/) |
+| EP004 | 脚手架 + 4 家策略 + 7 个脚本 | 容器 / 宿主机 | 容器 + [`requirements.txt`](EP004_four-llm-quant-benchmark/requirements.txt) | [RUNBOOK](EP004_four-llm-quant-benchmark/RUNBOOK.md) |
+| EP005 | 无代码(插件在 [studio](https://github.com/frank-quant/TradingAgents-CN-studio) 仓库) | — | — | [RUNBOOK](EP005_glm53-tradingagents-workflow/RUNBOOK.md) |
+| EP006 | 无代码(信源清单) | — | — | — |
+
+宿主机那部分(只有 EP004 需要):
+
+```bash
+cd EP004_four-llm-quant-benchmark
+python -m pip install -r requirements.txt   # Python 3.10+,建议先建 venv
+```
+
+三个几乎人人都会踩的坑,提前说:
+
+- **回测一定加 `--cache none`**,否则改了策略代码结果纹丝不动。
+- **看夏普认准 `Sharpe (daily wallet balance)` 那一行**,不是 `closed trades` 那行——多仓位重叠时后者虚高。
+- **`config.json` 里别留 `timeframe` 字段**,它会覆盖策略自己的设置。
+
 ## ⚠️ 免责声明
 
 本仓库所有内容仅用于**技术教学与演示**,不构成任何投资建议,也不是荐股。

@@ -24,6 +24,30 @@
    改配置 → 写策略(布林带 + RSI 均值回归)→ 下数据回测 → 加 ATR 移动止损再对比。
 4. Claude Code 执行命令时会弹权限,点允许即可。
 
+## 自己跑一遍(不用 AI,直接验回测)
+
+只想验证这个策略、不想走一遍 Claude Code 流程的话,三步:
+
+```bash
+# 1. 把策略放进去
+cp strategy/MyMeanReversion.py <你的 freqtrade 目录>/user_data/strategies/
+
+# 2. 下数据(交易对以 config.json 里的 pairlist 为准,周期必须是 5m)
+docker compose run --rm freqtrade download-data \
+  --config user_data/config.json --timeframes 5m --timerange 20240101-20250101
+
+# 3. 回测
+docker compose run --rm freqtrade backtesting \
+  --strategy MyMeanReversion --config user_data/config.json \
+  --timeframe 5m --timerange 20240101-20250101 --cache none
+```
+
+策略本身只依赖 Freqtrade 镜像里已有的东西(`talib` / `technical` / `pandas`),
+宿主机不用额外装 Python 包。
+
+> `--cache none` 别省:不带的话改了策略代码回测结果也不变,这个坑很容易浪费一小时。
+> `startup_candle_count = 200`(EMA200),所以 timerange 起点前面得有至少 200 根 5m K 线的数据,否则前段不出信号。
+
 ## 三个坑(照着做能少踩)
 
 1. **timeframe 三处要一致**:`config.json`、策略的 `timeframe` 属性、下载/回测的周期,统一成 5m,否则报错或对不上。
