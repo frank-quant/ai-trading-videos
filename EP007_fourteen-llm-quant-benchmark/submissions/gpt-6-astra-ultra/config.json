@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schema.freqtrade.io/schema.json",
+  "_comment": "EP004 \u7edf\u4e00 config \u9aa8\u67b6 \u00b7 \u56db\u5bb6\u4e00\u6a21\u4e00\u6837 \u00b7 \u6a21\u578b\u53ea\u5199\u7b56\u7565\u4e0e hyperopt \u7a7a\u95f4,\u4e0d\u6539\u8fd9\u91cc",
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.99,
+  "max_open_trades": 20,
+  "dry_run": true,
+  "dry_run_wallet": 10000,
+  "_timeframe_note": "\u523b\u610f\u4e0d\u5728 config \u91cc\u8bbe timeframe \u2014\u2014 \u5426\u5219\u4f1a\u8986\u76d6\u7b56\u7565\u81ea\u5df1\u7684\u8bbe\u5b9a\u3002\u5468\u671f\u7531\u5404\u6a21\u578b\u5728\u7b56\u7565\u7c7b\u91cc\u9009(30m/1h/4h/1d \u6570\u636e\u5747\u5df2\u5907\u597d)\u3002",
+  "fee": 0.0006,
+  "_fee_comment": "\u7edf\u4e00\u771f\u5b9e\u6210\u672c:0.06% = Binance \u6c38\u7eed taker(~0.045%) + \u6ed1\u70b9\u4ee3\u7406\u3002\u9a8c\u8bc1\u590d\u73b0\u4e5f\u7528\u8fd9\u4e2a,\u4e0d\u7528\u6a21\u578b\u81ea\u62a5\u3002",
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "pair_whitelist": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "SOL/USDT:USDT",
+      "BNB/USDT:USDT",
+      "XRP/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "ADA/USDT:USDT",
+      "LINK/USDT:USDT",
+      "LTC/USDT:USDT",
+      "BCH/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "DOT/USDT:USDT",
+      "UNI/USDT:USDT",
+      "ATOM/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "FIL/USDT:USDT",
+      "ETC/USDT:USDT",
+      "TRX/USDT:USDT",
+      "XLM/USDT:USDT",
+      "AAVE/USDT:USDT"
+    ],
+    "pair_blacklist": []
+  },
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "random_state": 20260906,
+  "strategy_parameters": {
+    "CausalRelativeMomentum": {
+      "momentum_bars": 12,
+      "rank_buffer": 0.1,
+      "side_width": 7
+    }
+  },
+  "strategy": "CausalRelativeMomentum"
+}

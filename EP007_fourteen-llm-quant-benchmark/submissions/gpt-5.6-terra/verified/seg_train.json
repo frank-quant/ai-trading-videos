@@ -1,0 +1,21 @@
+{
+  "source": "train.zip",
+  "label": "train",
+  "window": "2021-01-01..2024-06-30",
+  "capital": 10000.0,
+  "metrics": {
+    "ann_return": 0.2477,
+    "sharpe": 0.8363,
+    "sortino": 1.3458,
+    "calmar": 0.7778,
+    "max_drawdown": 0.3185,
+    "win_rate": 0.4865,
+    "profit_factor": 1.1342,
+    "turnover_per_year": 68.99,
+    "n_trades": 1780,
+    "n_long": 986,
+    "n_short": 794,
+    "pnl_long": 10318.62,
+    "pnl_short": -1650.96
+  }
+}

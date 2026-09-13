@@ -17,6 +17,7 @@
 | EP004 | [四个大模型同一道量化题](EP004_four-llm-quant-benchmark/) | 同题同数据,四家写量化策略,扔进跌 45% 的样本外年份 | 题目 + 四家交付物 + 验证脚本 + 完整报告 | [B站](https://www.bilibili.com/video/BV15HMS6DETZ/) · [YouTube](https://youtu.be/eLvZ_S8D3jU) |
 | EP005 | [用 GLM-5.3 搭 A 股投研工作流](EP005_glm53-tradingagents-workflow/) | 给多 Agent 交易框架补四个模块,每天早上自动推手机 | 提示词 + 复现步骤 + 报告样本 · 插件另开仓库 [studio](https://github.com/frank-quant/TradingAgents-CN-studio) | [B站](https://www.bilibili.com/video/BV1kHbY6MEmF/) · [YouTube](https://youtu.be/hc3jkzYEwXo) |
 | EP006 | [AI 量化信源清单](EP006_ai-quant-sources/) | 我每天实际点开的东西:网站论坛 / 论文 / 开源项目 / newsletter | 清单 | [B站](https://www.bilibili.com/video/BV1QWhc6eEnW) · [YouTube](https://youtu.be/ar5Z2yffHx8) |
+| EP007 | [14 个大模型同一道量化题](EP007_fourteen-llm-quant-benchmark/) | 同题同数据,14 个模型写量化策略,扔进跌 45% 的样本外年份 | 题目 + 14 个模型的交付物 + 审计脚本 + 完整结果 | 待发布 |
 
 ## 每期目录里有什么
 
@@ -29,9 +30,9 @@
 
 ## 环境与运行
 
-绝大部分代码跑在 **Freqtrade 官方 Docker 镜像**里(EP003/EP004 用的是 2026.6),
+绝大部分代码跑在 **Freqtrade 官方 Docker 镜像**里(EP003/EP004/EP007 用的是 2026.6),
 镜像自带 `pandas` / `numpy` / `talib` / `technical`,**宿主机不用配 Python 环境**。
-只有 EP004 的统计检验和画图脚本是在宿主机跑的,那里单独有一份 `requirements.txt`。
+只有 EP004/EP007 的统计检验和画图脚本是在宿主机跑的,那两期各自带一份 `requirements.txt`。
 
 | 期号 | 有什么代码 | 在哪跑 | 依赖 | 命令在哪 |
 |---|---|---|---|---|
@@ -41,8 +42,9 @@
 | EP004 | 脚手架 + 4 家策略 + 7 个脚本 | 容器 / 宿主机 | 容器 + [`requirements.txt`](EP004_four-llm-quant-benchmark/requirements.txt) | [RUNBOOK](EP004_four-llm-quant-benchmark/RUNBOOK.md) |
 | EP005 | 无代码(插件在 [studio](https://github.com/frank-quant/TradingAgents-CN-studio) 仓库) | — | — | [RUNBOOK](EP005_glm53-tradingagents-workflow/RUNBOOK.md) |
 | EP006 | 无代码(信源清单) | — | — | — |
+| EP007 | 脚手架 + 14 个模型的策略 + 16 个审计脚本 | 容器 / 宿主机 | 容器 + [`requirements.txt`](EP007_fourteen-llm-quant-benchmark/requirements.txt) | [RUNBOOK](EP007_fourteen-llm-quant-benchmark/RUNBOOK.md) |
 
-宿主机那部分(只有 EP004 需要):
+宿主机那部分(EP004 / EP007):
 
 ```bash
 cd EP004_four-llm-quant-benchmark

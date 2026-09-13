@@ -1,0 +1,30 @@
+{
+  "model": "deepseek-v4-pro",
+  "model_verified": "✅ DeepSeek 平台账单 CSV 的 model 列直接写着 deepseek-v4-pro（10,667,522 token / 100 次请求，19:00-20:00 桶）",
+  "reasoning_effort": "默认（dsh 无档位概念）",
+  "harness": "dsh (DeepSeek Harness) 0.1.2-rc.1 · --profile headless",
+  "harness_note": "覆盖层 dsh_v4pro.patch.yml：模型改 deepseek-v4-pro（出厂默认 flash）、approval.policy=never、补 autonomous-workspace 预设；沙箱保持 workspace-write。Docker 走 DOCKER_HOST=tcp://localhost:2375 绕开被沙箱挡住的命名管道。考场隔离在 D:\freqtrade_exam（父目录无其他内容），样本外数据开考前物理移走。",
+  "env": "ft_deepseek_v4_pro",
+  "window": "2026-09-06 19:00 ~ 20:00 (北京时间)",
+  "tokens": {
+    "input_cache_hit": 10437888,
+    "input_cache_miss": 123727,
+    "output": 105907,
+    "total_tokens": 10667522
+  },
+  "api_calls": 100,
+  "cache_hit_rate_pct": 97.8,
+  "unit_price_cny_per_M": {
+    "input_cache_hit": 0.15,
+    "input_cache_miss": 4.5,
+    "output": 13.5
+  },
+  "cost_cny": 3.5522,
+  "cash_paid_cny": 3.5522,
+  "cost_cny_at_peak_price": 7.1044,
+  "cost_basis": "DeepSeek 平台账单原值（逐类用量 × 平台单价），非估算。跑在 19:00~20:00，落在官方低谷时段，单价为原价一半。",
+  "pricing_caveat": "✅ 口径已定（2026-09-07，台账 C10）：按**实际花费**记。本条线跑在 19:00~20:00，落在官方低谷时段，cost_cny = cash_paid_cny = 平台账单原值，非估算。cost_cny_at_peak_price 保留供按峰时价重算，但不用于排名。",
+  "voided_runs_cost_cny": 2.749,
+  "voided_runs_note": "⚠️ 同日 18:00-19:00 桶的 ¥2.7490 是三次作废跑次（nodocker ¥2.6292 + 第2次 + 第3次），**不计入本条线成本**。作废原因见台账 C11 / C12。若要算「这条线总共烧了多少钱」，需 ¥3.5522 + ¥2.7490 = ¥6.3012。",
+  "bucket_caveat": "账单粒度为小时。正式跑次日志结束于 19:45，起始推定在 19:05 前后，整体落在 19:00 桶内；若实际跨越 19:00 边界，本条会略有低估。"
+}

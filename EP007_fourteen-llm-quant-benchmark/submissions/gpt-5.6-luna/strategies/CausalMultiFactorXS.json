@@ -1,0 +1,34 @@
+{
+  "strategy_name": "CausalMultiFactorXS",
+  "params": {
+    "roi": {
+      "0": 100
+    },
+    "stoploss": {
+      "stoploss": -0.99
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 20
+    },
+    "buy": {
+      "exit_buffer": 0.11,
+      "min_hold": 39,
+      "mom_fast": 9,
+      "mom_slow": 100,
+      "n_long": 6,
+      "n_short": 1,
+      "reversal_weight": 0.56,
+      "reversal_window": 4,
+      "trend_weight": 0.7,
+      "volatility_window": 47
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-09-04 13:39:41.581936+00:00"
+}

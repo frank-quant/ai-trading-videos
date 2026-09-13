@@ -1,0 +1,13 @@
+{
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\ft_grok_4_6\\backtest_results\\test.zip",
+  "n_trades": 448,
+  "iters": 5000,
+  "block": 10,
+  "start": 1000.0,
+  "orig_final": 0.3010412511869752,
+  "prob_profit": 0.001,
+  "final_P5": 0.0034797715842326826,
+  "final_P50": 0.39673449047579323,
+  "final_P95": 26.89314812554844,
+  "mean_trade_ret": -0.00929797358801511
+}

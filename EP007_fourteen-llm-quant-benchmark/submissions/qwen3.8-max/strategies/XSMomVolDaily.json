@@ -1,0 +1,30 @@
+{
+  "strategy_name": "XSMomVolDaily",
+  "params": {
+    "roi": {
+      "0": 100
+    },
+    "stoploss": {
+      "stoploss": -0.99
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 20
+    },
+    "buy": {
+      "exit_buffer": 0.07,
+      "min_hold": 8,
+      "mom_window": 14,
+      "n_long": 7,
+      "n_short": 6,
+      "skip": 2
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-09-02 16:34:11.896384+00:00"
+}

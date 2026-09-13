@@ -1,0 +1,40 @@
+{
+  "train": {
+    "sharpe": 0.92,
+    "ret": 71.3
+  },
+  "valid": {
+    "sharpe": 1.87,
+    "ret": 54.6
+  },
+  "test": {
+    "sharpe": -0.62,
+    "ret": -7.54,
+    "sortino": -0.78,
+    "calmar": -1.86,
+    "dd": 23.08,
+    "pvalue": 0.5258,
+    "n_trades": 525.0
+  },
+  "source": "EP004_最终评价报告.md",
+  "_note": "回测控制台 `Sharpe / Sortino (daily wallet balance)` 行的原值 —— EP004 最终评价报告用的就是这套口径，主排名以此为准。⚠️ 与 zip 里的 sharpe/sortino/calmar 不是同一套；也无法从成交明细还原（实测收益能对上、夏普对不上且无固定比例）。",
+  "env": "ft_fable_5",
+  "valid_2xfee": {
+    "sharpe": 1.73,
+    "sortino": 3.9,
+    "calmar": 16.81,
+    "ret": 49.61,
+    "dd": 14.39,
+    "pvalue": 0.04261,
+    "n_trades": 564.0
+  },
+  "valid_ownfee": {
+    "sharpe": 1.87,
+    "sortino": 4.23,
+    "calmar": 19.59,
+    "ret": 54.59,
+    "dd": 13.64,
+    "pvalue": 0.02794,
+    "n_trades": 564.0
+  }
+}

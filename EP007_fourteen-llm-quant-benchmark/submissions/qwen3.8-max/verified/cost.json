@@ -1,0 +1,44 @@
+{
+  "tokens": {
+    "input_token": 296,
+    "input_token_cache_creation_5m": 188929,
+    "input_token_cache_read": 3357670,
+    "output_token": 38131
+  },
+  "unit_price_cny_per_1k": {
+    "input_token": 0.012,
+    "input_token_cache_creation_5m": 0.015,
+    "input_token_cache_read": 0.001,
+    "output_token": 0.036
+  },
+  "token_total": 3585026,
+  "cache_hit_rate_pct": 93.7,
+  "cost_cny": 7.5679,
+  "work_minutes": null,
+  "work_segments": 1,
+  "window": "2026-09-03 00:30 ~ 00:45（账单覆盖段；完整跑次可能自 00:20 起）",
+  "model": "Qwen3.8-Max",
+  "harness": "Qwen Code",
+  "env": "ft_qwen_3_8_max",
+  "api_calls": 49,
+  "cost_basis": "全量 token × 官网目录价。免费额度那 100 万 token 不生成账单行，由「控制台全量 − 账单已计费」精确还原其类型构成后折算，非估算。",
+  "cash_paid_cny": 5.1055,
+  "model_code_verified": "qwen3.8-max（账单「文本生成模型规格」字段确认，非 qwen3.6-plus）",
+  "work_minutes_billed_span": 15,
+  "work_minutes_note": "待完整账单出全后重算",
+  "tokens_billed": {
+    "input_token": 164,
+    "input_token_cache_creation_5m": 128726,
+    "input_token_cache_read": 2435664,
+    "output_token": 20472
+  },
+  "tokens_free_quota": {
+    "input_token": 132,
+    "input_token_cache_creation_5m": 60203,
+    "input_token_cache_read": 922006,
+    "output_token": 17659
+  },
+  "cost_billed_cny": 5.1055,
+  "cost_free_quota_cny": 2.4624,
+  "model_verified": "✅ 阿里云账单「文本生成模型规格」字段确认为 qwen3.8-max（非 qwen3.6-plus）。见本文件 model_code_verified。"
+}

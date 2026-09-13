@@ -1,0 +1,18 @@
+{
+  "model": "Opus 5",
+  "harness": "Claude Code",
+  "cost_cny": 363.3,
+  "cost_usd": 50.46,
+  "token_total": 59062730,
+  "api_calls": 330,
+  "work_minutes": 95,
+  "work_segments": 3,
+  "run_date": "2026-07-29~30",
+  "cost_basis": "日志折算等效成本（会员制无账单；~/.claude/projects/*.jsonl token 量 × 公开单价）",
+  "env": "ft_opus_5",
+  "fx": 7.2,
+  "source": "EP004_最终评价报告.md",
+  "note": "数据抄自 EP004_最终评价报告.md 第七章。EP004 时两种口径并存：DeepSeek/Kimi 是平台实扣，Opus/Fable 是会员制下按本地日志折算的等效成本（实付 0）。EP007 起统一为「全量 token × 官网单价」，见问题台账 C6。",
+  "cache_hit_rate_pct": null,
+  "model_verified": "❌ 无法客观核实 —— 数据抄自 EP004_最终评价报告.md，当时未留存能证明模型身份的平台字段。见台账 C5。"
+}

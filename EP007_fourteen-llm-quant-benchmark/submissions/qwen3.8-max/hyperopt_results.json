@@ -1,0 +1,3906 @@
+{
+  "model": "qwen3_8_max",
+  "n_epochs": 300,
+  "trials": [
+    {
+      "epoch": 1,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 1,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.8592,
+      "valid_sharpe": 1.0096
+    },
+    {
+      "epoch": 2,
+      "params": {
+        "exit_buffer": 0.16999999999999998,
+        "min_hold": 1,
+        "mom_window": 29,
+        "n_long": 5,
+        "n_short": 7,
+        "skip": 2
+      },
+      "train_sharpe": 0.6489,
+      "valid_sharpe": 0.0345
+    },
+    {
+      "epoch": 3,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 6,
+        "mom_window": 19,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 0
+      },
+      "train_sharpe": 1.1169,
+      "valid_sharpe": 1.3537
+    },
+    {
+      "epoch": 4,
+      "params": {
+        "exit_buffer": 0.29,
+        "min_hold": 0,
+        "mom_window": 26,
+        "n_long": 3,
+        "n_short": 7,
+        "skip": 2
+      },
+      "train_sharpe": 0.396,
+      "valid_sharpe": -0.4359
+    },
+    {
+      "epoch": 5,
+      "params": {
+        "exit_buffer": 0.21000000000000002,
+        "min_hold": 1,
+        "mom_window": 27,
+        "n_long": 8,
+        "n_short": 6,
+        "skip": 0
+      },
+      "train_sharpe": 0.8484,
+      "valid_sharpe": 0.8785
+    },
+    {
+      "epoch": 6,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 5,
+        "mom_window": 27,
+        "n_long": 3,
+        "n_short": 2,
+        "skip": 0
+      },
+      "train_sharpe": 0.9152,
+      "valid_sharpe": 0.8725
+    },
+    {
+      "epoch": 7,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 3,
+        "mom_window": 19,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": 0.5655,
+      "valid_sharpe": 1.2699
+    },
+    {
+      "epoch": 8,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 4,
+        "mom_window": 28,
+        "n_long": 8,
+        "n_short": 2,
+        "skip": 2
+      },
+      "train_sharpe": 0.6213,
+      "valid_sharpe": 0.7948
+    },
+    {
+      "epoch": 9,
+      "params": {
+        "exit_buffer": 0.3,
+        "min_hold": 1,
+        "mom_window": 19,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": 0.826,
+      "valid_sharpe": 1.1998
+    },
+    {
+      "epoch": 10,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 0,
+        "mom_window": 7,
+        "n_long": 4,
+        "n_short": 7,
+        "skip": 3
+      },
+      "train_sharpe": -0.7141,
+      "valid_sharpe": 0.0511
+    },
+    {
+      "epoch": 11,
+      "params": {
+        "exit_buffer": 0.060000000000000005,
+        "min_hold": 6,
+        "mom_window": 9,
+        "n_long": 6,
+        "n_short": 6,
+        "skip": 0
+      },
+      "train_sharpe": 0.1649,
+      "valid_sharpe": 0.915
+    },
+    {
+      "epoch": 12,
+      "params": {
+        "exit_buffer": 0.21000000000000002,
+        "min_hold": 0,
+        "mom_window": 14,
+        "n_long": 2,
+        "n_short": 8,
+        "skip": 2
+      },
+      "train_sharpe": -0.0715,
+      "valid_sharpe": 0.2407
+    },
+    {
+      "epoch": 13,
+      "params": {
+        "exit_buffer": 0.18,
+        "min_hold": 1,
+        "mom_window": 8,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 4
+      },
+      "train_sharpe": -0.0915,
+      "valid_sharpe": 0.8788
+    },
+    {
+      "epoch": 14,
+      "params": {
+        "exit_buffer": 0.09,
+        "min_hold": 0,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 7,
+        "skip": 5
+      },
+      "train_sharpe": 0.3569,
+      "valid_sharpe": 0.7686
+    },
+    {
+      "epoch": 15,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 4,
+        "skip": 1
+      },
+      "train_sharpe": 0.6188,
+      "valid_sharpe": 1.5448
+    },
+    {
+      "epoch": 16,
+      "params": {
+        "exit_buffer": 0.09,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 3,
+        "skip": 4
+      },
+      "train_sharpe": 0.2666,
+      "valid_sharpe": 1.6211
+    },
+    {
+      "epoch": 17,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 7,
+        "mom_window": 19,
+        "n_long": 7,
+        "n_short": 7,
+        "skip": 0
+      },
+      "train_sharpe": 1.0947,
+      "valid_sharpe": 1.429
+    },
+    {
+      "epoch": 18,
+      "params": {
+        "exit_buffer": 0.35,
+        "min_hold": 6,
+        "mom_window": 8,
+        "n_long": 8,
+        "n_short": 6,
+        "skip": 3
+      },
+      "train_sharpe": -0.1851,
+      "valid_sharpe": 1.1797
+    },
+    {
+      "epoch": 19,
+      "params": {
+        "exit_buffer": 0.19,
+        "min_hold": 0,
+        "mom_window": 22,
+        "n_long": 4,
+        "n_short": 8,
+        "skip": 4
+      },
+      "train_sharpe": 0.2724,
+      "valid_sharpe": 0.0317
+    },
+    {
+      "epoch": 20,
+      "params": {
+        "exit_buffer": 0.28,
+        "min_hold": 6,
+        "mom_window": 30,
+        "n_long": 8,
+        "n_short": 2,
+        "skip": 1
+      },
+      "train_sharpe": 0.8955,
+      "valid_sharpe": 0.6831
+    },
+    {
+      "epoch": 21,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 5,
+        "mom_window": 24,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 5
+      },
+      "train_sharpe": 0.7376,
+      "valid_sharpe": 0.277
+    },
+    {
+      "epoch": 22,
+      "params": {
+        "exit_buffer": 0.19,
+        "min_hold": 8,
+        "mom_window": 21,
+        "n_long": 2,
+        "n_short": 4,
+        "skip": 5
+      },
+      "train_sharpe": 0.6595,
+      "valid_sharpe": -0.1105
+    },
+    {
+      "epoch": 23,
+      "params": {
+        "exit_buffer": 0.09,
+        "min_hold": 4,
+        "mom_window": 26,
+        "n_long": 4,
+        "n_short": 2,
+        "skip": 0
+      },
+      "train_sharpe": 0.9342,
+      "valid_sharpe": 0.6405
+    },
+    {
+      "epoch": 24,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 1,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 5
+      },
+      "train_sharpe": 0.4714,
+      "valid_sharpe": 1.2811
+    },
+    {
+      "epoch": 25,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 8,
+        "mom_window": 17,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.5239,
+      "valid_sharpe": 1.313
+    },
+    {
+      "epoch": 26,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 18,
+        "n_long": 5,
+        "n_short": 7,
+        "skip": 1
+      },
+      "train_sharpe": 0.3388,
+      "valid_sharpe": 1.376
+    },
+    {
+      "epoch": 27,
+      "params": {
+        "exit_buffer": 0.14,
+        "min_hold": 1,
+        "mom_window": 20,
+        "n_long": 6,
+        "n_short": 2,
+        "skip": 2
+      },
+      "train_sharpe": 0.7691,
+      "valid_sharpe": 1.0274
+    },
+    {
+      "epoch": 28,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 8,
+        "mom_window": 7,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 0
+      },
+      "train_sharpe": -0.9922,
+      "valid_sharpe": 1.1411
+    },
+    {
+      "epoch": 29,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 6,
+        "mom_window": 13,
+        "n_long": 5,
+        "n_short": 7,
+        "skip": 0
+      },
+      "train_sharpe": 0.8139,
+      "valid_sharpe": 1.1951
+    },
+    {
+      "epoch": 30,
+      "params": {
+        "exit_buffer": 0.24,
+        "min_hold": 6,
+        "mom_window": 11,
+        "n_long": 6,
+        "n_short": 7,
+        "skip": 1
+      },
+      "train_sharpe": 0.3352,
+      "valid_sharpe": 1.1398
+    },
+    {
+      "epoch": 31,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 8,
+        "mom_window": 16,
+        "n_long": 5,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": 0.5041,
+      "valid_sharpe": 1.6251
+    },
+    {
+      "epoch": 32,
+      "params": {
+        "exit_buffer": 0.16999999999999998,
+        "min_hold": 3,
+        "mom_window": 26,
+        "n_long": 8,
+        "n_short": 7,
+        "skip": 4
+      },
+      "train_sharpe": 0.8206,
+      "valid_sharpe": 0.2152
+    },
+    {
+      "epoch": 33,
+      "params": {
+        "exit_buffer": 0.22000000000000003,
+        "min_hold": 8,
+        "mom_window": 16,
+        "n_long": 2,
+        "n_short": 6,
+        "skip": 5
+      },
+      "train_sharpe": -0.1584,
+      "valid_sharpe": -0.2186
+    },
+    {
+      "epoch": 34,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 5,
+        "mom_window": 24,
+        "n_long": 4,
+        "n_short": 8,
+        "skip": 0
+      },
+      "train_sharpe": 0.3284,
+      "valid_sharpe": 0.3575
+    },
+    {
+      "epoch": 35,
+      "params": {
+        "exit_buffer": 0.28,
+        "min_hold": 4,
+        "mom_window": 28,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 5
+      },
+      "train_sharpe": 0.206,
+      "valid_sharpe": -0.0115
+    },
+    {
+      "epoch": 36,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 4,
+        "skip": 1
+      },
+      "train_sharpe": 0.7067,
+      "valid_sharpe": 1.3733
+    },
+    {
+      "epoch": 37,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 7,
+        "mom_window": 25,
+        "n_long": 3,
+        "n_short": 4,
+        "skip": 5
+      },
+      "train_sharpe": 0.4348,
+      "valid_sharpe": -0.1578
+    },
+    {
+      "epoch": 38,
+      "params": {
+        "exit_buffer": 0.09,
+        "min_hold": 5,
+        "mom_window": 5,
+        "n_long": 2,
+        "n_short": 6,
+        "skip": 0
+      },
+      "train_sharpe": 0.3615,
+      "valid_sharpe": -0.6085
+    },
+    {
+      "epoch": 39,
+      "params": {
+        "exit_buffer": 0.22999999999999998,
+        "min_hold": 1,
+        "mom_window": 7,
+        "n_long": 8,
+        "n_short": 7,
+        "skip": 2
+      },
+      "train_sharpe": 0.0361,
+      "valid_sharpe": 1.0691
+    },
+    {
+      "epoch": 40,
+      "params": {
+        "exit_buffer": 0.2,
+        "min_hold": 7,
+        "mom_window": 20,
+        "n_long": 4,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.4335,
+      "valid_sharpe": 1.0249
+    },
+    {
+      "epoch": 41,
+      "params": {
+        "exit_buffer": 0.14,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.617,
+      "valid_sharpe": 1.766
+    },
+    {
+      "epoch": 42,
+      "params": {
+        "exit_buffer": 0.14,
+        "min_hold": 1,
+        "mom_window": 20,
+        "n_long": 4,
+        "n_short": 2,
+        "skip": 0
+      },
+      "train_sharpe": 0.7733,
+      "valid_sharpe": 1.1065
+    },
+    {
+      "epoch": 43,
+      "params": {
+        "exit_buffer": 0.24,
+        "min_hold": 3,
+        "mom_window": 11,
+        "n_long": 6,
+        "n_short": 7,
+        "skip": 5
+      },
+      "train_sharpe": 0.4573,
+      "valid_sharpe": 0.3799
+    },
+    {
+      "epoch": 44,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 6,
+        "mom_window": 17,
+        "n_long": 6,
+        "n_short": 3,
+        "skip": 1
+      },
+      "train_sharpe": 0.6235,
+      "valid_sharpe": 1.3283
+    },
+    {
+      "epoch": 45,
+      "params": {
+        "exit_buffer": 0.3,
+        "min_hold": 1,
+        "mom_window": 27,
+        "n_long": 8,
+        "n_short": 8,
+        "skip": 1
+      },
+      "train_sharpe": 0.7823,
+      "valid_sharpe": 0.6619
+    },
+    {
+      "epoch": 46,
+      "params": {
+        "exit_buffer": 0.3,
+        "min_hold": 8,
+        "mom_window": 19,
+        "n_long": 5,
+        "n_short": 5,
+        "skip": 1
+      },
+      "train_sharpe": 0.7536,
+      "valid_sharpe": 1.201
+    },
+    {
+      "epoch": 47,
+      "params": {
+        "exit_buffer": 0.35,
+        "min_hold": 6,
+        "mom_window": 8,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 1
+      },
+      "train_sharpe": 0.269,
+      "valid_sharpe": 1.0653
+    },
+    {
+      "epoch": 48,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 27,
+        "n_long": 8,
+        "n_short": 7,
+        "skip": 0
+      },
+      "train_sharpe": 0.584,
+      "valid_sharpe": 0.7511
+    },
+    {
+      "epoch": 49,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 8,
+        "mom_window": 7,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": -0.2795,
+      "valid_sharpe": 1.9081
+    },
+    {
+      "epoch": 50,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 6,
+        "mom_window": 16,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.3434,
+      "valid_sharpe": 1.8177
+    },
+    {
+      "epoch": 51,
+      "params": {
+        "exit_buffer": 0.22999999999999998,
+        "min_hold": 1,
+        "mom_window": 20,
+        "n_long": 8,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.6703,
+      "valid_sharpe": 1.0333
+    },
+    {
+      "epoch": 52,
+      "params": {
+        "exit_buffer": 0.33,
+        "min_hold": 3,
+        "mom_window": 19,
+        "n_long": 4,
+        "n_short": 5,
+        "skip": 0
+      },
+      "train_sharpe": 0.763,
+      "valid_sharpe": 0.9798
+    },
+    {
+      "epoch": 53,
+      "params": {
+        "exit_buffer": 0.22999999999999998,
+        "min_hold": 1,
+        "mom_window": 27,
+        "n_long": 8,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.7474,
+      "valid_sharpe": 0.3584
+    },
+    {
+      "epoch": 54,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 6,
+        "mom_window": 30,
+        "n_long": 2,
+        "n_short": 7,
+        "skip": 3
+      },
+      "train_sharpe": -0.4167,
+      "valid_sharpe": -0.232
+    },
+    {
+      "epoch": 55,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 2,
+        "skip": 1
+      },
+      "train_sharpe": 0.8179,
+      "valid_sharpe": 1.6961
+    },
+    {
+      "epoch": 56,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 6,
+        "mom_window": 19,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 4
+      },
+      "train_sharpe": 0.7762,
+      "valid_sharpe": 1.1406
+    },
+    {
+      "epoch": 57,
+      "params": {
+        "exit_buffer": 0.18,
+        "min_hold": 8,
+        "mom_window": 8,
+        "n_long": 5,
+        "n_short": 5,
+        "skip": 4
+      },
+      "train_sharpe": -0.1133,
+      "valid_sharpe": 0.4096
+    },
+    {
+      "epoch": 58,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 6,
+        "mom_window": 20,
+        "n_long": 4,
+        "n_short": 3,
+        "skip": 1
+      },
+      "train_sharpe": 0.7403,
+      "valid_sharpe": 1.0093
+    },
+    {
+      "epoch": 59,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 1,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 5
+      },
+      "train_sharpe": 0.6824,
+      "valid_sharpe": 1.5186
+    },
+    {
+      "epoch": 60,
+      "params": {
+        "exit_buffer": 0.09,
+        "min_hold": 1,
+        "mom_window": 19,
+        "n_long": 7,
+        "n_short": 3,
+        "skip": 1
+      },
+      "train_sharpe": 0.5776,
+      "valid_sharpe": 1.1223
+    },
+    {
+      "epoch": 61,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 4,
+        "mom_window": 26,
+        "n_long": 4,
+        "n_short": 2,
+        "skip": 0
+      },
+      "train_sharpe": 0.8686,
+      "valid_sharpe": 0.4868
+    },
+    {
+      "epoch": 62,
+      "params": {
+        "exit_buffer": 0.3,
+        "min_hold": 1,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": 0.4369,
+      "valid_sharpe": 1.2619
+    },
+    {
+      "epoch": 63,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 7,
+        "skip": 2
+      },
+      "train_sharpe": 0.0986,
+      "valid_sharpe": 1.8634
+    },
+    {
+      "epoch": 64,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 0,
+        "mom_window": 28,
+        "n_long": 8,
+        "n_short": 8,
+        "skip": 2
+      },
+      "train_sharpe": 0.789,
+      "valid_sharpe": -0.1686
+    },
+    {
+      "epoch": 65,
+      "params": {
+        "exit_buffer": 0.22999999999999998,
+        "min_hold": 2,
+        "mom_window": 13,
+        "n_long": 5,
+        "n_short": 4,
+        "skip": 1
+      },
+      "train_sharpe": 1.0165,
+      "valid_sharpe": 1.24
+    },
+    {
+      "epoch": 66,
+      "params": {
+        "exit_buffer": 0.3,
+        "min_hold": 1,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": 0.5738,
+      "valid_sharpe": 1.5428
+    },
+    {
+      "epoch": 67,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 7,
+        "mom_window": 19,
+        "n_long": 5,
+        "n_short": 7,
+        "skip": 4
+      },
+      "train_sharpe": 0.2038,
+      "valid_sharpe": 0.4756
+    },
+    {
+      "epoch": 68,
+      "params": {
+        "exit_buffer": 0.14,
+        "min_hold": 7,
+        "mom_window": 20,
+        "n_long": 4,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.4659,
+      "valid_sharpe": 0.5981
+    },
+    {
+      "epoch": 69,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 18,
+        "n_long": 5,
+        "n_short": 7,
+        "skip": 5
+      },
+      "train_sharpe": 0.4298,
+      "valid_sharpe": 0.1762
+    },
+    {
+      "epoch": 70,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 4,
+        "mom_window": 20,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 0
+      },
+      "train_sharpe": 0.4683,
+      "valid_sharpe": 1.4864
+    },
+    {
+      "epoch": 71,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 6,
+        "mom_window": 19,
+        "n_long": 5,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": 0.7937,
+      "valid_sharpe": 0.9173
+    },
+    {
+      "epoch": 72,
+      "params": {
+        "exit_buffer": 0.060000000000000005,
+        "min_hold": 6,
+        "mom_window": 9,
+        "n_long": 3,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": -0.0484,
+      "valid_sharpe": 1.2404
+    },
+    {
+      "epoch": 73,
+      "params": {
+        "exit_buffer": 0.09,
+        "min_hold": 4,
+        "mom_window": 17,
+        "n_long": 7,
+        "n_short": 2,
+        "skip": 2
+      },
+      "train_sharpe": 0.7223,
+      "valid_sharpe": 1.2002
+    },
+    {
+      "epoch": 74,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 6,
+        "mom_window": 9,
+        "n_long": 6,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.063,
+      "valid_sharpe": 0.5563
+    },
+    {
+      "epoch": 75,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 18,
+        "n_long": 5,
+        "n_short": 7,
+        "skip": 2
+      },
+      "train_sharpe": 0.5011,
+      "valid_sharpe": 1.0482
+    },
+    {
+      "epoch": 76,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 6,
+        "n_short": 5,
+        "skip": 5
+      },
+      "train_sharpe": 0.0494,
+      "valid_sharpe": 1.3916
+    },
+    {
+      "epoch": 77,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 8,
+        "mom_window": 7,
+        "n_long": 7,
+        "n_short": 3,
+        "skip": 4
+      },
+      "train_sharpe": 0.1043,
+      "valid_sharpe": 0.6044
+    },
+    {
+      "epoch": 78,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 6,
+        "mom_window": 7,
+        "n_long": 5,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": -1.1957,
+      "valid_sharpe": 0.92
+    },
+    {
+      "epoch": 79,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 27,
+        "n_long": 8,
+        "n_short": 7,
+        "skip": 1
+      },
+      "train_sharpe": 0.7254,
+      "valid_sharpe": 0.3257
+    },
+    {
+      "epoch": 80,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 8,
+        "mom_window": 19,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.5474,
+      "valid_sharpe": 1.9537
+    },
+    {
+      "epoch": 81,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 1,
+        "mom_window": 9,
+        "n_long": 7,
+        "n_short": 2,
+        "skip": 4
+      },
+      "train_sharpe": 0.9599,
+      "valid_sharpe": 0.8486
+    },
+    {
+      "epoch": 82,
+      "params": {
+        "exit_buffer": 0.060000000000000005,
+        "min_hold": 6,
+        "mom_window": 9,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.4232,
+      "valid_sharpe": 1.0569
+    },
+    {
+      "epoch": 83,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 1,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 5
+      },
+      "train_sharpe": 0.4714,
+      "valid_sharpe": 1.2811
+    },
+    {
+      "epoch": 84,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 8,
+        "mom_window": 7,
+        "n_long": 4,
+        "n_short": 2,
+        "skip": 0
+      },
+      "train_sharpe": -0.0457,
+      "valid_sharpe": 1.2003
+    },
+    {
+      "epoch": 85,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 8,
+        "mom_window": 20,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 0
+      },
+      "train_sharpe": 0.4589,
+      "valid_sharpe": 1.3679
+    },
+    {
+      "epoch": 86,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.4386,
+      "valid_sharpe": 2.0006
+    },
+    {
+      "epoch": 87,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 1,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 1.0306,
+      "valid_sharpe": 1.4247
+    },
+    {
+      "epoch": 88,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.6094,
+      "valid_sharpe": 1.6481
+    },
+    {
+      "epoch": 89,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 7,
+        "skip": 5
+      },
+      "train_sharpe": -0.0212,
+      "valid_sharpe": 0.9505
+    },
+    {
+      "epoch": 90,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 4,
+        "skip": 0
+      },
+      "train_sharpe": 0.6866,
+      "valid_sharpe": 1.9179
+    },
+    {
+      "epoch": 91,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 5
+      },
+      "train_sharpe": 0.8032,
+      "valid_sharpe": 1.2741
+    },
+    {
+      "epoch": 92,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 7,
+        "n_long": 5,
+        "n_short": 7,
+        "skip": 1
+      },
+      "train_sharpe": -0.8434,
+      "valid_sharpe": 0.533
+    },
+    {
+      "epoch": 93,
+      "params": {
+        "exit_buffer": 0.22999999999999998,
+        "min_hold": 6,
+        "mom_window": 13,
+        "n_long": 4,
+        "n_short": 5,
+        "skip": 0
+      },
+      "train_sharpe": 0.5999,
+      "valid_sharpe": 1.4684
+    },
+    {
+      "epoch": 94,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 8,
+        "mom_window": 7,
+        "n_long": 2,
+        "n_short": 6,
+        "skip": 0
+      },
+      "train_sharpe": -1.1103,
+      "valid_sharpe": 0.7133
+    },
+    {
+      "epoch": 95,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 19,
+        "n_long": 7,
+        "n_short": 7,
+        "skip": 4
+      },
+      "train_sharpe": 0.6046,
+      "valid_sharpe": 0.2292
+    },
+    {
+      "epoch": 96,
+      "params": {
+        "exit_buffer": 0.3,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 7,
+        "skip": 0
+      },
+      "train_sharpe": 0.4482,
+      "valid_sharpe": 1.3397
+    },
+    {
+      "epoch": 97,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.7163,
+      "valid_sharpe": 1.9838
+    },
+    {
+      "epoch": 98,
+      "params": {
+        "exit_buffer": 0.22999999999999998,
+        "min_hold": 2,
+        "mom_window": 13,
+        "n_long": 4,
+        "n_short": 4,
+        "skip": 1
+      },
+      "train_sharpe": 0.8319,
+      "valid_sharpe": 1.1811
+    },
+    {
+      "epoch": 99,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 6,
+        "mom_window": 9,
+        "n_long": 7,
+        "n_short": 7,
+        "skip": 1
+      },
+      "train_sharpe": -0.1565,
+      "valid_sharpe": 1.6213
+    },
+    {
+      "epoch": 100,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 6,
+        "mom_window": 18,
+        "n_long": 6,
+        "n_short": 5,
+        "skip": 5
+      },
+      "train_sharpe": 0.5097,
+      "valid_sharpe": 0.0058
+    },
+    {
+      "epoch": 101,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 5,
+        "mom_window": 19,
+        "n_long": 8,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": 0.2341,
+      "valid_sharpe": 1.5775
+    },
+    {
+      "epoch": 102,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 6,
+        "n_short": 6,
+        "skip": 3
+      },
+      "train_sharpe": 0.3242,
+      "valid_sharpe": 2.0454
+    },
+    {
+      "epoch": 103,
+      "params": {
+        "exit_buffer": 0.18,
+        "min_hold": 1,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 2,
+        "skip": 0
+      },
+      "train_sharpe": 0.8076,
+      "valid_sharpe": 0.8988
+    },
+    {
+      "epoch": 104,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 4,
+        "skip": 1
+      },
+      "train_sharpe": 0.6192,
+      "valid_sharpe": 1.6728
+    },
+    {
+      "epoch": 105,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.3599,
+      "valid_sharpe": 1.4446
+    },
+    {
+      "epoch": 106,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 6,
+        "mom_window": 16,
+        "n_long": 8,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.5823,
+      "valid_sharpe": 1.8548
+    },
+    {
+      "epoch": 107,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 8,
+        "mom_window": 16,
+        "n_long": 5,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": 0.6186,
+      "valid_sharpe": 1.6102
+    },
+    {
+      "epoch": 108,
+      "params": {
+        "exit_buffer": 0.28,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 2,
+        "skip": 4
+      },
+      "train_sharpe": 0.7219,
+      "valid_sharpe": 1.5412
+    },
+    {
+      "epoch": 109,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 8,
+        "mom_window": 16,
+        "n_long": 4,
+        "n_short": 4,
+        "skip": 1
+      },
+      "train_sharpe": 0.4608,
+      "valid_sharpe": 1.6696
+    },
+    {
+      "epoch": 110,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 6,
+        "mom_window": 16,
+        "n_long": 5,
+        "n_short": 6,
+        "skip": 0
+      },
+      "train_sharpe": 0.6323,
+      "valid_sharpe": 1.4123
+    },
+    {
+      "epoch": 111,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 3,
+        "mom_window": 19,
+        "n_long": 5,
+        "n_short": 8,
+        "skip": 2
+      },
+      "train_sharpe": -0.0481,
+      "valid_sharpe": 0.1082
+    },
+    {
+      "epoch": 112,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 6,
+        "mom_window": 7,
+        "n_long": 4,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": -0.5205,
+      "valid_sharpe": 1.7996
+    },
+    {
+      "epoch": 113,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 5,
+        "mom_window": 6,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 0
+      },
+      "train_sharpe": 0.4128,
+      "valid_sharpe": 0.8155
+    },
+    {
+      "epoch": 114,
+      "params": {
+        "exit_buffer": 0.3,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 5,
+        "skip": 5
+      },
+      "train_sharpe": 0.0869,
+      "valid_sharpe": 1.1338
+    },
+    {
+      "epoch": 115,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 18,
+        "n_long": 6,
+        "n_short": 7,
+        "skip": 1
+      },
+      "train_sharpe": 0.491,
+      "valid_sharpe": 1.6162
+    },
+    {
+      "epoch": 116,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 3,
+        "n_short": 5,
+        "skip": 5
+      },
+      "train_sharpe": -0.377,
+      "valid_sharpe": 0.3812
+    },
+    {
+      "epoch": 117,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 4,
+        "mom_window": 19,
+        "n_long": 4,
+        "n_short": 4,
+        "skip": 1
+      },
+      "train_sharpe": 0.6229,
+      "valid_sharpe": 0.8997
+    },
+    {
+      "epoch": 118,
+      "params": {
+        "exit_buffer": 0.1,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 6,
+        "skip": 3
+      },
+      "train_sharpe": 0.3448,
+      "valid_sharpe": 1.7266
+    },
+    {
+      "epoch": 119,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 4,
+        "mom_window": 20,
+        "n_long": 4,
+        "n_short": 7,
+        "skip": 2
+      },
+      "train_sharpe": -0.0186,
+      "valid_sharpe": 0.7772
+    },
+    {
+      "epoch": 120,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 6,
+        "mom_window": 17,
+        "n_long": 5,
+        "n_short": 6,
+        "skip": 0
+      },
+      "train_sharpe": 0.6227,
+      "valid_sharpe": 1.7394
+    },
+    {
+      "epoch": 121,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 6,
+        "mom_window": 16,
+        "n_long": 4,
+        "n_short": 7,
+        "skip": 1
+      },
+      "train_sharpe": 0.3615,
+      "valid_sharpe": 1.4308
+    },
+    {
+      "epoch": 122,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 2,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.2262,
+      "valid_sharpe": 1.5726
+    },
+    {
+      "epoch": 123,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": 0.4907,
+      "valid_sharpe": 1.4746
+    },
+    {
+      "epoch": 124,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 8,
+        "mom_window": 19,
+        "n_long": 5,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.6638,
+      "valid_sharpe": 1.6381
+    },
+    {
+      "epoch": 125,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.8776,
+      "valid_sharpe": 2.2625
+    },
+    {
+      "epoch": 126,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 8,
+        "mom_window": 16,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": 0.3909,
+      "valid_sharpe": 1.5078
+    },
+    {
+      "epoch": 127,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 7,
+        "mom_window": 17,
+        "n_long": 4,
+        "n_short": 4,
+        "skip": 0
+      },
+      "train_sharpe": 0.7353,
+      "valid_sharpe": 1.3192
+    },
+    {
+      "epoch": 128,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 4,
+        "skip": 1
+      },
+      "train_sharpe": 0.4788,
+      "valid_sharpe": 1.2612
+    },
+    {
+      "epoch": 129,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 0,
+        "mom_window": 19,
+        "n_long": 8,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.8427,
+      "valid_sharpe": 1.3493
+    },
+    {
+      "epoch": 130,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 6,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.5383,
+      "valid_sharpe": 1.7789
+    },
+    {
+      "epoch": 131,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.1304,
+      "valid_sharpe": 1.1829
+    },
+    {
+      "epoch": 132,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 3,
+        "skip": 1
+      },
+      "train_sharpe": 0.8877,
+      "valid_sharpe": 1.8984
+    },
+    {
+      "epoch": 133,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.3467,
+      "valid_sharpe": 2.0835
+    },
+    {
+      "epoch": 134,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.332,
+      "valid_sharpe": 2.1456
+    },
+    {
+      "epoch": 135,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 6,
+        "mom_window": 6,
+        "n_long": 4,
+        "n_short": 2,
+        "skip": 5
+      },
+      "train_sharpe": 0.2097,
+      "valid_sharpe": 1.7523
+    },
+    {
+      "epoch": 136,
+      "params": {
+        "exit_buffer": 0.09,
+        "min_hold": 5,
+        "mom_window": 13,
+        "n_long": 5,
+        "n_short": 3,
+        "skip": 4
+      },
+      "train_sharpe": 0.457,
+      "valid_sharpe": 1.6779
+    },
+    {
+      "epoch": 137,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 6,
+        "mom_window": 24,
+        "n_long": 4,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.6046,
+      "valid_sharpe": 0.7901
+    },
+    {
+      "epoch": 138,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 5
+      },
+      "train_sharpe": 0.4107,
+      "valid_sharpe": 0.9899
+    },
+    {
+      "epoch": 139,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.5979,
+      "valid_sharpe": 1.9975
+    },
+    {
+      "epoch": 140,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 6,
+        "mom_window": 7,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 3
+      },
+      "train_sharpe": -0.5952,
+      "valid_sharpe": 1.8636
+    },
+    {
+      "epoch": 141,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.5518,
+      "valid_sharpe": 1.7185
+    },
+    {
+      "epoch": 142,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 6,
+        "mom_window": 17,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.5043,
+      "valid_sharpe": 1.6781
+    },
+    {
+      "epoch": 143,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 6,
+        "mom_window": 17,
+        "n_long": 7,
+        "n_short": 7,
+        "skip": 0
+      },
+      "train_sharpe": 0.4766,
+      "valid_sharpe": 1.3315
+    },
+    {
+      "epoch": 144,
+      "params": {
+        "exit_buffer": 0.22999999999999998,
+        "min_hold": 8,
+        "mom_window": 19,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.4868,
+      "valid_sharpe": 1.1545
+    },
+    {
+      "epoch": 145,
+      "params": {
+        "exit_buffer": 0.09,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 3,
+        "skip": 4
+      },
+      "train_sharpe": 0.4314,
+      "valid_sharpe": 1.3199
+    },
+    {
+      "epoch": 146,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 5,
+        "mom_window": 19,
+        "n_long": 4,
+        "n_short": 3,
+        "skip": 1
+      },
+      "train_sharpe": 0.5676,
+      "valid_sharpe": 0.8391
+    },
+    {
+      "epoch": 147,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 8,
+        "mom_window": 19,
+        "n_long": 4,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.5156,
+      "valid_sharpe": 1.1211
+    },
+    {
+      "epoch": 148,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 5,
+        "mom_window": 30,
+        "n_long": 8,
+        "n_short": 7,
+        "skip": 2
+      },
+      "train_sharpe": 0.5004,
+      "valid_sharpe": -0.1791
+    },
+    {
+      "epoch": 149,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.664,
+      "valid_sharpe": 1.7502
+    },
+    {
+      "epoch": 150,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.6865,
+      "valid_sharpe": 2.1189
+    },
+    {
+      "epoch": 151,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 18,
+        "n_long": 7,
+        "n_short": 2,
+        "skip": 1
+      },
+      "train_sharpe": 0.839,
+      "valid_sharpe": 1.4061
+    },
+    {
+      "epoch": 152,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 3,
+        "mom_window": 16,
+        "n_long": 5,
+        "n_short": 5,
+        "skip": 1
+      },
+      "train_sharpe": 0.5029,
+      "valid_sharpe": 1.2875
+    },
+    {
+      "epoch": 153,
+      "params": {
+        "exit_buffer": 0.18,
+        "min_hold": 6,
+        "mom_window": 16,
+        "n_long": 8,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.4899,
+      "valid_sharpe": 1.8943
+    },
+    {
+      "epoch": 154,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 0,
+        "mom_window": 16,
+        "n_long": 7,
+        "n_short": 8,
+        "skip": 3
+      },
+      "train_sharpe": 0.4023,
+      "valid_sharpe": 0.8569
+    },
+    {
+      "epoch": 155,
+      "params": {
+        "exit_buffer": 0.1,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 7,
+        "skip": 3
+      },
+      "train_sharpe": 0.4424,
+      "valid_sharpe": 1.4948
+    },
+    {
+      "epoch": 156,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 7,
+        "mom_window": 21,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.991,
+      "valid_sharpe": 1.1738
+    },
+    {
+      "epoch": 157,
+      "params": {
+        "exit_buffer": 0.29,
+        "min_hold": 6,
+        "mom_window": 18,
+        "n_long": 7,
+        "n_short": 7,
+        "skip": 0
+      },
+      "train_sharpe": 0.3611,
+      "valid_sharpe": 1.6544
+    },
+    {
+      "epoch": 158,
+      "params": {
+        "exit_buffer": 0.14,
+        "min_hold": 6,
+        "mom_window": 16,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.4397,
+      "valid_sharpe": 1.6674
+    },
+    {
+      "epoch": 159,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 8,
+        "mom_window": 16,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.2893,
+      "valid_sharpe": 1.451
+    },
+    {
+      "epoch": 160,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 8,
+        "mom_window": 20,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 0
+      },
+      "train_sharpe": 0.4589,
+      "valid_sharpe": 1.3679
+    },
+    {
+      "epoch": 161,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 8,
+        "mom_window": 16,
+        "n_long": 8,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.3184,
+      "valid_sharpe": 1.9451
+    },
+    {
+      "epoch": 162,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": 0.4585,
+      "valid_sharpe": 1.5582
+    },
+    {
+      "epoch": 163,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.5731,
+      "valid_sharpe": 1.5933
+    },
+    {
+      "epoch": 164,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.4902,
+      "valid_sharpe": 2.1669
+    },
+    {
+      "epoch": 165,
+      "params": {
+        "exit_buffer": 0.14,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.5185,
+      "valid_sharpe": 1.7406
+    },
+    {
+      "epoch": 166,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 3
+      },
+      "train_sharpe": 0.1758,
+      "valid_sharpe": 1.3026
+    },
+    {
+      "epoch": 167,
+      "params": {
+        "exit_buffer": 0.18,
+        "min_hold": 7,
+        "mom_window": 20,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.4008,
+      "valid_sharpe": 1.0212
+    },
+    {
+      "epoch": 168,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 8,
+        "mom_window": 26,
+        "n_long": 4,
+        "n_short": 7,
+        "skip": 1
+      },
+      "train_sharpe": 0.1295,
+      "valid_sharpe": 0.6426
+    },
+    {
+      "epoch": 169,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 7,
+        "mom_window": 16,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.3196,
+      "valid_sharpe": 2.0379
+    },
+    {
+      "epoch": 170,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 2,
+        "skip": 2
+      },
+      "train_sharpe": 1.1674,
+      "valid_sharpe": 1.1547
+    },
+    {
+      "epoch": 171,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.2169,
+      "valid_sharpe": 1.7863
+    },
+    {
+      "epoch": 172,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.332,
+      "valid_sharpe": 2.1456
+    },
+    {
+      "epoch": 173,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.5185,
+      "valid_sharpe": 1.7406
+    },
+    {
+      "epoch": 174,
+      "params": {
+        "exit_buffer": 0.35,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.7694,
+      "valid_sharpe": 1.9319
+    },
+    {
+      "epoch": 175,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 6,
+        "mom_window": 7,
+        "n_long": 4,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": -0.6701,
+      "valid_sharpe": 1.6466
+    },
+    {
+      "epoch": 176,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 7,
+        "mom_window": 22,
+        "n_long": 8,
+        "n_short": 8,
+        "skip": 3
+      },
+      "train_sharpe": 0.3247,
+      "valid_sharpe": 0.2825
+    },
+    {
+      "epoch": 177,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.3999,
+      "valid_sharpe": 2.1836
+    },
+    {
+      "epoch": 178,
+      "params": {
+        "exit_buffer": 0.33,
+        "min_hold": 7,
+        "mom_window": 19,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.782,
+      "valid_sharpe": 1.632
+    },
+    {
+      "epoch": 179,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 2,
+        "skip": 3
+      },
+      "train_sharpe": 0.5971,
+      "valid_sharpe": 1.747
+    },
+    {
+      "epoch": 180,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 11,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.316,
+      "valid_sharpe": 1.9461
+    },
+    {
+      "epoch": 181,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 0
+      },
+      "train_sharpe": 0.3622,
+      "valid_sharpe": 1.323
+    },
+    {
+      "epoch": 182,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.4174,
+      "valid_sharpe": 1.6889
+    },
+    {
+      "epoch": 183,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 3,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 7,
+        "skip": 2
+      },
+      "train_sharpe": 0.5696,
+      "valid_sharpe": 1.4816
+    },
+    {
+      "epoch": 184,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.516,
+      "valid_sharpe": 2.2391
+    },
+    {
+      "epoch": 185,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.6865,
+      "valid_sharpe": 2.1189
+    },
+    {
+      "epoch": 186,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 8,
+        "mom_window": 19,
+        "n_long": 8,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.5169,
+      "valid_sharpe": 1.7162
+    },
+    {
+      "epoch": 187,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.6663,
+      "valid_sharpe": 1.7333
+    },
+    {
+      "epoch": 188,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.6989,
+      "valid_sharpe": 1.514
+    },
+    {
+      "epoch": 189,
+      "params": {
+        "exit_buffer": 0.13,
+        "min_hold": 7,
+        "mom_window": 7,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": -0.8145,
+      "valid_sharpe": 1.4194
+    },
+    {
+      "epoch": 190,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 6,
+        "mom_window": 6,
+        "n_long": 8,
+        "n_short": 2,
+        "skip": 2
+      },
+      "train_sharpe": 0.3811,
+      "valid_sharpe": 0.941
+    },
+    {
+      "epoch": 191,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 13,
+        "n_long": 8,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.7865,
+      "valid_sharpe": 1.7626
+    },
+    {
+      "epoch": 192,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 6,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.5122,
+      "valid_sharpe": 1.5658
+    },
+    {
+      "epoch": 193,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.4974,
+      "valid_sharpe": 1.3301
+    },
+    {
+      "epoch": 194,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 6,
+        "mom_window": 13,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.4836,
+      "valid_sharpe": 2.2977
+    },
+    {
+      "epoch": 195,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.5162,
+      "valid_sharpe": 2.0431
+    },
+    {
+      "epoch": 196,
+      "params": {
+        "exit_buffer": 0.33999999999999997,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 6,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.658,
+      "valid_sharpe": 2.0173
+    },
+    {
+      "epoch": 197,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 3,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 2,
+        "skip": 5
+      },
+      "train_sharpe": 0.1458,
+      "valid_sharpe": 1.2856
+    },
+    {
+      "epoch": 198,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 4,
+        "skip": 0
+      },
+      "train_sharpe": 0.8495,
+      "valid_sharpe": 1.8306
+    },
+    {
+      "epoch": 199,
+      "params": {
+        "exit_buffer": 0.28,
+        "min_hold": 2,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 6,
+        "skip": 3
+      },
+      "train_sharpe": 0.5979,
+      "valid_sharpe": 1.0359
+    },
+    {
+      "epoch": 200,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 0,
+        "mom_window": 26,
+        "n_long": 6,
+        "n_short": 7,
+        "skip": 2
+      },
+      "train_sharpe": 0.8033,
+      "valid_sharpe": 0.4794
+    },
+    {
+      "epoch": 201,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 2,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.7232,
+      "valid_sharpe": 1.2904
+    },
+    {
+      "epoch": 202,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 13,
+        "n_long": 6,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.1463,
+      "valid_sharpe": 2.177
+    },
+    {
+      "epoch": 203,
+      "params": {
+        "exit_buffer": 0.18,
+        "min_hold": 6,
+        "mom_window": 16,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.425,
+      "valid_sharpe": 1.1865
+    },
+    {
+      "epoch": 204,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 3
+      },
+      "train_sharpe": 0.2488,
+      "valid_sharpe": 2.1728
+    },
+    {
+      "epoch": 205,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 7,
+        "mom_window": 11,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 1.3445,
+      "valid_sharpe": 0.7905
+    },
+    {
+      "epoch": 206,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 6,
+        "mom_window": 16,
+        "n_long": 8,
+        "n_short": 7,
+        "skip": 0
+      },
+      "train_sharpe": 0.7903,
+      "valid_sharpe": 1.7551
+    },
+    {
+      "epoch": 207,
+      "params": {
+        "exit_buffer": 0.29,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.6894,
+      "valid_sharpe": 1.8872
+    },
+    {
+      "epoch": 208,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.8005,
+      "valid_sharpe": 1.8109
+    },
+    {
+      "epoch": 209,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 1,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 1.0329,
+      "valid_sharpe": 1.5361
+    },
+    {
+      "epoch": 210,
+      "params": {
+        "exit_buffer": 0.3,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.8173,
+      "valid_sharpe": 2.0081
+    },
+    {
+      "epoch": 211,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 7,
+        "mom_window": 16,
+        "n_long": 3,
+        "n_short": 4,
+        "skip": 5
+      },
+      "train_sharpe": 0.453,
+      "valid_sharpe": 1.2129
+    },
+    {
+      "epoch": 212,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.8486,
+      "valid_sharpe": 1.8556
+    },
+    {
+      "epoch": 213,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.6679,
+      "valid_sharpe": 1.7419
+    },
+    {
+      "epoch": 214,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 6,
+        "n_short": 5,
+        "skip": 1
+      },
+      "train_sharpe": 0.5322,
+      "valid_sharpe": 1.3553
+    },
+    {
+      "epoch": 215,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.2994,
+      "valid_sharpe": 1.828
+    },
+    {
+      "epoch": 216,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 6,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.5057,
+      "valid_sharpe": 1.5259
+    },
+    {
+      "epoch": 217,
+      "params": {
+        "exit_buffer": 0.35,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.691,
+      "valid_sharpe": 1.9232
+    },
+    {
+      "epoch": 218,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.6554,
+      "valid_sharpe": 2.3706
+    },
+    {
+      "epoch": 219,
+      "params": {
+        "exit_buffer": 0.29,
+        "min_hold": 2,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.7954,
+      "valid_sharpe": 1.3192
+    },
+    {
+      "epoch": 220,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.5423,
+      "valid_sharpe": 1.9508
+    },
+    {
+      "epoch": 221,
+      "params": {
+        "exit_buffer": 0.2,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 6,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.4953,
+      "valid_sharpe": 2.163
+    },
+    {
+      "epoch": 222,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 6,
+        "mom_window": 17,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.3412,
+      "valid_sharpe": 1.7634
+    },
+    {
+      "epoch": 223,
+      "params": {
+        "exit_buffer": 0.35,
+        "min_hold": 7,
+        "mom_window": 13,
+        "n_long": 6,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.7981,
+      "valid_sharpe": 1.5476
+    },
+    {
+      "epoch": 224,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.5167,
+      "valid_sharpe": 2.1024
+    },
+    {
+      "epoch": 225,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 7,
+        "mom_window": 24,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.9991,
+      "valid_sharpe": 0.7758
+    },
+    {
+      "epoch": 226,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 7,
+        "skip": 2
+      },
+      "train_sharpe": 0.417,
+      "valid_sharpe": 2.1519
+    },
+    {
+      "epoch": 227,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 8,
+        "skip": 3
+      },
+      "train_sharpe": 0.2986,
+      "valid_sharpe": 0.8597
+    },
+    {
+      "epoch": 228,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.8326,
+      "valid_sharpe": 1.713
+    },
+    {
+      "epoch": 229,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.5432,
+      "valid_sharpe": 1.958
+    },
+    {
+      "epoch": 230,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.4174,
+      "valid_sharpe": 1.6889
+    },
+    {
+      "epoch": 231,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.2976,
+      "valid_sharpe": 2.4891
+    },
+    {
+      "epoch": 232,
+      "params": {
+        "exit_buffer": 0.35,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 4,
+        "skip": 5
+      },
+      "train_sharpe": 0.5825,
+      "valid_sharpe": 0.325
+    },
+    {
+      "epoch": 233,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.8861,
+      "valid_sharpe": 1.8254
+    },
+    {
+      "epoch": 234,
+      "params": {
+        "exit_buffer": 0.33,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.7009,
+      "valid_sharpe": 1.7893
+    },
+    {
+      "epoch": 235,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 4,
+        "skip": 5
+      },
+      "train_sharpe": 0.5762,
+      "valid_sharpe": 0.8535
+    },
+    {
+      "epoch": 236,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 2,
+        "n_short": 6,
+        "skip": 3
+      },
+      "train_sharpe": -0.423,
+      "valid_sharpe": 0.6377
+    },
+    {
+      "epoch": 237,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": 0.3521,
+      "valid_sharpe": 1.109
+    },
+    {
+      "epoch": 238,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 25,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.917,
+      "valid_sharpe": 0.2243
+    },
+    {
+      "epoch": 239,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 13,
+        "n_long": 8,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.6239,
+      "valid_sharpe": 2.0819
+    },
+    {
+      "epoch": 240,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 1,
+        "mom_window": 14,
+        "n_long": 6,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.711,
+      "valid_sharpe": 1.212
+    },
+    {
+      "epoch": 241,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 3,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.3901,
+      "valid_sharpe": 1.7451
+    },
+    {
+      "epoch": 242,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 6,
+        "mom_window": 20,
+        "n_long": 6,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.5919,
+      "valid_sharpe": 1.1353
+    },
+    {
+      "epoch": 243,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 10,
+        "n_long": 7,
+        "n_short": 7,
+        "skip": 3
+      },
+      "train_sharpe": 0.0075,
+      "valid_sharpe": 0.7741
+    },
+    {
+      "epoch": 244,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 0
+      },
+      "train_sharpe": 0.6035,
+      "valid_sharpe": 1.2218
+    },
+    {
+      "epoch": 245,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.7963,
+      "valid_sharpe": 2.1266
+    },
+    {
+      "epoch": 246,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.5573,
+      "valid_sharpe": 1.4398
+    },
+    {
+      "epoch": 247,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 23,
+        "n_long": 5,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.7987,
+      "valid_sharpe": 0.5536
+    },
+    {
+      "epoch": 248,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 25,
+        "n_long": 6,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.8989,
+      "valid_sharpe": 1.1073
+    },
+    {
+      "epoch": 249,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 7,
+        "skip": 3
+      },
+      "train_sharpe": 0.4628,
+      "valid_sharpe": 2.4471
+    },
+    {
+      "epoch": 250,
+      "params": {
+        "exit_buffer": 0.2,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 2,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.3593,
+      "valid_sharpe": 1.7211
+    },
+    {
+      "epoch": 251,
+      "params": {
+        "exit_buffer": 0.1,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 6,
+        "n_short": 4,
+        "skip": 5
+      },
+      "train_sharpe": 0.4654,
+      "valid_sharpe": 0.7966
+    },
+    {
+      "epoch": 252,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.7396,
+      "valid_sharpe": 1.9403
+    },
+    {
+      "epoch": 253,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 5
+      },
+      "train_sharpe": 0.0681,
+      "valid_sharpe": 0.6314
+    },
+    {
+      "epoch": 254,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 5,
+        "mom_window": 13,
+        "n_long": 2,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.2961,
+      "valid_sharpe": 0.8324
+    },
+    {
+      "epoch": 255,
+      "params": {
+        "exit_buffer": 0.26,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 3
+      },
+      "train_sharpe": 0.6235,
+      "valid_sharpe": 1.9714
+    },
+    {
+      "epoch": 256,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.5738,
+      "valid_sharpe": 1.7839
+    },
+    {
+      "epoch": 257,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 6,
+        "mom_window": 30,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.6675,
+      "valid_sharpe": 0.8596
+    },
+    {
+      "epoch": 258,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 4,
+        "skip": 5
+      },
+      "train_sharpe": 0.7108,
+      "valid_sharpe": 0.85
+    },
+    {
+      "epoch": 259,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 2,
+        "skip": 2
+      },
+      "train_sharpe": 0.9628,
+      "valid_sharpe": 1.3592
+    },
+    {
+      "epoch": 260,
+      "params": {
+        "exit_buffer": 0.2,
+        "min_hold": 7,
+        "mom_window": 13,
+        "n_long": 6,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.4248,
+      "valid_sharpe": 2.0158
+    },
+    {
+      "epoch": 261,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 8,
+        "mom_window": 9,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.2203,
+      "valid_sharpe": 2.1883
+    },
+    {
+      "epoch": 262,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 6,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.5839,
+      "valid_sharpe": 1.7981
+    },
+    {
+      "epoch": 263,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 3,
+        "mom_window": 18,
+        "n_long": 5,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.5141,
+      "valid_sharpe": 1.2591
+    },
+    {
+      "epoch": 264,
+      "params": {
+        "exit_buffer": 0.08,
+        "min_hold": 0,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 4
+      },
+      "train_sharpe": 0.559,
+      "valid_sharpe": 1.7222
+    },
+    {
+      "epoch": 265,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.646,
+      "valid_sharpe": 1.966
+    },
+    {
+      "epoch": 266,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.6079,
+      "valid_sharpe": 2.2283
+    },
+    {
+      "epoch": 267,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 5
+      },
+      "train_sharpe": 0.6712,
+      "valid_sharpe": 1.0296
+    },
+    {
+      "epoch": 268,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 26,
+        "n_long": 7,
+        "n_short": 7,
+        "skip": 2
+      },
+      "train_sharpe": 0.5216,
+      "valid_sharpe": 0.4835
+    },
+    {
+      "epoch": 269,
+      "params": {
+        "exit_buffer": 0.12000000000000001,
+        "min_hold": 6,
+        "mom_window": 13,
+        "n_long": 7,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.1988,
+      "valid_sharpe": 1.5643
+    },
+    {
+      "epoch": 270,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 6,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.4548,
+      "valid_sharpe": 2.0511
+    },
+    {
+      "epoch": 271,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 8,
+        "mom_window": 21,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.4827,
+      "valid_sharpe": 0.5962
+    },
+    {
+      "epoch": 272,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 9,
+        "n_long": 2,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": -0.1649,
+      "valid_sharpe": 1.3087
+    },
+    {
+      "epoch": 273,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 7,
+        "mom_window": 13,
+        "n_long": 7,
+        "n_short": 7,
+        "skip": 0
+      },
+      "train_sharpe": 0.3086,
+      "valid_sharpe": 1.135
+    },
+    {
+      "epoch": 274,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.9527,
+      "valid_sharpe": 2.1041
+    },
+    {
+      "epoch": 275,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 4,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.2391,
+      "valid_sharpe": 1.013
+    },
+    {
+      "epoch": 276,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 8,
+        "mom_window": 13,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 3
+      },
+      "train_sharpe": 0.6014,
+      "valid_sharpe": 1.0509
+    },
+    {
+      "epoch": 277,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.7835,
+      "valid_sharpe": 1.5639
+    },
+    {
+      "epoch": 278,
+      "params": {
+        "exit_buffer": 0.2,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.6923,
+      "valid_sharpe": 2.1923
+    },
+    {
+      "epoch": 279,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.5497,
+      "valid_sharpe": 1.8089
+    },
+    {
+      "epoch": 280,
+      "params": {
+        "exit_buffer": 0.1,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.307,
+      "valid_sharpe": 2.4396
+    },
+    {
+      "epoch": 281,
+      "params": {
+        "exit_buffer": 0.07,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 7,
+        "skip": 1
+      },
+      "train_sharpe": 0.3501,
+      "valid_sharpe": 0.6585
+    },
+    {
+      "epoch": 282,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 4,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 4
+      },
+      "train_sharpe": 0.5073,
+      "valid_sharpe": 1.4676
+    },
+    {
+      "epoch": 283,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 13,
+        "n_long": 6,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.2737,
+      "valid_sharpe": 2.0104
+    },
+    {
+      "epoch": 284,
+      "params": {
+        "exit_buffer": 0.2,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 3
+      },
+      "train_sharpe": 0.4492,
+      "valid_sharpe": 1.8921
+    },
+    {
+      "epoch": 285,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 9,
+        "n_long": 8,
+        "n_short": 8,
+        "skip": 2
+      },
+      "train_sharpe": -0.0075,
+      "valid_sharpe": 1.4517
+    },
+    {
+      "epoch": 286,
+      "params": {
+        "exit_buffer": 0.31,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 5,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.3872,
+      "valid_sharpe": 1.4756
+    },
+    {
+      "epoch": 287,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 26,
+        "n_long": 6,
+        "n_short": 7,
+        "skip": 3
+      },
+      "train_sharpe": 0.4376,
+      "valid_sharpe": -0.3031
+    },
+    {
+      "epoch": 288,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 4
+      },
+      "train_sharpe": 0.4882,
+      "valid_sharpe": 2.3114
+    },
+    {
+      "epoch": 289,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 8,
+        "skip": 2
+      },
+      "train_sharpe": 0.1394,
+      "valid_sharpe": 1.6541
+    },
+    {
+      "epoch": 290,
+      "params": {
+        "exit_buffer": 0.16,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 3
+      },
+      "train_sharpe": 0.3252,
+      "valid_sharpe": 2.2932
+    },
+    {
+      "epoch": 291,
+      "params": {
+        "exit_buffer": 0.11,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 4
+      },
+      "train_sharpe": 0.7191,
+      "valid_sharpe": 1.7233
+    },
+    {
+      "epoch": 292,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 8,
+        "mom_window": 9,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 1
+      },
+      "train_sharpe": 0.1743,
+      "valid_sharpe": 1.115
+    },
+    {
+      "epoch": 293,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 6,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 2
+      },
+      "train_sharpe": 0.4127,
+      "valid_sharpe": 1.5438
+    },
+    {
+      "epoch": 294,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 7,
+        "mom_window": 13,
+        "n_long": 7,
+        "n_short": 3,
+        "skip": 2
+      },
+      "train_sharpe": 0.5439,
+      "valid_sharpe": 1.149
+    },
+    {
+      "epoch": 295,
+      "params": {
+        "exit_buffer": 0.05,
+        "min_hold": 5,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.693,
+      "valid_sharpe": 1.9317
+    },
+    {
+      "epoch": 296,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 8,
+        "mom_window": 14,
+        "n_long": 7,
+        "n_short": 6,
+        "skip": 4
+      },
+      "train_sharpe": 0.5421,
+      "valid_sharpe": 2.3657
+    },
+    {
+      "epoch": 297,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 7,
+        "mom_window": 14,
+        "n_long": 8,
+        "n_short": 4,
+        "skip": 3
+      },
+      "train_sharpe": 0.5696,
+      "valid_sharpe": 2.098
+    },
+    {
+      "epoch": 298,
+      "params": {
+        "exit_buffer": 0.15000000000000002,
+        "min_hold": 7,
+        "mom_window": 24,
+        "n_long": 8,
+        "n_short": 5,
+        "skip": 2
+      },
+      "train_sharpe": 0.9917,
+      "valid_sharpe": 1.1542
+    },
+    {
+      "epoch": 299,
+      "params": {
+        "exit_buffer": 0.2,
+        "min_hold": 7,
+        "mom_window": 13,
+        "n_long": 6,
+        "n_short": 5,
+        "skip": 3
+      },
+      "train_sharpe": 0.6979,
+      "valid_sharpe": 1.2903
+    },
+    {
+      "epoch": 300,
+      "params": {
+        "exit_buffer": 0.27,
+        "min_hold": 7,
+        "mom_window": 9,
+        "n_long": 7,
+        "n_short": 4,
+        "skip": 2
+      },
+      "train_sharpe": 0.4265,
+      "valid_sharpe": 2.001
+    }
+  ]
+}

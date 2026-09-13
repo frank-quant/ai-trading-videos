@@ -1,0 +1,40 @@
+{
+  "model": "glm_5_3_flash",
+  "seed": 42,
+  "factors": [
+    "xs_vol_adj_momentum_63d_skip1",
+    "xs_reversal_1d_w1.11",
+    "abs_trend_gate_sma45"
+  ],
+  "timeframe": "1d",
+  "epochs_used": 600,
+  "strategy_family": "cross-sectional",
+  "turnover_control": "rank hysteresis exit_buffer=0.34 (~7 rank notches) + min_hold=17d; avg holding ~40d; turnover ~7.1x/yr train, ~9.8x/yr valid (entry+exit notional / starting equity)",
+  "fee_bps": 6,
+  "slippage_bps": 0,
+  "funding_included": true,
+  "train": {
+    "ann_return": 0.077,
+    "sharpe": 0.5243,
+    "sortino": 0.5657,
+    "calmar": 0.3152,
+    "max_drawdown": -0.2441,
+    "win_rate": 0.4506,
+    "profit_factor": 1.247,
+    "turnover_per_year": 7.0931,
+    "n_trades": 233,
+    "sharpe_net_of_costs": 0.5243
+  },
+  "valid": {
+    "ann_return": 0.497,
+    "sharpe": 2.8312,
+    "sortino": 3.5433,
+    "calmar": 14.3677,
+    "max_drawdown": -0.0346,
+    "win_rate": 0.6265,
+    "profit_factor": 2.9147,
+    "turnover_per_year": 9.7789,
+    "n_trades": 83,
+    "sharpe_net_of_costs": 2.8312
+  }
+}

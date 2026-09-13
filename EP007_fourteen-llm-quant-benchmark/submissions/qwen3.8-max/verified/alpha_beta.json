@@ -1,0 +1,14 @@
+{
+  "tag": "ft_qwen_3_8_max",
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\ft_qwen_3_8_max\\verified\\test.zip",
+  "window": "2025-07-01..2026-07-01",
+  "market_total_return_pct": -44.95,
+  "strategy_total_return_pct": 1.74,
+  "beta": 0.078,
+  "r2": 0.115,
+  "alpha_annual_pct": 5.9,
+  "beta_drag_pct": -3.5,
+  "alpha_contrib_pct": 5.3,
+  "net_exposure_pct": 11.5,
+  "final_equity": 10173.79
+}

@@ -1,0 +1,31 @@
+{
+  "strategy_name": "RehearsalMF",
+  "params": {
+    "roi": {
+      "0": 100
+    },
+    "stoploss": {
+      "stoploss": -0.99
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 10
+    },
+    "buy": {
+      "mom_w": 24,
+      "n_long": 2,
+      "n_short": 3,
+      "rev_w": 10,
+      "vol_w": 86,
+      "w_rev": 0.48,
+      "w_vol": 0.54
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-07-28 16:30:43.334408+00:00"
+}

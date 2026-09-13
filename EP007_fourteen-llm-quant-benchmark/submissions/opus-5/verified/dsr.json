@@ -1,0 +1,11 @@
+{
+  "n_trials": 300,
+  "sr_trials_var": 0.0734,
+  "observed_sharpe_annual": 1.615,
+  "expected_max_sharpe_annual_by_luck": 0.784,
+  "T_days": 362,
+  "skew": 7.105,
+  "kurtosis": 83.662,
+  "DSR": 0.868,
+  "verdict": "不显著 —— 大概率是搜出来的运气"
+}

@@ -1,0 +1,29 @@
+{
+  "strategy_name": "DsrTest",
+  "params": {
+    "roi": {
+      "0": 100
+    },
+    "stoploss": {
+      "stoploss": -0.99
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 10
+    },
+    "buy": {
+      "exit_buffer": 0.34,
+      "min_hold": 1,
+      "mom_w": 10,
+      "n_long": 2,
+      "n_short": 3
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-07-29 08:06:53.076602+00:00"
+}

@@ -1,0 +1,9 @@
+# Self-assessment
+
+The largest risk is validation selection. Although the required loss penalizes positive train-minus-validation gaps, all 300 trials still observe the same validation year. The final validation Sharpe of 2.23 is much higher than TRAIN's 0.82, so regime luck and multiple testing are plausible even though nearby late trials also performed well. No claim is made about data after 2025-06-30.
+
+The strategy is causal by construction: each factor uses only current/past closes and trailing volatility, and the unmodified scaffold shifts the completed cross-sectional score and rank by one candle. The main implementation risk is not future leakage but live-universe synchronization: delayed or missing candles could make a real-time cross-sectional rank differ from the perfectly aligned historical panel.
+
+Turnover is the main economic risk. Hysteresis and a 7.7-day minimum hold reduce churn, yet validation turnover reaches about 151 times capital per year. Results include the fixed 6 bps per-side backtest cost and historical funding, but actual market impact, spread widening, rejected orders, and exchange outages could be worse. The scaffold uses one position per pair with equal available-balance sizing, not explicit volatility-risk parity; volatile contracts can therefore contribute disproportionate portfolio risk despite signal normalization.
+
+The six-long/three-short breadth can carry net market beta, and TRAIN shorts lost money in aggregate even though both sides trade extensively. A future version should test beta-neutral sizing and walk-forward stability without using the unavailable test set. Tail risk is also material because the -99% stop is intentionally non-binding; rank exits can be slow during discontinuous moves, and isolated 1x margin limits but does not eliminate contract-specific loss.

@@ -1,0 +1,14 @@
+{
+  "tag": "fable_5",
+  "trades_file": "D:\\freqtrade_demo\\EP004_env\\ft_fable_5\\verified\\test.zip",
+  "window": "2025-07-01..2026-07-01",
+  "market_total_return_pct": -44.95,
+  "strategy_total_return_pct": -7.54,
+  "beta": 0.312,
+  "r2": 0.765,
+  "alpha_annual_pct": 7.8,
+  "beta_drag_pct": -14.0,
+  "alpha_contrib_pct": 6.5,
+  "net_exposure_pct": 32.7,
+  "final_equity": 9245.76
+}

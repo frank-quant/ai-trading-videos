@@ -1,0 +1,26 @@
+{
+  "model": "GLM-5.3-Flash",
+  "harness": "ZCode",
+  "env": "tier_glm_5_3_flash",
+  "tokens": {
+    "缓存命中": 4714624,
+    "输入": 207625,
+    "输出": 52660
+  },
+  "token_total": 4974909,
+  "cache_hit_rate_pct": 94.8,
+  "unit_price_cny_per_1k": {
+    "缓存命中": 0.000115,
+    "输入": 0.0004,
+    "输出": 0.0014
+  },
+  "api_calls": 66,
+  "work_minutes": 61,
+  "work_segments": 1,
+  "cost_cny": 0.7,
+  "cost_basis": "平台账单原值(逐条分类用量×平台单价),非估算",
+  "cash_paid_cny": 0.0,
+  "window": "2026-09-02 20:28:00 ~ 2026-09-02 21:29:00",
+  "model_verified": "✅ 智谱账单「模型编码（推理专用）」列：100% glm-5.3-flash，4,974,909 token / 198 次请求，与本文件 token_total 完全吻合，无其他模型混入。",
+  "api_calls_note": "本文件 api_calls=66 低于账单「请求次数(仅API)」合计 198；成本按 token 计，不受影响，但引用调用次数时以账单为准。"
+}

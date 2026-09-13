@@ -1,0 +1,40 @@
+{
+  "model": "kimi_k3",
+  "seed": 42,
+  "factors": [
+    "t-stat momentum: mean/log-return over mom_fast=12d divided by its std, x sqrt(12)",
+    "vol-normalized slow momentum: 127d return / (realized vol over vol_win=36d x sqrt(127))",
+    "blend: 0.19 x fast + 0.81 x slow, cross-sectionally ranked across the 20 pairs (scaffold, shift(1))"
+  ],
+  "timeframe": "1d",
+  "epochs_used": 400,
+  "strategy_family": "cross-sectional",
+  "turnover_control": "rank-hysteresis exit_buffer=0.22 (exit only when rank leaves the threshold by a margin) + min_hold=1d; wide 5-long/3-short book; daily timeframe chosen to keep traded volume low (~11x/yr train, ~25x/yr valid one-way notional over wallet)",
+  "fee_bps": 6,
+  "slippage_bps": 0,
+  "funding_included": false,
+  "train": {
+    "ann_return": 0.162981,
+    "sharpe": 0.8546,
+    "sortino": 0.9243,
+    "calmar": 1.3739,
+    "max_drawdown": 0.118627,
+    "win_rate": 0.4678,
+    "profit_factor": 1.4101,
+    "turnover_per_year": 11.02,
+    "n_trades": 357,
+    "sharpe_net_of_costs": 0.8219
+  },
+  "valid": {
+    "ann_return": 0.844257,
+    "sharpe": 1.8942,
+    "sortino": 2.9865,
+    "calmar": 4.8445,
+    "max_drawdown": 0.174271,
+    "win_rate": 0.5556,
+    "profit_factor": 1.9898,
+    "turnover_per_year": 25.16,
+    "n_trades": 144,
+    "sharpe_net_of_costs": 1.865
+  }
+}

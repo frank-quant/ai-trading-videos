@@ -1,0 +1,14 @@
+{
+  "tag": "ft_gemini_3_8_flash",
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\ft_gemini_3_8_flash\\verified\\test.zip",
+  "window": "2025-07-01..2026-07-01",
+  "market_total_return_pct": -44.95,
+  "strategy_total_return_pct": -10.99,
+  "beta": 0.155,
+  "r2": 0.278,
+  "alpha_annual_pct": -3.5,
+  "beta_drag_pct": -7.0,
+  "alpha_contrib_pct": -4.0,
+  "net_exposure_pct": 20.0,
+  "final_equity": 8901.4
+}

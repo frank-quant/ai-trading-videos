@@ -1,0 +1,11 @@
+{
+  "n_trials": 80,
+  "sr_trials_var": 0.2047,
+  "observed_sharpe_annual": 2.423,
+  "expected_max_sharpe_annual_by_luck": 1.109,
+  "T_days": 354,
+  "skew": 7.407,
+  "kurtosis": 92.006,
+  "DSR": 0.976,
+  "verdict": "显著(DSR≥0.95)"
+}

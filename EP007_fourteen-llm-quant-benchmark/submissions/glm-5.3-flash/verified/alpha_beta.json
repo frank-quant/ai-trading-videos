@@ -1,0 +1,14 @@
+{
+  "tag": "tier_glm_5_3_flash",
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\tier_glm_5_3_flash\\verified\\test.zip",
+  "window": "2025-07-01..2026-07-01",
+  "market_total_return_pct": -44.95,
+  "strategy_total_return_pct": -22.44,
+  "beta": 0.101,
+  "r2": 0.266,
+  "alpha_annual_pct": -20.6,
+  "beta_drag_pct": -4.5,
+  "alpha_contrib_pct": -17.9,
+  "net_exposure_pct": 16.0,
+  "final_equity": 7755.78
+}

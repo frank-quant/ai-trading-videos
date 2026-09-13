@@ -1,0 +1,13 @@
+{
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\ft_gemini_3_8_flash\\backtest_results\\test.zip",
+  "n_trades": 364,
+  "iters": 5000,
+  "block": 10,
+  "start": 1000.0,
+  "orig_final": 40.05542709823421,
+  "prob_profit": 0.1254,
+  "final_P5": 0.9208642166144653,
+  "final_P50": 39.8153456346819,
+  "final_P95": 4908.0758652923605,
+  "mean_trade_ret": -0.005620916020034717
+}

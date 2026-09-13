@@ -1,0 +1,38 @@
+{
+  "model": "CrossSectionalMomentum",
+  "seed": 42,
+  "factors": [
+    "skip-day risk-adjusted momentum: (close[t-skip]/close[t-(mom_window+skip)] - 1) / realized_vol(vol_window)"
+  ],
+  "timeframe": "1d",
+  "epochs_used": 400,
+  "strategy_family": "cross-sectional momentum (market-neutral with modest net-long tilt)",
+  "turnover_control": "rank-percentile hysteresis (exit_buffer=0.17) + minimum holding period (min_hold=19 days)",
+  "fee_bps": 6,
+  "slippage_bps": 0,
+  "funding_included": true,
+  "train": {
+    "ann_return": 0.1238,
+    "sharpe": 0.5914,
+    "sortino": 0.9896,
+    "calmar": 0.4185,
+    "max_drawdown": 0.2959,
+    "win_rate": 0.4934,
+    "profit_factor": 1.1249,
+    "turnover_per_year": 14.2208,
+    "n_trades": 829,
+    "sharpe_net_of_costs": 0.5914
+  },
+  "valid": {
+    "ann_return": 1.6190,
+    "sharpe": 2.8035,
+    "sortino": 8.6813,
+    "calmar": 21.6956,
+    "max_drawdown": 0.0746,
+    "win_rate": 0.5533,
+    "profit_factor": 1.8987,
+    "turnover_per_year": 32.8498,
+    "n_trades": 300,
+    "sharpe_net_of_costs": 2.8035
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "model": "CausalXSTrend",
+  "seed": 5607,
+  "factors": [
+    "volatility-scaled medium-horizon momentum",
+    "volatility-scaled slow-horizon momentum",
+    "short-horizon reversal penalty",
+    "cross-sectional percentile rank"
+  ],
+  "timeframe": "4h",
+  "epochs_used": 300,
+  "strategy_family": "cross-sectional trend",
+  "turnover_control": "4h decisions, 0.11 rank-exit hysteresis, and a 46-candle minimum hold",
+  "fee_bps": 6,
+  "slippage_bps": 1.5,
+  "funding_included": true,
+  "train": {
+    "ann_return": 0.2624192099,
+    "sharpe": 0.8202766622,
+    "sortino": 1.3244657291,
+    "calmar": 1.3409218111,
+    "max_drawdown": 0.1957006052,
+    "win_rate": 0.4876114965,
+    "profit_factor": 1.1103811158,
+    "turnover_per_year": 91.1732515619,
+    "n_trades": 2018,
+    "sharpe_net_of_costs": 0.8202766622
+  },
+  "valid": {
+    "ann_return": 1.3589598768,
+    "sharpe": 2.2330161104,
+    "sortino": 5.9255962019,
+    "calmar": 7.2037877556,
+    "max_drawdown": 0.1886451854,
+    "win_rate": 0.5136436597,
+    "profit_factor": 1.4143944259,
+    "turnover_per_year": 151.4881091295,
+    "n_trades": 623,
+    "sharpe_net_of_costs": 2.2330161104
+  }
+}

@@ -1,0 +1,1 @@
+﻿{"method":"框架级(两个结束日期比对重叠期决策)","reason":"截断法不适用:策略用 self.dp 建横截面面板,Freqtrade 生命周期外无 dataprovider","overlap_identical":397,"only_long":1,"only_short":0,"diff_detail":"FIL/USDT:USDT 空单,开仓 2025-05-31 = 短区间最后一天","verdict":"PASS 边界效应,非未来函数","precedent":"与 EP004 对 Opus 5 的处理一致"}

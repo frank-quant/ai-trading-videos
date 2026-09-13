@@ -1,0 +1,38 @@
+{
+  "model": "XSRiskMomentum",
+  "seed": 42,
+  "factors": [
+    "risk_adjusted_momentum (N-day return / realized vol, skip recent day)"
+  ],
+  "timeframe": "4h",
+  "epochs_used": 300,
+  "strategy_family": "cross-sectional",
+  "turnover_control": "rank hysteresis (exit_buffer) + min holding period (min_hold bars); 4h rebalance",
+  "fee_bps": 6,
+  "slippage_bps": 0,
+  "funding_included": true,
+  "train": {
+    "ann_return": 0.2038,
+    "sharpe": 0.8108,
+    "sortino": 1.4093,
+    "calmar": 0.4021,
+    "max_drawdown": 0.5069,
+    "win_rate": 0.4791,
+    "profit_factor": 1.1266,
+    "turnover_per_year": 70.39,
+    "n_trades": 1870,
+    "sharpe_net_of_costs": 0.8108
+  },
+  "valid": {
+    "ann_return": 0.5459,
+    "sharpe": 1.9636,
+    "sortino": 4.8598,
+    "calmar": 2.7021,
+    "max_drawdown": 0.202,
+    "win_rate": 0.5195,
+    "profit_factor": 1.3996,
+    "turnover_per_year": 68.9,
+    "n_trades": 564,
+    "sharpe_net_of_costs": 1.9636
+  }
+}

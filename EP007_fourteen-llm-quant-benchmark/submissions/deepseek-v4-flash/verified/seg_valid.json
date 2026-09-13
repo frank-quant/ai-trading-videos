@@ -1,0 +1,21 @@
+{
+  "source": "valid.zip",
+  "label": "valid",
+  "window": "2024-07-01..2025-06-30",
+  "capital": 10000.0,
+  "metrics": {
+    "ann_return": 0.7108,
+    "sharpe": 2.1486,
+    "sortino": 6.5877,
+    "calmar": 6.1692,
+    "max_drawdown": 0.1152,
+    "win_rate": 0.4905,
+    "profit_factor": 1.5336,
+    "turnover_per_year": 52.48,
+    "n_trades": 420,
+    "n_long": 217,
+    "n_short": 203,
+    "pnl_long": 5558.62,
+    "pnl_short": 1549.16
+  }
+}

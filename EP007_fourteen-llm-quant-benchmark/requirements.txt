@@ -1,0 +1,19 @@
+# EP004 宿主机分析脚本的依赖(RUNBOOK 第 6、7、8 节)
+#
+# 注意区分两类脚本:
+#   - scripts/factor_causality_check.py 和 scaffold/ 下的策略文件 import freqtrade,
+#     它们在 Freqtrade 容器里跑,不需要装这里的东西。
+#   - 下面这些在宿主机直接 python 跑:
+#       scripts/deflated_sharpe.py
+#       scripts/mc_bootstrap.py
+#       scripts/hyperopt_plot.py
+#       scripts/make_metric_charts.py
+#       scripts/make_video_charts.py
+#       scripts/usage_cost.py       (只用标准库,装不装都能跑)
+#
+# 装法:  python -m pip install -r requirements.txt
+# 建议:  Python 3.10+,先建 venv
+
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.8

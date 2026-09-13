@@ -1,0 +1,13 @@
+{
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\ft_gpt_6_astra\\backtest_results\\test.zip",
+  "n_trades": 3407,
+  "iters": 5000,
+  "block": 10,
+  "start": 1000.0,
+  "orig_final": 2.677423421138872,
+  "prob_profit": 0.0468,
+  "final_P5": 0.004645963684258134,
+  "final_P50": 2.2577864218243295,
+  "final_P95": 902.5629946718,
+  "mean_trade_ret": -0.00023460864827941903
+}

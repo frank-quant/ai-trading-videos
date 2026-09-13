@@ -1,0 +1,14 @@
+{
+  "tag": "glm_5_3",
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\ft_glm_5_3\\backtest_results\\test.zip",
+  "window": "2025-07-01..2026-07-01",
+  "market_total_return_pct": -44.95,
+  "strategy_total_return_pct": -19.87,
+  "beta": 0.119,
+  "r2": 0.144,
+  "alpha_annual_pct": -15.5,
+  "beta_drag_pct": -5.3,
+  "alpha_contrib_pct": -14.5,
+  "net_exposure_pct": 15.8,
+  "final_equity": 8012.98
+}

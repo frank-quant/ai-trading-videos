@@ -1,0 +1,139 @@
+{
+  "tag": "ft_gpt_5_6_sol",
+  "freq": "M",
+  "rows": [
+    {
+      "period": "2025-07",
+      "n": 45,
+      "pnl": 758.0,
+      "ret_pct": 7.58,
+      "long_pnl": 1492.7,
+      "short_pnl": -734.7,
+      "win_rate": 57.8,
+      "market_pct": 21.67
+    },
+    {
+      "period": "2025-08",
+      "n": 51,
+      "pnl": -172.2,
+      "ret_pct": -1.72,
+      "long_pnl": -335.7,
+      "short_pnl": 163.5,
+      "win_rate": 41.2,
+      "market_pct": 4.87
+    },
+    {
+      "period": "2025-09",
+      "n": 34,
+      "pnl": 565.2,
+      "ret_pct": 5.65,
+      "long_pnl": 484.1,
+      "short_pnl": 81.1,
+      "win_rate": 52.9,
+      "market_pct": 0.57
+    },
+    {
+      "period": "2025-10",
+      "n": 54,
+      "pnl": 464.9,
+      "ret_pct": 4.65,
+      "long_pnl": -454.9,
+      "short_pnl": 919.9,
+      "win_rate": 57.4,
+      "market_pct": -16.54
+    },
+    {
+      "period": "2025-11",
+      "n": 46,
+      "pnl": -1046.7,
+      "ret_pct": -10.47,
+      "long_pnl": -1188.7,
+      "short_pnl": 142.0,
+      "win_rate": 41.3,
+      "market_pct": -14.93
+    },
+    {
+      "period": "2025-12",
+      "n": 46,
+      "pnl": -191.0,
+      "ret_pct": -1.91,
+      "long_pnl": -592.1,
+      "short_pnl": 401.1,
+      "win_rate": 39.1,
+      "market_pct": -10.21
+    },
+    {
+      "period": "2026-01",
+      "n": 52,
+      "pnl": 26.3,
+      "ret_pct": 0.26,
+      "long_pnl": -20.3,
+      "short_pnl": 46.6,
+      "win_rate": 46.2,
+      "market_pct": -13.69
+    },
+    {
+      "period": "2026-02",
+      "n": 48,
+      "pnl": -304.9,
+      "ret_pct": -3.05,
+      "long_pnl": -1124.5,
+      "short_pnl": 819.5,
+      "win_rate": 50.0,
+      "market_pct": -9.28
+    },
+    {
+      "period": "2026-03",
+      "n": 54,
+      "pnl": -285.7,
+      "ret_pct": -2.86,
+      "long_pnl": -224.7,
+      "short_pnl": -61.0,
+      "win_rate": 37.0,
+      "market_pct": -3.39
+    },
+    {
+      "period": "2026-04",
+      "n": 50,
+      "pnl": 27.7,
+      "ret_pct": 0.28,
+      "long_pnl": 66.2,
+      "short_pnl": -38.5,
+      "win_rate": 50.0,
+      "market_pct": 2.77
+    },
+    {
+      "period": "2026-05",
+      "n": 53,
+      "pnl": -280.2,
+      "ret_pct": -2.8,
+      "long_pnl": -150.3,
+      "short_pnl": -129.9,
+      "win_rate": 45.3,
+      "market_pct": 3.18
+    },
+    {
+      "period": "2026-06",
+      "n": 45,
+      "pnl": -9.9,
+      "ret_pct": -0.1,
+      "long_pnl": -554.8,
+      "short_pnl": 544.8,
+      "win_rate": 44.4,
+      "market_pct": -20.93
+    },
+    {
+      "period": "2026-07",
+      "n": 17,
+      "pnl": 46.5,
+      "ret_pct": 0.46,
+      "long_pnl": -49.4,
+      "short_pnl": 95.9,
+      "win_rate": 58.8,
+      "market_pct": 2.03
+    }
+  ],
+  "total_pnl": -402.0,
+  "n_positive": 6,
+  "n_periods": 13
+}

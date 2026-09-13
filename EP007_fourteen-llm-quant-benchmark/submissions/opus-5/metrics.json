@@ -1,0 +1,41 @@
+{
+  "model": "XSTrendEnsemble",
+  "seed": 20240701,
+  "factors": [
+    "xs_rank(momentum_14d)",
+    "xs_rank((close/SMA_25d - 1) / realised_vol_25d)",
+    "xs_rank((close/SMA_45d - 1) / realised_vol_45d)",
+    "xs_rank(position_in_25d_high_low_range)"
+  ],
+  "timeframe": "4h",
+  "epochs_used": 300,
+  "strategy_family": "cross-sectional",
+  "turnover_control": "rolling-mean smoothing of the composite score (smooth_days) as the primary control, plus a rank hysteresis band (exit_buffer) and a max holding period (max_hold_days) that recycles positions",
+  "fee_bps": 6.0,
+  "slippage_bps": 0.0,
+  "funding_included": true,
+  "train": {
+    "ann_return": 0.1711,
+    "sharpe": 0.7517,
+    "sortino": 1.0142,
+    "calmar": 0.9102,
+    "max_drawdown": 0.188,
+    "win_rate": 0.4508,
+    "profit_factor": 1.1471,
+    "turnover_per_year": 32.08,
+    "n_trades": 956,
+    "sharpe_net_of_costs": 0.7517
+  },
+  "valid": {
+    "ann_return": 0.8112,
+    "sharpe": 1.7095,
+    "sortino": 3.6829,
+    "calmar": 4.0422,
+    "max_drawdown": 0.2007,
+    "win_rate": 0.4921,
+    "profit_factor": 1.4566,
+    "turnover_per_year": 58.08,
+    "n_trades": 315,
+    "sharpe_net_of_costs": 1.7095
+  }
+}

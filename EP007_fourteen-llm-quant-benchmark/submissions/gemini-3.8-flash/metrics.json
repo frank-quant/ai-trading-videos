@@ -1,0 +1,47 @@
+{
+  "strategy": "CryptoAlphaTrend",
+  "timeframe": "4h",
+  "train": {
+    "timerange": "20210101-20240630",
+    "trades": 1587,
+    "win_rate": 0.362,
+    "profit_ratio": 0.8016,
+    "total_profit_abs": 8016.223,
+    "sharpe": 0.83,
+    "sortino": 1.35,
+    "calmar": 2.98,
+    "max_drawdown": 0.4147,
+    "long_trades": 1181,
+    "short_trades": 406,
+    "long_profit_ratio": 0.9209,
+    "short_profit_ratio": -0.1193
+  },
+  "valid": {
+    "timerange": "20240701-20250630",
+    "trades": 436,
+    "win_rate": 0.404,
+    "profit_ratio": 0.2549,
+    "total_profit_abs": 2549.111,
+    "sharpe": 0.84,
+    "sortino": 1.84,
+    "calmar": 7.04,
+    "max_drawdown": 0.187,
+    "long_trades": 392,
+    "short_trades": 44,
+    "long_profit_ratio": 0.3194,
+    "short_profit_ratio": -0.0645
+  },
+  "loss_metric": {
+    "name": "EP004ValidLoss",
+    "train_sharpe": 0.83,
+    "valid_sharpe": 0.84,
+    "penalty": 0.0,
+    "objective": -0.84
+  },
+  "constraints": {
+    "min_valid_trades_met": true,
+    "leverage_cap_met": true,
+    "both_sides_active": true,
+    "no_lookahead_verified": true
+  }
+}

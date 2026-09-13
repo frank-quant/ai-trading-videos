@@ -1,0 +1,40 @@
+{
+  "model": "gpt-5.6-sol",
+  "harness": "Codex Desktop (Codex Desktop)",
+  "reasoning_effort": "high",
+  "env": "ft_gpt_5_6_sol",
+  "tokens": {
+    "input_tokens": 7424140,
+    "cached_input_tokens": 7243520,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 19149,
+    "reasoning_output_tokens": 5785,
+    "total_tokens": 7443289
+  },
+  "uncached_input_tokens": 180620,
+  "unit_price_usd_per_M": {
+    "inp": 4.0,
+    "cached": 0.4,
+    "out": 20.0
+  },
+  "cache_write_multiplier": 1.25,
+  "cache_hit_rate_pct": 97.3,
+  "cost_usd": 4.0029,
+  "cost_cny": 28.82,
+  "fx": 7.2,
+  "api_calls": 81,
+  "sessions": 1,
+  "cost_basis": "Codex 会话日志 total_token_usage × 官网目录价（等效成本；Plus 订阅无逐笔账单）",
+  "model_verified": "会话日志 turn_context.model = gpt-5.6-sol，reasoning_effort = high",
+  "session_files": [
+    "rollout-2026-09-04T20-26-48-01a06c62-c7b7-7532-a6f8-0228cf8c31b2.jsonl"
+  ],
+  "work_minutes": 37,
+  "session_window": "2026-09-04T12:26:56.542Z ~ 2026-09-04T13:03:35.699Z",
+  "auto_review": {
+    "model": "codex-auto-review",
+    "tokens": 229764,
+    "turns": 9,
+    "note": "Codex 跑完自动触发的 review，属 harness 行为不是模型选择；单价未知，未计入 cost_cny。"
+  }
+}

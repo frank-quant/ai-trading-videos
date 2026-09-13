@@ -1,0 +1,40 @@
+{
+  "model": "CausalMultiFactorXS",
+  "seed": 42,
+  "factors": [
+    "volatility-normalized multi-horizon momentum",
+    "bounded trend persistence",
+    "volatility-normalized short-horizon reversal"
+  ],
+  "timeframe": "4h",
+  "epochs_used": 120,
+  "strategy_family": "cross-sectional",
+  "turnover_control": "4h decisions with 0.11 cross-sectional exit hysteresis and a 39-candle minimum hold",
+  "fee_bps": 6.0,
+  "slippage_bps": 0.0,
+  "funding_included": true,
+  "train": {
+    "ann_return": 0.145908,
+    "sharpe": 0.533907,
+    "sortino": 1.130209,
+    "calmar": 0.344206,
+    "max_drawdown": 0.423898,
+    "win_rate": 0.446821,
+    "profit_factor": 1.103938,
+    "turnover_per_year": 61.87,
+    "n_trades": 1730,
+    "sharpe_net_of_costs": 0.533907
+  },
+  "valid": {
+    "ann_return": 1.017315,
+    "sharpe": 2.041989,
+    "sortino": 5.766712,
+    "calmar": 6.511932,
+    "max_drawdown": 0.156223,
+    "win_rate": 0.500000,
+    "profit_factor": 1.485331,
+    "turnover_per_year": 103.08,
+    "n_trades": 510,
+    "sharpe_net_of_costs": 2.041989
+  }
+}

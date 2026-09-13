@@ -1,0 +1,29 @@
+{
+  "strategy_name": "XSDonchianMom",
+  "params": {
+    "roi": {
+      "0": 100
+    },
+    "stoploss": {
+      "stoploss": -0.99
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 20
+    },
+    "buy": {
+      "don_weight": 0.57,
+      "exit_buffer": 0.01,
+      "min_hold": 10,
+      "n_long": 7,
+      "n_short": 5
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-09-03 15:51:42.504265+00:00"
+}

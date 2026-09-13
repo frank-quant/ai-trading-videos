@@ -1,0 +1,36 @@
+{
+  "model": "XSRiskMom",
+  "seed": 42,
+  "factors": ["momentum_9d", "realized_vol_39d", "risk_adjusted_momentum"],
+  "timeframe": "1d",
+  "epochs_used": 400,
+  "strategy_family": "cross-sectional",
+  "turnover_control": "daily cross-sectional rank selection with hysteresis: positions only exit when the rank leaves the selection band by exit_buffer=0.24 percentile points, plus min_hold=19 daily bars minimum holding time; average holding period ~23 days",
+  "fee_bps": 6.0,
+  "slippage_bps": 0.0,
+  "funding_included": true,
+  "train": {
+    "ann_return": 0.3626,
+    "sharpe": 1.3355,
+    "sortino": 2.3809,
+    "calmar": 2.1053,
+    "max_drawdown": -0.1722,
+    "win_rate": 0.52,
+    "profit_factor": 1.2766,
+    "turnover_per_year": 27.3125,
+    "n_trades": 975,
+    "sharpe_net_of_costs": 1.3355
+  },
+  "valid": {
+    "ann_return": 0.8495,
+    "sharpe": 2.4566,
+    "sortino": 8.197,
+    "calmar": 11.6711,
+    "max_drawdown": -0.0728,
+    "win_rate": 0.5233,
+    "profit_factor": 1.7139,
+    "turnover_per_year": 19.936,
+    "n_trades": 300,
+    "sharpe_net_of_costs": 2.4566
+  }
+}

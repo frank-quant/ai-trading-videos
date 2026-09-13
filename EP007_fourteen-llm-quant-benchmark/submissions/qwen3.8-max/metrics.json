@@ -1,0 +1,36 @@
+{
+  "model": "qwen3_8_max",
+  "seed": 42,
+  "factors": ["risk-adjusted momentum: skip-day momentum (mom_window=14 daily bars, skip=2) divided by realized volatility (rolling std of daily returns, window max(skip+window, 20)), ranked cross-sectionally"],
+  "timeframe": "1d",
+  "epochs_used": 300,
+  "strategy_family": "cross-sectional",
+  "turnover_control": "daily decision frequency + rank-hysteresis exit buffer 0.07 (enter at rank threshold, exit only when rank falls 0.07 through it) + min_hold 8 daily bars",
+  "fee_bps": 6,
+  "slippage_bps": 0,
+  "funding_included": true,
+  "train": {
+    "ann_return": 0.0725,
+    "sharpe": 0.2865,
+    "sortino": 0.3227,
+    "calmar": 0.3085,
+    "max_drawdown": 0.2349,
+    "win_rate": 0.4667,
+    "profit_factor": 1.045,
+    "turnover_per_year": 28.59,
+    "n_trades": 1652,
+    "sharpe_net_of_costs": 0.2865
+  },
+  "valid": {
+    "ann_return": 0.6246,
+    "sharpe": 2.2473,
+    "sortino": 3.7412,
+    "calmar": 5.779,
+    "max_drawdown": 0.1081,
+    "win_rate": 0.4951,
+    "profit_factor": 1.4159,
+    "turnover_per_year": 30.25,
+    "n_trades": 511,
+    "sharpe_net_of_costs": 2.2473
+  }
+}

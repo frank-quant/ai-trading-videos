@@ -1,0 +1,36 @@
+{
+  "model": "BalancedXSTrend",
+  "seed": 20260904,
+  "factors": ["18-candle risk-adjusted momentum", "89-candle risk-adjusted momentum", "171-candle realized-volatility scaling", "cross-sectional rank"],
+  "timeframe": "4h",
+  "epochs_used": 60,
+  "strategy_family": "cross-sectional",
+  "turnover_control": "4h ranking with 0.11 rank hysteresis and a 47-candle (188h) minimum holding period",
+  "fee_bps": 6.0,
+  "slippage_bps": 0.0,
+  "funding_included": true,
+  "train": {
+    "ann_return": 0.193189,
+    "sharpe": 0.825734,
+    "sortino": 1.328823,
+    "calmar": 0.883947,
+    "max_drawdown": 0.218553,
+    "win_rate": 0.48615,
+    "profit_factor": 1.132874,
+    "turnover_per_year": 34.177406,
+    "n_trades": 1769,
+    "sharpe_net_of_costs": 0.825734
+  },
+  "valid": {
+    "ann_return": 1.165779,
+    "sharpe": 1.809438,
+    "sortino": 3.804931,
+    "calmar": 5.723271,
+    "max_drawdown": 0.203691,
+    "win_rate": 0.512059,
+    "profit_factor": 1.409388,
+    "turnover_per_year": 61.951877,
+    "n_trades": 539,
+    "sharpe_net_of_costs": 1.809438
+  }
+}

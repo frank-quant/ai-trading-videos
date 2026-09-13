@@ -1,0 +1,27 @@
+{
+  "strategy_name": "ExampleXSMomentum",
+  "params": {
+    "roi": {
+      "0": 100
+    },
+    "stoploss": {
+      "stoploss": -0.99
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 10
+    },
+    "buy": {
+      "mom_window": 62,
+      "n_long": 2,
+      "n_short": 1
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-07-28 16:14:14.920357+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "trades_file": "D:/freqtrade_demo/EP004_env/ft_opus_5/verified/test.zip",
+  "n_trades": 324,
+  "iters": 5000,
+  "block": 10,
+  "start": 1000.0,
+  "orig_final": 0.11515181489652554,
+  "prob_profit": 0.0008,
+  "final_P5": 0.0022940064984034677,
+  "final_P50": 0.2592164215764801,
+  "final_P95": 19.225480211515226,
+  "mean_trade_ret": -0.013287851156843262
+}

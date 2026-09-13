@@ -1,0 +1,14 @@
+{
+  "tag": "tier_gpt_5_6_luna",
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\tier_gpt_5_6_luna\\verified\\test.zip",
+  "window": "2025-07-01..2026-07-01",
+  "market_total_return_pct": -44.95,
+  "strategy_total_return_pct": -23.29,
+  "beta": 0.403,
+  "r2": 0.82,
+  "alpha_annual_pct": -5.6,
+  "beta_drag_pct": -18.1,
+  "alpha_contrib_pct": -5.2,
+  "net_exposure_pct": 39.2,
+  "final_equity": 7670.73
+}

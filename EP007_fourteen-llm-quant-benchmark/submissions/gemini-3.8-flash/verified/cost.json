@@ -1,0 +1,36 @@
+{
+  "model": "gemini-3.8-flash",
+  "model_verified": "settings.json \"model\": \"Gemini 3.8 Flash (High)\" / \"modelProvider\": \"gemini\"；history.jsonl 有 /model gemini-3.8-flash-high；会话 DB 里出现 gemini-3.8-flash-high",
+  "reasoning_effort": "high（模型串自带 -high 后缀）",
+  "harness": "Antigravity CLI（纯 API 模式，未登录 Google 账号）",
+  "env": "ft_gemini_3_8_flash",
+  "tokens": {
+    "input": 13320000,
+    "output": 104000
+  },
+  "token_total": 13424000,
+  "api_calls": 177,
+  "avg_input_per_request": 75254,
+  "unit_price_usd_per_M": {
+    "input": 0.75,
+    "output": 3.75
+  },
+  "price_note": "促销价，有效期至 2026-12-31；2027 起翻倍至 $1.5 / $7.5",
+  "cost_usd": 10.38,
+  "cost_cny": 74.74,
+  "cash_paid_cny": 74.74,
+  "fx": 7.2,
+  "cost_basis": "Google AI Studio 用量面板（Input/Output Tokens per model + Requests per model，Sep 4 2026 UTC-8）× 官网促销价",
+  "data_gaps": [
+    "🔴 无缓存命中拆分 —— 面板只给 Input/Output 两类，不区分 cached。其余四家缓存命中率都在 93–97%，若 Gemini 也有隐式缓存折扣，实际成本会低于此数。**当前数字是上界。**",
+    "🔴 Antigravity 本地日志完全不记 token（扫了 108 个文件，settings.json 里 enableTelemetry=false），只能靠平台面板，粒度到「天」，无法按会话拆分。",
+    "⚠️ 面板按 UTC-8 分日，而本次跑在北京时间 09-04 22:58 ~ 09-05 01:17，可能跨日；若 Sep 3/Sep 5 还有条目需合并。"
+  ],
+  "other_models_same_day": {
+    "gemini-3.1-flash-lite": {
+      "output_tokens": 880,
+      "requests": 3,
+      "note": "Antigravity 内部辅助调用，量级可忽略"
+    }
+  }
+}

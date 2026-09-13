@@ -1,0 +1,14 @@
+{
+  "tag": "ft_gpt_6_astra",
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\ft_gpt_6_astra\\verified\\test.zip",
+  "window": "2025-07-01..2026-07-01",
+  "market_total_return_pct": -44.95,
+  "strategy_total_return_pct": -4.95,
+  "beta": 0.061,
+  "r2": 0.072,
+  "alpha_annual_pct": -1.7,
+  "beta_drag_pct": -2.7,
+  "alpha_contrib_pct": -2.2,
+  "net_exposure_pct": 0.6,
+  "final_equity": 9504.85
+}

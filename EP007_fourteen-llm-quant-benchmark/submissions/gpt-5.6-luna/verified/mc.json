@@ -1,0 +1,13 @@
+{
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\tier_gpt_5_6_luna\\backtest_results\\test.zip",
+  "n_trades": 502,
+  "iters": 5000,
+  "block": 10,
+  "start": 1000.0,
+  "orig_final": 0.3971388529467128,
+  "prob_profit": 0.0058,
+  "final_P5": 0.0008660951419713646,
+  "final_P50": 0.2790375270149533,
+  "final_P95": 62.24222405862516,
+  "mean_trade_ret": -0.009818298811814043
+}

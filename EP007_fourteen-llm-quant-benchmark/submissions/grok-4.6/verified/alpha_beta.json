@@ -1,0 +1,14 @@
+{
+  "tag": "ft_grok_4_6",
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\ft_grok_4_6\\verified\\test.zip",
+  "window": "2025-07-01..2026-07-01",
+  "market_total_return_pct": -44.95,
+  "strategy_total_return_pct": -19.11,
+  "beta": 0.12,
+  "r2": 0.252,
+  "alpha_annual_pct": -15.2,
+  "beta_drag_pct": -5.4,
+  "alpha_contrib_pct": -13.7,
+  "net_exposure_pct": 16.6,
+  "final_equity": 8088.85
+}

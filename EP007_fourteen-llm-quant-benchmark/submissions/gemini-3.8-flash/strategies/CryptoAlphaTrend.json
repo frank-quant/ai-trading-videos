@@ -1,0 +1,30 @@
+{
+  "strategy_name": "CryptoAlphaTrend",
+  "params": {
+    "roi": {
+      "0": 100
+    },
+    "stoploss": {
+      "stoploss": -0.15
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 20
+    },
+    "buy": {
+      "ema_slope_bars": 3,
+      "entry_window": 46,
+      "exit_window": 11,
+      "max_fr_long": 0.0006,
+      "min_fr_short": 0.0001,
+      "trend_ema": 70
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-09-04 16:56:22.909812+00:00"
+}

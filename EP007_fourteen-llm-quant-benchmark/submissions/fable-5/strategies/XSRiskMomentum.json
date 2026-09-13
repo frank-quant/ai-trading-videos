@@ -1,0 +1,30 @@
+{
+  "strategy_name": "XSRiskMomentum",
+  "params": {
+    "roi": {
+      "0": 100
+    },
+    "stoploss": {
+      "stoploss": -0.3
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 20
+    },
+    "buy": {
+      "exit_buffer": 0.16,
+      "min_hold": 29,
+      "mom_days": 11,
+      "n_long": 5,
+      "n_short": 1,
+      "skip_days": 2
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-07-30 15:35:53.333250+00:00"
+}

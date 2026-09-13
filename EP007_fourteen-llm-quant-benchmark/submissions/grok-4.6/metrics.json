@@ -1,0 +1,36 @@
+{
+  "model": "XSDonchianMom",
+  "seed": 42,
+  "factors": ["donchian_21", "mom_14_skip1"],
+  "timeframe": "1d",
+  "epochs_used": 80,
+  "strategy_family": "cross-sectional",
+  "turnover_control": "min_hold=10 daily bars; exit_buffer=0.01 rank hysteresis; equal-weight top n_long / bottom n_short",
+  "fee_bps": 6,
+  "slippage_bps": 0,
+  "funding_included": true,
+  "train": {
+    "ann_return": 0.35638,
+    "sharpe": 1.0982,
+    "sortino": 1.563344,
+    "calmar": 0.845341,
+    "max_drawdown": -0.421581,
+    "win_rate": 0.467586,
+    "profit_factor": 1.186668,
+    "turnover_per_year": 32.817272,
+    "n_trades": 1450,
+    "sharpe_net_of_costs": 1.0982
+  },
+  "valid": {
+    "ann_return": 1.378655,
+    "sharpe": 2.1876,
+    "sortino": 5.230519,
+    "calmar": 7.420919,
+    "max_drawdown": -0.185779,
+    "win_rate": 0.523148,
+    "profit_factor": 1.484671,
+    "turnover_per_year": 56.116123,
+    "n_trades": 432,
+    "sharpe_net_of_costs": 2.1876
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "tag": "deepseek",
+  "trades_file": "D:\\freqtrade_demo\\EP004_env\\ft_deepseek\\verified\\test.zip",
+  "window": "2025-07-01..2026-07-01",
+  "market_total_return_pct": -44.95,
+  "strategy_total_return_pct": -7.09,
+  "beta": 0.151,
+  "r2": 0.383,
+  "alpha_annual_pct": -0.2,
+  "beta_drag_pct": -6.8,
+  "alpha_contrib_pct": -0.3,
+  "net_exposure_pct": 15.1,
+  "final_equity": 9290.53
+}

@@ -1,0 +1,13 @@
+{
+  "trades_file": "D:/freqtrade_demo/EP004_env/ft_kimi_k3/verified/test.zip",
+  "n_trades": 191,
+  "iters": 5000,
+  "block": 10,
+  "start": 1000.0,
+  "orig_final": 0.07788079993749997,
+  "prob_profit": 0.0,
+  "final_P5": 0.00099279851954174,
+  "final_P50": 0.07524760119155514,
+  "final_P95": 3.797797041098641,
+  "mean_trade_ret": -0.036104810959262795
+}

@@ -1,0 +1,39 @@
+{
+  "model": "CausalRelativeMomentum-GPT-6-astra",
+  "seed": 20260906,
+  "factors": [
+    "volatility_scaled_48h_log_momentum",
+    "lagged_cross_sectional_percentile"
+  ],
+  "timeframe": "4h",
+  "epochs_used": 160,
+  "strategy_family": "cross-sectional",
+  "turnover_control": "4h decisions, 0.10 rank hysteresis, 24h minimum for rank exits, immediate safety exits",
+  "fee_bps": 6.0,
+  "slippage_bps": 0.0,
+  "funding_included": true,
+  "train": {
+    "ann_return": -0.010938691020786439,
+    "sharpe": -0.034013149205271126,
+    "sortino": -0.052624801153482816,
+    "calmar": -0.024446753361486946,
+    "max_drawdown": 0.4474496412279878,
+    "win_rate": 0.4564752204057177,
+    "profit_factor": 0.9978807137892342,
+    "turnover_per_year": 419.9519463886318,
+    "n_trades": 11683,
+    "sharpe_net_of_costs": -0.034013149205271126
+  },
+  "valid": {
+    "ann_return": 0.16991322598799988,
+    "sharpe": 0.5765838682828163,
+    "sortino": 1.0408354161346987,
+    "calmar": 1.0918253607111914,
+    "max_drawdown": 0.15562308048726958,
+    "win_rate": 0.4660252555622369,
+    "profit_factor": 1.041738950746988,
+    "turnover_per_year": 372.71062706300006,
+    "n_trades": 3326,
+    "sharpe_net_of_costs": 0.5765838682828163
+  }
+}

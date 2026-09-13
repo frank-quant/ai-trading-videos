@@ -1,0 +1,35 @@
+{
+  "model": "gpt-6-astra",
+  "harness": "Codex (?)",
+  "reasoning_effort": "ultra",
+  "env": "ft_gpt_6_astra",
+  "tokens": {
+    "input_tokens": 7737131,
+    "cached_input_tokens": 7493888,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 58084,
+    "reasoning_output_tokens": 17060,
+    "total_tokens": 7795215
+  },
+  "uncached_input_tokens": 243243,
+  "unit_price_usd_per_M": {
+    "inp": 10.0,
+    "cached": 1.0,
+    "out": 50.0,
+    "cw": 12.5
+  },
+  "cache_write_multiplier": 1.25,
+  "cache_hit_rate_pct": 96.1,
+  "cost_usd": 12.8305,
+  "cost_cny": 92.38,
+  "fx": 7.2,
+  "api_calls": null,
+  "sessions": 3,
+  "cost_basis": "Codex 会话日志 total_token_usage × 官网目录价（等效成本；Plus 订阅无逐笔账单）",
+  "model_verified": "会话日志 turn_context.model = gpt-6-astra，reasoning_effort = ultra",
+  "session_files": [
+    "rollout-2026-09-06T11-31-45-01a074c5-a5a8-7be0-999b-334834cd4f90.jsonl",
+    "rollout-2026-09-06T11-32-17-01a074c6-2337-7480-874b-c07aba488112.jsonl",
+    "rollout-2026-09-06T11-32-27-01a074c6-4957-7753-9a21-0629ffb07813.jsonl"
+  ]
+}

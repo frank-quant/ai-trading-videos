@@ -1,0 +1,13 @@
+{
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\ft_deepseek_v4_pro\\backtest_results\\test.zip",
+  "n_trades": 297,
+  "iters": 5000,
+  "block": 10,
+  "start": 1000.0,
+  "orig_final": -0.0020776368723211184,
+  "prob_profit": 0.0002,
+  "final_P5": -0.4530010106008643,
+  "final_P50": 0.00012244626272628041,
+  "final_P95": 9.206478330856989,
+  "mean_trade_ret": -0.015516973497091897
+}

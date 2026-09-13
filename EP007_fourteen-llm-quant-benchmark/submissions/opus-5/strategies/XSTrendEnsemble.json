@@ -1,0 +1,34 @@
+{
+  "strategy_name": "XSTrendEnsemble",
+  "params": {
+    "roi": {
+      "0": 100
+    },
+    "stoploss": {
+      "stoploss": -0.99
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 20
+    },
+    "buy": {
+      "n_side": 7,
+      "smooth_days": 10,
+      "exit_buffer": 0.1,
+      "max_hold_days": 36,
+      "stop_pct": 0.59,
+      "mom_days": 14,
+      "ma_fast_days": 25,
+      "ma_slow_days": 45,
+      "min_hold": 0,
+      "n_long": 7,
+      "n_short": 7
+    }
+  },
+  "ft_stratparam_v": 1
+}

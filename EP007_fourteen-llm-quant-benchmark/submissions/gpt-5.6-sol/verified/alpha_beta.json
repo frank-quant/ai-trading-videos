@@ -1,0 +1,14 @@
+{
+  "tag": "ft_gpt_5_6_sol",
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\ft_gpt_5_6_sol\\verified\\test.zip",
+  "window": "2025-07-01..2026-07-01",
+  "market_total_return_pct": -44.95,
+  "strategy_total_return_pct": -4.02,
+  "beta": 0.155,
+  "r2": 0.366,
+  "alpha_annual_pct": 4.2,
+  "beta_drag_pct": -7.0,
+  "alpha_contrib_pct": 2.9,
+  "net_exposure_pct": 26.2,
+  "final_equity": 9597.86
+}

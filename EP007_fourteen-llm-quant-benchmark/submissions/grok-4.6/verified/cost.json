@@ -1,0 +1,55 @@
+{
+  "model": "Grok 4.6",
+  "harness": "Grok Build",
+  "env": "ft_grok_4_6",
+  "cost_usd": 2.89,
+  "cost_cny": 20.81,
+  "fx": 7.2,
+  "cash_paid_cny": 20.81,
+  "token_total": 3687000,
+  "api_calls": 151,
+  "work_minutes": 29,
+  "work_segments": 1,
+  "window": "2026-09-03 23:30:00 ~ 2026-09-03 23:59:00",
+  "blended_usd_per_M": 0.7913,
+  "avg_tokens_per_request": 24200,
+  "cost_basis": "xAI console 分类用量明细（四类 × 目录价），与 15 分钟粒度 CSV 的 $2.8917 一致",
+  "data_gaps": [
+    "✅ 已补齐 token 类型拆分（cached / prompt / reasoning / completion）",
+    "❌ 导出里仍无模型编码字段，不能像智谱/百炼那样客观证明跑的是 grok-4.6（台账 C5）"
+  ],
+  "200k_cliff": "✅ 未跨越——已由单价证实（非推断）。四类反算单价 $0.494 / $1.997 / $6.20 / $5.94，全部精确落在 <200K 档目录价（$0.50 / $2 / $6 / $6）。若有请求跨 200K，该请求全量按 $4/$1/$12 计费，混合单价必然高于基准价——四条都没有。",
+  "hyperopt_verified": "已确认真跑：hyperopt_results/strategy_XSDonchianMom_2026-09-03_15-49-46.fthypt 178.6 MB，23:49:46 开跑 → 23:51:41 结束（80 轮，1d 周期 -j 20，约 2 分钟）。参数文件 23:51:42 落盘，hyperopt_results.json 23:52:22 导出。",
+  "cost_incomplete_note": "🔴 用量 CSV 只覆盖 23:30~23:59，但会话最早产出文件是 notebooks/factor_research.py（22:41:24）。22:41~23:30 约 49 分钟（含 factor_scan.py / factor_scan2.py 两轮因子研究）没有任何用量记录。CSV 于 00:06:58 导出，疑为后台未结算完。→ ¥20.82 是下限，非总额。**重新导一份覆盖 9/3 全天的用量后必须更新。**",
+  "session_window_from_files": "2026-09-03 22:41:24 ~ 23:57:24（约 76 分钟，据考场文件时间戳）",
+  "billing_window": "2026-09-03 23:30 ~ 23:59（29 分钟）",
+  "work_minutes_note": "29 分钟是账单覆盖段；按文件时间戳会话约 76 分钟。补全账单后重算。",
+  "tokens": {
+    "cached_prompt": 3100000,
+    "prompt": 540900,
+    "reasoning": 24200,
+    "completion": 21900
+  },
+  "spend_usd_by_type": {
+    "cached_prompt": 1.53,
+    "prompt": 1.08,
+    "reasoning": 0.15,
+    "completion": 0.13
+  },
+  "unit_price_usd_per_M_implied": {
+    "cached_prompt": 0.494,
+    "prompt": 1.997,
+    "reasoning": 6.198,
+    "completion": 5.936
+  },
+  "unit_price_usd_per_M_listed": {
+    "cached_prompt": 0.5,
+    "prompt": 2.0,
+    "reasoning": 6.0,
+    "completion": 6.0
+  },
+  "cache_hit_rate_pct": 84.1,
+  "reasoning_tokens_note": "Grok 单列 reasoning tokens（24.2K，按输出价 $6/M 计）。GLM/Qwen 的账单不单列这一类。",
+  "timestamp_puzzle": "考场最早产出文件 notebooks/factor_research.py 时间戳 22:41:24，而账单最早一桶是 23:30。但账单总额 $2.89 与分类明细完全一致，钱是全的 → 22:41~23:30 无计费活动（可能是更早的一次会话残留，或本地无 API 调用的准备工作）。不影响成本数字，仅「实际干活时长」按账单口径记 29 分钟。",
+  "model_verified": "❌ 无法客观核实 —— xAI console 的用量导出**没有模型编码字段**，只能靠「当时选的是 grok-4.6」这一操作记忆。见台账 C5。"
+}

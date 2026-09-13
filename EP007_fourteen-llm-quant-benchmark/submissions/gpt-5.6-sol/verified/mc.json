@@ -1,0 +1,13 @@
+{
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\ft_gpt_5_6_sol\\backtest_results\\test.zip",
+  "n_trades": 595,
+  "iters": 5000,
+  "block": 10,
+  "start": 1000.0,
+  "orig_final": 10.685391660110705,
+  "prob_profit": 0.0602,
+  "final_P5": 0.06732693903519162,
+  "final_P50": 11.567735146590188,
+  "final_P95": 1224.1915825836918,
+  "mean_trade_ret": -0.0009476139418826737
+}

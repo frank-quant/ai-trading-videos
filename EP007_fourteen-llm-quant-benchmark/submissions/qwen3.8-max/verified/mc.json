@@ -1,0 +1,13 @@
+{
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\ft_qwen_3_8_max\\backtest_results\\test.zip",
+  "n_trades": 469,
+  "iters": 5000,
+  "block": 10,
+  "start": 1000.0,
+  "orig_final": 15.720730916809599,
+  "prob_profit": 0.0758,
+  "final_P5": 0.14065069584119158,
+  "final_P50": 16.099272942411126,
+  "final_P95": 1689.605227021769,
+  "mean_trade_ret": 0.0010789054908187695
+}

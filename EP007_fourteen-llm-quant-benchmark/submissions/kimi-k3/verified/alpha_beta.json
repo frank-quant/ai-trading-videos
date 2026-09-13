@@ -1,0 +1,14 @@
+{
+  "tag": "kimi_k3",
+  "trades_file": "D:\\freqtrade_demo\\EP004_env\\ft_kimi_k3\\verified\\test.zip",
+  "window": "2025-07-01..2026-07-01",
+  "market_total_return_pct": -44.95,
+  "strategy_total_return_pct": -29.78,
+  "beta": 0.122,
+  "r2": 0.295,
+  "alpha_annual_pct": -29.4,
+  "beta_drag_pct": -5.5,
+  "alpha_contrib_pct": -24.3,
+  "net_exposure_pct": 20.8,
+  "final_equity": 7021.56
+}

@@ -1,0 +1,14 @@
+{
+  "tag": "tier_gpt_5_6_terra",
+  "trades_file": "D:\\freqtrade_demo\\EP007_env\\tier_gpt_5_6_terra\\verified\\test.zip",
+  "window": "2025-07-01..2026-07-01",
+  "market_total_return_pct": -44.95,
+  "strategy_total_return_pct": -6.22,
+  "beta": 0.187,
+  "r2": 0.468,
+  "alpha_annual_pct": 2.7,
+  "beta_drag_pct": -8.4,
+  "alpha_contrib_pct": 2.2,
+  "net_exposure_pct": 19.7,
+  "final_equity": 9377.54
+}
