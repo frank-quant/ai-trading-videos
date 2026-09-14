@@ -1,6 +1,6 @@
 # EP007 · 14 个大模型同一道量化题（第二季）
 
-📺 看视频：[YouTube](https://youtu.be/5wEQiwCwGY0)
+📺 看视频：[B站](https://www.bilibili.com/video/BV1ijYB6QE1Y/) · [YouTube](https://youtu.be/5wEQiwCwGY0)
 
 把 **14 个模型**关进同一场考试：同一份题目、同一份数据、同一笔手续费、同一个目标函数，
 各自用**自己的官方 harness** 写一套能做多也能做空的量化策略。
