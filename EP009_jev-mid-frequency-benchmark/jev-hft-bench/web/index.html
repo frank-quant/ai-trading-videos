@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jev 中高频基准测试</title>
+<style>
+:root {
+  --bg: #f4f3ee; --panel: #ffffff; --line: #e3e0d7; --grid: #eeece6; --ink: #1d1d1b; --ink2: #52514e; --dim: #7b786f; --faint: #b9b5aa;
+  --up: #0f8a5f; --down: #c8402f; --warn: #b7791f; --chip: #f0efe9; --field: #fbfaf7; --band: rgba(29,29,27,.06);
+  --s-jev: #2a78d6; --s-mock: #eb6834; --s-cvd: #1baf7a; --s-coin: #8a887f; --s-other: #cfccc3; --accent: #2a78d6;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e0f11; --panel: #16181b; --line: #2a2d32; --grid: #202328; --ink: #e8e6df; --ink2: #c3c2b7; --dim: #8d8a82; --faint: #4a4b4f;
+  --up: #3ecf8e; --down: #ff6b5b; --warn: #e3b341; --chip: #202328; --field: #1b1d21; --band: rgba(232,230,223,.07);
+  --s-jev: #3987e5; --s-mock: #d95926; --s-cvd: #199e70; --s-coin: #8d8a82; --s-other: #3a3c41; --accent: #3987e5; } }
+:root[data-theme="dark"] {
+  --bg: #0e0f11; --panel: #16181b; --line: #2a2d32; --grid: #202328; --ink: #e8e6df; --ink2: #c3c2b7; --dim: #8d8a82; --faint: #4a4b4f;
+  --up: #3ecf8e; --down: #ff6b5b; --warn: #e3b341; --chip: #202328; --field: #1b1d21; --band: rgba(232,230,223,.07);
+  --s-jev: #3987e5; --s-mock: #d95926; --s-cvd: #199e70; --s-coin: #8d8a82; --s-other: #3a3c41; --accent: #3987e5; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body { font: 13.5px/1.45 "Inter", "Segoe UI", "PingFang SC", "Microsoft YaHei UI", system-ui, sans-serif; padding: 14px 20px; min-height: 100vh; }
+.num, table, .kpi .v, .mid { font-family: "JetBrains Mono", "Cascadia Mono", Consolas, monospace; font-variant-numeric: tabular-nums; }
+header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid var(--line); }
+.brand { font-weight: 700; font-size: 18px; } .brand small { display: block; font-weight: 400; font-size: 12px; color: var(--dim); }
+nav { display: flex; gap: 2px; background: var(--chip); padding: 3px; border-radius: 8px; }
+nav button { background: transparent; border: 0; color: var(--ink2); padding: 5px 14px; }
+nav button.on { background: var(--panel); color: var(--ink); box-shadow: 0 0 0 1px var(--line); }
+.status { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--ink2); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--faint); }
+.dot.running { background: var(--up); animation: blink 1.2s infinite; } .dot.settling { background: var(--warn); } .dot.replay { background: var(--accent); }
+@keyframes blink { 50% { opacity: .25; } }
+.spacer { flex: 1; }
+.midbox { text-align: right; } .midbox .lbl { font-size: 11px; color: var(--dim); } .mid { font-size: 22px; font-weight: 700; }
+button { font: inherit; font-size: 12.5px; background: var(--chip); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 5px 12px; cursor: pointer; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+button.danger { color: var(--down); border-color: var(--down); background: transparent; }
+button.big { font-size: 14.5px; padding: 9px 18px; }
+input, select { font: inherit; font-size: 13px; background: var(--field); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; min-width: 0; }
+input[type=checkbox] { width: 16px; height: 16px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; min-width: 0; position: relative; }
+.ph { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.ph h3 { margin: 0; font-size: 14px; font-weight: 650; } .ph .sub { font-size: 12px; color: var(--dim); }
+.ph .right { margin-left: auto; display: flex; gap: 10px; align-items: center; font-size: 12px; color: var(--ink2); }
+.seg { display: inline-flex; background: var(--chip); border-radius: 6px; padding: 2px; } .seg button { border: 0; background: transparent; padding: 3px 10px; font-size: 12px; color: var(--ink2); }
+.seg button.on { background: var(--panel); color: var(--ink); box-shadow: 0 0 0 1px var(--line); }
+.row1 { display: grid; grid-template-columns: 1.45fr 1fr; gap: 12px; }
+.kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin: 12px 0; }
+.kpi { padding: 10px 14px; } .kpi .k { font-size: 12px; color: var(--dim); } .kpi .v { font-size: 24px; font-weight: 700; margin: 2px 0 1px; } .kpi .v small { font-size: 13px; color: var(--dim); font-weight: 400; margin-left: 3px; }
+.kpi .s { font-size: 11.5px; color: var(--ink2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row3 { display: grid; grid-template-columns: 1.25fr 1fr 1.05fr; gap: 12px; }
+.stack2 { display: grid; gap: 12px; align-content: start; }
+canvas { width: 100%; display: block; }
+#cQuotes { height: 296px; } #cEq { height: 288px; }
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--ink2); margin-top: 6px; }
+.legend i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 5px; }
+.legend .lg { border: 1px solid var(--line); background: var(--panel); border-radius: 99px; padding: 1px 9px; font-size: 12px; color: var(--ink2); }
+.legend .lg:hover { border-color: var(--faint); } .legend .lg.off { opacity: .4; text-decoration: line-through; }
+.key { display: inline-flex; align-items: center; gap: 5px; }
+table { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+th, td { text-align: right; padding: 4px 7px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { font-size: 11.5px; color: var(--dim); font-weight: 500; font-family: "Inter", "Segoe UI", "Microsoft YaHei UI", sans-serif; }
+td.name { font-family: "Inter", "Segoe UI", "Microsoft YaHei UI", sans-serif; }
+tr.hl td { font-weight: 700; background: var(--band); }
+td .n { color: var(--dim); font-size: 10.5px; font-weight: 400; margin-left: 4px; }
+.up { color: var(--up); } .down { color: var(--down); } .warn { color: var(--warn); } .dim { color: var(--dim); } .bad { color: var(--down); } .ok { color: var(--up); }
+.sw { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; vertical-align: 1px; }
+.bar { position: relative; height: 10px; width: 90px; background: var(--chip); border-radius: 2px; display: inline-block; vertical-align: middle; }
+.bar i { position: absolute; top: 0; bottom: 0; border-radius: 2px; }
+.bar::after { content: ""; position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--faint); }
+#feed tr.new td { animation: flash 1.2s ease-out; } @keyframes flash { from { background: var(--band); } to { background: transparent; } }
+.hist { display: flex; gap: 4px; align-items: flex-end; height: 34px; margin-top: 4px; }
+.hist div { flex: 1; background: var(--s-jev); opacity: .85; min-height: 1px; border-radius: 2px 2px 0 0; }
+.hist-l { display: flex; gap: 4px; font-size: 10.5px; color: var(--dim); } .hist-l span { flex: 1; text-align: center; }
+.note { font-size: 11.5px; color: var(--dim); margin-top: 6px; }
+.tip { position: fixed; pointer-events: none; z-index: 10; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 12px; box-shadow: 0 6px 18px rgba(0,0,0,.12); display: none; min-width: 170px; }
+.tip b { font-weight: 650; } .tip .r { display: flex; justify-content: space-between; gap: 14px; } .tip .num { font-size: 12px; }
+.page { display: none; } .page.on { display: block; }
+.form { display: grid; grid-template-columns: 200px 1fr auto; gap: 9px 14px; align-items: center; }
+.form .hint { grid-column: 2 / 4; font-size: 12px; color: var(--dim); margin-top: -5px; }
+.llm { display: grid; grid-template-columns: 1fr 1.6fr 1fr 1.2fr auto auto auto; gap: 8px; align-items: center; margin-bottom: 8px; }
+.stack { display: grid; gap: 12px; max-width: 1100px; }
+.msg { font-size: 12.5px; margin-left: 8px; }
+.logbox { font: 12px/1.5 "JetBrains Mono", Consolas, monospace; white-space: pre-wrap; max-height: 340px; overflow: auto; background: var(--field); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; }
+.facts { display: flex; flex-wrap: wrap; gap: 22px; } .facts .k { font-size: 12px; color: var(--dim); } .facts .v { font-size: 15px; font-weight: 600; }
+.tag { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 99px; border: 1px solid var(--line); color: var(--ink2); margin-left: 4px; }
+.md h1 { font-size: 20px; } .md h2 { font-size: 16px; margin-top: 22px; } .md table { margin: 8px 0; } .md td, .md th { white-space: normal; }
+.tablewrap { overflow-x: auto; }
+.method p { margin: 0 0 8px; line-height: 1.7; } .method ul { margin: 0; padding-left: 18px; line-height: 1.75; } table.wrap td, table.wrap th { white-space: normal; vertical-align: top; text-align: left; line-height: 1.55; padding: 7px 8px; } table.wrap td:nth-child(1), table.wrap td:nth-child(3) { white-space: nowrap; } table.wrap td:nth-child(2) { min-width: 150px; } table.wrap td:nth-child(4) { min-width: 220px; } table.wrap td:nth-child(6) { min-width: 240px; font-size: 12px; } table.wrap td { font-family: "Inter", "Segoe UI", "Microsoft YaHei UI", sans-serif; }
+
+:root[data-lang="en"] .zh, :root:not([data-lang="en"]) .en { display: none !important; }
+#langSeg button { padding: 3px 9px; }
+@media (max-width: 1600px) { .runid { display: none; } }
+@media (max-width: 1280px) { .row1, .row3 { grid-template-columns: 1fr; } .kpis { grid-template-columns: repeat(3, 1fr); } .llm { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) {
+  body { padding: 12px 16px; } .kpis { grid-template-columns: repeat(2, 1fr); } #cQuotes { height: 240px; } #cEq { height: 220px; }
+  .form { grid-template-columns: 1fr; } .form .hint { grid-column: 1; } .mid { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><span class="zh">Jev 中高频基准测试</span><span class="en">Jev Mid-Frequency Benchmark</span><small><span class="zh">Binance BTCUSDT 永续 · 决策间隔 300 ms · 只读行情、模拟成交</span><span class="en">Binance BTCUSDT perp · 300 ms decisions · simulated fills</span></small></div>
+  <nav>
+    <button data-page="board" class="on"><span class="zh">看板</span><span class="en">Dashboard</span></button><button data-page="run"><span class="zh">运行</span><span class="en">Run</span></button><button data-page="settings"><span class="zh">设置</span><span class="en">Settings</span></button><button data-page="history"><span class="zh">历史</span><span class="en">History</span></button><button data-page="method"><span class="zh">方法</span><span class="en">Method</span></button>
+  </nav>
+  <div class="status"><span class="dot" id="dot"></span><span id="stateText">—</span><span class="dim num" id="clock"></span></div>
+  <div class="spacer"></div>
+  <div class="midbox"><div class="lbl"><span class="zh">BTC 中间价</span><span class="en">BTC mid</span></div><div class="mid" id="mid">—</div></div>
+  <div class="seg" id="langSeg"><button data-lang="zh">中文</button><button data-lang="en">EN</button></div>
+  <button id="theme" data-tzh="切换浅色 / 深色" data-ten="Toggle light / dark">◐</button>
+</header>
+
+<!-- ============ 看板 / Dashboard ============ -->
+<section class="page on" id="p-board">
+  <div class="row1">
+    <div class="panel">
+      <div class="ph"><h3><span class="zh">Jev 实时决策与挂单</span><span class="en">Jev live decisions &amp; quotes</span></h3><span class="sub"><span class="zh">最近 90 秒 · 每条横线是一张挂单，从下单持续到被下一次决策替换</span><span class="en">Last 90 s · each line is one quote, from placement until replaced by the next decision</span></span></div>
+      <canvas id="cQuotes"></canvas>
+      <div class="legend"><span class="key"><span class="up">▲</span><span class="zh">买单，挂在买一</span><span class="en">Buy, resting at best bid</span></span><span class="key"><span class="down">▼</span><span class="zh">卖单，挂在卖一</span><span class="en">Sell, resting at best ask</span></span><span class="key">● <span class="zh">已成交（大点 = 价格打穿）</span><span class="en">Filled (large dot = traded through)</span></span><span class="key"><span style="display:inline-block;width:14px;height:8px;background:var(--band);border:1px solid var(--line)"></span><span class="zh">买一–卖一区间</span><span class="en">Bid–ask</span></span><span class="key"><i style="background:var(--ink2)"></i><span class="zh">中间价</span><span class="en">Mid</span></span></div>
+    </div>
+    <div class="panel">
+      <div class="ph"><h3><span class="zh">累计收益（理论上限）</span><span class="en">Cumulative P&amp;L (theoretical upper bound)</span></h3><span class="sub" id="eqSub" data-tzh="假设零手续费、零延迟、总能按中间价成交；每位选手按当前判断持有 1 单位。现实中做不到，只用于比较判断质量" data-ten="Assumes zero fees, zero latency and fills at mid; each player holds 1 unit in its current direction. Not achievable in practice — for comparing signal quality only"></span>
+        <div class="right"><div class="seg"><button onclick="eqPreset('all')"><span class="zh">全部</span><span class="en">All</span></button><button onclick="eqPreset('focus')" data-tzh="只显示 Jev、TFI 成交失衡、随机基准" data-ten="Show only Jev, TFI and random baseline"><span class="zh">聚焦 Jev</span><span class="en">Focus Jev</span></button></div><div class="seg" id="feeSeg"><button data-fee="0" class="on"><span class="zh">零手续费</span><span class="en">No fees</span></button><button data-fee="1"><span class="zh">扣吃单手续费</span><span class="en">With taker fees</span></button></div></div></div>
+      <canvas id="cEq"></canvas>
+      <div class="legend" id="eqLegend"></div>
+    </div>
+  </div>
+
+  <div class="kpis">
+    <div class="panel kpi"><div class="k"><span class="zh">响应延迟 P50</span><span class="en">Latency P50</span></div><div class="v" id="kLat">—</div><div class="s" id="kLatS">—</div></div>
+    <div class="panel kpi"><div class="k"><span class="zh">跳过率</span><span class="en">Skip rate</span></div><div class="v" id="kLate">—</div><div class="s"><span class="zh">上一请求未返回，该决策点跳过</span><span class="en">Previous request still pending, tick skipped</span></div></div>
+    <div class="panel kpi"><div class="k"><span class="zh">请求成功率</span><span class="en">Request success</span></div><div class="v" id="kOk">—</div><div class="s" id="kOkS">—</div></div>
+    <div class="panel kpi"><div class="k"><span class="zh">30 秒方向准确率 · Jev</span><span class="en">30 s hit rate · Jev</span></div><div class="v" id="kHit">—</div><div class="s" id="kHitS">—</div></div>
+    <div class="panel kpi"><div class="k"><span class="zh">挂单 30 秒 markout · Jev</span><span class="en">30 s maker markout · Jev</span></div><div class="v" id="kMk">—</div><div class="s"><span class="zh">保守口径，未计手续费</span><span class="en">Conservative fills, before fees</span></div></div>
+    <div class="panel kpi"><div class="k"><span class="zh">累计收益（理论上限）· Jev</span><span class="en">Cum. P&amp;L (upper bound) · Jev</span></div><div class="v" id="kEq">—</div><div class="s" id="kEqS">—</div></div>
+  </div>
+
+  <div class="row3">
+    <div class="panel">
+      <div class="ph"><h3><span class="zh">决策流水 · Jev</span><span class="en">Decision log · Jev</span></h3><span class="sub"><span class="zh">每一行是一张挂单，30 秒后揭晓</span><span class="en">Each row is one quote, resolved after 30 s</span></span></div>
+      <div class="tablewrap"><table><thead><tr><th><span class="zh">时间</span><span class="en">Time</span></th><th><span class="zh">方向</span><span class="en">Side</span></th><th>P(<span class="zh">涨</span><span class="en">up</span>)</th><th><span class="zh">挂单价</span><span class="en">Price</span></th><th><span class="zh">延迟</span><span class="en">Latency</span></th><th><span class="zh">成交</span><span class="en">Fill</span></th><th><span class="zh">30 秒后</span><span class="en">After 30 s</span></th></tr></thead><tbody id="feed"></tbody></table></div>
+    </div>
+    <div class="panel">
+      <div class="ph"><h3><span class="zh">方向准确率</span><span class="en">Directional hit rate</span></h3><span class="sub"><span class="zh">50% 为随机水平 · 对照策略均无拟合参数 · 悬停策略名查看定义</span><span class="en">50% = random · baselines have no fitted parameters · hover a name for its definition</span></span></div>
+      <div class="tablewrap"><table><thead><tr><th><span class="zh">选手</span><span class="en">Player</span></th><th>3 <span class="zh">秒</span><span class="en">s</span></th><th>10 <span class="zh">秒</span><span class="en">s</span></th><th>30 <span class="zh">秒</span><span class="en">s</span></th><th>60 <span class="zh">秒</span><span class="en">s</span></th></tr></thead><tbody id="hit"></tbody></table></div>
+      <div class="note"><span class="zh"><span class="up">绿色</span>：95% 区间整体高于 50%；<span class="down">红色</span>：整体低于 50%；小字为样本数。Jev 从响应返回时刻起算。</span><span class="en"><span class="up">Green</span>: 95% interval entirely above 50%; <span class="down">red</span>: entirely below; small numbers are sample sizes. Jev is scored from the moment its answer arrives.</span></div>
+      <div class="ph" style="margin-top:10px;margin-bottom:0"><h3 style="font-size:13px"><span class="zh">Jev 给出的概率分布</span><span class="en">Jev probability distribution</span></h3><span class="sub">P(<span class="zh">30 秒后涨</span><span class="en">up in 30 s</span>)</span></div>
+      <div class="hist" id="hist"></div><div class="hist-l" id="histL"></div>
+    </div>
+    <div class="stack2">
+      <div class="panel">
+        <div class="ph"><h3><span class="zh">挂单成交质量</span><span class="en">Maker fill quality</span></h3><span class="sub"><span class="zh">30 秒 markout（成交后 30 秒按中间价估值，bps）· 负值即逆向选择</span><span class="en">30 s markout (fill valued at mid 30 s later, bps) · negative = adverse selection</span></span></div>
+        <div class="tablewrap"><table><thead><tr><th><span class="zh">选手</span><span class="en">Player</span></th><th><span class="zh">成交率</span><span class="en">Fill rate</span></th><th><span class="zh">markout 乐观</span><span class="en">Markout (optimistic)</span></th><th><span class="zh">markout 保守</span><span class="en">Markout (conservative)</span></th><th><span class="zh">扣 VIP0 挂单费</span><span class="en">After VIP0 maker fee</span></th></tr></thead><tbody id="maker"></tbody></table></div>
+      </div>
+      <div class="panel">
+        <div class="ph"><h3><span class="zh">大模型对照</span><span class="en">LLM comparison</span></h3><span class="sub"><span class="zh">每 60 秒同题 · 5 / 15 分钟方向</span><span class="en">Same question every 60 s · 5 / 15 min direction</span></span></div>
+        <div class="tablewrap"><table><thead><tr><th><span class="zh">选手</span><span class="en">Player</span></th><th><span class="zh">延迟</span><span class="en">Latency</span></th><th>5 <span class="zh">分钟</span><span class="en">min</span></th><th>15 <span class="zh">分钟</span><span class="en">min</span></th><th><span class="zh">最近一次</span><span class="en">Latest</span></th></tr></thead><tbody id="slow"></tbody></table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 运行 / Run ============ -->
+<section class="page" id="p-run">
+  <div class="stack">
+    <div class="panel">
+      <div class="ph"><h3><span class="zh">运行控制</span><span class="en">Run control</span></h3></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        <button class="primary big" id="bStart"><span class="zh">开始测试</span><span class="en">Start</span></button>
+        <button class="big" id="bDry"><span class="zh">试运行（不调用模型）</span><span class="en">Dry run (no model calls)</span></button>
+        <button class="danger big" id="bStop"><span class="zh">停止</span><span class="en">Stop</span></button>
+        <button class="danger" id="bFinish"><span class="zh">立即结束</span><span class="en">Finish now</span></button>
+        <span class="msg" id="runMsg"></span>
+      </div>
+      <div class="note"><span class="zh">停止：不再产生新决策，已发出的判断结算完再结束（快档最长 1 分钟，慢档最长 15 分钟）。立即结束：未结算的判断不计入结果。<br>计划时长在「设置」中设定并于开始时锁定；提前停止会在结果中注明。服务意外退出后重新启动，会自动续跑未完成的场次。</span><span class="en">Stop: no new decisions; outstanding ones settle first (fast tier ≤ 1 min, slow tier ≤ 15 min). Finish now: unsettled decisions are discarded.<br>The planned duration is set in Settings and locked at start; early stops are flagged in the results. If the server exits unexpectedly, restarting it resumes the unfinished run.</span></div>
+    </div>
+    <div class="panel"><div class="ph"><h3><span class="zh">当前任务</span><span class="en">Current run</span></h3></div><div class="facts" id="runInfo">—</div></div>
+    <div class="panel"><div class="ph"><h3><span class="zh">运行日志</span><span class="en">Run log</span></h3></div><div class="logbox" id="runLog"></div></div>
+  </div>
+</section>
+
+<!-- ============ 设置 / Settings ============ -->
+<section class="page" id="p-settings">
+  <div class="stack">
+    <div class="panel">
+      <div class="ph"><h3><span class="zh">API 密钥</span><span class="en">API keys</span></h3><span class="sub"><span class="zh">仅保存在本机 </span><span class="en">Stored locally only at </span><span class="num" id="cfgDir"></span><span class="zh">，不进入代码仓库。留空表示不修改；输入「-」表示清除</span><span class="en">, never in the repo. Leave blank to keep; enter "-" to clear</span></span></div>
+      <div class="form">
+        <label>Jev (TypeSafe)</label><input id="kJev" type="password" autocomplete="off"><button data-test="jev"><span class="zh">测试连接</span><span class="en">Test</span></button>
+        <div class="hint" id="kJevNow"></div>
+        <label>DeepSeek</label><input id="kDs" type="password" autocomplete="off"><button data-test="deepseek"><span class="zh">测试连接</span><span class="en">Test</span></button>
+        <div class="hint" id="kDsNow"></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ph"><h3><span class="zh">其他大模型</span><span class="en">Other LLMs</span></h3><span class="sub"><span class="zh">任意 OpenAI 兼容接口，填写接口根地址（不含 /chat/completions）。仅参加慢档</span><span class="en">Any OpenAI-compatible endpoint; enter the base URL (without /chat/completions). Slow tier only</span></span></div>
+      <div id="llms"></div>
+      <button id="addLlm"><span class="zh">添加模型</span><span class="en">Add model</span></button>
+    </div>
+    <div class="panel">
+      <div class="ph"><h3><span class="zh">测试参数</span><span class="en">Parameters</span></h3></div>
+      <div class="form">
+        <label><span class="zh">计划时长（分钟）</span><span class="en">Planned duration (min)</span></label><input id="rMin" type="number" min="1"><span class="dim"><span class="zh">1440 = 24 小时</span><span class="en">1440 = 24 h</span></span>
+        <label><span class="zh">快档（每 300 ms）</span><span class="en">Fast tier (every 300 ms)</span></label><input id="rFast" type="checkbox"><span class="dim"><span class="zh">Jev、八条对照策略、随机基准；预测 3 / 10 / 30 / 60 秒</span><span class="en">Jev, eight baselines, random; horizons 3 / 10 / 30 / 60 s</span></span>
+        <label><span class="zh">慢档</span><span class="en">Slow tier</span></label><input id="rSlow" type="checkbox"><span class="dim"><span class="zh">大模型与 Jev 同题；预测 5 / 15 分钟</span><span class="en">LLMs and Jev on the same question; horizons 5 / 15 min</span></span>
+        <label><span class="zh">慢档间隔（秒）</span><span class="en">Slow tier interval (s)</span></label><input id="rSlowEvery" type="number" min="15"><span></span>
+        <label><span class="zh">慢档单模型并发上限</span><span class="en">Slow tier max in-flight per model</span></label><input id="rInflight" type="number" min="1" max="10"><span class="dim"><span class="zh">大模型单次响应约 40–120 秒</span><span class="en">LLMs take ~40–120 s per answer</span></span>
+        <label><span class="zh">Jev 超时（毫秒）</span><span class="en">Jev timeout (ms)</span></label><input id="rJevTo" type="number"><span></span>
+        <label><span class="zh">大模型超时（毫秒）</span><span class="en">LLM timeout (ms)</span></label><input id="rLlmTo" type="number"><span></span>
+        <label><span class="zh">挂单手续费（bps / 边）</span><span class="en">Maker fee (bps / side)</span></label><input id="rFeeM" type="number" step="0.1"><span class="dim"><span class="zh">币安 USDⓈ-M VIP0：2</span><span class="en">Binance USDⓈ-M VIP0: 2</span></span>
+        <label><span class="zh">吃单手续费（bps / 边）</span><span class="en">Taker fee (bps / side)</span></label><input id="rFeeT" type="number" step="0.1"><span class="dim">VIP0: 5</span>
+        <label><span class="zh">运行时阻止系统休眠</span><span class="en">Prevent sleep while running</span></label><input id="rAwake" type="checkbox"><span></span>
+      </div>
+    </div>
+    <div><button class="primary big" id="save"><span class="zh">保存设置</span><span class="en">Save</span></button><span class="msg" id="saveMsg"></span></div>
+  </div>
+</section>
+
+<!-- ============ 历史 / History ============ -->
+<section class="page" id="p-history">
+  <div class="stack" style="max-width:none">
+    <div class="panel">
+      <div class="ph"><h3><span class="zh">历史记录</span><span class="en">Run history</span></h3><span class="sub"><span class="zh">数据位于 data/ 目录</span><span class="en">Data lives in data/</span></span>
+        <div class="right"><span><span class="zh">回放速度</span><span class="en">Replay speed</span></span><select id="speed"><option>1</option><option>5</option><option selected>20</option><option>60</option><option>300</option></select>
+          <span><span class="zh">从第</span><span class="en">from hour</span></span><input id="fromH" type="number" min="0" step="0.5" value="0" style="width:64px"><span class="zh">小时开始</span>
+          <label data-tzh="按当时正在运行的样子显示（状态、已运行时长、日志），用于补录屏；数据仍是这一场的原始记录" data-ten="Show the run as it looked while live (status, elapsed time, log), for re-recording; data is still this run's original records"><input id="asLive" type="checkbox"> <span class="zh">重现当时的运行状态</span><span class="en">Re-enact live view</span></label>
+          <button id="stopReplay"><span class="zh">退出回放</span><span class="en">Exit replay</span></button><button id="refreshRuns"><span class="zh">刷新</span><span class="en">Refresh</span></button></div></div>
+      <div class="tablewrap"><table><thead><tr><th><span class="zh">场次</span><span class="en">Run</span></th><th><span class="zh">开始时间</span><span class="en">Started</span></th><th><span class="zh">计划 / 状态</span><span class="en">Planned / status</span></th><th><span class="zh">数据量</span><span class="en">Size</span></th><th></th></tr></thead><tbody id="runs"></tbody></table></div>
+      <span class="msg" id="histMsg"></span>
+    </div>
+    <div class="panel md" id="results"><span class="dim"><span class="zh">选择一场，点击「查看结果」</span><span class="en">Pick a run and click "Results"</span></span></div>
+  </div>
+</section>
+
+<!-- ============ 方法 / Method ============ -->
+<section class="page" id="p-method">
+  <div class="stack" style="max-width:1280px">
+    <div class="panel method">
+      <div class="ph"><h3><span class="zh">测试目的</span><span class="en">Purpose</span></h3></div>
+      <div class="zh">
+        <p>检验 Jev（TypeSafe System One 模型）在<b>中高频尺度</b>上做方向判断是否有效：在同一份币安 BTCUSDT 永续行情、同一套结算规则下，与八类经典的无参数中高频信号及随机基准比较方向准确率、挂单成交质量和累计收益；另在分钟级尺度与通用大模型比较。</p>
+        <p class="dim">中高频指亚秒级决策、秒级到分钟级预测。真正的高频交易是微秒级、服务器托管在交易所机房，不在本测试范围内。</p>
+      </div>
+      <div class="en">
+        <p>Does Jev (TypeSafe's System One model) make useful directional calls at <b>mid-frequency</b> horizons? On the same Binance BTCUSDT perpetual feed and the same settlement rules, Jev is compared with eight classic parameter-free microstructure signals and a random baseline on hit rate, maker fill quality and cumulative P&amp;L; at minute horizons it is also compared with general-purpose LLMs.</p>
+        <p class="dim">Mid-frequency here means sub-second decisions with second-to-minute horizons. True high-frequency trading (microseconds, co-located servers) is out of scope.</p>
+      </div>
+    </div>
+    <div class="panel method">
+      <div class="ph"><h3><span class="zh">数据与决策节奏</span><span class="en">Data &amp; decision cadence</span></h3></div>
+      <ul id="mData"></ul>
+    </div>
+    <div class="panel method">
+      <div class="ph"><h3><span class="zh">参赛选手与对照策略</span><span class="en">Players &amp; baselines</span></h3><span class="sub"><span class="zh">对照策略均为文献与业界常用的中高频方向信号，参数事先固定，不在数据上调整</span><span class="en">Baselines are standard microstructure signals from the literature and industry; parameters fixed in advance, never tuned on the data</span></span></div>
+      <div class="tablewrap"><table class="wrap"><thead><tr><th><span class="zh">缩写</span><span class="en">Code</span></th><th><span class="zh">名称</span><span class="en">Name</span></th><th><span class="zh">类别</span><span class="en">Type</span></th><th><span class="zh">信号定义</span><span class="en">Signal</span></th><th><span class="zh">逻辑</span><span class="en">Rationale</span></th><th><span class="zh">出处</span><span class="en">Reference</span></th></tr></thead><tbody id="mStrat"></tbody></table></div>
+      <ul class="dim" style="margin-top:10px">
+        <li><span class="zh">信号恰好为 0 时（如价格未变、两侧挂单量相等）视为无信息，随机选择方向，避免把 0.5 当作「看涨」造成系统性偏差。Jev 同样被要求二选一。</span><span class="en">When a signal is exactly zero (no price change, equal queues) it carries no information and the direction is drawn at random, so 0.5 is never treated as "up". Jev is likewise forced to choose.</span></li>
+        <li><span class="zh">未收入：Stoikov (2018) 微价格（需从历史数据估计参数）；按挂单量加权的中间价（与 QI 方向恒等）；跨市场领先滞后、期现基差、做市报价模型（需多市场数据，或本身不是方向判断）。</span><span class="en">Not included: Stoikov (2018) micro-price (requires parameters estimated from data); size-weighted mid (always has the same sign as QI); cross-venue lead-lag, basis and market-making models (need multi-venue data, or are not directional forecasts).</span></li>
+      </ul>
+    </div>
+    <div class="panel method">
+      <div class="ph"><h3><span class="zh">执行与计价</span><span class="en">Execution &amp; valuation</span></h3></div>
+      <ul id="mExec"></ul>
+    </div>
+    <div class="panel method">
+      <div class="ph"><h3><span class="zh">统计方法与判定标准</span><span class="en">Statistics &amp; pass criteria</span></h3></div>
+      <ul class="zh">
+        <li><b>置信区间</b>：相邻决策点只隔 300 ms，预测窗口高度重叠，不能视为独立样本。采用分块自助法（快档 60 秒一块、慢档 15 分钟一块，整块重抽 2000 次，固定随机种子）。看板上的区间为 Wilson 近似，仅供参考。</li>
+        <li><b>配对比较</b>：Jev 与各对照在同一批决策点上逐点比较，差值的区间整体低于 0 才算显著落后。</li>
+        <li><b>多重比较校正</b>：与 8 条对照逐一比较时采用 Bonferroni 校正（单次 α = 5% / 8），避免「比得越多、越容易误判」。</li>
+        <li><b>预先锁定</b>：计划时长在开始时写入记录，中途不依据结果决定是否停止；提前停止或中断会在结果中注明。</li>
+      </ul>
+      <ul class="en">
+        <li><b>Confidence intervals</b>: ticks are 300 ms apart, so forecast windows overlap heavily and are not independent. We use a block bootstrap (60 s blocks for the fast tier, 15 min for the slow tier, 2,000 resamples, fixed seed). Dashboard intervals are Wilson approximations for reference only.</li>
+        <li><b>Paired comparison</b>: Jev and each baseline are compared on the same ticks; Jev is significantly behind only if the whole interval of the difference is below 0.</li>
+        <li><b>Multiple comparisons</b>: comparisons against the 8 baselines use a Bonferroni correction (α = 5% / 8 each).</li>
+        <li><b>Pre-registration</b>: the planned duration is recorded at start and the run is never stopped based on results; early stops and interruptions are flagged in the results.</li>
+      </ul>
+      <div class="tablewrap"><table class="wrap" style="margin-top:6px"><thead><tr><th>#</th><th><span class="zh">判定标准（开始前锁定，须全部满足）</span><span class="en">Pass criteria (locked before start; all must hold)</span></th></tr></thead><tbody>
+        <tr><td>1</td><td><span class="zh">30 秒方向准确率显著高于随机基准</span><span class="en">30 s hit rate significantly above random</span></td></tr>
+        <tr><td>2</td><td><span class="zh">30 秒方向准确率不显著落后于任何一条对照策略（Bonferroni 校正）</span><span class="en">30 s hit rate not significantly below any baseline (Bonferroni-corrected)</span></td></tr>
+        <tr><td>3</td><td><span class="zh">零手续费下，挂单 30 秒 markout 显著为正（保守口径）</span><span class="en">Zero-fee 30 s maker markout significantly positive (conservative fills)</span></td></tr>
+        <tr><td>4</td><td><span class="zh">请求成功率不低于 99%</span><span class="en">Request success rate ≥ 99%</span></td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="panel method">
+      <div class="ph"><h3><span class="zh">局限</span><span class="en">Limitations</span></h3></div>
+      <ul class="zh">
+        <li>只覆盖一个市场（币安 BTCUSDT 永续），结论不外推到其他品种和交易所。</li>
+        <li>从中国大陆调用 Jev 存在跨境网络延迟（P50 约 350–800 ms），因此 Jev 的准确率按响应返回时刻计算；看板同时给出按发问时刻计算的理想口径。</li>
+        <li>挂单模拟看不到真实队列位置，只能给出乐观、保守两个边界。</li>
+        <li>对照策略之间存在相关性（如 QI 与 DI），不应视为相互独立的证据。</li>
+        <li>累计收益与 markout 用于横向比较判断质量，不代表可直接运行的策略收益。</li>
+        <li><b>9/25 修正记录</b>：此前两场（20260924_2300、20260925_0815）发给 Jev 的挂单深度按「距中间价 10 / 25 / 50 bps」统计，而 BTC 的 20 档盘口只覆盖约 0.4 bps，三组数值相同且失真；输入说明也只点名了成交字段。已改为按档位统计、完整列出全部字段，从 20260925_1004 起的场次使用修正后的输入。前两场仅作原版口径参考。</li>
+      </ul>
+      <ul class="en">
+        <li>One market only (Binance BTCUSDT perpetual); results do not generalise to other assets or venues.</li>
+        <li>Jev is called from mainland China with cross-border latency (P50 ≈ 350–800 ms), so its hit rate is scored from the moment the answer arrives; the dashboard also shows the idealised score from the moment of asking.</li>
+        <li>The maker simulation cannot see real queue position, so only optimistic and conservative bounds are given.</li>
+        <li>Baselines are correlated (e.g. QI and DI) and should not be read as independent evidence.</li>
+        <li>Cumulative P&amp;L and markouts compare signal quality; they are not the returns of a deployable strategy.</li>
+        <li><b>Correction log (Sep 25)</b>: the first two runs (20260924_2300, 20260925_0815) gave Jev depth measured "within 10 / 25 / 50 bps of mid", but 20 levels of the BTC book span only ~0.4 bps, so all three values were identical and misleading; the input description also named only the trade-flow fields. Depth is now cumulative over the best 1 / 5 / 20 levels and every field is described; runs from 20260925_1004 onward use the corrected inputs. The first two runs are kept as reference only.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="tip" id="tip"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const pct = x => x == null ? '—' : (x * 100).toFixed(1) + '%';
+const sbps = x => x == null ? '—' : (x > 0 ? '+' : '') + x.toFixed(2);
+
+// ---------- 语言 ----------
+// 固定文字：页面里中英两份（.zh / .en），CSS 只显示当前语言；程序生成的文字用 L(中文, English)
+let lang = 'zh';
+try { lang = localStorage.getItem('lang') || ((navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en'); } catch (e) {}
+const EN = () => lang === 'en';
+const L = (zh, en) => EN() ? en : zh;
+const LOC = () => EN() ? 'en-GB' : 'zh-CN';
+const nf = n => (n ?? 0).toLocaleString('en-US');
+
+const tm = t => { const d = new Date(t); return d.toLocaleTimeString(LOC(), {hour12: false}) + '.' + String(d.getMilliseconds()).padStart(3, '0')[0]; };
+const hms = ms => { ms = Math.max(0, ms); const s = Math.floor(ms / 1000); return `${String(Math.floor(s / 3600)).padStart(2, '0')}:${String(Math.floor(s % 3600 / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`; };
+async function api(path, body) {
+  const r = await fetch(path, body === undefined ? {cache: 'no-store'} : {method: 'POST', headers: {'Content-Type': 'application/json', 'X-Bench': '1'}, body: JSON.stringify(body)});
+  const j = await r.json().catch(() => ({})); if (!r.ok) throw new Error(j.error || 'HTTP ' + r.status); return j;
+}
+const flash = (el, text, ok = true) => { el.className = 'msg ' + (ok ? 'ok' : 'bad'); el.textContent = text; };
+
+function applyLang() {
+  const root = document.documentElement;
+  root.dataset.lang = lang; root.lang = EN() ? 'en' : 'zh-CN';
+  document.title = L('Jev 中高频基准测试', 'Jev Mid-Frequency Benchmark');
+  document.querySelectorAll('[data-tzh]').forEach(el => el.title = EN() ? el.dataset.ten : el.dataset.tzh);
+  document.querySelectorAll('#langSeg button').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
+}
+document.querySelectorAll('#langSeg button').forEach(b => b.onclick = () => {
+  if (b.dataset.lang === lang) return;
+  lang = b.dataset.lang; try { localStorage.setItem('lang', lang); } catch (e) {}
+  applyLang(); eqSub(); renderMethod(); lastFeedTop = null;
+  if (last) render(last);
+  if (page === 'settings') loadConfig(); if (page === 'history') { loadRuns(); if (shownResult) histAction('results', shownResult); }
+});
+applyLang();
+
+// ---------- 页签 / 主题 ----------
+let page = 'board';
+try { page = localStorage.getItem('page') || 'board'; } catch (e) {}
+function show(p) {
+  page = p; document.querySelectorAll('nav button').forEach(b => b.classList.toggle('on', b.dataset.page === p));
+  document.querySelectorAll('.page').forEach(s => s.classList.toggle('on', s.id === 'p-' + p));
+  try { localStorage.setItem('page', p); } catch (e) {}
+  if (p === 'settings') loadConfig(); if (p === 'history') loadRuns(); if (p === 'method') renderMethod(); if (p === 'board' && last) render(last);
+}
+document.querySelectorAll('nav button').forEach(b => b.onclick = () => show(b.dataset.page));
+try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+$('theme').onclick = () => {
+  const cur = document.documentElement.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const next = cur === 'dark' ? 'light' : 'dark'; document.documentElement.dataset.theme = next;
+  try { localStorage.setItem('theme', next); } catch (e) {} if (last) render(last);
+};
+let feeMode = 0;
+document.querySelectorAll('#feeSeg button').forEach(b => b.onclick = () => { feeMode = +b.dataset.fee; document.querySelectorAll('#feeSeg button').forEach(x => x.classList.toggle('on', x === b)); eqSub(); if (last) drawEquity(last); });
+
+// ---------- 画布工具 ----------
+function setup(c) {
+  const dpr = devicePixelRatio || 1, w = c.clientWidth, h = c.clientHeight;
+  if (c.width !== Math.round(w * dpr) || c.height !== Math.round(h * dpr)) { c.width = Math.round(w * dpr); c.height = Math.round(h * dpr); }
+  const g = c.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, w, h); return {g, w, h};
+}
+const tip = $('tip');
+function showTip(html, x, y) { tip.innerHTML = html; tip.style.display = 'block'; const r = tip.getBoundingClientRect();
+  tip.style.left = Math.min(innerWidth - r.width - 8, x + 14) + 'px'; tip.style.top = Math.max(8, Math.min(innerHeight - r.height - 8, y - r.height / 2)) + 'px'; }
+const hideTip = () => { tip.style.display = 'none'; };
+
+// ---------- 图一：Jev 实时决策与挂单 ----------
+let qGeom = null;
+function drawQuotes(d) {
+  const c = $('cQuotes'), {g, w, h} = setup(c), book = d.book || [], quotes = d.quotes || [];
+  g.font = '11px "JetBrains Mono", Consolas, monospace';
+  if (book.length < 2) { g.fillStyle = css('--dim'); g.fillText(L('等待行情…', 'Waiting for market data…'), 10, 20); qGeom = null; return; }
+  const now = d.now, t0 = now - 90000, Lp = 10, R = 74, T = 10, B = 22;
+  let lo = Infinity, hi = -Infinity;
+  for (const [, b, a] of book) { lo = Math.min(lo, b); hi = Math.max(hi, a); }
+  for (const q of quotes) if (q.t1 >= t0) { lo = Math.min(lo, q.px); hi = Math.max(hi, q.px); }
+  const pad = Math.max((hi - lo) * .12, .5); lo -= pad; hi += pad;
+  const X = t => Lp + (t - t0) / 90000 * (w - Lp - R), Y = v => T + (1 - (v - lo) / (hi - lo)) * (h - T - B);
+  // 网格
+  g.strokeStyle = css('--grid'); g.lineWidth = 1; g.fillStyle = css('--dim');
+  for (let i = 0; i <= 4; i++) { const v = lo + (hi - lo) * i / 4, y = Math.round(Y(v)) + .5; g.beginPath(); g.moveTo(Lp, y); g.lineTo(w - R, y); g.stroke(); g.fillText(v.toFixed(1), w - R + 6, y + 4); }
+  for (let s = 0; s <= 90; s += 15) { const x = X(now - s * 1000); g.fillText(s ? `-${s}s` : L('现在', 'now'), Math.max(Lp, x - (s ? 12 : 22)), h - 6); }
+  // 买一–卖一带 + 中间价
+  g.fillStyle = css('--band'); g.beginPath();
+  book.forEach(([t, b], i) => i ? g.lineTo(X(t), Y(b)) : g.moveTo(X(t), Y(b)));
+  for (let i = book.length - 1; i >= 0; i--) g.lineTo(X(book[i][0]), Y(book[i][2]));
+  g.closePath(); g.fill();
+  g.strokeStyle = css('--ink2'); g.lineWidth = 1.2; g.beginPath();
+  book.forEach(([t, b, a], i) => { const y = Y((a + b) / 2); i ? g.lineTo(X(t), y) : g.moveTo(X(t), y); }); g.stroke();
+  // 挂单：横线 = 挂着的这段时间；起点三角 = 下单；实心圆 = 成交
+  const up = css('--up'), dn = css('--down'), surf = css('--panel');
+  for (const q of quotes) {
+    if (q.t1 < t0) continue;
+    const col = q.side === 'buy' ? up : dn, x0 = Math.max(Lp, X(q.t0)), x1 = X(Math.min(q.t1, now)), y = Y(q.px);
+    g.strokeStyle = col; g.globalAlpha = .85; g.lineWidth = 2; g.beginPath(); g.moveTo(x0, y); g.lineTo(Math.max(x0 + 1, x1), y); g.stroke(); g.globalAlpha = 1;
+    if (q.t0 >= t0) { g.fillStyle = col; g.beginPath(); const s = 4.5;
+      if (q.side === 'buy') { g.moveTo(x0, y + 2); g.lineTo(x0 - s, y + 2 + s * 1.5); g.lineTo(x0 + s, y + 2 + s * 1.5); }
+      else { g.moveTo(x0, y - 2); g.lineTo(x0 - s, y - 2 - s * 1.5); g.lineTo(x0 + s, y - 2 - s * 1.5); } g.fill(); }
+    const f = q.fillC || q.fillO;
+    if (f && f >= t0) { const fx = X(f); g.fillStyle = col; g.strokeStyle = surf; g.lineWidth = 2; g.beginPath(); g.arc(fx, y, q.fillC ? 5 : 3.5, 0, 7); g.fill(); g.stroke(); }
+  }
+  // 右侧当前买一 / 卖一
+  const [, b1, a1] = book.at(-1);
+  g.fillStyle = up; g.fillText(L('买一 ', 'Bid ') + b1.toFixed(1), w - R + 6, Math.min(h - B, Y(b1) + 14));
+  g.fillStyle = dn; g.fillText(L('卖一 ', 'Ask ') + a1.toFixed(1), w - R + 6, Math.max(T + 10, Y(a1) - 6));
+  qGeom = {X, Y, quotes, t0, now};
+}
+$('cQuotes').addEventListener('mousemove', e => {
+  if (!qGeom) return; const r = e.target.getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top;
+  let best = null, bd = 14;
+  for (const q of qGeom.quotes) { if (q.t1 < qGeom.t0) continue; const x0 = qGeom.X(q.t0), x1 = qGeom.X(Math.min(q.t1, qGeom.now)), y = qGeom.Y(q.px);
+    const dx = mx < x0 ? x0 - mx : mx > x1 ? mx - x1 : 0, dd = Math.hypot(dx, my - y); if (dd < bd) { bd = dd; best = q; } }
+  if (!best) return hideTip();
+  const fill = best.fillC ? L('已成交（价格打穿）', 'Filled (traded through)') : best.fillO ? L('已成交（触价）', 'Filled (touched)') : L('未成交', 'Not filled');
+  const row = (k, v) => `<div class="r"><span>${k}</span><span class="num">${v}</span></div>`;
+  showTip(`<b>${best.side === 'buy' ? `<span class="up">▲ ${L('买单', 'Buy')}</span>` : `<span class="down">▼ ${L('卖单', 'Sell')}</span>`}</b> <span class="num">${best.px.toFixed(1)}</span>` +
+    row(L('下单时间', 'Placed'), tm(best.t0)) + row(L('P(30 秒后涨)', 'P(up in 30 s)'), pct(best.p)) +
+    row(L('响应延迟', 'Latency'), `${best.lat} ms`) + row(L('挂单时长', 'Resting'), `${((Math.min(best.t1, qGeom.now) - best.t0) / 1000).toFixed(2)} s`) +
+    `<div class="r"><span>${L('成交', 'Fill')}</span><span>${fill}</span></div>` +
+    (best.edgeO != null || best.edgeC != null ? row(L('30 秒后估值', '30 s markout'), `${sbps(best.edgeC ?? best.edgeO)} bps`) : ''), e.clientX, e.clientY);
+});
+$('cQuotes').addEventListener('mouseleave', hideTip);
+
+// ---------- 图二：累计收益 ----------
+const FEATURED = ['jev', 'mock', 'cvd', 'coin'];
+const colorOf = a => ({jev: css('--s-jev'), mock: css('--s-mock'), cvd: css('--s-cvd'), coin: css('--s-coin')})[a] || css('--s-other');
+let eqGeom = null;
+function eqValues(E, a) { const fee = feeMode ? 2 * (last?.feeTakerBps ?? 5) : 0; return E.eq[a].map((v, i) => v - fee * E.flips[a][i]); }
+// 图例可点击：点一下隐藏 / 显示某条线，纵轴按可见的线重新缩放（记在本机浏览器里）
+let eqHidden = new Set();
+try { eqHidden = new Set(JSON.parse(localStorage.getItem('eqHidden') || '[]')); } catch (e) {}
+const saveHidden = () => { try { localStorage.setItem('eqHidden', JSON.stringify([...eqHidden])); } catch (e) {} };
+function drawEquity(d) {
+  const c = $('cEq'), {g, w, h} = setup(c), E = d.stats?.equity;
+  g.font = '11px "JetBrains Mono", Consolas, monospace';
+  if (!E || E.t.length < 2) { g.fillStyle = css('--dim'); g.fillText(L('开始后约 10 秒出现曲线', 'Curves appear ~10 s after start'), 10, 20); eqGeom = null; $('eqLegend').innerHTML = ''; return; }
+  const arms = Object.keys(E.eq), vals = Object.fromEntries(arms.map(a => [a, eqValues(E, a)]));
+  const shown = arms.filter(a => !eqHidden.has(a));
+  let lo = 0, hi = 0; for (const a of shown) for (const v of vals[a]) { lo = Math.min(lo, v); hi = Math.max(hi, v); }
+  const pad = (hi - lo) * .08 || 1; lo -= pad; hi += pad;
+  const t0 = E.t[0], t1 = E.t.at(-1), Lp = 52, R = 128, T = 10, B = 22;
+  const X = t => Lp + (t - t0) / (t1 - t0 || 1) * (w - Lp - R), Y = v => T + (1 - (v - lo) / (hi - lo)) * (h - T - B);
+  g.strokeStyle = css('--grid'); g.lineWidth = 1; g.fillStyle = css('--dim');
+  for (let i = 0; i <= 4; i++) { const v = lo + (hi - lo) * i / 4, y = Math.round(Y(v)) + .5; g.beginPath(); g.moveTo(Lp, y); g.lineTo(w - R, y); g.stroke();
+    const txt = (v > 0 ? '+' : '') + (Math.abs(v) >= 100 ? v.toFixed(0) : v.toFixed(1)); g.fillText(txt, Lp - 6 - g.measureText(txt).width, y + 4); }
+  if (lo < 0 && hi > 0) { g.strokeStyle = css('--faint'); g.beginPath(); g.moveTo(Lp, Math.round(Y(0)) + .5); g.lineTo(w - R, Math.round(Y(0)) + .5); g.stroke(); }
+  const span = t1 - t0, fmtT = t => span > 6 * 3600000 ? new Date(t).toLocaleTimeString(LOC(), {hour12: false, hour: '2-digit', minute: '2-digit'}) : new Date(t).toLocaleTimeString(LOC(), {hour12: false});
+  g.fillStyle = css('--dim');
+  for (let i = 0; i <= 3; i++) { const t = t0 + span * i / 3; g.fillText(fmtT(t), Math.min(w - R - 60, Math.max(Lp, X(t) - 28)), h - 6); }
+  const line = (a, lw) => { g.strokeStyle = colorOf(a); g.lineWidth = lw; g.lineJoin = g.lineCap = 'round'; g.beginPath(); vals[a].forEach((v, i) => i ? g.lineTo(X(E.t[i]), Y(v)) : g.moveTo(X(E.t[i]), Y(v))); g.stroke(); };
+  const few = shown.length <= 5;   // 线少的时候，灰色的对照线也加粗、也标名字
+  for (const a of shown) if (!FEATURED.includes(a)) line(a, few ? 1.6 : 1);
+  for (const a of [...FEATURED].reverse()) if (vals[a] && shown.includes(a)) line(a, a === 'jev' ? 2.5 : 2);
+  // 线尾直接标名字（颜色靠旁边的短线，文字用正文色）
+  const labeled = shown.filter(a => FEATURED.includes(a) || few);
+  const ends = labeled.map(a => ({a, y: Y(vals[a].at(-1)), v: vals[a].at(-1)})).sort((p, q) => p.y - q.y);
+  for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 13) ends[i].y = ends[i - 1].y + 13;
+  g.font = '11.5px "Inter", "Microsoft YaHei UI", sans-serif';
+  for (const e of ends) { const x = w - R + 8, ly = Y(e.v); g.strokeStyle = css('--faint'); g.lineWidth = 1; g.beginPath(); g.moveTo(w - R + 1, ly); g.lineTo(x, e.y); g.stroke();
+    g.fillStyle = colorOf(e.a); g.fillRect(x + 2, e.y - 1.5, 9, 3); g.fillStyle = css('--ink'); g.fillText(`${short(e.a)} ${e.v > 0 ? '+' : ''}${e.v.toFixed(0)}`, x + 15, e.y + 4); }
+  eqGeom = {X, Y, E, vals, arms: shown, t0, t1, Lp, R, w};
+  const order = [...FEATURED.filter(a => vals[a]), ...arms.filter(a => !FEATURED.includes(a))];
+  const lag = Math.round((E.lagMs || 0) / 1000), feeTxt = 2 * (d.feeTakerBps ?? 5);
+  $('eqLegend').innerHTML = order.map(a => `<button class="lg${eqHidden.has(a) ? ' off' : ''}" data-arm="${esc(a)}" title="${eqHidden.has(a) ? L('点击显示', 'Click to show') : L('点击隐藏', 'Click to hide')}"><i style="background:${colorOf(a)}"></i>${esc(short(a))}</button>`).join('') +
+    `<span class="dim">${L(`点击图例显示 / 隐藏 · 曲线滞后 ${lag} 秒`, `Click to show / hide · ${lag} s lag`)}${feeMode ? L(` · 每次换向扣 ${feeTxt} bps`, ` · ${feeTxt} bps per reversal`) : ''}</span>`;
+}
+function eqSub() { $('eqSub').textContent = feeMode ? L('已扣吃单手续费 · 零延迟 · 按中间价成交 · bps', 'After taker fees · zero latency · fills at mid · bps') : L('零手续费 · 零延迟 · 按中间价成交 · bps', 'No fees · zero latency · fills at mid · bps'); }
+$('eqLegend').addEventListener('click', e => {
+  const b = e.target.closest('button[data-arm]'); if (!b) return;
+  const a = b.dataset.arm; eqHidden.has(a) ? eqHidden.delete(a) : eqHidden.add(a); saveHidden(); if (last) drawEquity(last);
+});
+function eqPreset(kind) {
+  const arms = Object.keys(last?.stats?.equity?.eq || {});
+  eqHidden = new Set(kind === 'all' ? [] : arms.filter(a => !['jev', 'coin', 'cvd'].includes(a)));
+  saveHidden(); if (last) drawEquity(last);
+}
+
+// ---------- 策略名称与定义（英文版在前端补） ----------
+const GROUP_EN = {订单簿: 'Order book', 成交流: 'Trade flow', 价格: 'Price', 基准: 'Baseline'};
+const STRAT_EN = {
+  obi1: {formula: '(best-bid size − best-ask size) / (best-bid size + best-ask size)',
+    why: 'A longer queue at the best bid than at the best ask means buyers are more eager; the next tick is more likely up.'},
+  ofi: {formula: 'Sum over the last 3 s (sampled every 300 ms) of net change at the best bid minus net change at the best ask; a price step up counts the whole new queue as added, a level taken out counts it as removed',
+    why: 'Looks at changes in the book rather than its level: bids being added and asks pulled or lifted tend to precede an up-move.'},
+  obi20: {formula: '(total bid size in top 20 levels − total ask size in top 20 levels) / their sum',
+    why: 'Multi-level version of QI: sees deeper, less noisy, but slower to react.',
+    ref: 'Cartea, Donnelly & Jaimungal (2018), Enhancing Trading Strategies with Order Book Signals, Applied Mathematical Finance (volume imbalance signal; multi-level version used here)'},
+  cvd: {formula: '(aggressive buy volume − aggressive sell volume) / their sum, last 30 s',
+    why: 'The direction of real money crossing the spread. Research on crypto markets finds it explains contemporaneous price changes better than OFI. The jev-trader prompt also calls it the strongest signal.'},
+  mom5: {formula: 'sign(mid return over the last 1.5 s)', why: 'Trend continuation: it just went up, bet it keeps going.',
+    ref: 'Standard time-series momentum signal, 1.5 s window here'},
+  rev20: {formula: '−sign(mid return over the last 6 s)',
+    why: 'Opposite of MOM: a move that went too far too fast gets given back. Having both shows whether this market trends or mean-reverts at this scale.',
+    ref: 'Short-term reversal relates to bid-ask bounce; see Roll (1984), A Simple Implicit Measure of the Effective Bid-Ask Spread, Journal of Finance'},
+  vwap: {formula: 'sign(30 s trade VWAP − current mid)', why: 'When price strays far from the recent average traded price, bet on a return towards it.',
+    ref: 'Common mean-reversion benchmark in execution algorithms and intraday trading'},
+  mock: {name: 'jev-trader baseline rule', formula: 'σ(return over last 20 ticks / 8 + 20-level imbalance × 1.5 + trade flow imbalance × 2)',
+    why: 'The placeholder rule jev-trader uses when no Jev key is set (a weighted mix of MOM + DI + TFI), with its random noise removed.',
+    ref: 'jarrodwatts/jev-trader, MockModel in src/model.ts'},
+  coin: {name: 'Random baseline', formula: 'Independent coin flip at every tick, 50/50',
+    why: 'Any signal should beat this first. For maker quotes it measures the average outcome of passive fills with no view — pure adverse-selection cost.'},
+};
+const stratOf = a => { const m = STRAT.strategies?.[a]; if (!m) return null; if (!EN()) return m;
+  const x = STRAT_EN[a] || {}; return {...m, name: x.name || m.en, group: GROUP_EN[m.group] || m.group, formula: x.formula || m.formula, why: x.why || m.why, ref: x.ref || m.ref}; };
+const short = a => a === 'jev' ? 'Jev' : STRAT.strategies?.[a]?.abbr || a;
+const nameOf = a => { if (a === 'jev') return 'Jev'; const m = stratOf(a); return m ? `${m.abbr} ${m.name}` : (last?.armNames?.[a] || a); };
+const defOf = a => { if (a === 'jev') return L('Jev（TypeSafe System One）：每 300ms 读取同一份盘口状态，输出上涨概率', 'Jev (TypeSafe System One): reads the same order-book state every 300 ms and outputs a probability of an up-move');
+  const m = stratOf(a); if (!m) return '';
+  return EN() ? `${m.abbr} ${m.name}\nSignal: ${m.formula}\nRationale: ${m.why}\nReference: ${m.ref}` : `${m.abbr} ${m.name}（${m.en}）\n信号：${m.formula}\n逻辑：${m.why}\n出处：${m.ref}`; };
+
+$('cEq').addEventListener('mousemove', e => {
+  if (!eqGeom) return; const r = e.target.getBoundingClientRect(), mx = e.clientX - r.left;
+  if (mx < eqGeom.Lp || mx > eqGeom.w - eqGeom.R) return hideTip();
+  const {E, vals, arms} = eqGeom, tt = eqGeom.t0 + (mx - eqGeom.Lp) / (eqGeom.w - eqGeom.Lp - eqGeom.R) * (eqGeom.t1 - eqGeom.t0);
+  let i = 0; while (i < E.t.length - 1 && E.t[i + 1] <= tt) i++;
+  const rows = arms.map(a => [a, vals[a][i]]).sort((p, q) => q[1] - p[1]);
+  showTip(`<b class="num">${new Date(E.t[i]).toLocaleString(LOC(), {hour12: false})}</b>` + rows.map(([a, v]) =>
+    `<div class="r" style="${FEATURED.includes(a) ? 'font-weight:600' : 'color:var(--ink2)'}"><span><span class="sw" style="background:${colorOf(a)}"></span>${esc(nameOf(a))}</span><span class="num">${v > 0 ? '+' : ''}${v.toFixed(1)}</span></div>`).join(''), e.clientX, e.clientY);
+});
+$('cEq').addEventListener('mouseleave', hideTip);
+
+// ---------- 渲染 ----------
+function hitCell(A) {
+  if (!A || !A.n) return '<td class="dim">—</td>';
+  const p = A.hit / A.n, cls = A.ci && A.ci[0] > .5 ? 'up' : A.ci && A.ci[1] < .5 ? 'down' : '';
+  return `<td class="${cls}">${pct(p)}<span class="n">${nf(A.n)}</span></td>`;
+}
+const pbar = p => p == null ? '' : `<span class="bar"><i style="left:${Math.min(50, p * 100)}%;width:${Math.abs(p - .5) * 100}%;background:${p >= .5 ? 'var(--up)' : 'var(--down)'}"></i></span>`;
+const sw = a => `<span class="sw" style="background:${colorOf(a)}"></span>`;
+const stateLabel = (st, d) => ({idle: L('未运行', 'Idle'), starting: L('启动中', 'Starting'), running: d.dry ? L('试运行中', 'Dry run') : L('运行中', 'Running'),
+  settling: L('结算中', 'Settling'), done: L('已结束', 'Finished'), replay: L(`回放 ×${d.speed}`, `Replay ×${d.speed}`)})[st] || st;
+let last = null, lastFeedTop = null, shownResult = null;
+function render(d) {
+  last = d;
+  const st = d.mode === 'replay' ? 'replay' : d.state || 'idle';
+  $('dot').className = 'dot ' + st;
+  $('stateText').textContent = stateLabel(st, d);
+  $('clock').innerHTML = d.started ? `<span class="runid">${esc(d.run)} · </span>${L('已运行', 'elapsed')} ${hms((d.stoppedAt || d.now) - d.started)}${st === 'running' && d.plannedEnd ? ` · ${L('剩余', 'left')} ${hms(d.plannedEnd - d.now)}` : ''}` : '';
+  $('mid').textContent = d.mid ? d.mid.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1}) : '—';
+  renderRun(d);
+  if (page !== 'board' || !d.stats) return;
+  const S = d.stats, Lt = S.lat || {};
+  // 指标卡
+  $('kLat').innerHTML = Lt.p50 != null ? `${Lt.p50}<small>ms</small>` : '—';
+  $('kLatS').textContent = Lt.p50 != null ? `P90 ${Lt.p90} ms · P99 ${Lt.p99} ms` : '—';
+  $('kLate').textContent = S.points ? pct(S.lateRate) : '—';
+  $('kOk').textContent = pct(S.successRate);
+  $('kOkS').textContent = S.sent ? L(`${nf(S.sent)} 次请求 · 失败 ${S.errorCount}`, `${nf(S.sent)} requests · ${S.errorCount} failed`) : '—';
+  const rules = Object.keys(S.hit || {}).filter(a => a !== 'coin');
+  const bestRule = rules.map(a => [a, S.hit[a]?.[30]]).filter(([, A]) => A?.n).sort((p, q) => q[1].hit / q[1].n - p[1].hit / p[1].n)[0];
+  const j30 = S.hitJev?.[30];
+  $('kHit').textContent = j30?.n ? pct(j30.hit / j30.n) : '—';
+  $('kHitS').textContent = `${L('随机基准', 'Random')} ${S.hit?.coin?.[30]?.n ? pct(S.hit.coin[30].hit / S.hit.coin[30].n) : '—'}${bestRule ? ` · ${L('最佳对照', 'best baseline')} ${short(bestRule[0])} ${pct(bestRule[1].hit / bestRule[1].n)}` : ''}`;
+  const mj = S.maker?.jev?.c;
+  $('kMk').innerHTML = mj?.edgeBps != null ? `${sbps(mj.edgeBps)}<small>bps</small>` : '—';
+  const E = S.equity;
+  if (E?.eq?.jev) {
+    const fin = a => eqValues(E, a).at(-1), all = Object.keys(E.eq).map(a => [a, fin(a)]).sort((p, q) => q[1] - p[1]);
+    const n = Object.keys(E.eq).length, rank = all.findIndex(x => x[0] === 'jev') + 1;
+    $('kEq').innerHTML = `${sbps(fin('jev')).replace(/\.\d+$/, '')}<small>bps</small>`;
+    $('kEqS').textContent = L(`${n} 位选手中排第 ${rank}`, `Rank ${rank} of ${n}`) + (feeMode ? L(' · 已扣手续费', ' · after fees') : L(' · 零手续费', ' · no fees'));
+  } else { $('kEq').textContent = '—'; $('kEqS').textContent = '—'; }
+  // 准确率
+  const H = STRAT.fastHorizons || [3, 10, 30, 60], order = ['jev', 'mock', 'cvd', ...rules.filter(a => !['mock', 'cvd'].includes(a)), 'coin'];
+  $('hit').innerHTML = order.map(a => { const A = a === 'jev' ? S.hitJev : S.hit?.[a]; if (!A || !H.some(h => A[h]?.n)) return '';
+    return `<tr class="${a === 'jev' ? 'hl' : ''}"><td class="name" title="${esc(defOf(a))}">${FEATURED.includes(a) ? sw(a) : '<span class="sw"></span>'}${esc(nameOf(a))}</td>${H.map(h => hitCell(A[h])).join('')}</tr>`; }).join('')
+    || `<tr><td colspan="4" class="dim">${L('首批结果约 10 秒后出现', 'First results in ~10 s')}</td></tr>`;
+  const bins = S.probBins || [], mx = Math.max(1, ...bins.map(b => b.n));
+  $('hist').innerHTML = bins.map(b => `<div style="height:${b.n / mx * 100}%" title="${b.n}"></div>`).join('');
+  $('histL').innerHTML = bins.map(b => `<span>${b.lo}–${b.hi} · ${nf(b.n)}</span>`).join('');
+  // 挂单
+  const M = S.maker || {}, mk = Object.keys(M).sort((a, b) => a === 'jev' ? -1 : b === 'jev' ? 1 : (M[b].c.edgeBps ?? -99) - (M[a].c.edgeBps ?? -99));
+  const ec = x => x == null ? 'dim' : x > 0 ? 'up' : 'down';
+  $('maker').innerHTML = mk.map(a => { const A = M[a]; return `<tr class="${a === 'jev' ? 'hl' : ''}"><td class="name" title="${esc(defOf(a))}">${FEATURED.includes(a) ? sw(a) : '<span class="sw"></span>'}${esc(nameOf(a))}</td><td>${pct(A.o.fillRate)}</td>` +
+    `<td class="${ec(A.o.edgeBps)}">${sbps(A.o.edgeBps)}</td><td class="${ec(A.c.edgeBps)}">${sbps(A.c.edgeBps)}<span class="n">${nf(A.c.n)}</span></td><td class="${ec(A.c.netVip0Bps)}">${sbps(A.c.netVip0Bps)}</td></tr>`; }).join('')
+    || `<tr><td colspan="5" class="dim">${L('首批成交约 30 秒后估值', 'First fills are valued after ~30 s')}</td></tr>`;
+  // 大模型
+  const SL = d.slow || {}, ln = d.llmNames || {}, sName = id => id === 'jev' ? 'Jev' : id === 'coin' ? nameOf('coin') : ln[id] || id;
+  const lastCall = id => { for (const r of d.slowRecent || []) { const x = r.m?.[id]; if (!x) continue;
+    if (x.pending) return `<span class="warn">${L('响应中', 'waiting')} ${((d.now - r.t) / 1000).toFixed(0)} s</span>`; if (x.err) return `<span class="bad">${esc(x.err)}</span>`;
+    if (x.skipped) return `<span class="dim">${L('跳过', 'skipped')}</span>`; return `P(${L('涨', 'up')}) ${pct(x.p)} · ${(x.lat / 1000).toFixed(1)} s`; } return '—'; };
+  $('slow').innerHTML = Object.entries(SL).map(([id, P]) => `<tr class="${id === 'jev' ? 'hl' : ''}"><td class="name">${esc(sName(id))}</td><td>${P.latP50 != null ? (P.latP50 < 10000 ? P.latP50 + ' ms' : (P.latP50 / 1000).toFixed(0) + ' s') : '—'}</td>${[300, 900].map(h => hitCell(P.hit?.[h])).join('')}<td style="text-align:left">${id === 'coin' ? '' : lastCall(id)}</td></tr>`).join('')
+    || `<tr><td colspan="5" class="dim">${L('未配置大模型，或首批结果尚未揭晓（5 分钟）', 'No LLM configured, or first results not yet in (5 min)')}</td></tr>`;
+  // 决策流水
+  const qs = (d.quotes || []).slice(-12).reverse(), top = qs[0]?.t0;
+  $('feed').innerHTML = qs.map((q, i) => {
+    const dir = q.side === 'buy' ? `<span class="up">▲ ${L('买', 'Buy')}</span>` : `<span class="down">▼ ${L('卖', 'Sell')}</span>`;
+    const fill = q.fillC ? `<span class="ok">${L('成交', 'Filled')}</span>` : q.fillO ? `<span class="ok">${L('触价', 'Touched')}</span>` : q.t1 < d.now ? `<span class="dim">${L('撤单', 'Cancelled')}</span>` : `<span class="dim">${L('挂单中', 'Resting')}</span>`;
+    const res = q.out30 ? `${q.out30 === 'up' ? L('涨', 'Up') : q.out30 === 'down' ? L('跌', 'Down') : L('平', 'Flat')} ${q.out30 === 'flat' ? '' : (q.side === 'buy') === (q.out30 === 'up') ? '<span class="ok">✓</span>' : '<span class="bad">✗</span>'}` : '<span class="dim">…</span>';
+    return `<tr class="${i === 0 && top !== lastFeedTop ? 'new' : ''}"><td>${tm(q.t0)}</td><td class="name">${dir}</td><td>${pbar(q.p)} ${pct(q.p)}</td><td>${q.px.toFixed(1)}</td><td>${q.lat} ms</td><td>${fill}</td><td>${res}</td></tr>`; }).join('')
+    || `<tr><td colspan="7" class="dim">${L('等待 Jev 的第一张挂单', "Waiting for Jev's first quote")}</td></tr>`;
+  lastFeedTop = top;
+  drawQuotes(d); drawEquity(d);
+}
+
+// ---------- 运行 ----------
+function renderRun(d) {
+  const st = d.mode === 'replay' ? 'replay' : d.state || 'idle';
+  $('bStart').disabled = $('bDry').disabled = st === 'running' || st === 'settling';
+  $('bStop').disabled = st !== 'running'; $('bFinish').disabled = !(st === 'running' || st === 'settling');
+  if (page !== 'run') return;
+  if (d.mode === 'live' && d.started) {
+    const c = d.cost || {}, llm = Object.entries(c.llm || {}).map(([id, x]) => `${esc((d.llmNames || {})[id] || (id === 'jev' ? L('Jev 慢档', 'Jev slow tier') : id))} ${x.calls}${L(' 次', ' calls')}`).join(L('，', ', '));
+    $('runInfo').innerHTML = [
+      [L('场次', 'Run'), esc(d.run)], [L('状态', 'Status'), stateLabel(st, d)], [L('计划时长', 'Planned'), L(`${d.plannedMinutes} 分钟`, `${d.plannedMinutes} min`)], [L('已运行', 'Elapsed'), hms((d.stoppedAt || d.now) - d.started)],
+      [L('行情连接', 'Market feeds'), d.ws ? `<span class="${d.ws.depth ? 'ok' : 'bad'}">${L('盘口', 'Book')}</span> · <span class="${d.ws.trade ? 'ok' : 'bad'}">${L('成交', 'Trades')}</span>` : '—'],
+      [L('快档决策点', 'Fast-tier ticks'), nf(d.stats?.points)], [L('Jev 费用（估算）', 'Jev cost (estimate)'), `<span title="${esc(L('按接口返回的输入 token × $0.042/百万估算。中断续跑后从续跑时刻重新累计，完整花费以后台账单为准', 'Estimated from input tokens reported by the API × $0.042/M. After a resume the counter restarts from the resume time; the provider bill is authoritative'))}">≈ $${(c.jevUsd || 0).toFixed(3)}</span>`], [L('慢档调用', 'Slow-tier calls'), llm || '—'],
+      ...(st === 'settling' ? [[L('待结算', 'Pending'), L(`快档 ${d.pending?.fast} · 挂单 ${d.pending?.fills} · 慢档 ${d.pending?.slow}`, `fast ${d.pending?.fast} · fills ${d.pending?.fills} · slow ${d.pending?.slow}`)]] : []),
+    ].map(([k, v]) => `<div><div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
+    $('runLog').textContent = (d.log || []).join('\n');
+  } else if (d.mode === 'replay') $('runInfo').innerHTML = `<span class="dim">${L(`正在回放 ${esc(d.run)}，可在「历史」页退出回放`, `Replaying ${esc(d.run)}; exit from the History page`)}</span>`;
+  else $('runInfo').innerHTML = `<span class="dim">${L('尚未开始', 'Not started')}</span>`;
+}
+const runAction = (path, body, confirmText) => async () => {
+  if (confirmText && !confirm(confirmText())) return;
+  try { await api(path, body || {}); flash($('runMsg'), L('已执行', 'Done')); tick(); } catch (e) { flash($('runMsg'), e.message, false); }
+};
+$('bStart').onclick = runAction('/api/run/start', {dry: false});
+$('bDry').onclick = runAction('/api/run/start', {dry: true});
+$('bStop').onclick = runAction('/api/run/stop', {}, () => L('停止产生新决策？已发出的判断会结算完再结束。', 'Stop making new decisions? Outstanding decisions will settle before the run ends.'));
+$('bFinish').onclick = runAction('/api/run/finish', {}, () => L('立即结束？未结算的判断不会计入结果。', 'Finish now? Unsettled decisions will be discarded.'));
+
+// ---------- 设置 ----------
+let cfg = null;
+function llmRow(m) {
+  const div = document.createElement('div'); div.className = 'llm'; div.dataset.id = m.id || '';
+  div.innerHTML = `<input placeholder="${L('显示名称', 'Display name')}" value="${esc(m.name)}" data-f="name"><input placeholder="${L('接口地址，如 https://api.openai.com/v1', 'Base URL, e.g. https://api.openai.com/v1')}" value="${esc(m.baseUrl)}" data-f="baseUrl">` +
+    `<input placeholder="${L('模型名', 'Model')}" value="${esc(m.model)}" data-f="model"><input type="password" autocomplete="off" placeholder="${m.keySet ? L('已保存 ', 'Saved ') + esc(m.keyMasked) : L('API 密钥', 'API key')}" data-f="key">` +
+    `<label class="dim"><input type="checkbox" data-f="enabled" ${m.enabled ? 'checked' : ''}> ${L('启用', 'Enabled')}</label><button data-t="1">${L('测试', 'Test')}</button><button class="danger" data-del="1">${L('删除', 'Remove')}</button>`;
+  div.querySelector('[data-del]').onclick = () => div.remove();
+  div.querySelector('[data-t]').onclick = async () => { if (!div.dataset.id) return flash($('saveMsg'), L('请先保存，再测试这个模型', 'Save first, then test this model'), false); await testConn(div.dataset.id, div.querySelector('[data-t]')); };
+  return div;
+}
+async function loadConfig() {
+  try { cfg = await api('/api/config'); } catch (e) { return; }
+  $('cfgDir').textContent = cfg.configDir;
+  $('kJevNow').textContent = cfg.keys.jev.set ? L('已保存 ', 'Saved ') + cfg.keys.jev.masked : L('未设置', 'Not set');
+  $('kDsNow').textContent = cfg.keys.deepseek.set ? L('已保存 ', 'Saved ') + cfg.keys.deepseek.masked : L('未设置（不设置则没有大模型对照）', 'Not set (no LLM comparison without it)');
+  $('kJev').value = ''; $('kDs').value = '';
+  $('llms').innerHTML = ''; cfg.extraLlms.forEach(m => $('llms').appendChild(llmRow(m)));
+  const r = cfg.run;
+  $('rMin').value = r.minutes; $('rFast').checked = r.fastTier; $('rSlow').checked = r.slowTier; $('rSlowEvery').value = r.slowEverySec;
+  $('rInflight').value = r.slowMaxInflight; $('rJevTo').value = r.jevTimeoutMs; $('rLlmTo').value = r.llmTimeoutMs;
+  $('rFeeM').value = r.feeMakerBps; $('rFeeT').value = r.feeTakerBps; $('rAwake').checked = r.keepAwake;
+}
+$('addLlm').onclick = () => $('llms').appendChild(llmRow({name: '', baseUrl: '', model: '', enabled: true}));
+$('save').onclick = async () => {
+  const llms = [...$('llms').children].map(div => { const g = f => div.querySelector(`[data-f=${f}]`);
+    return {id: div.dataset.id || undefined, name: g('name').value, baseUrl: g('baseUrl').value, model: g('model').value, key: g('key').value, enabled: g('enabled').checked}; });
+  const body = {keys: {jev: $('kJev').value, deepseek: $('kDs').value}, extraLlms: llms, run: {
+    minutes: $('rMin').value, fastTier: $('rFast').checked, slowTier: $('rSlow').checked, slowEverySec: $('rSlowEvery').value,
+    slowMaxInflight: $('rInflight').value, jevTimeoutMs: $('rJevTo').value, llmTimeoutMs: $('rLlmTo').value,
+    feeMakerBps: $('rFeeM').value, feeTakerBps: $('rFeeT').value, keepAwake: $('rAwake').checked}};
+  try { await api('/api/config', body); flash($('saveMsg'), L('已保存。正在运行的任务不受影响，下一次开始时生效', 'Saved. The current run is unaffected; changes apply from the next start')); loadConfig(); } catch (e) { flash($('saveMsg'), e.message, false); }
+};
+async function testConn(target, btn) {
+  const t = btn.innerHTML; btn.disabled = true; btn.textContent = L('测试中…', 'Testing…');
+  try { const r = await api('/api/test', {target}); flash($('saveMsg'), L(`连接成功：${r.model}，${r.ms} ms`, `Connected: ${r.model}, ${r.ms} ms`)); }
+  catch (e) { flash($('saveMsg'), L('连接失败：', 'Connection failed: ') + e.message, false); }
+  finally { btn.disabled = false; btn.innerHTML = t; }
+}
+document.querySelectorAll('[data-test]').forEach(b => b.onclick = () => testConn(b.dataset.test, b));
+
+// ---------- 历史 ----------
+async function loadRuns() {
+  let runs = []; try { runs = await api('/api/runs'); } catch (e) { return; }
+  $('runs').innerHTML = runs.map(r => {
+    const tags = [r.dry && L('试运行', 'dry run'), r.legacy && L('旧版数据', 'legacy'), r.stoppedEarly && L('提前停止', 'stopped early'), r.running && L('运行中', 'running')].filter(Boolean).map(t => `<span class="tag">${t}</span>`).join('');
+    return `<tr><td class="name"><span class="num">${esc(r.id)}</span>${tags}</td><td>${r.started ? new Date(r.started).toLocaleString(LOC(), {hour12: false}) : '—'}</td><td>${r.plannedMinutes ?? '—'} ${L('分钟', 'min')}${r.finishedAt || r.running ? '' : L(' · 未完成', ' · incomplete')}</td><td>${r.sizeMb} MB</td>` +
+      `<td style="text-align:right"><button data-a="replay" data-id="${esc(r.id)}" ${r.running ? 'disabled' : ''}>${L('回放', 'Replay')}</button> <button data-a="analyze" data-id="${esc(r.id)}" ${r.running ? 'disabled' : ''}>${L('重新分析', 'Re-analyse')}</button> <button data-a="results" data-id="${esc(r.id)}" ${r.hasResults ? '' : 'disabled'}>${L('查看结果', 'Results')}</button></td></tr>`;
+  }).join('') || `<tr><td colspan="5" class="dim">${L('暂无记录', 'No runs yet')}</td></tr>`;
+  $('runs').querySelectorAll('button').forEach(b => b.onclick = () => histAction(b.dataset.a, b.dataset.id, b));
+}
+async function histAction(a, id, btn) {
+  try {
+    if (a === 'replay') { await api('/api/replay', {id, speed: $('asLive').checked ? 1 : $('speed').value, fromHours: $('fromH').value, asLive: $('asLive').checked}); show('board'); }
+    if (a === 'analyze') { btn.disabled = true; btn.textContent = L('分析中…', 'Analysing…'); await api('/api/analyze', {id}); flash($('histMsg'), L('分析完成', 'Analysis complete')); await loadRuns(); histAction('results', id); }
+    if (a === 'results') { const r = await api('/api/results?id=' + encodeURIComponent(id)); shownResult = id;
+      $('results').innerHTML = (EN() ? '<p class="note">The analysis report is generated in Chinese for now.</p>' : '') + mdToHtml(r.md); }
+  } catch (e) { flash($('histMsg'), e.message, false); if (btn && a === 'analyze') { btn.disabled = false; btn.textContent = L('重新分析', 'Re-analyse'); } }
+}
+$('stopReplay').onclick = async () => { try { await api('/api/replay/stop', {}); flash($('histMsg'), L('已退出回放', 'Replay stopped')); } catch (e) {} };
+$('refreshRuns').onclick = loadRuns;
+
+function mdToHtml(md) {
+  const inline = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/`(.+?)`/g, '<code>$1</code>');
+  const lines = md.split('\n'), out = [];
+  for (let i = 0; i < lines.length; i++) {
+    const l = lines[i];
+    if (/^\|/.test(l)) {
+      const rows = []; while (i < lines.length && /^\|/.test(lines[i])) rows.push(lines[i++]); i--;
+      const cells = r => r.replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+      out.push('<div class="tablewrap"><table><thead><tr>' + cells(rows[0]).map(c => `<th>${inline(c)}</th>`).join('') + '</tr></thead><tbody>' +
+        rows.slice(2).map(r => '<tr>' + cells(r).map(c => `<td>${inline(c)}</td>`).join('') + '</tr>').join('') + '</tbody></table></div>');
+    } else if (/^### /.test(l)) out.push(`<h3>${inline(l.slice(4))}</h3>`);
+    else if (/^## /.test(l)) out.push(`<h2>${inline(l.slice(3))}</h2>`);
+    else if (/^# /.test(l)) out.push(`<h1>${inline(l.slice(2))}</h1>`);
+    else if (/^- /.test(l)) out.push(`<div>• ${inline(l.slice(2))}</div>`);
+    else if (l.trim()) out.push(`<p>${inline(l)}</p>`);
+  }
+  return out.join('');
+}
+
+
+// ---------- 方法 ----------
+let STRAT = {};
+async function loadStrat() { try { STRAT = await api('/api/strategies'); } catch (e) {} }
+function renderMethod() {
+  const S = STRAT.strategies || {}, fh = (STRAT.fastHorizons || []).join(' / '), sh = (STRAT.slowHorizons || []).map(h => h / 60).join(' / '), f = STRAT.fees || {};
+  $('mData').innerHTML = (EN() ? [
+    'Market data: Binance USDⓈ-M futures public WebSocket. Order book <span class="num">btcusdt@depth20@100ms</span> (20 levels per side every 100 ms); trades <span class="num">btcusdt@aggTrade</span> (price, size, aggressor side). No candles: candles lose resting-order and aggressor information.',
+    `Fast tier: one decision every 300 ms, forecasting the mid ${fh} s ahead. If Jev's previous request has not returned, that tick is skipped (as in the original jev-trader); each request times out after 5 s.`,
+    `Slow tier: every 60 s, LLMs and Jev get the same input (book snapshot + last 30 one-minute candles) and forecast ${sh} min ahead.`,
+    "Jev's input follows jev-trader's TradeState: book (best bid/ask, 20-level imbalance, cumulative size over the best 1 / 5 / 20 levels, top-5 detail, 3 s order flow imbalance), trades (30 s aggressive buy/sell volume and difference, VWAP, last 8 trades) and the price path. The prompt describes every field and states that no field is more important than another; it also says truthfully that the answer becomes a resting quote, and asks only for direction.",
+    'All timestamps are local receive time, so exchange/local clock skew cannot affect fill decisions.',
+  ] : [
+    '行情：币安 USDⓈ-M 合约公开 WebSocket。盘口 <span class="num">btcusdt@depth20@100ms</span>（每 100 ms 推送买卖各 20 档）；逐笔 <span class="num">btcusdt@aggTrade</span>（成交价、量、主动方向）。不使用 K 线：K 线丢失挂单和主动方向信息。',
+    `快档：每 300 ms 一个决策点，预测 ${fh} 秒后中间价涨跌。Jev 上一请求未返回时，该决策点跳过（与 jev-trader 原版一致），每次请求 5 秒超时。`,
+    `慢档：每 60 秒一轮，大模型与 Jev 使用同一份输入（盘口快照 + 最近 30 根 1 分钟 K 线），预测 ${sh} 分钟后涨跌。`,
+    'Jev 的输入结构沿用 jev-trader 的 TradeState：盘口（买一卖一、20 档失衡、前 1 / 5 / 20 档累计挂单量、前 5 档明细、3 秒订单流不平衡）、成交（30 秒主动买卖量与差值、成交均价、最近 8 笔）、价格路径。提示词逐一说明每个字段的含义，明确写明不指定哪个字段更重要；并如实说明判断会转为挂单，只问方向。',
+    '所有时间以本机接收时刻为准，避免交易所时钟与本机时钟偏差影响成交判定。',
+  ]).map(x => `<li>${x}</li>`).join('');
+  const groupOrder = {订单簿: 1, 成交流: 2, 价格: 3, 基准: 4};
+  const rows = Object.entries(S).sort((a, b) => (groupOrder[a[1].group] || 9) - (groupOrder[b[1].group] || 9));
+  $('mStrat').innerHTML = (EN()
+    ? `<tr class="hl"><td class="num">Jev</td><td>Jev (TypeSafe System One)</td><td>Model under test</td><td>Reads the book-state JSON and outputs an up-probability for each horizon</td><td>A fast classification model that answers multiple-choice questions without generating text</td><td>typesafe.ai</td></tr>`
+    : `<tr class="hl"><td class="num">Jev</td><td>Jev（TypeSafe System One）</td><td>被测模型</td><td>读取盘口状态 JSON，输出各时长的上涨概率</td><td>只做选择题、不生成文本的快速判断模型</td><td>typesafe.ai</td></tr>`) +
+    rows.map(([k]) => { const m = stratOf(k); return `<tr><td class="num">${esc(m.abbr)}</td><td>${esc(m.name)}${EN() ? '' : `<div class="dim" style="font-size:11px">${esc(m.en)}</div>`}</td><td>${esc(m.group)}</td><td>${esc(m.formula)}</td><td>${esc(m.why)}</td><td class="dim">${esc(m.ref)}</td></tr>`; }).join('');
+  $('mExec').innerHTML = (EN() ? [
+    "Maker simulation: a bullish call rests at the best bid, a bearish call at the best ask, until that player's next decision (rules update every 300 ms; Jev updates when each answer arrives, and a quote not refreshed within 5 s is cancelled).",
+    'Fills are bounded two ways: <b>optimistic</b> — any trade at the quote price counts as a fill; <b>conservative</b> — price must trade through the quote.',
+    '<b>30 s markout</b>: the fill valued at mid 30 s later (bps). Negative means adverse selection: the quote got filled just as price moved against it. The random baseline\'s markout is the passive-fill cost with no view.',
+    '<b>Cumulative P&amp;L</b>: each player holds 1 unit in its current direction (long if bullish, short if bearish), marked to mid tick by tick; Jev switches only when its answer arrives. Taker fees can be toggled on (each reversal pays close + open).',
+    `Fees: Binance USDⓈ-M VIP0 maker ${f.makerBps ?? 2} bps / side, taker ${f.takerBps ?? 5} bps / side. BTC moves only a few bps in 30 s on average (2.2 bps in our 24 h run), so at standard fees no directional call covers costs; the main comparison is therefore signal quality at zero cost.`,
+  ] : [
+    '挂单模拟：看涨挂于买一、看跌挂于卖一，持续到该选手下一次决策（规则每 300 ms 更新；Jev 每次响应返回时更新，超过 5 秒未更新自动撤单）。',
+    '成交判定给两个边界：<b>乐观</b>——该价位出现成交即视为成交；<b>保守</b>——价格穿越该价位才视为成交。',
+    '<b>30 秒 markout</b>：成交后 30 秒按中间价估值（bps）。负值表示逆向选择：挂单被成交时，价格正朝不利方向运动。随机基准的 markout 即不带判断时的被动成交成本。',
+    '<b>累计收益</b>：每位选手按当前判断持有 1 个单位（看涨持多、看跌持空），按中间价逐点累计；Jev 在响应返回时刻才换仓。可切换扣除吃单手续费（每次换向计平仓 + 开仓两次）。',
+    `手续费：币安 USDⓈ-M VIP0 挂单 ${f.makerBps ?? 2} bps / 边、吃单 ${f.takerBps ?? 5} bps / 边。BTC 30 秒平均只波动几个 bps（正式场 24 小时实测 2.2 bps），普通费率下任何方向判断都难以覆盖成本，因此主结论比较零成本下的判断质量。`,
+  ]).map(x => `<li>${x}</li>`).join('');
+}
+
+// ---------- 轮询 ----------
+async function tick() { try { render(await api('/api/live')); } catch (e) { $('dot').className = 'dot'; $('stateText').textContent = L('服务未连接', 'Server offline'); } }
+eqSub();
+loadStrat().then(() => { show(page); tick(); setInterval(tick, 1000); });
+addEventListener('resize', () => last && page === 'board' && (drawQuotes(last), drawEquity(last)));
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "jev-hft-bench",
+  "version": "0.2.0",
+  "description": "Jev 中高频测试台：币安 BTCUSDT 盘口每 300ms 问一次 Jev，跟八条经典超短线规则、抛硬币、大模型同场比。只读行情、只模拟。",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server.mjs",
+    "analyze": "node analyze.mjs"
+  },
+  "license": "MIT"
+}

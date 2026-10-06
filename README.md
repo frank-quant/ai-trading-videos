@@ -18,6 +18,7 @@
 | EP005 | [用 GLM-5.3 搭 A 股投研工作流](EP005_glm53-tradingagents-workflow/) | 给多 Agent 交易框架补四个模块,每天早上自动推手机 | 提示词 + 复现步骤 + 报告样本 · 插件另开仓库 [studio](https://github.com/frank-quant/TradingAgents-CN-studio) | [B站](https://www.bilibili.com/video/BV1kHbY6MEmF/) · [YouTube](https://youtu.be/hc3jkzYEwXo) |
 | EP006 | [AI 量化信源清单](EP006_ai-quant-sources/) | 我每天实际点开的东西:网站论坛 / 论文 / 开源项目 / newsletter | 清单 | [B站](https://www.bilibili.com/video/BV1QWhc6eEnW) · [YouTube](https://youtu.be/ar5Z2yffHx8) |
 | EP007 | [14 个大模型同一道量化题](EP007_fourteen-llm-quant-benchmark/) | 同题同数据,14 个模型写量化策略,扔进跌 45% 的样本外年份 | 题目 + 14 个模型的交付物 + 审计脚本 + 完整结果 | [B站](https://www.bilibili.com/video/BV1ijYB6QE1Y/) · [YouTube](https://youtu.be/5wEQiwCwGY0) |
+| EP009 | [Jev 做中高频交易靠不靠谱](EP009_jev-mid-frequency-benchmark/) | 每 0.3 秒问一次 Jev 涨跌,跟 8 条中高频策略、DeepSeek、抛硬币在币安 BTC 上比 24 小时 | 测试台代码(网页操作) + 完整结果 + 补算脚本 | 即将发布 |
 
 ## 每期目录里有什么
 
@@ -43,6 +44,7 @@
 | EP005 | 无代码(插件在 [studio](https://github.com/frank-quant/TradingAgents-CN-studio) 仓库) | — | — | [RUNBOOK](EP005_glm53-tradingagents-workflow/RUNBOOK.md) |
 | EP006 | 无代码(信源清单) | — | — | — |
 | EP007 | 脚手架 + 14 个模型的策略 + 16 个审计脚本 | 容器 / 宿主机 | 容器 + [`requirements.txt`](EP007_fourteen-llm-quant-benchmark/requirements.txt) | [RUNBOOK](EP007_fourteen-llm-quant-benchmark/RUNBOOK.md) |
+| EP009 | 测试台(Node 网页服务 + 引擎 + 分析) + 2 个补算脚本 | 宿主机 | Node.js ≥ 22,零依赖 | [README](EP009_jev-mid-frequency-benchmark/) |
 
 宿主机那部分(EP004 / EP007):
 

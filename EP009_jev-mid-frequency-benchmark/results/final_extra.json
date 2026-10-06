@@ -1,0 +1,449 @@
+{
+ "n": 279257,
+ "jevAnswered": 136715,
+ "hours": 23.99,
+ "decay": {
+  "0.6s": {
+   "jev": {
+    "hit": 69,
+    "n": 28113,
+    "rankIC": 0.189
+   },
+   "obi1": {
+    "hit": 81.7,
+    "n": 21231,
+    "rankIC": 0.247
+   },
+   "obi20": {
+    "hit": 80,
+    "n": 21231,
+    "rankIC": 0.228
+   },
+   "mock": {
+    "hit": 74.4,
+    "n": 21231,
+    "rankIC": 0.153
+   }
+  },
+  "1s": {
+   "jev": {
+    "hit": 68.3,
+    "n": 34118,
+    "rankIC": 0.203
+   },
+   "obi1": {
+    "hit": 77.2,
+    "n": 34067,
+    "rankIC": 0.294
+   },
+   "obi20": {
+    "hit": 75.9,
+    "n": 34067,
+    "rankIC": 0.275
+   },
+   "mock": {
+    "hit": 70.6,
+    "n": 34067,
+    "rankIC": 0.191
+   }
+  },
+  "2s": {
+   "jev": {
+    "hit": 66.6,
+    "n": 48320,
+    "rankIC": 0.224
+   },
+   "obi1": {
+    "hit": 73.6,
+    "n": 48152,
+    "rankIC": 0.319
+   },
+   "obi20": {
+    "hit": 72.5,
+    "n": 48152,
+    "rankIC": 0.302
+   },
+   "mock": {
+    "hit": 67.7,
+    "n": 48152,
+    "rankIC": 0.214
+   }
+  },
+  "3s": {
+   "jev": {
+    "hit": 65.1,
+    "n": 59745,
+    "rankIC": 0.228
+   },
+   "obi1": {
+    "hit": 71.2,
+    "n": 58664,
+    "rankIC": 0.322
+   },
+   "obi20": {
+    "hit": 70.2,
+    "n": 58664,
+    "rankIC": 0.307
+   },
+   "mock": {
+    "hit": 65.7,
+    "n": 58664,
+    "rankIC": 0.221
+   }
+  },
+  "5s": {
+   "jev": {
+    "hit": 62.1,
+    "n": 75603,
+    "rankIC": 0.213
+   },
+   "obi1": {
+    "hit": 67.7,
+    "n": 75559,
+    "rankIC": 0.307
+   },
+   "obi20": {
+    "hit": 66.8,
+    "n": 75559,
+    "rankIC": 0.294
+   },
+   "mock": {
+    "hit": 62.9,
+    "n": 75559,
+    "rankIC": 0.213
+   }
+  },
+  "10s": {
+   "jev": {
+    "hit": 59.2,
+    "n": 96902,
+    "rankIC": 0.174
+   },
+   "obi1": {
+    "hit": 63.2,
+    "n": 96790,
+    "rankIC": 0.249
+   },
+   "obi20": {
+    "hit": 62.5,
+    "n": 96790,
+    "rankIC": 0.242
+   },
+   "mock": {
+    "hit": 59.3,
+    "n": 96790,
+    "rankIC": 0.177
+   }
+  },
+  "30s": {
+   "jev": {
+    "hit": 54.7,
+    "n": 122805,
+    "rankIC": 0.108
+   },
+   "obi1": {
+    "hit": 58.1,
+    "n": 122777,
+    "rankIC": 0.159
+   },
+   "obi20": {
+    "hit": 57.7,
+    "n": 122777,
+    "rankIC": 0.154
+   },
+   "mock": {
+    "hit": 55.4,
+    "n": 122777,
+    "rankIC": 0.119
+   }
+  },
+  "60s": {
+   "jev": {
+    "hit": 54.4,
+    "n": 130489,
+    "rankIC": 0.097
+   },
+   "obi1": {
+    "hit": 56.6,
+    "n": 130453,
+    "rankIC": 0.125
+   },
+   "obi20": {
+    "hit": 56,
+    "n": 130453,
+    "rankIC": 0.119
+   },
+   "mock": {
+    "hit": 54.6,
+    "n": 130453,
+    "rankIC": 0.102
+   }
+  }
+ },
+ "agree": {
+  "obi1": 77.3,
+  "ofi": 68.9,
+  "obi20": 77.7,
+  "cvd": 78.6,
+  "mom5": 59.7,
+  "rev20": 33.2,
+  "vwap": 25.9,
+  "mock": 87.4,
+  "coin": 50
+ },
+ "conflictFollowTFI": {
+  "obi1": {
+   "n": 56000,
+   "pct": 51.6
+  },
+  "obi20": {
+   "n": 56707,
+   "pct": 51.1
+  },
+  "ofi": {
+   "n": 62293,
+   "pct": 60.7
+  }
+ },
+ "disagreeQI_3s": {
+  "n": 8447,
+  "jevRight": 37.6,
+  "qiRight": 62.4
+ },
+ "disagreeQI_30s": {
+  "n": 27407,
+  "jevRight": 43.3,
+  "qiRight": 56.7
+ },
+ "equity": {
+  "obi1": {
+   "every": {
+    "pnlBps": 11324,
+    "flips": 19986,
+    "perFlipBps": 0.567
+   },
+   "jevTicks": {
+    "pnlBps": 9253,
+    "flips": 15112,
+    "perFlipBps": 0.612
+   },
+   "jevTicksDelayed": {
+    "pnlBps": 5045,
+    "flips": 15112,
+    "perFlipBps": 0.334
+   }
+  },
+  "obi20": {
+   "every": {
+    "pnlBps": 10941,
+    "flips": 19433,
+    "perFlipBps": 0.563
+   },
+   "jevTicks": {
+    "pnlBps": 8858,
+    "flips": 14677,
+    "perFlipBps": 0.604
+   },
+   "jevTicksDelayed": {
+    "pnlBps": 4963,
+    "flips": 14677,
+    "perFlipBps": 0.338
+   }
+  },
+  "mock": {
+   "every": {
+    "pnlBps": 8881,
+    "flips": 15409,
+    "perFlipBps": 0.576
+   },
+   "jevTicks": {
+    "pnlBps": 7043,
+    "flips": 11591,
+    "perFlipBps": 0.608
+   },
+   "jevTicksDelayed": {
+    "pnlBps": 3710,
+    "flips": 11590,
+    "perFlipBps": 0.32
+   }
+  },
+  "ofi": {
+   "every": {
+    "pnlBps": 6917,
+    "flips": 36711,
+    "perFlipBps": 0.188
+   },
+   "jevTicks": {
+    "pnlBps": 5754,
+    "flips": 26989,
+    "perFlipBps": 0.213
+   },
+   "jevTicksDelayed": {
+    "pnlBps": 3419,
+    "flips": 26989,
+    "perFlipBps": 0.127
+   }
+  },
+  "cvd": {
+   "every": {
+    "pnlBps": 1537,
+    "flips": 3949,
+    "perFlipBps": 0.389
+   },
+   "jevTicks": {
+    "pnlBps": 1228,
+    "flips": 3621,
+    "perFlipBps": 0.339
+   },
+   "jevTicksDelayed": {
+    "pnlBps": 797,
+    "flips": 3620,
+    "perFlipBps": 0.22
+   }
+  },
+  "coin": {
+   "every": {
+    "pnlBps": -26,
+    "flips": 139717,
+    "perFlipBps": 0
+   },
+   "jevTicks": {
+    "pnlBps": -55,
+    "flips": 68707,
+    "perFlipBps": -0.001
+   },
+   "jevTicksDelayed": {
+    "pnlBps": 56,
+    "flips": 68706,
+    "perFlipBps": 0.001
+   }
+  },
+  "jev": {
+   "jevTicks": {
+    "pnlBps": 6220,
+    "flips": 14745,
+    "perFlipBps": 0.422
+   },
+   "real": {
+    "pnlBps": 3391,
+    "flips": 14745,
+    "perFlipBps": 0.23
+   }
+  }
+ },
+ "probQuality": {
+  "n": 122821,
+  "brier": 0.354,
+  "brierAlways50": 0.25,
+  "brierClimatology": 0.2498,
+  "logLoss": 1.225,
+  "logLossAlways50": 0.693,
+  "auc": 0.573,
+  "shareOver90": 53.7
+ },
+ "volRegime": {
+  "cutBps": [
+   1.16,
+   2.31
+  ],
+  "high3": {
+   "jev": 60.2,
+   "qi": 66.7,
+   "coin": 50.2,
+   "n": 30039
+  },
+  "high30": {
+   "jev": 51.5,
+   "qi": 55.2,
+   "coin": 50.5,
+   "n": 44805
+  },
+  "mid3": {
+   "jev": 69.9,
+   "qi": 76.8,
+   "coin": 50.3,
+   "n": 16647
+  },
+  "mid30": {
+   "jev": 55.1,
+   "qi": 58.2,
+   "coin": 50,
+   "n": 42054
+  },
+  "low3": {
+   "jev": 73.6,
+   "qi": 80.1,
+   "coin": 50.2,
+   "n": 10026
+  },
+  "low30": {
+   "jev": 58.2,
+   "qi": 61.6,
+   "coin": 49.9,
+   "n": 35900
+  }
+ },
+ "fillConditional": {
+  "jev": {
+   "filled": {
+    "n": 7909,
+    "hit": 38.7
+   },
+   "unfilled": {
+    "n": 114912,
+    "hit": 55.8
+   }
+  },
+  "obi1": {
+   "filled": {
+    "n": 5679,
+    "hit": 44.7
+   },
+   "unfilled": {
+    "n": 245510,
+    "hit": 58.3
+   }
+  },
+  "coin": {
+   "filled": {
+    "n": 13892,
+    "hit": 38
+   },
+   "unfilled": {
+    "n": 237297,
+    "hit": 50.9
+   }
+  }
+ },
+ "feeWall": {
+  "10s": {
+   "avgAbsBps": 1.13,
+   "makerNeed": "不可能",
+   "takerNeed": "不可能"
+  },
+  "30s": {
+   "avgAbsBps": 2.24,
+   "makerNeed": "不可能",
+   "takerNeed": "不可能"
+  },
+  "60s": {
+   "avgAbsBps": 3.3,
+   "makerNeed": "不可能",
+   "takerNeed": "不可能"
+  },
+  "300s": {
+   "avgAbsBps": 7.86,
+   "makerNeed": 75.5,
+   "takerNeed": "不可能"
+  },
+  "900s": {
+   "avgAbsBps": 13.44,
+   "makerNeed": 64.9,
+   "takerNeed": 87.2
+  }
+ },
+ "upBias": {
+  "jevUp": 41.1,
+  "marketUp": 51.4
+ }
+}

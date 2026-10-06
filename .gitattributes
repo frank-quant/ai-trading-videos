@@ -10,3 +10,6 @@ EP005_glm53-tradingagents-workflow/report/*.html linguist-generated=true
 
 # EP004 的 PDF 评测报告按文档处理
 *.pdf linguist-documentation=true
+
+# EP009 的网页是手写的前端代码,不是导出的报告,计入语言统计
+EP009_jev-mid-frequency-benchmark/jev-hft-bench/web/index.html -linguist-documentation
