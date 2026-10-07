@@ -1,6 +1,6 @@
 # EP009 · Jev 做中高频交易靠不靠谱
 
-📺 看视频：[B站](https://www.bilibili.com/video/BV1FApP6TE2Y/) · YouTube（待发布）
+📺 看视频：[B站](https://www.bilibili.com/video/BV1FApP6TE2Y/) · [YouTube](https://youtu.be/UU-1z_Se4LU)
 
 [Jev](https://typesafe.ai) 是 TypeSafe 发布的决策模型（官方叫 System One 模型）：不写文字，只做选择题，直接给出选项和概率，官方称一次 70–500 毫秒。
 发布第二天，Monad 的工程师开源了 [jev-trader](https://github.com/jarrodwatts/jev-trader)，每 0.3 秒问一次 Jev「接下来 30 秒涨还是跌」，然后自动挂单。
