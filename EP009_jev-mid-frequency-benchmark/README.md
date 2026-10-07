@@ -1,6 +1,6 @@
 # EP009 · Jev 做中高频交易靠不靠谱
 
-📺 看视频：B站 · YouTube（发布后补链接）
+📺 看视频：[B站](https://www.bilibili.com/video/BV1FApP6TE2Y/) · YouTube（待发布）
 
 [Jev](https://typesafe.ai) 是 TypeSafe 发布的决策模型（官方叫 System One 模型）：不写文字，只做选择题，直接给出选项和概率，官方称一次 70–500 毫秒。
 发布第二天，Monad 的工程师开源了 [jev-trader](https://github.com/jarrodwatts/jev-trader)，每 0.3 秒问一次 Jev「接下来 30 秒涨还是跌」，然后自动挂单。
@@ -48,6 +48,8 @@
 24 小时花费：Jev 13.8 万次调用 $15.86，DeepSeek 1,410 次 ¥159.5（按两家账单）。
 
 ### 开跑前写死的四条标准：过 2 条
+
+视频里没有展开这一段。这是测试台自带的判定：四条标准在开跑前写进代码，跑完自动出结论。
 
 | # | 标准 | 结果 |
 |---|---|---|
