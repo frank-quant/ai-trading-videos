@@ -1,0 +1,47 @@
+{
+  "search": [
+    "20140101",
+    "20221231"
+  ],
+  "validation": [
+    "20230101",
+    "20241231"
+  ],
+  "test": [
+    "20250101",
+    "20260930"
+  ],
+  "data_cutoff": "20260930",
+  "rounds_per_agent": 6,
+  "candidates_per_round": [
+    100,
+    150
+  ],
+  "main_random_seed": 43,
+  "farm_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "random_count_policy": "match_actual_A_base_configuration_count",
+  "workers_initial": 2,
+  "workers_policy": "measure_available_memory_before_increasing",
+  "note": "配置记录；阈值与交易定义以rules.md为准，不是自动调度器。"
+}

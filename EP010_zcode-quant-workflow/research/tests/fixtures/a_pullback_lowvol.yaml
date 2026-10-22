@@ -1,0 +1,22 @@
+# 示例2（规则型）：低波动趋势中回调买入
+# 语义：中长期趋势向上（60日均线之上、距120日高点不深）、短期回调后企稳（3连阳）
+#       且波动率低的股票；持有5日或跌破60日线/止损5%卖出。
+name: a_pullback_lowvol
+type: rule
+desc: 低波动+趋势上方回调企稳买入，持有上限5日，止损5%
+
+buy:
+  - {op: close_over_ma_n, n: 60, dir: above, threshold: 1.0}    # 收盘在60日均线上方
+  - {op: dist_high_n,     n: 120, dir: above, threshold: -10.0} # 距120日高点不深于-10%
+  - {op: vol_n,           n: 20,  dir: below, threshold: 3.0}   # 20日波动率<3%（低波）
+  - {op: streak_up,       dir: above, threshold: 3}             # 连涨3天（企稳确认）
+
+rank: {op: vol_n, n: 20, order: asc}    # 波动最低的优先
+
+sell:
+  - {op: close_over_ma_n, n: 60, dir: below, threshold: 1.0}    # 跌破60日均线
+  - {op: dist_low_n,      n: 20,  dir: below, threshold: 2.0}   # 接近20日低点（2%以内）
+
+max_hold_days: 5
+stop_loss: 5%
+max_positions: 10

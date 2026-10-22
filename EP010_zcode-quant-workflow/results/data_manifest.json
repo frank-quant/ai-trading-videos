@@ -1,0 +1,330 @@
+{
+  "generated_at": "2026-10-07T19:29:08",
+  "split_date": "2024-12-31",
+  "fetch_window": {
+    "start": "20130101",
+    "end": "20261007"
+  },
+  "notes": [
+    "sealed 侧文件全部在内存中拼装并计算 SHA256 后一次性落盘，落盘后未读回、未打印；",
+    "其 rows / date_min / date_max / sha256 均为写入前在内存中的计算值。",
+    "stock_basic 为静态参考表（无日期列），全部落 data/raw/。",
+    "hk_hold 明细数据源自 2016-08-01 起（Tushare 无更早明细，2014-11~2016-07 只有 moneyflow_hsgt 整体资金流）；文件内含 exchange=SH/SZ/HK 三类记录。",
+    "moneyflow_hsgt 按年区间抓取；单次返回达 4200 行的接口调用用 offset 翻页补齐（hk_hold、margin_detail 等按日接口）。",
+    "top_list / top_inst 接口本身不提供 ann_date 字段，落盘仅有 trade_date（T 日盘后披露）。",
+    "fund_adj（ETF 复权因子）数据源自 2016-01-19 起，之前的交易日无复权因子。"
+  ],
+  "files": {
+    "raw/trade_cal.parquet": {
+      "api": "trade_cal",
+      "rows": 4383,
+      "sha256": "7dcd6bd1fb7a86632d9872367557b6574c67d7fbd93a2d1c79bbf321ef4e3916",
+      "units": 1,
+      "date_min": "20130101",
+      "date_max": "20241231"
+    },
+    "sealed/trade_cal.parquet": {
+      "api": "trade_cal",
+      "rows": 730,
+      "sha256": "9d53f6c17910af168945996211870ad3741b75efb54fbe4cbf90cc897d15a2c6",
+      "units": 1,
+      "date_min": "20250101",
+      "date_max": "20261231"
+    },
+    "raw/stock_basic.parquet": {
+      "api": "stock_basic",
+      "rows": 5911,
+      "sha256": "6140b6758dba7fe1da314c0213d5a8684218f8eb94e0ab7053ff9cfac52f2849",
+      "units": 3
+    },
+    "raw/index_members.parquet": {
+      "api": "index_weight",
+      "rows": 229400,
+      "sha256": "018ecc276e548bf220b610cecb0ef9730b53513d2cb7f044cf4ce04b5e8181a2",
+      "units": 462,
+      "date_min": "20131231",
+      "date_max": "20241231"
+    },
+    "sealed/index_members.parquet": {
+      "api": "index_weight",
+      "rows": 37800,
+      "sha256": "38363b3aee60edc8a8c12d1f0fbf1b912fcd3655d15c9ea800a01799153722ce",
+      "units": 462,
+      "date_min": "20250127",
+      "date_max": "20260930"
+    },
+    "raw/daily.parquet": {
+      "api": "daily",
+      "rows": 7811595,
+      "sha256": "5f18910df9ff4c70050f1f9d192ae43031c6165624725f6e9789307555807567",
+      "units": 3501,
+      "date_min": "20130104",
+      "date_max": "20241231"
+    },
+    "sealed/daily.parquet": {
+      "api": "daily",
+      "rows": 1398950,
+      "sha256": "a08658b5837578f361ee6c0d59ef8d1b0ce17638b371347ba08411413303dbca",
+      "units": 3501,
+      "date_min": "20250102",
+      "date_max": "20260930"
+    },
+    "raw/adj_factor.parquet": {
+      "api": "adj_factor",
+      "rows": 8111434,
+      "sha256": "75f2707c14df5962856dcd16d28dbfdffd4a5decf7c8d4ae21a4da55e4086163",
+      "units": 3501,
+      "date_min": "20130104",
+      "date_max": "20241231"
+    },
+    "sealed/adj_factor.parquet": {
+      "api": "adj_factor",
+      "rows": 1405732,
+      "sha256": "453255d5fe7a1f084f9cff95ba6a59b97831d19bdf73c50041bf9a6954fd12f7",
+      "units": 3501,
+      "date_min": "20250102",
+      "date_max": "20260930"
+    },
+    "raw/daily_basic.parquet": {
+      "api": "daily_basic",
+      "rows": 7811602,
+      "sha256": "82a85094ffb008af621833942a929eeed1afc493b0e3cddab2dac4c7faa88fe9",
+      "units": 3501,
+      "date_min": "20130104",
+      "date_max": "20241231"
+    },
+    "sealed/daily_basic.parquet": {
+      "api": "daily_basic",
+      "rows": 1398950,
+      "sha256": "55916c77a409a25e8879021d4ac1be9408fc8cdda687e525a43ce7912b72c615",
+      "units": 3501,
+      "date_min": "20250102",
+      "date_max": "20260930"
+    },
+    "raw/stk_limit.parquet": {
+      "api": "stk_limit",
+      "rows": 8090134,
+      "sha256": "afa89f9617a5af38932ecf0d2c09211b180a89fb3c13dc98ef93155795b5d7da",
+      "units": 3501,
+      "date_min": "20130104",
+      "date_max": "20241231"
+    },
+    "sealed/stk_limit.parquet": {
+      "api": "stk_limit",
+      "rows": 1401931,
+      "sha256": "6001dd9dbdab432fe95f8c797526b06134af7960af80665667e6e79fb12a9d67",
+      "units": 3501,
+      "date_min": "20250102",
+      "date_max": "20260930"
+    },
+    "raw/suspend_d.parquet": {
+      "api": "suspend_d",
+      "rows": 292126,
+      "sha256": "423e3b0bf6971f8fa28a4cabc85d686b5da8340c9f074976a8527a9bc0b9b387",
+      "units": 3501,
+      "date_min": "20130104",
+      "date_max": "20241231"
+    },
+    "sealed/suspend_d.parquet": {
+      "api": "suspend_d",
+      "rows": 3569,
+      "sha256": "c2bcec450436b06e17173c175c6dc32338d07133b703b820f1be1f1a97a96a2e",
+      "units": 3501,
+      "date_min": "20250102",
+      "date_max": "20260930"
+    },
+    "raw/namechange.parquet": {
+      "api": "namechange",
+      "rows": 5668,
+      "sha256": "d63a053d3bffd5d7661fce3cb7b01644af02d5ba320ab7df131cb85a3db8fafd",
+      "units": 3501,
+      "date_min": "19901219",
+      "date_max": "20241231"
+    },
+    "sealed/namechange.parquet": {
+      "api": "namechange",
+      "rows": 430,
+      "sha256": "7966ad7577d598180e1c18aca47969f2497ead1b7e8426ccef0fba16ee2b2a31",
+      "units": 3501,
+      "date_min": "20250103",
+      "date_max": "20260929"
+    },
+    "raw/fina_indicator.parquet": {
+      "api": "fina_indicator",
+      "rows": 170619,
+      "sha256": "fe632fcff7e9c86ba7952dbd4cdb1ef3e0fcc51fe222306fe435b6a7dce932fc",
+      "units": 3501,
+      "date_min": "20130108",
+      "date_max": "20241231"
+    },
+    "sealed/fina_indicator.parquet": {
+      "api": "fina_indicator",
+      "rows": 30695,
+      "sha256": "6d31f7c78f4ba143143ae2ebc69ad1ad2eb485e68171002044a6ed679bb53277",
+      "units": 3501,
+      "date_min": "20250102",
+      "date_max": "20260930"
+    },
+    "raw/forecast.parquet": {
+      "api": "forecast",
+      "rows": 66820,
+      "sha256": "0e3c75c6dc9a23b25d587e801ee531bd894104234d0e260b14faa8837ba22dba",
+      "units": 3501,
+      "date_min": "20130101",
+      "date_max": "20241225"
+    },
+    "sealed/forecast.parquet": {
+      "api": "forecast",
+      "rows": 6549,
+      "sha256": "0a95918f9ad80ec01a7784305e861522ee33a7d60921575e70726d25214d5f95",
+      "units": 3501,
+      "date_min": "20250102",
+      "date_max": "20260929"
+    },
+    "raw/express.parquet": {
+      "api": "express",
+      "rows": 16185,
+      "sha256": "5580325ef2c29a609f18a242490d3990460fa41d4575b61bfd6de43351225ce8",
+      "units": 3501,
+      "date_min": "20130105",
+      "date_max": "20241029"
+    },
+    "sealed/express.parquet": {
+      "api": "express",
+      "rows": 1172,
+      "sha256": "3a53d7049a5fe2795eff2feda46cf9619e948118d91edb5b741ed26349abbdc0",
+      "units": 3501,
+      "date_min": "20250108",
+      "date_max": "20260824"
+    },
+    "raw/index_member_all.parquet": {
+      "api": "index_member_all",
+      "rows": 3399,
+      "sha256": "4f83135dd7b371097b634a31cb08998764673eddaf00ea37474889a4d8dabe6e",
+      "units": 3501,
+      "date_min": "19891101",
+      "date_max": "20241220"
+    },
+    "sealed/index_member_all.parquet": {
+      "api": "index_member_all",
+      "rows": 102,
+      "sha256": "18e6508026f22bf6552d8415cf8c5417c911a7cb36e516db2f77e8b9bce91d06",
+      "units": 3501,
+      "date_min": "20250103",
+      "date_max": "20260821"
+    },
+    "raw/top_list.parquet": {
+      "api": "top_list",
+      "rows": 176115,
+      "sha256": "e79cb268f620ef775a613de364e65cdd32d635d31d9276676162d2be6f8c8551",
+      "units": 3100,
+      "date_min": "20140102",
+      "date_max": "20241231"
+    },
+    "sealed/top_list.parquet": {
+      "api": "top_list",
+      "rows": 32773,
+      "sha256": "44917ee9871a32213e15fb4a5fe259658df827b38c11b61a8bb6898ba44a2add",
+      "units": 3100,
+      "date_min": "20250102",
+      "date_max": "20260930"
+    },
+    "raw/top_inst.parquet": {
+      "api": "top_inst",
+      "rows": 2144013,
+      "sha256": "e41a9c49a5f99b22176eea83c8b046600316511c8d4690291909f79fda9bc7bf",
+      "units": 3100,
+      "date_min": "20140102",
+      "date_max": "20241231"
+    },
+    "sealed/top_inst.parquet": {
+      "api": "top_inst",
+      "rows": 351430,
+      "sha256": "670d14ceb76c50961f7348d7da2792b61737ed97b53f67391c85e2bf8aff520b",
+      "units": 3100,
+      "date_min": "20250102",
+      "date_max": "20260930"
+    },
+    "raw/margin_detail.parquet": {
+      "api": "margin_detail",
+      "rows": 4846030,
+      "sha256": "07178507ea1e5f37fad635919e1c874be006ed1cdb684cce342909dd0a36a18d",
+      "units": 3100,
+      "date_min": "20140102",
+      "date_max": "20241231"
+    },
+    "sealed/margin_detail.parquet": {
+      "api": "margin_detail",
+      "rows": 1794675,
+      "sha256": "29b75f64a8fc79c3d8b9339fa3f9f29aade7b549f040f8f87ae5583e30a0a948",
+      "units": 3100,
+      "date_min": "20250102",
+      "date_max": "20260930"
+    },
+    "raw/hk_hold.parquet": {
+      "api": "hk_hold",
+      "rows": 5379298,
+      "sha256": "46ea0f987782536f1cfb252a4ae6661be29314ed099c28c857c4c97fe1fdf2e1",
+      "units": 2491,
+      "date_min": "20160704",
+      "date_max": "20241231"
+    },
+    "sealed/hk_hold.parquet": {
+      "api": "hk_hold",
+      "rows": 380435,
+      "sha256": "5162fa904bb70dc037870e8f45aa212fe1775d823aece8ad2d59f2cefcb54117",
+      "units": 2491,
+      "date_min": "20250102",
+      "date_max": "20260930"
+    },
+    "raw/moneyflow_hsgt.parquet": {
+      "api": "moneyflow_hsgt",
+      "rows": 2384,
+      "sha256": "9e55540496fd28710e58eca73d7dee29792245b5a69bfe5905fb8e3106b53da7",
+      "units": 13,
+      "date_min": "20141117",
+      "date_max": "20241231"
+    },
+    "sealed/moneyflow_hsgt.parquet": {
+      "api": "moneyflow_hsgt",
+      "rows": 414,
+      "sha256": "63fa9c9fe05e35c0706014ec1d4df340fdcac8c6407edf99970c24c3c4fde51a",
+      "units": 13,
+      "date_min": "20250102",
+      "date_max": "20260930"
+    },
+    "raw/fund_daily.parquet": {
+      "api": "fund_daily",
+      "rows": 11425,
+      "sha256": "794ed891e38327f5c5b13facc179b55c69b056f2a59f3f07d0a9623e4f27d1f3",
+      "units": 4,
+      "date_min": "20130104",
+      "date_max": "20241231"
+    },
+    "sealed/fund_daily.parquet": {
+      "api": "fund_daily",
+      "rows": 1696,
+      "sha256": "be833406cd21db4154c5cd8a2417b78ed3945ac72b24da6e36fa4aa3a8228762",
+      "units": 4,
+      "date_min": "20250102",
+      "date_max": "20260930"
+    },
+    "raw/fund_adj.parquet": {
+      "api": "fund_adj",
+      "rows": 8704,
+      "sha256": "40512944f7aba24a183de241a57a68cf0e0e1774e1b47f820c1538be3e391e69",
+      "units": 4,
+      "date_min": "20160119",
+      "date_max": "20241231"
+    },
+    "sealed/fund_adj.parquet": {
+      "api": "fund_adj",
+      "rows": 1696,
+      "sha256": "130c8e735d5ec6a357dfeb30579b0d06c21be86d1653c621aa96a4b7ee102885",
+      "units": 4,
+      "date_min": "20250102",
+      "date_max": "20260930"
+    }
+  },
+  "note_public": "历史案例数据指纹，仅供比对；原始供应商数据不分发。实际日线截止2026-09-30，日历覆盖范围另列。"
+}

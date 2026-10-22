@@ -1,0 +1,16 @@
+# selftest §6 截面剔除夹具（数据副本模式下 strategies/examples/ 未随仓库拷贝，
+# 此处自写一份等价合法配置补齐——selftest 仅用其构造 Backtester 调
+# _cross_rows 验证 ST 剔除，配置内容不参与任何断言；不进任何搜索/台账路径）
+name: b_trend_value
+type: score
+desc: selftest fixture（副本模式补齐，非正式候选）
+factors:
+- op: ma_n
+  n: 60
+  weight: 1.0
+- op: pe_ttm
+  weight: -0.5
+holdings: 30
+rebalance: weekly_first_trade_day
+neut_industry: false
+neut_size: false

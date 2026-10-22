@@ -1,0 +1,45 @@
+{
+  "period": [
+    "20250102",
+    "20260930"
+  ],
+  "trading_days": 424,
+  "annualization": 250,
+  "strategies": {
+    "a_r4_007": {
+      "cumulative_return": 0.421029376539821,
+      "annual_return": 0.23020706556908177,
+      "absolute_max_drawdown": -0.1772076773531236
+    },
+    "a_r6_067": {
+      "cumulative_return": 0.34035501225992615,
+      "annual_return": 0.1885342456469361,
+      "absolute_max_drawdown": -0.17265177541764365
+    },
+    "a_r6_068": {
+      "cumulative_return": 0.35860899841520455,
+      "annual_return": 0.19805159816110396,
+      "absolute_max_drawdown": -0.18601898368330272
+    },
+    "m43_042": {
+      "cumulative_return": 0.19697624994290663,
+      "annual_return": 0.11183668236301925,
+      "absolute_max_drawdown": -0.22359605310983044
+    },
+    "m43_092": {
+      "cumulative_return": 0.1905758642877231,
+      "annual_return": 0.10832744136527794,
+      "absolute_max_drawdown": -0.2536978539178485
+    },
+    "m43_172": {
+      "cumulative_return": 0.31491856470606616,
+      "annual_return": 0.17518288566736828,
+      "absolute_max_drawdown": -0.16071884328370756
+    }
+  },
+  "stock_pool_equal_weight": {
+    "cumulative_return": 0.22817796842754356,
+    "annual_return": 0.1288350482493703,
+    "absolute_max_drawdown": -0.16583506057605912
+  }
+}

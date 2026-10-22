@@ -1,0 +1,33 @@
+{
+  "case": "EP010 A股策略研究",
+  "research_dates": [
+    "2026-10-17",
+    "2026-10-18"
+  ],
+  "result_cutoff": "2026-10-18 final adjudication",
+  "data_cutoff": "2026-09-30",
+  "ledger_rows": 23904,
+  "strategy_catalog_entries": 16157,
+  "strict_eight_layer_survivors": 0,
+  "reference_shortlist": [
+    "a_r4_007",
+    "a_r6_067",
+    "a_r6_068",
+    "m43_042",
+    "m43_092",
+    "m43_172"
+  ],
+  "history_disclosure": [
+    "研究设计者曾在早期探索中查看过相关历史区间，因此不将此案例称为完全未知行情的盲测。",
+    "746个原定邻域任务因内存错误恢复执行；沿用原参数和区间，恢复发生在测试集评估后，名单与顺序未变。",
+    "组合评估曾修复超出实际行情截止日的空白日历边界；公开组合指标使用424个实际交易日的修正版。"
+  ],
+  "source_sha256": {
+    "reports\\supplement\\20261018\\after\\funnel_layers.json": "1e4b96f3ba7bc8f36fd61c475db653e6d1892094c7d5109018758ba6b4d9b17e",
+    "reports\\supplement\\20261018\\after\\shortlist_AI.json": "0a79f6db6d7b45a1412c45993303b75173c58babc0ef46a879532176c06b68bb",
+    "reports\\supplement\\20261018\\after\\shortlist_monkey_43.json": "dc9bf00f5ef0e4c69d86f7d92eceba1ca182fa47bff63da9d60f1da42940a8ec",
+    "ledger\\ledger.csv": "b345c615fd15e10d7d76b13b042fde1094731220f629e445dd7e69758da9892d",
+    "data\\MANIFEST.json": "3c9c78f5823b91de94671a93581774cb0c986efc682217b4569dcacf4e30acd6"
+  },
+  "export_policy": "只读导出。研究入口不携带历史状态；结果账本保留全部成功、错误、重试和技术校验行，个人路径转换为相对路径。非有限JSON值改为null，不改有效指标。 组合指标缺失的区间明确标为不可用。"
+}

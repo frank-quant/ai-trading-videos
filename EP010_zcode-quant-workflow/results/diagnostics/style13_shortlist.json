@@ -1,0 +1,411 @@
+{
+  "generated_at": "2026-10-17T23:53:29",
+  "industry_asof": "20241231",
+  "gate_pp": 0.15,
+  "rebalance_day_def": "买入成交日（两口径同集合）",
+  "entries": [
+    {
+      "config": "a_r4_007",
+      "excess_style": {
+        "available": true,
+        "region": "20140102~20241231",
+        "n_days": 2676,
+        "corr_excess_vs_500_minus_300": 0.08269715376495386
+      },
+      "concentration": {
+        "per_period": {
+          "search": {
+            "available": true,
+            "n_rebalance_days": 533,
+            "holdings": {
+              "hhi_avg": 0.07525990229051062,
+              "max_industry_weight_avg": 0.138426097674512
+            },
+            "trades": {
+              "hhi": 0.04514285636498419,
+              "max_industry_weight": 0.08789957349624895
+            },
+            "trades_per_day_diag": {
+              "hhi_avg": 0.3687072027631463,
+              "max_industry_weight_avg": 0.4016830802205769
+            }
+          },
+          "valid": {
+            "available": true,
+            "n_rebalance_days": 103,
+            "holdings": {
+              "hhi_avg": 0.08766919301053724,
+              "max_industry_weight_avg": 0.16138347936217895
+            },
+            "trades": {
+              "hhi": 0.06007456065419434,
+              "max_industry_weight": 0.14310781999775107
+            },
+            "trades_per_day_diag": {
+              "hhi_avg": 0.2792986452083102,
+              "max_industry_weight_avg": 0.32684148886302333
+            }
+          }
+        },
+        "combined": {
+          "available": true,
+          "n_rebalance_days": 636,
+          "holdings": {
+            "hhi_avg": 0.07751761232565003,
+            "max_industry_weight_avg": 0.14492579630349792
+          },
+          "trades": {
+            "hhi": 0.0452580957584056,
+            "max_industry_weight": 0.0859200322599396
+          },
+          "trades_per_day_diag": {
+            "hhi_avg": 0.35422751498303917,
+            "max_industry_weight_avg": 0.3895625080353127
+          }
+        }
+      },
+      "maxw_diff_pp": {
+        "search": 5.05,
+        "valid": 1.83,
+        "combined": 5.9
+      },
+      "gate_pass": true
+    },
+    {
+      "config": "a_r6_067",
+      "excess_style": {
+        "available": true,
+        "region": "20140102~20241231",
+        "n_days": 2676,
+        "corr_excess_vs_500_minus_300": 0.043434493740011064
+      },
+      "concentration": {
+        "per_period": {
+          "search": {
+            "available": true,
+            "n_rebalance_days": 515,
+            "holdings": {
+              "hhi_avg": 0.07406662683766439,
+              "max_industry_weight_avg": 0.13645903663969208
+            },
+            "trades": {
+              "hhi": 0.04465286560554141,
+              "max_industry_weight": 0.07862766584249607
+            },
+            "trades_per_day_diag": {
+              "hhi_avg": 0.41146370003264915,
+              "max_industry_weight_avg": 0.4326393628077146
+            }
+          },
+          "valid": {
+            "available": true,
+            "n_rebalance_days": 103,
+            "holdings": {
+              "hhi_avg": 0.08746788502999331,
+              "max_industry_weight_avg": 0.16178805551291153
+            },
+            "trades": {
+              "hhi": 0.05869209204290771,
+              "max_industry_weight": 0.13833186534055225
+            },
+            "trades_per_day_diag": {
+              "hhi_avg": 0.3188480964880536,
+              "max_industry_weight_avg": 0.35301769427983015
+            }
+          }
+        },
+        "combined": {
+          "available": true,
+          "n_rebalance_days": 618,
+          "holdings": {
+            "hhi_avg": 0.08148670649202469,
+            "max_industry_weight_avg": 0.1567422984134735
+          },
+          "trades": {
+            "hhi": 0.04470723597170724,
+            "max_industry_weight": 0.07735512021540934
+          },
+          "trades_per_day_diag": {
+            "hhi_avg": 0.39602776610854995,
+            "max_industry_weight_avg": 0.41936908471973383
+          }
+        }
+      },
+      "maxw_diff_pp": {
+        "search": 5.78,
+        "valid": 2.35,
+        "combined": 7.94
+      },
+      "gate_pass": true
+    },
+    {
+      "config": "a_r6_068",
+      "excess_style": {
+        "available": true,
+        "region": "20140102~20241231",
+        "n_days": 2676,
+        "corr_excess_vs_500_minus_300": 0.07258941726915259
+      },
+      "concentration": {
+        "per_period": {
+          "search": {
+            "available": true,
+            "n_rebalance_days": 513,
+            "holdings": {
+              "hhi_avg": 0.07530077056880809,
+              "max_industry_weight_avg": 0.13855103684825987
+            },
+            "trades": {
+              "hhi": 0.04435921360286532,
+              "max_industry_weight": 0.08002456771848737
+            },
+            "trades_per_day_diag": {
+              "hhi_avg": 0.42355567736421207,
+              "max_industry_weight_avg": 0.4473867239945765
+            }
+          },
+          "valid": {
+            "available": true,
+            "n_rebalance_days": 102,
+            "holdings": {
+              "hhi_avg": 0.08202045475908144,
+              "max_industry_weight_avg": 0.15725714601412286
+            },
+            "trades": {
+              "hhi": 0.061657175111215226,
+              "max_industry_weight": 0.14655456699530087
+            },
+            "trades_per_day_diag": {
+              "hhi_avg": 0.3643189241716701,
+              "max_industry_weight_avg": 0.39612057535048545
+            }
+          }
+        },
+        "combined": {
+          "available": true,
+          "n_rebalance_days": 615,
+          "holdings": {
+            "hhi_avg": 0.07855205739119947,
+            "max_industry_weight_avg": 0.1485618998673702
+          },
+          "trades": {
+            "hhi": 0.04452098035919262,
+            "max_industry_weight": 0.07967060171788796
+          },
+          "trades_per_day_diag": {
+            "hhi_avg": 0.41373104512740017,
+            "max_industry_weight_avg": 0.4388840456828737
+          }
+        }
+      },
+      "maxw_diff_pp": {
+        "search": 5.85,
+        "valid": 1.07,
+        "combined": 6.89
+      },
+      "gate_pass": true
+    },
+    {
+      "config": "m43_042",
+      "excess_style": {
+        "available": true,
+        "region": "20140102~20241231",
+        "n_days": 2676,
+        "corr_excess_vs_500_minus_300": 0.13722615951055034
+      },
+      "concentration": {
+        "per_period": {
+          "search": {
+            "available": true,
+            "n_rebalance_days": 497,
+            "holdings": {
+              "hhi_avg": 0.08955672150443439,
+              "max_industry_weight_avg": 0.16630334038612687
+            },
+            "trades": {
+              "hhi": 0.05307063409326318,
+              "max_industry_weight": 0.08783982636066007
+            },
+            "trades_per_day_diag": {
+              "hhi_avg": 0.6812074468176745,
+              "max_industry_weight_avg": 0.6887361101926103
+            }
+          },
+          "valid": {
+            "available": true,
+            "n_rebalance_days": 100,
+            "holdings": {
+              "hhi_avg": 0.08604779535833323,
+              "max_industry_weight_avg": 0.16351115365991975
+            },
+            "trades": {
+              "hhi": 0.08188732492569284,
+              "max_industry_weight": 0.17008530065658017
+            },
+            "trades_per_day_diag": {
+              "hhi_avg": 0.6042069444444443,
+              "max_industry_weight_avg": 0.6188333333333332
+            }
+          }
+        },
+        "combined": {
+          "available": true,
+          "n_rebalance_days": 597,
+          "holdings": {
+            "hhi_avg": 0.09292971714353618,
+            "max_industry_weight_avg": 0.17626355762484058
+          },
+          "trades": {
+            "hhi": 0.052963714834754844,
+            "max_industry_weight": 0.08474244258469608
+          },
+          "trades_per_day_diag": {
+            "hhi_avg": 0.6683095402224938,
+            "max_industry_weight_avg": 0.6770271023434852
+          }
+        }
+      },
+      "maxw_diff_pp": {
+        "search": 7.85,
+        "valid": 0.66,
+        "combined": 9.15
+      },
+      "gate_pass": true
+    },
+    {
+      "config": "m43_092",
+      "excess_style": {
+        "available": true,
+        "region": "20140102~20241231",
+        "n_days": 2676,
+        "corr_excess_vs_500_minus_300": 0.1565448858444231
+      },
+      "concentration": {
+        "per_period": {
+          "search": {
+            "available": true,
+            "n_rebalance_days": 535,
+            "holdings": {
+              "hhi_avg": 0.08339385647073194,
+              "max_industry_weight_avg": 0.1550763037796817
+            },
+            "trades": {
+              "hhi": 0.04729554816095912,
+              "max_industry_weight": 0.08231165432039504
+            },
+            "trades_per_day_diag": {
+              "hhi_avg": 0.27210004005621496,
+              "max_industry_weight_avg": 0.33640215641804444
+            }
+          },
+          "valid": {
+            "available": true,
+            "n_rebalance_days": 102,
+            "holdings": {
+              "hhi_avg": 0.12212718140174467,
+              "max_industry_weight_avg": 0.23298625096540732
+            },
+            "trades": {
+              "hhi": 0.08205254927106315,
+              "max_industry_weight": 0.17158129394954713
+            },
+            "trades_per_day_diag": {
+              "hhi_avg": 0.17558523615475813,
+              "max_industry_weight_avg": 0.2713613547648787
+            }
+          }
+        },
+        "combined": {
+          "available": true,
+          "n_rebalance_days": 637,
+          "holdings": {
+            "hhi_avg": 0.09084063640807728,
+            "max_industry_weight_avg": 0.1711081309983487
+          },
+          "trades": {
+            "hhi": 0.04840576778512172,
+            "max_industry_weight": 0.08345797202091682
+          },
+          "trades_per_day_diag": {
+            "hhi_avg": 0.25664555026351704,
+            "max_industry_weight_avg": 0.3259874597640054
+          }
+        }
+      },
+      "maxw_diff_pp": {
+        "search": 7.28,
+        "valid": 6.14,
+        "combined": 8.77
+      },
+      "gate_pass": true
+    },
+    {
+      "config": "m43_172",
+      "excess_style": {
+        "available": true,
+        "region": "20140102~20241231",
+        "n_days": 2676,
+        "corr_excess_vs_500_minus_300": -0.5935505019789115
+      },
+      "concentration": {
+        "per_period": {
+          "search": {
+            "available": true,
+            "n_rebalance_days": 342,
+            "holdings": {
+              "hhi_avg": 0.11068260537927142,
+              "max_industry_weight_avg": 0.21443944071420873
+            },
+            "trades": {
+              "hhi": 0.07070215233319051,
+              "max_industry_weight": 0.1385616371524644
+            },
+            "trades_per_day_diag": {
+              "hhi_avg": 0.8833854923269718,
+              "max_industry_weight_avg": 0.8916508076948697
+            }
+          },
+          "valid": {
+            "available": true,
+            "n_rebalance_days": 61,
+            "holdings": {
+              "hhi_avg": 0.11656848163431141,
+              "max_industry_weight_avg": 0.19351274046036893
+            },
+            "trades": {
+              "hhi": 0.09619680307863328,
+              "max_industry_weight": 0.1714259730867454
+            },
+            "trades_per_day_diag": {
+              "hhi_avg": 0.8369384343850134,
+              "max_industry_weight_avg": 0.8607877030340467
+            }
+          }
+        },
+        "combined": {
+          "available": true,
+          "n_rebalance_days": 403,
+          "holdings": {
+            "hhi_avg": 0.11146251941485852,
+            "max_industry_weight_avg": 0.2057699389196703
+          },
+          "trades": {
+            "hhi": 0.07105424745574729,
+            "max_industry_weight": 0.13736642428688595
+          },
+          "trades_per_day_diag": {
+            "hhi_avg": 0.8763550443506456,
+            "max_industry_weight_avg": 0.886979221133306
+          }
+        }
+      },
+      "maxw_diff_pp": {
+        "search": 7.59,
+        "valid": 2.21,
+        "combined": 6.84
+      },
+      "gate_pass": true
+    }
+  ],
+  "note": "rules.md 第 13 章：持仓权重口径 vs 成交明细口径交叉核对；相差 > 15 个百分点的策略报告不出数（gate_pass=false）"
+}

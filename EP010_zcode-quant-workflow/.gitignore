@@ -1,0 +1,23 @@
+# Local research state; results/ is a separate, immutable reference archive.
+research/.venv/
+research/.env
+research/.env.*
+research/.zcode/
+research/OPEN_SEALED
+research/cache/
+research/_fetch_staging/
+research/_smoke/
+research/setup_checks/
+research/data/
+research/ledger/
+research/reports/
+research/notes/
+research/perf_corpus*/
+research/strategies/a/
+research/strategies/b/
+research/strategies/random/
+research/strategies/monkey_farm/
+research/strategies/probes/
+research/strategies/funnel/
+__pycache__/
+*.pyc

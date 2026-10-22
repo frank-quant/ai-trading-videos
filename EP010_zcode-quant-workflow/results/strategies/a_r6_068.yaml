@@ -1,0 +1,17 @@
+name: a_r6_068
+type: score
+desc: R6 051窗邻域 turn250
+factors:
+- op: size_ln
+  weight: -2.0
+- op: pb
+  weight: -0.5
+- op: turn_ma_n
+  weight: -0.75
+  n: 250
+- op: roe
+  weight: 0.25
+holdings: 30
+rebalance: weekly_first_trade_day
+neut_industry: true
+neut_size: false

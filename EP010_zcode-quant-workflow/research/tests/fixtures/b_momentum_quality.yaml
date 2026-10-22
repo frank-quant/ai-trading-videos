@@ -1,0 +1,14 @@
+# 示例3（打分型）：动量 + 低波 + 活跃度 复合打分，每周调仓持有30只
+# 语义：中期动量强（60日涨幅）、波动适中偏低、换手活跃的股票得分高；
+#       每周第一个交易日收盘打分，次日开盘调仓至分数最高的30只（等权）。
+name: b_momentum_quality
+type: score
+desc: 60日动量+20日低波+换手活跃 复合打分，周度调仓30只
+
+factors:
+  - {op: ret_n,      n: 60,  weight: 0.5}    # 中期动量
+  - {op: vol_n,      n: 20,  weight: -0.3}   # 低波（负权：波动低加分）
+  - {op: turn_ma_n,  n: 20,  weight: 0.2}    # 换手活跃
+
+holdings: 30
+rebalance: weekly_first_trade_day

@@ -1,0 +1,13 @@
+name: m43_092
+type: score
+desc: 种子猴子随机配置（seed=43，engine/funnel.py gen-monkey）
+factors:
+- op: dist_low_n
+  n: 20
+  weight: -0.3
+- op: size_ln
+  weight: -1.0
+- op: fc_chg_mid
+  weight: 0.5
+holdings: 30
+rebalance: weekly_first_trade_day

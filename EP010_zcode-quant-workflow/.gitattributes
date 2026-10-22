@@ -1,0 +1,5 @@
+# Keep exported hashes stable across Windows, macOS and Linux checkouts.
+* text=auto eol=lf
+*.png binary
+*.pptx binary
+*.xlsx binary

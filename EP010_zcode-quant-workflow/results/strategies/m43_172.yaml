@@ -1,0 +1,10 @@
+name: m43_172
+type: score
+desc: 种子猴子随机配置（seed=43，engine/funnel.py gen-monkey）
+factors:
+- op: xsec_pct
+  of:
+    op: hk_ratio
+  weight: 0.2
+holdings: 30
+rebalance: weekly_first_trade_day

@@ -1,0 +1,17 @@
+# 第 3 步示例 2（打分型·行业内中性化，rules.md 7.5）：周度调仓，30 只；
+# 每个因子先去极值 + 全截面排名，再在**申万一级行业内**重排名（neut_industry:
+# true）——分数只表达「行业内相对强弱」，行业间轮动被中性化掉。
+# 生效口径写入 run 目录 summary.json 的 neutralization 字段。
+name: s3_score_industry_neut
+type: score
+desc: 动量+低波，申万一级行业内截面秩中性化（第3步示例）
+
+factors:
+  - {op: ret_n,     n: 60,  weight: 0.5}    # 中期动量
+  - {op: vol_n,     n: 20,  weight: -0.3}   # 低波
+  - {op: turn_ma_n, n: 20,  weight: 0.2}    # 换手活跃
+
+holdings: 30
+rebalance: weekly_first_trade_day
+neut_industry: true
+neut_size: false

@@ -1,0 +1,153 @@
+{
+  "period": [
+    "20140101",
+    "20221231"
+  ],
+  "metric": "after_cost_annual_excess",
+  "groups": {
+    "A": {
+      "generated": 637,
+      "valid": 637,
+      "failed_or_unavailable": 0,
+      "median": 0.094556
+    },
+    "B": {
+      "generated": 650,
+      "valid": 650,
+      "failed_or_unavailable": 0,
+      "median": 0.092014
+    },
+    "monkey_43": {
+      "generated": 637,
+      "valid": 632,
+      "failed_or_unavailable": 5,
+      "median": -0.098076
+    },
+    "monkey_1": {
+      "generated": 637,
+      "valid": 631,
+      "failed_or_unavailable": 6,
+      "median": -0.093564
+    },
+    "monkey_2": {
+      "generated": 637,
+      "valid": 634,
+      "failed_or_unavailable": 3,
+      "median": -0.093152
+    },
+    "monkey_3": {
+      "generated": 637,
+      "valid": 634,
+      "failed_or_unavailable": 3,
+      "median": -0.093861
+    },
+    "monkey_4": {
+      "generated": 637,
+      "valid": 630,
+      "failed_or_unavailable": 7,
+      "median": -0.08948
+    },
+    "monkey_5": {
+      "generated": 637,
+      "valid": 632,
+      "failed_or_unavailable": 5,
+      "median": -0.10140950000000001
+    },
+    "monkey_6": {
+      "generated": 637,
+      "valid": 628,
+      "failed_or_unavailable": 9,
+      "median": -0.099855
+    },
+    "monkey_7": {
+      "generated": 637,
+      "valid": 630,
+      "failed_or_unavailable": 7,
+      "median": -0.0935285
+    },
+    "monkey_8": {
+      "generated": 637,
+      "valid": 630,
+      "failed_or_unavailable": 7,
+      "median": -0.106634
+    },
+    "monkey_9": {
+      "generated": 637,
+      "valid": 624,
+      "failed_or_unavailable": 13,
+      "median": -0.0998925
+    },
+    "monkey_10": {
+      "generated": 637,
+      "valid": 630,
+      "failed_or_unavailable": 7,
+      "median": -0.11091200000000001
+    },
+    "monkey_11": {
+      "generated": 637,
+      "valid": 632,
+      "failed_or_unavailable": 5,
+      "median": -0.10485449999999999
+    },
+    "monkey_12": {
+      "generated": 637,
+      "valid": 630,
+      "failed_or_unavailable": 7,
+      "median": -0.114131
+    },
+    "monkey_13": {
+      "generated": 637,
+      "valid": 635,
+      "failed_or_unavailable": 2,
+      "median": -0.089943
+    },
+    "monkey_14": {
+      "generated": 637,
+      "valid": 630,
+      "failed_or_unavailable": 7,
+      "median": -0.1161055
+    },
+    "monkey_15": {
+      "generated": 637,
+      "valid": 632,
+      "failed_or_unavailable": 5,
+      "median": -0.1212945
+    },
+    "monkey_16": {
+      "generated": 637,
+      "valid": 635,
+      "failed_or_unavailable": 2,
+      "median": -0.122192
+    },
+    "monkey_17": {
+      "generated": 637,
+      "valid": 631,
+      "failed_or_unavailable": 6,
+      "median": -0.095092
+    },
+    "monkey_18": {
+      "generated": 637,
+      "valid": 630,
+      "failed_or_unavailable": 7,
+      "median": -0.105545
+    },
+    "monkey_19": {
+      "generated": 637,
+      "valid": 630,
+      "failed_or_unavailable": 7,
+      "median": -0.08847450000000001
+    },
+    "monkey_20": {
+      "generated": 637,
+      "valid": 632,
+      "failed_or_unavailable": 5,
+      "median": -0.10848350000000001
+    }
+  },
+  "farm20_pooled": {
+    "generated": 12740,
+    "valid": 12620,
+    "median": -0.101324
+  },
+  "farm20_median_of_group_medians": -0.100651
+}

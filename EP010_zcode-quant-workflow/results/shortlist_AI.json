@@ -1,0 +1,61 @@
+{
+  "group": "AI",
+  "shortlist": [
+    "a_r4_007",
+    "a_r6_067",
+    "a_r6_068"
+  ],
+  "entries": [
+    {
+      "config": "a_r4_007",
+      "grade": "入围",
+      "score": 1.151923,
+      "tags": [],
+      "passed_l1": true,
+      "hard_qualified": true,
+      "search_ir": 1.305089,
+      "val_ir": 1.151923,
+      "search_ann_excess": 0.163915,
+      "val_ann_excess": 0.10563,
+      "excess_max_dd_worst": 0.197967
+    },
+    {
+      "config": "a_r6_067",
+      "grade": "入围",
+      "score": 1.257589,
+      "tags": [],
+      "passed_l1": true,
+      "hard_qualified": true,
+      "search_ir": 1.332879,
+      "val_ir": 1.257589,
+      "search_ann_excess": 0.162876,
+      "val_ann_excess": 0.097038,
+      "excess_max_dd_worst": 0.227556
+    },
+    {
+      "config": "a_r6_068",
+      "grade": "入围",
+      "score": 1.164964,
+      "tags": [],
+      "passed_l1": true,
+      "hard_qualified": true,
+      "search_ir": 1.390523,
+      "val_ir": 1.164964,
+      "search_ann_excess": 0.168253,
+      "val_ann_excess": 0.093721,
+      "excess_max_dd_worst": 0.188105
+    }
+  ],
+  "failed_layers": {
+    "a_r4_007": [
+      "L7"
+    ],
+    "a_r6_067": [
+      "L7"
+    ],
+    "a_r6_068": [
+      "L7"
+    ]
+  },
+  "qualification_note": "AI三席最终通过L1–L6，L7相关性去重淘汰，L8未进入；随机组资格详见entries/failed_layers。"
+}

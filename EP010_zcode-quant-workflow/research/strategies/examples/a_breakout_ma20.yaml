@@ -1,0 +1,13 @@
+# selftest §14b T2 夹具（副本模式自写补齐；其邻居在用例中全败，
+# 无邻居数断言；不进任何搜索/台账路径）
+name: a_breakout_ma20
+type: rule
+desc: selftest fixture（副本模式补齐，非正式候选）
+buy:
+- {op: break_high_n, n: 20, dir: above, threshold: 0.5}
+- {op: vol_ratio_n, n: 5, dir: above, threshold: 1.0}
+sell:
+- {op: close_over_ma_n, n: 20, dir: below, threshold: 1.0}
+max_hold_days: 10
+stop_loss: 5%
+max_positions: 10

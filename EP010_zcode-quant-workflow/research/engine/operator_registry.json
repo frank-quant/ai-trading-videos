@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "operators": {
+    "fc_demean_ind": {
+      "module": "parts/b_ops.py",
+      "function": "fc_demean_ind",
+      "has_window": false,
+      "threshold_kind": "pct",
+      "sha256": "bc8732719ceb65ab0e9b9e871a7e350c66f6fad6c78055a7a74130693150efac",
+      "doc": "预告意外度的行业调整：fc_chg_mid − 同 (date,l1) 内「距公告 ≤60 自然日」"
+    },
+    "ind_median_fc_chg_mid": {
+      "module": "parts/b_ops.py",
+      "function": "ind_median_fc_chg_mid",
+      "has_window": false,
+      "threshold_kind": "none",
+      "sha256": "bc8732719ceb65ab0e9b9e871a7e350c66f6fad6c78055a7a74130693150efac",
+      "doc": "当日申万一级行业内 fc_chg_mid 的中位数（行业预告动量锚；全 NaN → NaN）。"
+    },
+    "ind_median_pb": {
+      "module": "parts/b_ops.py",
+      "function": "ind_median_pb",
+      "has_window": false,
+      "threshold_kind": "none",
+      "sha256": "bc8732719ceb65ab0e9b9e871a7e350c66f6fad6c78055a7a74130693150efac",
+      "doc": "当日申万一级行业内 pb 的中位数（行业估值锚；组内全 NaN → NaN）。"
+    },
+    "ind_median_ps": {
+      "module": "parts/b_ops.py",
+      "function": "ind_median_ps",
+      "has_window": false,
+      "threshold_kind": "none",
+      "sha256": "bc8732719ceb65ab0e9b9e871a7e350c66f6fad6c78055a7a74130693150efac",
+      "doc": "当日申万一级行业内 ps_ttm 的中位数（行业估值锚；组内全 NaN → NaN）。"
+    },
+    "ulcer_n": {
+      "module": "parts/b_ops.py",
+      "function": "ulcer_n",
+      "has_window": true,
+      "threshold_kind": "pct",
+      "sha256": "bc8732719ceb65ab0e9b9e871a7e350c66f6fad6c78055a7a74130693150efac",
+      "doc": "溃疡指数：最近 n 行 adj_nav 的窗口内回撤深度平方均值的开方（%）。"
+    }
+  }
+}

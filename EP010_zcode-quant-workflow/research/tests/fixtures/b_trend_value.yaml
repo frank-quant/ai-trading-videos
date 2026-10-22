@@ -1,0 +1,14 @@
+# 示例4（打分型）：趋势位置 + 短期反转 复合打分，每周调仓持有30只
+# 语义：处于中期趋势上方（收盘/60日均线高）但短期超跌（5日跌幅深）、
+#       振幅位置偏低的股票得分高（买回调不追高）；周度调仓30只等权。
+name: b_trend_value
+type: score
+desc: 趋势上方+短期超跌+振幅位置低 复合打分，周度调仓30只
+
+factors:
+  - {op: close_over_ma_n, n: 60, weight: 0.4}     # 趋势位置
+  - {op: ret_n,           n: 5,  weight: -0.4}    # 短期反转（负权：跌得多加分）
+  - {op: close_pos_range,      weight: -0.2}      # 收盘偏振幅下沿加分
+
+holdings: 30
+rebalance: weekly_first_trade_day

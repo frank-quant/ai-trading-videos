@@ -1,0 +1,15 @@
+# 第 3 步示例 4（规则型·两融+北向零件）：融资余额占流通市值比 > 3%
+# （rzye 元 / circ_mv 万元×1e4，T-1 披露对齐），且北向持股占比 60 日提升
+# > 1 个百分点（hk_chg_n，T-1 披露对齐）；持有 40 个交易日（新档位）。
+name: s3_rule_margin_hk
+type: rule
+desc: 两融杠杆高+北向增仓，持有40日（第3步示例）
+
+buy:
+  - {op: margin_ratio, dir: above, threshold: 3}      # 融资余额/流通市值 > 3%
+  - {op: hk_chg_n, n: 60, dir: above, threshold: 1}   # 北向占比 60 日 +1pp 以上
+sell:
+  - {op: hk_chg_n, n: 60, dir: below, threshold: -1}  # 北向占比 60 日 −1pp 以下卖出
+rank: {op: hk_ratio, order: desc}                     # 北向占比高者优先
+max_hold_days: 40
+stop_loss: 10

@@ -1,0 +1,17 @@
+# 第 3 步示例 3（打分型·月度调仓，rules.md 7 / 7.5）：每月第一个交易日调仓，
+# 30 只；L1 按月度档 ≥ 80 期判定。因子用北向持股占比（资金面零件，<T 对齐）。
+# 注：打分型持仓数固定 30（rules.md 第 4 节），无持有期参数；持有期档位
+# 40/60 由规则型示例（s3_rule_toplist=60、s3_rule_margin_hk=40）覆盖。
+name: s3_score_monthly
+type: score
+desc: 北向占比+动量+低波，月度调仓（第3步示例）
+
+factors:
+  - {op: hk_ratio,  weight: 0.4}            # 北向持股占流通股本比 %（T-1 对齐）
+  - {op: ret_n,  n: 60,  weight: 0.3}       # 中期动量
+  - {op: vol_n,  n: 20,  weight: -0.3}      # 低波
+
+holdings: 30
+rebalance: monthly_first_trade_day
+neut_industry: false
+neut_size: false

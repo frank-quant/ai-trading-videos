@@ -1,0 +1,31 @@
+{
+  "source": "research_rerun_20261017/reports/supplement/20261018/after",
+  "research_dates": [
+    "2026-10-17",
+    "2026-10-18"
+  ],
+  "archive_date": "2026-10-23",
+  "selection": "本期采用的复跑最终补检交付；不采用prod或补检前报告。",
+  "files": {
+    "研究报告.pptx": {
+      "source_sha256": "50c855aa3742bd7bbef83eb613f2bbe6d9eb7a7ea1c9511a291027adb43f8786",
+      "public_sha256": "50c855aa3742bd7bbef83eb613f2bbe6d9eb7a7ea1c9511a291027adb43f8786",
+      "processing": "逐字节保留原最终交付；未重新制作幻灯片。"
+    },
+    "试验台账.xlsx": {
+      "source_sha256": "83bce92f309cd33ecbe5199a0a8ea08a3f4e6e12e25e6d60f93bbd9a37b6cf1e",
+      "public_sha256": "8c313d09c3a19c990e1fb4d13b3bae8786643df383efdc00ed4c0aa9a7bf9ae6",
+      "processing": "仅将完整最新台账中两处个人绝对路径替换为相对路径；所有单元格逐项核对，未改数据、公式或版式。"
+    }
+  },
+  "checks": {
+    "slides": 12,
+    "sheets": 4,
+    "ledger_rows": 23904,
+    "workbook_changed_cells": 2,
+    "workbook_nonempty_cells_checked": 624448,
+    "final_funnel_matches": true,
+    "six_names_match": true
+  },
+  "reading_note": "原报告含历史状态和展示精度问题，准确口径及范围见README.md；本归档不将原始交付标作已修正展示缺陷。"
+}

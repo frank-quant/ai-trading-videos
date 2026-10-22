@@ -1,0 +1,24 @@
+# Local study commits retain configurations, notes, ledger, reports and manifests.
+# This file also protects a standalone copy made outside the public repository.
+.venv/
+.env
+.env.*
+.zcode/
+OPEN_SEALED
+cache/
+_fetch_staging/
+_smoke/
+setup_checks/
+perf_corpus*/
+data/raw/
+data/sealed/
+data/_fetch_state.json
+*.parquet
+*.parquet.*
+__pycache__/
+*.pyc
+*.lock
+*.tmp
+.DS_Store
+Thumbs.db
+~$*

@@ -1,0 +1,15 @@
+# 第 3 步示例 1（规则型·龙虎榜零件）：近 20 日上过龙虎榜，且最近一次上榜
+# 机构席位净买入占该次上榜龙虎榜成交额 > 5%；按机构净买入占比降序取前 10 只，
+# 持有 60 个交易日（rules.md 第 7 节持有期新档位）。
+# 对齐口径：top_list/top_inst T 日盘后披露 → T 日收盘信号可用 trade_date ≤ T 记录。
+name: s3_rule_toplist
+type: rule
+desc: 龙虎榜机构净买入驱动，持有60日（第3步示例）
+
+buy:
+  - {op: top_list_n, n: 20, dir: above, threshold: 0.5}   # 近20日上过榜（1/0）
+  - {op: inst_netbuy,    dir: above, threshold: 5}        # 最近一次上榜机构净买入占比 > 5%
+sell: []
+rank: {op: inst_netbuy, order: desc}
+max_hold_days: 60
+stop_loss: 10

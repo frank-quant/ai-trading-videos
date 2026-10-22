@@ -1,0 +1,22 @@
+# 示例1（规则型）：20日突破 + 量能确认的动量买入
+# 语义：突破20日新高、收盘站上20日线、量比放大、市场(300ETF)在60日线上方时买入；
+#       跌破20日线或持有满10个交易日卖出；8% 止损；最多持有10只，信号多时按5日涨幅排序。
+name: rule_breakout_ma20
+type: rule
+desc: 突破20日新高+量比确认的动量策略，持有上限10日，止损8%
+
+buy:
+  - {op: break_high_n,  n: 20, dir: above, threshold: 0.5}    # 突破20日最高（1>0.5）
+  - {op: close_over_ma_n, n: 20, dir: above, threshold: 1.0}  # 收盘在20日均线上方
+  - {op: vol_ratio_n,  n: 5,  dir: above, threshold: 1.5}     # 量比>1.5（放量）
+  - {op: etf_above_ma_n, n: 60, dir: above, threshold: 0.5}   # 市场趋势过滤：300ETF在60日线上方
+
+rank: {op: ret_n, n: 5, order: desc}    # 信号过多时按5日涨幅降序取前若干
+
+sell:
+  - {op: close_over_ma_n, n: 20, dir: below, threshold: 1.0}  # 收盘跌破20日均线
+  - {op: ret_n, n: 3, dir: below, threshold: -5.0}             # 3日回撤超5%（阈值档位5）
+
+max_hold_days: 10
+stop_loss: 8%
+max_positions: 10

@@ -1,0 +1,15 @@
+name: a_r4_007
+type: score
+desc: R4 ind网格 s1.25p0.5t0.3
+factors:
+- op: size_ln
+  weight: -1.25
+- op: turn_ma_n
+  weight: -0.3
+  n: 20
+- op: pb
+  weight: -0.5
+holdings: 30
+rebalance: weekly_first_trade_day
+neut_industry: true
+neut_size: false

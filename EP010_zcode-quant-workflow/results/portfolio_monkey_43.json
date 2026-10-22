@@ -1,0 +1,94 @@
+{
+  "group": "monkey_43",
+  "generated_at": "2026-10-18T13:23:00",
+  "base_rule": "510300.SH 在 200 日均线上方持有，跌破换 518880.SH（复权价口径，T−1 收盘定 T 日腿）",
+  "weights": {
+    "base": 0.6,
+    "satellite": 0.4
+  },
+  "satellite": [
+    "m43_042",
+    "m43_092",
+    "m43_172"
+  ],
+  "switch_cost_per_event": 0.00075,
+  "periods": {
+    "search": {
+      "available": false,
+      "from": "20140102",
+      "to": "20221230",
+      "n_days": 2192,
+      "portfolio": {
+        "ann_ret": null,
+        "max_dd": null,
+        "ann_excess_vs_510300_bh": null,
+        "excess_max_dd": null,
+        "check_mdd_lt_25pct": false
+      },
+      "base_only": {
+        "ann_ret": null,
+        "max_dd": null
+      },
+      "bench_510300_bh": {
+        "ann_ret": null,
+        "max_dd": null
+      },
+      "satellite_only": {
+        "ann_ret": 0.14924231049394976,
+        "max_dd": -0.48250494286609924
+      },
+      "availability_reason": "完整搜索期缺少ETF复权因子，组合指标不可计算；原非有限数公开表示为null。"
+    },
+    "validation": {
+      "available": true,
+      "from": "20230103",
+      "to": "20241231",
+      "n_days": 484,
+      "portfolio": {
+        "ann_ret": 0.09836059372741435,
+        "max_dd": -0.1752148202569066,
+        "ann_excess_vs_510300_bh": 0.06801640289453603,
+        "excess_max_dd": -0.1030974561141984,
+        "check_mdd_lt_25pct": true
+      },
+      "base_only": {
+        "ann_ret": 0.19161107661279075,
+        "max_dd": -0.12443336355394397
+      },
+      "bench_510300_bh": {
+        "ann_ret": 0.030344190832878315,
+        "max_dd": -0.22563415645826035
+      },
+      "satellite_only": {
+        "ann_ret": -0.018204918177521567,
+        "max_dd": -0.37512658876537874
+      }
+    },
+    "sealed": {
+      "available": true,
+      "from": "20250102",
+      "to": "20260930",
+      "n_days": 424,
+      "portfolio": {
+        "ann_ret": 0.10721546381559888,
+        "max_dd": -0.13103193763435017,
+        "ann_excess_vs_510300_bh": 0.01795778165799944,
+        "excess_max_dd": -0.0835422180332972,
+        "check_mdd_lt_25pct": true
+      },
+      "base_only": {
+        "ann_ret": 0.0933502673964881,
+        "max_dd": -0.1399966345350515
+      },
+      "bench_510300_bh": {
+        "ann_ret": 0.08925768215759944,
+        "max_dd": -0.13258691809074774
+      },
+      "satellite_only": {
+        "ann_ret": 0.13629998175210534,
+        "max_dd": -0.18304118327413965
+      }
+    }
+  },
+  "note": "组合最大回撤 < 25% 是检验项、不是筛选项（rules.md 5.5）。年化按 250 交易日；封存期在 OPEN_SEALED 出现前不输出。"
+}

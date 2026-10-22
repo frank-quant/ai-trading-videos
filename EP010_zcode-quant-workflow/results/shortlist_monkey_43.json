@@ -1,0 +1,68 @@
+{
+  "group": "monkey_43",
+  "shortlist": [
+    "m43_042",
+    "m43_092",
+    "m43_172"
+  ],
+  "entries": [
+    {
+      "config": "m43_042",
+      "grade": "入围",
+      "score": 0.26172,
+      "tags": [],
+      "passed_l1": true,
+      "hard_qualified": true,
+      "search_ir": 0.447603,
+      "val_ir": 0.26172,
+      "search_ann_excess": 0.054575,
+      "val_ann_excess": 0.014869,
+      "excess_max_dd_worst": 0.234127
+    },
+    {
+      "config": "m43_092",
+      "grade": "入围",
+      "score": null,
+      "tags": [
+        "验证期未通过"
+      ],
+      "passed_l1": true,
+      "hard_qualified": false,
+      "search_ir": 0.508311,
+      "val_ir": -0.262653,
+      "search_ann_excess": 0.058148,
+      "val_ann_excess": -0.047806,
+      "excess_max_dd_worst": 0.25531
+    },
+    {
+      "config": "m43_172",
+      "grade": "入围",
+      "score": null,
+      "tags": [
+        "验证期未通过"
+      ],
+      "passed_l1": true,
+      "hard_qualified": false,
+      "search_ir": 0.520131,
+      "val_ir": -0.670273,
+      "search_ann_excess": 0.10038,
+      "val_ann_excess": -0.070623,
+      "excess_max_dd_worst": 0.379758
+    }
+  ],
+  "failed_layers": {
+    "m43_042": [
+      "L4",
+      "L5(未检验)"
+    ],
+    "m43_092": [
+      "L5"
+    ],
+    "m43_172": [
+      "L4",
+      "L3",
+      "L5(未检验)"
+    ]
+  },
+  "qualification_note": "AI三席最终通过L1–L6，L7相关性去重淘汰，L8未进入；随机组资格详见entries/failed_layers。"
+}
