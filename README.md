@@ -19,7 +19,7 @@
 | EP006 | [AI 量化信源清单](EP006_ai-quant-sources/) | 我每天实际点开的东西:网站论坛 / 论文 / 开源项目 / newsletter | 清单 | [B站](https://www.bilibili.com/video/BV1QWhc6eEnW) · [YouTube](https://youtu.be/ar5Z2yffHx8) |
 | EP007 | [14 个大模型同一道量化题](EP007_fourteen-llm-quant-benchmark/) | 同题同数据,14 个模型写量化策略,扔进跌 45% 的样本外年份 | 题目 + 14 个模型的交付物 + 审计脚本 + 完整结果 | [B站](https://www.bilibili.com/video/BV1ijYB6QE1Y/) · [YouTube](https://youtu.be/5wEQiwCwGY0) |
 | EP009 | [Jev 做中高频交易靠不靠谱](EP009_jev-mid-frequency-benchmark/) | 每 0.3 秒问一次 Jev 涨跌,跟 8 条中高频策略、DeepSeek、抛硬币在币安 BTC 上比 24 小时 | 测试台代码(网页操作) + 完整结果 + 补算脚本 | [B站](https://www.bilibili.com/video/BV1FApP6TE2Y/) · [YouTube](https://youtu.be/UU-1z_Se4LU) |
-| EP010 | [用 ZCode Workflow 做 A 股策略研究](EP010_zcode-quant-workflow/) | 八步研究、AI/随机对照与测试集评估，严格达标为0，保留三条研究候选 | 干净研究工程 + 八步提示词 + 最终实验结果 + 收益复核 | [B站](https://www.bilibili.com/video/BV1r6nW6RESd/) |
+| EP010 | [用 ZCode Workflow 做 A 股策略研究](EP010_zcode-quant-workflow/) | 八步研究、AI/随机对照与测试集评估，严格达标为0，保留三条研究候选 | 干净研究工程 + 八步提示词 + 最终实验结果 + 收益复核 | [B站](https://www.bilibili.com/video/BV1r6nW6RESd/) · [YouTube](https://youtu.be/cDk9BZJKVZI) |
 
 ## 每期目录里有什么
 
