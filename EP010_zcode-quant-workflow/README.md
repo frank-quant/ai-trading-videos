@@ -2,6 +2,8 @@
 
 📺 看视频：[B站](https://www.bilibili.com/video/BV1r6nW6RESd/) · [YouTube](https://youtu.be/cDk9BZJKVZI)
 
+🛠 ZCode 下载 / 体验：[我的邀请链接](https://zcode.z.ai/invite/TPCCDBAT)
+
 把策略假设、代码执行、独立审核、八层筛选、随机对照和报告交付串成一套研究流程。提示词用于驱动执行角色，代码负责计算，规则负责约束。
 
 本目录同时提供**可以从头执行的研究工程**和**本次实验结果**。两者分开存放，新研究不会自动带入已有名单、台账或收益。
