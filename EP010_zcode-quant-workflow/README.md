@@ -2,7 +2,9 @@
 
 📺 看视频：[B站](https://www.bilibili.com/video/BV1r6nW6RESd/) · [YouTube](https://youtu.be/cDk9BZJKVZI)
 
-🛠 ZCode 下载 / 体验：[https://zcode.z.ai/invite/TPCCDBAT](https://zcode.z.ai/invite/TPCCDBAT)
+🚀 智谱 ZCode 下载，新用户可享 **4000万免费 Tokens**（每天800万，连续5天）：
+
+[https://zcode.z.ai/invite/TPCCDBAT](https://zcode.z.ai/invite/TPCCDBAT)
 
 把策略假设、代码执行、独立审核、八层筛选、随机对照和报告交付串成一套研究流程。提示词用于驱动执行角色，代码负责计算，规则负责约束。
 
