@@ -1340,27 +1340,27 @@
       "kind": "prompt",
       "source": "00_操作说明/提示词/CASE02_宇树科技投委会PPT.txt",
       "normalization": "UTF-8与LF换行，去除首尾空白",
-      "content_change": "按作者确认的实际任务要求，将页数字段由旧模板的10页左右改为25页；其余正文不变。",
-      "bytes": 1321,
-      "sha256": "0569498d9f8ade6024e65bc0644624d86c63f5e0f7db8f211d5d0b03192067b8"
+      "content_change": "宇树按作者确认的25页要求整理，并采用作者移除开头显式技能调用前缀的最新公开版本。",
+      "bytes": 1282,
+      "sha256": "1572cd81b5c3f94f7792b74e55d8c1bf9a7852558d6d2573380fee13f8a196c0"
     },
     {
       "path": "prompts/02_SK海力士财报解读.md",
       "kind": "prompt",
       "source": "00_操作说明/提示词/CASE04_SK海力士财报解读.txt",
       "normalization": "UTF-8与LF换行，去除首尾空白",
-      "content_change": null,
-      "bytes": 709,
-      "sha256": "7609b1dd374271c98b39f33bcaeb3f36f2525f518facb07d2ab350ec495360af"
+      "content_change": "采用作者最新公开版本，移除开头显式技能调用前缀，金融任务要求不变。",
+      "bytes": 682,
+      "sha256": "7ceec12519df0187f8d2b9833fc8f1f5dd45073797ebd62b1d414529309971aa"
     },
     {
       "path": "prompts/03_特斯拉财务预测与DCF估值.md",
       "kind": "prompt",
       "source": "00_操作说明/提示词/CASE01_特斯拉财务预测与DCF估值.txt",
       "normalization": "UTF-8与LF换行，去除首尾空白",
-      "content_change": null,
-      "bytes": 782,
-      "sha256": "e1c28eb3ff8ec295319bb8df287992fdac3dbbe2b35aad959d8c9982b014eec3"
+      "content_change": "采用作者最新公开版本，移除开头显式技能调用前缀，金融任务要求不变。",
+      "bytes": 749,
+      "sha256": "09648f0983546a7b548d0402008cf250ab4343dab73762ee137919a5e6373c57"
     },
     {
       "path": "prompts/04_SOXX_SPY_BIL轮动回测.md",
@@ -1392,8 +1392,8 @@
     {
       "path": "README.md",
       "kind": "package_documentation",
-      "bytes": 5148,
-      "sha256": "d3e3f3e6ced6a597391f019e6da38191e84d526d50f836a102861fd7b0347a9b"
+      "bytes": 5189,
+      "sha256": "fc9ac9972be51ab56672bf0a51fad8e6bfb0488277080885657fff7885af5a45"
     },
     {
       "path": "复核说明.md",
@@ -1415,6 +1415,6 @@
     "已删除视频案例的结果",
     "会话日志、内部创作稿与PR审阅稿"
   ],
-  "prompt_version_note": "宇树只将旧模板页数字段改为作者确认的25页；其他5项保留本地模板正文，统一编码换行。",
+  "prompt_version_note": "宇树按作者确认的25页要求整理；第1至第3项采用作者最新移除显式技能调用前缀的公开版本；其余3项正文保留本地模板，统一编码换行。",
   "episode": "EP011"
 }
