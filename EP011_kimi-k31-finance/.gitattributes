@@ -1,0 +1,6 @@
+# Preserve archived files and their SHA-256 hashes across platforms.
+* -text
+
+# Downloaded filings and exported reports are documentation.
+*.htm linguist-documentation=true
+*.html linguist-documentation=true

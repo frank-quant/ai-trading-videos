@@ -1,0 +1,7 @@
+{
+  "ticker": "601633.SH,601238.SH,601127.SH",
+  "statement": "all",
+  "financial_parameter": "20241231",
+  "file_path": "D:\\quant-videos\\Kimi_K3.1_金融实测\\04_测试案例\\CASE07_金融数据库筛选\\output\\raw\\financials_batch2_2024.csv",
+  "format": "json"
+}

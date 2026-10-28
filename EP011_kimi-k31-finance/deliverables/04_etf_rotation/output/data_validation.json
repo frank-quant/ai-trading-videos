@@ -1,0 +1,41 @@
+{
+  "checks": {
+    "common_calendar_2011_bars": true,
+    "no_missing_ohlc_or_adjclose": true,
+    "positive_prices": true,
+    "backtest_dates": true,
+    "72_next_day_decisions": true,
+    "tie_rule_positive_selects_spy": true,
+    "nonpositive_selects_bil": true,
+    "soxx_split_recorded": true
+  },
+  "price_adjustment_reconciliation": {
+    "SOXX": {
+      "method": "cash dividend reinvested at ex-date close; normalized to Yahoo final adjusted close",
+      "median_absolute_relative_error": 5.369475430638815e-05,
+      "max_absolute_relative_error": 0.00030472787553770253,
+      "dividend_events_2018_2025": 33
+    },
+    "SPY": {
+      "method": "cash dividend reinvested at ex-date close; normalized to Yahoo final adjusted close",
+      "median_absolute_relative_error": 0.0001451509651178018,
+      "max_absolute_relative_error": 0.0006962446868874483,
+      "dividend_events_2018_2025": 32
+    },
+    "BIL": {
+      "method": "cash dividend reinvested at ex-date close; normalized to Yahoo final adjusted close",
+      "median_absolute_relative_error": 3.478199880357913e-05,
+      "max_absolute_relative_error": 3.7977858011739585e-05,
+      "dividend_events_2018_2025": 74
+    }
+  },
+  "soxx_independent_qfq_crosscheck": {
+    "source": "Tencent gtimg qfqday via institutional-finance-kit finance-data",
+    "shared_return_days": 1813,
+    "median_absolute_daily_return_difference": 2.0405548691315722e-05,
+    "p99_absolute_daily_return_difference": 0.00012575060933945,
+    "max_absolute_daily_return_difference": 0.0007763975155279379,
+    "note": "不同供应商的复权基准和四舍五入不同，因此比较日收益而非价格水平。"
+  },
+  "all_checks_passed": true
+}

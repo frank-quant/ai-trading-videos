@@ -1,0 +1,5321 @@
+tsla-20260930
+0001318605
+12-31
+false
+2026
+Q3
+xbrli:shares
+iso4217:USD
+iso4217:USD
+xbrli:shares
+tsla:unit
+xbrli:pure
+tsla:draw
+tsla:creditFacility
+tsla:extension
+tsla:tranche
+tsla:deliveredVehicle
+tsla:fsdSubscription
+tsla:botDelivered
+tsla:robotaxi
+tsla:consecutiveQuarter
+tsla:non-overlappingPeriod
+tsla:action
+tsla:Plaintiff
+tsla:Segment
+0001318605
+2026-01-01
+2026-09-30
+0001318605
+2026-10-15
+0001318605
+2026-09-30
+0001318605
+2025-12-31
+0001318605
+tsla:OperatingLeaseVehiclesMember
+2026-09-30
+0001318605
+tsla:OperatingLeaseVehiclesMember
+2025-12-31
+0001318605
+tsla:EnergyGenerationAndStorageSystemsMember
+2026-09-30
+0001318605
+tsla:EnergyGenerationAndStorageSystemsMember
+2025-12-31
+0001318605
+tsla:AutomotiveSalesMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:AutomotiveSalesMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:AutomotiveSalesMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:AutomotiveSalesMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:AutomotiveRegulatoryCreditsMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:AutomotiveRegulatoryCreditsMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:AutomotiveRegulatoryCreditsMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:AutomotiveRegulatoryCreditsMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:AutomotiveLeasingMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:AutomotiveLeasingMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:AutomotiveLeasingMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:AutomotiveLeasingMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:AutomotiveRevenuesMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:AutomotiveRevenuesMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:AutomotiveRevenuesMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:AutomotiveRevenuesMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:EnergyGenerationAndStorageMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:EnergyGenerationAndStorageMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:EnergyGenerationAndStorageMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:EnergyGenerationAndStorageMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:ServicesAndOtherMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:ServicesAndOtherMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:ServicesAndOtherMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:ServicesAndOtherMember
+2025-01-01
+2025-09-30
+0001318605
+2026-07-01
+2026-09-30
+0001318605
+2025-07-01
+2025-09-30
+0001318605
+2025-01-01
+2025-09-30
+0001318605
+2026-06-30
+0001318605
+us-gaap:CommonStockMember
+2026-06-30
+0001318605
+us-gaap:AdditionalPaidInCapitalMember
+2026-06-30
+0001318605
+us-gaap:AccumulatedOtherComprehensiveIncomeMember
+2026-06-30
+0001318605
+us-gaap:RetainedEarningsMember
+2026-06-30
+0001318605
+us-gaap:ParentMember
+2026-06-30
+0001318605
+us-gaap:NoncontrollingInterestMember
+2026-06-30
+0001318605
+us-gaap:CommonStockMember
+2026-07-01
+2026-09-30
+0001318605
+us-gaap:AdditionalPaidInCapitalMember
+2026-07-01
+2026-09-30
+0001318605
+us-gaap:ParentMember
+2026-07-01
+2026-09-30
+0001318605
+us-gaap:NoncontrollingInterestMember
+2026-07-01
+2026-09-30
+0001318605
+us-gaap:RetainedEarningsMember
+2026-07-01
+2026-09-30
+0001318605
+us-gaap:AccumulatedOtherComprehensiveIncomeMember
+2026-07-01
+2026-09-30
+0001318605
+us-gaap:CommonStockMember
+2026-09-30
+0001318605
+us-gaap:AdditionalPaidInCapitalMember
+2026-09-30
+0001318605
+us-gaap:AccumulatedOtherComprehensiveIncomeMember
+2026-09-30
+0001318605
+us-gaap:RetainedEarningsMember
+2026-09-30
+0001318605
+us-gaap:ParentMember
+2026-09-30
+0001318605
+us-gaap:NoncontrollingInterestMember
+2026-09-30
+0001318605
+us-gaap:CommonStockMember
+2025-12-31
+0001318605
+us-gaap:AdditionalPaidInCapitalMember
+2025-12-31
+0001318605
+us-gaap:AccumulatedOtherComprehensiveIncomeMember
+2025-12-31
+0001318605
+us-gaap:RetainedEarningsMember
+2025-12-31
+0001318605
+us-gaap:ParentMember
+2025-12-31
+0001318605
+us-gaap:NoncontrollingInterestMember
+2025-12-31
+0001318605
+us-gaap:CommonStockMember
+2026-01-01
+2026-09-30
+0001318605
+us-gaap:AdditionalPaidInCapitalMember
+2026-01-01
+2026-09-30
+0001318605
+us-gaap:ParentMember
+2026-01-01
+2026-09-30
+0001318605
+us-gaap:NoncontrollingInterestMember
+2026-01-01
+2026-09-30
+0001318605
+us-gaap:RetainedEarningsMember
+2026-01-01
+2026-09-30
+0001318605
+us-gaap:AccumulatedOtherComprehensiveIncomeMember
+2026-01-01
+2026-09-30
+0001318605
+2025-06-30
+0001318605
+us-gaap:CommonStockMember
+2025-06-30
+0001318605
+us-gaap:AdditionalPaidInCapitalMember
+2025-06-30
+0001318605
+us-gaap:AccumulatedOtherComprehensiveIncomeMember
+2025-06-30
+0001318605
+us-gaap:RetainedEarningsMember
+2025-06-30
+0001318605
+us-gaap:ParentMember
+2025-06-30
+0001318605
+us-gaap:NoncontrollingInterestMember
+2025-06-30
+0001318605
+us-gaap:CommonStockMember
+2025-07-01
+2025-09-30
+0001318605
+us-gaap:AdditionalPaidInCapitalMember
+2025-07-01
+2025-09-30
+0001318605
+us-gaap:ParentMember
+2025-07-01
+2025-09-30
+0001318605
+us-gaap:NoncontrollingInterestMember
+2025-07-01
+2025-09-30
+0001318605
+us-gaap:RetainedEarningsMember
+2025-07-01
+2025-09-30
+0001318605
+us-gaap:AccumulatedOtherComprehensiveIncomeMember
+2025-07-01
+2025-09-30
+0001318605
+2025-09-30
+0001318605
+us-gaap:CommonStockMember
+2025-09-30
+0001318605
+us-gaap:AdditionalPaidInCapitalMember
+2025-09-30
+0001318605
+us-gaap:AccumulatedOtherComprehensiveIncomeMember
+2025-09-30
+0001318605
+us-gaap:RetainedEarningsMember
+2025-09-30
+0001318605
+us-gaap:ParentMember
+2025-09-30
+0001318605
+us-gaap:NoncontrollingInterestMember
+2025-09-30
+0001318605
+2024-12-31
+0001318605
+us-gaap:CommonStockMember
+2024-12-31
+0001318605
+us-gaap:AdditionalPaidInCapitalMember
+2024-12-31
+0001318605
+us-gaap:AccumulatedOtherComprehensiveIncomeMember
+2024-12-31
+0001318605
+us-gaap:RetainedEarningsMember
+2024-12-31
+0001318605
+us-gaap:ParentMember
+2024-12-31
+0001318605
+us-gaap:NoncontrollingInterestMember
+2024-12-31
+0001318605
+us-gaap:CommonStockMember
+2025-01-01
+2025-09-30
+0001318605
+us-gaap:AdditionalPaidInCapitalMember
+2025-01-01
+2025-09-30
+0001318605
+us-gaap:ParentMember
+2025-01-01
+2025-09-30
+0001318605
+us-gaap:NoncontrollingInterestMember
+2025-01-01
+2025-09-30
+0001318605
+us-gaap:RetainedEarningsMember
+2025-01-01
+2025-09-30
+0001318605
+us-gaap:AccumulatedOtherComprehensiveIncomeMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:EnergyGenerationAndStorageSalesMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:EnergyGenerationAndStorageSalesMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:EnergyGenerationAndStorageSalesMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:EnergyGenerationAndStorageSalesMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:SalesAndServicesMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:SalesAndServicesMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:SalesAndServicesMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:SalesAndServicesMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:EnergyGenerationAndStorageLeasingMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:EnergyGenerationAndStorageLeasingMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:EnergyGenerationAndStorageLeasingMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:EnergyGenerationAndStorageLeasingMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:AutomotiveSalesMember
+2026-09-30
+0001318605
+tsla:AutomotiveSalesMember
+2025-12-31
+0001318605
+tsla:AutomotiveSalesMember
+2026-10-01
+2026-09-30
+0001318605
+tsla:AutomotiveRegulatoryCreditsMember
+2026-09-30
+0001318605
+tsla:AutomotiveRegulatoryCreditsMember
+2026-10-01
+2026-09-30
+0001318605
+us-gaap:PrepaidExpenseAndOtherAssetsCurrent
+2026-09-30
+0001318605
+us-gaap:PrepaidExpenseAndOtherAssetsCurrent
+2025-12-31
+0001318605
+us-gaap:OtherAssetsNoncurrent
+2026-09-30
+0001318605
+us-gaap:OtherAssetsNoncurrent
+2025-12-31
+0001318605
+tsla:EnergyGenerationAndStorageSegmentMember
+2026-09-30
+0001318605
+tsla:EnergyGenerationAndStorageSegmentMember
+2025-12-31
+0001318605
+tsla:EnergyGenerationAndStorageSegmentMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:EnergyGenerationAndStorageSegmentMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:EnergyGenerationAndStorageSegmentMember
+2026-10-01
+2026-09-30
+0001318605
+tsla:StockBasedAwardsMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:StockBasedAwardsMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:StockBasedAwardsMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:StockBasedAwardsMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:MyPowerMember
+2026-09-30
+0001318605
+tsla:MyPowerMember
+2025-12-31
+0001318605
+us-gaap:USGovernmentDebtSecuritiesMember
+2026-09-30
+0001318605
+us-gaap:USGovernmentDebtSecuritiesMember
+us-gaap:FairValueInputsLevel1Member
+2026-09-30
+0001318605
+us-gaap:USGovernmentDebtSecuritiesMember
+us-gaap:FairValueInputsLevel2Member
+2026-09-30
+0001318605
+us-gaap:USGovernmentDebtSecuritiesMember
+us-gaap:FairValueInputsLevel3Member
+2026-09-30
+0001318605
+us-gaap:USGovernmentDebtSecuritiesMember
+2025-12-31
+0001318605
+us-gaap:USGovernmentDebtSecuritiesMember
+us-gaap:FairValueInputsLevel1Member
+2025-12-31
+0001318605
+us-gaap:USGovernmentDebtSecuritiesMember
+us-gaap:FairValueInputsLevel2Member
+2025-12-31
+0001318605
+us-gaap:USGovernmentDebtSecuritiesMember
+us-gaap:FairValueInputsLevel3Member
+2025-12-31
+0001318605
+us-gaap:CommercialPaperNotIncludedWithCashAndCashEquivalentsMember
+2026-09-30
+0001318605
+us-gaap:CommercialPaperNotIncludedWithCashAndCashEquivalentsMember
+us-gaap:FairValueInputsLevel1Member
+2026-09-30
+0001318605
+us-gaap:CommercialPaperNotIncludedWithCashAndCashEquivalentsMember
+us-gaap:FairValueInputsLevel2Member
+2026-09-30
+0001318605
+us-gaap:CommercialPaperNotIncludedWithCashAndCashEquivalentsMember
+us-gaap:FairValueInputsLevel3Member
+2026-09-30
+0001318605
+us-gaap:CommercialPaperNotIncludedWithCashAndCashEquivalentsMember
+2025-12-31
+0001318605
+us-gaap:CommercialPaperNotIncludedWithCashAndCashEquivalentsMember
+us-gaap:FairValueInputsLevel1Member
+2025-12-31
+0001318605
+us-gaap:CommercialPaperNotIncludedWithCashAndCashEquivalentsMember
+us-gaap:FairValueInputsLevel2Member
+2025-12-31
+0001318605
+us-gaap:CommercialPaperNotIncludedWithCashAndCashEquivalentsMember
+us-gaap:FairValueInputsLevel3Member
+2025-12-31
+0001318605
+us-gaap:FairValueInputsLevel1Member
+2026-09-30
+0001318605
+us-gaap:FairValueInputsLevel2Member
+2026-09-30
+0001318605
+us-gaap:FairValueInputsLevel3Member
+2026-09-30
+0001318605
+us-gaap:FairValueInputsLevel1Member
+2025-12-31
+0001318605
+us-gaap:FairValueInputsLevel2Member
+2025-12-31
+0001318605
+us-gaap:FairValueInputsLevel3Member
+2025-12-31
+0001318605
+tsla:CertificatesOfDepositAndTimeDepositsMember
+2026-09-30
+0001318605
+tsla:CertificatesOfDepositAndTimeDepositsMember
+us-gaap:FairValueInputsLevel1Member
+2026-09-30
+0001318605
+tsla:CertificatesOfDepositAndTimeDepositsMember
+us-gaap:FairValueInputsLevel2Member
+2026-09-30
+0001318605
+tsla:CertificatesOfDepositAndTimeDepositsMember
+us-gaap:FairValueInputsLevel3Member
+2026-09-30
+0001318605
+tsla:CertificatesOfDepositAndTimeDepositsMember
+2025-12-31
+0001318605
+tsla:CertificatesOfDepositAndTimeDepositsMember
+us-gaap:FairValueInputsLevel1Member
+2025-12-31
+0001318605
+tsla:CertificatesOfDepositAndTimeDepositsMember
+us-gaap:FairValueInputsLevel2Member
+2025-12-31
+0001318605
+tsla:CertificatesOfDepositAndTimeDepositsMember
+us-gaap:FairValueInputsLevel3Member
+2025-12-31
+0001318605
+us-gaap:MoneyMarketFundsMember
+2026-09-30
+0001318605
+us-gaap:MoneyMarketFundsMember
+us-gaap:FairValueInputsLevel1Member
+2026-09-30
+0001318605
+us-gaap:MoneyMarketFundsMember
+us-gaap:FairValueInputsLevel2Member
+2026-09-30
+0001318605
+us-gaap:MoneyMarketFundsMember
+us-gaap:FairValueInputsLevel3Member
+2026-09-30
+0001318605
+us-gaap:MoneyMarketFundsMember
+2025-12-31
+0001318605
+us-gaap:MoneyMarketFundsMember
+us-gaap:FairValueInputsLevel1Member
+2025-12-31
+0001318605
+us-gaap:MoneyMarketFundsMember
+us-gaap:FairValueInputsLevel2Member
+2025-12-31
+0001318605
+us-gaap:MoneyMarketFundsMember
+us-gaap:FairValueInputsLevel3Member
+2025-12-31
+0001318605
+us-gaap:CorporateDebtSecuritiesMember
+2026-09-30
+0001318605
+us-gaap:CorporateDebtSecuritiesMember
+us-gaap:FairValueInputsLevel1Member
+2026-09-30
+0001318605
+us-gaap:CorporateDebtSecuritiesMember
+us-gaap:FairValueInputsLevel2Member
+2026-09-30
+0001318605
+us-gaap:CorporateDebtSecuritiesMember
+us-gaap:FairValueInputsLevel3Member
+2026-09-30
+0001318605
+us-gaap:CorporateDebtSecuritiesMember
+2025-12-31
+0001318605
+us-gaap:CorporateDebtSecuritiesMember
+us-gaap:FairValueInputsLevel1Member
+2025-12-31
+0001318605
+us-gaap:CorporateDebtSecuritiesMember
+us-gaap:FairValueInputsLevel2Member
+2025-12-31
+0001318605
+us-gaap:CorporateDebtSecuritiesMember
+us-gaap:FairValueInputsLevel3Member
+2025-12-31
+0001318605
+tsla:SpaceXEquityInvestmentMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:SpaceXEquityInvestmentMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:BitcoinMember
+2026-09-30
+0001318605
+tsla:BitcoinMember
+2025-12-31
+0001318605
+us-gaap:CashMember
+2026-09-30
+0001318605
+us-gaap:MoneyMarketFundsMember
+2026-09-30
+0001318605
+us-gaap:CashMember
+2025-12-31
+0001318605
+us-gaap:MoneyMarketFundsMember
+2025-12-31
+0001318605
+tsla:SuperIntelligenceHardwareCompanyMember
+2026-04-01
+2026-06-30
+0001318605
+tsla:SuperIntelligenceHardwareCompanyMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:SuperIntelligenceHardwareCompanyMember
+2026-01-01
+2026-09-30
+0001318605
+us-gaap:CostOfRevenue
+2026-07-01
+2026-09-30
+0001318605
+us-gaap:CostOfRevenue
+2026-01-01
+2026-09-30
+0001318605
+us-gaap:CostOfRevenue
+2025-07-01
+2025-09-30
+0001318605
+us-gaap:CostOfRevenue
+2025-01-01
+2025-09-30
+0001318605
+tsla:MachineryEquipmentVehiclesAndOfficeFurnitureMember
+2026-09-30
+0001318605
+tsla:MachineryEquipmentVehiclesAndOfficeFurnitureMember
+2025-12-31
+0001318605
+us-gaap:LandAndBuildingMember
+2026-09-30
+0001318605
+us-gaap:LandAndBuildingMember
+2025-12-31
+0001318605
+us-gaap:TechnologyEquipmentMember
+2026-09-30
+0001318605
+us-gaap:TechnologyEquipmentMember
+2025-12-31
+0001318605
+us-gaap:ToolsDiesAndMoldsMember
+2026-09-30
+0001318605
+us-gaap:ToolsDiesAndMoldsMember
+2025-12-31
+0001318605
+us-gaap:LeaseholdImprovementsMember
+2026-09-30
+0001318605
+us-gaap:LeaseholdImprovementsMember
+2025-12-31
+0001318605
+us-gaap:ComputerEquipmentMember
+2026-09-30
+0001318605
+us-gaap:ComputerEquipmentMember
+2025-12-31
+0001318605
+us-gaap:ConstructionInProgressMember
+2026-09-30
+0001318605
+us-gaap:ConstructionInProgressMember
+2025-12-31
+0001318605
+tsla:RecourseDebtMember
+us-gaap:DelayedDrawTermLoanMember
+2026-09-30
+0001318605
+tsla:RecourseDebtMember
+us-gaap:DelayedDrawTermLoanMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:RecourseDebtMember
+tsla:RevolvingFacilitiesMember
+2026-09-30
+0001318605
+tsla:RecourseDebtMember
+tsla:RevolvingFacilitiesMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:RecourseDebtMember
+tsla:OtherRecourseDebtMember
+2026-09-30
+0001318605
+tsla:RecourseDebtMember
+tsla:OtherRecourseDebtMember
+srt:MinimumMember
+2026-09-30
+0001318605
+tsla:RecourseDebtMember
+tsla:OtherRecourseDebtMember
+srt:MaximumMember
+2026-09-30
+0001318605
+tsla:RecourseDebtMember
+tsla:OtherRecourseDebtMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:RecourseDebtMember
+2026-09-30
+0001318605
+tsla:NonrecourseDebtMember
+tsla:AutomotiveAssetBackedNotesMember
+2026-09-30
+0001318605
+tsla:NonrecourseDebtMember
+tsla:AutomotiveAssetBackedNotesMember
+srt:MinimumMember
+2026-09-30
+0001318605
+tsla:NonrecourseDebtMember
+tsla:AutomotiveAssetBackedNotesMember
+srt:MaximumMember
+2026-09-30
+0001318605
+tsla:NonrecourseDebtMember
+tsla:AutomotiveAssetBackedNotesMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:NonrecourseDebtMember
+tsla:ChinaWorkingCapitalFacilityMember
+2026-09-30
+0001318605
+tsla:NonrecourseDebtMember
+tsla:ChinaWorkingCapitalFacilityMember
+srt:MinimumMember
+2026-09-30
+0001318605
+tsla:NonrecourseDebtMember
+tsla:ChinaWorkingCapitalFacilityMember
+srt:MaximumMember
+2026-09-30
+0001318605
+tsla:NonrecourseDebtMember
+tsla:ChinaWorkingCapitalFacilityMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:NonrecourseDebtMember
+tsla:EnergyAssetBackedNotesMember
+2026-09-30
+0001318605
+tsla:NonrecourseDebtMember
+tsla:EnergyAssetBackedNotesMember
+srt:MinimumMember
+2026-09-30
+0001318605
+tsla:NonrecourseDebtMember
+tsla:EnergyAssetBackedNotesMember
+srt:MaximumMember
+2026-09-30
+0001318605
+tsla:NonrecourseDebtMember
+tsla:EnergyAssetBackedNotesMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:NonrecourseDebtMember
+2026-09-30
+0001318605
+tsla:RecourseDebtMember
+tsla:RcfCreditAgreementMember
+2025-12-31
+0001318605
+tsla:RecourseDebtMember
+tsla:RcfCreditAgreementMember
+2025-01-01
+2025-12-31
+0001318605
+tsla:RecourseDebtMember
+tsla:OtherRecourseDebtMember
+2025-12-31
+0001318605
+tsla:RecourseDebtMember
+tsla:OtherRecourseDebtMember
+srt:MinimumMember
+2025-12-31
+0001318605
+tsla:RecourseDebtMember
+tsla:OtherRecourseDebtMember
+srt:MaximumMember
+2025-12-31
+0001318605
+tsla:RecourseDebtMember
+tsla:OtherRecourseDebtMember
+2025-01-01
+2025-12-31
+0001318605
+tsla:RecourseDebtMember
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:AutomotiveAssetBackedNotesMember
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:AutomotiveAssetBackedNotesMember
+srt:MinimumMember
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:AutomotiveAssetBackedNotesMember
+srt:MaximumMember
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:AutomotiveAssetBackedNotesMember
+2025-01-01
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:ChinaWorkingCapitalFacilityMember
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:ChinaWorkingCapitalFacilityMember
+srt:MinimumMember
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:ChinaWorkingCapitalFacilityMember
+srt:MaximumMember
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:ChinaWorkingCapitalFacilityMember
+2025-01-01
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:EnergyAssetBackedNotesMember
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:EnergyAssetBackedNotesMember
+srt:MinimumMember
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:EnergyAssetBackedNotesMember
+srt:MaximumMember
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:EnergyAssetBackedNotesMember
+2025-01-01
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:CashEquityDebtMember
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:CashEquityDebtMember
+srt:MinimumMember
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:CashEquityDebtMember
+srt:MaximumMember
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+tsla:CashEquityDebtMember
+2025-01-01
+2025-12-31
+0001318605
+tsla:NonrecourseDebtMember
+2025-12-31
+0001318605
+us-gaap:DelayedDrawTermLoanMember
+us-gaap:LineOfCreditMember
+tsla:TermLoanFacilityMember
+2026-09-30
+0001318605
+us-gaap:DelayedDrawTermLoanMember
+us-gaap:LineOfCreditMember
+tsla:TermLoanFacilityMember
+2026-09-01
+2026-09-30
+0001318605
+us-gaap:DelayedDrawTermLoanMember
+srt:ScenarioForecastMember
+us-gaap:LineOfCreditMember
+tsla:TermLoanFacilityMember
+2027-09-30
+0001318605
+us-gaap:DelayedDrawTermLoanMember
+srt:ScenarioForecastMember
+us-gaap:LineOfCreditMember
+tsla:TermLoanFacilityMember
+2027-12-31
+0001318605
+us-gaap:DelayedDrawTermLoanMember
+srt:ScenarioForecastMember
+us-gaap:LineOfCreditMember
+tsla:TermLoanFacilityMember
+2028-03-31
+0001318605
+us-gaap:LineOfCreditMember
+us-gaap:LineOfCreditMember
+tsla:RevolvingFacilitiesAgreementsMember
+2026-09-30
+0001318605
+us-gaap:LineOfCreditMember
+us-gaap:LineOfCreditMember
+tsla:CreditAgreementsMember
+2026-09-30
+0001318605
+us-gaap:LineOfCreditMember
+us-gaap:LineOfCreditMember
+tsla:FiveYearRevolvingCreditFacilityMember
+2026-09-01
+2026-09-30
+0001318605
+us-gaap:LineOfCreditMember
+us-gaap:LineOfCreditMember
+tsla:FiveYearRevolvingCreditFacilityMember
+2026-09-30
+0001318605
+us-gaap:LineOfCreditMember
+us-gaap:LineOfCreditMember
+tsla:A364DayRevolvingCreditFacilityMember
+2026-09-01
+2026-09-30
+0001318605
+us-gaap:LineOfCreditMember
+us-gaap:LineOfCreditMember
+tsla:A364DayRevolvingCreditFacilityMember
+2026-09-30
+0001318605
+us-gaap:LineOfCreditMember
+us-gaap:LineOfCreditMember
+tsla:RevolvingFacilitiesAgreementsMember
+tsla:SyndicateOfBanksMember
+2023-01-31
+0001318605
+us-gaap:WarehouseAgreementBorrowingsMember
+us-gaap:LineOfCreditMember
+2026-03-31
+0001318605
+us-gaap:WarehouseAgreementBorrowingsMember
+us-gaap:LineOfCreditMember
+srt:MinimumMember
+2026-01-01
+2026-03-31
+0001318605
+us-gaap:WarehouseAgreementBorrowingsMember
+us-gaap:LineOfCreditMember
+srt:MaximumMember
+2026-01-01
+2026-03-31
+0001318605
+us-gaap:WarehouseAgreementBorrowingsMember
+us-gaap:LineOfCreditMember
+2026-09-30
+0001318605
+us-gaap:SeniorNotesMember
+tsla:AutomotiveAssetBackedNotesMember
+2026-09-30
+0001318605
+us-gaap:SeniorNotesMember
+tsla:AutomotiveAssetBackedNotesMember
+2026-07-01
+2026-09-30
+0001318605
+us-gaap:SeniorNotesMember
+tsla:EnergyAssetBackedNotesMember
+2026-06-30
+0001318605
+us-gaap:SeniorNotesMember
+tsla:EnergyAssetBackedNotesMember
+2026-04-01
+2026-06-30
+0001318605
+us-gaap:RestrictedStockMember
+srt:ChiefExecutiveOfficerMember
+2026-04-21
+2026-04-21
+0001318605
+us-gaap:RestrictedStockMember
+srt:ChiefExecutiveOfficerMember
+2026-01-01
+2026-04-20
+0001318605
+us-gaap:PerformanceSharesMember
+srt:ChiefExecutiveOfficerMember
+2026-04-01
+2026-06-30
+0001318605
+us-gaap:PerformanceSharesMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+us-gaap:ShareBasedCompensationAwardTrancheOneMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+us-gaap:ShareBasedCompensationAwardTrancheOneMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+us-gaap:ShareBasedCompensationAwardTrancheTwoMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+us-gaap:ShareBasedCompensationAwardTrancheTwoMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+us-gaap:ShareBasedCompensationAwardTrancheThreeMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+us-gaap:ShareBasedCompensationAwardTrancheThreeMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheFourMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheFourMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheFiveMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheFiveMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheSixMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheSixMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheSevenMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheSevenMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheEightMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheEightMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheNineMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheNineMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheTenMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheTenMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheElevenMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheElevenMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheTwelveMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:ShareBasedPaymentArrangementTrancheTwelveMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:MilestoneNumberOneMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:MilestoneNumberTwoMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:MilestoneNumberThreeMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:MilestoneNumberFourMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:MilestoneNumberFiveMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:MilestoneNumberSixMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:MilestoneNumberSevenMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:MilestoneNumberEightMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:MilestoneNumberNineMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:MilestoneNumberTenMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:MilestoneNumberElevenMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:MilestoneNumberTwelveMember
+srt:ChiefExecutiveOfficerMember
+2025-09-03
+2025-09-03
+0001318605
+us-gaap:PerformanceSharesMember
+tsla:MilestoneNumberOneMember
+srt:ChiefExecutiveOfficerMember
+2026-01-01
+2026-09-30
+0001318605
+us-gaap:PerformanceSharesMember
+srt:ChiefExecutiveOfficerMember
+2026-07-01
+2026-09-30
+0001318605
+us-gaap:PerformanceSharesMember
+srt:ChiefExecutiveOfficerMember
+2026-01-01
+2026-09-30
+0001318605
+us-gaap:PerformanceSharesMember
+srt:ChiefExecutiveOfficerMember
+2026-09-30
+0001318605
+us-gaap:PerformanceSharesMember
+srt:MinimumMember
+srt:ChiefExecutiveOfficerMember
+2026-09-30
+0001318605
+us-gaap:PerformanceSharesMember
+srt:MaximumMember
+srt:ChiefExecutiveOfficerMember
+2026-09-30
+0001318605
+tsla:PerformanceBasedRestrictedStockUnitsAndStockOptionsMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:PerformanceBasedRestrictedStockUnitsAndStockOptionsMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:PerformanceBasedRestrictedStockUnitsAndStockOptionsMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:PerformanceBasedRestrictedStockUnitsAndStockOptionsMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:PerformanceBasedRestrictedStockUnitsAndStockOptionsMember
+2026-09-30
+0001318605
+us-gaap:ResearchAndDevelopmentExpense
+2026-07-01
+2026-09-30
+0001318605
+us-gaap:ResearchAndDevelopmentExpense
+2025-07-01
+2025-09-30
+0001318605
+us-gaap:ResearchAndDevelopmentExpense
+2026-01-01
+2026-09-30
+0001318605
+us-gaap:ResearchAndDevelopmentExpense
+2025-01-01
+2025-09-30
+0001318605
+us-gaap:SellingGeneralAndAdministrativeExpense
+2026-07-01
+2026-09-30
+0001318605
+us-gaap:SellingGeneralAndAdministrativeExpense
+2025-07-01
+2025-09-30
+0001318605
+us-gaap:SellingGeneralAndAdministrativeExpense
+2026-01-01
+2026-09-30
+0001318605
+us-gaap:SellingGeneralAndAdministrativeExpense
+2025-01-01
+2025-09-30
+0001318605
+2026-04-01
+2026-06-30
+0001318605
+tsla:IEEPATariffRefundMember
+tsla:EnergyGenerationAndStorageMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:IEEPATariffRefundMember
+tsla:AutomotiveSalesMember
+2026-07-01
+2026-09-30
+0001318605
+2024-05-24
+2024-06-13
+0001318605
+2024-08-06
+2024-08-06
+0001318605
+2023-09-30
+2023-09-30
+0001318605
+2025-08-01
+2025-08-01
+0001318605
+us-gaap:VariableInterestEntityPrimaryBeneficiaryMember
+2026-09-30
+0001318605
+us-gaap:VariableInterestEntityPrimaryBeneficiaryMember
+2025-12-31
+0001318605
+us-gaap:VariableInterestEntityPrimaryBeneficiaryMember
+tsla:OperatingLeaseVehiclesMember
+2026-09-30
+0001318605
+us-gaap:VariableInterestEntityPrimaryBeneficiaryMember
+tsla:OperatingLeaseVehiclesMember
+2025-12-31
+0001318605
+us-gaap:VariableInterestEntityPrimaryBeneficiaryMember
+tsla:EnergyGenerationAndStorageSystemsMember
+2026-09-30
+0001318605
+us-gaap:VariableInterestEntityPrimaryBeneficiaryMember
+tsla:EnergyGenerationAndStorageSystemsMember
+2025-12-31
+0001318605
+us-gaap:RelatedPartyMember
+2026-07-01
+2026-09-30
+0001318605
+us-gaap:RelatedPartyMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:SpaceXMember
+us-gaap:RelatedPartyMember
+2026-09-30
+0001318605
+tsla:SpaceXMember
+us-gaap:RelatedPartyMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:SpaceXMember
+us-gaap:RelatedPartyMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:SpaceXMember
+us-gaap:RelatedPartyMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:SpaceXMember
+us-gaap:RelatedPartyMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:SpaceXMember
+us-gaap:RelatedPartyMember
+2026-03-01
+2026-03-31
+0001318605
+tsla:SpaceXMember
+us-gaap:RelatedPartyMember
+2026-03-31
+0001318605
+tsla:AutomotiveSegmentMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:AutomotiveSegmentMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:AutomotiveSegmentMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:AutomotiveSegmentMember
+2025-01-01
+2025-09-30
+0001318605
+tsla:EnergyGenerationAndStorageSegmentMember
+2026-07-01
+2026-09-30
+0001318605
+tsla:EnergyGenerationAndStorageSegmentMember
+2025-07-01
+2025-09-30
+0001318605
+tsla:EnergyGenerationAndStorageSegmentMember
+2026-01-01
+2026-09-30
+0001318605
+tsla:EnergyGenerationAndStorageSegmentMember
+2025-01-01
+2025-09-30
+0001318605
+country:US
+2026-07-01
+2026-09-30
+0001318605
+country:US
+2025-07-01
+2025-09-30
+0001318605
+country:US
+2026-01-01
+2026-09-30
+0001318605
+country:US
+2025-01-01
+2025-09-30
+0001318605
+country:CN
+2026-07-01
+2026-09-30
+0001318605
+country:CN
+2025-07-01
+2025-09-30
+0001318605
+country:CN
+2026-01-01
+2026-09-30
+0001318605
+country:CN
+2025-01-01
+2025-09-30
+0001318605
+us-gaap:NonUsMember
+2026-07-01
+2026-09-30
+0001318605
+us-gaap:NonUsMember
+2025-07-01
+2025-09-30
+0001318605
+us-gaap:NonUsMember
+2026-01-01
+2026-09-30
+0001318605
+us-gaap:NonUsMember
+2025-01-01
+2025-09-30
+0001318605
+country:US
+2026-09-30
+0001318605
+country:US
+2025-12-31
+0001318605
+us-gaap:NonUsMember
+2026-09-30
+0001318605
+us-gaap:NonUsMember
+2025-12-31
+0001318605
+tsla:AutomotiveSegmentMember
+2026-09-30
+0001318605
+tsla:AutomotiveSegmentMember
+2025-12-31
+0001318605
+tsla:EnergyGenerationAndStorageSegmentMember
+2026-09-30
+0001318605
+tsla:EnergyGenerationAndStorageSegmentMember
+2025-12-31
+UNITED STATES
+SECURITIES AND EXCHANGE COMMISSION
+Washington, D.C. 20549
+FORM
+10-Q
+(Mark One)
+x
+QUARTERLY REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934
+For the quarterly period ended
+September 30, 2026
+OR
+o
+TRANSITION REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934
+For the transition period from _________ to _________
+Commission File Number:
+001-34756
+Tesla, Inc.
+(Exact name of registrant as specified in its charter)
+Texas
+91-2197729
+(State or other jurisdiction of
+incorporation or organization)
+(I.R.S. Employer
+Identification No.)
+1 Tesla Road
+Austin
+,
+Texas
+78725
+(Address of principal executive offices)
+(Zip Code)
+(
+512
+)
+516-8177
+(Registrant’s telephone number, including area code)
+Securities registered pursuant to Section 12(b) of the Act:
+Title of each class
+Trading Symbol(s)
+Name of each exchange on which registered
+Common stock
+TSLA
+The Nasdaq Global Select Market
+Indicate by check mark whether the registrant (1) has filed all reports required to be filed by Section 13 or 15(d) of the Securities Exchange Act of 1934 (“Exchange Act”) during the preceding 12 months (or for such shorter period that the registrant was required to file such reports), and (2) has been subject to such filing requirements for the past 90 days.
+Yes
+x
+No
+o
+Indicate by check mark whether the registrant has submitted electronically every Interactive Data File required to be submitted pursuant to Rule 405 of Regulation S-T (§232.405 of this chapter) during the preceding 12 months (or for such shorter period that the registrant was required to submit such files).
+Yes
+x
+No
+o
+Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company, or an emerging growth company. See the definitions of “large accelerated filer,” “accelerated filer,” “smaller reporting company” and “emerging growth company” in Rule 12b-2 of the Exchange Act:
+Large accelerated filer
+x
+Accelerated filer
+o
+Non-accelerated filer
+o
+Smaller reporting company
+o
+Emerging growth company
+o
+If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act.
+o
+Indicate by check mark whether the registrant is a shell company (as defined in Rule 12b-2 of the Exchange Act). Yes
+o
+No
+x
+As of October 15, 2026, there were
+3,952,757,946
+shares of the registrant’s common stock outstanding.
+TESLA, INC.
+FORM 10-Q FOR THE QUARTER ENDED SEPTEMBER 30, 2026
+INDEX
+Page
+PART I. FINANCIAL INFORMATION
+Item 1.
+Financial Statements
+4
+Consolidated Balance Sheets
+4
+Consolidated Statements of Operations
+5
+Consolidated Statements of Comprehensive Income
+6
+Consolidated Statements of Redeemable Noncontrolling Interests and Equity
+7
+Consolidated Statements of Cash Flows
+9
+Notes to Consolidated Financial Statements
+10
+Item 2.
+Management's Discussion and Analysis of Financial Condition and Results of Operations
+30
+Item 3.
+Quantitative and Qualitative Disclosures about Market Risk
+40
+Item 4.
+Controls and Procedures
+40
+PART II. OTHER INFORMATION
+Item 1.
+Legal Proceedings
+41
+Item 1A.
+Risk Factors
+41
+Item 2.
+Unregistered Sales of Equity Securities and Use of Proceeds
+41
+Item 3.
+Defaults Upon Senior Securities
+41
+Item 4.
+Mine Safety Disclosures
+41
+Item 5.
+Other Information
+41
+Item 6.
+Exhibits
+42
+Signatures
+43
+1
+Table of Contents
+Forward-Looking Statements
+The discussions in this Quarterly Report on Form 10-Q contain forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. Forward-looking statements are based on assumptions with respect to the future and management’s current expectations, involve certain risks and uncertainties and are not guarantees. These forward-looking statements include, but are not limited to, statements concerning supply chain constraints, our strategy, competition, future operations and production capacity, future financial position, future revenues, projected costs, profitability, expected cost reductions, capital adequacy, expectations regarding demand and acceptance for our technologies, growth opportunities and trends in the markets in which we operate, prospects and plans and objectives of management. The words “anticipates,” “believes,” “could,” “estimates,” “expects,” “intends,” “may,” “plans,” “projects,” “will,” “would,” “predicts” and similar expressions are intended to identify forward-looking statements, although not all forward-looking statements contain these identifying words. We may not actually achieve the plans, intentions or expectations disclosed in our forward-looking statements and you should not place undue reliance on our forward-looking statements. Future results may differ materially from the plans, intentions and expectations disclosed in the forward-looking statements that we make. These forward-looking statements involve risks and uncertainties that could cause our actual results to differ materially from those in the forward-looking statements, including, without limitation, the risks set forth in Part I, Item 1A, “Risk Factors” of the Annual Report on Form 10-K for the fiscal year ended December 31, 2025 and that are otherwise described or updated from time to time in our other filings with the Securities and Exchange Commission (the “SEC”). The discussion of such risks is not an indication that any such risks have occurred at the time of this filing. We do not assume any obligation to update any forward-looking statements.
+Table of Contents
+PART I. FINANCIAL INFORMATION
+ITEM 1. FINANCIAL STATEMENTS
+Tesla, Inc.
+Consolidated Balance Sheets
+(in millions, except per share data)
+(unaudited)
+September 30,
+2026
+December 31,
+2025
+Assets
+Current assets
+Cash and cash equivalents
+$
+17,853
+$
+16,513
+Short-term investments
+27,594
+27,546
+Accounts receivable, net
+4,636
+4,576
+Inventory
+14,092
+12,392
+Prepaid expenses and other current assets
+6,227
+7,615
+Total current assets
+70,402
+68,642
+Operating lease vehicles, net
+4,047
+4,912
+Energy generation and storage systems, net
+4,453
+4,604
+Property, plant and equipment, net
+50,591
+40,643
+Operating lease right-of-use assets
+6,555
+6,027
+Digital assets
+962
+1,008
+Deferred tax assets
+7,908
+6,925
+Other non-current assets
+12,599
+5,045
+Total assets
+$
+157,517
+$
+137,806
+Liabilities
+Current liabilities
+Accounts payable
+$
+17,239
+$
+13,371
+Accrued liabilities and other
+17,205
+13,279
+Deferred revenue
+4,661
+3,424
+Current portion of debt and finance leases
+1,387
+1,640
+Total current liabilities
+40,492
+31,714
+Debt and finance leases, net of current portion
+8,136
+6,736
+Deferred revenue, net of current portion
+4,126
+3,631
+Other long-term liabilities
+14,874
+12,860
+Total liabilities
+67,628
+54,941
+Commitments and contingencies (Note 11)
+Redeemable noncontrolling interests in subsidiaries
+54
+58
+Equity
+Stockholders’ equity
+Preferred stock; $
+0.001
+par value;
+100
+shares authorized;
+no
+shares issued and outstanding
+—
+—
+Common stock; $
+0.001
+par value;
+6,000
+shares authorized;
+3,953
+and
+3,751
+shares issued and outstanding as of September 30, 2026 and December 31, 2025, respectively
+4
+3
+Additional paid-in capital
+47,415
+42,770
+Accumulated other comprehensive income
+489
+361
+Retained earnings
+41,381
+39,003
+Total stockholders’ equity
+89,289
+82,137
+Noncontrolling interests in subsidiaries
+546
+670
+Total liabilities and equity
+$
+157,517
+$
+137,806
+The accompanying notes are an integral part of these consolidated financial statements.
+4
+Table of Contents
+Tesla, Inc.
+Consolidated Statements of Operations
+(in millions, except per share data)
+(unaudited)
+Three Months Ended September 30,
+Nine Months Ended September 30,
+2026
+2025
+2026
+2025
+Revenues
+Automotive sales
+$
+20,094
+$
+20,359
+$
+55,573
+$
+49,071
+Automotive regulatory credits
+113
+417
+639
+1,451
+Automotive leasing
+353
+429
+1,098
+1,311
+Total automotive revenues
+20,560
+21,205
+57,310
+51,833
+Energy generation and storage
+2,881
+3,415
+8,428
+8,934
+Services and other
+4,605
+3,475
+12,931
+9,159
+Total revenues
+28,046
+28,095
+78,669
+69,926
+Cost of revenues
+Automotive sales
+16,570
+17,365
+46,052
+42,393
+Automotive leasing
+184
+225
+567
+692
+Total automotive cost of revenues
+16,754
+17,590
+46,619
+43,085
+Energy generation and storage
+1,927
+2,342
+5,882
+6,230
+Services and other
+3,871
+3,109
+11,203
+8,526
+Total cost of revenues
+22,552
+23,041
+63,704
+57,841
+Gross profit
+5,494
+5,054
+14,965
+12,085
+Operating expenses
+Research and development
+2,761
+1,630
+7,078
+4,628
+Selling, general and administrative
+2,015
+1,562
+5,830
+4,179
+Restructuring and other
+—
+238
+—
+332
+Total operating expenses
+4,776
+3,430
+12,908
+9,139
+Income from operations
+718
+1,624
+2,057
+2,946
+Interest income
+445
+439
+1,301
+1,231
+Interest expense
+(
+90
+)
+(
+76
+)
+(
+263
+)
+(
+253
+)
+Other (expense) income, net
+(
+117
+)
+(
+28
+)
+(
+62
+)
+173
+Income before income taxes
+956
+1,959
+3,033
+4,097
+Provision for income taxes
+152
+570
+610
+1,098
+Net income
+804
+1,389
+2,423
+2,999
+Net income attributable to noncontrolling interests and redeemable noncontrolling interests in subsidiaries
+17
+16
+45
+45
+Net income attributable to common stockholders
+$
+787
+$
+1,373
+$
+2,378
+$
+2,954
+Net income per share of common stock attributable to common stockholders
+Basic
+$
+0.24
+$
+0.43
+$
+0.74
+$
+0.92
+Diluted
+$
+0.22
+$
+0.39
+$
+0.67
+$
+0.84
+Weighted average shares used in computing net income per share of common stock
+Basic
+3,240
+3,227
+3,237
+3,223
+Diluted
+3,541
+3,526
+3,539
+3,523
+The accompanying notes are an integral part of these consolidated financial statements.
+5
+Table of Contents
+Tesla, Inc.
+Consolidated Statements of Comprehensive Income
+(in millions)
+(unaudited)
+Three Months Ended September 30,
+Nine Months Ended September 30,
+2026
+2025
+2026
+2025
+Net income
+$
+804
+$
+1,389
+$
+2,423
+$
+2,999
+Other comprehensive income:
+Foreign currency translation adjustment
+97
+46
+158
+882
+Unrealized net (loss) gain on short-term investments, net of tax
+(
+9
+)
+3
+(
+30
+)
+(
+5
+)
+Total other comprehensive income
+88
+49
+128
+877
+Comprehensive income
+892
+1,438
+2,551
+3,876
+Less: Comprehensive income attributable to noncontrolling interests and redeemable noncontrolling interests in subsidiaries
+17
+16
+45
+45
+Comprehensive income attributable to common stockholders
+$
+875
+$
+1,422
+$
+2,506
+$
+3,831
+The accompanying notes are an integral part of these consolidated financial statements.
+6
+Table of Contents
+Tesla, Inc.
+Consolidated Statements of Redeemable Noncontrolling Interests and Equity
+(in millions)
+(unaudited)
+Three Months Ended September 30, 2026
+Redeemable
+Noncontrolling
+Interests
+Common Stock
+Additional
+Paid-In
+Capital
+Accumulated
+Other
+Comprehensive Income
+Retained
+Earnings
+Total
+Stockholders’
+Equity
+Noncontrolling
+Interests in
+Subsidiaries
+Total
+Equity
+Shares
+Amount
+Balance as of June 30, 2026
+$
+54
+3,949
+$
+4
+$
+45,859
+$
+401
+$
+40,594
+$
+86,858
+$
+607
+$
+87,465
+Issuance of common stock for equity incentive awards
+—
+4
+—
+314
+—
+—
+314
+—
+314
+Stock-based compensation
+—
+—
+—
+1,242
+—
+—
+1,242
+—
+1,242
+Distributions to noncontrolling interests
+(
+2
+)
+—
+—
+—
+—
+—
+—
+(
+76
+)
+(
+76
+)
+Net income
+2
+—
+—
+—
+—
+787
+787
+15
+802
+Other comprehensive income
+—
+—
+—
+—
+88
+—
+88
+—
+88
+Balance as of September 30, 2026
+$
+54
+3,953
+$
+4
+$
+47,415
+$
+489
+$
+41,381
+$
+89,289
+$
+546
+$
+89,835
+Nine Months Ended September 30, 2026
+Redeemable
+Noncontrolling
+Interests
+Common Stock
+Additional
+Paid-In
+Capital
+Accumulated
+Other
+Comprehensive
+Income
+Retained
+Earnings
+Total
+Stockholders’
+Equity
+Noncontrolling
+Interests in
+Subsidiaries
+Total
+Equity
+Shares
+Amount
+Balance as of December 31, 2025
+$
+58
+3,751
+$
+3
+$
+42,770
+$
+361
+$
+39,003
+$
+82,137
+$
+670
+$
+82,807
+Issuance of common stock for equity incentive awards and acquisitions, net of transaction costs
+—
+202
+1
+997
+—
+—
+998
+—
+998
+Stock-based compensation
+—
+—
+—
+3,557
+—
+—
+3,557
+—
+3,557
+Distributions to noncontrolling interests
+(
+7
+)
+—
+—
+—
+—
+—
+—
+(
+162
+)
+(
+162
+)
+Buy-outs of noncontrolling interests
+(
+2
+)
+—
+—
+2
+—
+—
+2
+(
+2
+)
+—
+Shareholder settlement, net of $
+27
+tax
+—
+—
+—
+89
+—
+—
+89
+—
+89
+Net income
+5
+—
+—
+—
+—
+2,378
+2,378
+40
+2,418
+Other comprehensive income
+—
+—
+—
+—
+128
+—
+128
+—
+128
+Balance as of September 30, 2026
+$
+54
+3,953
+$
+4
+$
+47,415
+$
+489
+$
+41,381
+$
+89,289
+$
+546
+$
+89,835
+7
+Table of Contents
+Tesla, Inc.
+Consolidated Statements of Redeemable Noncontrolling Interests and Equity
+(in millions)
+(unaudited)
+Three Months Ended September 30, 2025
+Redeemable
+Noncontrolling
+Interests
+Common Stock
+Additional
+Paid-In
+Capital
+Accumulated
+Other
+Comprehensive Income
+Retained
+Earnings
+Total
+Stockholders’
+Equity
+Noncontrolling
+Interests in
+Subsidiaries
+Total
+Equity
+Shares
+Amount
+Balance as of June 30, 2025
+$
+61
+3,224
+$
+3
+$
+40,363
+$
+158
+$
+36,790
+$
+77,314
+$
+697
+$
+78,011
+Issuance of common stock for equity incentive awards
+—
+100
+—
+512
+—
+—
+512
+—
+512
+Stock-based compensation
+—
+—
+—
+722
+—
+—
+722
+—
+722
+Distributions to noncontrolling interests
+(
+3
+)
+—
+—
+—
+—
+—
+—
+(
+25
+)
+(
+25
+)
+Net income
+1
+—
+—
+—
+—
+1,373
+1,373
+15
+1,388
+Other comprehensive income
+—
+—
+—
+—
+49
+—
+49
+—
+49
+Balance as of September 30, 2025
+$
+59
+3,324
+$
+3
+$
+41,597
+$
+207
+$
+38,163
+$
+79,970
+$
+687
+$
+80,657
+Nine Months Ended September 30, 2025
+Redeemable
+Noncontrolling
+Interests
+Common Stock
+Additional
+Paid-In
+Capital
+Accumulated
+Other
+Comprehensive
+(Loss) Income
+Retained
+Earnings
+Total
+Stockholders’
+Equity
+Noncontrolling
+Interests in
+Subsidiaries
+Total
+Equity
+Shares
+Amount
+Balance as of December 31, 2024
+$
+63
+3,216
+$
+3
+$
+38,371
+$
+(
+670
+)
+$
+35,209
+$
+72,913
+$
+704
+$
+73,617
+Issuance of common stock for equity incentive awards
+—
+108
+—
+1,040
+—
+—
+1,040
+—
+1,040
+Stock-based compensation
+—
+—
+—
+2,076
+—
+—
+2,076
+—
+2,076
+Distributions to noncontrolling interests
+(
+7
+)
+—
+—
+—
+—
+—
+—
+(
+59
+)
+(
+59
+)
+Shareholder settlement, net
+—
+—
+—
+110
+—
+—
+110
+—
+110
+Net income
+3
+—
+—
+—
+—
+2,954
+2,954
+42
+2,996
+Other comprehensive income
+—
+—
+—
+—
+877
+—
+877
+—
+877
+Balance as of September 30, 2025
+$
+59
+3,324
+$
+3
+$
+41,597
+$
+207
+$
+38,163
+$
+79,970
+$
+687
+$
+80,657
+The accompanying notes are an integral part of these consolidated financial statements.
+8
+Table of Contents
+Tesla, Inc.
+Consolidated Statements of Cash Flows
+(in millions)
+(unaudited)
+Nine Months Ended September 30,
+2026
+2025
+Cash Flows from Operating Activities
+Net income
+$
+2,423
+$
+2,999
+Adjustments to reconcile net income to net cash provided by operating activities:
+Depreciation, amortization and impairment
+5,061
+4,505
+Stock-based compensation
+3,346
+1,871
+Inventory write-downs
+230
+313
+Foreign currency transaction net unrealized loss
+901
+160
+Deferred income taxes
+(
+658
+)
+234
+SpaceX equity investment unrealized gain
+(
+863
+)
+—
+Digital assets unrealized loss (gain)
+46
+(
+239
+)
+Non-cash interest and other operating activities
+43
+235
+Changes in operating assets and liabilities:
+Accounts receivable
+(
+188
+)
+(
+306
+)
+Inventory
+(
+1,976
+)
+(
+416
+)
+Operating lease vehicles
+300
+54
+Prepaid expenses and other assets
+(
+2,846
+)
+(
+2,280
+)
+Accounts payable, accrued and other liabilities
+7,332
+2,979
+Deferred revenue
+1,746
+825
+Net cash provided by operating activities
+14,897
+10,934
+Cash Flows from Investing Activities
+Purchases of property and equipment excluding finance leases, net of sales
+(
+13,014
+)
+(
+6,134
+)
+Purchase of SpaceX equity investment
+(
+2,002
+)
+—
+Purchases of short-term investments
+(
+22,646
+)
+(
+24,902
+)
+Proceeds from maturities of short-term investments
+22,741
+22,086
+Purchase of intangible assets
+(
+7
+)
+—
+Net cash used in investing activities
+(
+14,928
+)
+(
+8,950
+)
+Cash Flows from Financing Activities
+Proceeds from issuances of debt
+5,834
+4,232
+Repayments of debt
+(
+4,954
+)
+(
+4,798
+)
+Debt issuance costs
+(
+53
+)
+(
+5
+)
+Proceeds from exercises of stock options and other stock issuances, net of issuance costs
+782
+1,040
+Principal payments on finance leases
+(
+63
+)
+(
+85
+)
+Proceeds received from directors in shareholder settlement
+—
+277
+Recovery (payment) of legal fees associated with shareholder settlement
+116
+(
+176
+)
+Distributions paid to noncontrolling interests in subsidiaries
+(
+126
+)
+(
+56
+)
+Net cash provided by financing activities
+1,536
+429
+Effect of exchange rate changes on cash and cash equivalents and restricted cash
+(
+115
+)
+134
+Net increase in cash and cash equivalents and restricted cash
+1,390
+2,547
+Cash and cash equivalents and restricted cash, beginning of period
+17,616
+17,037
+Cash and cash equivalents and restricted cash, end of period
+$
+19,006
+$
+19,584
+Supplemental Non-Cash Investing and Financing Activities
+Acquisitions of property and equipment included in liabilities
+$
+3,667
+$
+1,631
+Leased assets obtained in exchange for operating lease liabilities
+$
+1,309
+$
+1,171
+Tax credits for property and equipment included in assets
+$
+857
+$
+164
+Leased assets obtained in exchange for finance lease liabilities
+$
+98
+$
+—
+The accompanying notes are an integral part of these consolidated financial statements.
+9
+Table of Contents
+Tesla, Inc.
+Notes to Consolidated Financial Statements
+(unaudited)
+Note 1 –
+Summary of Significant Accounting Policies
+Unaudited Interim Financial Statements
+The consolidated financial statements of Tesla, Inc. (“Tesla”, the “Company”, “we”, “us” or “our”), including the consolidated balance sheet as of September 30, 2026, the consolidated statements of operations, the consolidated statements of comprehensive income and the consolidated statements of redeemable noncontrolling interests and equity for the three and nine months ended September 30, 2026 and 2025, and the consolidated statements of cash flows for the nine months ended September 30, 2026 and 2025, as well as other information disclosed in the accompanying notes, are unaudited. The consolidated balance sheet as of December 31, 2025 was derived from the audited consolidated financial statements as of that date. The interim consolidated financial statements and the accompanying notes should be read in conjunction with the annual consolidated financial statements and the accompanying notes contained in our Annual Report on Form 10-K for the year ended December 31, 2025.
+The interim consolidated financial statements and the accompanying notes have been prepared on the same basis as the annual consolidated financial statements and, in the opinion of management, reflect all adjustments, which include only normal recurring adjustments, necessary for a fair statement of the results of operations for the periods presented. The consolidated results of operations for any interim period are not necessarily indicative of the results to be expected for the full year or for any other future years or interim periods.
+Reclassifications
+Certain prior period balances have been reclassified to conform to the current period presentation in the consolidated financial statements and the accompanying notes.
+Revenue Recognition
+Revenue by source
+The following table disaggregates our revenue by major source (in millions):
+Three Months Ended September 30,
+Nine Months Ended September 30,
+2026
+2025
+2026
+2025
+Automotive sales
+$
+20,094
+$
+20,359
+$
+55,573
+$
+49,071
+Automotive regulatory credits
+113
+417
+639
+1,451
+Energy generation and storage sales
+2,745
+3,281
+8,048
+8,548
+Services and other
+4,605
+3,475
+12,931
+9,159
+Total revenues from sales and services
+27,557
+27,532
+77,191
+68,229
+Automotive leasing
+353
+429
+1,098
+1,311
+Energy generation and storage leasing
+136
+134
+380
+386
+Total revenues
+$
+28,046
+$
+28,095
+$
+78,669
+$
+69,926
+Automotive Segment
+Automotive Sales
+Deferred revenue related to internet connectivity, access to our Full Self-Driving (“FSD”) (Supervised) features and their ongoing maintenance, free Supercharging programs and over-the-air software updates primarily on automotive sales amounted to $
+4.08
+billion and $
+3.87
+billion as of September 30, 2026 and December 31, 2025, respectively.
+10
+Table of Contents
+Deferred revenue is equivalent to the total transaction price allocated to the performance obligations that are unsatisfied, or partially unsatisfied, as of the balance sheet date. Revenue recognized from the deferred revenue balances as of December 31, 2025 and 2024 was $
+668
+million and $
+619
+million for the nine months ended September 30, 2026 and 2025, respectively. Of the total deferred revenue balance as of September 30, 2026, we expect to recognize $
+1.00
+billion of revenue in the next
+12
+months. The remaining balance will be recognized at the time of transfer of control of the product or over the performance period.
+We have financing receivables on our consolidated balance sheets related to loans we provide for financing our automotive deliveries. As of September 30, 2026 and December 31, 2025, we had current net financing receivables of $
+238
+million and $
+247
+million, respectively, in Accounts receivable, net, and $
+438
+million and $
+554
+million, respectively, in Other non-current assets for the long-term portion.
+We offer resale value guarantees to our commercial banking partners in connection with certain vehicle leasing programs. Under these programs, we originate the lease with our end customer and immediately transfer the lease and the underlying vehicle to our commercial banking partner, with the transaction being accounted for as a sale under ASC 606,
+Revenue from Contracts with Customers
+.
+We receive upfront payment for the vehicle, do not bear casualty and credit risks during the lease term, and we provide a guarantee capped to a limit if they are unable to sell the vehicle at or above the vehicle’s contractual or determined residual value at the end of the lease term. We estimate a guarantee liability in accordance with ASC 460,
+Guarantees
+and record it within other liabilities on our consolidated balance sheets. On a quarterly basis, we assess the estimated market value of vehicles sold under these programs to determine whether there have been changes to the amount of expected resale value guarantee liabilities. As we accumulate more data related to the resale values of our vehicles or as market conditions change, there may be material changes to their estimated values. The total recorded guarantee liabilities on vehicles sold under these programs were immaterial as of September 30, 2026 and December 31, 2025. Our maximum exposure on the guarantees we provide if they are unable to sell the vehicle at or above the vehicle’s contractual residual value at the end of the lease term was $
+4.42
+billion and $
+3.45
+billion as of September 30, 2026 and December 31, 2025, respectively.
+Automotive Regulatory Credits
+As of September 30, 2026, total transaction price allocated to performance obligations that were unsatisfied or partially unsatisfied for contracts with an original expected length of more than one year was $
+384
+million. Of this amount, we expect to recognize $
+201
+million in the next
+12
+months and the rest over the remaining performance obligation period. Changes in regulations on automotive regulatory credits may significantly impact our remaining performance obligations and revenue to be recognized under these contracts. Recent governmental and regulatory actions have restricted certain regulatory credit programs tied to our products. During the three and nine months ended September 30, 2026, we reversed $
+475
+million of automotive regulatory credits revenue for contractual return of previously delivered credits.
+Automotive Leasing Revenue
+Direct Sales-Type Leasing Program
+Lease receivables relating to sales-type leases are presented on the consolidated balance sheets as follows (in millions):
+September 30, 2026
+December 31, 2025
+Gross lease receivables
+$
+133
+$
+259
+Unearned interest income
+(
+5
+)
+(
+14
+)
+Allowance for expected credit losses
+(
+3
+)
+(
+5
+)
+Net investment in sales-type leases
+$
+125
+$
+240
+Reported as:
+Prepaid expenses and other current assets
+$
+80
+$
+130
+Other non-current assets
+45
+110
+Net investment in sales-type leases
+$
+125
+$
+240
+11
+Table of Contents
+Energy Generation and Storage Segment
+Energy Generation and Storage Sales
+We record as deferred revenue any non-refundable amounts that are primarily related to prepayments from customers, which is recognized as revenue as or when the performance obligations are satisfied. As of September 30, 2026 and December 31, 2025, deferred revenue related to such customer payments amounted to $
+3.30
+billion and $
+2.04
+billion, respectively, mainly due to contractual payment terms. Revenue recognized from the deferred revenue balances as of December 31, 2025 and 2024 was $
+1.44
+billion and $
+1.33
+billion for the nine months ended September 30, 2026 and 2025, respectively. We have elected the practical expedient to omit disclosure of the amount of the transaction price allocated to remaining performance obligations for contracts with an original expected contract length of one year or less and the amount that we have the right to invoice when that amount corresponds directly with the value of the performance to date. As of September 30, 2026, total transaction price allocated to performance obligations that were unsatisfied or partially unsatisfied for contracts with an original expected length of more than one year was $
+10.73
+billion. Of this amount, we expect to recognize $
+4.80
+billion in the next
+12
+months and the rest over the remaining performance obligation period. Changes in government and economic incentives or tariffs may impact the transaction price or our ability to execute these existing contracts.
+We have financing receivables on our consolidated balance sheets related to loans we provide for financing our energy products. As of September 30, 2026 and December 31, 2025, we had current net financing receivables of $
+42
+million and $
+38
+million, respectively, in Accounts receivable, net, and $
+675
+million and $
+731
+million, respectively, in Other non-current assets for the long-term portion.
+Income Taxes
+We are subject to income taxes in the U.S. and in many foreign jurisdictions. Significant judgment is required in determining our provision for income taxes, our deferred tax assets and liabilities and any valuation allowance recorded against our net deferred tax assets that are not more likely than not to be realized. We monitor the realizability of our deferred tax assets taking into account all relevant factors at each reporting period. In completing our assessment of realizability of our deferred tax assets, we consider our history of income (loss) measured at pre-tax income (loss) adjusted for permanent book-tax differences on a jurisdictional basis, volatility in actual earnings, excess tax benefits related to stock-based compensation in recent prior years and impacts of the timing of reversal of existing temporary differences. We also rely on our assessment of the Company’s projected future results of business operations, including uncertainty in future operating results relative to historical results, volatility in the market price of our common stock and its performance over time, variable macroeconomic conditions impacting our ability to forecast future taxable income, and changes in business that may affect the existence and magnitude of future taxable income. Our valuation allowance assessment is based on our best estimate of future results considering all available information.
+Our provision for income taxes for interim periods is determined using an estimate of our annual effective tax rate, adjusted for discrete items, if any, that are taken into account in the relevant period. Each quarter, we update our estimate of the annual effective tax rate, and if our estimated tax rate changes, we make a cumulative adjustment.
+Net Income per Share of Common Stock Attributable to Common Stockholders
+The following table presents the reconciliation of net income attributable to common stockholders to net income used in computing basic and diluted net income per share of common stock (in millions):
+Three Months Ended September 30,
+Nine Months Ended September 30,
+2026
+2025
+2026
+2025
+Net income attributable to common stockholders
+$
+787
+$
+1,373
+$
+2,378
+$
+2,954
+Less: Buy-outs of noncontrolling interest
+—
+—
+(
+2
+)
+—
+Net income used in computing basic and diluted net income per share of common stock
+$
+787
+$
+1,373
+$
+2,380
+$
+2,954
+12
+Table of Contents
+Restricted stock awards will be excluded from the computation of diluted weighted average shares until the shares have been deemed to be earned. The following table presents the reconciliation of basic to diluted weighted average shares used in computing net income per share of common stock attributable to common stockholders (in millions):
+Three Months Ended September 30,
+Nine Months Ended September 30,
+2026
+2025
+2026
+2025
+Weighted average shares used in computing net income per share of common stock, basic
+3,240
+3,227
+3,237
+3,223
+Add: Stock-based awards
+301
+299
+302
+300
+Weighted average shares used in computing net income per share of common stock, diluted
+3,541
+3,526
+3,539
+3,523
+The following table presents the potentially dilutive shares that were excluded from the computation of diluted net income per share of common stock attributable to common stockholders, because their effect was anti-dilutive (in millions):
+Three Months Ended September 30,
+Nine Months Ended September 30,
+2026
+2025
+2026
+2025
+Stock-based awards
+17
+5
+11
+13
+Restricted Cash
+Our total cash and cash equivalents and restricted cash, as presented in the consolidated statements of cash flows, was as follows (in millions):
+September 30,
+2026
+December 31,
+2025
+September 30,
+2025
+December 31,
+2024
+Cash and cash equivalents
+$
+17,853
+$
+16,513
+$
+18,289
+$
+16,139
+Restricted cash included in prepaid expenses and other current assets
+489
+389
+588
+494
+Restricted cash included in other non-current assets
+664
+714
+707
+404
+Total as presented in the consolidated statements of cash flows
+$
+19,006
+$
+17,616
+$
+19,584
+$
+17,037
+SpaceX Equity Investment
+We are presumed to have significant influence over our equity method investment in SpaceX under ASC 323,
+Equity Method Investments and Joint Ventures
+, as our CEO also serves as the CEO of SpaceX but as we do not have control over the investee, we have elected the fair value option in accordance with ASC 825,
+Financial Instruments,
+to provide a more relevant measure of the investment’s current economic value to financial statement users. The fair value is determined on a quarterly basis in accordance with ASC 820,
+Fair Value Measurement
+, based on market observable inputs. The equity investment is presented within Other non-current assets on our consolidated balance sheet. Realized and unrealized gains and losses are recorded to Other (expense) income, net in our consolidated statement of operations.
+See Note 13,
+Related Party Transactions
+, for further information regarding our equity investment.
+Accounts Receivable and Allowance for Doubtful Accounts
+Depending on the day of the week on which the end of a fiscal quarter falls, our accounts receivable balance may fluctuate as we are waiting for certain customer payments to clear through our banking institutions and receipts of payments from our financing partners, which can take up to approximately two weeks based on the contractual payment terms with such partners. Our accounts receivable balances associated with sales of energy storage products are dependent on billing milestones and payment terms negotiated for each contract, and our accounts receivable balances associated with our sales of regulatory credits are dependent on contractual payment terms.
+13
+Table of Contents
+Financing Receivables
+As of September 30, 2026 and December 31, 2025, the vast majority of our financing receivables were at current status with an immaterial balance being past due. As of September 30, 2026 and December 31, 2025, the majority of our financing receivables, excluding MyPower notes receivable, were originated from 2022 through 2025.
+As of September 30, 2026 and December 31, 2025, the total outstanding balance of MyPower customer notes receivable, net of allowance for expected credit losses, was $
+235
+million and $
+241
+million, respectively, of which immaterial amounts were due in the next 12 months. As of September 30, 2026 and December 31, 2025, the allowance for expected credit losses was $
+20
+million and $
+26
+million, respectively.
+Concentration of Risk
+Credit Risk
+Financial instruments that potentially subject us to a concentration of credit risk consist of cash, cash equivalents, short-term investments, restricted cash, accounts receivable and other finance receivables. Our cash and short-term investments balances are primarily on deposit at high credit quality financial institutions or invested in highly rated, investment-grade securities. These deposits are typically in excess of insured limits. As of September 30, 2026, one customer accounted for over 10% of our accounts receivable, all of which is current. As of December 31, 2025, no customer accounted for 10% or more of our total receivables balance.
+Supply Risk
+We are dependent on our suppliers, including single source suppliers, and the inability of these suppliers to deliver necessary components of our products in a timely manner at prices, quality levels and volumes acceptable to us, or our inability to efficiently manage these components from these suppliers, could have a material adverse effect on our business, prospects, financial condition and operating results.
+Warranties
+Accrued warranty activity consisted of the following (in millions):
+Three Months Ended September 30,
+Nine Months Ended September 30,
+2026
+2025
+2026
+2025
+Accrued warranty - beginning of period
+$
+8,963
+$
+7,512
+$
+8,607
+$
+6,716
+Warranty costs incurred
+(
+642
+)
+(
+464
+)
+(
+1,614
+)
+(
+1,254
+)
+Net changes in liability for pre-existing warranties, including expirations and foreign exchange impact
+1,220
+300
+1,514
+726
+Provision for warranty
+597
+727
+1,631
+1,887
+Accrued warranty - end of period
+$
+10,138
+$
+8,075
+$
+10,138
+$
+8,075
+Recent Accounting Pronouncements
+Recently issued accounting pronouncements not yet adopted
+In November 2024, the FASB issued ASU No. 2024-03, Disaggregation of Income Statement Expenses (Subtopic 220-40). The ASU requires the disaggregated disclosure of specific expense categories, including purchases of inventory, employee compensation, depreciation, and amortization, within relevant income statement captions. This ASU also requires disclosure of the total amount of selling expenses along with the definition of selling expenses. The ASU is effective for annual periods beginning after December 15, 2026, and interim periods within fiscal years beginning after December 15, 2027. Adoption of this ASU can either be applied prospectively to consolidated financial statements issued for reporting periods after the effective date of this ASU or retrospectively to any or all prior periods presented in the consolidated financial statements. Early adoption is also permitted. We are currently evaluating the provisions of this ASU and expect this ASU will likely result in the required additional disclosures being included in our consolidated financial statements, once adopted.
+14
+Table of Contents
+In September 2025, the FASB issued ASU No. 2025-06, Intangibles—Goodwill and Other—Internal-Use Software (Subtopic 350-40): Targeted Improvements to the Accounting for Internal-Use Software. The ASU simplifies the capitalization guidance by removing all references to prescriptive and sequential software development stages (referred to as “project stages”) throughout ASC 350-40. The ASU is effective for annual periods beginning after December 15, 2027, and interim periods within those fiscal years. Adoption of this ASU can be applied prospectively for reporting periods after its effective date; or following a modified transition approach that is based on the status of the respective projects and whether software costs were capitalized before the date of adoption; or retrospectively to any or all prior periods presented in the consolidated financial statements. Early adoption is permitted. We are currently evaluating the provisions of this ASU and do not expect this ASU to have a material impact on our consolidated financial statements.
+In December 2025, the FASB issued ASU No. 2025-10, Government Grants (Topic 832): Accounting for Government Grants Received by Business Entities. The ASU establishes authoritative guidance in GAAP about accounting for government grants received by business entities, clarifies the appropriate accounting, in an effort to reduce diversity in practice, and increase consistency of application across business entities. The ASU is effective for annual reporting periods beginning after December 15, 2028, and interim reporting periods within those annual reporting periods. Adoption of this ASU can be applied on a modified prospective approach, a modified retrospective approach, or a retrospective approach. Early adoption is permitted. We are currently evaluating the provisions of this ASU and do not expect this ASU to have a material impact on our consolidated financial statements.
+In December 2025, the FASB issued ASU No. 2025-11, Interim Reporting (Topic 270): Narrow-Scope Improvements. The ASU clarifies interim disclosure requirements and the applicability of Topic 270. The objective of the amendments is to provide further clarity about the current interim disclosure requirements. The ASU is effective for interim reporting periods within annual reporting periods beginning after December 15, 2027. Adoption of this ASU can be applied on either a prospective or a retrospective approach. Early adoption is permitted. We are currently evaluating the provisions of this ASU and do not expect this ASU to have a material impact on our consolidated financial statements.
+In December 2025, the FASB issued ASU No. 2025-12, Codification Improvements. The ASU addresses thirty-three items, representing the changes to the Codification that (1) clarify, (2) correct errors, or (3) make minor improvements. Generally, the amendments in this Update are not intended to result in significant changes for most entities. The ASU is effective for annual reporting periods beginning after December 15, 2026, and interim reporting periods within those annual reporting periods. The adoption method of this ASU may vary, on an issue-by-issue basis. Early adoption is permitted. We are currently evaluating the provisions of this ASU and do not expect this ASU to have a material impact on our consolidated financial statements.
+In May 2026, the FASB issued ASU No. 2026-02, Environmental Credits and Environmental Credit Obligations (Topic 818). The ASU establishes authoritative guidance for the accounting of environmental credits and environmental credit obligations, including recognition, measurement, presentation, and disclosure requirements, in an effort to reduce diversity in practice and increase consistency of application across reporting entities. The ASU is effective for annual reporting periods beginning after December 15, 2027, and interim reporting periods within those annual reporting periods. Adoption of this ASU should be applied on a retrospective basis through a cumulative-effect adjustment to the opening balance of retained earnings (or other appropriate components of equity or net assets on the balance sheet) as of the beginning of the annual reporting period of adoption, without recasting for any financial statement information before the period of adoption. Early adoption is permitted as of the beginning of an annual reporting period. We are currently evaluating the provisions of this ASU and do not expect this ASU to have a material impact on our consolidated financial statements.
+Recently adopted accounting pronouncements
+ASU 2025-05
+In July 2025, the FASB issued ASU No. 2025-05, Financial Instruments—Credit Losses (Topic 326): Measurement of Credit Losses for Accounts Receivable and Contract Assets. The amendments in this update provide a practical expedient permitting an entity to assume that conditions at the balance sheet date remain unchanged over the life of the asset when estimating expected credit losses for current classified accounts receivable and contract assets. We adopted this ASU on a prospective basis effective January 1, 2026 and did not elect the practical expedient permitted under this ASU. Therefore, the adoption has no impact on our consolidated financial statements.
+15
+Table of Contents
+Note 2 –
+Fair Value of Financial Instruments
+ASC 820,
+Fair Value Measurement
+, states that fair value is an exit price, representing the amount that would be received to sell an asset or paid to transfer a liability in an orderly transaction between market participants. As such, fair value is a market-based measurement that should be determined based on assumptions that market participants would use in pricing an asset or a liability. The three-tiered fair value hierarchy, which prioritizes which inputs should be used in measuring fair value, is comprised of: (Level I) observable inputs such as quoted prices in active markets; (Level II) inputs other than quoted prices in active markets that are observable either directly or indirectly and (Level III) unobservable inputs for which there is little or no market data. The fair value hierarchy requires the use of observable market data when available in determining fair value.
+Our assets and liabilities that were measured at fair value on a recurring basis were as follows (in millions):
+September 30, 2026
+December 31, 2025
+Fair Value
+Level I
+Level II
+Level III
+Fair Value
+Level I
+Level II
+Level III
+U.S. government securities
+$
+8,826
+$
+—
+$
+8,826
+$
+—
+$
+7,321
+$
+—
+$
+7,321
+$
+—
+Commercial paper
+6,623
+—
+6,623
+—
+5,617
+—
+5,617
+—
+SpaceX equity investment (1)
+2,865
+2,865
+—
+—
+—
+—
+—
+—
+Certificates of deposit and time deposits
+12,145
+—
+12,145
+—
+14,600
+—
+14,600
+—
+Money market funds
+2,816
+2,816
+—
+—
+1,890
+1,890
+—
+—
+Digital assets (2)
+962
+962
+—
+—
+1,008
+1,008
+—
+—
+Corporate debt securities
+—
+—
+—
+—
+8
+—
+8
+—
+Total
+$
+34,237
+$
+6,643
+$
+27,594
+$
+—
+$
+30,444
+$
+2,898
+$
+27,546
+$
+—
+(1)
+For the three months and nine months ended September 30, 2026, we recorded a $
+142
+million loss and $
+863
+million gain, respectively, on our SpaceX equity investment. During the third quarter of 2026, regulatory restrictions on the shares expired, resulting in the release of the previously applied discount for lack of marketability and the transfer of the investment from Level 2 to Level 1 within the fair value hierarchy. Additionally, the shares remain subject to customary sales restrictions in connection with the SpaceX initial public offering that expire in December 2026.
+(2)
+As of September 30, 2026 and December 31, 2025, the majority of our digital assets were comprised of
+11,509
+units of Bitcoin held at an acquisition cost of $
+386
+million.
+Our cash, cash equivalents and short-term investments classified by security type as of September 30, 2026 and December 31, 2025 consisted of the following (in millions):
+September 30, 2026
+Adjusted Cost
+Gross Unrealized Gains
+Gross Unrealized Losses
+Fair Value
+Cash and Cash Equivalents
+Short-Term Investments
+Cash
+$
+15,037
+$
+—
+$
+—
+$
+15,037
+$
+15,037
+$
+—
+U.S. government securities
+8,859
+—
+(
+33
+)
+8,826
+—
+8,826
+Commercial paper
+6,628
+—
+(
+5
+)
+6,623
+—
+6,623
+Certificates of deposit and time deposits
+12,150
+1
+(
+6
+)
+12,145
+—
+12,145
+Money market funds
+2,816
+—
+—
+2,816
+2,816
+—
+Total cash, cash equivalents and short-term investments
+$
+45,490
+$
+1
+$
+(
+44
+)
+$
+45,447
+$
+17,853
+$
+27,594
+16
+Table of Contents
+December 31, 2025
+Adjusted Cost
+Gross Unrealized Gains
+Gross Unrealized Losses
+Fair Value
+Cash and Cash Equivalents
+Short-Term Investments
+Cash
+$
+14,623
+$
+—
+$
+—
+$
+14,623
+$
+14,623
+$
+—
+Certificates of deposit and time deposits
+14,598
+2
+—
+14,600
+—
+14,600
+U.S. government securities
+7,318
+5
+(
+2
+)
+7,321
+—
+7,321
+Commercial paper
+5,619
+—
+(
+2
+)
+5,617
+—
+5,617
+Money market funds
+1,890
+—
+—
+1,890
+1,890
+—
+Corporate debt securities
+8
+—
+—
+8
+—
+8
+Total cash, cash equivalents and short-term investments
+$
+44,056
+$
+7
+$
+(
+4
+)
+$
+44,059
+$
+16,513
+$
+27,546
+As of September 30, 2026 and December 31, 2025, short-term investments held and restricted for our insurance business were $
+231
+million and $
+254
+million, respectively.
+As of September 30, 2026, the majority of our short-term investments had contractual maturity dates within one year.
+Disclosure of Fair Values
+Our financial instruments that are not re-measured at fair value include time deposits, accounts receivable, financing receivables, other receivables, accounts payable, accrued liabilities, customer deposits and debt. The carrying values of these financial instruments materially approximate their fair values.
+Note 3 –
+Acquisition
+In the second quarter of 2026, Tesla acquired a Super Intelligence (“SI”) hardware company in an asset acquisition for $
+1.95
+billion in Tesla common stock and equity awards, of which $
+1.73
+billion is subject to certain service conditions and/or performance milestones dependent on the successful deployment of the company's technology and $
+222
+million was allocated to a patent and related developed technology intangible asset. For the three and nine months ended September 30, 2026,
+no
+stock-based compensation expense related to the performance-based awards was recognized as the performance conditions were determined to be improbable.
+Note 4 –
+Inventory
+Our inventory consisted of the following (in millions):
+September 30,
+2026
+December 31,
+2025
+Raw materials
+$
+5,413
+$
+4,522
+Work in process
+2,009
+1,725
+Finished goods (1)
+5,243
+4,849
+Service parts
+1,427
+1,296
+Total
+$
+14,092
+$
+12,392
+(1)
+Finished goods inventory includes products-in-transit to fulfill customer orders, new vehicles, used vehicles and energy products available for sale.
+We write-down inventory for any excess or obsolete inventory or when we believe that the net realizable value of inventory is less than the carrying value. During the three and nine months ended September 30, 2026, we recorded write-downs of $
+40
+million and $
+217
+million, respectively, in Cost of revenues in the consolidated statements of operations. During the three and nine months ended September 30, 2025, we recorded write-downs of $
+65
+million and $
+275
+million, respectively, in Cost of revenues in the consolidated statements of operations.
+17
+Table of Contents
+Note 5 –
+Property, Plant and Equipment, Net
+Our property, plant and equipment, net, consisted of the following (in millions):
+September 30,
+2026
+December 31,
+2025
+Machinery, equipment, vehicles and office furniture
+$
+24,273
+$
+20,864
+Land and buildings
+13,224
+11,837
+SI infrastructure
+10,956
+6,816
+Tooling
+5,090
+4,868
+Leasehold improvements
+5,237
+4,439
+Computer equipment, hardware and software
+3,579
+3,206
+Construction in progress
+11,211
+8,786
+Property, plant and equipment
+73,570
+60,816
+Less: Accumulated depreciation
+(
+22,979
+)
+(
+20,173
+)
+Property, plant and equipment, net
+$
+50,591
+$
+40,643
+Construction in progress is primarily comprised of ongoing construction and expansion of our facilities, equipment and tooling related to the manufacturing of our products as well as SI infrastructure which have not yet been placed in service.
+Depreciation expense during the three and nine months ended September 30, 2026 was $
+1.58
+billion and $
+4.29
+billion, respectively. Depreciation expense during the three and nine months ended September 30, 2025 was $
+1.35
+billion and $
+3.65
+billion, respectively.
+Note 6 –
+Accrued Liabilities and Other
+Our accrued liabilities and other current liabilities consisted of the following (in millions):
+September 30,
+2026
+December 31,
+2025
+Accrued purchases (1)
+$
+4,369
+$
+2,417
+Accrued warranty reserve, current portion
+2,724
+2,475
+Payroll and related costs
+2,058
+1,805
+Customer deposits
+1,881
+1,311
+Taxes payable (2)
+1,747
+1,594
+Operating lease liabilities, current portion
+1,075
+954
+Sales return reserve, current portion
+747
+529
+Other current liabilities
+2,604
+2,194
+Total
+$
+17,205
+$
+13,279
+(1)
+Accrued purchases primarily reflects goods received and services incurred for which we had not yet been invoiced. As we are invoiced for these goods and services, this balance will reduce and accounts payable will increase.
+(2)
+Taxes payable primarily includes value added tax, income tax, sales tax, property tax and withholding tax payables.
+Note 7 –
+Other Long-Term Liabilities
+Our other long-term liabilities consisted of the following (in millions):
+September 30,
+2026
+December 31,
+2025
+Accrued warranty reserve
+$
+7,414
+$
+6,132
+Operating lease liabilities
+5,847
+5,389
+Other non-current liabilities
+1,613
+1,339
+Total other long-term liabilities
+$
+14,874
+$
+12,860
+18
+Table of Contents
+Note 8 –
+Debt
+The following is a summary of our debt and finance leases as of September 30, 2026 (in millions):
+Net Carrying Value
+Unpaid
+Principal
+Balance
+Unused
+Committed
+Amount (1)
+Contractual
+Interest Rates (2)
+Contractual
+Maturity Date
+Current
+Long-Term
+Recourse debt:
+Term Loan Facility
+$
+—
+$
+—
+$
+—
+$
+20,000
+Not applicable
+September 2029
+Revolving Facilities
+—
+—
+—
+10,000
+Not applicable
+September 2027
+-
+September 2031
+Other
+—
+2
+2
+—
+5.45
+-
+5.75
+%
+March 2030
+-
+January 2031
+Total recourse debt
+—
+2
+2
+30,000
+Non-recourse debt:
+Automotive Asset-backed Notes
+1,241
+1,414
+2,665
+—
+3.03
+-
+5.82
+%
+September 2027
+-
+June 2035
+China Working Capital Facility
+—
+5,966
+5,966
+—
+2.01
+-
+2.11
+%
+October 2026
+-
+September 2027
+(3)
+Energy Asset-backed Notes
+70
+574
+651
+—
+5.08
+-
+6.35
+%
+June 2050
+-
+May 2052
+Total non-recourse debt
+1,311
+7,954
+9,282
+—
+Total debt
+1,311
+7,956
+$
+9,284
+$
+30,000
+Finance leases
+76
+180
+Total debt and finance leases
+$
+1,387
+$
+8,136
+The following is a summary of our debt and finance leases as of December 31, 2025 (in millions):
+Net Carrying Value
+Unpaid
+Principal
+Balance
+Unused
+Committed
+Amount (1)
+Contractual
+Interest Rates (2)
+Contractual
+Maturity Date
+Current
+Long-Term
+Recourse debt:
+RCF Credit Agreement
+$
+—
+$
+—
+$
+—
+$
+5,000
+Not applicable
+January 2028
+Other
+1
+2
+3
+—
+4.70
+-
+5.75
+%
+January 2026
+-
+January 2031
+Total recourse debt
+1
+2
+3
+5,000
+Non-recourse debt:
+Automotive Asset-backed Notes
+1,492
+1,745
+3,249
+—
+2.47
+-
+6.57
+%
+October 2026
+-
+June 2035
+China Working Capital Facility
+—
+4,288
+4,288
+1,429
+2.01
+-
+2.11
+%
+March 2026
+-
+December 2026
+(3)
+Energy Asset-backed Notes
+55
+337
+397
+—
+5.08
+-
+6.25
+%
+June 2050
+Cash Equity Debt
+21
+212
+240
+—
+5.25
+-
+5.81
+%
+July 2034
+-
+January 2035
+Total non-recourse debt
+1,568
+6,582
+8,174
+1,429
+Total debt
+1,569
+6,584
+$
+8,177
+$
+6,429
+Finance leases
+71
+152
+Total debt and finance leases
+$
+1,640
+$
+6,736
+(1)
+For restrictions on draw-downs or use for general corporate purposes with respect to any available committed funds under our Revolving Facilities and Term Loan Facility, refer to the section below. Undrawn commitments under the Term Loan Facility are subject to automatic reductions, as described below, and draw-downs under the Revolving Facilities and the Term Loan Facility are subject to certain specified conditions. For restrictions on draw-downs or use for general corporate purposes with respect to any available committed funds under our other debt facilities, as applicable, refer to the notes to the consolidated financial statements included in our reporting on Form 10-K for the year ended December 31, 2025.
+(2)
+For undrawn amounts, refer to the respective narrative disclosure below for the contractual interest rate or to the notes to the consolidated financial statements included in our reporting on Form 10-K for the year ended December 31, 2025.
+(3)
+As we have the intent and ability to refinance the loan on a long-term basis, we classify it as Debt and finance leases, net of current portion in the consolidated balance sheets.
+Recourse debt refers to debt that is recourse to our general assets. Non-recourse debt refers to debt that is recourse to only assets of our subsidiaries. The differences between the unpaid principal balances and the net carrying values are due to debt discounts or deferred issuance costs. As of September 30, 2026, we were in material compliance with all financial debt covenants.
+19
+Table of Contents
+Term Loan Facility
+In September 2026, we entered into a senior unsecured delayed draw term loan facility with a commitment of $
+20.00
+billion, maturing in September 2029 (the "Term Loan Facility"). The
+3-year
+tenor is inclusive of an availability period of up to
+18
+months and is limited to
+ten
+draws. Undrawn commitments automatically reduce so that they do not exceed $
+10.00
+billion at 12 months after closing, $
+5.00
+billion at 15 months after closing and
+zero
+at 18 months after closing. Amounts repaid may not be reborrowed. Borrowings are available in U.S. dollars and may be used for general corporate purposes. Borrowed funds accrue interest at a variable rate equal to, at our election, Term SOFR or an alternate base rate, plus an applicable margin. The applicable margin will be based on the rating assigned to our senior, unsecured long-term indebtedness (or, in some cases, our issuer rating) (the "Credit Rating") from time to time. The fee for undrawn amounts is variable based on the Credit Rating and is currently
+0.10
+% per annum.
+Revolving Facilities
+In September 2026, we entered into
+two
+senior unsecured revolving credit facilities with aggregate commitments of $
+10.00
+billion (the "Revolving Facilities"), consisting of a
+5-year
+revolving credit facility with a commitment of $
+8.00
+billion, maturing in September 2031, and a
+364
+-day revolving credit facility with a commitment of $
+2.00
+billion, maturing in September 2027. The Revolving Facilities replaced our existing RCF Credit Agreement, which had a commitment of $
+5.00
+billion and was scheduled to mature in January 2028. The
+5-year
+facility contains
+two
+optional
+one-year
+extensions, and the
+364
+-day facility includes a
+one-year
+term-out option for loans outstanding at maturity, in each case subject to certain conditions. Commitments under the Revolving Facilities may be increased by up to $
+4.00
+billion in the aggregate under certain circumstances. The underlying borrowings may be used for general corporate purposes. The
+5-year
+facility is available in U.S. dollars, euros and pounds sterling. The
+364
+-day facility is available in U.S. dollars. Borrowed funds accrue interest at a variable rate equal to: (i) for dollar-denominated loans, at our election, Term SOFR or an alternate base rate; (ii) for loans denominated in pounds sterling, SONIA (the sterling overnight index average reference rate); or (iii) for loans denominated in euros, an adjusted EURIBOR (euro interbank offered rate); in each case, plus an applicable margin. The applicable margin will be based on the Credit Rating from time to time. The fee for undrawn amounts is variable based on the Credit Rating and is currently
+0.10
+% per annum under the
+5-year
+facility and
+0.08
+% per annum under the
+364
+-day facility.
+Warehouse Agreement
+In the first quarter of 2026, we entered into an uncommitted revolving Loan and Security Agreement (the "Warehouse Agreement") with a syndicate of banks. Under the Warehouse Agreement, we may borrow up to $
+1.50
+billion in total principal amount which is secured by certain financing receivables and/or beneficial interests related to certain leased vehicles. Subject to extension in accordance with the terms of the Warehouse Agreement, the ability to draw under the Warehouse Agreement expires in March 2027, and the maturity date for borrowings is the earlier of the end of the underlying lease and loan terms or March 2034. Amounts drawn under the Warehouse Agreement bear interest at a rate equal to Term SOFR plus
+0.65
+% to
+1.00
+%. As of September 30, 2026, we have
+no
+borrowings outstanding under the Warehouse Agreement.
+We are subject to certain conditions and limitations, including advance rate limits, a required reserve account, various performance triggers and excess concentration limits.
+Automotive Asset-backed Notes
+During the third quarter of 2026, we transferred beneficial interests related to certain leased vehicles into a special purpose entity and issued $
+709
+million in aggregate principal amount of Automotive Asset-backed Notes, with terms similar to our other previously issued Automotive Asset-backed Notes. The proceeds from the issuance, net of debt issuance costs, were $
+706
+million.
+Energy Asset-backed Notes
+In the second quarter of 2026, we transferred certain financing receivables into a special purpose entity (“SPE”) and issued $
+348
+million in aggregate principal amount of Energy Asset-backed Notes, backed by these financing receivables. The proceeds from issuance, net of debt issuance costs, were $
+344
+million. The SPE is wholly owned by us and is consolidated in the financial statements. The cash flows generated by these financing receivables are used to service the principal and interest payments on the Energy Asset-backed Notes and satisfy the SPE’s expenses, and any remaining cash is distributed to us. The SPE’s assets and cash flows are not available to our other creditors, and the creditors of the SPE, including the Energy Asset-backed Note holders, have no recourse to our other assets.
+20
+Table of Contents
+Note 9 –
+Equity Incentive Plans
+2025 CEO Interim Award
+Following the Delaware Supreme Court’s decision reversing the Court of Chancery’s rescission order and reinstating the performance-based stock option award our CEO was granted by the Company on January 21, 2018 (the “2018 CEO Performance Award”), on March 18, 2026 the Court of Chancery entered a final order implementing such reversal. On April 21, 2026 the Board approved the determination that the final order and judgment allowing our CEO to exercise the 2018 CEO Performance Award in full constituted a Tornetta Decision Event (as defined in the restricted stock award granted to our CEO on August 3, 2025 (the “2025 CEO Interim Award”), resulting in the immediate forfeiture of the
+96
+million shares associated with the 2025 CEO Interim Award. These actions are consistent with the “no double dip” principle, which precludes Mr. Musk from getting a windfall in the event that he may exercise the 2018 CEO Performance Award.
+No
+stock-based compensation expense was recognized related to the 2025 CEO Interim Award prior to the forfeiture.
+2026 Implementation Agreement
+On April 21, 2026 (the “effective date”), the Board approved the Company’s entry into an agreement with our CEO (the “Implementation Agreement”) implementing a process for our CEO’s exercise of the 2018 CEO Performance Award. During the quarter ended June 30, 2026, our CEO exercised approximately
+304.0
+million of the stock options underlying the 2018 CEO Performance Award and elected to net settle the exercise price of his options, which amounted to approximately
+17.5
+million shares.
+The Implementation Agreement imposed a service-based vesting condition on the restricted shares of common stock (the “Restricted Shares”) issued to our CEO upon exercise of the 2018 CEO Performance Award, requiring him to remain in continuous service as CEO or as an executive officer responsible for product development or operations (as approved by the Board’s disinterested directors) through January 19, 2028 (the “scheduled vesting date”), and commences a
+five-year
+holding period on the date the Restricted Shares vest (except in the case of death). The Implementation Agreement also provides for cooperation between the Company and our CEO to create a mutually-agreeable plan to address our CEO’s satisfaction of applicable tax obligations.
+We assessed whether there is any incremental fair value that needs to be recognized as a result of the Implementation Agreement. As of the effective date, we determined that the fair value of the original stock option awards immediately before the effective date was greater than the fair value of the Restricted Shares after the effective date. The stock options underlying the 2018 CEO Performance Award were fully vested and their grant-date fair value has already been fully recognized. As such, no incremental stock-based compensation expense will be recorded during the additional service period of the award.
+2025 CEO Performance Award
+On September 3, 2025 (the “2025 CEO Performance Award Grant Date”), the Board of Directors granted the 2025 CEO Performance Award to our CEO, consisting of approximately
+423.7
+million shares of performance-based restricted stock to our CEO, which was approved on November 6, 2025 by our shareholders (the “2025 CEO Performance Award Accounting Grant Date”).
+21
+Table of Contents
+Until such time as there are no shares under the 2025 CEO Performance Award that are not earned (the “Unearned Shares”), our CEO’s Unearned Shares will vote proportionately to the votes of all other shares of our capital stock that are present and entitled to vote at any annual or special meeting (or similar action) of our shareholders (including our CEO). Generally, each of the
+12
+tranches of the 2025 CEO Performance Award will become “Earned Shares” upon our CEO remaining in Eligible Service (as defined below) and the certification by disinterested directors that the following have been achieved: (i) the market capitalization milestone for such tranche and (ii) any one of the
+twelve
+operational milestones (clauses (i) and (ii), together the “Performance Milestones”). Our CEO will be able to direct the vote of such Earned Shares.
+Tranche #
+Number of Shares Subject to Tranche
+Market Capitalization Milestones (2)
+Operational Milestones
+Achievement Status
+1
+35,311,992
+$
+2.0
+trillion
+Achievement of any 1 of the 12 Operational Milestones
+-
+2
+35,311,992
+$
+2.5
+trillion
+Achievement of any 2 of the 12 Operational Milestones
+-
+3
+35,311,992
+$
+3.0
+trillion
+Achievement of any 3 of the 12 Operational Milestones
+-
+4
+35,311,992
+$
+3.5
+trillion
+Achievement of any 4 of the 12 Operational Milestones
+-
+5
+35,311,992
+$
+4.0
+trillion
+Achievement of any 5 of the 12 Operational Milestones
+-
+6
+35,311,992
+$
+4.5
+trillion
+Achievement of any 6 of the 12 Operational Milestones
+-
+7
+35,311,992
+$
+5.0
+trillion
+Achievement of any 7 of the 12 Operational Milestones
+-
+8
+35,311,992
+$
+5.5
+trillion
+Achievement of any 8 of the 12 Operational Milestones
+-
+9
+35,311,992
+$
+6.0
+trillion
+Achievement of any 9 of the 12 Operational Milestones
+-
+10
+35,311,992
+$
+6.5
+trillion
+Achievement of any 10 of the 12 Operational Milestones
+-
+11
+35,311,992
+$
+7.5
+trillion
+Achievement of any 11 of the 12 Operational Milestones (1)
+-
+12
+35,311,992
+$
+8.5
+trillion
+Achievement of all 12 of the 12 Operational Milestones (1)
+-
+Total
+423,743,904
+(1)
+The 11th and 12th tranches are earned upon the later of (i) the date on which the last Performance Milestone applicable to such tranche is completed and (ii) the date on which the CEO succession framework developed by our CEO is approved by the Board of Directors.
+(2)
+Market capitalization milestones are measured on a trailing average basis over both a
+six-month
+period and a
+30-day
+period. Achievement may also be measured over a
+one-year
+period in connection with the deemed achievement of certain product goals.
+The operational milestones generally required for any shares to become Earned Shares are defined as follows:
+Milestone #
+Operational Milestones (3)
+1
+20
+million Tesla vehicles delivered
+2
+10
+million active FSD subscriptions
+3
+1
+million bots delivered
+4
+1
+million Robotaxis in commercial operation
+5
+$
+50
+billion of Adjusted EBITDA
+6
+$
+80
+billion of Adjusted EBITDA
+7
+$
+130
+billion of Adjusted EBITDA
+8
+$
+210
+billion of Adjusted EBITDA
+9
+$
+300
+billion of Adjusted EBITDA
+10
+$
+400
+billion of Adjusted EBITDA (4)
+11
+$
+400
+billion of Adjusted EBITDA (4)
+12
+$
+400
+billion of Adjusted EBITDA (4)
+(3)
+Adjusted EBITDA is defined as net income (loss) attributable to common stockholders before interest expense, provision (benefit) for income taxes, depreciation, amortization and impairment, stock-based compensation and digital assets gains and losses for the
+four
+consecutive quarters that immediately precede such determination date.
+(4)
+Meeting the last three Adjusted EBITDA operational milestones requires achieving Adjusted EBITDA of $
+400
+billion in
+three
+non-overlapping periods, each made up of
+four
+consecutive quarters.
+22
+Table of Contents
+The vesting date for each tranche of shares depends on when such shares become Earned Shares, which is based on the achievement of Performance Milestones. Generally, shares earned prior to the 5th anniversary of the 2025 CEO Performance Award Grant Date vest on the 7.5th anniversary, and shares that are earned after the 5th anniversary of the 2025 CEO Performance Award Grant Date vest on the 10th anniversary (each such
+7.5
+and
+10-year
+period, a “Post-Milestone Service Period”), in each case our CEO must maintain continued employment either as our CEO or as an executive officer responsible for product development or operations through the applicable Post-Milestone Service Period (“Eligible Service”). Upon vesting, the vested shares will be reduced by an offset amount of $
+334.09
+per share, unless our CEO elects to pay such amounts in cash.
+Unearned Shares will be forfeited and returned upon the
+10-year
+anniversary of the 2025 CEO Performance Award Grant Date. Unvested shares (including any Earned Shares that have not vested) will be forfeited upon cessation of Eligible Service. Any stock-based compensation expense related to forfeited shares will be reversed during the period in which such a forfeiture occurs.
+Our CEO must hold shares for
+five years
+after they become Earned Shares (regardless of whether such Earned Shares vest), subject to exceptions on or after vesting for (i) a change in control, (ii) satisfying taxes due in respect of vesting or (iii) transfers for estate planning purposes that involve a mere change of form or as may be permitted by our disinterested directors in their discretion consistent with our internal policies.
+Stock-based compensation expense recognition commences when an operational milestone is considered probable of achievement regardless of the progress made towards achieving the next market capitalization milestone. The probability of meeting an operational milestone is based on a subjective assessment of the product roadmap, regulatory environment, industry and adoption trends, competitive environment, macroeconomic conditions and risks, and our future financial projections, among other estimates and assumptions. These inputs, which are subjective and generally require significant judgment, are based on historical experience, as appropriate, and on various other assumptions that we believe to be reasonable under the circumstances. Changes in the accounting estimates are reasonably likely to occur from period to period. Accordingly, actual results could differ significantly from the estimates made by our management.
+Once an operational milestone is considered probable of achievement, stock-based compensation expense associated with the tranche will be recognized over the relevant Post-Milestone Service Period, which is based on the expected achievement date of the operational milestone. Changes to the expected achievement date of the operational milestone could impact the fair value of the applicable tranche of the award. By design of this award, the recognition period will be approximately
+7.5
+or
+10
+years from the 2025 CEO Performance Award Accounting Grant Date. Stock-based compensation expense associated with this award is recorded as Selling, general and administrative expense on our consolidated statement of operations.
+As of September 30, 2026, we determined that the operational milestone involving the delivery of
+20
+million Tesla vehicles is probable over the term of the award based on our current assumptions. For the three and nine months ended September 30, 2026, we recorded stock-based compensation expense of $
+275
+million and $
+802
+million, respectively, related to the 2025 CEO Performance Award. Based on our current estimate of the achievement date, we had unrecognized stock-based compensation expense of $
+9.74
+billion for the operational milestone that was considered probable of achievement over the term of the award, which we expect to be recognized over
+8.9
+years.
+For the operational milestones that were considered not probable of achievement, we had unrecognized stock-based compensation expense of $
+105.82
+billion to $
+120.37
+billion.
+23
+Table of Contents
+Other Performance-Based Grants
+From time to time, the Compensation Committee of our Board of Directors grants certain employees performance-based restricted stock units and stock options.
+For the three and nine months ended September 30, 2026, we recorded $
+124
+million and $
+398
+million, respectively, of stock-based compensation expense related to these grants, net of forfeitures. For the three and nine months ended September 30, 2025, we recorded $
+93
+million and $
+185
+million, respectively, of stock-based compensation expense related to these grants, net of forfeitures. Stock-based compensation expense related to these grants, net of forfeitures, is recorded primarily in Research and development in the consolidated statements of operations.
+As of September 30, 2026, we had $
+580
+million of unrecognized stock-based compensation expense related to awards that are probable of achievement, which we estimate will be recognized over a weighted-average period of
+2.9
+years. In addition, there was $
+3.22
+billion of unrecognized stock-based compensation expense related to awards that are not currently probable of achievement, which may be recognized in future periods if the performance conditions become probable of being met.
+Summary Stock-Based Compensation Information
+The following table summarizes our stock-based compensation expense by line item in the consolidated statements of operations (in millions):
+Three Months Ended September 30,
+Nine Months Ended September 30,
+2026
+2025
+2026
+2025
+Cost of revenues
+$
+239
+$
+207
+$
+724
+$
+629
+Research and development
+513
+335
+1,421
+910
+Selling, general and administrative
+413
+121
+1,201
+332
+Total
+$
+1,165
+$
+663
+$
+3,346
+$
+1,871
+Note 10 –
+Income Taxes
+Our effective tax rate was
+16
+% and
+20
+% for the three and nine months ended September 30, 2026, respectively, compared to
+29
+% and
+27
+% for the three and nine months ended September 30, 2025, respectively. The decreases in our effective tax rates were primarily due to changes in the mix of our jurisdictional earnings, partially offset by the non-deductibility of stock-based compensation expense related to the 2025 CEO Performance Award. Additionally, our provision for income taxes for the nine months ended September 30, 2026 included a release of the valuation allowance on our California deferred tax assets other than research and development tax credits during the second quarter of 2026.
+During the three months ended June 30, 2026, following the enactment of California Senate Bill 122 (SB 122) into law and based on the relevant weight of positive and negative evidence, including the consideration of our expected California tax liabilities, we concluded that it is more likely than not that our California deferred tax assets, other than research and development tax credits, are realizable. Accordingly, we released the valuation allowance related to these California deferred tax assets. The release of this valuation allowance and an immaterial accrual of pillar two tax resulted in a $
+274
+million income tax benefit that was included in our provision for income taxes for the three months ended June 30, 2026.
+Our effective tax rates for the three and nine months ended September 30, 2026 and 2025 as compared to the U.S. federal statutory rate of 21% were primarily impacted by the mix of our jurisdictional earnings subject to different tax rates, changes in the valuation allowance on our deferred tax assets, tax deduction limitations on executive compensation expense, and benefits from our U.S. research and development credits and manufacturing production credits.
+24
+Table of Contents
+Note 11 –
+Commitments and Contingencies
+Tariffs
+In February 2026, the U.S. Supreme Court issued a ruling invalidating certain tariffs previously imposed under the International Emergency Economic Powers Act (IEEPA). As a result of this ruling, we are eligible for a refund of tariffs previously paid on imported goods. During the three months ended September 30, 2026, we recognized IEEPA tariff refunds of $
+526
+million and $
+260
+million as reductions to energy generation and storage cost of revenues and automotive sales cost of revenues, respectively. We also recognized $
+339
+million for the three months ended September 30, 2026, as a reduction to energy generation and storage revenue for the refunds contractually owed to certain energy storage customers. Amounts recognized related to these tariffs during the first half of 2026 were immaterial. We continue to monitor these developments and their potential impact on our results of operations.
+Legal Proceedings
+Certain Derivative Lawsuits in Delaware
+Before converting from a Delaware to Texas corporation on June 13, 2024,
+three
+separate derivative actions brought by purported Tesla stockholders were filed in the Delaware Court of Chancery on May 24, June 10 and June 13, 2024, purportedly on behalf of Tesla, against current and former directors regarding topics involving Elon Musk and others, X Corp. (formerly Twitter) and xAI. These suits asserted various claims, including breach of fiduciary duty and breach of contract, and sought unspecified damages and other relief. On August 6, 2024, the plaintiffs in these
+three
+actions moved to consolidate the matters into a single case. The Court consolidated two of the three cases. Tesla and the directors filed motions to dismiss, and oral argument on those motions occurred on October 22, 2025. On April 2, 2026, these cases were reassigned to a different judge. On April 13, 2026, the Court granted Tesla’s motions to dismiss and dismissed the cases. In May 2026, plaintiffs in the consolidated and coordinated cases appealed to the Delaware Supreme Court the decision granting Tesla’s motion to dismiss.
+Litigation and Investigations Relating to Alleged Discrimination and Harassment
+We are also subject to various lawsuits that assert claims related to alleged discrimination and harassment. For example, on February 9, 2022, the California Civil Rights Department (“CRD,” formerly “DFEH”) filed a civil complaint against Tesla in Alameda County, California Superior Court, alleging systemic race discrimination, hostile work environment, and pay equity claims, among others. CRD’s amended complaint seeks monetary damages and injunctive relief. The first phase of the trial, which is a bench trial involving only equitable relief, began on September 21, 2026, and is scheduled to proceed until October 30, 2026. Additionally, on June 1, 2022, the Equal Employment Opportunity Commission (“EEOC”) issued a cause finding against Tesla that closely parallels the CRD’s allegations. On September 28, 2023, the EEOC filed a civil complaint against Tesla in the United States District Court for the Northern District of California asserting claims for race harassment and retaliation and seeking, among other things, monetary and injunctive relief. The case is in discovery with no trial date set.
+The Company intends to vigorously defend itself in these matters; however, we cannot predict the outcome or impact. We are unable to reasonably estimate the possible loss or range of loss, if any, associated with these claims, unless noted.
+25
+Table of Contents
+Other Litigation Related to Our Products and Services
+We are also subject to various lawsuits that seek monetary and other injunctive relief. These lawsuits include proposed class actions and other consumer claims that allege, among other things, purported defects and misrepresentations related to our products and services. For example, on September 14, 2022, a proposed class action was filed against Tesla, Inc. and related entities in the U.S. District Court for the Northern District of California, alleging various claims about the Company’s driver assistance technology systems under state and federal law. This case was later consolidated with several other proposed class actions, and a Consolidated Amended Complaint was filed on October 28, 2022, which seeks damages and other relief on behalf of all persons who purchased or leased from Tesla between January 1, 2016, to the present. On March 22, 2023, the plaintiffs filed a motion for a preliminary injunction alleging that Tesla made certain statements regarding the capabilities of Full Self-Driving Capability and seeking various forms of injunctive relief, and on September 30, 2023, the Court denied the plaintiffs’ motion, compelled
+four
+of
+five
+plaintiffs to arbitration, and dismissed the claims of the fifth plaintiff with leave to amend the complaint. On October 31, 2023, the remaining plaintiff filed an amended complaint, which Tesla moved to dismiss, and on May 15, 2024, the Court granted in part and denied in part Tesla’s motion. On May 6, 2025, the plaintiff filed a motion for class certification, which Tesla opposed, and on August 18, 2025, the Court certified a limited class comprised of California consumers who are not subject to an arbitration agreement. On September 1, 2025, Tesla filed a petition in the United States Court of Appeals for the Ninth Circuit for permission to appeal the class certification order, and on December 18, 2025, the Ninth Circuit granted Tesla’s petition. On January 5, 2026, the district court stayed the case pending resolution of the proceedings before the Ninth Circuit. Oral argument in the Ninth Circuit occurred on August 31, 2026, and on October 16, 2026, the Ninth Circuit reversed the district court and vacated the class certification order. The case was returned to the district court for further proceedings.
+On August 4, 2025, a proposed class action was filed in the U.S. District Court for the Western District of Texas against Tesla, Inc., Elon Musk, and certain current and former Company executives. The complaint alleges that the defendants violated federal securities laws through alleged material misrepresentations in public filings regarding the effectiveness of Autopilot, Full-Self-Driving (Supervised), and Robotaxi. The complaint seeks monetary damages and other relief on behalf of persons who purchased Tesla stock between April 19, 2023, and June 22, 2025. The plaintiffs filed an amended complaint on February 17, 2026, and Tesla moved to dismiss the amended complaint on April 20, 2026. Tesla’s motion to dismiss has been fully briefed by the parties.
+On June 4, 2026, a proposed class action was filed in the U.S. District Court for the Northern District of California against Tesla, Inc. and related entities. The complaint alleges that Tesla made certain statements regarding the capabilities of its driver assistance technology systems. The complaint seeks damages and other relief on behalf of certain consumers who purchased or leased a Tesla vehicle. Tesla filed a motion to dismiss on August 4, 2026, and instead of responding to the motion, the plaintiff filed an amended complaint. On September 22, 2026, Tesla moved to dismiss the amended complaint.
+The Company intends to vigorously defend itself in these matters; however, we cannot predict the outcome or impact. We are unable to reasonably estimate the possible loss or range of loss, if any, associated with these claims, unless noted.
+Benavides v. Tesla, Inc.
+On August 1, 2025, a jury in the U.S. District Court for the Southern District of Florida reached a verdict in a product liability trial relating to certain allegations regarding the use of our Autopilot technology in a 2019 accident that resulted in a fatality and injuries. The jury awarded $
+129
+million in total compensatory damages, finding the driver
+67
+% at fault and the Company
+33
+% at fault. The jury also awarded $
+200
+million in punitive damages. On September 15, 2025, the Company filed a post-trial motion for judgment as a matter of law or, in the alternative, a new trial on all issues or an amended judgment to lesser compensatory and punitive damages. On February 19, 2026, the Court denied the Company’s post-trial motions, and on July 2, 2026, the Company filed its opening brief with the U.S. Court of Appeals for the Eleventh Circuit. Plaintiffs filed their response on September 16, 2026, and Tesla’s reply is due by November 6, 2026. Although we believe that the facts and law do not justify the damages awarded, the Company has recorded an immaterial accrual.
+We have experienced, and we expect to continue to face, claims and regulatory scrutiny arising from or related to misuse or claimed failures or alleged misrepresentations of new technologies that we are pioneering. We are unable to reasonably estimate the possible loss or range of loss, if any, associated with these claims, unless noted. An unfavorable outcome in some or all of these proceedings could have a material adverse impact on results of operations or cash flows for a particular period. Our view of these matters is subject to inherent uncertainties and may change in the future.
+26
+Table of Contents
+Certain Investigations and Other Matters
+We regularly receive requests for information, including subpoenas, from regulators and governmental authorities such as the National Highway Traffic Safety Administration, the National Transportation Safety Board, the SEC, the Department of Justice (“DOJ”), and various local, state, federal, and international agencies. The ongoing requests for information include topics such as operations, technology (e.g., vehicle functionality, vehicle incidents, Advanced Driver-Assistance Systems and Robotaxi), compliance, finance, data privacy, and other matters related to Tesla’s business, its personnel, and related parties. We routinely cooperate with such formal and informal requests for information, investigations, and other inquiries. To our knowledge no government agency in any ongoing investigation has concluded that any wrongdoing occurred. We cannot predict the outcome or impact of any ongoing matters. Should the government decide to pursue an enforcement action, there exists the possibility of a material adverse impact on our business, results of operations, prospects, cash flows, financial position or brand.
+We are also subject to various other legal proceedings, risks and claims that arise from the normal course of business activities. If an unfavorable ruling or development were to occur in these or other possible legal proceedings, risks and claims, there exists the possibility of a material adverse impact on our business, results of operations, prospects, cash flows, financial position or brand.
+Letters of Credit
+As of September 30, 2026, we had $
+1.62
+billion of unused letters of credit outstanding.
+Note 12 –
+Variable Interest Entity Arrangements
+The aggregate carrying values of the variable interest entities’ assets and liabilities, after elimination of any intercompany transactions and balances, in the consolidated balance sheets were as follows (in millions):
+September 30,
+2026
+December 31,
+2025
+Assets
+Current assets
+Cash and cash equivalents
+$
+140
+$
+109
+Accounts receivable, net
+25
+11
+Prepaid expenses and other current assets
+184
+198
+Total current assets
+349
+318
+Operating lease vehicles, net
+331
+456
+Energy generation and storage systems, net
+2,044
+2,177
+Other non-current assets
+451
+183
+Total assets
+$
+3,175
+$
+3,134
+Liabilities
+Current liabilities
+Accrued liabilities and other
+$
+89
+$
+49
+Deferred revenue
+6
+6
+Current portion of debt and finance leases
+1,139
+1,364
+Total current liabilities
+1,234
+1,419
+Deferred revenue, net of current portion
+54
+60
+Debt and finance leases, net of current portion
+1,564
+1,679
+Total liabilities
+$
+2,852
+$
+3,158
+Note 13 –
+Related Party Transactions
+Tesla periodically does business with certain entities with which its CEO and directors are affiliated, such as SpaceX, The Boring Company and Redwood Materials, in accordance with our Related Person Transactions Policy.
+27
+Table of Contents
+In the three and nine months ended September 30, 2026, we recognized $
+221
+million and $
+626
+million of revenues, respectively, and $
+171
+million and $
+478
+million of cost of revenues, respectively, from SpaceX for its purchase of our Megapack products in the ordinary course of business. Accounts receivable associated with our Megapack sales are determined by contractual billing milestones, including capacity reservations, and payment terms. As of September 30, 2026, accounts receivable from SpaceX was $
+729
+million, which included milestone billings and capacity reservations for Megapacks that have not been delivered. Deferred revenue related to unsatisfied performance obligations for these Megapack contracts with SpaceX as of September 30, 2026 was $
+648
+million, of which $
+516
+million was current and $
+132
+million was long-term. Net of $
+588
+million for Megapacks that have not been delivered, accounts receivable from SpaceX would be $
+141
+million and total deferred revenue would be $
+60
+million as of September 30, 2026.
+Other transactions with SpaceX and other related parties in the three and nine months ended September 30, 2026 were
+immaterial
+. Transactions with related parties were
+immaterial
+for the three and nine months ended September 30, 2025.
+Upon receiving the applicable regulatory approvals, the Company invested $
+2.00
+billion in SpaceX common stock (formerly a preferred share investment in xAI) representing an ownership interest of less than
+1
+% in March 2026. We have determined that under the applicable accounting standards, we are presumed to have significant influence over SpaceX and as such, we account for this investment using the equity method of accounting. Refer to Note 1,
+Summary of Significant Accounting Policies
+, regarding the fair value policy election in relation to the equity investment and Note 2,
+Fair Value of Financial Instruments
+, for the mark-to-market adjustments recognized on our SpaceX equity investment.
+Note 14 –
+Segment Reporting and Information about Geographic Areas
+We have
+two
+operating and reportable segments: (i) automotive and (ii) energy generation and storage.
+The following table presents revenues, cost of revenues and gross profit by reportable segment (in millions):
+Three Months Ended September 30,
+Nine Months Ended September 30,
+2026
+2025
+2026
+2025
+Automotive segment
+Revenues
+$
+25,165
+$
+24,680
+$
+70,241
+$
+60,992
+Cost of revenues (1)
+$
+20,625
+$
+20,699
+$
+57,822
+$
+51,611
+Gross profit
+$
+4,540
+$
+3,981
+$
+12,419
+$
+9,381
+Energy generation and storage segment
+Revenues
+$
+2,881
+$
+3,415
+$
+8,428
+$
+8,934
+Cost of revenues (2)
+$
+1,927
+$
+2,342
+$
+5,882
+$
+6,230
+Gross profit
+$
+954
+$
+1,073
+$
+2,546
+$
+2,704
+(1)
+Depreciation and amortization included in Cost of revenues for the automotive segment for the three and nine months ended September 30, 2026 was $
+978
+million and $
+2.92
+billion, respectively. Depreciation and amortization included in Cost of revenues for the automotive segment for the three and nine months ended September 30, 2025 was $
+959
+million and $
+2.80
+billion, respectively.
+(2)
+Depreciation and amortization included in Cost of revenues for the energy generation and storage segment for the three and nine months ended September 30, 2026 was $
+113
+million and $
+305
+million, respectively. Depreciation and amortization included in Cost of revenues for the energy generation and storage segment for the three and nine months ended September 30, 2025 was $
+92
+million and $
+262
+million, respectively.
+The following table presents revenues by geographic area based on the sales location of our products (in millions):
+Three Months Ended September 30,
+Nine Months Ended September 30,
+2026
+2025
+2026
+2025
+United States
+$
+12,495
+$
+14,598
+$
+36,380
+$
+36,740
+China
+5,209
+5,653
+14,068
+14,261
+Other international
+10,342
+7,844
+28,221
+18,925
+Total
+$
+28,046
+$
+28,095
+$
+78,669
+$
+69,926
+28
+Table of Contents
+The following table presents long-lived assets by geographic area (in millions):
+September 30,
+2026
+December 31,
+2025
+United States
+$
+45,240
+$
+35,847
+Other international
+9,804
+9,400
+Total
+$
+55,044
+$
+45,247
+The following table presents inventory by reportable segment (in millions):
+September 30,
+2026
+December 31,
+2025
+Automotive
+$
+9,644
+$
+9,678
+Energy generation and storage
+4,448
+2,714
+Total
+$
+14,092
+$
+12,392
+29
+Table of Contents
+ITEM 2. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS
+The following discussion and analysis should be read in conjunction with the consolidated financial statements and the related notes included elsewhere in this Quarterly Report on Form 10-Q.
+Overview
+We are focused on bringing SI into the real world, through products and services like FSD (Supervised) and Robotaxi, as well as working to develop and commercialize SI robots (including Optimus). We intend to leverage our current operations, in which we design, develop, manufacture, sell and lease high-performance fully electric vehicles and energy generation and storage systems that increasingly deliver SI-related and enhanced software and services to our customers, to achieve that objective.
+As a result of rapidly evolving trade and fiscal policy and geopolitical conflicts, uncertainty in the automotive and energy markets continues, posing risks to our global supply chain and cost structure which could have a meaningfully adverse impact on demand for our products and our profitability. The current tariff regime will have a relatively larger impact on our energy generation and storage business compared to our automotive business. While we prepare for near-term challenges to our business under current policies, we are focused on long-term growth opportunities as we continue to further vertically integrate and localize our supply chain and make prudent investments in infrastructure.
+In 2026, we produced approximately 1.32 million consumer vehicles and delivered approximately 1.32 million consumer vehicles through the third quarter. We are focused on profitable growth and scale, further improving and deploying our FSD (Supervised) capabilities, including future autonomous capabilities through our purpose-built Robotaxi product, Cybercab, advancing our battery and SI compute technologies and expanding our global infrastructure. Since launching our Robotaxi service in June 2025, we have continued to expand and refine our product and operations - including the rollout of Cybercab in September 2026, capitalizing on our SI investments and scalable mobility infrastructure to advance a service-driven business model.
+In 2026, we deployed 36.0 GWh of energy storage products through the third quarter. We are focused on ramping the production, increasing the market penetration of our energy storage products and developing our solar manufacturing and battery technologies.
+During the three and nine months ended September 30, 2026, we recognized total revenues of $28.05 billion and $78.67 billion, respectively, representing a decrease of $49 million and an increase of $8.74 billion, respectively, compared to the same periods in the prior year. During the three and nine months ended September 30, 2026, our net income attributable to common stockholders was $787 million and $2.38 billion, respectively, representing decreases of $586 million and $576 million, respectively, compared to the same periods in the prior year. We continue to ramp production and build and optimize our manufacturing capacity, expand our operations while focusing on further cost reductions and operational efficiencies, including through vertical integration of our battery and semiconductor supply chains, to enable increased deliveries and deployments of our products. We are also investing heavily in research and development to accelerate our SI, software and fleet-based profits for further revenue growth, which will negatively impact our profitability during this phase.
+We ended the third quarter of 2026 with $45.45 billion in cash and cash equivalents and short-term investments, representing an increase of $1.39 billion from the end of 2025. Our cash flows provided by operating activities were $14.90 billion during the nine months ended September 30, 2026, compared to $10.93 billion during the same period ended September 30, 2025, representing an increase of $3.96 billion. Capital expenditures amounted to $13.01 billion during the nine months ended September 30, 2026, compared to $6.13 billion during the same period ended September 30, 2025, representing an increase of $6.88 billion. Overall growth has allowed our business to generally fund itself. As we make critical high-value investments in our SI initiatives and expand manufacturing capabilities, including for our semiconductor, Optimus and solar operations, we intend to manage the business such that we maintain a strong balance sheet and sufficient liquidity, which may include additional funding.
+30
+Table of Contents
+Management Opportunities, Challenges and Uncertainties and 2026 Outlook
+Automotive and SI Enabled Products—Production
+We are focused on growing and optimizing our manufacturing capacity, which includes capacity for manufacturing newer vehicle models and future vehicles utilizing aspects of our next generation platform, while maximizing production rate and efficiency at our Gigafactories. The next phase of production growth will be initiated by advances in autonomy and the introduction of new products, including those built on our next generation vehicle platform, as well as our ability to efficiently manufacture and rapidly scale our own cells that we are developing to have high-volume output, lower capital and production costs and longer range. In the third quarter of 2026, we continued to progress towards these objectives through the launches of Cybercab and the Tesla Semi, along with production ramps across our new battery and material factories, including cathode material and lithium refining in Texas. We are focused on improving vehicle performance, decreasing production costs and increasing affordability and customer awareness. Leveraging our autonomy-enabled products, our goal is to redefine and lead transportation across all modes, advancing toward a future of safer, more accessible, efficient and sustainable mobility. We are also capitalizing on our strengths in real-world SI data to advance the development of Optimus, a general purpose, autonomous humanoid robot, as we make preparations and investments in large-scale production.
+These plans are subject to uncertainties inherent in establishing and ramping manufacturing operations, which may be exacerbated by new product and manufacturing technologies we introduce, the number of concurrent international projects, any industry-wide component constraints, labor shortages and any future impact from events outside of our control. For example, changes to fiscal and trade policy with respect to tariffs, export controls and other restrictions may impact our global supply chain cost structure and availability, affecting not only vehicle production, but also facility expansions. Furthermore, scaling autonomy operations presents significant challenges due to evolving regulations, the resources required for SI inference and training, and operational and infrastructure support required, any of which could adversely affect our timelines and results. Moreover, we have set ambitious technological targets with our plans for battery cells as well as for iterative manufacturing and design improvements for our vehicles.
+Automotive and SI Enabled Products—Demand, Sales and Deliveries and Supporting Infrastructure
+Our cost reduction efforts, cost innovation strategies, and additional localized procurement and manufacturing are key to our vehicles’ affordability and have allowed us to competitively price our vehicles. We will also continue to generate demand by improving our vehicles’ performance and functionality, including through product offerings and features utilizing super intelligence, and delivering new vehicles and vehicle options. Our FSD (Supervised) technology serves as a key growth driver and product differentiator, with cumulative miles driven having increased exponentially in 2026. The launch of our Robotaxi service and introduction of Cybercab further unlocks the potential for significant business growth to advance a service-driven business model leveraging the same technology. This initiates a compounding, positive feedback loop, whereby fleet growth generates more data that further improves our technology, driving additional fleet growth, and we plan to scale future production accordingly. We will continue to improve safety and profitability while scaling the network. In addition, we have been increasing awareness, and expanding our vehicle financing programs, including attractive leasing terms for our customers. We will also continue to work on developing our robotics offerings.
+However, we operate in a cyclical industry that is sensitive to shifting consumer trends, geopolitical conflicts, political and regulatory uncertainty, including with respect to trade and the environment, all of which can be compounded by inflationary pressures, rising energy prices, interest rate fluctuations and the liquidity of enterprise customers. For example, as inflationary pressures increased across the markets in which we operate, central banks in developed countries raised interest rates rapidly and substantially, which impacted the affordability of vehicle lease and finance arrangements. Further, sales of vehicles in the automotive industry also tend to be cyclical in many markets, which may expose us to increased volatility as we expand and adjust our operations. Moreover, as additional competitors enter the marketplace and help bring the world closer to sustainable transportation, we will have to adjust and continue to execute well to maintain our momentum. Additionally, our suppliers’ liquidity and allocation plans may be affected by current challenges in the automotive industry, which could reduce our access to components or result in unfavorable changes to cost. These macroeconomic and industry trends have had, and will likely continue to have, an impact on the pricing of, and order rate for our vehicles, and in turn our operating margin.
+31
+Table of Contents
+Changes in government and economic policies, incentives or tariffs may also impact our production, cost structure and the competitive landscape. For instance, while the final scope and application of recently announced changes in trade policy remain uncertain at this time, tariffs on imports and subsequent retaliatory tariffs could impact consumer spending and demand for durable goods and related services. We will continue to adjust accordingly to such developments, and we believe our ongoing cost reduction efforts, including through production innovation, process improvements and logistics optimization, and focus on operating leverage, vertical integration and supply chain localization will continue to benefit us in relation to our competitors. Our new products, production capacity, infrastructure investments and advances in autonomy and robotics, position us for future growth.
+As our vehicle production increases, we must work constantly to similarly increase vehicle delivery capability so that it does not become a bottleneck on our total deliveries. As we expand our manufacturing operations and vehicle lineup globally, we will also have to continue to increase and staff our delivery, servicing and charging infrastructure accordingly, maintain our vehicle reliability and optimize our Supercharger locations to ensure cost effectiveness and customer satisfaction. We have also begun deploying public Megachargers in preparation for the production and ramp of Tesla Semi. In addition, we remain focused on continued enhancements of the capability and efficiency of our servicing operations. In tandem with the launch of our Robotaxi business, we are focused on developing and optimizing dedicated infrastructure, including in relation to vehicle cleaning and maintenance, charging, security, teleoperations and fleet management, to ensure service quality as we continue to scale.
+Energy Generation and Storage Demand, Production and Deployment
+The long-term success of this business is dependent upon incremental volume growth. We continue to increase the production and capabilities of our energy storage products to meet high levels of demand, including the ramps of our Megafactories in Shanghai and Lathrop, California, and the construction of a new Megafactory near Houston, Texas, which began production in the third quarter of 2026. In 2025, we introduced Megapack 3 and Megablock, our next-generation industrial storage product, and began manufacturing a new residential retrofit solar panel. For Megapack, energy storage deployments can vary meaningfully quarter to quarter depending on the timing of specific project milestones and logistics. As these product lines grow, we will have to maintain adequate battery cell supply for our energy storage products. In the third quarter of 2026, we shipped the first Megapack with LFP cells manufactured at Gigafactory Nevada, further advancing our efforts to localize supply chains. At the same time, changes in government and economic incentives or tariffs may also impact our sales, cost structure and the competitive landscape. For instance, import tariffs by the US government and the provisions of the One Big Beautiful Bill Act (the “OBBBA”) could significantly increase battery cell expenses and impact costs for our consumers, negatively impacting consumer demand. Despite these challenges, as SI infrastructure drives rapid load growth, we see opportunities for our energy storage products to stabilize the grid, shift energy when it is needed most and provide additional power capacity.
+Infrastructure
+To support our businesses in clean energy and transport and autonomous robots, we are investing in and developing the necessary infrastructure. We continue to expand Cortex, our onsite training clusters at Gigafactory Texas, to provide sufficient compute resources for the development of our SI products and services, and are expanding our scope of manufacturing to include semiconductor and solar fabrication. We are focused on exploring opportunities independently and with strategic partners to develop bespoke and scalable solutions, including through vertical integration, to optimize for cost, functionality, efficiency and safety.
+32
+Table of Contents
+Cash Flow and Capital Expenditure Trends
+Our capital expenditure projections are subject to variability given the number and breadth of our projects at any given time. Changes in, among other things, global market conditions, trade and fiscal policies, and strategic timing and direction, may necessitate adjustments to our project timelines, potentially impacting our capital expenditure expectations. We are focused on long-term growth opportunities through critical, high-value investments. We are simultaneously developing and ramping new products, building or ramping manufacturing facilities on three continents, piloting the development and manufacture of new battery cell technologies, expanding our Supercharger network and investing in autonomy, robotics and other super intelligence enabled training and products and its supporting infrastructure, and the pace of our capital spend may vary depending on overall priority among projects, the pace at which we meet milestones, production adjustments to and among our various products, increased capital efficiencies and the addition of new projects. We currently expect our capital expenditures to be in excess of $20 billion in 2026, driven by our SI initiatives, including investments in compute infrastructure and data centers, the expansion and ramp of our manufacturing and R&D production lines and facilities, and growth in our fleet of company-operated SI-enabled assets and our retail, service and charging footprint. We believe this strategy will position our Company for further growth as we make investments in a capital efficient manner.
+Our business has generally been consistently generating cash flow from operations in excess of our level of capital spend, and with better working capital management resulting in shorter days sales outstanding than days payable outstanding, our sales growth is also generally facilitating positive cash generation. We have and will continue to utilize such cash flows, among other things, to invest in autonomy and robotics, further vertically integrate our supply chain, expand our product roadmap and provide financing options to our customers. At the same time, periods of heightened levels of capital expenditures due to capital-intensive projects and other potential variables such as rising material prices and increases in supply chain and labor expenses resulting from changes in global trade conditions and labor availability, will necessitate additional funding beyond our operating cash flow. For example, in September 2026, we entered into three credit agreements providing aggregate commitments of $30 billion, which afford us additional flexibility to support our planned investments, as described above.
+Critical Accounting Policies and Estimates
+For a description of our critical accounting policies and estimates, refer to Part II, Item 7,
+Critical Accounting Policies and Estimates
+in our Annual Report on Form 10-K for the year ended December 31, 2025. There have been no material changes to our critical accounting policies and estimates since our Annual Report on Form 10-K for the year ended December 31, 2025.
+Recent Accounting Pronouncements
+See Note 1,
+Summary of Significant Accounting Policies
+, to the consolidated financial statements included elsewhere in this Quarterly Report on Form 10-Q.
+Results of Operations
+Revenues
+Three Months Ended September 30,
+Change
+Nine Months Ended September 30,
+Change
+(Dollars in millions)
+2026
+2025
+$
+%
+2026
+2025
+$
+%
+Automotive sales
+$
+20,094
+$
+20,359
+$
+(265)
+(1)
+%
+$
+55,573
+$
+49,071
+$
+6,502
+13
+%
+Automotive regulatory credits
+113
+417
+(304)
+(73)
+%
+639
+1,451
+(812)
+(56)
+%
+Automotive leasing
+353
+429
+(76)
+(18)
+%
+1,098
+1,311
+(213)
+(16)
+%
+Total automotive revenues
+20,560
+21,205
+(645)
+(3)
+%
+57,310
+51,833
+5,477
+11
+%
+Services and other
+4,605
+3,475
+1,130
+33
+%
+12,931
+9,159
+3,772
+41
+%
+Total automotive & services and other segment revenue
+25,165
+24,680
+485
+2
+%
+70,241
+60,992
+9,249
+15
+%
+Energy generation and storage segment revenue
+2,881
+3,415
+(534)
+(16)
+%
+8,428
+8,934
+(506)
+(6)
+%
+Total revenues
+$
+28,046
+$
+28,095
+$
+(49)
+—
+%
+$
+78,669
+$
+69,926
+$
+8,743
+13
+%
+33
+Table of Contents
+Automotive & Services and Other Segment
+Automotive sales revenue decreased $265 million, or 1%, in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025, due to a decrease of approximately 2% in cash deliveries, primarily from fewer Model S and Model X deliveries after the product sunset in mid-2026, offset by a positive impact from the weakening of the United States dollar compared to foreign currencies year over year and an increase from higher revenue from FSD (Supervised) subscriptions in the current period.
+Automotive sales revenue increased $6.50 billion, or 13%, in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025, due to an increase of approximately 10% in cash deliveries, in part from bringing down all of our vehicle factories simultaneously for the changeover to the New Model Y in the prior period, partially offset by fewer Model S and Model X deliveries after the product sunset in mid-2026. Additionally, there was a positive impact from the weakening of the United States dollar when compared to foreign currencies year over year and an increase from higher revenue from FSD (Supervised) subscriptions in the current period.
+Automotive regulatory credits revenue decreased $304 million, or 73%, in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025. Automotive regulatory credits revenue decreased $812 million, or 56%, in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025. Fluctuations in automotive regulatory credits are impacted by our supply of credits, subject to changes in regulation, production and sales. Recent governmental and regulatory actions have restricted certain regulatory credit programs tied to our products.
+Services and other revenue increased $1.13 billion, or 33%, in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025. Services and other revenue increased $3.77 billion, or 41%, in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025. These increases were primarily due to increases in used vehicle sales volume and average selling price, non-warranty maintenance services and collision revenue, and paid Supercharging sessions.
+Energy Generation and Storage Segment
+Energy generation and storage revenue decreased $534 million, or 16%, in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025. Energy generation and storage revenue decreased $506 million, or 6%, in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025. These decreases were primarily due to tariff refunds for certain Megapack customers, a lower average selling price per Megapack unit, a decrease in Powerwall deployments, and a decrease in solar retrofit cash deployments, partially offset by an increase in Megapack deployments.
+34
+Table of Contents
+Cost of Revenues and Gross Margin
+Three Months Ended September 30,
+Change
+Nine Months Ended September 30,
+Change
+(Dollars in millions)
+2026
+2025
+$
+%
+2026
+2025
+$
+%
+Cost of revenues
+Automotive sales
+$
+16,570
+$
+17,365
+$
+(795)
+(5)
+%
+$
+46,052
+$
+42,393
+$
+3,659
+9
+%
+Automotive leasing
+184
+225
+(41)
+(18)
+%
+567
+692
+(125)
+(18)
+%
+Total automotive cost of revenues
+16,754
+17,590
+(836)
+(5)
+%
+46,619
+43,085
+3,534
+8
+%
+Services and other
+3,871
+3,109
+762
+25
+%
+11,203
+8,526
+2,677
+31
+%
+Total automotive & services and other segment cost of revenues
+20,625
+20,699
+(74)
+—
+%
+57,822
+51,611
+6,211
+12
+%
+Energy generation and storage segment
+1,927
+2,342
+(415)
+(18)
+%
+5,882
+6,230
+(348)
+(6)
+%
+Total cost of revenues
+$
+22,552
+$
+23,041
+$
+(489)
+(2)
+%
+$
+63,704
+$
+57,841
+$
+5,863
+10
+%
+Gross profit total automotive
+$
+3,806
+$
+3,615
+$
+10,691
+$
+8,748
+Gross margin total automotive
+18.5
+%
+17.0
+%
+18.7
+%
+16.9
+%
+Gross profit total automotive & services and other segment
+$
+4,540
+$
+3,981
+$
+12,419
+$
+9,381
+Gross margin total automotive & services and other segment
+18.0
+%
+16.1
+%
+17.7
+%
+15.4
+%
+Gross profit energy generation and storage segment
+$
+954
+$
+1,073
+$
+2,546
+$
+2,704
+Gross margin energy generation and storage segment
+33.1
+%
+31.4
+%
+30.2
+%
+30.3
+%
+Total gross profit
+$
+5,494
+$
+5,054
+$
+14,965
+$
+12,085
+Total gross margin
+19.6
+%
+18.0
+%
+19.0
+%
+17.3
+%
+Automotive & Services and Other Segment
+Cost of automotive sales revenue decreased $795 million, or 5%, in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025, due to the decrease in deliveries year over year as discussed above, a lower average cost per unit from sales mix and a favorable impact from tariff refunds, offset by an unfavorable impact from the weakening of the United States dollar when compared to foreign currencies year over year.
+Cost of automotive sales revenue increased $3.66 billion, or 9%, in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025, due to the increase in deliveries year over year as discussed above. Average cost per unit was relatively consistent due to favorable impacts from tariffs and warranty adjustments, offset by an unfavorable impact from the weakening of the United States dollar when compared to foreign currencies year over year.
+Cost of services and other revenue increased $762 million, or 25%, in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025. Cost of services and other revenue increased $2.68 billion, or 31%, in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025. These increases were in alignment with the increases in services and other revenue as discussed above.
+Gross margin for total automotive increased from 17.0% to 18.5% in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025. Gross margin for total automotive increased from 16.9% to 18.7% in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025. The increases were primarily due to the fluctuations in automotive sales revenue and cost of automotive sales revenue, partially offset by a decrease in regulatory credits revenue, as discussed above.
+35
+Table of Contents
+Gross margin for total automotive & services and other segment increased from 16.1% to 18.0% in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025. Gross margin for total automotive & services and other segment increased from 15.4% to 17.7% in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025. The increases in gross margin were primarily due to the increases in automotive sales gross margin, as discussed above, as well as from an improvement in services and other gross margin.
+Energy Generation and Storage Segment
+Cost of energy generation and storage revenue decreased $415 million, or 18%, in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025. Cost of energy generation and storage revenue decreased $348 million, or 6%, in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025. These decreases were primarily due to the deployment fluctuations as discussed above, favorable impacts from tariff refunds, and decreases in average cost per unit for Megapack.
+Gross margin for energy generation and storage increased from 31.4% to 33.1% in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025. Gross margin for energy generation and storage decreased from 30.3% to 30.2% in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025. The changes in gross margin were primarily due to the changes in energy generation and storage revenue and cost of energy generation and storage revenue, as discussed above.
+Research and Development Expense
+Three Months Ended September 30,
+Change
+Nine Months Ended September 30,
+Change
+(Dollars in millions)
+2026
+2025
+$
+%
+2026
+2025
+$
+%
+Research and development
+$
+2,761
+$
+1,630
+$
+1,131
+69
+%
+$
+7,078
+$
+4,628
+$
+2,450
+53
+%
+As a percentage of revenues
+10
+%
+6
+%
+9
+%
+7
+%
+Research and development (“R&D”) expenses increased $1.13 billion, or 69%, in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025. R&D expenses increased $2.45 billion, or 53%, in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025. These increases were primarily due to increases in costs related to SI and other programs, such as Optimus, silicon development, battery technologies, and new vehicle programs as we continue to expand our product roadmap, and increases in stock-based compensation of $178 million and $511 million, respectively.
+R&D expenses as a percentage of revenue increased from 6% to 10% in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025. R&D expenses as a percentage of revenue increased from 7% to 9% in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025. These increases were primarily due to higher R&D expenses in the current periods offset by the increase in total revenues in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025.
+Selling, General and Administrative Expense
+Three Months Ended September 30,
+Change
+Nine Months Ended September 30,
+Change
+(Dollars in millions)
+2026
+2025
+$
+%
+2026
+2025
+$
+%
+Selling, general and administrative
+$
+2,015
+$
+1,562
+$
+453
+29
+%
+$
+5,830
+$
+4,179
+$
+1,651
+40
+%
+As a percentage of revenues
+7
+%
+6
+%
+7
+%
+6
+%
+Selling, general and administrative (“SG&A”) expenses increased $453 million, or 29%, in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025, driven by a $293 million increase in stock-based compensation primarily related to the 2025 CEO Performance Award, a $144 million increase in facilities related and computer software expenses, and a $91 million increase in employee and labor costs, including professional services.
+36
+Table of Contents
+SG&A expenses increased $1.65 billion, or 40%, in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025, driven by a $870 million increase in stock-based compensation primarily related to the 2025 CEO Performance Award, a $357 million increase in employee and labor costs, including professional services, a $275 million increase in facilities related and computer software expenses and a $136 million increase in operating expenses including litigation related expenses.
+Interest Income
+Three Months Ended September 30,
+Change
+Nine Months Ended September 30,
+Change
+(Dollars in millions)
+2026
+2025
+$
+%
+2026
+2025
+$
+%
+Interest income
+$
+445
+$
+439
+$
+6
+1
+%
+$
+1,301
+$
+1,231
+$
+70
+6
+%
+Interest income increased $6 million, or 1%, in the three months ended September 30, 2026 and increased $70 million, or 6%, in the nine months ended September 30, 2026 as compared to the three and nine months ended September 30, 2025, respectively. The increases were primarily due to higher interest earned on our cash and cash equivalents and short-term investments due to an increase in our average portfolio balance, partially offset by a lower average interest rate.
+Other Income, Net
+Three Months Ended September 30,
+Change
+Nine Months Ended September 30,
+Change
+(Dollars in millions)
+2026
+2025
+$
+%
+2026
+2025
+$
+%
+Other (expense) income, net
+$
+(117)
+$
+(28)
+$
+(89)
+318
+%
+$
+(62)
+$
+173
+$
+(235)
+Not meaningful
+Other (expense) income, net, changed unfavorably by $89 million in the three months ended September 30, 2026 as compared to the three months ended September 30, 2025. Other (expense) income, net, changed unfavorably by $235 million in the nine months ended September 30, 2026 as compared to the nine months ended September 30, 2025. The changes were primarily due to mark-to-market adjustments on our SpaceX equity investment, which we entered into in March 2026, and adjustments on our bitcoin digital assets, as well as fluctuations in foreign currency exchange rates on our intercompany balances. As our intercompany balances are significant in nature and we do not typically hedge foreign currency risk, we can experience significant fluctuations in foreign currency exchange rate gains and losses from period to period.
+Provision for Income Taxes
+Three Months Ended September 30,
+Change
+Nine Months Ended September 30,
+Change
+(Dollars in millions)
+2026
+2025
+$
+%
+2026
+2025
+$
+%
+Provision for income taxes
+$
+152
+$
+570
+$
+(418)
+(73)
+%
+$
+610
+$
+1,098
+$
+(488)
+(44)
+%
+Effective tax rate
+16
+%
+29
+%
+20
+%
+27
+%
+Our provision for income taxes decreased by $418 million in the three months ended September 30, 2026 and by $488 million in the nine months ended September 30, 2026 as compared to the three and nine months ended September 30, 2025, respectively, primarily due to decreases in our income before income taxes and changes in the mix of our jurisdictional earnings, partially offset by the non-deductibility of stock-based compensation expense related to the 2025 CEO Performance Award. Our effective tax rate decreased from 29% to 16% in the three months ended September 30, 2026 and from 27% to 20% in the nine months ended September 30, 2026 as compared to the three and nine months ended September 30, 2025, respectively, primarily due to changes in the mix of our jurisdictional earnings, partially offset by the non-deductibility of stock-based compensation expense related to the 2025 CEO Performance Award. Additionally, the decreases in our provision for income taxes and effective tax rate for the nine months ended September 30, 2026 included the impact of a release of the valuation allowance on our California deferred tax assets other than research and development tax credits during the second quarter of 2026.
+See Note 10,
+Income Taxes
+, to the consolidated financial statements included elsewhere in this Quarterly Report on Form 10-Q for further details.
+37
+Table of Contents
+Liquidity and Capital Resources
+We generally expect to continue to generate net positive operating cash flow. The cash we generate from our core operations enables us to fund ongoing operations and production, our research and development projects for new products and technologies including our proprietary battery cells, additional manufacturing ramps at existing manufacturing facilities, the construction of future factories, and the continued expansion of our retail and service locations, body shops, Mobile Service fleet, Supercharger, energy product installation capabilities and autonomy and other super intelligence enabled products.
+In addition, because a large portion of our future expenditures will be to fund our growth, we expect that if needed we will be able to adjust our capital and operating expenditures by operating segment. For example, if our near-term manufacturing operations decrease in scale or ramp more slowly than expected, including due to global economic, tax, trade or business conditions, we may choose to correspondingly slow the pace of our capital expenditures. We continually evaluate our cash needs and the evolving nature of our business and may decide it is best to raise additional capital or seek alternative financing sources to fund the rapid growth of our business, including through drawdowns on existing or new debt facilities or financing funds. For example, in September 2026, we entered into three credit agreements providing aggregate commitments of $30 billion, which afford us additional flexibility to support our planned investments. Conversely, we may also from time to time determine that it is in our best interests to voluntarily repay certain indebtedness early. Accordingly, we believe that our current and potential sources of funding will provide us with adequate liquidity during the 12-month period following September 30, 2026, as well as in the long-term.
+See the sections below for more details regarding the material requirements for cash in our business and our sources of liquidity to meet such needs.
+Material Cash Requirements
+From time to time in the ordinary course of business, we enter into agreements with vendors for the purchase of components and raw materials to be used in the manufacture of our products. However, due to contractual terms, variability in the precise growth curves of our development and production ramps, and opportunities to renegotiate pricing, we generally do not have binding and enforceable purchase orders under such contracts beyond the short-term, and the timing and magnitude of purchase orders beyond such period is difficult to accurately project.
+As discussed in and subject to the considerations referenced in Part I, Item 2,
+Management's Discussion and Analysis of Financial Condition and Results of Operations—Management Opportunities, Challenges and Uncertainties and 2026 Outlook—Cash Flow and Capital Expenditure Trends
+in this Quarterly Report on Form 10-Q, we currently expect our capital expenditures to be in excess of $20 billion in 2026, driven by our SI initiatives, including investments in compute infrastructure and data centers, the expansion and ramp of our manufacturing and R&D production lines and facilities, and growth in our fleet of company-operated SI-enabled assets and our retail, service and charging footprint. Changes in, among other things, global market conditions, trade and fiscal policies, and strategic timing and direction, may necessitate adjustments to our project timelines, potentially impacting our capital expenditure expectations.
+As of September 30, 2026, we and our subsidiaries had outstanding $9.28 billion in aggregate principal amount of indebtedness, of which $1.32 billion is current. For details regarding our indebtedness, refer to Note 8,
+Debt,
+to the consolidated financial statements included elsewhere in this Quarterly Report on Form 10-Q.
+Sources and Conditions of Liquidity
+Our sources to fund our material cash requirements are predominantly from our deliveries and servicing of new and used vehicles, deployments and servicing of our energy storage products, interest income, and proceeds from debt facilities and equity offerings, when applicable.
+As of September 30, 2026, we had $17.85 billion and $27.59 billion of cash and cash equivalents and short-term investments, respectively. Balances held in foreign currencies had a U.S. dollar equivalent of $5.97 billion and consisted primarily of euros and Chinese yuan. As of September 30, 2026, we had $30.00 billion of unused committed amounts under our senior unsecured credit facilities. For details regarding our indebtedness, refer to Note 8,
+Debt
+, to the consolidated financial statements included elsewhere in this Quarterly Report on Form 10-Q.
+We continue adapting our strategy to meet our liquidity and risk objectives, such as investing in U.S. government securities and other investments, investing in autonomy, further vertically integrating our supply chain, expanding our product roadmap and providing financing options to our customers.
+38
+Table of Contents
+Summary of Cash Flows
+Nine Months Ended September 30,
+(Dollars in millions)
+2026
+2025
+Net cash provided by operating activities
+$
+14,897
+$
+10,934
+Net cash used in investing activities
+$
+(14,928)
+$
+(8,950)
+Net cash provided by financing activities
+$
+1,536
+$
+429
+Cash Flows from Operating Activities
+Net cash provided by operating activities increased by $3.96 billion to $14.90 billion during the nine months ended September 30, 2026 from $10.93 billion during the nine months ended September 30, 2025. This increase was primarily due to favorable changes in net operating assets and liabilities of $3.51 billion and an increase in net income excluding non-cash expenses, gains and losses of $451 million.
+Cash Flows from Investing Activities
+Net cash flows from investing activities and their variability across each period related primarily to capital expenditures, which were $13.01 billion and $6.13 billion for the nine months ended September 30, 2026 and 2025, respectively, mainly for global SI and operational infrastructure and factory expansion, as well as machinery and equipment as we expand and enhance our product roadmap. We also had net proceeds from maturities of short-term investments of $95 million for the nine months ended September 30, 2026, compared to net purchases of short-term investments of $2.82 billion for the nine months ended September 30, 2025, respectively. Additionally, we invested $2.00 billion in SpaceX common stock during the nine months ended September 30, 2026. Refer to Note 13,
+Related Party Transactions,
+for additional information regarding the equity investment.
+Cash Flows from Financing Activities
+Net cash flows from financing activities changed by $1.11 billion to $1.54 billion net cash inflows during the nine months ended September 30, 2026 from $429 million net cash inflows during the nine months ended September 30, 2025. The change was primarily due to a $1.60 billion increase in proceeds from issuances of debt, offset by a decrease of $258 million proceeds from exercise of stock options and other stock issuance, and a $156 million increase in repayments of debt. See Note 8,
+Debt
+, to the consolidated financial statements included elsewhere in this Quarterly Report on Form 10-Q for further details regarding our debt obligations.
+39
+Table of Contents
+ITEM 3. QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK
+Foreign Currency Risk
+We transact business globally in multiple currencies and hence have foreign currency risks related to our revenue, costs of revenue and operating expenses denominated in currencies other than the U.S. dollar (primarily the Chinese yuan and euro in relation to our current year operations). In general, we are a net receiver of currencies other than the U.S. dollar for our foreign subsidiaries. Accordingly, changes in exchange rates affect our operating results as expressed in U.S. dollars as we do not typically hedge foreign currency risk.
+We have also experienced, and will continue to experience, fluctuations in our net income as a result of gains (losses) on the settlement and the re-measurement of monetary assets and liabilities denominated in currencies that are not the local currency (primarily consisting of our intercompany and cash and cash equivalents balances).
+We considered the historical trends in foreign currency exchange rates and determined that it is reasonably possible that adverse changes in foreign currency exchange rates of 10% for all currencies could be experienced in the near-term. These changes were applied to our total monetary assets and liabilities denominated in currencies other than our local currencies at the balance sheet date to compute the impact these changes would have had on our net income before income taxes. These changes would have resulted in a gain or loss of $1.65 billion at September 30, 2026 and $1.70 billion at December 31, 2025, assuming no foreign currency hedging.
+ITEM 4. CONTROLS AND PROCEDURES
+Evaluation of Disclosure Controls and Procedures
+Our management, with the participation of our Chief Executive Officer and our Chief Financial Officer, evaluated the effectiveness of our disclosure controls and procedures pursuant to Rule 13a-15 under the Securities Exchange Act of 1934, as amended (the “Exchange Act”). In designing and evaluating the disclosure controls and procedures, our management recognizes that any controls and procedures, no matter how well designed and operated, can provide only reasonable assurance of achieving the desired control objectives. In addition, the design of disclosure controls and procedures must reflect the fact that there are resource constraints and that our management is required to apply its judgment in evaluating the benefits of possible controls and procedures relative to their costs.
+Based on this evaluation, our Chief Executive Officer and our Chief Financial Officer concluded that, as of September 30, 2026, our disclosure controls and procedures were designed at a reasonable assurance level and were effective to provide reasonable assurance that the information we are required to disclose in reports that we file or submit under the Exchange Act is recorded, processed, summarized and reported within the time periods specified in the SEC rules and forms, and that such information is accumulated and communicated to our management, including our Chief Executive Officer and our Chief Financial Officer, as appropriate, to allow timely decisions regarding required disclosures.
+Changes in Internal Control over Financial Reporting
+There was no change in our internal control over financial reporting that occurred during the quarter ended September 30, 2026, which has materially affected, or is reasonably likely to materially affect, our internal control over financial reporting.
+40
+Table of Contents
+PART II. OTHER INFORMATION
+ITEM 1. LEGAL PROCEEDINGS
+For a description of our material pending legal proceedings, see Note 11,
+Commitments and Contingencies
+, to the consolidated financial statements included elsewhere in this Quarterly Report on Form 10-Q.
+ITEM 1A. RISK FACTORS
+Our operations and financial results are subject to various risks and uncertainties, including the factors discussed in Part I, Item 1A,
+Risk Factors
+in our Annual Report on Form 10-K for the year ended December 31, 2025, which could adversely affect our business, financial conditions and future results.
+ITEM 2. UNREGISTERED SALES OF EQUITY SECURITIES AND USE OF PROCEEDS
+None.
+ITEM 3. DEFAULTS UPON SENIOR SECURITIES
+None.
+ITEM 4. MINE SAFETY DISCLOSURES
+Not applicable.
+ITEM 5. OTHER INFORMATION
+Rule 10b5-1 Trading Arrangements
+None of the Company’s directors or officers
+adopted
+, modified or
+terminated
+a Rule 10b5-1 trading arrangement or a non-Rule 10b5-1 trading arrangement during the Company’s fiscal quarter ended September 30, 2026, as such terms are defined under Item 408(a) of Regulation S-K.
+The Tesla board of directors has formed a special committee (the “Special Committee”) comprising disinterested directors to explore deepening Tesla’s relationship with SpaceX, which could be through certain arrangements including without limitation a business combination (a “Transaction”). While there could be merits to a Transaction, there is no assurance that any such Transaction will be consummated, as a Transaction would be subject to, among other things, the affirmative recommendation of the Special Committee and, if agreed upon, any necessary shareholder approval.
+41
+Table of Contents
+ITEM 6. EXHIBITS
+See Index to Exhibits at the end of this Quarterly Report on Form 10-Q for the information required by this Item.
+INDEX TO EXHIBITS
+Exhibit
+Number
+Incorporated by Reference
+Filed
+Herewith
+Exhibit Description
+Form
+File No.
+Exhibit
+Filing Date
+10.1
+Five-Year Revolving Credit Agreement, dated as of September 29, 2026, among Tesla, Inc., the Lenders and Issuing Banks from time to time party thereto, Wells Fargo Bank, National Association, as Administrative Agent and Citibank, N.A., as Syndication Agent
+—
+—
+—
+—
+X
+10.2
+364-Day Revolving Credit Agreement, dated as of September 29, 2026,  among Tesla, Inc., the Lenders and Issuing Banks from time to time party thereto, Wells Fargo Bank, National Association, as Administrative Agent and Citibank, N.A., as Syndication Agent
+—
+—
+—
+—
+X
+10.3
+Delayed Draw Term Loan Credit Agreement, dated as of September 29, 2026 , among Tesla, Inc., the Lenders and Issuing Banks from time to time party thereto, Citibank, N.A., as Administrative Agent and Wells Fargo Bank, National Association, as Syndication Agent
+—
+—
+—
+—
+X
+31.1
+Rule 13a-14(a) / 15(d)-14(a) Certification of Principal Executive Officer
+—
+—
+—
+—
+X
+31.2
+Rule 13a-14(a) / 15(d)-14(a) Certification of Principal Financial Officer
+—
+—
+—
+—
+X
+32.1*
+Section 1350 Certifications
+—
+—
+—
+—
+101.INS
+Inline XBRL Instance Document
+—
+—
+—
+—
+X
+101.SCH
+Inline XBRL Taxonomy Extension Schema Document
+—
+—
+—
+—
+X
+101.CAL
+Inline XBRL Taxonomy Extension Calculation Linkbase Document.
+—
+—
+—
+—
+X
+101.DEF
+Inline XBRL Taxonomy Extension Definition Linkbase Document
+—
+—
+—
+—
+X
+101.LAB
+Inline XBRL Taxonomy Extension Label Linkbase Document
+—
+—
+—
+—
+X
+101.PRE
+Inline XBRL Taxonomy Extension Presentation Linkbase Document
+—
+—
+—
+—
+X
+104
+Cover Page Interactive Data File (formatted as inline XBRL with applicable taxonomy extension information contained in Exhibits 101)
+*    Furnished herewith
+42
+Table of Contents
+SIGNATURES
+Pursuant to the requirements of Section 13 or 15(d) the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned, thereunto duly authorized.
+Tesla, Inc.
+Date: October 21, 2026
+/s/ Vaibhav Taneja
+Vaibhav Taneja
+Chief Financial Officer
+(Principal Financial Officer and
+Duly Authorized Officer)
+43

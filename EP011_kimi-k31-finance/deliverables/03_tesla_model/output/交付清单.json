@@ -1,0 +1,160 @@
+{
+  "valuation_date": "2026-10-26",
+  "active_scenario": "Base",
+  "excel_gate": {
+    "status": "pass",
+    "formula_count": 1719,
+    "formula_cache_missing_count": 0,
+    "error_count": 0,
+    "warning_count": 0
+  },
+  "scenario_checks": {
+    "Base": {
+      "all_checks_pass": true,
+      "formula_issues": [],
+      "implied_value_per_share": 27.186360436834924
+    },
+    "Bull": {
+      "all_checks_pass": true,
+      "formula_issues": [],
+      "implied_value_per_share": 71.44778638969025
+    },
+    "Bear": {
+      "all_checks_pass": true,
+      "formula_issues": [],
+      "implied_value_per_share": 9.644644804519336
+    }
+  },
+  "files": [
+    {
+      "path": "data\\revenue_scenarios_spec.json",
+      "bytes": 446,
+      "sha256": "acee85a6f57b8bfadc371dab2f477edef3f9dcbf7fdb762a9bc8d9e0edb7310c"
+    },
+    {
+      "path": "data\\sec_company_info.csv",
+      "bytes": 703,
+      "sha256": "ae62e615d31129d77a2fc7fea3b08c22e1736085c26306b11eb6d63fc7fd2ea5"
+    },
+    {
+      "path": "data\\sec_filings.csv",
+      "bytes": 5113,
+      "sha256": "ffb38f5669918ae3c1cc45ea440bdcdd50842ede4d62303edfd5641ae71b0d7d"
+    },
+    {
+      "path": "data\\sec_fy2025_all.csv",
+      "bytes": 62695,
+      "sha256": "bd27fe8ee0251d373dbd1817e8a1e1dda0e75514b41da0bf82dba3cb5eb8e4e2"
+    },
+    {
+      "path": "data\\sec_fy2025_all_slim.csv",
+      "bytes": 19597,
+      "sha256": "22b6c5d8d7fe319b8288a357a6919e53883646763c6730c691af542ff85fe85e"
+    },
+    {
+      "path": "data\\sec_q1fy2026_all.csv",
+      "bytes": 58255,
+      "sha256": "1f2cd8138855e653dfc1b6ab581d9fec857f6ad297c4f0e1c7145fd9bde30056"
+    },
+    {
+      "path": "data\\sec_q2fy2026_all.csv",
+      "bytes": 60542,
+      "sha256": "8619e1b3ee36ce27b1787e3c773fca861d7cea8ef9cea1a2ab236e8b4980713d"
+    },
+    {
+      "path": "data\\sec_q3fy2026_all.csv",
+      "bytes": 62283,
+      "sha256": "d35c77984a92771aa86ed201d3270a8300279bdc83fc6a2ad8f76bfe2f3ce620"
+    },
+    {
+      "path": "data\\sec_q3fy2026_all_slim.csv",
+      "bytes": 20567,
+      "sha256": "d4f59181fe7049f6cc2602846fdbd0ed13739b88926b128e7f868ee42802a85e"
+    },
+    {
+      "path": "data\\yahoo_tsla_info.csv",
+      "bytes": 7979,
+      "sha256": "2099a9e556d3a2236610d5809ecc3d115ca036528401b9755806b8db80419215"
+    },
+    {
+      "path": "data\\yahoo_tsla_prices.csv",
+      "bytes": 774,
+      "sha256": "aa6f19ad75c1b98858de43f327703b35bf3254b34b9fd18c3df41ce13e938691"
+    },
+    {
+      "path": "evidence\\extraction_summary.txt",
+      "bytes": 130417,
+      "sha256": "2fbfffd1811b973c8ed98e97aaecb271bd4b8fb3b599730a4564666a28721d91"
+    },
+    {
+      "path": "evidence\\final_qa_summary.txt",
+      "bytes": 4528,
+      "sha256": "f35d3aaaf19a4dd2e4c84673b70bb62760d9b017cec4e06535ed1cb3edaf2753"
+    },
+    {
+      "path": "evidence\\TSLA-Q3-2026-Update.pdf",
+      "bytes": 6711488,
+      "sha256": "1e9ed2f3288c7f22343900a28e76c678063d60b237a15d3e5957619051288f19"
+    },
+    {
+      "path": "evidence\\TSLA-Q3-2026-Update.txt",
+      "bytes": 42482,
+      "sha256": "6d89c85417c364509d9a14a5d058194896068160b26563f746ce0bd780c1bd25"
+    },
+    {
+      "path": "evidence\\TSLA-Q4-2025-Update.pdf",
+      "bytes": 5648867,
+      "sha256": "05a5eb4fff82710fafa5639deb2127d531b297fd6f6d93af58e72a2869926a18"
+    },
+    {
+      "path": "evidence\\TSLA-Q4-2025-Update.txt",
+      "bytes": 52357,
+      "sha256": "65d437478b8eed03b99b7697ebfc35a56850a52d75c2befc07d96af03ce1037a"
+    },
+    {
+      "path": "evidence\\tsla_fy2025_10k.htm",
+      "bytes": 2391638,
+      "sha256": "55a9fe4523c928212463f80bc3f5dab8e8edce8a34fd9bbecfd93a5cf2c16759"
+    },
+    {
+      "path": "evidence\\tsla_fy2025_10k.txt",
+      "bytes": 438721,
+      "sha256": "648ac15c3c14cf2d30a6c31454ba37ee5a163cfe7f159dc423ec6b1c38a1c57d"
+    },
+    {
+      "path": "evidence\\tsla_q3_2026_10q.htm",
+      "bytes": 1605248,
+      "sha256": "87e50a62ef004712cc4bcc90e7a26f9acb3e0b3bfee5f46ae3527ec807db529c"
+    },
+    {
+      "path": "evidence\\tsla_q3_2026_10q.txt",
+      "bytes": 172694,
+      "sha256": "d1480f1fd3ddd4acbcca1315a1fd3012c2c1b6842efcd0f0edb1c39e0720de23"
+    },
+    {
+      "path": "evidence\\us_treasury_2026_yields.csv",
+      "bytes": 16634,
+      "sha256": "a3469c2af859a7b9ecf9a63db9f2cd045c86ae973ba28c71d0bf612fcd301287"
+    },
+    {
+      "path": "qa_results.json",
+      "bytes": 4526,
+      "sha256": "247fdd1b675a51c849505285cd31bc06c5664781959f0bc9f6eb82c25c7d51d0"
+    },
+    {
+      "path": "TSLA_估值分析简报.md",
+      "bytes": 7574,
+      "sha256": "d0d826f671052c7ba1f11e99116f10cd040289d29257460e9711016401196e97"
+    },
+    {
+      "path": "TSLA_财务预测与DCF模型.xlsx",
+      "bytes": 117295,
+      "sha256": "3e7c9aa02dbfbc66f3d4132518eb4270a718d1b2f726e826c0638d43c383c487"
+    },
+    {
+      "path": "validation_report.json",
+      "bytes": 6840,
+      "sha256": "1972fc54bdef02f965a0e06ae851d4b198fd80e18c8b46ed852c8369997c8559"
+    }
+  ]
+}

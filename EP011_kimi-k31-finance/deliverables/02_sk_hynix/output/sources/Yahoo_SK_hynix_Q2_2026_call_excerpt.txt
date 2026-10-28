@@ -1,0 +1,27 @@
+Source: Yahoo Finance
+Title: SK hynix (000660.KS) Q2 FY2026 earnings call transcript
+Published: 2026-07-29
+URL: https://finance.yahoo.com/quote/000660.KS/earnings/000660.KS-Q2-2026-earnings_call-653208.html
+
+Song Hyeon-jong, President of Corporate Center:
+“In DRAM, amidst limited supply capabilities, we expanded sales centered on HBM3E and AI server DRAM products, achieving high single-digit percent increase in bit shipments in line with our guidance. In particular, sales of LPDDR products for servers, including SOCAMM2, grew significantly.”
+
+“ASP rose by approximately 30%, driven by the continued price strength in conventional DRAM. In NAND, from a low base of reduced shipments in the first quarter and with the expansion of enterprise SSD sales, we recorded a mid-teen percent increase in bit shipments in line with our guidance. Our enterprise SSD revenue increased twofold from that of the previous quarter, and Solidigm's revenue from high-capacity enterprise SSDs of 30 TB and above also expanded more than threefold from that of last quarter.”
+
+“For the third quarter, DRAM shipments are expected to increase by approximately 10% from that of Q2 as we actively respond to demand, with focus on server products. For NAND, we plan bit shipment increase of low single-digit percent quarter-on-quarter.”
+
+“Due to the schedule acceleration and investment expansion, our 2026 CapEx is expected to reach the high KRW 40 trillion range.”
+
+Q&A on DRAM ASP:
+“We manage the sales mix between HBM and conventional DRAM based on customer demand and some medium to long-term product strategy. In the second quarter, shipments of some high value add products were pushed back into the second half, and changes in the product portfolio appeared to have affected our blended ASP.”
+
+“These factors are likely to gradually ease in the second half. As HBM4 shipments ramp up in earnest and the 1c nm conventional DRAM shipment increases, we expect bit growth in the second half to be higher than the level in the first half.”
+
+Q&A on HBM4:
+“Building on this foundation, we began mass production of HBM4 for key customers in the second quarter, with the yield and quality today nearing the levels of HBM3E, which is already in the maturity stage. Our current focus is on steadily ramping up production capacity.”
+
+Q&A on capacity expansion:
+“Given that our capacity expansion will be executed flexibly in alignment with confirmed customer demand, we do not believe our medium to long-term investment plans will lead to oversupply right away.”
+
+Q&A on LTAs:
+“While we cannot say how much of our total sales will be covered by LTAs, we intend to maintain it at an appropriate level based on market conditions and customer demand.”

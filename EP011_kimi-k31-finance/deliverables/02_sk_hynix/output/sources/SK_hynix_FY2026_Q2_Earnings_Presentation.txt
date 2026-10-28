@@ -1,0 +1,392 @@
+=== PAGE 1 ===
+2026.07.29 | Investor Relations
+FY2026
+Earnings
+
+
+=== PAGE 2 ===
+This material has been prepared by the Company for informational purposes only, and the information contained herein has not undergone
+any separate, independent verification process. No representations or warranties are made regarding the fairness, accuracy, or completeness
+of the information contained in this material, and such information should not be relied upon. Neither the Company nor its employees bear any
+civil, criminal, or administrative liability for any damages arising from this material or from its use.
+Review of the FY2026 Q2 financial results has not been finalized. Figures in this earnings release are subject to changes during the
+independent auditing process.
+All financial information contained in this document is based on consolidated K-IFRS.
+This material contains forward-looking statements, which involve risks and uncertainties. These statements are generally identified words
+such as “may,”“will,”“intend,”“should,”“believe,”“expect,”“anticipate,”“project,”“estimate”and similar expressions, or the negative of such
+expressions. Forward-looking statements are not guarantees of future performance and are subject to inherent risks, uncertainties, and
+other factors that could cause actual results to differ materially from those expressed or implied. Readers are cautioned not to place undue
+reliance on any of these forward-looking statements. These forward-looking statements speak only as of the date hereof. SK hynix
+undertakes no obligation to update any of these forward-looking statements to reflect events or circumstances after the date of this news
+release or to reflect actual outcomes, unless required by law.
+This material does not constitute a solicitation for the acquisition or purchase of securities and no part of this material should serve as the
+basis for any contract, agreement, or investment decision, nor should it be relied upon in connection therewith.
+
+=== PAGE 3 ===
+
+
+=== PAGE 4 ===
+B/G High-Single%↑QoQ
+ASP Approx. 30%↑QoQ
+B/G Mid-Teen%↑QoQ
+ASP Mid-50%↑QoQ
+FY2026 Q2 Revenue
+KRW 79.32T
++51% QoQ / +257% YoY
+FY2026 Q1 Revenue
+KRW 52.58T
+4
+Revenue Analysis
+* Solidigm results are consolidated
+
+=== PAGE 5 ===
+DRAM·NAND price increase and cost improvement
+OP Margin
+ 76%, record high quarterly OPM
+EBITDA Margin
+ 81%
+79,319 
+65,991 
+60,543 
+64,563 
+Operating Profit KRW 60.54T
+(QoQ +61% / YoY +557%)
+EBITDA KRW 64.56T
+(QoQ +56% / YoY +411%)
+EBITDARevenue Gross Profit Operating
+Profit
+COGS
+13,327
+SG&A
+5,449 D&A*
+4,020
+5
+Profit Analysis –Operating Profit
+From ’25 Q2 to ‘26 Q2
+(Unit : KRW Billion)
+* D&A : Depreciation and Amortization Expense
+※ All figures in this presentation are rounded to KRW Billions, leading to some statements not adding up completely
+
+=== PAGE 6 ===
+Net profit margin
+ 118%
+Non-operating Profit KRW 62.17T
+60,543 
+122,708 
+93,923 
+Tax 
+Expense
+28,786
+Net Profit KRW 93.92T
+Operating Profit Pre-tax Profit Net Profit
+Net Non-
+operating 
+Profit
+62,166
+Foreign exchange
+-related gain of KRW 1.15T due to rise in 
+exchange rates
+Other non
+-operating profit of KRW 60.89T including investment 
+asset related gains of KRW 63.27T
+6
+Profit Analysis –Net Profit
+(Unit : KRW Billion)
+※ A
+ll figures in this presentation are rounded to KRW Billions, leading to some statements not adding up completely
+
+=== PAGE 7 ===
+Debt-to-Equity
+Ratio
+Net Debt-to-Equity
+Ratio
+Cash*
+Debt**
+’26Q2
+KRW 87.96T
+KRW 18.59T
+’25 Q2
+KRW 16.96T
+KRW 21.84T
+’26 Q1
+KRW 54.33T
+KRW 19.32T
+7
+25% 24%
+18%
+12% 7%
+’25 Q2 ’25 Q3 ’25 Q4 ’26 Q1 ’26 Q2
+6%
+-4% -11%
+-21% -26%
+’25 Q2 ’25 Q3 ’25 Q4 ’26 Q1 ’26 Q2
+Financial Position
+* Cash = Cash & Cash Equivalents + Short-term Financial Instruments 
+** Debt = Short-term Borrowings + Current portion of Long-term Borrowings + Debentures + Long-Term Borrowings
+
+=== PAGE 8 ===
+
+
+=== PAGE 9 ===
+Temporary adjustment in sales due to challenges in securing 
+memory volumes 
+Growth momentum expected to gradually recover as supply 
+tightness ease and AI adoption broadens services
+Market Outlook
+9
+Scope of memory demand broadening as AI evolves into agentic form and spreads 
+across various services
+AI SV sophistication driving structural demand expansion across HBM/SV DRAM/
+eSSD
+Improvements in AI models and SW efficiency expected to expand AI usage and 
+accessibility, and drive overall infrastructure demand
+Major Big Tech customers expanding infrastructure investments and memory 
+procurement due to surging AI service growth and shortage of computing capacity
+‘26:+Mid-20% YoY
+DRAM Demand B/G
+‘26:+High-Teen% YoY
+NAND Demand B/G
+With robust demand growth amidst constrained supply conditions, 
+easing of supply constraints to drive further market growth by fulfilling latent demand 
+
+=== PAGE 10 ===
+Q3 B/G : Low-single% increase QoQ
+(including Solidigm)
+NAND
+Q3 B/G : Approx.10% increase QoQ
+DRAM
+10
+Active response centered on SV products 
+Increase sales of 321L products and SSD 
+Concluded around 10 LTA negotiations including key customers, 
+continuing further discussions with other major industry players
+Pricing structures 
+designed to address price volatility, while varying by 
+customer and product characteristics
+Financial mechanisms(e.g. deposits) incorporated to support contract 
+fulfillment, thereby enhancing mid-to-long-term demand visibility
+
+=== PAGE 11 ===
+Began HBM4 shipment in Q2, 
+with customer-required speeds · industry-leading 
+power efficiency · cost competitiveness. Full ramp up planned in 2H
+Supplied 1cnm
+- based HBM4E samples to a major customer in 1H
+Committed to maintaining HBM leadership through comprehensive 
+competitiveness across performance, stable supply capability, and cost
+11
+Fully commenced supply of SOCAMM2 products based on 1cnm
+Optimizing product lineup aligned with customer development schedules 
+and preparing sample shipments to expand customer base
+Accelerating node migration and strengthening portfolio with focus on high
+-
+capacity, high-performance products
+321L reached largest share of NAND production in Q1; targeting 50% of 
+domestic capacity by 2026 year-end
+
+
+=== PAGE 12 ===
+12
+2026
+ CapEx expected to reach high 40T KRW range
+Pulling 
+in M15X mass production and accelerating capacity expansion 
+at Yongin Fab1 in early 2027
+In 
+mid-to-long term, phased investments in P&T7 · M17 · new domestic 
+semiconductor clusters based on customer demand, investment efficiency, etc.
+Listed 
+ADRs on the Nasdaq on July 10th, 2026, marking the largest-ever U.S. 
+IPO by a foreign company
+With rising investment needs, strengthened financials enable simultaneous 
+pursuit of growth investments · financial soundness · shareholder returns
+Reviewing 
+additional shareholder return measures to enhance both scale and 
+continuity of returns
+
+=== PAGE 13 ===
+
+
+=== PAGE 14 ===
+(Unit : KRW Billion) ’26 Q2 ’26 Q1 ’25 Q2 Q/Q Y/Y
+Revenue 79,319 52,576 22,232 +51% +257%
+Gross Profit 65,991 41,679 11,983 +58% +451%
+Operating Profit 60,543 37,610 9,213 +61% +557%
+EBITDA* 64,563 41,336 12,645 +56% +411%
+Net Profit 93,923 40,346 6,996 +133% +1,242%
+EPS
+(KRW)
+Basic 132,126 21,852 11,756 
+Diluted 131,478 21,522 11,411 
+Shares 
+Outstanding
+(Mil. Shares)
+Basic 710 696 690 
+Diluted 712 712 711 
+‘25 Q2 Q3 Q4 ‘26 Q1 ‘26 Q2
+Gross Margin
+Operating 
+Margin
+EBITDA
+Margin
+Net Profit 
+Margin
+14
+54% 57%
+69%
+79% 83%
+41%
+47%
+58%
+72% 76%
+57% 61%
+69%
+79% 81%
+31%
+52% 46%
+77%
+118%
++4%p
++41%p
++4%p
++2%p
+ProfitabilityIncome Statement
+* EBITDA = Operating Profit + Depreciation & Amortization
+※ All figures in this presentation are rounded to KRW Billions, leading to some statements not adding up completely
+
+=== PAGE 15 ===
+93,923
+33,628 
+4,030
+32,243
+1,332 
+28,747 
+4,666 
+Net Profit Cash Inflow Cash Outflow Net Change
+(Unit : KRW Billion) ’26 Q2 ’26 Q1 ’25 Q2
+Beginning Cash Balance** 54,330 34,942 14,311 
+CF from Operating Activities 65,710 26,430 9,208 
+Net Profit 93,923 40,346 6,996 
+D&A* 4,030 3,729 3,454 
+Changes in Working Capital, etc. (32,243) (17,645) (1,243) 
+CF from Investing Activities (28,747) (7,228) (4,329) 
+Acquisition of PP&E (10,671) (7,657) (4,332) 
+CF from Financing Activities (4,666) (2,951) (1,780) 
+Change in borrowings (3,032) (2,754) (484) 
+Repayment of Lease Liability (139) (148) (150) 
+Dividend Payout (1,594) 0 (1,159) 
+Effect of F/X rate changes on Cash 
+& Equivalents 1,332 3,138 (447) 
+Net Changes in Cash 33,628 19,388 2,651 
+Ending Cash Balance** 87,958 54,330 16,962 
+F/X Effect
+D&A
+Investing Activities
+Changes in 
+Working Capital, etc
+15
+Financing Activities
+Net Cash Flow
+(Unit : KRW Billion)
+Statement of Cash Flows
+* Depreciation & Amortization, including depreciation for non-operating (idle) assets
+** Cash & Cash Equivalents + Short-term Financial Instruments, leading to deviation from reported numbers 
+※ All figures in this presentation are rounded to KRW Billions, leading to some statements not adding up completely
+
+=== PAGE 16 ===
+0%
+50%
+100%
+’25 Q2 ’26 Q1 ’26 Q2
+USB, Card & Others
+Mobile
+SSD(including discrete
+NAND for SSDs)
+'25 Q2 '26 Q1 '26 Q2
+Others
+NAND
+DRAM
+0%
+50%
+100%
+'25 Q2 '26 Q1 '26 Q2
+Mobile
+Consumer
+Graphics (including HBM)
+Server
+PC
+DRAM
+NAND
+21%
+77%
+78%
+73%
+52,576
+22,232
+27%
+21%
+16
+Revenue by ApplicationRevenue by Product
+(Unit : KRW Billion)
+* NAND Revenue by application is based on USD revenue including Solidigm* Revenue by product portion is based on KRW, Solidigm results consolidated
+※ All figures above are rounded to KRW Billions, leading to some statements not adding up completely
+
+=== PAGE 17 ===
+T H E    E N D
+
+
+=== PAGE 18 ===
+[Attachment1] Statement of Financial Position
+K-IFRS (KRW Billion)
+Q2'26 Q1'26 Q4'25 QoQ vs. Q4'25
+ Assets
+ Current Assets 156,156 106,506 69,458 +49,650 +86,698
+ Cash & Cash Equivalents* 87,958 54,330 34,942 +33,628 +53,016
+ Accounts Receivables 47,821 33,808 18,199 +14,014 +29,622
+ Inventories 17,986 15,974 14,289 +2,012 +3,696
+ Non-Current Assets 192,706 116,323 106,650 +76,384 +86,057
+ Property, Plant & Equipment 88,889 82,052 77,503 +6,837 +11,386
+ Intangible Assets 4,283 4,051 4,049 +233 +234
+Total Assets 348,862 222,829 176,108 +126,033 +172,755
+ Liabilities
+Interest-bearing Debts 18,587 19,318 22,248 -731 -3,661 
+S-T Borrowings 2,664 2,522 2,396 +142 +269
+Current Portion of L-T Borrowings 3,194 3,369 5,766 -174 -2,572 
+Bonds 10,544 10,751 11,206 -207 -662 
+L-T Borrowings 2,184 2,676 2,880 -492 -696 
+Accounts Payables 3,043 2,798 2,848 +245 +195
+Total Liabilities 86,169 58,449 55,441 +27,720 +30,728
+ Shareholders' Equity
+Capital Stock 3,658 3,658 3,658 - -
+Capital Surplus 11,876 8,510 8,954 +3,366 +2,922
+Retained Earnings 242,270 148,746 106,577 +93,523 +135,693
+Total Shareholders' Equity 262,693 164,380 120,667 +98,313 +142,026
+* Short-term Financial Instruments and Short-term Investments included
+
+=== PAGE 19 ===
+[Attachment2] Income Statement
+K-IFRS (KRW Billion)
+Q2'26 Q1'26 Q2'25 QoQ YoY
+Revenue 79,319 52,576 22,232 +51% +257%
+Cost of Goods Sold 13,327 10,897 10,249 +22% +30%
+ Gross Profit 65,991 41,679 11,983 +58% +451%
+SG&A Expenses 5,449 4,069 2,770 +34% +97%
+ Operating Profit 60,543 37,610 9,213 +61% +557%
+Net Financial Profit/Loss 150 22 -129 
+Net F/X Transaction & Translation P/L 1,147 1,573 -613 
+-20 -27 17
+Others 60,889 12,438 234
+ EBITDA 64,563 41,336 12,645 +56% +411%
+ Income Before Tax 122,708 51,617 8,723 +138% +1,307%
+Tax Expense/Benefit 28,786 11,271 1,726 +155% +1,567%
+ Net Profit 93,923 40,346 6,996 +133% +1,242%
+Basic 132,126 21,852 11,756
+Diluted 131,478 21,522 11,411
+Basic 710 696 690
+Diluted 712 712 711
+EPS(KRW)
+Shares
+Outstanding
+(mn shares)
+Net Income(Expense) From
+Jointly Controlled Entities & Associates

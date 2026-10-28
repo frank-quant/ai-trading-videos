@@ -1,0 +1,160 @@
+statement_type,concept,dimension,label,2023-12-31 (FY),2024-12-31 (FY),2025-12-31 (FY),2025-12-31
+income_statement,us-gaap_RevenuesAbstract,False,Revenues,,,,
+income_statement,us-gaap_RevenueFromContractWithCustomerExcludingAssessedTax,False,Revenues,96773000000.0,97690000000.0,94827000000.0,
+income_statement,us-gaap_RevenueFromContractWithCustomerExcludingAssessedTax,True,Automotive Revenues,82419000000.0,77070000000.0,69526000000.0,
+income_statement,us-gaap_RevenueFromContractWithCustomerExcludingAssessedTax,True,Automotive sales,78509000000.0,72480000000.0,65821000000.0,
+income_statement,us-gaap_RevenueFromContractWithCustomerExcludingAssessedTax,True,Automotive regulatory credits,1790000000.0,2763000000.0,1993000000.0,
+income_statement,us-gaap_RevenueFromContractWithCustomerExcludingAssessedTax,True,Automotive leasing,2120000000.0,1827000000.0,1712000000.0,
+income_statement,us-gaap_RevenueFromContractWithCustomerExcludingAssessedTax,True,Energy generation and storage,6035000000.0,10086000000.0,12771000000.0,
+income_statement,us-gaap_RevenueFromContractWithCustomerExcludingAssessedTax,True,Total revenues from sales and services,94133000000.0,95341000000.0,92614000000.0,
+income_statement,us-gaap_RevenueFromContractWithCustomerExcludingAssessedTax,True,Energy generation and storage sales,5515000000.0,9564000000.0,12270000000.0,
+income_statement,us-gaap_RevenueFromContractWithCustomerExcludingAssessedTax,True,Services and other,8319000000.0,10534000000.0,12530000000.0,
+income_statement,us-gaap_RevenueFromContractWithCustomerExcludingAssessedTax,True,Energy generation and storage leasing,520000000.0,522000000.0,501000000.0,
+income_statement,us-gaap_RevenueFromContractWithCustomerExcludingAssessedTax,True,Related Party,,,430000000.0,
+income_statement,us-gaap_CostOfRevenueAbstract,False,Cost of revenues,,,,
+income_statement,us-gaap_CostOfRevenue,False,Total cost of revenues,79113000000.0,80240000000.0,77733000000.0,
+income_statement,us-gaap_CostOfRevenue,True,Automotive Revenues,66389000000.0,62873000000.0,57165000000.0,
+income_statement,us-gaap_CostOfRevenue,True,Automotive sales,65121000000.0,61870000000.0,56267000000.0,
+income_statement,us-gaap_CostOfRevenue,True,Automotive leasing,1268000000.0,1003000000.0,898000000.0,
+income_statement,us-gaap_CostOfRevenue,True,Energy generation and storage,4894000000.0,7446000000.0,8969000000.0,
+income_statement,us-gaap_CostOfRevenue,True,Services and other,7830000000.0,9921000000.0,11599000000.0,
+income_statement,us-gaap_CostOfRevenue,True,Related Party,,,285000000.0,
+income_statement,us-gaap_CostOfRevenue,True,Automotive segment,74219000000.0,72794000000.0,68764000000.0,
+income_statement,us-gaap_CostOfRevenue,True,Energy generation and storage segment,4894000000.0,7446000000.0,8969000000.0,
+income_statement,us-gaap_GrossProfit,False,Gross profit,17660000000.0,17450000000.0,17094000000.0,
+income_statement,us-gaap_GrossProfit,True,Automotive segment,16519000000.0,14810000000.0,13292000000.0,
+income_statement,us-gaap_GrossProfit,True,Energy generation and storage segment,1141000000.0,2640000000.0,3802000000.0,
+income_statement,us-gaap_OperatingExpensesAbstract,False,Operating expenses,,,,
+income_statement,us-gaap_ResearchAndDevelopmentExpense,False,Research and development,3969000000.0,4540000000.0,6411000000.0,
+income_statement,us-gaap_SellingGeneralAndAdministrativeExpense,False,"Selling, general and administrative",4800000000.0,5150000000.0,5834000000.0,
+income_statement,tsla_RestructuringAndOtherExpenses,False,Restructuring and other,0.0,684000000.0,494000000.0,
+income_statement,us-gaap_OperatingExpenses,False,Total operating expenses,8769000000.0,10374000000.0,12739000000.0,
+income_statement,us-gaap_OperatingIncomeLoss,False,Income from operations,8891000000.0,7076000000.0,4355000000.0,
+income_statement,us-gaap_InvestmentIncomeInterest,False,Interest income,1066000000.0,1569000000.0,1680000000.0,
+income_statement,us-gaap_InterestExpenseNonoperating,False,Interest expense,-156000000.0,-350000000.0,-338000000.0,
+income_statement,us-gaap_OtherNonoperatingIncomeExpense,False,"Other (expense) income, net",172000000.0,695000000.0,-419000000.0,
+income_statement,us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,False,Income before income taxes,9973000000.0,8990000000.0,5278000000.0,
+income_statement,us-gaap_IncomeTaxExpenseBenefit,False,Provision for (benefit from) income taxes,-5001000000.0,1837000000.0,1423000000.0,
+income_statement,us-gaap_ProfitLoss,False,Net income,14974000000.0,7153000000.0,3855000000.0,
+income_statement,us-gaap_NetIncomeLossAttributableToNoncontrollingInterest,False,Net income (loss) attributable to noncontrolling interests and redeemable noncontrolling interests in subsidiaries,-23000000.0,62000000.0,61000000.0,
+income_statement,us-gaap_NetIncomeLoss,False,Net income attributable to common stockholders,14997000000.0,7091000000.0,3794000000.0,
+income_statement,us-gaap_EarningsPerShareAbstract,False,Net income per share of common stock attributable to common stockholders,,,,
+income_statement,us-gaap_EarningsPerShareBasic,False,Basic (in dollars per share),4.73,2.23,1.18,
+income_statement,us-gaap_EarningsPerShareDiluted,False,Diluted (in dollars per share),4.3,2.04,1.08,
+income_statement,us-gaap_WeightedAverageNumberOfSharesOutstandingAbstract,False,Weighted average shares used in computing net income per share of common stock,,,,
+income_statement,us-gaap_WeightedAverageNumberOfSharesOutstandingBasic,False,Basic (in shares),3174000000.0,3197000000.0,3225000000.0,
+income_statement,us-gaap_WeightedAverageNumberOfDilutedSharesOutstanding,False,Diluted (in shares),3485000000.0,3498000000.0,3528000000.0,
+balance_sheet,us-gaap_AssetsAbstract,False,Assets,,,,
+balance_sheet,us-gaap_AssetsCurrentAbstract,False,Current assets,,,,
+balance_sheet,us-gaap_CashAndCashEquivalentsAtCarryingValue,False,Cash and cash equivalents,,,,16513000000.0
+balance_sheet,us-gaap_CashAndCashEquivalentsAtCarryingValue,True,Cash,,,,14623000000.0
+balance_sheet,us-gaap_CashAndCashEquivalentsAtCarryingValue,True,Money market funds,,,,1890000000.0
+balance_sheet,us-gaap_CashAndCashEquivalentsAtCarryingValue,True,Variable Interest Entities (VIEs),,,,109000000.0
+balance_sheet,us-gaap_ShortTermInvestments,False,Short-term investments,,,,27546000000.0
+balance_sheet,us-gaap_ShortTermInvestments,True,Certificates of deposit and time deposits,,,,14600000000.0
+balance_sheet,us-gaap_ShortTermInvestments,True,Commercial paper,,,,5617000000.0
+balance_sheet,us-gaap_ShortTermInvestments,True,U.S. government securities,,,,7321000000.0
+balance_sheet,us-gaap_ShortTermInvestments,True,Corporate debt securities,,,,8000000.0
+balance_sheet,us-gaap_AccountsReceivableNetCurrent,False,"Accounts receivable, net",,,,4576000000.0
+balance_sheet,us-gaap_AccountsReceivableNetCurrent,True,Government Rebates Receivables,,,,108000000.0
+balance_sheet,us-gaap_AccountsReceivableNetCurrent,True,Variable Interest Entities (VIEs),,,,11000000.0
+balance_sheet,us-gaap_InventoryNet,False,Inventory,,,,12392000000.0
+balance_sheet,us-gaap_InventoryNet,True,Automotive segment,,,,9678000000.0
+balance_sheet,us-gaap_InventoryNet,True,Energy generation and storage segment,,,,2714000000.0
+balance_sheet,us-gaap_PrepaidExpenseAndOtherAssetsCurrent,False,Prepaid expenses and other current assets,,,,7615000000.0
+balance_sheet,us-gaap_PrepaidExpenseAndOtherAssetsCurrent,True,Variable Interest Entities (VIEs),,,,198000000.0
+balance_sheet,us-gaap_AssetsCurrent,False,Total current assets,,,,68642000000.0
+balance_sheet,us-gaap_AssetsCurrent,True,Variable Interest Entities (VIEs),,,,318000000.0
+balance_sheet,us-gaap_DeferredCostsLeasingNetNoncurrent,False,"Operating lease vehicles, net",,,,4912000000.0
+balance_sheet,us-gaap_DeferredCostsLeasingNetNoncurrent,True,"Operating lease vehicles, net",,,,4912000000.0
+balance_sheet,tsla_LeasedAssetsNet,False,"Energy generation and storage systems, net",,,,4604000000.0
+balance_sheet,tsla_LeasedAssetsNet,True,"Energy generation and storage systems, net",,,,4604000000.0
+balance_sheet,us-gaap_PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization,False,"Property, plant and equipment, net",,,,40643000000.0
+balance_sheet,us-gaap_OperatingLeaseRightOfUseAsset,False,Operating lease right-of-use assets,,,,6027000000.0
+balance_sheet,us-gaap_CryptoAssetFairValueNoncurrent,False,Digital assets,,,,1008000000.0
+balance_sheet,us-gaap_DeferredIncomeTaxAssetsNet,False,Deferred tax assets,,,,6925000000.0
+balance_sheet,us-gaap_DeferredIncomeTaxAssetsNet,True,As Previously Reported,,,,
+balance_sheet,us-gaap_DeferredIncomeTaxAssetsNet,True,Adjustments from Adoption of the New Crypto Assets Standard,,,,
+balance_sheet,us-gaap_OtherAssetsNoncurrent,False,Other non-current assets,,,,5045000000.0
+balance_sheet,us-gaap_OtherAssetsNoncurrent,True,Variable Interest Entities (VIEs),,,,183000000.0
+balance_sheet,us-gaap_Assets,False,Total assets,,,,137806000000.0
+balance_sheet,us-gaap_Assets,True,Variable Interest Entities (VIEs),,,,3134000000.0
+balance_sheet,us-gaap_LiabilitiesAbstract,False,Liabilities,,,,
+balance_sheet,us-gaap_LiabilitiesCurrentAbstract,False,Current liabilities,,,,
+balance_sheet,us-gaap_AccountsPayableCurrent,False,Accounts payable,,,,13371000000.0
+balance_sheet,tsla_AccruedAndOtherCurrentLiabilities,False,Accrued liabilities and other,,,,13279000000.0
+balance_sheet,tsla_AccruedAndOtherCurrentLiabilities,True,Variable Interest Entities (VIEs),,,,49000000.0
+balance_sheet,us-gaap_ContractWithCustomerLiabilityCurrent,False,Deferred revenue,,,,3424000000.0
+balance_sheet,us-gaap_ContractWithCustomerLiabilityCurrent,True,Variable Interest Entities (VIEs),,,,6000000.0
+balance_sheet,tsla_LongTermDebtAndFinanceLeasesCurrent,False,Current portion of debt and finance leases,,,,1640000000.0
+balance_sheet,tsla_LongTermDebtAndFinanceLeasesCurrent,True,Variable Interest Entities (VIEs),,,,1364000000.0
+balance_sheet,us-gaap_LiabilitiesCurrent,False,Total current liabilities,,,,31714000000.0
+balance_sheet,us-gaap_LiabilitiesCurrent,True,Variable Interest Entities (VIEs),,,,1419000000.0
+balance_sheet,tsla_LongTermDebtAndFinanceLeasesNoncurrent,False,"Debt and finance leases, net of current portion",,,,6736000000.0
+balance_sheet,tsla_LongTermDebtAndFinanceLeasesNoncurrent,True,Variable Interest Entities (VIEs),,,,1679000000.0
+balance_sheet,us-gaap_ContractWithCustomerLiabilityNoncurrent,False,"Deferred revenue, net of current portion",,,,3631000000.0
+balance_sheet,us-gaap_ContractWithCustomerLiabilityNoncurrent,True,Variable Interest Entities (VIEs),,,,60000000.0
+balance_sheet,us-gaap_OtherLiabilitiesNoncurrent,False,Other long-term liabilities,,,,12860000000.0
+balance_sheet,us-gaap_Liabilities,False,Total liabilities,,,,54941000000.0
+balance_sheet,us-gaap_Liabilities,True,Variable Interest Entities (VIEs),,,,3158000000.0
+balance_sheet,us-gaap_CommitmentsAndContingencies,False,Commitments and contingencies (Note 13),,,,
+balance_sheet,us-gaap_RedeemableNoncontrollingInterestEquityCarryingAmount,False,Redeemable noncontrolling interests in subsidiaries,,,,58000000.0
+balance_sheet,us-gaap_StockholdersEquityIncludingPortionAttributableToNoncontrollingInterestAbstract,False,Equity,,,,
+balance_sheet,us-gaap_StockholdersEquityAbstract,False,Stockholders’ equity,,,,
+balance_sheet,us-gaap_PreferredStockValue,False,Preferred stock; $0.001 par value; 100 shares authorized; no shares issued and outstanding,,,,0.0
+balance_sheet,us-gaap_CommonStockValue,False,"Common stock; $0.001 par value; 6,000 shares authorized; 3,751 and 3,216 shares issued and outstanding as of December 31, 2025 and 2024, respectively",,,,3000000.0
+balance_sheet,us-gaap_AdditionalPaidInCapitalCommonStock,False,Additional paid-in capital,,,,42770000000.0
+balance_sheet,us-gaap_AccumulatedOtherComprehensiveIncomeLossNetOfTax,False,Accumulated other comprehensive income (loss),,,,361000000.0
+balance_sheet,us-gaap_RetainedEarningsAccumulatedDeficit,False,Retained earnings,,,,39003000000.0
+balance_sheet,us-gaap_RetainedEarningsAccumulatedDeficit,True,As Previously Reported,,,,
+balance_sheet,us-gaap_RetainedEarningsAccumulatedDeficit,True,Adjustments from Adoption of the New Crypto Assets Standard,,,,
+balance_sheet,us-gaap_StockholdersEquity,False,Total stockholders’ equity,,,,82137000000.0
+balance_sheet,us-gaap_MinorityInterest,False,Noncontrolling interests in subsidiaries,,,,670000000.0
+balance_sheet,us-gaap_LiabilitiesAndStockholdersEquity,False,Total liabilities and equity,,,,137806000000.0
+cash_flow,us-gaap_NetCashProvidedByUsedInOperatingActivitiesAbstract,False,Cash Flows from Operating Activities,,,,
+cash_flow,us-gaap_ProfitLoss,False,Net income,14974000000.0,7153000000.0,3855000000.0,
+cash_flow,us-gaap_AdjustmentsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesAbstract,False,Adjustments to reconcile net income to net cash provided by operating activities:,,,,
+cash_flow,tsla_DepreciationAmortizationAndImpairment,False,"Depreciation, amortization and impairment",4667000000.0,5368000000.0,6148000000.0,
+cash_flow,us-gaap_ShareBasedCompensation,False,Stock-based compensation,1812000000.0,1999000000.0,2825000000.0,
+cash_flow,us-gaap_ShareBasedCompensation,True,Board of Directors - Performance Based Restricted Stock Units And Stock Options,,,1700000000.0,
+cash_flow,us-gaap_ShareBasedCompensation,True,Performance Based Restricted Stock Units And Stock Options,0.0,0.0,323000000.0,
+cash_flow,us-gaap_InventoryWriteDown,False,Inventory and purchase commitments write-downs,463000000.0,335000000.0,362000000.0,
+cash_flow,us-gaap_InventoryWriteDown,True,Cost of revenues,233000000.0,190000000.0,310000000.0,
+cash_flow,us-gaap_ForeignCurrencyTransactionGainLossUnrealized,False,Foreign currency transaction net unrealized loss (gain),-144000000.0,-73000000.0,452000000.0,
+cash_flow,us-gaap_DeferredIncomeTaxExpenseBenefit,False,Deferred income taxes,-6349000000.0,477000000.0,123000000.0,
+cash_flow,tsla_NoncashInterestIncomeExpenseAndOtherOperatingActivities,False,Non-cash interest and other operating activities,81000000.0,172000000.0,272000000.0,
+cash_flow,tsla_GainLossOnDigitalAssets,False,"Digital assets loss (gain), net",0.0,-589000000.0,68000000.0,
+cash_flow,us-gaap_IncreaseDecreaseInOperatingCapitalAbstract,False,Changes in operating assets and liabilities:,,,,
+cash_flow,us-gaap_IncreaseDecreaseInAccountsReceivable,False,Accounts receivable,-586000000.0,-1083000000.0,-261000000.0,
+cash_flow,us-gaap_IncreaseDecreaseInInventories,False,Inventory,-1195000000.0,937000000.0,-630000000.0,
+cash_flow,tsla_IncreaseDecreaseInOperatingLeaseVehicles,False,Operating lease vehicles,-1952000000.0,-590000000.0,-25000000.0,
+cash_flow,us-gaap_IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets,False,Prepaid expenses and other assets,-2652000000.0,-3273000000.0,-3181000000.0,
+cash_flow,us-gaap_IncreaseDecreaseInAccountsPayableAndAccruedLiabilities,False,"Accounts payable, accrued and other liabilities",2605000000.0,3588000000.0,4376000000.0,
+cash_flow,us-gaap_IncreaseDecreaseInContractWithCustomerLiability,False,Deferred revenue,1532000000.0,502000000.0,363000000.0,
+cash_flow,us-gaap_NetCashProvidedByUsedInOperatingActivities,False,Net cash provided by operating activities,13256000000.0,14923000000.0,14747000000.0,
+cash_flow,us-gaap_NetCashProvidedByUsedInInvestingActivitiesAbstract,False,Cash Flows from Investing Activities,,,,
+cash_flow,us-gaap_PaymentsToAcquirePropertyPlantAndEquipment,False,"Purchases of property and equipment excluding finance leases, net of sales",-8899000000.0,-11342000000.0,-8527000000.0,
+cash_flow,us-gaap_PaymentsToAcquireInvestments,False,Purchases of investments,-19112000000.0,-35955000000.0,-37109000000.0,
+cash_flow,us-gaap_ProceedsFromSaleMaturityAndCollectionsOfInvestments,False,Proceeds from maturities of investments,12353000000.0,28310000000.0,30158000000.0,
+cash_flow,us-gaap_ProceedsFromSaleOfShortTermInvestments,False,Proceeds from sales of investments,138000000.0,200000000.0,0.0,
+cash_flow,us-gaap_PaymentsToAcquireBusinessesNetOfCashAcquired,False,"Business combinations, net of cash acquired",-64000000.0,0.0,0.0,
+cash_flow,us-gaap_NetCashProvidedByUsedInInvestingActivities,False,Net cash used in investing activities,-15584000000.0,-18787000000.0,-15478000000.0,
+cash_flow,us-gaap_NetCashProvidedByUsedInFinancingActivitiesAbstract,False,Cash Flows from Financing Activities,,,,
+cash_flow,us-gaap_ProceedsFromIssuanceOfDebt,False,Proceeds from issuances of debt,3931000000.0,5744000000.0,5586000000.0,
+cash_flow,us-gaap_RepaymentsOfConvertibleDebt,False,Repayments of debt,-1351000000.0,-2500000000.0,-5546000000.0,
+cash_flow,us-gaap_ProceedsFromIssuanceOfSharesUnderIncentiveAndShareBasedCompensationPlansIncludingStockOptions,False,"Proceeds from exercises of stock options and other stock issuances, net of issuance costs",700000000.0,1241000000.0,1186000000.0,
+cash_flow,us-gaap_FinanceLeasePrincipalPayments,False,Principal payments on finance leases,-464000000.0,-381000000.0,-104000000.0,
+cash_flow,tsla_ProceedsReceivedFromDirectorsInShareholderSettlement,False,Proceeds received from directors in shareholder settlement,0.0,0.0,277000000.0,
+cash_flow,tsla_PaymentForLegalFees,False,Payment of legal fees associated with shareholder settlement,0.0,0.0,-176000000.0,
+cash_flow,us-gaap_PaymentsOfDebtIssuanceCosts,False,Debt issuance costs,-29000000.0,-14000000.0,-6000000.0,
+cash_flow,us-gaap_PaymentsToMinorityShareholders,False,Distributions paid to noncontrolling interests in subsidiaries,-144000000.0,-104000000.0,-78000000.0,
+cash_flow,tsla_PaymentsForBuyOutsOfNoncontrollingInterestsInSubsidiaries,False,Payments for buy-outs of noncontrolling interests in subsidiaries,-54000000.0,-133000000.0,0.0,
+cash_flow,us-gaap_NetCashProvidedByUsedInFinancingActivities,False,Net cash provided by financing activities,2589000000.0,3853000000.0,1139000000.0,
+cash_flow,us-gaap_EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsIncludingDisposalGroupAndDiscontinuedOperations,False,Effect of exchange rate changes on cash and cash equivalents and restricted cash,4000000.0,-141000000.0,171000000.0,
+cash_flow,us-gaap_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect,False,Net increase (decrease) in cash and cash equivalents and restricted cash,265000000.0,-152000000.0,579000000.0,
+cash_flow,us-gaap_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsIncludingDisposalGroupAndDiscontinuedOperations,False,"Cash and cash equivalents and restricted cash, end of period",17189000000.0,17037000000.0,17616000000.0,
+cash_flow,us-gaap_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsIncludingDisposalGroupAndDiscontinuedOperations,False,"Cash and cash equivalents and restricted cash, end of period",17189000000.0,17037000000.0,17616000000.0,
+cash_flow,us-gaap_NoncashInvestingAndFinancingItemsAbstract,False,Supplemental Non-Cash Investing and Financing Activities,,,,
+cash_flow,us-gaap_NoncashOrPartNoncashAcquisitionValueOfAssetsAcquired1,False,Acquisitions of property and equipment included in liabilities,2272000000.0,1410000000.0,1913000000.0,
+cash_flow,us-gaap_SupplementalCashFlowInformationAbstract,False,Supplemental Disclosures,,,,
+cash_flow,us-gaap_InterestPaidNet,False,Cash paid during the period for interest,126000000.0,277000000.0,292000000.0,

@@ -1,0 +1,20 @@
+Source: Reuters, syndicated by Investing.com
+Title: SK hynix’s record profit misses forecasts, shares slump 10% despite robust AI chip demand
+Published: 2026-07-29 (Seoul)
+URL: https://www.investing.com/news/stock-market-news/sk-hynix-q2-profit-jumps-557-on-ai-chip-demand-misses-forecasts-4818344
+
+The company reported an operating profit of 60.5 trillion won for the April-June period, compared with 9.2 trillion won a year earlier and short of a 64 trillion won forecast by LSEG SmartEstimate.
+
+Quarterly revenue rose 257% to 79.3 trillion won, below a 84 trillion won estimate.
+
+Analysts said the earnings miss reflected slower-than-expected HBM4 shipments, delaying revenue recognition during the quarter.
+
+Net profit rose more than 13-fold to 93.9 trillion won, helped by 63.3 trillion won in gains from investment assets, it said, without providing further details.
+
+Analysts estimated that the company recognized cumulative investment gains following the completion last month of the sale of its stake in Japanese NAND flash memory maker Kioxia.
+
+Long-term agreements, which SK Hynix said are typically for five years, include financial safeguards such as deposits to ensure contract implementation. The company has concluded talks on around 10 such deals and is continuing discussions with other major industry players, it said.
+
+While long-term deals improve visibility over future demand, they may also temper near-term pricing gains, a factor that contributed to the earnings miss, analysts said.
+
+SK Hynix also has higher exposure to high-bandwidth memory (HBM) chips, whose prices rose less than conventional memory, they said.

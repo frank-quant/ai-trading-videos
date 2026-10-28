@@ -1,0 +1,7 @@
+﻿video_order,task,original_case,duration_ms,model_calls,noncache_input,output_tokens,cache_read,cache_creation,noncache_input_plus_output,total_tokens,explicit_web_search_calls,explicit_web_fetch_calls,database_requests
+1,宇树科技投委会PPT,2,1802339,127,856085,57826,49557819,0,913911,50471730,24,3,0
+2,SK海力士财报解读,4,1531418,106,303028,60621,26114585,0,363649,26478234,18,9,0
+3,特斯拉财务预测与DCF估值,1,2674193,107,276940,76198,21000704,0,353138,21353842,6,1,0
+4,SOXX SPY BIL轮动回测,5,678506,36,86678,28896,3301632,0,115574,3417206,0,0,0
+5,汽车产业链候选池财务筛选,7,780780,53,76067,26597,4149504,0,102664,4252168,0,0,15
+6,Anthropic IPO监管问询研究,6,890949,50,291459,31656,9792768,0,323115,10115883,10,0,0

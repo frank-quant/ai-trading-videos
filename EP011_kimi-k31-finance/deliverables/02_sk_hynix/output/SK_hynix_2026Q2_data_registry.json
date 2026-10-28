@@ -1,0 +1,1939 @@
+{
+  "meta": {
+    "scope": "000660.KS_2026Q2",
+    "project": "SK海力士2026Q2业绩点评",
+    "created": "2026-10-27",
+    "last_validated": "2026-10-27T21:20:00+08:00",
+    "schema_version": "dr-1.0",
+    "producer": "Kimi Work",
+    "staleness_overrides": {}
+  },
+  "data_points": [
+    {
+      "id": "revenue_q2_2026",
+      "value": "79.318746 万亿韩元",
+      "label": "2026-Q2营业收入",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "79,318,746"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "cogs_q2_2026",
+      "value": "13.327390 万亿韩元",
+      "label": "2026-Q2营业成本",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "13,327,390"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "gross_profit_q2_2026",
+      "value": "65.991356 万亿韩元",
+      "label": "2026-Q2毛利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "65,991,356"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "sga_q2_2026",
+      "value": "5.448748 万亿韩元",
+      "label": "2026-Q2销售及管理费用",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "5,448,748"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "operating_profit_q2_2026",
+      "value": "60.542608 万亿韩元",
+      "label": "2026-Q2营业利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "60,542,608"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "pretax_profit_q2_2026",
+      "value": "122.708355 万亿韩元",
+      "label": "2026-Q2税前利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "122,708,355"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "tax_q2_2026",
+      "value": "28.785762 万亿韩元",
+      "label": "2026-Q2所得税费用",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "28,785,762"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "net_income_q2_2026",
+      "value": "93.922593 万亿韩元",
+      "label": "2026-Q2净利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "93,922,593"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "net_income_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "revenue_h1_2026",
+      "value": "131.895033 万亿韩元",
+      "label": "2026-06-30营业收入",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "131,895,033"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "cogs_h1_2026",
+      "value": "24.224263 万亿韩元",
+      "label": "2026-06-30营业成本",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "24,224,263"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "gross_profit_h1_2026",
+      "value": "107.670770 万亿韩元",
+      "label": "2026-06-30毛利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "107,670,770"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "sga_h1_2026",
+      "value": "9.517879 万亿韩元",
+      "label": "2026-06-30销售及管理费用",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "9,517,879"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "operating_profit_h1_2026",
+      "value": "98.152891 万亿韩元",
+      "label": "2026-06-30营业利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "98,152,891"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "pretax_profit_h1_2026",
+      "value": "174.325213 万亿韩元",
+      "label": "2026-06-30税前利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "174,325,213"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "tax_h1_2026",
+      "value": "40.056711 万亿韩元",
+      "label": "2026-06-30所得税费用",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "40,056,711"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "net_income_h1_2026",
+      "value": "134.268502 万亿韩元",
+      "label": "2026-06-30净利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "134,268,502"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "net_income_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "revenue_q2_2025",
+      "value": "22.231952 万亿韩元",
+      "label": "2025-Q2营业收入",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "22,231,952"
+      },
+      "as_of": "2025-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "cogs_q2_2025",
+      "value": "10.248628 万亿韩元",
+      "label": "2025-Q2营业成本",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "10,248,628"
+      },
+      "as_of": "2025-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "gross_profit_q2_2025",
+      "value": "11.983324 万亿韩元",
+      "label": "2025-Q2毛利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "11,983,324"
+      },
+      "as_of": "2025-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "sga_q2_2025",
+      "value": "2.770473 万亿韩元",
+      "label": "2025-Q2销售及管理费用",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "2,770,473"
+      },
+      "as_of": "2025-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "operating_profit_q2_2025",
+      "value": "9.212851 万亿韩元",
+      "label": "2025-Q2营业利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "9,212,851"
+      },
+      "as_of": "2025-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "pretax_profit_q2_2025",
+      "value": "8.722583 万亿韩元",
+      "label": "2025-Q2税前利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "8,722,583"
+      },
+      "as_of": "2025-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "tax_q2_2025",
+      "value": "1.726367 万亿韩元",
+      "label": "2025-Q2所得税费用",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "1,726,367"
+      },
+      "as_of": "2025-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "net_income_q2_2025",
+      "value": "6.996216 万亿韩元",
+      "label": "2025-Q2净利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "6,996,216"
+      },
+      "as_of": "2025-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "net_income_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "revenue_h1_2025",
+      "value": "39.871093 万亿韩元",
+      "label": "2025-06-30营业收入",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "39,871,093"
+      },
+      "as_of": "2025-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "cogs_h1_2025",
+      "value": "17.785778 万亿韩元",
+      "label": "2025-06-30营业成本",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "17,785,778"
+      },
+      "as_of": "2025-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "gross_profit_h1_2025",
+      "value": "22.085315 万亿韩元",
+      "label": "2025-06-30毛利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "22,085,315"
+      },
+      "as_of": "2025-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "sga_h1_2025",
+      "value": "5.431960 万亿韩元",
+      "label": "2025-06-30销售及管理费用",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "5,431,960"
+      },
+      "as_of": "2025-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "operating_profit_h1_2025",
+      "value": "16.653355 万亿韩元",
+      "label": "2025-06-30营业利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "16,653,355"
+      },
+      "as_of": "2025-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "pretax_profit_h1_2025",
+      "value": "18.021812 万亿韩元",
+      "label": "2025-06-30税前利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "18,021,812"
+      },
+      "as_of": "2025-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "tax_h1_2025",
+      "value": "2.917401 万亿韩元",
+      "label": "2025-06-30所得税费用",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "2,917,401"
+      },
+      "as_of": "2025-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "net_income_h1_2025",
+      "value": "15.104411 万亿韩元",
+      "label": "2025-06-30净利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "15,104,411"
+      },
+      "as_of": "2025-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "net_income_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩；Word 关键数据"
+      ]
+    },
+    {
+      "id": "revenue_q1_2026",
+      "value": "52.576287 万亿韩元",
+      "label": "2026-Q1营业收入",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "52,576"
+      },
+      "as_of": "2026-Q1",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩"
+      ]
+    },
+    {
+      "id": "cogs_q1_2026",
+      "value": "10.896873 万亿韩元",
+      "label": "2026-Q1营业成本",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "10,897"
+      },
+      "as_of": "2026-Q1",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩"
+      ]
+    },
+    {
+      "id": "gross_profit_q1_2026",
+      "value": "41.679414 万亿韩元",
+      "label": "2026-Q1毛利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "41,679"
+      },
+      "as_of": "2026-Q1",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩"
+      ]
+    },
+    {
+      "id": "sga_q1_2026",
+      "value": "4.069131 万亿韩元",
+      "label": "2026-Q1销售及管理费用",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "4,069"
+      },
+      "as_of": "2026-Q1",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩"
+      ]
+    },
+    {
+      "id": "operating_profit_q1_2026",
+      "value": "37.610283 万亿韩元",
+      "label": "2026-Q1营业利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "37,610"
+      },
+      "as_of": "2026-Q1",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩"
+      ]
+    },
+    {
+      "id": "pretax_profit_q1_2026",
+      "value": "51.616858 万亿韩元",
+      "label": "2026-Q1税前利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "51,617"
+      },
+      "as_of": "2026-Q1",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩"
+      ]
+    },
+    {
+      "id": "tax_q1_2026",
+      "value": "11.270949 万亿韩元",
+      "label": "2026-Q1所得税费用",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "11,271"
+      },
+      "as_of": "2026-Q1",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩"
+      ]
+    },
+    {
+      "id": "net_income_q1_2026",
+      "value": "40.345909 万亿韩元",
+      "label": "2026-Q1净利润",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "40,346"
+      },
+      "as_of": "2026-Q1",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "net_income_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 核心业绩"
+      ]
+    },
+    {
+      "id": "ocf_q2_2026",
+      "value": "65.710 万亿韩元",
+      "label": "2026Q2经营活动现金流（初步）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "65,710"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "free_cash_flow",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 现金流与资产负债；Word 现金流分析"
+      ]
+    },
+    {
+      "id": "capex_q2_2026",
+      "value": "10.671 万亿韩元",
+      "label": "2026Q2购建固定资产（初步）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "10,671"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "capex",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 现金流与资产负债；Word 现金流分析"
+      ]
+    },
+    {
+      "id": "ocf_h1_2026",
+      "value": "91.742501 万亿韩元",
+      "label": "2026H1经营活动现金流",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "91,742,501"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "free_cash_flow",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 现金流与资产负债；Word 现金流分析"
+      ]
+    },
+    {
+      "id": "capex_h1_2026",
+      "value": "18.328836 万亿韩元",
+      "label": "2026H1购建固定资产",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "18,328,836"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "capex",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 现金流与资产负债；Word 现金流分析"
+      ]
+    },
+    {
+      "id": "dividends_received_h1_2026",
+      "value": "13.983648 万亿韩元",
+      "label": "2026H1收到股利",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "13,983,648"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "free_cash_flow",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 现金流与资产负债；Word 现金流分析"
+      ]
+    },
+    {
+      "id": "fcf_proxy_q2_2026",
+      "value": "55.039000 万亿韩元",
+      "label": "2026Q2自由现金流代理值",
+      "tier": "T1",
+      "source_type": "derived",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "65,710"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "free_cash_flow",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "formula": "ocf_q2_2026-capex_q2_2026",
+      "inputs": [
+        "ocf_q2_2026",
+        "capex_q2_2026"
+      ],
+      "used_in": [
+        "Excel 现金流与资产负债；Word 现金流分析"
+      ],
+      "notes": "经营现金流－购建固定资产现金支出；非公司法定指标"
+    },
+    {
+      "id": "fcf_proxy_h1_2026",
+      "value": "73.413665 万亿韩元",
+      "label": "2026H1自由现金流代理值",
+      "tier": "T1",
+      "source_type": "derived",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "91,742,501"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "free_cash_flow",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "formula": "ocf_h1_2026-capex_h1_2026",
+      "inputs": [
+        "ocf_h1_2026",
+        "capex_h1_2026"
+      ],
+      "used_in": [
+        "Excel 现金流与资产负债；Word 现金流分析"
+      ],
+      "notes": "经营现金流－购建固定资产现金支出；非公司法定指标"
+    },
+    {
+      "id": "valuation_gain_q2_2026",
+      "value": "53.237425 万亿韩元",
+      "label": "2026Q2金融工具估值收益",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "53,237,425"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "net_income_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 一次性因素；Word 一次性因素"
+      ]
+    },
+    {
+      "id": "dividend_income_q2_2026",
+      "value": "10.027945 万亿韩元",
+      "label": "2026Q2股利收入",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "10,027,945"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "net_income_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 一次性因素；Word 一次性因素"
+      ]
+    },
+    {
+      "id": "net_finance_income_q2_2026",
+      "value": "62.217911 万亿韩元",
+      "label": "2026Q2净金融收益",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+        "sha256": "78de098baf611a67",
+        "raw": "62,217,911"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "net_income_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 一次性因素；Word 一次性因素"
+      ]
+    },
+    {
+      "id": "investment_gain_q2_2026",
+      "value": "63.265370 万亿韩元",
+      "label": "2026Q2投资资产相关收益（估值收益＋股利收入）",
+      "tier": "T1",
+      "source_type": "derived",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）",
+        "[SEC官方申报文件] SK hynix Semi-Annual Business Report（Form 6-K）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "63.27T"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "net_income_actual",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "formula": "valuation_gain_q2_2026+dividend_income_q2_2026",
+      "inputs": [
+        "valuation_gain_q2_2026",
+        "dividend_income_q2_2026"
+      ],
+      "used_in": [
+        "Word 一次性因素；Excel 一次性因素"
+      ],
+      "notes": "官方业绩演示约63.27万亿韩元；6-K附注可复算为53.237425＋10.027945"
+    },
+    {
+      "id": "revenue_consensus_q2_2026",
+      "value": "84.000000 万亿韩元",
+      "label": "2026Q2营业收入事前一致预期",
+      "tier": "T3",
+      "source_type": "news",
+      "sources": [
+        "[新闻（LSEG事前一致预期）] Reuters：SK hynix Q2 profit jumps 557%, misses forecasts",
+        "[交叉核验来源] Quartz：SK Hynix Q2 2026 earnings（转引CNBC/LSEG）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/Reuters_2026-07-29_SK_hynix_Q2_excerpt.txt",
+        "sha256": "4fb137e264e1158d",
+        "raw": "84 trillion"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "consensus_estimate",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 预期对比；Word 预期对比"
+      ],
+      "notes": "LSEG SmartEstimate；Reuters业绩报道列示的发布前预期",
+      "cross_check": {
+        "source": "Quartz/CNBC转引LSEG SmartEstimate",
+        "url": "https://qz.com/sk-hynix-q2-2026-earnings-record-profit-misses-estimates-072926"
+      }
+    },
+    {
+      "id": "revenue_vs_consensus_q2_2026",
+      "value": "-5.572921%",
+      "label": "2026Q2营业收入较预期偏离",
+      "tier": "T3",
+      "source_type": "derived",
+      "sources": [
+        "[新闻（LSEG事前一致预期）] Reuters：SK hynix Q2 profit jumps 557%, misses forecasts"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/Reuters_2026-07-29_SK_hynix_Q2_excerpt.txt",
+        "sha256": "4fb137e264e1158d",
+        "raw": "84 trillion"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "consensus_estimate",
+      "caliber": {
+        "unit": "%",
+        "currency": "",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "forecast"
+      },
+      "derived": true,
+      "formula": "(revenue_q2_2026-revenue_consensus_q2_2026)/revenue_consensus_q2_2026",
+      "inputs": [
+        "revenue_q2_2026",
+        "revenue_consensus_q2_2026"
+      ],
+      "used_in": [
+        "Excel 预期对比；Word 预期对比"
+      ],
+      "notes": "基于公开报道的整数位预期计算"
+    },
+    {
+      "id": "operating_profit_consensus_q2_2026",
+      "value": "64.000000 万亿韩元",
+      "label": "2026Q2营业利润事前一致预期",
+      "tier": "T3",
+      "source_type": "news",
+      "sources": [
+        "[新闻（LSEG事前一致预期）] Reuters：SK hynix Q2 profit jumps 557%, misses forecasts",
+        "[交叉核验来源] Quartz：SK Hynix Q2 2026 earnings（转引CNBC/LSEG）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/Reuters_2026-07-29_SK_hynix_Q2_excerpt.txt",
+        "sha256": "4fb137e264e1158d",
+        "raw": "64 trillion"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "consensus_estimate",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 预期对比；Word 预期对比"
+      ],
+      "notes": "LSEG SmartEstimate；Reuters业绩报道列示的发布前预期",
+      "cross_check": {
+        "source": "Quartz/CNBC转引LSEG SmartEstimate",
+        "url": "https://qz.com/sk-hynix-q2-2026-earnings-record-profit-misses-estimates-072926"
+      }
+    },
+    {
+      "id": "operating_profit_vs_consensus_q2_2026",
+      "value": "-5.402175%",
+      "label": "2026Q2营业利润较预期偏离",
+      "tier": "T3",
+      "source_type": "derived",
+      "sources": [
+        "[新闻（LSEG事前一致预期）] Reuters：SK hynix Q2 profit jumps 557%, misses forecasts"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/Reuters_2026-07-29_SK_hynix_Q2_excerpt.txt",
+        "sha256": "4fb137e264e1158d",
+        "raw": "64 trillion"
+      },
+      "as_of": "2026-Q2",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "consensus_estimate",
+      "caliber": {
+        "unit": "%",
+        "currency": "",
+        "basis": "K-IFRS",
+        "period_basis": "quarter",
+        "estimate": "forecast"
+      },
+      "derived": true,
+      "formula": "(operating_profit_q2_2026-operating_profit_consensus_q2_2026)/operating_profit_consensus_q2_2026",
+      "inputs": [
+        "operating_profit_q2_2026",
+        "operating_profit_consensus_q2_2026"
+      ],
+      "used_in": [
+        "Excel 预期对比；Word 预期对比"
+      ],
+      "notes": "基于公开报道的整数位预期计算"
+    },
+    {
+      "id": "broad_cash_q2_2026",
+      "value": "87.958000 万亿韩元",
+      "label": "2026-06-30广义现金",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "87,958"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "net_debt",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 现金流与资产负债；Word 现金流分析"
+      ]
+    },
+    {
+      "id": "debt_q2_2026",
+      "value": "18.587000 万亿韩元",
+      "label": "2026-06-30有息负债",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+        "sha256": "9ad154789c3d176f",
+        "raw": "18,587"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "net_debt",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Excel 现金流与资产负债；Word 现金流分析"
+      ]
+    },
+    {
+      "id": "net_cash_q2_2026",
+      "value": "69.371000 万亿韩元",
+      "label": "2026-06-30净现金",
+      "tier": "T1",
+      "source_type": "derived",
+      "sources": [
+        "[公司官方IR材料] SK hynix FY2026 Q2 Earnings Results（业绩演示）"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_Q2_2026_press_release_excerpt.txt",
+        "sha256": "e5761be0b1edb412",
+        "raw": "69.4 trillion won"
+      },
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "net_debt",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "formula": "broad_cash_q2_2026-debt_q2_2026",
+      "inputs": [
+        "broad_cash_q2_2026",
+        "debt_q2_2026"
+      ],
+      "used_in": [
+        "Word 现金流分析；Excel 现金流与资产负债"
+      ]
+    },
+    {
+      "id": "buyback_2026_approved",
+      "value": "40.000000 万亿韩元",
+      "label": "2026-08-19董事会批准回购并注销规模",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公司官方公告] SK hynix share repurchase and cancellation / FCF return plan"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "output/sources/SK_hynix_2026-08-19_shareholder_return_excerpt.txt",
+        "sha256": "45168358ec5d4964",
+        "raw": "40 trillion won"
+      },
+      "as_of": "2026-08-19",
+      "retrieved_at": "2026-10-27T21:20:00+08:00",
+      "category": "historical_anchor",
+      "caliber": {
+        "unit": "万亿韩元",
+        "currency": "KRW",
+        "basis": "K-IFRS",
+        "period_basis": "YTD",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "formula": null,
+      "inputs": [],
+      "used_in": [
+        "Word 截止日后事项"
+      ]
+    }
+  ],
+  "dependency_graph": {},
+  "math_checks": []
+}

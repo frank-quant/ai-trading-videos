@@ -1,0 +1,1420 @@
+{
+  "package": "EP011 Kimi K3.1 Pro金融实测 六案例",
+  "prepared_date": "2026-10-28",
+  "information_cutoff": "2026-10-26",
+  "original_deliveries_unchanged": true,
+  "cases": [
+    {
+      "video_order": 1,
+      "original_case": 2,
+      "task": "宇树科技投委会PPT",
+      "prompt": "prompts/01_宇树科技投委会PPT.md",
+      "deliverables": "deliverables/01_unitree_ic/output"
+    },
+    {
+      "video_order": 2,
+      "original_case": 4,
+      "task": "SK海力士财报解读",
+      "prompt": "prompts/02_SK海力士财报解读.md",
+      "deliverables": "deliverables/02_sk_hynix/output"
+    },
+    {
+      "video_order": 3,
+      "original_case": 1,
+      "task": "特斯拉财务预测与DCF估值",
+      "prompt": "prompts/03_特斯拉财务预测与DCF估值.md",
+      "deliverables": "deliverables/03_tesla_model/output"
+    },
+    {
+      "video_order": 4,
+      "original_case": 5,
+      "task": "SOXX SPY BIL轮动回测",
+      "prompt": "prompts/04_SOXX_SPY_BIL轮动回测.md",
+      "deliverables": "deliverables/04_etf_rotation/output"
+    },
+    {
+      "video_order": 5,
+      "original_case": 7,
+      "task": "汽车产业链候选池财务筛选",
+      "prompt": "prompts/05_汽车产业链候选池财务筛选.md",
+      "deliverables": "deliverables/05_auto_screen/output"
+    },
+    {
+      "video_order": 6,
+      "original_case": 6,
+      "task": "Anthropic IPO监管问询研究",
+      "prompt": "prompts/06_Anthropic_IPO监管问询研究.md",
+      "deliverables": "deliverables/06_anthropic_ipo/output"
+    }
+  ],
+  "resource_totals": {
+    "duration_ms": 8358185,
+    "model_calls": 479,
+    "noncache_input": 1890257,
+    "output_tokens": 281794,
+    "cache_read": 113917012,
+    "cache_creation": 0,
+    "noncache_input_plus_output": 2172051,
+    "total_tokens": 116089063,
+    "explicit_web_search_calls": 58,
+    "explicit_web_fetch_calls": 13,
+    "database_requests": 15
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "kind": "package_documentation",
+      "bytes": 208,
+      "sha256": "8a46e5f9b721077f4c7c5e444eb410d7d6becd276c0b66bd10d307a00ee67275"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/data-registry.json",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/deck/data-registry.json",
+      "bytes": 133010,
+      "sha256": "2417ecaed7459dc6a5d7739255a6eb6ca6b77ff592585570e97b2d75f73d8cb4"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/presentation.pptx",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/deck/presentation.pptx",
+      "bytes": 198793,
+      "sha256": "f78da90b76875f9ab9a33ac6792af96dfe87229f33ab3d1c87fd10257de794c5"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/宇树科技_20261026_data_registry.json",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/宇树科技_20261026_data_registry.json",
+      "bytes": 133010,
+      "sha256": "2417ecaed7459dc6a5d7739255a6eb6ca6b77ff592585570e97b2d75f73d8cb4"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/宇树科技_关键数据底表_20261026.xlsx",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/宇树科技_关键数据底表_20261026.xlsx",
+      "bytes": 23283,
+      "sha256": "7273b31dd1e0b0303a7f752e9bb29227de5717d67427ad70297efeb4d23e5605"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/来源清单.md",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/来源清单.md",
+      "bytes": 4449,
+      "sha256": "5e7a1dfd435b7b31a928aef41a51d1c5437405ae7bfdfda36c16289cc41e3a8b"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/资料/东吴证券_人形机器人产业化奇点已至_20260809.pdf",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/资料/东吴证券_人形机器人产业化奇点已至_20260809.pdf",
+      "bytes": 3641470,
+      "sha256": "c616968c2d35dd77f078d01c8af401496ba54c8e914453dfc3f0415be4dd5fe1"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/资料/中邮证券_宇树G1人形机器人拆解报告_20260331.pdf",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/资料/中邮证券_宇树G1人形机器人拆解报告_20260331.pdf",
+      "bytes": 5328394,
+      "sha256": "1cd705011e07ea9fc9342af0b9abf29b92ca1ea882772e9a888ccf742ac350c4"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/资料/华金证券_新股覆盖研究宇树科技_20260812.pdf",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/资料/华金证券_新股覆盖研究宇树科技_20260812.pdf",
+      "bytes": 668435,
+      "sha256": "788d83f894ce39ed411622fd121d9c7d1d50425e0e28404ce8ea9d4a9035cbd8"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/资料/华鑫证券_茁壮成长的中国树_20260920.pdf",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/资料/华鑫证券_茁壮成长的中国树_20260920.pdf",
+      "bytes": 695180,
+      "sha256": "6b49401cf28d2c605f140016031e92d9ea8dab5cb522f035ccd5d29c8f7030e2"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/资料/原始披露_招股说明书注册稿_20260602.pdf",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/资料/原始披露_招股说明书注册稿_20260602.pdf",
+      "bytes": 6446427,
+      "sha256": "d44c035e2d957cd9040edb1770c27f3b58d53293a74e3b36f75f1b54b2b5442b"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/资料/原始披露_第二轮预先审阅问询回复_20260320.pdf",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/资料/原始披露_第二轮预先审阅问询回复_20260320.pdf",
+      "bytes": 1560295,
+      "sha256": "3a481485e2b49f5112ebe6a5739e0476548fcb0ff23769e9960ea85788b1f550"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/资料/原始披露_股票交易异常波动公告_20261027.pdf",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/资料/原始披露_股票交易异常波动公告_20261027.pdf",
+      "bytes": 129122,
+      "sha256": "06ae7e97d71015aab8499ccfe421f945b9fed4b6616f04234330191f4ef19f6d"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/资料/原始披露_首次公开发行上市公告书_20260818.pdf",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/资料/原始披露_首次公开发行上市公告书_20260818.pdf",
+      "bytes": 4086550,
+      "sha256": "360e6010d6434fe45ace0cf1cd837d53b1233d7c61409f59f0ba99a98483225f"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/资料/太平洋证券_宇树科技深度报告_20261022.pdf",
+      "kind": "original_delivery",
+      "source": "CASE02_宇树科技投委会/output/资料/太平洋证券_宇树科技深度报告_20261022.pdf",
+      "bytes": 2100533,
+      "sha256": "5b2ee773fc154142b912cde1ccbc3338cd093ff826a559c8e19f91dd974f2044"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/README.md",
+      "kind": "package_documentation",
+      "bytes": 1015,
+      "sha256": "44fcff3beadf8306899aa6b2864321bd879a89a323331646aa7cb540cb95e219"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/assets/SK_hynix_Q2_financials.png",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/assets/SK_hynix_Q2_financials.png",
+      "bytes": 84334,
+      "sha256": "c6687d3e49abbe1d7c13034ed946e1e11fcf9724c6793491d7a89dc0e0d59a04"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/SK_hynix_2026Q2_data_registry.json",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/SK_hynix_2026Q2_data_registry.json",
+      "bytes": 59239,
+      "sha256": "6bcbbca1047a0aa1eb691cc908bbcd31b95c0a8e8f6fd9d1dca904cf53acc334"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/SK_hynix_Q2_2026_chart_spec.json",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/SK_hynix_Q2_2026_chart_spec.json",
+      "bytes": 424,
+      "sha256": "50dd0b163ca4cf3d347add1645a2bebefffbdad94fe76ad442613fd1095103ca"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/SK海力士_2026Q2_业绩点评.docx",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/SK海力士_2026Q2_业绩点评.docx",
+      "bytes": 97775,
+      "sha256": "8be80925e6b5ee19164eea0e651f6220cbba2f471ebd313209ad24da7a656f2d"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/SK海力士_2026Q2_关键数据表.xlsx",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/SK海力士_2026Q2_关键数据表.xlsx",
+      "bytes": 22560,
+      "sha256": "261734830840c88ddee4cef41c8b6c151356e4583d6edf2741e5f586d667f596"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/sources/Reuters_2026-07-29_SK_hynix_Q2_excerpt.txt",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/sources/Reuters_2026-07-29_SK_hynix_Q2_excerpt.txt",
+      "bytes": 1644,
+      "sha256": "4fb137e264e1158d89d0d053be1f09e2bb48a7b51505c6c639f3b74b08f1ccdf"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/sources/SK_hynix_2026-08-19_shareholder_return_excerpt.txt",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/sources/SK_hynix_2026-08-19_shareholder_return_excerpt.txt",
+      "bytes": 1369,
+      "sha256": "45168358ec5d4964cd7851c307ad6f619c9e393ffde3c29aea500a63738fb51b"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.html",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.html",
+      "bytes": 4238873,
+      "sha256": "1929212717c6fa9fc389d2b9f132913ec19f3b86ac8c69495445d9c1d1373df0"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/sources/SK_hynix_2026_Semi_Annual_Business_Report_6K.txt",
+      "bytes": 496401,
+      "sha256": "78de098baf611a6706032f007f2f8ef56443d9f0cc08c087c7cbe97a15762052"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.pdf",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.pdf",
+      "bytes": 3024827,
+      "sha256": "332909850fc2c95989b5f4d7c4385fbf9f36bb6d1f60585430daa7edabc3eee5"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/sources/SK_hynix_FY2026_Q2_Earnings_Presentation.txt",
+      "bytes": 12113,
+      "sha256": "9ad154789c3d176f687eabefc7bc5788f399a6c76751ba67794de4381fc9c70e"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/sources/SK_hynix_Q2_2026_press_release_excerpt.txt",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/sources/SK_hynix_Q2_2026_press_release_excerpt.txt",
+      "bytes": 2333,
+      "sha256": "e5761be0b1edb4127bc7bda7e98673cb97ce682da4febfcbcc02d4468ffe6f13"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/sources/SK_hynix_Q3_2026_invitation_excerpt.txt",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/sources/SK_hynix_Q3_2026_invitation_excerpt.txt",
+      "bytes": 501,
+      "sha256": "c06680c68ddbadd5e01f5f651debd72b34530411eaa588ef18b518269984bcc3"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/sources/Yahoo_SK_hynix_Q2_2026_call_excerpt.txt",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/sources/Yahoo_SK_hynix_Q2_2026_call_excerpt.txt",
+      "bytes": 2760,
+      "sha256": "ead6b66d7e0a5e5eae8df8ff3ed094de3e241591ea163983494b6178d96bb416"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/资料与来源清单.md",
+      "kind": "original_delivery",
+      "source": "CASE04_SK海力士财报解读/output/资料与来源清单.md",
+      "bytes": 5235,
+      "sha256": "59a0f76eb7858c369494b4d46877068afc214759e5f514363581ca2df3187618"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/README.md",
+      "kind": "package_documentation",
+      "bytes": 950,
+      "sha256": "ce9f0ac3c4066d37ad3207280b7005b431a9e07e9dfe3fa3f793c42247e76be2"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/data/revenue_scenarios_spec.json",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/data/revenue_scenarios_spec.json",
+      "bytes": 446,
+      "sha256": "acee85a6f57b8bfadc371dab2f477edef3f9dcbf7fdb762a9bc8d9e0edb7310c"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/data/sec_company_info.csv",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/data/sec_company_info.csv",
+      "bytes": 703,
+      "sha256": "ae62e615d31129d77a2fc7fea3b08c22e1736085c26306b11eb6d63fc7fd2ea5"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/data/sec_filings.csv",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/data/sec_filings.csv",
+      "bytes": 5113,
+      "sha256": "ffb38f5669918ae3c1cc45ea440bdcdd50842ede4d62303edfd5641ae71b0d7d"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/data/sec_fy2025_all.csv",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/data/sec_fy2025_all.csv",
+      "bytes": 62695,
+      "sha256": "bd27fe8ee0251d373dbd1817e8a1e1dda0e75514b41da0bf82dba3cb5eb8e4e2"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/data/sec_fy2025_all_slim.csv",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/data/sec_fy2025_all_slim.csv",
+      "bytes": 19597,
+      "sha256": "22b6c5d8d7fe319b8288a357a6919e53883646763c6730c691af542ff85fe85e"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/data/sec_q1fy2026_all.csv",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/data/sec_q1fy2026_all.csv",
+      "bytes": 58255,
+      "sha256": "1f2cd8138855e653dfc1b6ab581d9fec857f6ad297c4f0e1c7145fd9bde30056"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/data/sec_q2fy2026_all.csv",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/data/sec_q2fy2026_all.csv",
+      "bytes": 60542,
+      "sha256": "8619e1b3ee36ce27b1787e3c773fca861d7cea8ef9cea1a2ab236e8b4980713d"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/data/sec_q3fy2026_all.csv",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/data/sec_q3fy2026_all.csv",
+      "bytes": 62283,
+      "sha256": "d35c77984a92771aa86ed201d3270a8300279bdc83fc6a2ad8f76bfe2f3ce620"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/data/sec_q3fy2026_all_slim.csv",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/data/sec_q3fy2026_all_slim.csv",
+      "bytes": 20567,
+      "sha256": "d4f59181fe7049f6cc2602846fdbd0ed13739b88926b128e7f868ee42802a85e"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/data/yahoo_tsla_info.csv",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/data/yahoo_tsla_info.csv",
+      "bytes": 7979,
+      "sha256": "2099a9e556d3a2236610d5809ecc3d115ca036528401b9755806b8db80419215"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/data/yahoo_tsla_prices.csv",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/data/yahoo_tsla_prices.csv",
+      "bytes": 774,
+      "sha256": "aa6f19ad75c1b98858de43f327703b35bf3254b34b9fd18c3df41ce13e938691"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/evidence/extraction_summary.txt",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/evidence/extraction_summary.txt",
+      "bytes": 130417,
+      "sha256": "2fbfffd1811b973c8ed98e97aaecb271bd4b8fb3b599730a4564666a28721d91"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/evidence/final_qa_summary.txt",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/evidence/final_qa_summary.txt",
+      "bytes": 4528,
+      "sha256": "f35d3aaaf19a4dd2e4c84673b70bb62760d9b017cec4e06535ed1cb3edaf2753"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/evidence/TSLA-Q3-2026-Update.pdf",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/evidence/TSLA-Q3-2026-Update.pdf",
+      "bytes": 6711488,
+      "sha256": "1e9ed2f3288c7f22343900a28e76c678063d60b237a15d3e5957619051288f19"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/evidence/TSLA-Q3-2026-Update.txt",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/evidence/TSLA-Q3-2026-Update.txt",
+      "bytes": 42482,
+      "sha256": "6d89c85417c364509d9a14a5d058194896068160b26563f746ce0bd780c1bd25"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/evidence/TSLA-Q4-2025-Update.pdf",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/evidence/TSLA-Q4-2025-Update.pdf",
+      "bytes": 5648867,
+      "sha256": "05a5eb4fff82710fafa5639deb2127d531b297fd6f6d93af58e72a2869926a18"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/evidence/TSLA-Q4-2025-Update.txt",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/evidence/TSLA-Q4-2025-Update.txt",
+      "bytes": 52357,
+      "sha256": "65d437478b8eed03b99b7697ebfc35a56850a52d75c2befc07d96af03ce1037a"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/evidence/tsla_fy2025_10k.htm",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/evidence/tsla_fy2025_10k.htm",
+      "bytes": 2391638,
+      "sha256": "55a9fe4523c928212463f80bc3f5dab8e8edce8a34fd9bbecfd93a5cf2c16759"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/evidence/tsla_fy2025_10k.txt",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/evidence/tsla_fy2025_10k.txt",
+      "bytes": 438721,
+      "sha256": "648ac15c3c14cf2d30a6c31454ba37ee5a163cfe7f159dc423ec6b1c38a1c57d"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/evidence/tsla_q3_2026_10q.htm",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/evidence/tsla_q3_2026_10q.htm",
+      "bytes": 1605248,
+      "sha256": "87e50a62ef004712cc4bcc90e7a26f9acb3e0b3bfee5f46ae3527ec807db529c"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/evidence/tsla_q3_2026_10q.txt",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/evidence/tsla_q3_2026_10q.txt",
+      "bytes": 172694,
+      "sha256": "d1480f1fd3ddd4acbcca1315a1fd3012c2c1b6842efcd0f0edb1c39e0720de23"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/evidence/us_treasury_2026_yields.csv",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/evidence/us_treasury_2026_yields.csv",
+      "bytes": 16634,
+      "sha256": "a3469c2af859a7b9ecf9a63db9f2cd045c86ae973ba28c71d0bf612fcd301287"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/qa_results.json",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/qa_results.json",
+      "bytes": 4526,
+      "sha256": "247fdd1b675a51c849505285cd31bc06c5664781959f0bc9f6eb82c25c7d51d0"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/TSLA_估值分析简报.md",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/TSLA_估值分析简报.md",
+      "bytes": 7574,
+      "sha256": "d0d826f671052c7ba1f11e99116f10cd040289d29257460e9711016401196e97"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/TSLA_财务预测与DCF模型.xlsx",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/TSLA_财务预测与DCF模型.xlsx",
+      "bytes": 117295,
+      "sha256": "3e7c9aa02dbfbc66f3d4132518eb4270a718d1b2f726e826c0638d43c383c487"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/validation_report.json",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/validation_report.json",
+      "bytes": 6840,
+      "sha256": "1972fc54bdef02f965a0e06ae851d4b198fd80e18c8b46ed852c8369997c8559"
+    },
+    {
+      "path": "deliverables/03_tesla_model/output/交付清单.json",
+      "kind": "original_delivery",
+      "source": "CASE01_特斯拉财务模型/output/交付清单.json",
+      "bytes": 5093,
+      "sha256": "c52144bd0224ac17d4e95eb289694d344869c577b9d7f9abf22004d183cb3e48"
+    },
+    {
+      "path": "deliverables/03_tesla_model/README.md",
+      "kind": "package_documentation",
+      "bytes": 867,
+      "sha256": "68839cfeeb8209fded20fe798392bc917c334fa7d75d9212980246c6064c93b6"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/annual_returns.csv",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/annual_returns.csv",
+      "bytes": 493,
+      "sha256": "9fa0c4d69f2bb05c9794b0d4a6575e45fd2f647693f55ac245a08c1dc52390a6"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/backtest.py",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/backtest.py",
+      "bytes": 31318,
+      "sha256": "ba3adda6d5fbb2a4c6df9b966bbbbac0bb7bb91a77b5180adc523a26feb6757f"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/daily_detail.csv",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/daily_detail.csv",
+      "bytes": 1123747,
+      "sha256": "6bb981b09586d4ce4c191d6f473abf79cb29dd50cb8eb855b96733f8473c0b1e"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/daily_equity_drawdown.csv",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/daily_equity_drawdown.csv",
+      "bytes": 295543,
+      "sha256": "e1f8fcaef977496ddb13e690b3ab7bf06bc417fb0a2739b3af243db0ddb6f48b"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/BIL_corporate_actions.csv",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data/BIL_corporate_actions.csv",
+      "bytes": 5276,
+      "sha256": "ed78380dac2e83414ca9c03840f4e35cc1357acbfbcb1dee5b6f2a5d2a18ffc1"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/BIL_daily.csv",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data/BIL_daily.csv",
+      "bytes": 224105,
+      "sha256": "32be6527c963a20ab78ec78066ecee3b335c13ef17905830c3d7e182e2d22524"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/BIL_metadata.json",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data/BIL_metadata.json",
+      "bytes": 760,
+      "sha256": "9fe8164a3d817e6264ca56afb71e8f6187e8e000fe93ef08c74a8f54ba9cd734"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/BIL_yahoo_chart.json",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data/raw/BIL_yahoo_chart.json",
+      "bytes": 463919,
+      "sha256": "ba39a67c0ab7f503ab975ec819ec1044e4dfd5120535a57b3c212782ac6a0355"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/SOXX_gtimg_qfq_kline.json",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data/raw/SOXX_gtimg_qfq_kline.json",
+      "bytes": 141327,
+      "sha256": "70c02e341f08552ba9a35e9ce77de18dac3a14451e4b3a46540f7dcb7524dc45"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/SOXX_yahoo_chart.json",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data/raw/SOXX_yahoo_chart.json",
+      "bytes": 467642,
+      "sha256": "10ec0dba5f7fe60a8ac62406405f1c3cc0bb3f6dc12d50c74c39e575cfa8119e"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/SPY_yahoo_chart.json",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data/raw/SPY_yahoo_chart.json",
+      "bytes": 465305,
+      "sha256": "6d57e6778a3d0e6f7728db191659f3b0cd19f5885aa8ac874b14c5e61be95aea"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/SOXX_corporate_actions.csv",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data/SOXX_corporate_actions.csv",
+      "bytes": 2579,
+      "sha256": "ce4c899a80320aa787a03e7bb1af5e892fa81280bc8a6fdd036480d62281b3b1"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/SOXX_daily.csv",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data/SOXX_daily.csv",
+      "bytes": 232096,
+      "sha256": "3e073c9ae0726d8ff9d1a39b11beb6939e8d5c465b170b7751aebd022ba973eb"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/SOXX_metadata.json",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data/SOXX_metadata.json",
+      "bytes": 764,
+      "sha256": "db0a451b8c44e001cbc537bb8441c287f0d1add4c637d4b3772ebe545c58f176"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/SPY_corporate_actions.csv",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data/SPY_corporate_actions.csv",
+      "bytes": 2298,
+      "sha256": "e73e14fb44b0e2954325422ff5e754f63d07ec9758635b04a12c4f0f4fc09d70"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/SPY_daily.csv",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data/SPY_daily.csv",
+      "bytes": 230075,
+      "sha256": "211a3857d7d3490e4b33db56f2bdb4f99e56081112a4422852322efe1bf89622"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/SPY_metadata.json",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data/SPY_metadata.json",
+      "bytes": 760,
+      "sha256": "a45efa029d63783b2ce05dfa5b97bfb33b9d30c00a014202b906294dc64989a2"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data_validation.json",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/data_validation.json",
+      "bytes": 1743,
+      "sha256": "109f0b414d3b08559e96df0d8ea970e136e6ba3d80cc2ec7fe6527f179c0c0a9"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/dividend_reinvestments.csv",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/dividend_reinvestments.csv",
+      "bytes": 16182,
+      "sha256": "bca7aacf68c8f57068791d2baa68d7401fa77a947a88dbf6f9e8703342bbd2e4"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/equity_drawdown.png",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/equity_drawdown.png",
+      "bytes": 542680,
+      "sha256": "ae3bd1eed0af808ecf236b60d43c5ac3bb1ca7b6be33f079b7b23a783125e560"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/fetch_data.py",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/fetch_data.py",
+      "bytes": 5466,
+      "sha256": "af0a656d6b127c2bed32677e5be281b5f51d24b6563e2b63ea96c66665f22ef0"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/README.md",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/README.md",
+      "bytes": 3095,
+      "sha256": "de84ba733cec8e22dcbb68209d4d48360bf8535fa8a9bddaf7537cd5e971fe5f"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/report.html",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/report.html",
+      "bytes": 735299,
+      "sha256": "8cf5bb935323faa7363cd29428c3c31135a4c56278e0de134bd1063315b0870d"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/report.md",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/report.md",
+      "bytes": 10243,
+      "sha256": "adfec10d736dae5d40eb3d506b3b668dacf5e543a215acbee8f658e81e6e6c8b"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/requirements.txt",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/requirements.txt",
+      "bytes": 40,
+      "sha256": "23282536125dd9527cce34766a33bfa42fc046bde68623055061b72a836cdba5"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/signals.csv",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/signals.csv",
+      "bytes": 12658,
+      "sha256": "23eaa8b4d102809c6f1f71836dfc0b5e5cf83d01bfbc3345f967d0b9bf734d89"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/summary_metrics.csv",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/summary_metrics.csv",
+      "bytes": 1558,
+      "sha256": "2bcb930f68776988709ea0a13013de1a4aecbc4014e51369a38d83fe49f5d47c"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/trades.csv",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/trades.csv",
+      "bytes": 24308,
+      "sha256": "5c6017952087f1b4aea78d0022b8a2f2be967ae630f61fe7f0510389ea75052a"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/verification_results.json",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/verification_results.json",
+      "bytes": 6738,
+      "sha256": "70eb265923ac054f833a854146cec11ef9fe6ef3e62fb4d7e6852f5a0fd2a18d"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/verify_results.py",
+      "kind": "original_delivery",
+      "source": "CASE05_ETF量化分析/output/verify_results.py",
+      "bytes": 3988,
+      "sha256": "c21c3b1baa317620a56148905ef18df016972ea50ab80be408456072056ebab7"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/README.md",
+      "kind": "package_documentation",
+      "bytes": 1466,
+      "sha256": "75346d088529abd463dcd60be3bf6e78317e64a399f2ffc406f799468c68bde5"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/A股汽车产业链_2025年度财务筛选_20261026.xlsx",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/A股汽车产业链_2025年度财务筛选_20261026.xlsx",
+      "bytes": 27698,
+      "sha256": "e1c9d90c1becd02d8e1fe3a035ee9eb7e286a71d925299e17830b1a02569aad2"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/chart_spec.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/chart_spec.json",
+      "bytes": 540,
+      "sha256": "375cb873328e7fb48bac1b33c6f5a598be25479787855f9c891407d64de48446"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/ifind_extracted_financials.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/ifind_extracted_financials.csv",
+      "bytes": 7196,
+      "sha256": "06448385411d6849e43147401eea63cdb92d8f28a28d6d4ffaf4c5d0c97405e7"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch1_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/balance_sheet_batch1_2024.csv",
+      "bytes": 7215,
+      "sha256": "d927b91cd30c85f3d7870e7fea004ff0c44fed923bef28f494fe624739aa69df"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch1_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/balance_sheet_batch1_2025.csv",
+      "bytes": 7193,
+      "sha256": "a81732d432398a12d6729447796363f6085c76efe890a51efd94ff6af2f78a0e"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch2_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/balance_sheet_batch2_2024.csv",
+      "bytes": 6905,
+      "sha256": "290b72e45d353baf9051595fc0ec924983dc7a81fcda5828b5ceb9ced64ba1c8"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch2_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/balance_sheet_batch2_2025.csv",
+      "bytes": 6920,
+      "sha256": "4872d0a0cd0867208a4e30da9c72bd36c7ab9573d132e3d411deef3e34e07f31"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch3_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/balance_sheet_batch3_2024.csv",
+      "bytes": 6578,
+      "sha256": "12cf274e53b38aa7ce172a5ae47fd0aa87b34234e02c731060b39befd1b04174"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch3_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/balance_sheet_batch3_2025.csv",
+      "bytes": 6638,
+      "sha256": "7f0ccf7e578c10fcf3b9b39fed7e1cafbe16d173906870a5630cf0903fda4268"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch4_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/balance_sheet_batch4_2024.csv",
+      "bytes": 6970,
+      "sha256": "254724778d563179280f672c19fb28a7df611d50342493f02f71987a7bf8aeaf"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch4_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/balance_sheet_batch4_2025.csv",
+      "bytes": 6973,
+      "sha256": "0dfcaf2391fd581719beb77df1468df6b6ff143a1c616b250726d7d919ea3b11"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch5_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/balance_sheet_batch5_2024.csv",
+      "bytes": 6674,
+      "sha256": "f531b69072c47ed22df6b60e8a057042814fe09be30e42faec373e81ae14980b"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch5_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/balance_sheet_batch5_2025.csv",
+      "bytes": 6625,
+      "sha256": "9aeb77ab0d93ff64238887ab7b98255a917fd10d59269adba8e74a711b00e4b2"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch1_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/cash_flow_batch1_2024.csv",
+      "bytes": 6449,
+      "sha256": "daeec1aa48e55e4a483d07564fc71dd4a67144d0e030cc0f4d833f623ff03bf6"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch1_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/cash_flow_batch1_2025.csv",
+      "bytes": 6452,
+      "sha256": "88f73db24c94aef81f9a7be25f8a4b083503abe1c8c583c202d53e1cbb6cefcd"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch2_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/cash_flow_batch2_2024.csv",
+      "bytes": 6361,
+      "sha256": "0847ca12639fed2f1ceaa474befd2048c9fe0412d3f78d1245140c0dec7c53e0"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch2_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/cash_flow_batch2_2025.csv",
+      "bytes": 6375,
+      "sha256": "e654f3d923ee09f30af764d987462575474215bf10f1e1485d70af8ff1b0d480"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch3_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/cash_flow_batch3_2024.csv",
+      "bytes": 6013,
+      "sha256": "239fa584a7d9605bd34d652472e7d77dca2e5138cb8f15ca11f7032bfe74a6b6"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch3_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/cash_flow_batch3_2025.csv",
+      "bytes": 6025,
+      "sha256": "964e264ebd906d9356dda3ced071e4e3b4cbcedf6c92fbb419378af331c4759f"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch4_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/cash_flow_batch4_2024.csv",
+      "bytes": 6216,
+      "sha256": "4d7c1bfb2675088824f8604246634ebfe7e78b4f0b98242f3c165925af52ced8"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch4_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/cash_flow_batch4_2025.csv",
+      "bytes": 6183,
+      "sha256": "43fc5b22b09e507d12bf7a5757cb2265501d182c1ac7862a7e5a8086d0682572"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch5_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/cash_flow_batch5_2024.csv",
+      "bytes": 6109,
+      "sha256": "3274db3ccd9f269914329c68d858a4c7719844cc0c05fc7bbfbbdff610e4e787"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch5_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/cash_flow_batch5_2025.csv",
+      "bytes": 6119,
+      "sha256": "46c4d13a450e95b9b8f6aea5c4f0d73e74077172efe502e443a68e00ac642bf8"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch1_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch1_2024.csv",
+      "bytes": 6449,
+      "sha256": "daeec1aa48e55e4a483d07564fc71dd4a67144d0e030cc0f4d833f623ff03bf6"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch1_2024_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch1_2024_params.json",
+      "bytes": 279,
+      "sha256": "f71ddaa3022cbd856c9679ce6059fbbe2ceb0f69899295172dc89d650d33a36e"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch1_2024_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch1_2024_response.txt",
+      "bytes": 20211,
+      "sha256": "a9c32b95a03af0912c1f04a6c270027f14845744be93b4d9f84fd136c3559c91"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch1_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch1_2025.csv",
+      "bytes": 6452,
+      "sha256": "88f73db24c94aef81f9a7be25f8a4b083503abe1c8c583c202d53e1cbb6cefcd"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch1_2025_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch1_2025_params.json",
+      "bytes": 279,
+      "sha256": "7c8d45fca68b3ef16fe46383b4e3c299dce7444e39fafbb4a482da3cfc9023a9"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch1_2025_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch1_2025_response.txt",
+      "bytes": 20210,
+      "sha256": "0ea2dfce9a081552eba331dff00344ecaf589bd8c22ff5b7120af2ce1da7af99"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch2_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch2_2024.csv",
+      "bytes": 6361,
+      "sha256": "0847ca12639fed2f1ceaa474befd2048c9fe0412d3f78d1245140c0dec7c53e0"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch2_2024_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch2_2024_params.json",
+      "bytes": 279,
+      "sha256": "c9b5c77166d2bb753c695e92df4d9abe50c6bf2e6b2a05fcc7c617b5f6459c08"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch2_2024_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch2_2024_response.txt",
+      "bytes": 19645,
+      "sha256": "df8565855cc1ea2471813d439c9a78d909e20ec5a320282ada56760970eb3577"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch2_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch2_2025.csv",
+      "bytes": 6375,
+      "sha256": "e654f3d923ee09f30af764d987462575474215bf10f1e1485d70af8ff1b0d480"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch2_2025_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch2_2025_params.json",
+      "bytes": 279,
+      "sha256": "c5149d13b9f2db332fb12499ed5b5ac73f2cbd6c02fd25731fbea5634313424e"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch2_2025_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch2_2025_response.txt",
+      "bytes": 19687,
+      "sha256": "045959798e4a097c5f46f757c78a4bfa44acf4614e6d90edefccedbc1a12c7a7"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch3_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch3_2024.csv",
+      "bytes": 6013,
+      "sha256": "239fa584a7d9605bd34d652472e7d77dca2e5138cb8f15ca11f7032bfe74a6b6"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch3_2024_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch3_2024_params.json",
+      "bytes": 279,
+      "sha256": "5253a5a6cb8dee43764d3edcf5cf669d7aea0a65df03efc951f6b1e85f2c0471"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch3_2024_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch3_2024_response.txt",
+      "bytes": 18879,
+      "sha256": "2e8abb6efbce5cdf91444ca4ecf1810e48d433be9ad563367977cc812391f60d"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch3_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch3_2025.csv",
+      "bytes": 6025,
+      "sha256": "964e264ebd906d9356dda3ced071e4e3b4cbcedf6c92fbb419378af331c4759f"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch3_2025_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch3_2025_params.json",
+      "bytes": 279,
+      "sha256": "2c44ddae18f9cd6a91a9e5f71a3ca004dbe96a5d184c906cbb2b65d737be6146"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch3_2025_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch3_2025_response.txt",
+      "bytes": 18914,
+      "sha256": "ba4c185749db7c0ec383944083cec04e9c3c76ee88052850c1b3c0c1fade7978"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch4_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch4_2024.csv",
+      "bytes": 6216,
+      "sha256": "4d7c1bfb2675088824f8604246634ebfe7e78b4f0b98242f3c165925af52ced8"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch4_2024_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch4_2024_params.json",
+      "bytes": 279,
+      "sha256": "017664f966b3b940579942903599cb89449e4276e18391d6bef77e56c29a14b2"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch4_2024_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch4_2024_response.txt",
+      "bytes": 19601,
+      "sha256": "fb6f53d52190654d84aa65acaccd0032098ae556300a5e0d17409f90d5894bf3"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch4_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch4_2025.csv",
+      "bytes": 6183,
+      "sha256": "43fc5b22b09e507d12bf7a5757cb2265501d182c1ac7862a7e5a8086d0682572"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch4_2025_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch4_2025_params.json",
+      "bytes": 279,
+      "sha256": "0b3a87d074e189d19f1740325813095c43f3d5554eb081d7529f5a5af6c4c984"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch4_2025_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch4_2025_response.txt",
+      "bytes": 19577,
+      "sha256": "d7e88939eb10c6d8d32e1bcb4808d1f4aaa65021ca7cf69f3aa00c09e35470d3"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch5_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch5_2024.csv",
+      "bytes": 6109,
+      "sha256": "3274db3ccd9f269914329c68d858a4c7719844cc0c05fc7bbfbbdff610e4e787"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch5_2024_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch5_2024_params.json",
+      "bytes": 279,
+      "sha256": "0db8fa8bb65a8b07b9450d78bd0b334e591caf60791cfd053798cab7e3d48b4d"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch5_2024_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch5_2024_response.txt",
+      "bytes": 19082,
+      "sha256": "d0a379889d5294fea4806b9232b31e7277c5534c062ec335891f126d8391a6d1"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch5_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch5_2025.csv",
+      "bytes": 6119,
+      "sha256": "46c4d13a450e95b9b8f6aea5c4f0d73e74077172efe502e443a68e00ac642bf8"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch5_2025_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch5_2025_params.json",
+      "bytes": 279,
+      "sha256": "d72ba10d9c13cc070155d8d31bee81178154e986d38f717e42a2499f5fb2e4c2"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch5_2025_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/financials_batch5_2025_response.txt",
+      "bytes": 19027,
+      "sha256": "016f85f83aef8df078be26178e6c9682eff93632e74a3b006484265bbfa60ce1"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch1_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/income_statement_batch1_2024.csv",
+      "bytes": 4445,
+      "sha256": "47fab687a28adccf9523f143314b171f52af9c6d3c85d5331a44cdb9a57be6e9"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch1_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/income_statement_batch1_2025.csv",
+      "bytes": 4463,
+      "sha256": "f1aefe992ae3d7afd6edb2f1df288ad834df5de88c695087f91b1b12be5efba9"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch2_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/income_statement_batch2_2024.csv",
+      "bytes": 4277,
+      "sha256": "e9b05817899172744046b38061be59c0a380e9aa0d845796d9e16e1f4f997cfe"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch2_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/income_statement_batch2_2025.csv",
+      "bytes": 4290,
+      "sha256": "71c1478dd71ca73400a34176180459db021c744f67d396997550f0691acfdaff"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch3_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/income_statement_batch3_2024.csv",
+      "bytes": 4186,
+      "sha256": "12f317caf580626445c1bf7596b37d0222134013fdf7ad83a34d449d7665b6d1"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch3_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/income_statement_batch3_2025.csv",
+      "bytes": 4149,
+      "sha256": "660a6e4442b2b588b8ec551d8ee28cd43c9ce91785c0b2793d1650dda2666eea"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch4_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/income_statement_batch4_2024.csv",
+      "bytes": 4313,
+      "sha256": "a90bcaaabbed71e10fd9125790c6b8f38b982ab18bf6f913673c1e5da4ce6314"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch4_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/income_statement_batch4_2025.csv",
+      "bytes": 4319,
+      "sha256": "d882b720dc54cd4585b37dfa6f25b6f3be4c09ec2aa6a242b44788a37630960d"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch5_2024.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/income_statement_batch5_2024.csv",
+      "bytes": 4197,
+      "sha256": "2c7c6646ecb74672b7fdc178963abdaf791454d2e517b7c6aa04cd33766ad0be"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch5_2025.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/income_statement_batch5_2025.csv",
+      "bytes": 4181,
+      "sha256": "6a1df537c4e04904d93788fa295ddf5a8e7232b77d3108f3fdbec1b360587652"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/query_manifest.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/query_manifest.json",
+      "bytes": 6434,
+      "sha256": "ceaaee597a9eca9c301b9e628ff5fedc5582d580de76538f851985c76c931c99"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch1.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch1.csv",
+      "bytes": 5477,
+      "sha256": "3ad31307fe3c3ca61da62b38161486a0e2cd4b867bc9cf8cb977e140f45bbefc"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch1_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch1_params.json",
+      "bytes": 246,
+      "sha256": "4e2f9236ad0743764b8111ea6bab71d3c20994428ce864773db3df6259603d7f"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch1_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch1_response.txt",
+      "bytes": 6199,
+      "sha256": "864e4ace19f526e8e1267901df43b157b7faee418a1dd6307e27b060869f5f0c"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch2.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch2.csv",
+      "bytes": 4083,
+      "sha256": "4c00553ab591683e52cbe639220a264e72dc809c8280c4dcc2abd39ee67c8117"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch2_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch2_params.json",
+      "bytes": 246,
+      "sha256": "f998408e843ba606e65b6d32a371bfea4539568649708cf7aaec662a21c6538f"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch2_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch2_response.txt",
+      "bytes": 4793,
+      "sha256": "82cce1d6667065404f162829067c73dd497fcf52331e3afa561e3ef83c4e7320"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch3.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch3.csv",
+      "bytes": 4700,
+      "sha256": "c25acb8425836b5c8a601ed5c47c4bc2015c077c1c6eaa287df080eec11f60b1"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch3_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch3_params.json",
+      "bytes": 246,
+      "sha256": "9aeb82df5032210d51b4692202da6faf1a769ab292ffe6a8c5e4242dfbc500ab"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch3_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch3_response.txt",
+      "bytes": 5426,
+      "sha256": "cc1791015678faf6aae52a70d8599a8ae369cb6b8ce72c4a433068c00bb7d9b6"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch4.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch4.csv",
+      "bytes": 5981,
+      "sha256": "8300721a8cc31c32c541417ef284811a3683265511649a1a5ba7d92fd3404d0a"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch4_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch4_params.json",
+      "bytes": 246,
+      "sha256": "72159c41930e9e64d04072f32232225755a7811c8316b42709e3994098a83970"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch4_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch4_response.txt",
+      "bytes": 6687,
+      "sha256": "aef1fee8e5f4c0492506af4da2c3d25eb3ab97241292c7273e8c75d3ed28261a"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch5.csv",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch5.csv",
+      "bytes": 4828,
+      "sha256": "de87316dcb77805279249fea7a64b8ed3396e575314820df35a437db86f9a0b7"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch5_params.json",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch5_params.json",
+      "bytes": 246,
+      "sha256": "85b0d2f5f7ec252998441281cb0269a317035eab9e1100ed1fb92c0d57598456"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch5_response.txt",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/raw/stock_info_batch5_response.txt",
+      "bytes": 5558,
+      "sha256": "76b7f38be5033bce5d4703f1c5c9659e53e48929ad613b7635164ca299b1491a"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/筛选说明.md",
+      "kind": "original_delivery",
+      "source": "CASE07_金融数据库筛选/output/筛选说明.md",
+      "bytes": 2244,
+      "sha256": "81461475f65090b09f6c3095a40078441f7479420e4b573cb7ab768fce98ec83"
+    },
+    {
+      "path": "deliverables/05_auto_screen/README.md",
+      "kind": "package_documentation",
+      "bytes": 1216,
+      "sha256": "ae92647071a09966ba8237a518771c53e0ab85f6ceb3a1a68887e9b7ccee2d76"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/Anthropic_IPO监管问询重点报告.md",
+      "kind": "original_delivery",
+      "source": "CASE06_Anthropic_IPO问询研究/output/Anthropic_IPO监管问询重点报告.md",
+      "bytes": 29593,
+      "sha256": "38e9b9460788341968f302dcec7f9c92b84a3963fec1e989a08abaa5d1272ebe"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/anthropic_official_s1_announcement.html",
+      "kind": "original_delivery",
+      "source": "CASE06_Anthropic_IPO问询研究/output/anthropic_official_s1_announcement.html",
+      "bytes": 151994,
+      "sha256": "bbf44d45939322c60d365b5e2b8cf08f779754f896d59f6d83dd3d541f6a61c1"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/anthropic_s1_2026-10-26.htm",
+      "kind": "original_delivery",
+      "source": "CASE06_Anthropic_IPO问询研究/output/anthropic_s1_2026-10-26.htm",
+      "bytes": 14169264,
+      "sha256": "b6836006abac03a7ab0244b79b968d9bcecde9f49ada9b79be78546d427f541e"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/anthropic_s1_2026-10-26_extracted.txt",
+      "kind": "original_delivery",
+      "source": "CASE06_Anthropic_IPO问询研究/output/anthropic_s1_2026-10-26_extracted.txt",
+      "bytes": 1611143,
+      "sha256": "0e9e5c13b9c676909f592703d63080acc505ff8d7ad2f7b66dd69055b6730238"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/anthropic_s1_file_manifest.json",
+      "kind": "original_delivery",
+      "source": "CASE06_Anthropic_IPO问询研究/output/anthropic_s1_file_manifest.json",
+      "bytes": 177,
+      "sha256": "24685a6f3e4859825801cba1da819e8fcbf697fd41c0eebe687945917f779c42"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/anthropic_s1_filing_index.htm",
+      "kind": "original_delivery",
+      "source": "CASE06_Anthropic_IPO问询研究/output/anthropic_s1_filing_index.htm",
+      "bytes": 33494,
+      "sha256": "85d86828d0ec11ce3ce96f76e9d51ce1189fa25877fabba48987e4c192083720"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/anthropic_sec_submissions.json",
+      "kind": "original_delivery",
+      "source": "CASE06_Anthropic_IPO问询研究/output/anthropic_sec_submissions.json",
+      "bytes": 2318,
+      "sha256": "c4d6e63ba9662278106dbfa780035ae02425f7a1c91893ce2ef3f48fafe57fc9"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/sec_draft_registration_faq.html",
+      "kind": "original_delivery",
+      "source": "CASE06_Anthropic_IPO问询研究/output/sec_draft_registration_faq.html",
+      "bytes": 76711,
+      "sha256": "f6d18421bf0cb765424f97a4705e3b038060e0a28a2b1a470f6d05af8d708586"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/sec_filing_review_process.html",
+      "kind": "original_delivery",
+      "source": "CASE06_Anthropic_IPO问询研究/output/sec_filing_review_process.html",
+      "bytes": 69608,
+      "sha256": "cb943fb2fd789d965220563f2dfc3237462558462833eaa78e881bf02fc52ad4"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/来源清单.md",
+      "kind": "original_delivery",
+      "source": "CASE06_Anthropic_IPO问询研究/output/来源清单.md",
+      "bytes": 3957,
+      "sha256": "b9a9481df88b664a31172aa7754e45d694f69e4b82fd6ae2d2958f37f0eca019"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/README.md",
+      "kind": "package_documentation",
+      "bytes": 1124,
+      "sha256": "802c08da1073e07786e71ca04ef0098aa93dd6ec65f725a3bebe5e1af9b463e9"
+    },
+    {
+      "path": "prompts/01_宇树科技投委会PPT.md",
+      "kind": "prompt",
+      "source": "00_操作说明/提示词/CASE02_宇树科技投委会PPT.txt",
+      "normalization": "UTF-8与LF换行，去除首尾空白",
+      "content_change": "按作者确认的实际任务要求，将页数字段由旧模板的10页左右改为25页；其余正文不变。",
+      "bytes": 1321,
+      "sha256": "0569498d9f8ade6024e65bc0644624d86c63f5e0f7db8f211d5d0b03192067b8"
+    },
+    {
+      "path": "prompts/02_SK海力士财报解读.md",
+      "kind": "prompt",
+      "source": "00_操作说明/提示词/CASE04_SK海力士财报解读.txt",
+      "normalization": "UTF-8与LF换行，去除首尾空白",
+      "content_change": null,
+      "bytes": 709,
+      "sha256": "7609b1dd374271c98b39f33bcaeb3f36f2525f518facb07d2ab350ec495360af"
+    },
+    {
+      "path": "prompts/03_特斯拉财务预测与DCF估值.md",
+      "kind": "prompt",
+      "source": "00_操作说明/提示词/CASE01_特斯拉财务预测与DCF估值.txt",
+      "normalization": "UTF-8与LF换行，去除首尾空白",
+      "content_change": null,
+      "bytes": 782,
+      "sha256": "e1c28eb3ff8ec295319bb8df287992fdac3dbbe2b35aad959d8c9982b014eec3"
+    },
+    {
+      "path": "prompts/04_SOXX_SPY_BIL轮动回测.md",
+      "kind": "prompt",
+      "source": "00_操作说明/提示词/CASE05_SOXX SPY BIL轮动回测.txt",
+      "normalization": "UTF-8与LF换行，去除首尾空白",
+      "content_change": null,
+      "bytes": 993,
+      "sha256": "6a82116041559dcc60189c9e8b332c795d69d6c9a8cc8c4da67741b7c81ba2cd"
+    },
+    {
+      "path": "prompts/05_汽车产业链候选池财务筛选.md",
+      "kind": "prompt",
+      "source": "00_操作说明/提示词/CASE07_汽车产业链候选池财务筛选.txt",
+      "normalization": "UTF-8与LF换行，去除首尾空白",
+      "content_change": null,
+      "bytes": 2275,
+      "sha256": "c8a72d180b73fda8986766c56e0eb9cb23328c6488544cab578f822edfc9fb68"
+    },
+    {
+      "path": "prompts/06_Anthropic_IPO监管问询研究.md",
+      "kind": "prompt",
+      "source": "00_操作说明/提示词/CASE06_Anthropic_IPO问询研究.txt",
+      "normalization": "UTF-8与LF换行，去除首尾空白",
+      "content_change": null,
+      "bytes": 735,
+      "sha256": "33f20d1e82616276ae452186914d6792993023ed79af31258228d66d3e755673"
+    },
+    {
+      "path": "README.md",
+      "kind": "package_documentation",
+      "bytes": 5148,
+      "sha256": "d3e3f3e6ced6a597391f019e6da38191e84d526d50f836a102861fd7b0347a9b"
+    },
+    {
+      "path": "复核说明.md",
+      "kind": "package_documentation",
+      "bytes": 5023,
+      "sha256": "6afa7f9d5203e744dfaeb7c1cf54761196a4996236b035be3efa47f0594fa7c1"
+    },
+    {
+      "path": "运行资源.csv",
+      "kind": "package_documentation",
+      "bytes": 769,
+      "sha256": "791c2dffe1bf0d0f1b6dbb9404a2c073f23f8898a814176192658bf253b7bb26"
+    }
+  ],
+  "manifest_excludes_itself": true,
+  "excluded_categories": [
+    "宇树work目录中的过程脚本、截图与插件内部文件",
+    "演示文稿构建计划和已嵌入的封面单独副本",
+    "已删除视频案例的结果",
+    "会话日志、内部创作稿与PR审阅稿"
+  ],
+  "prompt_version_note": "宇树只将旧模板页数字段改为作者确认的25页；其他5项保留本地模板正文，统一编码换行。",
+  "episode": "EP011"
+}

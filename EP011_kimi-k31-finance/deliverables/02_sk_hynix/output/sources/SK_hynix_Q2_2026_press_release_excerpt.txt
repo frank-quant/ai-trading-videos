@@ -1,0 +1,22 @@
+Source: SK hynix Newsroom
+Title: SK hynix Announces 2Q26 Financial Results
+Published: 2026-07-29
+URL: https://news.skhynix.com/en/q2-2026-business-results/
+
+Seoul, July 29, 2026 – SK hynix Inc. (or “the company”, www.skhynix.com) announced today that it has recorded 79.3187 trillion won in revenues, 60.5426 trillion won in operating profit (with an operating margin of 76%), and 93.9226 trillion won in net profit (with a net margin of 118%), marking an all-time high quarterly performance.
+
+Driven by sustained demand growth from expanding AI infrastructure investments, high-performance products for AI servers led price increases, enabling the company to surpass its previous record set in the prior quarter. Consequently, cumulative revenue for the first half of the year crossed the 100 trillion won mark for the first time in company history. Revenue and operating profit increased by 257% and 557% year-over-year, respectively.
+
+Both DRAM and NAND flash memory prices experienced significant quarter-over-quarter increases. SK hynix achieved top-tier profitability by expanding sales centered on high-value-added products, including HBM, DRAM for AI servers, and eSSD.
+
+On the back of these strong operational results, cash and cash equivalents reached 88 trillion won at the end of the second quarter, an increase of 33.6 trillion won from the previous quarter. Total debt decreased by 0.7 trillion won to 18.6 trillion won, expanding the net cash position to 69.4 trillion won.
+
+HBM4 has demonstrated its differentiated technological edge by achieving customer-required operating speeds while delivering industry-leading power efficiency and cost competitiveness. The company began mass shipments of HBM4 in the second quarter and will ramp up production in the second half of the year.
+
+2Q26 Financial Results (K-IFRS), Unit: Billion KRW
+Revenue: 2Q26 79,318.7; 1Q26 52,576.3; QoQ 51%; 2Q25 22,232; YoY 257%
+Operating Profit: 2Q26 60,542.6; 1Q26 37,610.3; QoQ 61%; 2Q25 9,212.9; YoY 557%
+Operating Margin: 2Q26 76%; 1Q26 72%; QoQ +4%p; 2Q25 41%; YoY +35%p
+Net Income: 2Q26 93,922.6; 1Q26 40,345.9; QoQ 133%; 2Q25 6,996.2; YoY 1,242%
+
+All financial information contained in this document is based on consolidated K-IFRS. Review of the FY2026 Q2 financial results had not been finalized at the earnings release date.
