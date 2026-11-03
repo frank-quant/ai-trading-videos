@@ -1,4 +1,4 @@
-# AI + 量化交易 · 视频配套仓库
+﻿# AI + 量化交易 · 视频配套仓库
 
 用能跑通的代码和真实回测,讲清楚 AI 在量化交易里到底怎么用、哪里有坑。
 
@@ -9,6 +9,8 @@
 
 ## 分期目录
 
+期号按自主制作视频连续排列；共创合作单独记录，不占用EP期号。
+
 | 期号    | 主题                                                     | 一句话                              | 配套            | 视频                                                                                                          |
 | ----- | ------------------------------------------------------ | -------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------- |
 | EP001 | [Claude 操控 Freqtrade 机器人](EP001_claude-freqtrade-bot/) | 让 Claude Code 自己写策略、跑回测、迭代       | 提示词 + 策略      | [B站](https://www.bilibili.com/video/BV1RhNA6jELx/) · [YouTube](https://www.youtube.com/watch?v=HXz_TcSSAMc) |
@@ -18,9 +20,9 @@
 | EP005 | [用 GLM-5.3 搭 A 股投研工作流](EP005_glm53-tradingagents-workflow/) | 给多 Agent 交易框架补四个模块,每天早上自动推手机 | 提示词 + 复现步骤 + 报告样本 · 插件另开仓库 [studio](https://github.com/frank-quant/TradingAgents-CN-studio) | [B站](https://www.bilibili.com/video/BV1kHbY6MEmF/) · [YouTube](https://youtu.be/hc3jkzYEwXo) |
 | EP006 | [AI 量化信源清单](EP006_ai-quant-sources/) | 我每天实际点开的东西:网站论坛 / 论文 / 开源项目 / newsletter | 清单 | [B站](https://www.bilibili.com/video/BV1QWhc6eEnW) · [YouTube](https://youtu.be/ar5Z2yffHx8) |
 | EP007 | [14 个大模型同一道量化题](EP007_fourteen-llm-quant-benchmark/) | 同题同数据,14 个模型写量化策略,扔进跌 45% 的样本外年份 | 题目 + 14 个模型的交付物 + 审计脚本 + 完整结果 | [B站](https://www.bilibili.com/video/BV1ijYB6QE1Y/) · [YouTube](https://youtu.be/5wEQiwCwGY0) |
-| EP009 | [Jev 做中高频交易靠不靠谱](EP009_jev-mid-frequency-benchmark/) | 每 0.3 秒问一次 Jev 涨跌,跟 8 条中高频策略、DeepSeek、抛硬币在币安 BTC 上比 24 小时 | 测试台代码(网页操作) + 完整结果 + 补算脚本 | [B站](https://www.bilibili.com/video/BV1FApP6TE2Y/) · [YouTube](https://youtu.be/UU-1z_Se4LU) |
-| EP010 | [用 ZCode Workflow 做 A 股策略研究](EP010_zcode-quant-workflow/) | 八步研究、AI/随机对照与测试集评估，严格达标为0，保留三条研究候选 | 干净研究工程 + 八步提示词 + 最终实验结果 + 收益复核 | [B站](https://www.bilibili.com/video/BV1r6nW6RESd/) · [YouTube](https://youtu.be/cDk9BZJKVZI) |
-| EP011 | [Kimi K3.1 Pro金融实测](EP011_kimi-k31-finance/) | 6个金融任务，从研报获取到模型、回测与IPO问询报告 | 提示词 + 原始交付 + 数据代码 + 复核说明 | 待发布 |
+| EP008 | [Jev 做中高频交易靠不靠谱](EP008_jev-mid-frequency-benchmark/) | 每 0.3 秒问一次 Jev 涨跌,跟 8 条中高频策略、DeepSeek、抛硬币在币安 BTC 上比 24 小时 | 测试台代码(网页操作) + 完整结果 + 补算脚本 | [B站](https://www.bilibili.com/video/BV1FApP6TE2Y/) · [YouTube](https://youtu.be/UU-1z_Se4LU) |
+| EP009 | [用 ZCode Workflow 做 A 股策略研究](EP009_zcode-quant-workflow/) | 八步研究、AI/随机对照与测试集评估，严格达标为0，保留三条研究候选 | 干净研究工程 + 八步提示词 + 最终实验结果 + 收益复核 | [B站](https://www.bilibili.com/video/BV1r6nW6RESd/) · [YouTube](https://youtu.be/cDk9BZJKVZI) |
+| EP010 | [Kimi K3.1 Pro金融实测](EP010_kimi-k31-finance/) | 6个金融任务，从研报获取到模型、回测与IPO问询报告 | 提示词 + 原始交付 + 数据代码 + 复核说明 | 待发布 |
 
 ## 每期目录里有什么
 
@@ -46,9 +48,9 @@
 | EP005 | 无代码(插件在 [studio](https://github.com/frank-quant/TradingAgents-CN-studio) 仓库) | — | — | [RUNBOOK](EP005_glm53-tradingagents-workflow/RUNBOOK.md) |
 | EP006 | 无代码(信源清单) | — | — | — |
 | EP007 | 脚手架 + 14 个模型的策略 + 16 个审计脚本 | 容器 / 宿主机 | 容器 + [`requirements.txt`](EP007_fourteen-llm-quant-benchmark/requirements.txt) | [RUNBOOK](EP007_fourteen-llm-quant-benchmark/RUNBOOK.md) |
-| EP009 | 测试台(Node 网页服务 + 引擎 + 分析) + 2 个补算脚本 | 宿主机 | Node.js ≥ 22,零依赖 | [README](EP009_jev-mid-frequency-benchmark/) |
-| EP010 | A股回测引擎、数据下载、八层漏斗、八步提示词与结果复核 | 宿主机 / AI执行工具 | Python 3.14、Tushare Pro接口权限；结果复核仅需Python标准库 | [八步操作手册](EP010_zcode-quant-workflow/research/EP010_操作手册.md) |
-| EP011 | 6个金融任务提示词、PPT/Word/Excel、回测代码与数据 | Kimi Code / 支持文件执行的AI工具 | 金融技能与数据源权限；ETF复算需Python及pandas/numpy/matplotlib | [配套资料](EP011_kimi-k31-finance/) |
+| EP008 | 测试台(Node 网页服务 + 引擎 + 分析) + 2 个补算脚本 | 宿主机 | Node.js ≥ 22,零依赖 | [README](EP008_jev-mid-frequency-benchmark/) |
+| EP009 | A股回测引擎、数据下载、八层漏斗、八步提示词与结果复核 | 宿主机 / AI执行工具 | Python 3.14、Tushare Pro接口权限；结果复核仅需Python标准库 | [八步操作手册](EP009_zcode-quant-workflow/research/EP010_操作手册.md) |
+| EP010 | 6个金融任务提示词、PPT/Word/Excel、回测代码与数据 | Kimi客户端Work模式 / 支持文件执行的AI工具 | 金融技能与数据源权限；ETF复算需Python及pandas/numpy/matplotlib | [配套资料](EP010_kimi-k31-finance/) |
 
 宿主机那部分(EP004 / EP007):
 

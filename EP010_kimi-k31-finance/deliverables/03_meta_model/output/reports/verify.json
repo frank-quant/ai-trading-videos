@@ -1,0 +1,40 @@
+{
+  "status": "unverified",
+  "file": "output/meta_model.xlsx",
+  "formula_count": 1156,
+  "formula_cache_missing_count": 1156,
+  "error_count": 0,
+  "warning_count": 1,
+  "issues": [
+    {
+      "type": "formula_cache_missing",
+      "severity": "warning",
+      "count": 1156,
+      "locations": [
+        "Cover!B13",
+        "Cover!B14",
+        "Cover!B15",
+        "Cover!B16",
+        "Cover!B17",
+        "Cover!B18",
+        "Cover!B19",
+        "Cover!B20",
+        "Cover!B21",
+        "Cover!B22",
+        "Cover!B23",
+        "Summary!B8",
+        "Summary!C8",
+        "Summary!D8",
+        "Summary!E8",
+        "Summary!F8",
+        "Summary!G8",
+        "Summary!H8",
+        "Summary!I8",
+        "Summary!B9"
+      ],
+      "omitted_location_count": 1136,
+      "detail": "Formula cells have no cached results, so their outcomes were not evaluated.",
+      "hint": "Recalculate with Excel/WPS/LibreOffice or independently verify every reported derived value from the raw inputs."
+    }
+  ]
+}

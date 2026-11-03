@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "scenario": "cn.consensus",
+  "ticker": "688836.SH",
+  "data": {
+    "ok": true,
+    "source": "ths-consensus",
+    "ticker": "688836.SH",
+    "estimate": {
+      "eps_year": "2026E",
+      "eps": 1.68,
+      "n": 6,
+      "basis": "mean",
+      "currency": "CNY",
+      "src": "同花顺共识(6家)"
+    },
+    "warnings": [
+      "免费网页源，仅单点查询（🔴）"
+    ]
+  },
+  "provenance": {
+    "layer": "L1",
+    "source": "ths-consensus",
+    "latency_ms": 563,
+    "asof": "2026-10-30",
+    "fetched_at": "2026-10-30",
+    "fallbacks": [],
+    "warnings": [
+      "免费网页源，仅单点查询（🔴）"
+    ],
+    "profile": "personal",
+    "ssot_revision": "2026-09-25"
+  }
+}

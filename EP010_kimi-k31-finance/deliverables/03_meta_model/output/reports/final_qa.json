@@ -1,0 +1,31 @@
+{
+  "run_id": "META-20261030-DCF-V1",
+  "workbook": "output/meta_model.xlsx",
+  "native_excel_recalc": "success",
+  "formula_count": 1156,
+  "formula_cache_missing": 0,
+  "excel_errors": 0,
+  "model_status": "PASS",
+  "sensitivity_direction": "PASS",
+  "bs_balance_max_abs": 0,
+  "valuation_status": "VALUATION_REVIEW_REQUIRED",
+  "key_outputs": {
+    "enterprise_value_gordon_usd_mn": 1278353.6214206356,
+    "equity_value_gordon_usd_mn": 1309757.6214206356,
+    "gordon_value_per_share": 509.03910665395864,
+    "exit_multiple_value_per_share": 575.7292683482093,
+    "market_price": 624.52,
+    "gordon_upside": -0.18491144134061577,
+    "wacc": 0.10499310708876144,
+    "terminal_growth": 0.03,
+    "terminal_pv_share": 0.9611114390469608,
+    "scenario_values_per_share": {
+      "base": 509.03910665395864,
+      "upside": 780.1580704117524,
+      "downside": 324.2977910575634
+    },
+    "fy2030_revenue_usd_mn": 428253.132384,
+    "fy2030_ebit_usd_mn": 175818.73886784,
+    "fy2030_diluted_eps": 55.082042348698366
+  }
+}

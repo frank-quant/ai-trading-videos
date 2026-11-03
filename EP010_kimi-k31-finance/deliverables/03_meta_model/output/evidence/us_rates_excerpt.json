@@ -1,0 +1,10 @@
+{
+  "source": "gildata-macro",
+  "data_source": "Federal Reserve",
+  "indicator": "美国:国债到期收益率:10年期限:当期值:日",
+  "tenor": "10Y",
+  "value": 4.98,
+  "unit": "%",
+  "date": "2026-10-29",
+  "retrieved_at": "2026-10-30"
+}

@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "checks": {
+    "four_metric_scenarios": true,
+    "nav_matches_final_metrics": true,
+    "nav_identity": true,
+    "fee_identity": true,
+    "trades_after_signals": true,
+    "benchmark_one_buy_per_fee": true,
+    "no_end_forced_liquidation": true,
+    "72_executable_signals": true,
+    "initial_signal_and_execution": true,
+    "no_trade_count_46": true,
+    "rotation_51_trade_legs_per_fee": true,
+    "html_embeds_chart": true,
+    "embedded_chart_matches_png": true,
+    "html_no_external_scripts_or_styles": true,
+    "html_no_template_placeholders": true,
+    "markdown_matches_key_final_values": true,
+    "required_files_present": true
+  },
+  "files": {
+    "report.md": {
+      "bytes": 7970,
+      "sha256": "dc46420181bd5a50b5d7ebbb810209c9673b77046228a0988550a94e8543b05b"
+    },
+    "report.html": {
+      "bytes": 462298,
+      "sha256": "b35199aa88b49a3ae7d1a4c17f2725989391bf3ee40a7ace5bd32c7646b122eb"
+    },
+    "charts/nav_drawdown.png": {
+      "bytes": 336107,
+      "sha256": "eed7eee9c551d7b368c69e7285263786d4a98d32d52f9b9f58d2cafe179e1e0f"
+    },
+    "metrics.csv": {
+      "bytes": 1654,
+      "sha256": "54a499034908099efa10d9dd527303548ffae1d4353682f4ee363bd6066a0543"
+    },
+    "annual_returns.csv": {
+      "bytes": 1184,
+      "sha256": "c0474d5d4a2d8a51f0dd3a72dfee29b61576a8e824ecde31da8e0ed49b312402"
+    },
+    "monthly_returns.csv": {
+      "bytes": 13946,
+      "sha256": "0470c9dbd09212354b82d02a1e96540f7baff57a99645da30d0badeec1c1144f"
+    },
+    "signals.csv": {
+      "bytes": 7758,
+      "sha256": "fa47042febc3bffda7f795bce745a973fa11c27ab4294295ad90087cca57d015"
+    },
+    "trades.csv": {
+      "bytes": 18711,
+      "sha256": "f7b1ca45f5b2e5c0079f7dba099be512d2ca963377e6873ae16f7c79dca10e13"
+    },
+    "dividend_cashflows.csv": {
+      "bytes": 14082,
+      "sha256": "02bd681551424d74f89750241768293cbd3bc06bf16340f4081761777c016282"
+    },
+    "daily_nav.csv": {
+      "bytes": 1143626,
+      "sha256": "79bb69725a07bc77281ac411817b944b83219852bcdba4aea4bccb5287459a4e"
+    },
+    "data_quality.json": {
+      "bytes": 2225,
+      "sha256": "64e8953ea41c3f9b57e61e1922c51c2a317158dbb2835772a5ab8636c4d8da6d"
+    },
+    "backtest.py": {
+      "bytes": 16465,
+      "sha256": "ce4122856c8297b72dfc6ff812ec763666821bb9fbf2e0c8d38fe31bd335063d"
+    },
+    "download_data.py": {
+      "bytes": 2721,
+      "sha256": "9b2c12d818fe040f37b1020029036c78e7a86bebac35154d5baa555112b079fa"
+    },
+    "build_report.py": {
+      "bytes": 23853,
+      "sha256": "83a1b49b7593553a4f6f2ddf65fa66577ce752841f692b7a98191d6b2f0c5871"
+    },
+    "requirements.txt": {
+      "bytes": 62,
+      "sha256": "09cdf00b0c966ff8aef46716cb0158f03e2c74476de77dc4f5c79d40301c263f"
+    },
+    "data/SOXX_daily.csv": {
+      "bytes": 261908,
+      "sha256": "88eb810354ec23f8557c7ddc20950f7aad95d730dbf8c316150dd9a673f8b6a3"
+    },
+    "data/SPY_daily.csv": {
+      "bytes": 266150,
+      "sha256": "eb985d367e1424fc73802a404bee0412ad48e8e77cac5c6b26d31e43f090a953"
+    },
+    "data/BIL_daily.csv": {
+      "bytes": 255238,
+      "sha256": "0fea31dfe5a8aaff22f54f83902b6c7380c61e8b2cb8347a8ea00126fb4fd21a"
+    }
+  }
+}

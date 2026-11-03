@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "run_id": "META-20261030-QUARTERLY-V1",
+  "status": "complete_with_warnings",
+  "metadata": {
+    "company": "Meta Platforms, Inc.",
+    "ticker": "META",
+    "gaap": "US GAAP",
+    "fiscal_year_end": "12-31",
+    "currency": "USD",
+    "unit": "USD millions",
+    "period_type": "quarterly+annual",
+    "historical_quarters": "2024Q1–2026Q3",
+    "forecast_quarters": "2026Q4–2030Q4"
+  },
+  "canonical_workbook": "meta_model_quarterly.xlsx",
+  "cash_policy": "CF-derived with quarterly funding-response debt draw",
+  "bs_plug_policy": "forbidden",
+  "annual_policy": "Flows sum quarters; stocks Q4; shares average; ratios and EPS recomputed",
+  "annual_model_preserved": "meta_model.xlsx",
+  "dcf_market": {
+    "price_cell": "DCF!B45",
+    "price_date_cell": "DCF!B69",
+    "price_date": "2026-10-29",
+    "evidence_id": "S7"
+  },
+  "dcf_terminal": {
+    "explicit_forecast_years": 5,
+    "tv_pv_cell": "DCF!G29",
+    "ev_cell": "DCF!B35"
+  },
+  "warnings": [
+    "Terminal PV / EV exceeds 80%; valuation review required",
+    "FY2024 quarterly-to-annual revenue differs by USD 1mn due to comparative-vintage rounding"
+  ],
+  "artifacts": {
+    "workbook": {
+      "role": "canonical",
+      "path": "meta_model_quarterly.xlsx",
+      "sha256": "f571b2faba500c471795c1bf860252f14297cff0f0b0f1dd5fa4e769d0852d25"
+    }
+  },
+  "recalculation": {
+    "required": true,
+    "status": "complete",
+    "engine": "Microsoft Excel native COM",
+    "report_path": "reports/verify_quarterly_styled.json"
+  },
+  "review": {
+    "formula": "PASS",
+    "accounting_linkage": "PASS",
+    "annual_reported": "PASS_WITH_COMPARATIVE_VINTAGE_NOTE",
+    "valuation": "VALUATION_REVIEW_REQUIRED",
+    "report_path": "reports/final_qa_quarterly.json"
+  }
+}

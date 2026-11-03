@@ -1,0 +1,146 @@
+# yahoo_finance
+
+**Description:** Yahoo Finance provides comprehensive financial market data (mainly for A-share, HK-stock, US-stock) and tools for investors, analysts, and general users including stock information,
+historical prices (Stocks，Foreign exchange, ETFs, Cryptocurrencies, Indices), holder information, financial statements (The annual report data for the past four years and the quarterly data for the last four quarters), yahoo finance news, analyst recommendations, stock actions, option expiration dates, option chain (options data only for US stocks).
+
+
+## Available APIs
+
+### get_yahoo_finance_news
+
+**Description:** Get financial news for a given ticker symbol from Yahoo Finance.
+Provides latest news articles, press releases, and financial updates related to the stock.
+
+
+**Required Parameters:**
+- `ticker` (string): The ticker symbol of the stock to get news for
+- `file_path` (string): Absolute path to save the news. File content is in CSV format
+
+---
+
+### get_stock_actions
+
+**Description:** Get stock actions (stock dividends and stock splits) for a given ticker symbol from Yahoo Finance.
+Provides historical corporate actions and dividend information.
+
+
+**Required Parameters:**
+- `ticker` (string): The ticker symbol of the stock to get actions for
+- `file_path` (string): Absolute path to save the stock actions. File content is in CSV format
+
+---
+
+### get_financial_statement
+
+**Description:** Get financial statements for a given ticker symbol from Yahoo Finance.
+Supports income statements, balance sheets, and cash flow statements in both annual and quarterly formats.
+
+
+**Required Parameters:**
+- `ticker` (string): The ticker symbol of the stock to get financial statement for
+- `financial_type` (string): The type of financial statement to retrieve (options: income_stmt, quarterly_income_stmt, balance_sheet, quarterly_balance_sheet, cashflow, quarterly_cashflow)
+- `file_path` (string): Absolute path to save the financial statement. File content is in CSV format
+
+---
+
+### get_option_expiration_dates
+
+**Description:** Get options expiration dates for a given ticker symbol from Yahoo Finance.
+Lists all available options expiration dates for the stock.
+
+
+**Required Parameters:**
+- `ticker` (string): The ticker symbol of the stock to get option expiration dates for
+- `file_path` (string): Absolute path to save the option expiration dates. File content is in CSV format
+
+---
+
+### get_recommendations
+
+**Description:** Get recommendations for a given ticker symbol from Yahoo Finance.
+Includes buy/sell/hold recommendations and price targets from various analysts.
+
+
+**Required Parameters:**
+- `ticker` (string): The ticker symbol of the stock to get recommendations for
+- `recommendation_type` (string): The type of recommendations to retrieve (options: recommendations, upgrades_downgrades, all)
+- `file_path` (string): Absolute path to save the recommendations. File content is in CSV format
+
+**Optional Parameters:**
+- `months_back` (integer): Number of months to look back for upgrades/downgrades data (default: 12)
+
+---
+
+### get_historical_stock_prices
+
+**Description:** Get historical stock prices for a given ticker symbol (including Stocks, Foreign exchange, ETFs, Cryptocurrencies, Indices ) from Yahoo Finance.
+Includes Date, Open, High, Low, Close, Volume, Adj Close information.
+
+**Query Methods** (choose one):
+- `period`: Relative time period from past to today (max 2 years)
+- `start_date` + `end_date`: Absolute date range (max 2 years). Both dates must be provided together.
+
+**Note**: If both `start_date`/`end_date` and `period` are provided, `start_date`/`end_date` takes priority.
+
+**Limitations**:
+- Maximum period: 2 years (2y)
+- Maximum date range: 2 years (for start_date/end_date)
+- If period is 1y or longer, interval must be 1d or larger (minute/hour intervals are not supported)
+- If date range exceeds 1 year, interval must be 1d or larger
+
+
+**Required Parameters:**
+- `ticker` (string): The ticker symbol of the stock to get historical prices for
+- `file_path` (string): Absolute path to save the historical stock prices. File content is in CSV format
+
+**Optional Parameters:**
+- `period` (string): Time period for historical data from past to today. Maximum is 2y (2 years). Use this OR start_date/end_date, not both. (default: 1mo) (options: 1d, 5d, 1mo, 3mo, 6mo, 1y, 2y)
+- `start_date` (string): Start date for historical data in YYYY-MM-DD format. Must be used together with end_date. Maximum date range is 2 years. Example: '2023-01-01' (default: <nil>)
+- `end_date` (string): End date for historical data in YYYY-MM-DD format. Must be used together with start_date. Maximum date range is 2 years. Example: '2023-12-31' (default: <nil>)
+- `interval` (string): Data interval (intraday data cannot extend last 60 days) (default: 1d) (options: 1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 1d, 5d, 1wk, 1mo, 3mo)
+
+---
+
+### get_stock_info
+
+**Description:** Get stock information for a given ticker symbol from Yahoo Finance including:
+Stock Price & Trading Info, Company Information, Financial Metrics, Earnings & Revenue, 
+Margins & Returns, Dividends, Balance Sheet, Ownership, Analyst Coverage, Risk Metrics.
+
+
+**Required Parameters:**
+- `ticker` (string): The ticker symbol of the stock to get information for
+- `file_path` (string): Absolute path to save the stock info. File content is in CSV format
+
+---
+
+### get_holder_info
+
+**Description:** Get holder information for a given ticker symbol from Yahoo Finance.
+Includes institutional holders, mutual fund holders, and insider information.
+
+
+**Required Parameters:**
+- `ticker` (string): The ticker symbol of the stock to get holder information for
+- `holder_type` (string): The type of holder information to retrieve (options: major_holders, institutional_holders, mutualfund_holders, insider_transactions, insider_purchases, insider_roster_holders)
+- `file_path` (string): Absolute path to save the holder info. File content is in CSV format
+
+---
+
+### get_option_chain
+
+**Description:** Get option chain data for a given ticker symbol and expiration date from Yahoo Finance.
+Includes calls and puts with strike prices, premiums, and Greeks.
+
+
+**Required Parameters:**
+- `ticker` (string): The ticker symbol of the stock to get option chain for
+- `expiration_date` (string): The expiration date for the options (YYYY-MM-DD format)
+- `file_path` (string): Absolute path to save the option chain. File content is in CSV format
+
+**Optional Parameters:**
+- `option_type` (string): The type of options to retrieve (default: calls) (options: calls, puts)
+
+---
+
+

@@ -1,0 +1,2172 @@
+{
+  "meta": {
+    "scope": "688836.SH",
+    "project": "宇树科技投资价值投委会 25 页 IC deck",
+    "created": "2026-10-30",
+    "last_validated": "2026-10-30T11:30:00+08:00",
+    "schema_version": "dr-1.0",
+    "producer": "institutional-slides",
+    "staleness_overrides": {}
+  },
+  "data_points": [
+    {
+      "id": "price_snapshot",
+      "value": "667.10",
+      "label": "2026-10-30 盘中股价（元/股）",
+      "tier": "T2",
+      "source_type": "api",
+      "sources": [
+        "[行情] Wind 盘中快照"
+      ],
+      "as_of": "2026-10-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "stock_price",
+      "caliber": {
+        "unit": "CNY/股",
+        "currency": "CNY",
+        "adjust": "none",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-02",
+        "page-03",
+        "page-22",
+        "page-23"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\quote.json",
+        "sha256": "82963ebe9db444e3",
+        "raw": "667.10"
+      }
+    },
+    {
+      "id": "shares_outstanding",
+      "value": "404464340",
+      "label": "最新总股本（股）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 2026年三季报 合并资产负债表"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "share_count",
+      "caliber": {
+        "unit": "股",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-03",
+        "page-22",
+        "page-23"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261029_宇树科技_2026年第三季度报告.txt",
+        "sha256": "b362420f4cbcdcd7",
+        "raw": "404,464,340.00"
+      }
+    },
+    {
+      "id": "free_float_shares",
+      "value": "30090000",
+      "label": "流通 A 股约数（股）",
+      "tier": "T3",
+      "source_type": "vendor",
+      "sources": [
+        "[研报] 东吴证券 2026年三季报点评 市场数据",
+        "[交叉核验] Wind 流通市值与盘中价"
+      ],
+      "as_of": "2026-10-29",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "share_count",
+      "caliber": {
+        "unit": "股"
+      },
+      "derived": false,
+      "used_in": [
+        "page-03"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261030_东吴证券_2026年三季报点评.txt",
+        "sha256": "231b7826fd4916e7",
+        "raw": "流通 A 股(百万股) 30.09"
+      },
+      "cross_check": {
+        "source": "Wind quote.json 流通市值与价格反推",
+        "url": "output/research/quote.json"
+      },
+      "notes": "券商披露约数，Wind 流通市值/价格交叉核验"
+    },
+    {
+      "id": "pe_ttm",
+      "value": "482.188",
+      "label": "TTM 市盈率",
+      "tier": "T2",
+      "source_type": "api",
+      "sources": [
+        "[行情] Wind 市盈率 TTM"
+      ],
+      "as_of": "2026-10-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "trailing_pe",
+      "caliber": {
+        "unit": "x",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-02",
+        "page-03"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\quote.json",
+        "sha256": "82963ebe9db444e3",
+        "raw": "482.188"
+      }
+    },
+    {
+      "id": "consensus_eps_fy2026",
+      "value": "1.68",
+      "label": "FY2026 一致预期 EPS（元/股）",
+      "tier": "T3",
+      "source_type": "api",
+      "sources": [
+        "[一致预期] 同花顺 6 家均值",
+        "[交叉核验] 东吴证券与华鑫证券个股预测"
+      ],
+      "as_of": "2026-10-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "consensus_estimate",
+      "caliber": {
+        "unit": "CNY/股",
+        "currency": "CNY",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "used_in": [
+        "page-03"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\consensus.json",
+        "sha256": "46d09b7b26ae3700",
+        "raw": "\"eps\": 1.68"
+      },
+      "cross_check": {
+        "source": "东吴证券 2026-10-29 与华鑫证券 2026-09-19 预测",
+        "url": "output/research/20261030_东吴证券_2026年三季报点评.txt"
+      }
+    },
+    {
+      "id": "market_cap",
+      "value": "2698.18161214",
+      "label": "盘中总市值（亿元）",
+      "tier": "T2",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 盘中价×最新总股本"
+      ],
+      "as_of": "2026-10-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "market_cap",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "used_in": [
+        "page-03",
+        "page-21",
+        "page-22"
+      ],
+      "status": "skip",
+      "formula": "price_snapshot * shares_outstanding / 100000000",
+      "inputs": [
+        "price_snapshot",
+        "shares_outstanding"
+      ],
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "free_float_pct",
+      "value": "7.439469200177203",
+      "label": "自由流通股占总股本比例（%）",
+      "tier": "T3",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 流通 A 股/总股本"
+      ],
+      "as_of": "2026-10-29",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "share_count",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "used_in": [
+        "page-03"
+      ],
+      "status": "skip",
+      "display": "7.439469200177203%",
+      "formula": "free_float_shares / shares_outstanding",
+      "inputs": [
+        "free_float_shares",
+        "shares_outstanding"
+      ],
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "pe_fy2026_consensus",
+      "value": "397.08333333333337",
+      "label": "FY2026 一致预期 PE",
+      "tier": "T3",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 盘中价/FY2026 共识 EPS"
+      ],
+      "as_of": "2026-10-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "forward_pe",
+      "caliber": {
+        "unit": "x",
+        "estimate": "forecast"
+      },
+      "derived": true,
+      "used_in": [
+        "page-03"
+      ],
+      "status": "skip",
+      "formula": "price_snapshot / consensus_eps_fy2026",
+      "inputs": [
+        "price_snapshot",
+        "consensus_eps_fy2026"
+      ],
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "revenue_history",
+      "value": "1.23 / 1.59 / 3.93 / 16.99",
+      "label": "2022—2025 营业收入（亿元）",
+      "tier": "T3",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 2023—2025 营收",
+        "[研报] 东吴证券 2022 年营收"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-16"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "营业收入 169,926.93 39,277.07 15,913.44"
+      },
+      "cross_check": {
+        "source": "东吴证券 2026-08-09 图8",
+        "url": "output/research/20260809_东吴证券_人形机器人产业化奇点已至.txt"
+      }
+    },
+    {
+      "id": "revenue_cagr_2022_2025",
+      "value": "139.94",
+      "label": "2022—2025 营收 CAGR（%）",
+      "tier": "T3",
+      "source_type": "derived",
+      "sources": [
+        "[研报] 东吴证券 CAGR",
+        "[计算复核] 2022—2025 营收序列"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "used_in": [
+        "page-16"
+      ],
+      "status": "recorded",
+      "display": "139.94%",
+      "formula": "(16.99 / 1.23) ** (1 / 3) - 1",
+      "inputs": [
+        "revenue_history"
+      ],
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260809_东吴证券_人形机器人产业化奇点已至.txt",
+        "sha256": "7210ec385a3a3bd9",
+        "raw": "CAGR 达"
+      },
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "segment_revenue_2025",
+      "value": "人形 8.678319 / 四足 6.976256 / 组件 1.037367",
+      "label": "2025 分产品收入（亿元）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 主营业务收入构成"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-06",
+        "page-16"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "人形机器人 86,783.19 51.78%"
+      }
+    },
+    {
+      "id": "segment_mix_2025",
+      "value": "人形 51.78 / 四足 41.62 / 组件 6.19",
+      "label": "2025 主营收入结构（%）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 主营业务收入构成"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-05",
+        "page-06",
+        "page-16"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "四足机器人 69,762.56 41.62%"
+      }
+    },
+    {
+      "id": "human_quad_share",
+      "value": "93.40",
+      "label": "人形与四足合计主营收入占比（%）",
+      "tier": "T1",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 人形占比+四足占比"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "used_in": [
+        "page-06"
+      ],
+      "status": "skip",
+      "display": "93.4%",
+      "formula": "0.5178 + 0.4162",
+      "inputs": [
+        "segment_mix_2025"
+      ],
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "segment_margin_2025",
+      "value": "人形 63.18 / 四足 56.72 / 组件 59.36",
+      "label": "2025 分产品毛利率（%）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 主营业务毛利率分析"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "margin_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-06",
+        "page-12"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "人形机器人 63.18%"
+      }
+    },
+    {
+      "id": "human_asp",
+      "value": "59.34 / 26.04 / 16.64",
+      "label": "2023—2025 人形平均售价（万元/台）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 主要产品价格变动"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "equipment_price",
+      "caliber": {
+        "unit": "万元/台",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-12"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "单价（万元/台）  16.64  26.04 59.34"
+      }
+    },
+    {
+      "id": "human_volume",
+      "value": "5 / 412 / 5215",
+      "label": "2023—2025 人形销量（台）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 主要产品生产情况"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "kpi_actual",
+      "caliber": {
+        "unit": "无量纲",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-09",
+        "page-12"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "销量 5,215 412 5"
+      }
+    },
+    {
+      "id": "human_shipments_2025",
+      "value": "5511",
+      "label": "2025 人形出货量（台）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 主要产品生产情况"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "kpi_actual",
+      "caliber": {
+        "unit": "无量纲",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-02",
+        "page-09"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "出货量 5,511 537 9"
+      }
+    },
+    {
+      "id": "human_asp_decline",
+      "value": "-71.95820694304011",
+      "label": "2023—2025 人形均价降幅（%）",
+      "tier": "T1",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 2025 均价/2023 均价-1"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "equipment_price",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "used_in": [
+        "page-12"
+      ],
+      "status": "skip",
+      "display": "-71.95820694304011%",
+      "formula": "(16.64 / 59.34 - 1)",
+      "inputs": [
+        "human_asp"
+      ],
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "net_profit_2025",
+      "value": "2.782105",
+      "label": "2025 归母净利润（亿元）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 主要财务数据"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "net_income_actual",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-16",
+        "page-17"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "归属于母公司所有者净利润 27,821.05"
+      }
+    },
+    {
+      "id": "deduct_profit_2025",
+      "value": "5.907528",
+      "label": "2025 扣非归母净利润（亿元）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 主要财务数据"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "net_income_actual",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-02",
+        "page-16",
+        "page-17"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "利润 59,075.28 7,847.65 -1,801.91"
+      }
+    },
+    {
+      "id": "profit_gap_2025",
+      "value": "3.125423",
+      "label": "2025 扣非与归母净利差额（亿元）",
+      "tier": "T1",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 扣非净利润-归母净利润"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "net_income_actual",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "used_in": [
+        "page-17"
+      ],
+      "status": "skip",
+      "formula": "deduct_profit_2025 - net_profit_2025",
+      "inputs": [
+        "deduct_profit_2025",
+        "net_profit_2025"
+      ],
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "deduct_margin_2025",
+      "value": "34.76519493271846",
+      "label": "2025 扣非净利率（%）",
+      "tier": "T3",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 扣非净利润/营业收入"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "margin_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "used_in": [
+        "page-17"
+      ],
+      "status": "skip",
+      "display": "34.76519493271846%",
+      "formula": "5.907528 / 16.992693",
+      "inputs": [
+        "deduct_profit_2025",
+        "revenue_history"
+      ],
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "share_based_payment_2025",
+      "value": "3.490655",
+      "label": "2025 股份支付费用（亿元）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 非经常性损益说明"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "cost_actual",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-17"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "34,906.55 万元"
+      }
+    },
+    {
+      "id": "gross_margin_2025",
+      "value": "60.44",
+      "label": "2025 综合毛利率（%）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 同行业毛利率比较"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "margin_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-17"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "公司 169,926.93 60.44%"
+      }
+    },
+    {
+      "id": "peer_gross_margin_2025",
+      "value": "44.44",
+      "label": "2025 可比公司平均毛利率（%）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 同行业毛利率比较"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "margin_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-17"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "平均值 77,254.01 44.44%"
+      }
+    },
+    {
+      "id": "industry_shipments",
+      "value": "0.26 / 1.66 / 8.17",
+      "label": "2024/2025/2026E 全球人形出货（万台）",
+      "tier": "T3",
+      "source_type": "web",
+      "sources": [
+        "[研报] 东吴证券引 Yano Research",
+        "[交叉核验] 太平洋证券引高工机器人产业研究所"
+      ],
+      "as_of": "2026-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "industry_growth_rate",
+      "caliber": {
+        "unit": "无量纲",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "used_in": [
+        "page-08"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260809_东吴证券_人形机器人产业化奇点已至.txt",
+        "sha256": "7210ec385a3a3bd9",
+        "raw": "2026 年进一步增至 8.17 万台"
+      },
+      "cross_check": {
+        "source": "太平洋证券 2026-10-19 行业预测",
+        "url": "output/research/20261022_太平洋证券_宇树科技深度报告.txt"
+      },
+      "notes": "第三方预测，机构间产品定义与出货口径不同"
+    },
+    {
+      "id": "industry_2030",
+      "value": "60.57 万台 / 1022 亿元",
+      "label": "2030E 全球人形销量与市场空间",
+      "tier": "T3",
+      "source_type": "web",
+      "sources": [
+        "[研报] 东吴证券引 GGII",
+        "[研报] 华金证券引 GGII"
+      ],
+      "as_of": "2030-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "annual_industry_data",
+      "caliber": {
+        "unit": "无量纲",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "used_in": [
+        "page-08"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260809_东吴证券_人形机器人产业化奇点已至.txt",
+        "sha256": "7210ec385a3a3bd9",
+        "raw": "60.57 万台"
+      },
+      "cross_check": {
+        "source": "华金证券 2026-08-12 第7页",
+        "url": "output/research/20260812_华金证券_新股覆盖研究.txt"
+      }
+    },
+    {
+      "id": "market_share_2025",
+      "value": "宇树 37.54 / 智元 35.21 / 优必选 6.81",
+      "label": "2025 全球人形出货份额（%）",
+      "tier": "T3",
+      "source_type": "web",
+      "sources": [
+        "[研报] 太平洋证券引 Omdia",
+        "[公告原文] 第二轮问询回复讨论 Omdia 口径"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "market_share",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-09"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261022_太平洋证券_宇树科技深度报告.txt",
+        "sha256": "cc470af620f08391",
+        "raw": "宇树科技 537 26.36% 5511 37.54%"
+      },
+      "cross_check": {
+        "source": "宇树科技第二轮问询回复",
+        "url": "output/research/20260320_宇树科技_第二轮问询函回复.txt"
+      },
+      "notes": "Omdia 口径可能包含部分双臂轮式产品，机构统计存在差异"
+    },
+    {
+      "id": "top2_share",
+      "value": "72.75",
+      "label": "2025 前两名合计份额（%）",
+      "tier": "T3",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 宇树份额+智元份额"
+      ],
+      "as_of": "2025-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "market_share",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "used_in": [
+        "page-09"
+      ],
+      "status": "skip",
+      "display": "72.75%",
+      "formula": "0.3754 + 0.3521",
+      "inputs": [
+        "market_share_2025"
+      ],
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "human_application_mix",
+      "value": "科研教育 73.60 / 商业消费 17.39 / 行业应用 9.01",
+      "label": "2025Q1—Q3 人形收入应用结构（%）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 首轮问询函回复 应用收入结构"
+      ],
+      "as_of": "2025-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "kpi_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-10"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260320_宇树科技_首轮问询函回复.txt",
+        "sha256": "e48531b1199123fd",
+        "raw": "科研教育 43,806.74 73.60%"
+      }
+    },
+    {
+      "id": "human_true_industrial_share",
+      "value": "2.64",
+      "label": "人形智能制造/巡检/物流合计收入占比（%）",
+      "tier": "T3",
+      "source_type": "web",
+      "sources": [
+        "[媒体] 36氪引第二轮问询回复",
+        "[媒体] 虎嗅引第二轮问询回复"
+      ],
+      "as_of": "2025-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "kpi_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-10"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260320_宇树科技_首轮问询函回复.txt",
+        "sha256": "e48531b1199123fd",
+        "raw": "其中企业导览的占比较高，约为 50-70%"
+      },
+      "cross_check": {
+        "source": "36氪与虎嗅对第二轮问询回复的摘录",
+        "url": "https://www.36kr.com/p/3929173534260608"
+      },
+      "notes": "官方回复披露行业应用中企业导览约占50%—70%；2.64%为媒体据明细计算"
+    },
+    {
+      "id": "quad_application_amounts",
+      "value": "科研 15411.94 / 商业 20642.28 / 行业 12744.33 / 合计 48798.55",
+      "label": "2025Q1—Q3 四足应用收入（万元）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 首轮问询函回复 应用收入结构"
+      ],
+      "as_of": "2025-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "人民币万元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-10"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260320_宇树科技_首轮问询函回复.txt",
+        "sha256": "e48531b1199123fd",
+        "raw": "行业应用 12,744.33 224.81%"
+      }
+    },
+    {
+      "id": "quad_application_mix",
+      "value": "科研教育 31.58 / 商业消费 42.30 / 行业应用 26.11",
+      "label": "2025Q1—Q3 四足收入应用结构（%）",
+      "tier": "T1",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 各应用收入/四足合计收入"
+      ],
+      "as_of": "2025-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "kpi_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "used_in": [
+        "page-10"
+      ],
+      "status": "skip",
+      "formula": "各项应用收入分别除以四足合计收入",
+      "inputs": [
+        "quad_application_amounts"
+      ],
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "company_founded",
+      "value": "2016",
+      "label": "公司成立年份",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 公司发展历程"
+      ],
+      "as_of": "2016-08-01",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "historical_anchor",
+      "caliber": {
+        "unit": "无量纲",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-07",
+        "page-13"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "2016 年成立之初"
+      }
+    },
+    {
+      "id": "human_launch",
+      "value": "2023",
+      "label": "首款人形 H1 发布年份",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 公司发展历程"
+      ],
+      "as_of": "2023-08-01",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "historical_anchor",
+      "caliber": {
+        "unit": "无量纲",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-07"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "2023 年自研推出首款人形机器人 H1"
+      }
+    },
+    {
+      "id": "model_rnd_start",
+      "value": "2024",
+      "label": "加强具身大模型研发的起始年份",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 研发投入风险说明"
+      ],
+      "as_of": "2024-01-01",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "historical_anchor",
+      "caliber": {
+        "unit": "无量纲",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-13"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "自2024 年起开始逐步加强对具身大模型"
+      }
+    },
+    {
+      "id": "model_fund",
+      "value": "20.224593 / 48.13",
+      "label": "模型研发募投金额（亿元）与占比（%）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 募集资金运用"
+      ],
+      "as_of": "2026-05-25",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "capex",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-14"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "202,245.93 202,245.93 48.13%"
+      }
+    },
+    {
+      "id": "body_fund_share",
+      "value": "26.41",
+      "label": "本体研发募投占比（%）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 招股说明书 募集资金运用"
+      ],
+      "as_of": "2026-05-25",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "capex",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-14"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260525_宇树科技_招股说明书上会稿.txt",
+        "sha256": "220d94e63176896e",
+        "raw": "110,973.80 110,973.80 26.41%"
+      }
+    },
+    {
+      "id": "capacity_plan",
+      "value": "人形 7.50 万台 / 四足 11.50 万台（年产）",
+      "label": "制造基地设计产能",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 第二轮问询函回复 制造基地规划"
+      ],
+      "as_of": "2026-03-20",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "capex",
+      "caliber": {
+        "unit": "无量纲",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "used_in": [
+        "page-14"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260320_宇树科技_第二轮问询函回复.txt",
+        "sha256": "70a43a0c4644dfb8",
+        "raw": "7.50 万台人形机器人及11.50 万台四足"
+      }
+    },
+    {
+      "id": "physical_ai_direction",
+      "value": "自进化 V1.0 + 超大算力集群",
+      "label": "2026 物理 AI 大会新投入方向",
+      "tier": "T3",
+      "source_type": "news",
+      "sources": [
+        "[媒体] 中国证券报 2026-10-22",
+        "[研报] 东吴证券 2026-10-29"
+      ],
+      "as_of": "2026-10-22",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "latest_available_reading",
+      "caliber": {
+        "unit": "无量纲",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-14"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\snapshots\\20261022_物理AI大会_公司公开演讲.txt",
+        "sha256": "042472a984201e6a",
+        "raw": "物理AI机器人自进化V1.0大模型"
+      },
+      "cross_check": {
+        "source": "东吴证券 2026年三季报点评",
+        "url": "output/research/20261030_东吴证券_2026年三季报点评.txt"
+      }
+    },
+    {
+      "id": "q3_single",
+      "value": "收入 6.650445 / 归母 1.126920 / 扣非 1.050413",
+      "label": "2026Q3 单季财务（亿元）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 2026年第三季度报告 主要会计数据"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-18"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261029_宇树科技_2026年第三季度报告.txt",
+        "sha256": "b362420f4cbcdcd7",
+        "raw": "营业收入 665,044,497.90 69.93"
+      }
+    },
+    {
+      "id": "q3_yoy",
+      "value": "收入 +69.93 / 归母 -17.37 / 扣非 -17.42",
+      "label": "2026Q3 单季同比（%）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 2026年第三季度报告 主要会计数据"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-18"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261029_宇树科技_2026年第三季度报告.txt",
+        "sha256": "b362420f4cbcdcd7",
+        "raw": "归属于上市公司股东的扣"
+      }
+    },
+    {
+      "id": "ytd_q3",
+      "value": "收入 18.172900 / 归母 3.866919 / 扣非 3.489716 / 经营现金流 1.937073",
+      "label": "2026 前三季度财务（亿元）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 2026年第三季度报告 主要会计数据"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-15",
+        "page-18",
+        "page-19"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261029_宇树科技_2026年第三季度报告.txt",
+        "sha256": "b362420f4cbcdcd7",
+        "raw": "1,817,290,048.48 55.71"
+      }
+    },
+    {
+      "id": "ytd_yoy",
+      "value": "收入 +55.71 / 归母 +270.54 / 扣非 -18.78 / 经营现金流 -54.69",
+      "label": "2026 前三季度同比（%）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 2026年第三季度报告 主要会计数据"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "revenue_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-02",
+        "page-15",
+        "page-18",
+        "page-19"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261029_宇树科技_2026年第三季度报告.txt",
+        "sha256": "b362420f4cbcdcd7",
+        "raw": "净额 不适用 不适用 193,707,344.45 -54.69"
+      }
+    },
+    {
+      "id": "q3_rd",
+      "value": "1.270399 / +249.58 / 19.10",
+      "label": "2026Q3 研发投入（亿元）、同比与费用率（%）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 2026年第三季度报告 研发投入"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "cost_actual",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-18"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261029_宇树科技_2026年第三季度报告.txt",
+        "sha256": "b362420f4cbcdcd7",
+        "raw": "研发投入合计 127,039,943.97 249.58"
+      }
+    },
+    {
+      "id": "ytd_revenue_cost",
+      "value": "收入 18.172900 / 营业成本 8.355660",
+      "label": "2026 前三季度收入与成本（亿元）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 2026年第三季度报告 合并利润表"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "cost_actual",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-18"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261029_宇树科技_2026年第三季度报告.txt",
+        "sha256": "b362420f4cbcdcd7",
+        "raw": "营业成本 835,566,029.34 469,789,810.42"
+      }
+    },
+    {
+      "id": "ytd_gross_margin",
+      "value": "54.0166",
+      "label": "2026 前三季度毛利率（%）",
+      "tier": "T1",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 1-营业成本/营业收入"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "margin_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "used_in": [
+        "page-18"
+      ],
+      "status": "skip",
+      "display": "54.0166%",
+      "formula": "(1 - 8.3556602934 / 18.1729004848)",
+      "inputs": [
+        "ytd_revenue_cost"
+      ],
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "inventory_q3",
+      "value": "10.193593 / 3.677534",
+      "label": "2026Q3 末与 2025 年末存货（亿元）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 2026年第三季度报告 合并资产负债表"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "net_debt",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-19"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261029_宇树科技_2026年第三季度报告.txt",
+        "sha256": "b362420f4cbcdcd7",
+        "raw": "存货 1,019,359,265.40 367,753,386.46"
+      }
+    },
+    {
+      "id": "inventory_growth",
+      "value": "177.14",
+      "label": "存货较年初增幅（%）",
+      "tier": "T1",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 期末存货/年初存货-1"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "kpi_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "used_in": [
+        "page-19"
+      ],
+      "status": "skip",
+      "display": "177.14%",
+      "formula": "(10.1935926540 / 3.6775338646 - 1)",
+      "inputs": [
+        "inventory_q3"
+      ],
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "receivables_q3",
+      "value": "1.430242 / 0.587336",
+      "label": "2026Q3 末与 2025 年末应收账款（亿元）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 2026年第三季度报告 合并资产负债表"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "net_debt",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-19"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261029_宇树科技_2026年第三季度报告.txt",
+        "sha256": "b362420f4cbcdcd7",
+        "raw": "应收账款 143,024,198.48 58,733,610.53"
+      }
+    },
+    {
+      "id": "receivables_growth",
+      "value": "143.51",
+      "label": "应收账款较年初增幅（%）",
+      "tier": "T1",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 期末应收账款/年初应收账款-1"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "kpi_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "used_in": [
+        "page-19"
+      ],
+      "status": "skip",
+      "display": "143.51%",
+      "formula": "(1.4302419848 / 0.5873361053 - 1)",
+      "inputs": [
+        "receivables_q3"
+      ],
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "contract_liab_q3",
+      "value": "2.331000 / 1.369598",
+      "label": "2026Q3 末与 2025 年末合同负债（亿元）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 2026年第三季度报告 合并资产负债表"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "net_debt",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-19"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261029_宇树科技_2026年第三季度报告.txt",
+        "sha256": "b362420f4cbcdcd7",
+        "raw": "合同负债 233,100,006.26 136,959,810.00"
+      }
+    },
+    {
+      "id": "contract_liab_growth",
+      "value": "70.20",
+      "label": "合同负债较年初增幅（%）",
+      "tier": "T1",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 期末合同负债/年初合同负债-1"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "kpi_actual",
+      "caliber": {
+        "unit": "%",
+        "estimate": "actual"
+      },
+      "derived": true,
+      "used_in": [
+        "page-19"
+      ],
+      "status": "skip",
+      "display": "70.2%",
+      "formula": "(2.3310000626 / 1.3695981000 - 1)",
+      "inputs": [
+        "contract_liab_q3"
+      ],
+      "notes": "派生值可核性来自 formula 与 inputs 血缘，无独立第二信源。"
+    },
+    {
+      "id": "cash_q3",
+      "value": "73.540244",
+      "label": "2026Q3 末货币资金（亿元）",
+      "tier": "T1",
+      "source_type": "filing",
+      "sources": [
+        "[公告原文] 2026年第三季度报告 合并资产负债表"
+      ],
+      "as_of": "2026-09-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "net_debt",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-19"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261029_宇树科技_2026年第三季度报告.txt",
+        "sha256": "b362420f4cbcdcd7",
+        "raw": "货币资金 7,354,024,357.98"
+      }
+    },
+    {
+      "id": "forecast_dw_aug",
+      "value": "2026—2028 营收 30.97/49.60/76.83；归母 6.62/12.56/22.37",
+      "label": "东吴 2026-08-09 预测（亿元）",
+      "tier": "T4",
+      "source_type": "web",
+      "sources": [
+        "[研报] 东吴证券 2026-08-09 新股研究"
+      ],
+      "as_of": "2026-08-09",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "eps_forecast",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "used_in": [
+        "page-20",
+        "page-22",
+        "page-23"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260809_东吴证券_人形机器人产业化奇点已至.txt",
+        "sha256": "7210ec385a3a3bd9",
+        "raw": "2026/2027/2028 年 归母净利润为 6.6/12.6/22.4 亿 元"
+      },
+      "cross_check": {
+        "source": "东吴证券 2026-10-29 最新修订",
+        "url": "output/research/20261030_东吴证券_2026年三季报点评.txt"
+      },
+      "notes": "单家券商历史预测，最新报告已下修"
+    },
+    {
+      "id": "forecast_hx",
+      "value": "2026—2028 营收 27.56/45.43/68.74；归母 6.32/9.43/12.68",
+      "label": "华鑫 2026-09-19 预测（亿元）",
+      "tier": "T4",
+      "source_type": "web",
+      "sources": [
+        "[研报] 华鑫证券 2026-09-19 公司动态研究"
+      ],
+      "as_of": "2026-09-19",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "eps_forecast",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "used_in": [
+        "page-20",
+        "page-22",
+        "page-23"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20260919_华鑫证券_茁壮成长的中国树.txt",
+        "sha256": "963df7f0b77854b0",
+        "raw": "归母净利润 278 632 943 1268"
+      },
+      "cross_check": {
+        "source": "太平洋证券 2026-10-19 预测",
+        "url": "output/research/20261022_太平洋证券_宇树科技深度报告.txt"
+      },
+      "notes": "单家券商预测"
+    },
+    {
+      "id": "forecast_tpy",
+      "value": "2026—2028 营收 27.91/43.13/64.82；归母 6.39/10.02/15.10",
+      "label": "太平洋 2026-10-19 预测（亿元）",
+      "tier": "T4",
+      "source_type": "web",
+      "sources": [
+        "[研报] 太平洋证券 2026-10-19 公司深度"
+      ],
+      "as_of": "2026-10-19",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "eps_forecast",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "used_in": [
+        "page-20",
+        "page-22"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261022_太平洋证券_宇树科技深度报告.txt",
+        "sha256": "cc470af620f08391",
+        "raw": "归母净利（百万元） 278 639 1002 1510"
+      },
+      "cross_check": {
+        "source": "华鑫证券 2026-09-19 预测",
+        "url": "output/research/20260919_华鑫证券_茁壮成长的中国树.txt"
+      },
+      "notes": "单家券商预测"
+    },
+    {
+      "id": "forecast_dw_oct",
+      "value": "2026—2028 营收 26.27/43.13/59.53；归母 5.52/9.16/15.08",
+      "label": "东吴 2026-10-29 最新预测（亿元）",
+      "tier": "T4",
+      "source_type": "web",
+      "sources": [
+        "[研报] 东吴证券 2026-10-29 三季报点评"
+      ],
+      "as_of": "2026-10-29",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "eps_forecast",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "used_in": [
+        "page-20"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\20261030_东吴证券_2026年三季报点评.txt",
+        "sha256": "231b7826fd4916e7",
+        "raw": "归母净利润（百万元） 95.47 278.21 551.95 916.45 1,508.41"
+      },
+      "cross_check": {
+        "source": "东吴证券 2026-08-09 前版预测",
+        "url": "output/research/20260809_东吴证券_人形机器人产业化奇点已至.txt"
+      },
+      "notes": "单家券商最新预测，较 8 月版下修"
+    },
+    {
+      "id": "forecast_high_low",
+      "value": "1.7643375394321767",
+      "label": "四份预测 2028 净利高低比（x）",
+      "tier": "T4",
+      "source_type": "derived",
+      "sources": [
+        "[计算] 最高预测/最低预测"
+      ],
+      "as_of": "2026-10-29",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "eps_forecast",
+      "caliber": {
+        "unit": "x",
+        "estimate": "forecast"
+      },
+      "derived": true,
+      "used_in": [
+        "page-20"
+      ],
+      "status": "skip",
+      "formula": "22.3718 / 12.68",
+      "inputs": [
+        "forecast_dw_aug",
+        "forecast_hx"
+      ],
+      "notes": "四份卖方模型预测离散度"
+    },
+    {
+      "id": "forecast_jpm_bull",
+      "value": "2028 营收 133.83 / 归母 32.02",
+      "label": "摩根大通 2028 乐观预测（亿元）",
+      "tier": "T4",
+      "source_type": "news",
+      "sources": [
+        "[媒体] 华尔街见闻转载 2026-10-26",
+        "[媒体] 财新与腾讯新闻评级报道"
+      ],
+      "as_of": "2026-10-26",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "eps_forecast",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "used_in": [
+        "page-23"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\snapshots\\20261026_JPM_宇树评级与预测.txt",
+        "sha256": "dd4f22771b105fd2",
+        "raw": "调整后净利润预计分别为6.16亿元、11.25亿元和32.02亿元"
+      },
+      "cross_check": {
+        "source": "财新 2026-10-26 与腾讯新闻 2026-10-26",
+        "url": "https://finance.caixin.com/2026-10-26/102497594.html"
+      },
+      "notes": "媒体转述的外资券商预测，非公司披露；仅用于乐观情景"
+    },
+    {
+      "id": "discount_assumption",
+      "value": "12% / 2 年",
+      "label": "要求回报率与折现期",
+      "tier": "T4",
+      "source_type": "house_model",
+      "sources": [
+        "[内部假设] 投委会讨论用风险回报要求"
+      ],
+      "as_of": "2026-10-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "forward_pe",
+      "caliber": {
+        "unit": "%",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "used_in": [
+        "page-22",
+        "page-23"
+      ],
+      "status": "skip",
+      "cross_check": {
+        "source": "四份券商预测与当前高估值对照",
+        "url": "output/deck/calculated_metrics.json"
+      },
+      "notes": "内部估值假设，非市场一致预期"
+    },
+    {
+      "id": "exit_pe_assumption",
+      "value": "60x—100x；情景 45x/60x/100x",
+      "label": "2028 退出 PE 假设",
+      "tier": "T4",
+      "source_type": "house_model",
+      "sources": [
+        "[内部假设] 高成长硬件与平台情景倍数"
+      ],
+      "as_of": "2028-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "forward_pe",
+      "caliber": {
+        "unit": "x",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "used_in": [
+        "page-22",
+        "page-23"
+      ],
+      "status": "skip",
+      "cross_check": {
+        "source": "东吴证券 2026-08-09 可比公司估值表",
+        "url": "output/research/20260809_东吴证券_人形机器人产业化奇点已至.txt"
+      },
+      "notes": "内部估值假设，乐观档反映稀缺平台溢价"
+    },
+    {
+      "id": "required_np_100",
+      "value": "33.845990142684165",
+      "label": "100x 退出 PE 所需 2028 净利（亿元）",
+      "tier": "T4",
+      "source_type": "house_model",
+      "sources": [
+        "[内部测算] 市值×1.12²/100"
+      ],
+      "as_of": "2028-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "eps_forecast",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "forecast"
+      },
+      "derived": true,
+      "used_in": [
+        "page-22"
+      ],
+      "status": "skip",
+      "formula": "market_cap * 1.12 ** 2 / 100",
+      "inputs": [
+        "market_cap",
+        "discount_assumption",
+        "exit_pe_assumption"
+      ],
+      "cross_check": {
+        "source": "摩根大通 2028 净利 32.02 亿元预测",
+        "url": "output/research/snapshots/20261026_JPM_宇树评级与预测.txt"
+      },
+      "notes": "内部反向估值"
+    },
+    {
+      "id": "required_np_60",
+      "value": "56.40998357114028",
+      "label": "60x 退出 PE 所需 2028 净利（亿元）",
+      "tier": "T4",
+      "source_type": "house_model",
+      "sources": [
+        "[内部测算] 市值×1.12²/60"
+      ],
+      "as_of": "2028-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "eps_forecast",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "forecast"
+      },
+      "derived": true,
+      "used_in": [
+        "page-22"
+      ],
+      "status": "skip",
+      "formula": "market_cap * 1.12 ** 2 / 60",
+      "inputs": [
+        "market_cap",
+        "discount_assumption",
+        "exit_pe_assumption"
+      ],
+      "cross_check": {
+        "source": "四份卖方 2028 净利预测区间",
+        "url": "output/deck/calculated_metrics.json"
+      },
+      "notes": "内部反向估值"
+    },
+    {
+      "id": "required_vs_forecasts",
+      "value": "+51.29% / +344.87%",
+      "label": "所需净利相对主流预测的溢价",
+      "tier": "T4",
+      "source_type": "derived",
+      "sources": [
+        "[内部测算] 所需净利与最高/最低卖方预测比较"
+      ],
+      "as_of": "2028-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "eps_forecast",
+      "caliber": {
+        "unit": "%",
+        "estimate": "forecast"
+      },
+      "derived": true,
+      "used_in": [
+        "page-22"
+      ],
+      "status": "skip",
+      "formula": "required_np_100 / 22.3718 - 1；required_np_60 / 12.68 - 1",
+      "inputs": [
+        "required_np_100",
+        "required_np_60",
+        "forecast_dw_aug",
+        "forecast_hx"
+      ],
+      "notes": "分别相对最高与最低主流预测"
+    },
+    {
+      "id": "scenario_probabilities",
+      "value": "下行 30% / 基准 50% / 乐观 20%",
+      "label": "情景主观概率",
+      "tier": "T4",
+      "source_type": "house_model",
+      "sources": [
+        "[内部假设] 投委会讨论用主观概率"
+      ],
+      "as_of": "2026-10-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "forward_pe",
+      "caliber": {
+        "unit": "%",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "used_in": [
+        "page-23"
+      ],
+      "status": "skip",
+      "cross_check": {
+        "source": "三情景净利润与退出倍数敏感性",
+        "url": "output/deck/calculated_metrics.json"
+      },
+      "notes": "仅用于风险收益比较，不是统计预测"
+    },
+    {
+      "id": "scenario_profits",
+      "value": "下行 12.68 / 基准 22.37 / 乐观 32.02",
+      "label": "三情景 2028 净利润（亿元）",
+      "tier": "T4",
+      "source_type": "house_model",
+      "sources": [
+        "[内部情景] 华鑫低值/东吴前版高值/摩根大通乐观值"
+      ],
+      "as_of": "2028-12-31",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "eps_forecast",
+      "caliber": {
+        "unit": "人民币亿元",
+        "currency": "CNY",
+        "estimate": "forecast"
+      },
+      "derived": true,
+      "used_in": [
+        "page-23"
+      ],
+      "status": "skip",
+      "formula": "分别引用卖方预测作为内部情景输入",
+      "inputs": [
+        "forecast_hx",
+        "forecast_dw_aug",
+        "forecast_jpm_bull"
+      ],
+      "cross_check": {
+        "source": "对应机构预测原文",
+        "url": "output/deck/calculated_metrics.json"
+      },
+      "notes": "内部情景选择，不是新增盈利预测"
+    },
+    {
+      "id": "scenario_prices",
+      "value": "112.46450713816012 / 264.54584907262273 / 631.1099752127387",
+      "label": "三情景折现每股价值（元）",
+      "tier": "T4",
+      "source_type": "house_model",
+      "sources": [
+        "[内部测算] 净利×退出 PE÷1.12²÷总股本"
+      ],
+      "as_of": "2026-10-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "forward_pe",
+      "caliber": {
+        "unit": "CNY/股",
+        "currency": "CNY",
+        "estimate": "forecast"
+      },
+      "derived": true,
+      "used_in": [
+        "page-23"
+      ],
+      "status": "skip",
+      "formula": "三情景分别按净利润×退出PE÷1.12²÷总股本计算",
+      "inputs": [
+        "scenario_profits",
+        "exit_pe_assumption",
+        "discount_assumption",
+        "shares_outstanding"
+      ],
+      "cross_check": {
+        "source": "calculate_metrics.py 复算结果",
+        "url": "output/deck/calculated_metrics.json"
+      },
+      "notes": "未考虑分红与净现金调整"
+    },
+    {
+      "id": "weighted_price",
+      "value": "292.2342717203071",
+      "label": "概率加权折现每股价值（元）",
+      "tier": "T4",
+      "source_type": "house_model",
+      "sources": [
+        "[内部测算] 三情景价值概率加权"
+      ],
+      "as_of": "2026-10-30",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "forward_pe",
+      "caliber": {
+        "unit": "CNY/股",
+        "currency": "CNY",
+        "estimate": "forecast"
+      },
+      "derived": true,
+      "used_in": [
+        "page-23"
+      ],
+      "status": "skip",
+      "formula": "112.46450713816012 * 0.30 + 264.54584907262273 * 0.50 + 631.1099752127387 * 0.20",
+      "inputs": [
+        "scenario_prices",
+        "scenario_probabilities"
+      ],
+      "cross_check": {
+        "source": "calculate_metrics.py 复算结果",
+        "url": "output/deck/calculated_metrics.json"
+      },
+      "notes": "仅用于投委会风险收益比较"
+    },
+    {
+      "id": "listing_low",
+      "value": "404.03",
+      "label": "上市以来最低收盘价（元/股）",
+      "tier": "T2",
+      "source_type": "api",
+      "sources": [
+        "[行情] iFinD 前复权日线"
+      ],
+      "as_of": "2026-10-15",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "historical_price_series",
+      "caliber": {
+        "unit": "CNY/股",
+        "currency": "CNY",
+        "adjust": "forward",
+        "estimate": "actual"
+      },
+      "derived": false,
+      "used_in": [
+        "page-24"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\kline.json",
+        "sha256": "9af6941234275a98",
+        "raw": "408.55,418.49,404.03,405.1"
+      }
+    },
+    {
+      "id": "unlock_window",
+      "value": "2027-08-19",
+      "label": "首发限售股首轮解禁窗口",
+      "tier": "T4",
+      "source_type": "news",
+      "sources": [
+        "[媒体] 财新 2026-10-26 解禁与锁定期报道"
+      ],
+      "as_of": "2027-08-19",
+      "retrieved_at": "2026-10-30T11:30:00+08:00",
+      "category": "historical_anchor",
+      "caliber": {
+        "unit": "无量纲",
+        "estimate": "forecast"
+      },
+      "derived": false,
+      "used_in": [
+        "page-24"
+      ],
+      "status": "recorded",
+      "locator": {
+        "kind": "text_span",
+        "file": "research\\snapshots\\20261026_解禁与估值风险_财新.txt",
+        "sha256": "02b0d381814b7bce",
+        "raw": "2027年8月19日"
+      },
+      "cross_check": {
+        "source": "公司 2026-08-19 上市日期与发行锁定安排",
+        "url": "https://www.sse.com.cn/star/market/stocklist/info/overview/index.shtml?COMPANY_CODE=688836"
+      },
+      "notes": "实际解禁数量与日期以公司届时公告为准"
+    }
+  ],
+  "dependency_graph": {},
+  "math_checks": []
+}

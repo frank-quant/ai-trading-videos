@@ -1,0 +1,1628 @@
+{
+  "episode": "EP010",
+  "package": "Kimi K3.1 Pro金融实测：提示词与交付物",
+  "prepared_date": "2026-11-03",
+  "source_bundle": "kimik3_1视频脚本及交付物1030/案例原件交付物",
+  "original_deliveries_unchanged": true,
+  "original_file_count": 246,
+  "prompt_message_count": 7,
+  "cases": [
+    {
+      "case": "01_unitree_ic",
+      "source_case": "CASE01_宇树投委会PPT",
+      "original_file_count": 59
+    },
+    {
+      "case": "02_sk_hynix",
+      "source_case": "CASE02_SK海力士财报解读",
+      "original_file_count": 6
+    },
+    {
+      "case": "03_meta_model",
+      "source_case": "CASE03_Meta财务预测与估值",
+      "original_file_count": 53
+    },
+    {
+      "case": "04_etf_rotation",
+      "source_case": "CASE04_ETF轮动回测",
+      "original_file_count": 39
+    },
+    {
+      "case": "05_auto_screen",
+      "source_case": "CASE05_金融数据库筛选",
+      "original_file_count": 80
+    },
+    {
+      "case": "06_anthropic_ipo",
+      "source_case": "CASE06_Anthropic_IPO问询研究",
+      "original_file_count": 9
+    }
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "kind": "package_documentation",
+      "bytes": 80,
+      "sha256": "3beee4eacb832de0063ecbeda2239d41e23310d69c3b8a5858ae8de93f5e5075"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/build_deck.py",
+      "kind": "original_delivery",
+      "bytes": 61551,
+      "sha256": "742e86bd548ee2f71ff2af947e327d2da4dfb8c68d2ca6da56894cc5a47de70a"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/build_registry.py",
+      "kind": "original_delivery",
+      "bytes": 29861,
+      "sha256": "16a5421adf3888f4c4b764981e39c3243b5bfc2edaf9b7fb392b69c9f56bbc83"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/calculate_metrics.py",
+      "kind": "original_delivery",
+      "bytes": 2222,
+      "sha256": "81251bc1a2889be6debc23e7b3afbcbc0102b50ed2b559e6d857eaff529f0c20"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/calculated_metrics.json",
+      "kind": "original_delivery",
+      "bytes": 1671,
+      "sha256": "88de43e4b770830cc176504b8c9971c797b784bef5dbfef0be1307e0826084af"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/check_plan.py",
+      "kind": "original_delivery",
+      "bytes": 1098,
+      "sha256": "de3ab087cd07b5ea566e0f38121adb600c81e0644882a5c85cfd8ab662c907de"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/content-cards.yaml",
+      "kind": "original_delivery",
+      "bytes": 15191,
+      "sha256": "ed79a4cefa0fda4783b4c672cf54c235e2997b60f533a29055eabd4e55f71e73"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/data-registry.json",
+      "kind": "original_delivery",
+      "bytes": 65523,
+      "sha256": "c501e497c37f33b1e90e42e69407c564107a3932e93072a8d0bab6caef72ecf1"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/media/b2-original.jpg",
+      "kind": "original_delivery",
+      "bytes": 161592,
+      "sha256": "c3f8e4cedfd4922f57dc4eba2044d735c9c24f39db9885d1652f11e3fa0cc8ee"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/media/g1-cover-original.jpg",
+      "kind": "original_delivery",
+      "bytes": 247401,
+      "sha256": "9c7664d201dd5c0f44c235ebd60cccff91ff2173bf09014f3fba8fd1bb2e1308"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/media/g1-cover.jpg",
+      "kind": "original_delivery",
+      "bytes": 101722,
+      "sha256": "2169da465c2a63a7bf44b4529c427bc3e7ee1e194728404fc5ca1e015a0ad982"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/media/g1-detail-original.jpg",
+      "kind": "original_delivery",
+      "bytes": 1152308,
+      "sha256": "c5b0a9590cf554f5f4af760e3c773ea0240eff971f5f88a8ed9fe40955c9ec5c"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/PLAN.md",
+      "kind": "original_delivery",
+      "bytes": 5057,
+      "sha256": "c501c8c86e52d9a07b4cf21ec0dfe53be053a0492771b2f54a0028892b91b192"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/prepare_media.py",
+      "kind": "original_delivery",
+      "bytes": 419,
+      "sha256": "0ae16146c28a5ce04acfb841659c962535d0a5fc9383a5d101fab6a7ea3ab009"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/deck/presentation.pptx",
+      "kind": "original_delivery",
+      "bytes": 514674,
+      "sha256": "75ab3d863576dfc11b1fa33ed75a69b14f97f9f13195d77ec042770ffb3e7cda"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/qa/deck-shots/page-1.png",
+      "kind": "original_delivery",
+      "bytes": 1313771,
+      "sha256": "516632a9b12cd15cf94cb9e1afe636b57a9d87efe12bf743bf6b31d310493397"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/qa/deck-shots/page-10.png",
+      "kind": "original_delivery",
+      "bytes": 299991,
+      "sha256": "7e7791a45a401f5b77266cdc5da4eb2dd51a6b20e887fc5145740e48062450a2"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/qa/deck-shots/page-18.png",
+      "kind": "original_delivery",
+      "bytes": 285301,
+      "sha256": "392d1d5de691c3bab5aaee00ae295da82d3fdf8300cc76ce7c0b7d516fcba528"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/qa/deck-shots/page-2.png",
+      "kind": "original_delivery",
+      "bytes": 313004,
+      "sha256": "38874bbcaec71b0d4af1693da94c16b61eb4d9a08ab6db92c7e90e1e6d43ccd3"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/qa/deck-shots/page-22.png",
+      "kind": "original_delivery",
+      "bytes": 315409,
+      "sha256": "26b187b7540af0d40763d4266fcef9a6f2605511bea3fb4bd9f25851304d378a"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/qa/deck-shots/page-23.png",
+      "kind": "original_delivery",
+      "bytes": 309303,
+      "sha256": "dbc7bbf8e49df076cd0a50edc41552ec797a9d3a8bfabbb1c6ec775ad9c5265c"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/qa/deck-shots/page-6.png",
+      "kind": "original_delivery",
+      "bytes": 1312886,
+      "sha256": "d422997169cd3cb153ad24f8f330a16c2743cf639c3b6e53039737f97010c305"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/qa/deck-shots/page-8.png",
+      "kind": "original_delivery",
+      "bytes": 309766,
+      "sha256": "16b79adc0cbaa17126d378b25064aac2143d6c64ed16f8b8ea900f2f0eaac2af"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/qa/final_validate.py",
+      "kind": "original_delivery",
+      "bytes": 2159,
+      "sha256": "761fb674ddaf8a034aa230f3a52bc410299386433fd707509b1e7eb063105833"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/qa/qa-final.txt",
+      "kind": "original_delivery",
+      "bytes": 185,
+      "sha256": "dac00893296d219d4b6cf28a7919f43e252c1cafc41715ad3aefe0527c5144a1"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/qa/registry-mutation.txt",
+      "kind": "original_delivery",
+      "bytes": 334,
+      "sha256": "a34a85474dd247ac6e5c35651d1ea6b072c17569c448e89d4c9cb23ff194de9b"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260320_宇树科技_招股说明书.pdf",
+      "kind": "original_delivery",
+      "bytes": 6544738,
+      "sha256": "bfc09ad6fc98a2d3a76096c3411b90f0990b047d1fec11cee0d10fd9bb76ac5d"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260320_宇树科技_招股说明书.txt",
+      "kind": "original_delivery",
+      "bytes": 831046,
+      "sha256": "b6815d52c9f2aa92a0c9929d07c7e97c099f71104c71c31ba7430ceb0755b848"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260320_宇树科技_第二轮问询函回复.pdf",
+      "kind": "original_delivery",
+      "bytes": 3205674,
+      "sha256": "7b5ec287561c7b09aba1e182545739d478a0556517dac9f0c9ca22c6cece515c"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260320_宇树科技_第二轮问询函回复.txt",
+      "kind": "original_delivery",
+      "bytes": 665484,
+      "sha256": "70a43a0c4644dfb811aac5ff7ee2c870ed0124d4df881e99b2780ead3ed10a9a"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260320_宇树科技_首轮问询函回复.pdf",
+      "kind": "original_delivery",
+      "bytes": 1560295,
+      "sha256": "3a481485e2b49f5112ebe6a5739e0476548fcb0ff23769e9960ea85788b1f550"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260320_宇树科技_首轮问询函回复.txt",
+      "kind": "original_delivery",
+      "bytes": 94698,
+      "sha256": "e48531b1199123fda23cdcba1ab8d8679372bda0d8dda4554ce94a34c9df33c5"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260525_宇树科技_招股说明书上会稿.pdf",
+      "kind": "original_delivery",
+      "bytes": 6446427,
+      "sha256": "d44c035e2d957cd9040edb1770c27f3b58d53293a74e3b36f75f1b54b2b5442b"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260525_宇树科技_招股说明书上会稿.txt",
+      "kind": "original_delivery",
+      "bytes": 834689,
+      "sha256": "220d94e63176896e255adabd0429cfbffe2ff43b0acff82a96f6bfd66fd266aa"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260809_东吴证券_人形机器人产业化奇点已至.pdf",
+      "kind": "original_delivery",
+      "bytes": 3641470,
+      "sha256": "c616968c2d35dd77f078d01c8af401496ba54c8e914453dfc3f0415be4dd5fe1"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260809_东吴证券_人形机器人产业化奇点已至.txt",
+      "kind": "original_delivery",
+      "bytes": 70406,
+      "sha256": "7210ec385a3a3bd952f7998594df2acbf3e71eba8c2768d7e02f667b936fdc82"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260812_华金证券_新股覆盖研究.pdf",
+      "kind": "original_delivery",
+      "bytes": 668435,
+      "sha256": "788d83f894ce39ed411622fd121d9c7d1d50425e0e28404ce8ea9d4a9035cbd8"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260812_华金证券_新股覆盖研究.txt",
+      "kind": "original_delivery",
+      "bytes": 38050,
+      "sha256": "b9025ca203dbb2ba4a6e21c4437f20e4ae89e01963970bf52df7d1bc1d8fb817"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260919_华鑫证券_茁壮成长的中国树.pdf",
+      "kind": "original_delivery",
+      "bytes": 695180,
+      "sha256": "6b49401cf28d2c605f140016031e92d9ea8dab5cb522f035ccd5d29c8f7030e2"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20260919_华鑫证券_茁壮成长的中国树.txt",
+      "kind": "original_delivery",
+      "bytes": 22368,
+      "sha256": "963df7f0b77854b0bd327c0b544ae31a982ae7cc9a1b1d200d107c014696f3be"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20261022_太平洋证券_宇树科技深度报告.pdf",
+      "kind": "original_delivery",
+      "bytes": 2100533,
+      "sha256": "5b2ee773fc154142b912cde1ccbc3338cd093ff826a559c8e19f91dd974f2044"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20261022_太平洋证券_宇树科技深度报告.txt",
+      "kind": "original_delivery",
+      "bytes": 39642,
+      "sha256": "cc470af620f08391c694f03caaf36fbbe948c4046cbfd9e8a471efba4d448869"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20261029_宇树科技_2026年第三季度报告.pdf",
+      "kind": "original_delivery",
+      "bytes": 220595,
+      "sha256": "09fb559dde1098d597b894f9283789037b57cda2496a906482f566a38129cb14"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20261029_宇树科技_2026年第三季度报告.txt",
+      "kind": "original_delivery",
+      "bytes": 24078,
+      "sha256": "b362420f4cbcdcd7559415a9a1617fd7585ce30610576470457963065f94aed8"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20261030_东吴证券_2026年三季报点评.pdf",
+      "kind": "original_delivery",
+      "bytes": 683069,
+      "sha256": "5a6d09f9cd50aaefebf984baba871c99722379429345ab19acb716c79ad47d91"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/20261030_东吴证券_2026年三季报点评.txt",
+      "kind": "original_delivery",
+      "bytes": 11906,
+      "sha256": "231b7826fd4916e7934c065adf809997dfe648929254b28e21e77dbbbec9e332"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/consensus.json",
+      "kind": "original_delivery",
+      "bytes": 756,
+      "sha256": "46d09b7b26ae3700ff5c1381cb085a012ddf4f3e5753b66e94776eadbc472ffd"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/eastmoney_reports.json",
+      "kind": "original_delivery",
+      "bytes": 7015,
+      "sha256": "b7c7b4cb1901dbcb75612464fea0f81dba94d8d7f27fd5ed3d4dcbe41f264d60"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/extract_reports.py",
+      "kind": "original_delivery",
+      "bytes": 1054,
+      "sha256": "ba355fb19753c45ebe7c6f06e61162ba5b1a3ac6866fa819fb1b9b22e18b5bd4"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/extraction_log.txt",
+      "kind": "original_delivery",
+      "bytes": 17473,
+      "sha256": "f1128959bcb741e68d42cfb2332dd327531f80272f4d9b3ded0325b5b69f236c"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/extraction_manifest.json",
+      "kind": "original_delivery",
+      "bytes": 17471,
+      "sha256": "73ffbc90acfcaeb0ec367b5145e64cf5a5de272c8390a3a65dbf9874757b3feb"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/finance_provenance.jsonl",
+      "kind": "original_delivery",
+      "bytes": 1277,
+      "sha256": "5ba21d6b1ad4d03cec76cb7e6889d7d4d2cfa2452f0bc0c63f53c5e8b8f9f56f"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/income_latest.json",
+      "kind": "original_delivery",
+      "bytes": 6498,
+      "sha256": "0bb79813b8173933d5c220be526e14da892b678aa5d39296d49d0456a34ef1c5"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/kline.json",
+      "kind": "original_delivery",
+      "bytes": 7661,
+      "sha256": "9af6941234275a98ee99736bea3818394cecb4644a57b7f222d001b7aab64aa7"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/quote.json",
+      "kind": "original_delivery",
+      "bytes": 1562,
+      "sha256": "82963ebe9db444e30eda28e3d4465bc37d331802ef5838163a9a91ee73a2534b"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/snapshots/20261022_物理AI大会_公司公开演讲.txt",
+      "kind": "original_delivery",
+      "bytes": 1120,
+      "sha256": "042472a984201e6aa6c9399fa83b53d3a9bfee38a3423601e4b7eb3586d5b489"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/snapshots/20261026_JPM_宇树评级与预测.txt",
+      "kind": "original_delivery",
+      "bytes": 1356,
+      "sha256": "dd4f22771b105fd212f51f192844c3801b792b71308b4f19224d1fa6da7e9e77"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/snapshots/20261026_解禁与估值风险_财新.txt",
+      "kind": "original_delivery",
+      "bytes": 1091,
+      "sha256": "02b0d381814b7bce4f326f38cf92ef7274959521da391552aa2d1c2901caa022"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/宇树科技_股票交易异常波动公告.pdf",
+      "kind": "original_delivery",
+      "bytes": 124096,
+      "sha256": "5ccfa31741a94b0c3330f94de1a1a969bd0dd0958a3abd213856e1fa86cb35b7"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/output/research/宇树科技_股票交易异常波动公告.txt",
+      "kind": "original_delivery",
+      "bytes": 5631,
+      "sha256": "88fca655e8d74329c63cfaa3b2c51254f98b7b77fb6025aac8457bfc8a2abb80"
+    },
+    {
+      "path": "deliverables/01_unitree_ic/README.md",
+      "kind": "package_documentation",
+      "bytes": 846,
+      "sha256": "fca06dd7143c730667cc26c915c2b3919e9137808336ffeb9dd64c644fe6a9e3"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/assets/quarterly_revenue_op.png",
+      "kind": "original_delivery",
+      "bytes": 56538,
+      "sha256": "c985469813da5f44e6dcbf9e3e8708f5490a147afa0f23b7c623689f8a2d5694"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/SK海力士_2026Q3_业绩点评.docx",
+      "kind": "original_delivery",
+      "bytes": 75432,
+      "sha256": "a208e12187828b39e4429aec875eec7a40601b99dec303b5a7c355a5718c66fc"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/SK海力士_2026Q3_业绩点评.html",
+      "kind": "original_delivery",
+      "bytes": 42184,
+      "sha256": "b01e4688115846e4a1249e2796a940d8ec2a47ae1bf60cbef73dfbfbbdf9b6af"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/SK海力士_2026Q3_关键数据表.xlsx",
+      "kind": "original_delivery",
+      "bytes": 21887,
+      "sha256": "66dc21b965585f6005a86f4c6c6fc947ba1b3f59161966e44967f7cda29f094b"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/sources/SK海力士_2026Q3_官方业绩演示.pdf",
+      "kind": "original_delivery",
+      "bytes": 3132053,
+      "sha256": "df86f554d33cee25bb1ceac6b2cccde63c2ec58b637eb600928ff9d1e726e4cf"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/output/资料与来源清单.md",
+      "kind": "original_delivery",
+      "bytes": 3988,
+      "sha256": "ea8f9f3d11baf5319fd2a4997c58ce2f6718705150f4741f2959c109b0ccb84c"
+    },
+    {
+      "path": "deliverables/02_sk_hynix/README.md",
+      "kind": "package_documentation",
+      "bytes": 987,
+      "sha256": "4c1173e4d9d0a94b0985cb8e51d8797f8c6b4538d070f0b19e81a855523650ca"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/build_meta_model.py",
+      "kind": "original_delivery",
+      "bytes": 62664,
+      "sha256": "92473a4761b8391bf1c01694a986938a4a97cb4c61b82d96e089875f9bdf8d62"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/build_meta_model_quarterly.py",
+      "kind": "original_delivery",
+      "bytes": 61870,
+      "sha256": "73afe36695b2a78888c19c0b7b2d8c1f65daba4be3d23d8cb8967808023c323b"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/evidence/bond_yield_excerpt.md",
+      "kind": "original_delivery",
+      "bytes": 471,
+      "sha256": "132927db4aefceb75724f79f5362a3f2b68b787219c225ce9cb184e4e2cc3e41"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/evidence/erp_excerpt.md",
+      "kind": "original_delivery",
+      "bytes": 417,
+      "sha256": "21114570b831bc86dceb17234fa6604230bfdf0e6a4f9583dc38e717f9a214ed"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/evidence/irs_tax_excerpt.md",
+      "kind": "original_delivery",
+      "bytes": 448,
+      "sha256": "ac614c3e0e9f590a440ba8a98bc30d937347008e4c72bc914196401074e30299"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/evidence/q3_2026_release_excerpt.md",
+      "kind": "original_delivery",
+      "bytes": 710,
+      "sha256": "a27743028dbb5592abc6e172be82703a0ebe0315761bcbf45ab5a8c332fac757"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/evidence/us_rates_excerpt.json",
+      "kind": "original_delivery",
+      "bytes": 247,
+      "sha256": "5cc484ba9577abccd421a5112567f5b45bedaa98b59a31895dcf188bc28039b9"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/finalize_meta_model.py",
+      "kind": "original_delivery",
+      "bytes": 2268,
+      "sha256": "fb25108419c8e6ed5154896a9662f0b4d2d8e381dd783f0d3fd7810661b89052"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/finalize_meta_model_quarterly.py",
+      "kind": "original_delivery",
+      "bytes": 2147,
+      "sha256": "7bd37ce109b6c1ab7160fea4673736c360e9209360f2ba07cc80a89b025c3854"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/manifest.json",
+      "kind": "original_delivery",
+      "bytes": 5105,
+      "sha256": "ca3d7e9a21fe83d4732160d4935750b598bc3a2321c037f7d65fe66d0dd6c8e1"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/manifest_quarterly.json",
+      "kind": "original_delivery",
+      "bytes": 1827,
+      "sha256": "4f04cbe8b9c0b4aa99b2d41c1c4de3709d3e08c29f463b7e85014b7f1d16573a"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/meta_model.xlsx",
+      "kind": "original_delivery",
+      "bytes": 74528,
+      "sha256": "bda42491d721f2c7db7e3ee7da6e68b4b9af8e737fe84b9b1f219d9acaacf286"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/meta_model_quarterly.xlsx",
+      "kind": "original_delivery",
+      "bytes": 155640,
+      "sha256": "f571b2faba500c471795c1bf860252f14297cff0f0b0f1dd5fa4e769d0852d25"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/meta_quarterly_trend_spec.json",
+      "kind": "original_delivery",
+      "bytes": 938,
+      "sha256": "e672103feab5e2ff2457d1602e2c30dd34378714fbcb164e813744afd47a7e20"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/meta_trend_spec.json",
+      "kind": "original_delivery",
+      "bytes": 447,
+      "sha256": "fa5693522e4ea3be5d317ea6913800e78cf76c126d3cce31c607b24282a169f0"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_company_info.csv",
+      "kind": "original_delivery",
+      "bytes": 700,
+      "sha256": "72df86854ddbf7af101d9df3d47f1cacd6eac2027aca38ac47371a77931bae5c"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_fy2024_bs.csv",
+      "kind": "original_delivery",
+      "bytes": 15182,
+      "sha256": "529461f03365a886d345c9688ae1e5f5a9739bd2d741eabc67701a5dc0aefc52"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_fy2025_all.csv",
+      "kind": "original_delivery",
+      "bytes": 50183,
+      "sha256": "15b4e9e818c1e31087e0749ed88b2a83ef98b43051aee7c16c5c44591b127349"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_prices_5d.csv",
+      "kind": "original_delivery",
+      "bytes": 784,
+      "sha256": "2876958483c262cf2b4b73a118c8ab65085c3fa48b752794a408d913b1fc225b"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_q1fy2024_all.csv",
+      "kind": "original_delivery",
+      "bytes": 45981,
+      "sha256": "92b0d41ed8de2820c362478021ad73376b6e31a3610be530f5a17d39429285e3"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_q1fy2025_all.csv",
+      "kind": "original_delivery",
+      "bytes": 44529,
+      "sha256": "2a338591e6b5f9d759ebfec9617a5a254d1b824093b742f7dfc16b6b96b6c42b"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_q1fy2026_all.csv",
+      "kind": "original_delivery",
+      "bytes": 45059,
+      "sha256": "bd7c81016b857d8ccee1e98d5978a36a60958fb6074e26f768bb6ee043ba4111"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_q2fy2024_all.csv",
+      "kind": "original_delivery",
+      "bytes": 47925,
+      "sha256": "e3c46c24471d6ba24d05ebc70a618100fd72feb181b8e2ec3bd27f4098c103f2"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_q2fy2025_all.csv",
+      "kind": "original_delivery",
+      "bytes": 47402,
+      "sha256": "e7bc526769078ccf08eef9010fc56f795d69b894573ee007c4778f34015d8d6a"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_q2fy2026_all.csv",
+      "kind": "original_delivery",
+      "bytes": 47622,
+      "sha256": "cfb82596b17eaf5548c75e4f189c5f170657e2f2297c262b8f333c2f0ea20d05"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_q3fy2024_all.csv",
+      "kind": "original_delivery",
+      "bytes": 46921,
+      "sha256": "f46e32bbd89064db4e0c8c7305a3893eca57c872fb0abb1267d449ca5c7fcba3"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_q3fy2025_all.csv",
+      "kind": "original_delivery",
+      "bytes": 47883,
+      "sha256": "01eb995546d2581679905e90727f0c0e5e1798ea002b9d3268f5ef2a80377fb7"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_q3fy2026_all.csv",
+      "kind": "original_delivery",
+      "bytes": 47299,
+      "sha256": "6e2e3a8426e28799f913c9e451b8bfeea51da6f4c87af0f46eeac14c9e6f6714"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/raw/meta_stock_info.csv",
+      "kind": "original_delivery",
+      "bytes": 8078,
+      "sha256": "51c6216ac1c287b6b415014cde0e7c425e8d35e7498d3996ab997704b7bce079"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/recalculate.ps1",
+      "kind": "original_delivery",
+      "bytes": 382,
+      "sha256": "17158e28636ea4fd40e2b4d26f38e85b2c3de33a3c4ca7039d676b0ac144956f"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/final_qa.json",
+      "kind": "original_delivery",
+      "bytes": 1058,
+      "sha256": "4f7b7631e9bc5eab5dadbf2e4ec3533c816baac8515bdb44e4b1210ea30a5444"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/final_qa_quarterly.json",
+      "kind": "original_delivery",
+      "bytes": 1247,
+      "sha256": "9888df2a28ffd9ca74e6c9989edaf00816b87cbce06d589f1f1161bffd670c68"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/finance_fetch_provenance.jsonl",
+      "kind": "original_delivery",
+      "bytes": 527,
+      "sha256": "263b770630a49415e2a1dfa7d23bce26cceefdcd2a9e32e0e071a11a5dffaa7d"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/finance_fetch_quarterly_provenance.jsonl",
+      "kind": "original_delivery",
+      "bytes": 1839,
+      "sha256": "c9f70d1fe094d127234c8ab864eaa0621bbe8507918c2cff08c8b10367d93a67"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/recalc.json",
+      "kind": "original_delivery",
+      "bytes": 369,
+      "sha256": "5cf68967e583b03d638bd85e85f08027f5754484f09a8603585a2d89bc73a873"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/recalc_quarterly.json",
+      "kind": "original_delivery",
+      "bytes": 389,
+      "sha256": "9be302393cc8f4744f43d6228e4d2ee8bbfa9300bccb6cfce800012fb17d2b3e"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/sec_edgar_quarterly_api_description.txt",
+      "kind": "original_delivery",
+      "bytes": 11488,
+      "sha256": "d6f3ccc6efa595b7836377608fdc7638f4178a4dbfa0d9f716f82a5d0841fb56"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/sec_q1fy2024.log",
+      "kind": "original_delivery",
+      "bytes": 20187,
+      "sha256": "4e1eeb3786d2013e35e7889a0ad49be5c097d71df0bfd91fd506e793f5128def"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/sec_q1fy2025.log",
+      "kind": "original_delivery",
+      "bytes": 20014,
+      "sha256": "f6ed5a881fbb7bed27cca7968a6e0336b96ae249f495f55c8318bc4de87304cd"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/sec_q1fy2026.log",
+      "kind": "original_delivery",
+      "bytes": 19939,
+      "sha256": "b8f209cebebef1c870f1d9e757d60d499ccdc07d7bb39df5ccaf4e693c966135"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/sec_q2fy2024.log",
+      "kind": "original_delivery",
+      "bytes": 20998,
+      "sha256": "35469a142996239d06182522535ff5c588fb693c84c0e4639d86fac265688e9e"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/sec_q2fy2025.log",
+      "kind": "original_delivery",
+      "bytes": 20797,
+      "sha256": "32ae3604a77a7296b578d8127ed7ffa5eaea7b426882c3c090542ae86687b02f"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/sec_q2fy2026.log",
+      "kind": "original_delivery",
+      "bytes": 21027,
+      "sha256": "7fbfad035abf9b86c7703d8b7c5d1b7b603f0b3af15b4803a0d1921d2e13cec9"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/sec_q3fy2024.log",
+      "kind": "original_delivery",
+      "bytes": 20745,
+      "sha256": "585a39a6678aea3f7ec235a98621ba2f12466c95cdd2e627046d0b1e96e1e3cd"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/sec_q3fy2025.log",
+      "kind": "original_delivery",
+      "bytes": 21071,
+      "sha256": "c41210b15eb7adbdf15865607af9000973a6ed4b355c74eaf6e2e3a6a3768d5d"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/verify.json",
+      "kind": "original_delivery",
+      "bytes": 1051,
+      "sha256": "fda4ce17405c3d092283a3109f846fe3c5083cfc370b9bca7b21759244a3f1ef"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/verify_final.json",
+      "kind": "original_delivery",
+      "bytes": 187,
+      "sha256": "a3dbe97b8374aa22ab30d0d1c96b084aeaa37621048159a6b719509fe21c4cc8"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/verify_quarterly_final.json",
+      "kind": "original_delivery",
+      "bytes": 197,
+      "sha256": "ce37f6aa2aec665f82ef0a68184ed02a3629b841142ee118f30a7265aec227cc"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/verify_quarterly_styled.json",
+      "kind": "original_delivery",
+      "bytes": 204,
+      "sha256": "ee6a5b6cd5a95674514b0843f402077fdb26ed427f664aa925dccf97e0205a78"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/verify_recalculated_copy.json",
+      "kind": "original_delivery",
+      "bytes": 198,
+      "sha256": "bcc4ad6a29e7ce70f46a5c83bb66dd70cb3ffebe32c46b8ed48732fd21ab9338"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/reports/verify_styled.json",
+      "kind": "original_delivery",
+      "bytes": 194,
+      "sha256": "ac929bedf7da574b821a14db01dc3ee01f2903eea25f02d54bb18c5c285d54e1"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/sec_edgar_api_description.txt",
+      "kind": "original_delivery",
+      "bytes": 11488,
+      "sha256": "317aec9d47d42c55e2f1f62a598365152a47b33057e2dc68199e843388dbdd83"
+    },
+    {
+      "path": "deliverables/03_meta_model/output/yahoo_finance_api_description.txt",
+      "kind": "original_delivery",
+      "bytes": 6728,
+      "sha256": "085c2dcafb44d43dd53730489bb60bd073f71196caf91d8ae536c54547279f5f"
+    },
+    {
+      "path": "deliverables/03_meta_model/README.md",
+      "kind": "package_documentation",
+      "bytes": 1114,
+      "sha256": "0e65277785c2b2ac70262c5e7ffe7c8682817a2c77d362bb709621d3cbcf9ab7"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/annual_returns.csv",
+      "kind": "original_delivery",
+      "bytes": 1184,
+      "sha256": "c0474d5d4a2d8a51f0dd3a72dfee29b61576a8e824ecde31da8e0ed49b312402"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/backtest.py",
+      "kind": "original_delivery",
+      "bytes": 16465,
+      "sha256": "ce4122856c8297b72dfc6ff812ec763666821bb9fbf2e0c8d38fe31bd335063d"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/build_report.py",
+      "kind": "original_delivery",
+      "bytes": 23853,
+      "sha256": "83a1b49b7593553a4f6f2ddf65fa66577ce752841f692b7a98191d6b2f0c5871"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/charts/nav_drawdown.png",
+      "kind": "original_delivery",
+      "bytes": 336107,
+      "sha256": "eed7eee9c551d7b368c69e7285263786d4a98d32d52f9b9f58d2cafe179e1e0f"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/daily_nav.csv",
+      "kind": "original_delivery",
+      "bytes": 1143626,
+      "sha256": "79bb69725a07bc77281ac411817b944b83219852bcdba4aea4bccb5287459a4e"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/BIL_daily.csv",
+      "kind": "original_delivery",
+      "bytes": 255238,
+      "sha256": "0fea31dfe5a8aaff22f54f83902b6c7380c61e8b2cb8347a8ea00126fb4fd21a"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/BIL_2019_2020.csv",
+      "kind": "original_delivery",
+      "bytes": 58367,
+      "sha256": "baad483aac3d8d986067c044e059b70820ed77a3374a2613702a04ea13971af9"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/BIL_2021_2022.csv",
+      "kind": "original_delivery",
+      "bytes": 58109,
+      "sha256": "ec68096b1cd1ce5970eb968892b73b47cc634f7e0af03b026b777c77521d2987"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/BIL_2023_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 58107,
+      "sha256": "e72b87c9de079af01930ce61e4f18680937bc50a6c03737fa46a1634a79d2631"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/BIL_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 29091,
+      "sha256": "557a84ade6e5b5d63bd8e363e08233fd970197fc40132ff4db6a104109706a36"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/BIL_actions.csv",
+      "kind": "original_delivery",
+      "bytes": 5188,
+      "sha256": "438ea8c0d09b9493668449e0485d61bcd9a2b595b173305cb5e309417bf661be"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/download.log",
+      "kind": "original_delivery",
+      "bytes": 79511,
+      "sha256": "ba6763351b7e4a14ebbd6e10043aa1ca9acc80eefd51f8f2ddf5f5a992e79462"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/SOXX_2019_2020.csv",
+      "kind": "original_delivery",
+      "bytes": 59058,
+      "sha256": "b8a4c21e136caee9bbe32e28dd739a10d6f620c7a328b04fcefe2b794cc8a9bd"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/SOXX_2021_2022.csv",
+      "kind": "original_delivery",
+      "bytes": 60755,
+      "sha256": "7b4d5d8e387875711566eeb924c04f95faba9cd8a5c4572eabaaca71d8bf4601"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/SOXX_2023_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 60526,
+      "sha256": "b17b7138610de1f953c745e64689d4b6a9b30676978da1f0cda556f92942be11"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/SOXX_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 30284,
+      "sha256": "1701c665091bc753706195c7587a8cf4e00b9163feed64a418e96f2c04a01b19"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/SOXX_actions.csv",
+      "kind": "original_delivery",
+      "bytes": 3341,
+      "sha256": "2c563c2ae69ae3de7391fb577a6c1d7d69b2e0c5da40d87bd00416b6a67edc59"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/SPY_2019_2020.csv",
+      "kind": "original_delivery",
+      "bytes": 60459,
+      "sha256": "65a4f2312ba87ebd9df575af64ce2e8981508db605317014549d2fed6b241da7"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/SPY_2021_2022.csv",
+      "kind": "original_delivery",
+      "bytes": 60913,
+      "sha256": "4b73a5c7b6838229abf0e9af899fd93089c26cd29d08ba5684c82446a027d3c0"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/SPY_2023_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 60572,
+      "sha256": "71abcb30e2203069adcb773c2ef0910a5f6cacfb8b7a4ca12fd7c9a2473e62fb"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/SPY_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 30264,
+      "sha256": "df805b0d7e073df77e96e6f8d71f72e5e433bfe24edb6a367ae6cd09a76eacd0"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/raw/SPY_actions.csv",
+      "kind": "original_delivery",
+      "bytes": 5469,
+      "sha256": "8301a9045514d8789b7bc812e63c567149fc92b2687f0192b895e262ca913b8f"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/source_manifest.json",
+      "kind": "original_delivery",
+      "bytes": 828,
+      "sha256": "43e255490a36dd47749977ee10c4e84ee22d0ec18b02d4088ea7644bb50236a9"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/SOXX_daily.csv",
+      "kind": "original_delivery",
+      "bytes": 261908,
+      "sha256": "88eb810354ec23f8557c7ddc20950f7aad95d730dbf8c316150dd9a673f8b6a3"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data/SPY_daily.csv",
+      "kind": "original_delivery",
+      "bytes": 266150,
+      "sha256": "eb985d367e1424fc73802a404bee0412ad48e8e77cac5c6b26d31e43f090a953"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/data_quality.json",
+      "kind": "original_delivery",
+      "bytes": 2225,
+      "sha256": "64e8953ea41c3f9b57e61e1922c51c2a317158dbb2835772a5ab8636c4d8da6d"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/dividend_cashflows.csv",
+      "kind": "original_delivery",
+      "bytes": 14082,
+      "sha256": "02bd681551424d74f89750241768293cbd3bc06bf16340f4081761777c016282"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/download_data.py",
+      "kind": "original_delivery",
+      "bytes": 2721,
+      "sha256": "9b2c12d818fe040f37b1020029036c78e7a86bebac35154d5baa555112b079fa"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/metrics.csv",
+      "kind": "original_delivery",
+      "bytes": 1654,
+      "sha256": "54a499034908099efa10d9dd527303548ffae1d4353682f4ee363bd6066a0543"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/monthly_returns.csv",
+      "kind": "original_delivery",
+      "bytes": 13946,
+      "sha256": "0470c9dbd09212354b82d02a1e96540f7baff57a99645da30d0badeec1c1144f"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/report.html",
+      "kind": "original_delivery",
+      "bytes": 462298,
+      "sha256": "b35199aa88b49a3ae7d1a4c17f2725989391bf3ee40a7ace5bd32c7646b122eb"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/report.md",
+      "kind": "original_delivery",
+      "bytes": 7970,
+      "sha256": "dc46420181bd5a50b5d7ebbb810209c9673b77046228a0988550a94e8543b05b"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/reproducibility.json",
+      "kind": "original_delivery",
+      "bytes": 1111,
+      "sha256": "8815f329f3c53e11f1b8e3e7eff9462b9f7633dc8312b78bd77b8579a3cd8dae"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/reproduction.log",
+      "kind": "original_delivery",
+      "bytes": 1858,
+      "sha256": "332843845370e9828370fa0b1378609b411509d66522d82545083f46940b7887"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/requirements.txt",
+      "kind": "original_delivery",
+      "bytes": 62,
+      "sha256": "09cdf00b0c966ff8aef46716cb0158f03e2c74476de77dc4f5c79d40301c263f"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/signals.csv",
+      "kind": "original_delivery",
+      "bytes": 7758,
+      "sha256": "fa47042febc3bffda7f795bce745a973fa11c27ab4294295ad90087cca57d015"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/trades.csv",
+      "kind": "original_delivery",
+      "bytes": 18711,
+      "sha256": "f7b1ca45f5b2e5c0079f7dba099be512d2ca963377e6873ae16f7c79dca10e13"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/validate_delivery.py",
+      "kind": "original_delivery",
+      "bytes": 4115,
+      "sha256": "cd5395dc5b418b992fcba5150976def45795d499e32fea35618ba0c9ecf1d3db"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/output/validation.json",
+      "kind": "original_delivery",
+      "bytes": 3260,
+      "sha256": "dfb579837d908ed4de321cecd28ed2ef6f1ef18a7879b975bb3f0a480e0d9cfe"
+    },
+    {
+      "path": "deliverables/04_etf_rotation/README.md",
+      "kind": "package_documentation",
+      "bytes": 907,
+      "sha256": "1b58c85e8baf5d3ea4a7c5c336e506f047cb6f1f5cb3a22761f4f9598225d422"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/A股汽车产业链_2025年度财务筛选_20261026.xlsx",
+      "kind": "original_delivery",
+      "bytes": 27698,
+      "sha256": "e1c9d90c1becd02d8e1fe3a035ee9eb7e286a71d925299e17830b1a02569aad2"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/chart_spec.json",
+      "kind": "original_delivery",
+      "bytes": 540,
+      "sha256": "375cb873328e7fb48bac1b33c6f5a598be25479787855f9c891407d64de48446"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/ifind_extracted_financials.csv",
+      "kind": "original_delivery",
+      "bytes": 7196,
+      "sha256": "06448385411d6849e43147401eea63cdb92d8f28a28d6d4ffaf4c5d0c97405e7"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch1_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 7215,
+      "sha256": "d927b91cd30c85f3d7870e7fea004ff0c44fed923bef28f494fe624739aa69df"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch1_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 7193,
+      "sha256": "a81732d432398a12d6729447796363f6085c76efe890a51efd94ff6af2f78a0e"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch2_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6905,
+      "sha256": "290b72e45d353baf9051595fc0ec924983dc7a81fcda5828b5ceb9ced64ba1c8"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch2_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6920,
+      "sha256": "4872d0a0cd0867208a4e30da9c72bd36c7ab9573d132e3d411deef3e34e07f31"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch3_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6578,
+      "sha256": "12cf274e53b38aa7ce172a5ae47fd0aa87b34234e02c731060b39befd1b04174"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch3_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6638,
+      "sha256": "7f0ccf7e578c10fcf3b9b39fed7e1cafbe16d173906870a5630cf0903fda4268"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch4_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6970,
+      "sha256": "254724778d563179280f672c19fb28a7df611d50342493f02f71987a7bf8aeaf"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch4_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6973,
+      "sha256": "0dfcaf2391fd581719beb77df1468df6b6ff143a1c616b250726d7d919ea3b11"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch5_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6674,
+      "sha256": "f531b69072c47ed22df6b60e8a057042814fe09be30e42faec373e81ae14980b"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/balance_sheet_batch5_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6625,
+      "sha256": "9aeb77ab0d93ff64238887ab7b98255a917fd10d59269adba8e74a711b00e4b2"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch1_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6449,
+      "sha256": "daeec1aa48e55e4a483d07564fc71dd4a67144d0e030cc0f4d833f623ff03bf6"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch1_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6452,
+      "sha256": "88f73db24c94aef81f9a7be25f8a4b083503abe1c8c583c202d53e1cbb6cefcd"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch2_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6361,
+      "sha256": "0847ca12639fed2f1ceaa474befd2048c9fe0412d3f78d1245140c0dec7c53e0"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch2_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6375,
+      "sha256": "e654f3d923ee09f30af764d987462575474215bf10f1e1485d70af8ff1b0d480"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch3_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6013,
+      "sha256": "239fa584a7d9605bd34d652472e7d77dca2e5138cb8f15ca11f7032bfe74a6b6"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch3_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6025,
+      "sha256": "964e264ebd906d9356dda3ced071e4e3b4cbcedf6c92fbb419378af331c4759f"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch4_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6216,
+      "sha256": "4d7c1bfb2675088824f8604246634ebfe7e78b4f0b98242f3c165925af52ced8"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch4_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6183,
+      "sha256": "43fc5b22b09e507d12bf7a5757cb2265501d182c1ac7862a7e5a8086d0682572"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch5_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6109,
+      "sha256": "3274db3ccd9f269914329c68d858a4c7719844cc0c05fc7bbfbbdff610e4e787"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/cash_flow_batch5_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6119,
+      "sha256": "46c4d13a450e95b9b8f6aea5c4f0d73e74077172efe502e443a68e00ac642bf8"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch1_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6449,
+      "sha256": "daeec1aa48e55e4a483d07564fc71dd4a67144d0e030cc0f4d833f623ff03bf6"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch1_2024_params.json",
+      "kind": "original_delivery",
+      "bytes": 279,
+      "sha256": "f71ddaa3022cbd856c9679ce6059fbbe2ceb0f69899295172dc89d650d33a36e"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch1_2024_response.txt",
+      "kind": "original_delivery",
+      "bytes": 20211,
+      "sha256": "a9c32b95a03af0912c1f04a6c270027f14845744be93b4d9f84fd136c3559c91"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch1_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6452,
+      "sha256": "88f73db24c94aef81f9a7be25f8a4b083503abe1c8c583c202d53e1cbb6cefcd"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch1_2025_params.json",
+      "kind": "original_delivery",
+      "bytes": 279,
+      "sha256": "7c8d45fca68b3ef16fe46383b4e3c299dce7444e39fafbb4a482da3cfc9023a9"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch1_2025_response.txt",
+      "kind": "original_delivery",
+      "bytes": 20210,
+      "sha256": "0ea2dfce9a081552eba331dff00344ecaf589bd8c22ff5b7120af2ce1da7af99"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch2_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6361,
+      "sha256": "0847ca12639fed2f1ceaa474befd2048c9fe0412d3f78d1245140c0dec7c53e0"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch2_2024_params.json",
+      "kind": "original_delivery",
+      "bytes": 279,
+      "sha256": "c9b5c77166d2bb753c695e92df4d9abe50c6bf2e6b2a05fcc7c617b5f6459c08"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch2_2024_response.txt",
+      "kind": "original_delivery",
+      "bytes": 19645,
+      "sha256": "df8565855cc1ea2471813d439c9a78d909e20ec5a320282ada56760970eb3577"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch2_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6375,
+      "sha256": "e654f3d923ee09f30af764d987462575474215bf10f1e1485d70af8ff1b0d480"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch2_2025_params.json",
+      "kind": "original_delivery",
+      "bytes": 279,
+      "sha256": "c5149d13b9f2db332fb12499ed5b5ac73f2cbd6c02fd25731fbea5634313424e"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch2_2025_response.txt",
+      "kind": "original_delivery",
+      "bytes": 19687,
+      "sha256": "045959798e4a097c5f46f757c78a4bfa44acf4614e6d90edefccedbc1a12c7a7"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch3_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6013,
+      "sha256": "239fa584a7d9605bd34d652472e7d77dca2e5138cb8f15ca11f7032bfe74a6b6"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch3_2024_params.json",
+      "kind": "original_delivery",
+      "bytes": 279,
+      "sha256": "5253a5a6cb8dee43764d3edcf5cf669d7aea0a65df03efc951f6b1e85f2c0471"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch3_2024_response.txt",
+      "kind": "original_delivery",
+      "bytes": 18879,
+      "sha256": "2e8abb6efbce5cdf91444ca4ecf1810e48d433be9ad563367977cc812391f60d"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch3_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6025,
+      "sha256": "964e264ebd906d9356dda3ced071e4e3b4cbcedf6c92fbb419378af331c4759f"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch3_2025_params.json",
+      "kind": "original_delivery",
+      "bytes": 279,
+      "sha256": "2c44ddae18f9cd6a91a9e5f71a3ca004dbe96a5d184c906cbb2b65d737be6146"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch3_2025_response.txt",
+      "kind": "original_delivery",
+      "bytes": 18914,
+      "sha256": "ba4c185749db7c0ec383944083cec04e9c3c76ee88052850c1b3c0c1fade7978"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch4_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6216,
+      "sha256": "4d7c1bfb2675088824f8604246634ebfe7e78b4f0b98242f3c165925af52ced8"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch4_2024_params.json",
+      "kind": "original_delivery",
+      "bytes": 279,
+      "sha256": "017664f966b3b940579942903599cb89449e4276e18391d6bef77e56c29a14b2"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch4_2024_response.txt",
+      "kind": "original_delivery",
+      "bytes": 19601,
+      "sha256": "fb6f53d52190654d84aa65acaccd0032098ae556300a5e0d17409f90d5894bf3"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch4_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6183,
+      "sha256": "43fc5b22b09e507d12bf7a5757cb2265501d182c1ac7862a7e5a8086d0682572"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch4_2025_params.json",
+      "kind": "original_delivery",
+      "bytes": 279,
+      "sha256": "0b3a87d074e189d19f1740325813095c43f3d5554eb081d7529f5a5af6c4c984"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch4_2025_response.txt",
+      "kind": "original_delivery",
+      "bytes": 19577,
+      "sha256": "d7e88939eb10c6d8d32e1bcb4808d1f4aaa65021ca7cf69f3aa00c09e35470d3"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch5_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 6109,
+      "sha256": "3274db3ccd9f269914329c68d858a4c7719844cc0c05fc7bbfbbdff610e4e787"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch5_2024_params.json",
+      "kind": "original_delivery",
+      "bytes": 279,
+      "sha256": "0db8fa8bb65a8b07b9450d78bd0b334e591caf60791cfd053798cab7e3d48b4d"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch5_2024_response.txt",
+      "kind": "original_delivery",
+      "bytes": 19082,
+      "sha256": "d0a379889d5294fea4806b9232b31e7277c5534c062ec335891f126d8391a6d1"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch5_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 6119,
+      "sha256": "46c4d13a450e95b9b8f6aea5c4f0d73e74077172efe502e443a68e00ac642bf8"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch5_2025_params.json",
+      "kind": "original_delivery",
+      "bytes": 279,
+      "sha256": "d72ba10d9c13cc070155d8d31bee81178154e986d38f717e42a2499f5fb2e4c2"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/financials_batch5_2025_response.txt",
+      "kind": "original_delivery",
+      "bytes": 19027,
+      "sha256": "016f85f83aef8df078be26178e6c9682eff93632e74a3b006484265bbfa60ce1"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch1_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 4445,
+      "sha256": "47fab687a28adccf9523f143314b171f52af9c6d3c85d5331a44cdb9a57be6e9"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch1_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 4463,
+      "sha256": "f1aefe992ae3d7afd6edb2f1df288ad834df5de88c695087f91b1b12be5efba9"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch2_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 4277,
+      "sha256": "e9b05817899172744046b38061be59c0a380e9aa0d845796d9e16e1f4f997cfe"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch2_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 4290,
+      "sha256": "71c1478dd71ca73400a34176180459db021c744f67d396997550f0691acfdaff"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch3_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 4186,
+      "sha256": "12f317caf580626445c1bf7596b37d0222134013fdf7ad83a34d449d7665b6d1"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch3_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 4149,
+      "sha256": "660a6e4442b2b588b8ec551d8ee28cd43c9ce91785c0b2793d1650dda2666eea"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch4_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 4313,
+      "sha256": "a90bcaaabbed71e10fd9125790c6b8f38b982ab18bf6f913673c1e5da4ce6314"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch4_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 4319,
+      "sha256": "d882b720dc54cd4585b37dfa6f25b6f3be4c09ec2aa6a242b44788a37630960d"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch5_2024.csv",
+      "kind": "original_delivery",
+      "bytes": 4197,
+      "sha256": "2c7c6646ecb74672b7fdc178963abdaf791454d2e517b7c6aa04cd33766ad0be"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/income_statement_batch5_2025.csv",
+      "kind": "original_delivery",
+      "bytes": 4181,
+      "sha256": "6a1df537c4e04904d93788fa295ddf5a8e7232b77d3108f3fdbec1b360587652"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/query_manifest.json",
+      "kind": "original_delivery",
+      "bytes": 6434,
+      "sha256": "ceaaee597a9eca9c301b9e628ff5fedc5582d580de76538f851985c76c931c99"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch1.csv",
+      "kind": "original_delivery",
+      "bytes": 5477,
+      "sha256": "3ad31307fe3c3ca61da62b38161486a0e2cd4b867bc9cf8cb977e140f45bbefc"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch1_params.json",
+      "kind": "original_delivery",
+      "bytes": 246,
+      "sha256": "4e2f9236ad0743764b8111ea6bab71d3c20994428ce864773db3df6259603d7f"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch1_response.txt",
+      "kind": "original_delivery",
+      "bytes": 6199,
+      "sha256": "864e4ace19f526e8e1267901df43b157b7faee418a1dd6307e27b060869f5f0c"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch2.csv",
+      "kind": "original_delivery",
+      "bytes": 4083,
+      "sha256": "4c00553ab591683e52cbe639220a264e72dc809c8280c4dcc2abd39ee67c8117"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch2_params.json",
+      "kind": "original_delivery",
+      "bytes": 246,
+      "sha256": "f998408e843ba606e65b6d32a371bfea4539568649708cf7aaec662a21c6538f"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch2_response.txt",
+      "kind": "original_delivery",
+      "bytes": 4793,
+      "sha256": "82cce1d6667065404f162829067c73dd497fcf52331e3afa561e3ef83c4e7320"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch3.csv",
+      "kind": "original_delivery",
+      "bytes": 4700,
+      "sha256": "c25acb8425836b5c8a601ed5c47c4bc2015c077c1c6eaa287df080eec11f60b1"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch3_params.json",
+      "kind": "original_delivery",
+      "bytes": 246,
+      "sha256": "9aeb82df5032210d51b4692202da6faf1a769ab292ffe6a8c5e4242dfbc500ab"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch3_response.txt",
+      "kind": "original_delivery",
+      "bytes": 5426,
+      "sha256": "cc1791015678faf6aae52a70d8599a8ae369cb6b8ce72c4a433068c00bb7d9b6"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch4.csv",
+      "kind": "original_delivery",
+      "bytes": 5981,
+      "sha256": "8300721a8cc31c32c541417ef284811a3683265511649a1a5ba7d92fd3404d0a"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch4_params.json",
+      "kind": "original_delivery",
+      "bytes": 246,
+      "sha256": "72159c41930e9e64d04072f32232225755a7811c8316b42709e3994098a83970"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch4_response.txt",
+      "kind": "original_delivery",
+      "bytes": 6687,
+      "sha256": "aef1fee8e5f4c0492506af4da2c3d25eb3ab97241292c7273e8c75d3ed28261a"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch5.csv",
+      "kind": "original_delivery",
+      "bytes": 4828,
+      "sha256": "de87316dcb77805279249fea7a64b8ed3396e575314820df35a437db86f9a0b7"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch5_params.json",
+      "kind": "original_delivery",
+      "bytes": 246,
+      "sha256": "85b0d2f5f7ec252998441281cb0269a317035eab9e1100ed1fb92c0d57598456"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/raw/stock_info_batch5_response.txt",
+      "kind": "original_delivery",
+      "bytes": 5558,
+      "sha256": "76b7f38be5033bce5d4703f1c5c9659e53e48929ad613b7635164ca299b1491a"
+    },
+    {
+      "path": "deliverables/05_auto_screen/output/筛选说明.md",
+      "kind": "original_delivery",
+      "bytes": 2244,
+      "sha256": "81461475f65090b09f6c3095a40078441f7479420e4b573cb7ab768fce98ec83"
+    },
+    {
+      "path": "deliverables/05_auto_screen/README.md",
+      "kind": "package_documentation",
+      "bytes": 990,
+      "sha256": "84b70026c530d163403810396b3f34e76561b7ac2475dbd9377cb2347b55186c"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/Anthropic_IPO监管问询重点报告.html",
+      "kind": "original_delivery",
+      "bytes": 34975,
+      "sha256": "9e0b05cbef5a152a1710cd483fe8fa5a2bda18d84ca123d52d8dafc7c7215c20"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/Anthropic_IPO监管问询重点报告.md",
+      "kind": "original_delivery",
+      "bytes": 29427,
+      "sha256": "510f5f5e4d6e5fab78a2c9ec357f4446c70f95bcc0ec1f949b550719b965b22d"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/source/Anthropic_official_S-1_announcement.htm",
+      "kind": "original_delivery",
+      "bytes": 151511,
+      "sha256": "d25015390d6b3be9177f6d492daeb6ff1e6a0793d623fee4b996cb59066d1503"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/source/Anthropic_S-1_2026-10-26.htm",
+      "kind": "original_delivery",
+      "bytes": 14169255,
+      "sha256": "5eefb1418f52c29470845bde626de347b71333be4f8f3757ca631b8d88ba26ed"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/source/Anthropic_S-1_2026-10-26.txt",
+      "kind": "original_delivery",
+      "bytes": 1612538,
+      "sha256": "1e82fafbedc55d2611a87c632e248ab683a5b3ed77f66691998adad811bd0d95"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/source/Anthropic_S-1_filing_index.htm",
+      "kind": "original_delivery",
+      "bytes": 33494,
+      "sha256": "85d86828d0ec11ce3ce96f76e9d51ce1189fa25877fabba48987e4c192083720"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/source/CIK0002130357_submissions.json",
+      "kind": "original_delivery",
+      "bytes": 2318,
+      "sha256": "c4d6e63ba9662278106dbfa780035ae02425f7a1c91893ce2ef3f48fafe57fc9"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/source/SEC_filing_review_process.htm",
+      "kind": "original_delivery",
+      "bytes": 69599,
+      "sha256": "566b84bca70269cd8ee401ef2135b04b56e0af0eb513b711a6afec1e754ea14e"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/output/来源清单.md",
+      "kind": "original_delivery",
+      "bytes": 4259,
+      "sha256": "a4e5a77873db10e5a4f77ba9560ffe6538eac2b0920a0e9b8b40187d02c0632f"
+    },
+    {
+      "path": "deliverables/06_anthropic_ipo/README.md",
+      "kind": "package_documentation",
+      "bytes": 979,
+      "sha256": "447869a006d130c3377be893cda7ea1f22bccf479e5576f113b0a9edbfcb946c"
+    },
+    {
+      "path": "docs/复核说明.md",
+      "kind": "package_documentation",
+      "bytes": 1656,
+      "sha256": "11982a6af72371b09526984c9c5293adbfe72b5f8bc97aba91789aa22ec053dc"
+    },
+    {
+      "path": "docs/工具插件Skill清单.md",
+      "kind": "package_documentation",
+      "bytes": 4239,
+      "sha256": "ff20e651bdbf60e2fe616e7dcb39aabf94e53ab2c652c3ec0358eb6f945133bc"
+    },
+    {
+      "path": "docs/运行资源.csv",
+      "kind": "package_documentation",
+      "bytes": 742,
+      "sha256": "fdc6b5c2b25b2d2e8d6f8f5a4300b21ff5f1993134f13783600aa86e7a98dc51"
+    },
+    {
+      "path": "prompts/01_宇树科技投委会PPT.md",
+      "kind": "package_documentation",
+      "bytes": 372,
+      "sha256": "5bd1200c0ab24958d94674da6f8084f5c219adb1878552b95c1bb4f6f8c60134"
+    },
+    {
+      "path": "prompts/02_SK海力士财报解读.md",
+      "kind": "package_documentation",
+      "bytes": 1014,
+      "sha256": "a9d5f310a89c727c8ff825ade4da280dceb855de4cacf715e21244fee7f9ad35"
+    },
+    {
+      "path": "prompts/03_Meta财务预测与DCF估值.md",
+      "kind": "package_documentation",
+      "bytes": 568,
+      "sha256": "310aeb6ba486067604140308e7986e247eecf88ba2e192a0b9140bf012b4520c"
+    },
+    {
+      "path": "prompts/04_SOXX_SPY_BIL轮动回测.md",
+      "kind": "package_documentation",
+      "bytes": 1565,
+      "sha256": "5ebb5c5925142a67f13246e06eef1d175a84d70431436b3f75b9bd6c37840ad1"
+    },
+    {
+      "path": "prompts/05_汽车产业链候选池财务筛选.md",
+      "kind": "package_documentation",
+      "bytes": 2399,
+      "sha256": "fbc08b455277dc5305f0b3a3688acd20bbbf63f103f7f812c14e13503fe49254"
+    },
+    {
+      "path": "prompts/06_Anthropic_IPO监管问询研究.md",
+      "kind": "package_documentation",
+      "bytes": 920,
+      "sha256": "4d4865270e799a4cdb25e0bb68762da220677264343afbece653ab3a659f6fcc"
+    },
+    {
+      "path": "README.md",
+      "kind": "package_documentation",
+      "bytes": 3352,
+      "sha256": "d657b0a2d5338d5a83234bb0665390beb34dfd7336fe98882655fa064b6dedcd"
+    },
+    {
+      "path": "提示词汇总.md",
+      "kind": "package_documentation",
+      "bytes": 7080,
+      "sha256": "b612aeadc78f9f122420c3ab0b0402e38607f17777bad1b0605f4a2bfb525521"
+    }
+  ],
+  "manifest_excludes_itself": true
+}

@@ -1,0 +1,192 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SK海力士2026Q3业绩点评</title><style>:root{--navy:#051C2C;--acc:#00A9F4;--mid:#006BA6;--tint:#E3F2FD;
+--neut:#B8C4CC;--panel:#F2F2F2;--ink:#333;--ink2:#666;
+--ink3:#999;--rule:#CCC;--navh:96px;
+--fbody:Arial,"Helvetica Neue",sans-serif;--fserif:Georgia,"Times New Roman",serif}
+*{box-sizing:border-box}
+body{margin:0;background:#FFF;color:var(--ink);font:17px/1.55 var(--fbody)}
+.topband{height:10px;background:var(--navy)} .bandb{height:3px;background:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:32px 32px 90px}
+.covtop{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12.5px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);font-weight:700}
+h1{font:700 38px/1.25 var(--fserif);color:#000;margin:16px 0 8px}
+.covsub{font-size:19px;color:var(--ink2);margin-bottom:22px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #000;
+  border-bottom:1px solid var(--rule);margin:8px 0 6px}
+.kpis>div{padding:16px 18px 14px;border-right:1px solid var(--rule)}
+.kpis>div:last-child{border-right:none}
+.kn{font:700 38px/1.1 var(--fserif);color:var(--navy)} .kn.acc{color:var(--mid)}
+.kl{font-size:13.5px;color:var(--ink2);margin-top:6px;letter-spacing:.06em}
+.toc{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--rule);margin:0 0 34px;
+  position:sticky;top:0;background:#FFF;z-index:9}
+.toc a{padding:11px 16px;font-size:15px;color:var(--mid);text-decoration:none;
+  border-right:1px solid var(--rule)}
+.toc a:hover{background:var(--tint)}
+section{scroll-margin-top:var(--navh)}
+.kick{font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--navy);text-transform:uppercase}
+.accrule{width:32px;height:5px;background:var(--acc);margin:14px 0 10px}
+.sat{font-size:22px;font-weight:700;color:#000;margin:6px 0 5px;line-height:1.45}
+.sat .no{color:var(--navy)}
+.ssub{font-size:16.5px;color:var(--ink2);margin-bottom:14px}
+.heavy{border:none;border-top:1px solid #000;margin:0 0 18px}
+h3{font-size:17px;font-weight:700;color:#000;margin:18px 0 8px}
+.stance{font-size:20px;font-weight:700;color:var(--navy);margin:10px 0 12px}
+table.mdt{width:100%;border-collapse:collapse;margin:10px 0 16px;font-size:16px}
+.mdt th{border-top:1px solid #000;border-bottom:1px solid #000;text-align:left;
+  padding:6px 9px;color:var(--ink2);font-weight:700;vertical-align:bottom}
+.mdt td{border-bottom:1px solid var(--rule);padding:6px 9px;vertical-align:top}
+.mdt td.r,.mdt th.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.mdt td.c,.mdt th.c{text-align:center}
+.mdt td.r,.mdt td.c{vertical-align:middle}
+.mdt tfoot td{border-top:1px solid #000;border-bottom:none;font-weight:700;color:var(--navy)}
+.mdt tbody tr:hover{background:var(--tint)}
+.mdt td.note{font-size:14px;color:var(--ink3)}
+.scrollx{overflow-x:auto;border:1px solid var(--rule);padding:0 10px;margin:10px 0 16px}
+.scrollx .mdt{margin:10px 0}
+.take{font-size:16.5px;color:var(--ink);margin:6px 0 14px}
+ul.tight,ol.tight{margin:10px 0 14px;padding-left:22px}
+ul.tight li,ol.tight li{margin:6px 0;font-size:17px}
+.ennote{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;
+  font-size:15px;color:var(--ink2);margin-top:14px}
+.rabar{background:var(--navy);color:#FFF;padding:16px 20px;margin-top:16px;
+  display:flex;gap:18px;align-items:flex-start}
+.ralab{font-size:12.5px;font-weight:700;letter-spacing:.16em;color:#8FA3B0;
+  border:1px solid #24435A;padding:5px 9px;white-space:nowrap}
+.ratxt{font-size:16.5px;line-height:1.55;color:#FFF}
+.footrow{border-top:1px solid var(--rule);margin-top:20px;padding-top:10px}
+.fnotes{font-size:14px;color:var(--ink3);line-height:1.6}
+.srcline{display:flex;justify-content:space-between;gap:18px;font-size:14px;
+  color:var(--ink3);margin-top:5px}
+.nc{color:var(--ink3)} .est{color:var(--mid)} .act{color:var(--navy);font-weight:600}
+.tsearch{margin:10px 0 0;font-size:14px;color:var(--ink2)}
+.tsearch input{font:15px var(--fbody);padding:5px 9px;border:1px solid var(--rule);
+  min-width:220px;color:var(--ink)}
+mark{background:var(--tint);color:inherit}
+section{margin-bottom:40px}
+/* ── 打印：两种模式共用（规则与坑位见 references/pdf-export.md）────────── */
+@media print{
+  .toc,.tsearch{display:none !important}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  /* 坑1：.scrollx 的 overflow:auto 在打印时直接切掉超页宽的列，不留痕迹 */
+  .scrollx{overflow:visible;border:0;padding:0}
+  .scrollx table{width:100%;min-width:0 !important;table-layout:fixed}
+  /* 坑3：nowrap 长串在固定布局下会把整表顶出页宽。选择器必须压过
+     `.mdt td.r{white-space:nowrap}`（0,2,1）—— 写 `.scrollx td`（0,1,1）不够，
+     实测症状是备注列内容被截掉（「唯一上调目标价」只剩「唯一」）。 */
+  .scrollx table.mdt td,.scrollx table.mdt th,
+  .scrollx table.mdt td.r,.scrollx table.mdt th.r{white-space:normal}
+  /* 固定布局下不给列宽 = 均分，备注列必然过窄。首列留名字，末列留备注。 */
+  .scrollx table.mdt th:first-child,.scrollx table.mdt td:first-child{width:14%}
+  .scrollx table.mdt td.note,.scrollx table.mdt th:last-child{width:22%}
+  .mdt thead{display:table-header-group}
+}
+/* ── 打印：A4 分页（默认）。全部限定 html:not(.pdf-long) —— 坑4：连续模式的
+   打印布局必须与屏幕逐像素一致，任何一条规则不同都会凭空多出第二页 ────── */
+@media print{
+  @page{size:A4;margin:12mm 10mm}
+  html:not(.pdf-long) body{zoom:.85;padding-bottom:0}
+  html:not(.pdf-long) .wrap{max-width:none;padding:0}
+  html:not(.pdf-long) table.mdt{font-size:13px}
+  /* 坑2：放开 overflow 后表仍按 min-width 撑着，Chrome 会等比缩小整页 */
+  html:not(.pdf-long) .scrollx table.mdt{font-size:11.5px;table-layout:fixed}
+  html:not(.pdf-long) .scrollx td,html:not(.pdf-long) .scrollx th{padding:4px 5px}
+  html:not(.pdf-long) section{break-inside:auto}
+  html:not(.pdf-long) tr{break-inside:avoid}
+  html:not(.pdf-long) .sat,html:not(.pdf-long) h3{break-after:avoid}
+  html:not(.pdf-long) .rabar,html:not(.pdf-long) .ennote{break-inside:avoid}
+}
+/* ── 连续长页（?pdf=long）：屏幕布局即打印布局，宽表字号回到屏幕值 ───────── */
+html.pdf-long .toc,html.pdf-long .tsearch{display:none !important}
+html.pdf-long .scrollx{overflow:visible;border:0;padding:0}
+html.pdf-long .scrollx table{width:100%;min-width:0 !important;table-layout:fixed}
+html.pdf-long .scrollx table.mdt{font-size:15.5px}
+html.pdf-long .scrollx table.mdt td,html.pdf-long .scrollx table.mdt th,
+html.pdf-long .scrollx table.mdt td.r,html.pdf-long .scrollx table.mdt th.r{white-space:normal}
+html.pdf-long .scrollx table.mdt th:first-child,
+html.pdf-long .scrollx table.mdt td:first-child{width:14%}
+html.pdf-long .scrollx table.mdt td.note,
+html.pdf-long .scrollx table.mdt th:last-child{width:22%}
+html.pdf-long body{padding:0 0 28px 0}
+@media print{ html.pdf-long body{zoom:1} html.pdf-long section{break-inside:auto} }</style></head><script>
+if(/[?&]pdf=long(&|$)/.test(location.search)){
+  document.documentElement.className += ' pdf-long';
+  var measure=function(){
+    requestAnimationFrame(function(){ setTimeout(function(){
+      // 留 1% 余量：打印排版的行高与屏幕有亚像素差，几百行累计能差出几十 px，
+      // 差一点就凭空多出第二页 —— 那正是连续 PDF 最不能接受的。
+      var de=document.documentElement;
+      var w=Math.ceil(de.scrollWidth), h=Math.ceil(de.scrollHeight*1.01)+24;
+      var st=document.createElement('style');
+      st.textContent='@page{size:'+w+'px '+h+'px; margin:0}';
+      document.head.appendChild(st);
+      de.setAttribute('data-pdf-ready', w+'x'+h);
+    },300); });
+  };
+  if(document.readyState==='complete'){ measure(); }
+  else{ window.addEventListener('load',measure); }
+}
+</script><body><div class="topband"></div><div class="bandb"></div><div class="wrap"><div class="covtop"><div>KRX: 000660 · SK海力士 · 2026Q3｜2026-07-01—2026-09-30</div><div>数据截止 2026-10-29</div></div><h1>SK海力士2026Q3业绩点评</h1><div class="covsub">价格与组合推升经营利润，非经营损失压低净利｜发布日期：2026-10-28</div><div class="covtop"><div>基本面业绩点评 · 万亿韩元 · K-IFRS合并 · 初步数据</div><div></div></div><div class="kpis"><div><div class="kn">104.616</div><div class="kl">收入｜万亿韩元</div></div><div><div class="kn">83.334</div><div class="kl">经营利润｜万亿韩元</div></div><div><div class="kn">79.7%</div><div class="kl">经营利润率</div></div><div><div class="kn">42.111</div><div class="kl">简化FCF｜万亿韩元</div></div></div><div class="toc"><a href="#s1">一·核心结论</a><a href="#s2">二·业绩概览</a><a href="#s3">三·收入驱动</a><a href="#s4">四·利润率</a><a href="#s5">五·现金流</a><a href="#s6">六·累计口径</a><a href="#s7">七·后续展望</a><a href="#s8">八·主要风险</a><a href="#s9">九·综合判断</a><a href="#s10">十·来源与数据说明</a></div><section id="s1"><div class="kick">VERDICT</div><div class="accrule"></div><div class="sat"><span class="no">一、</span>核心结论：经营强劲，净利润受非经营损失扰动</div><div class="ssub">先区分主营业务、非经营损益与现金变动，再判断业绩质量。</div><hr class="heavy"><div class="stance">基本面判断：主营业务与资产负债表强劲，现金流仍为正；但净利润和现金增量均含显著非经营因素。</div><ul class="tight"><li><b>业绩与预期：</b>Q3收入104.616万亿韩元、经营利润83.334万亿韩元，分别较财报前一致预期高7.9%和9.3%。</li><li><b>经营驱动：</b>DRAM量增约10%、ASP高20%多增长；NAND量略降、ASP中20%多增长，价格与组合是主驱动。</li><li><b>盈利能力：</b>毛利率85.7%、经营利润率79.7%，环比分别提高2.5pct和3.3pct；SG&amp;A费用率下降亦贡献杠杆。</li><li><b>净利扰动：</b>净利润39.776万亿韩元，环比下降57.7%；汇兑损失11.633万亿、投资资产相关损失22.920万亿是核心解释。</li><li><b>现金匹配：</b>经营现金流54.781万亿、简化FCF 42.111万亿，仍充足但环比下降16.6%和23.5%，未同步经营利润。</li><li><b>后续焦点：</b>Q4 DRAM出货量指引中20%多增长，HBM4成为主力；2027年资本开支显著增加，现金转化比 headline 更关键。</li></ul><div class="rabar"><div class="ralab">一句话</div><div class="ratxt">经营质量强于净利润表观变化；后续要验证HBM4放量能否在资本开支上升前继续转化为自由现金流。</div></div><div class="footrow"><div class="srcline"><div>来源：S1第4—16页；S2；S8。金额为万亿韩元，单季度。</div><div></div></div></div></section><section id="s2"><div class="kick">PERFORMANCE</div><div class="accrule"></div><div class="sat"><span class="no">二、</span>业绩概览：收入与经营利润均超预期</div><div class="ssub">主基准为2026年10月27日公开的Yonhap Infomax十家券商一致预期，不以财报后观点替代。</div><hr class="heavy"><div class="scrollx"><table class="mdt" id="t-2-0" style="min-width:1260px"><thead><tr><th>指标</th><th class="r">3Q26实际</th><th class="r">2Q26</th><th class="r">环比</th><th class="r">3Q25</th><th class="r">同比</th><th class="r">事前预期</th><th class="r">差额</th><th class="r">超预期</th></tr></thead><tbody><tr><td>收入</td><td class="r">104.615</td><td class="r">79.319</td><td class="r">+31.9%</td><td class="r">24.449</td><td class="r">+327.9%</td><td class="r est">96.975</td><td class="r">+7.641</td><td class="r">+7.9%</td></tr><tr><td>毛利润</td><td class="r">89.653</td><td class="r">65.991</td><td class="r">+35.9%</td><td class="r">14.029</td><td class="r">+539.1%</td><td class="r nc">n/c</td><td class="r">—</td><td class="r">—</td></tr><tr><td>经营利润</td><td class="r">83.334</td><td class="r">60.543</td><td class="r">+37.6%</td><td class="r">11.383</td><td class="r">+632.1%</td><td class="r est">76.260</td><td class="r">+7.073</td><td class="r">+9.3%</td></tr><tr><td>EBITDA</td><td class="r">87.675</td><td class="r">64.563</td><td class="r">+35.8%</td><td class="r">14.949</td><td class="r">+486.5%</td><td class="r nc">n/c</td><td class="r">—</td><td class="r">—</td></tr><tr><td>净利润</td><td class="r">39.776</td><td class="r">93.923</td><td class="r">-57.7%</td><td class="r">12.598</td><td class="r">+215.7%</td><td class="r nc">n/c</td><td class="r">—</td><td class="r">—</td></tr></tbody></table></div><ul class="tight"><li>收入较预期高7.641万亿韩元，经营利润高7.073万亿韩元，经营超预期并非单纯低基数。</li><li>未找到可靠的财报前净利润一致预期，标记n/c；不采用财报后预测或点评代替。</li></ul><div class="ennote">交叉核验：FnGuide事前预期为收入98.2257万亿、经营利润76.9640万亿；实际分别高6.5%和8.3%，方向与主基准一致。</div><div class="footrow"><div class="srcline"><div>来源：S1第15、20页；S8（2026-10-27）；S9（2026-10-24）；S10（2026-10-25）。</div><div></div></div></div></section><section id="s3"><div class="kick">DRIVERS</div><div class="accrule"></div><div class="sat"><span class="no">三、</span>收入驱动：价格与产品组合贡献大于单纯放量</div><div class="ssub">公司只披露产品收入占比与出货、ASP区间，不据此估算未披露的分产品收入或利润。</div><hr class="heavy"><svg viewBox="0 0 1120 430" width="100%" role="img" aria-labelledby="chartTitle chartDesc" style="display:block;background:#fff"><title id="chartTitle">SK海力士季度收入与经营利润</title><desc id="chartDesc">2025Q3至2026Q3，收入与经营利润持续上升，单位万亿韩元。</desc><style>text{font-family:Arial,"Microsoft YaHei",sans-serif;fill:#333;font-size:15px}.grid{stroke:#ddd;stroke-width:1}.axis{stroke:#666;stroke-width:1}.rev{fill:#051C2C}.op{fill:#00A9F4}.label{font-size:13px}.title{font-size:20px;font-weight:700;fill:#051C2C}.sub{font-size:14px;fill:#666}</style><text x="78" y="28" class="title">收入与经营利润连续上行</text><text x="78" y="50" class="sub">单位：万亿韩元｜K-IFRS合并、单季度、初步数据｜来源：SK海力士官方业绩演示</text><line x1="78" y1="360.0" x2="1092" y2="360.0" class="grid"/><text x="66" y="365.0" text-anchor="end">0</text><line x1="78" y1="306.5" x2="1092" y2="306.5" class="grid"/><text x="66" y="311.5" text-anchor="end">20</text><line x1="78" y1="253.1" x2="1092" y2="253.1" class="grid"/><text x="66" y="258.1" text-anchor="end">40</text><line x1="78" y1="199.6" x2="1092" y2="199.6" class="grid"/><text x="66" y="204.6" text-anchor="end">60</text><line x1="78" y1="146.2" x2="1092" y2="146.2" class="grid"/><text x="66" y="151.2" text-anchor="end">80</text><line x1="78" y1="92.7" x2="1092" y2="92.7" class="grid"/><text x="66" y="97.7" text-anchor="end">100</text><rect x="134.4" y="294.7" width="42" height="65.3" class="rev"/><text x="155.4" y="287.7" text-anchor="middle" class="label">24.4</text><rect x="182.4" y="329.6" width="42" height="30.4" class="op"/><text x="203.4" y="322.6" text-anchor="middle" class="label">11.4</text><text x="179.4" y="388" text-anchor="middle">2025Q3</text><rect x="337.2" y="272.3" width="42" height="87.7" class="rev"/><text x="358.2" y="265.3" text-anchor="middle" class="label">32.8</text><rect x="385.2" y="308.8" width="42" height="51.2" class="op"/><text x="406.2" y="301.8" text-anchor="middle" class="label">19.2</text><text x="382.2" y="388" text-anchor="middle">2025Q4</text><rect x="540.0" y="219.5" width="42" height="140.5" class="rev"/><text x="561.0" y="212.5" text-anchor="middle" class="label">52.6</text><rect x="588.0" y="259.5" width="42" height="100.5" class="op"/><text x="609.0" y="252.5" text-anchor="middle" class="label">37.6</text><text x="585.0" y="388" text-anchor="middle">2026Q1</text><rect x="742.8" y="148.0" width="42" height="212.0" class="rev"/><text x="763.8" y="141.0" text-anchor="middle" class="label">79.3</text><rect x="790.8" y="198.2" width="42" height="161.8" class="op"/><text x="811.8" y="191.2" text-anchor="middle" class="label">60.5</text><text x="787.8" y="388" text-anchor="middle">2026Q2</text><rect x="945.6" y="80.4" width="42" height="279.6" class="rev"/><text x="966.6" y="73.4" text-anchor="middle" class="label">104.6</text><rect x="993.6" y="137.3" width="42" height="222.7" class="op"/><text x="1014.6" y="130.3" text-anchor="middle" class="label">83.3</text><text x="990.6" y="388" text-anchor="middle">2026Q3</text><line x1="78" y1="360" x2="1092" y2="360" class="axis"/><rect x="790" y="18" width="16" height="16" class="rev"/><text x="814" y="31">收入</text><rect x="890" y="18" width="16" height="16" class="op"/><text x="914" y="31">经营利润</text></svg><div class="scrollx"><table class="mdt" id="t-3-1" style="min-width:1120px"><thead><tr><th>产品</th><th class="c">3Q26收入占比</th><th class="c">出货量环比</th><th class="c">ASP环比</th><th>主要经营变化</th></tr></thead><tbody><tr><td>DRAM</td><td class="c">75%</td><td class="c">约+10%</td><td class="c">高20%多增长</td><td>HBM4开始规模出货；服务器DDR5出货量较Q2增长超过40%</td></tr><tr><td>NAND</td><td class="c">24%</td><td class="c">小幅下降</td><td class="c">中20%多增长</td><td>主动聚焦321层TLC企业级SSD，高价值数据中心产品增长</td></tr></tbody></table></div><div class="take">DRAM是量价齐升，NAND是以价与组合抵消出货小降；韩元走强构成经营端不利因素，但未抵消价格与组合贡献。</div><div class="footrow"><div class="srcline"><div>来源：S1第4、17页；S6；S7电话会05:03—06:04。产品占比为约数。</div><div></div></div></div></section><section id="s4"><div class="kick">MARGINS</div><div class="accrule"></div><div class="sat"><span class="no">四、</span>利润率：经营杠杆改善，净利率被非经营项目压低</div><div class="ssub">利润率均按未四舍五入金额复算；pct表示百分点，%表示增长率。</div><hr class="heavy"><div class="scrollx"><table class="mdt" id="t-4-0" style="min-width:1160px"><thead><tr><th>指标</th><th class="r">3Q26</th><th class="r">2Q26</th><th class="r">环比变化</th><th class="r">3Q25</th><th class="r">同比变化</th><th>驱动</th></tr></thead><tbody><tr><td>毛利率</td><td class="r">85.7</td><td class="r">83.2</td><td class="r">+2.5pct</td><td class="r">57.4</td><td class="r">+28.3pct</td><td>价格与高附加值产品组合改善</td></tr><tr><td>营业成本率</td><td class="r">14.3</td><td class="r">16.8</td><td class="r">-2.5pct</td><td class="r">42.6</td><td class="r">-28.3pct</td><td>收入增速显著高于成本</td></tr><tr><td>SG&amp;A费用率</td><td class="r">6.0</td><td class="r">6.9</td><td class="r">-0.8pct</td><td class="r">10.8</td><td class="r">-4.8pct</td><td>费用增长低于收入，形成经营杠杆</td></tr><tr><td>经营利润率</td><td class="r">79.7</td><td class="r">76.3</td><td class="r">+3.3pct</td><td class="r">46.6</td><td class="r">+33.1pct</td><td>毛利率提升与费用率下降共同贡献</td></tr><tr><td>EBITDA利润率</td><td class="r">83.8</td><td class="r">81.4</td><td class="r">+2.4pct</td><td class="r">61.1</td><td class="r">+22.7pct</td><td>折旧摊销相对稳定，随经营利润率上行</td></tr><tr><td>净利率</td><td class="r">38.0</td><td class="r">118.4</td><td class="r">-80.4pct</td><td class="r">51.5</td><td class="r">-13.5pct</td><td>非经营损失压低，不能与经营利润率混读</td></tr></tbody></table></div><div class="take">毛利率环比提高2.5pct、SG&amp;A费用率下降0.8pct，共同推升经营利润率；净利率环比下降80.4pct则是另一回事。</div><h3>经营利润与净利润桥接</h3><div class="scrollx"><table class="mdt" id="t-4-2" style="min-width:1120px"><thead><tr><th>项目</th><th class="r">3Q26</th><th class="r">2Q26</th><th class="r">环比变化</th><th>性质与解读</th></tr></thead><tbody><tr><td>毛利润</td><td class="r">89.653</td><td class="r">65.991</td><td class="r">+23.662</td><td>经营因素：价格与高附加值组合</td></tr><tr><td>SG&amp;A费用</td><td class="r">6.319</td><td class="r">5.449</td><td class="r">+0.870</td><td>费用增加，但增速低于收入</td></tr><tr><td>经营利润</td><td class="r">83.334</td><td class="r">60.543</td><td class="r">+22.791</td><td>毛利润增量扣除费用增量</td></tr><tr><td>汇兑交易及折算损益</td><td class="r">-11.633</td><td class="r">+1.147</td><td class="r">-12.780</td><td>非经营、汇率相关；可能反复，不等同永久一次性</td></tr><tr><td>其他非经营损益</td><td class="r">-21.452</td><td class="r">+60.889</td><td class="r">-82.341</td><td>Q2高收益基数与Q3投资资产相关损失共同放大净利润波动</td></tr><tr><td>税前利润</td><td class="r">50.708</td><td class="r">122.708</td><td class="r">-72.000</td><td>经营利润增长仍不足以抵消非经营项目摆动</td></tr><tr><td>净利润</td><td class="r">39.776</td><td class="r">93.923</td><td class="r">-54.147</td><td>税费由28.786降至10.933，部分缓冲税前利润下降</td></tr></tbody></table></div><ul class="tight"><li>Q3净非经营损失32.625万亿，其中投资资产相关损失22.920万亿、汇兑相关损失11.633万亿。</li><li>官方材料未披露需要剔除的经营性一次性项目；非经营损失也不能简单视作永不再发生。</li></ul><div class="footrow"><div class="srcline"><div>来源：S1第5—6、15、20页；S3第19页。环比差额按展示值计算，可能有尾差。</div><div></div></div></div></section><section id="s5"><div class="kick">CASH FLOW</div><div class="accrule"></div><div class="sat"><span class="no">五、</span>现金流：绝对水平充足，但环比转化弱于经营利润</div><div class="ssub">简化FCF＝经营现金流－购置PP&amp;E，不等同公司股东回报政策中的FCF定义。</div><hr class="heavy"><div class="scrollx"><table class="mdt" id="t-5-0" style="min-width:1050px"><thead><tr><th>指标</th><th class="r">3Q26</th><th class="r">2Q26</th><th class="r">环比</th><th class="r">3Q25</th><th class="r">同比</th></tr></thead><tbody><tr><td>经营现金流</td><td class="r">54.781</td><td class="r">65.710</td><td class="r">-16.6%</td><td class="r">14.368</td><td class="r">+281.3%</td></tr><tr><td>购置PP&amp;E</td><td class="r">12.670</td><td class="r">10.671</td><td class="r">+18.7%</td><td class="r">5.033</td><td class="r">+151.7%</td></tr><tr><td>简化自由现金流</td><td class="r">42.111</td><td class="r">55.039</td><td class="r">-23.5%</td><td class="r">9.335</td><td class="r">+351.1%</td></tr><tr><td>投资现金流</td><td class="r">-42.892</td><td class="r">-28.747</td><td class="r">-14.145</td><td class="r">-5.154</td><td class="r">-37.738</td></tr><tr><td>融资现金流</td><td class="r">10.781</td><td class="r">-4.666</td><td class="r">+15.447</td><td class="r">1.375</td><td class="r">+9.406</td></tr><tr><td>汇率对现金影响</td><td class="r">3.831</td><td class="r">1.332</td><td class="r">+2.499</td><td class="r">0.303</td><td class="r">+3.528</td></tr><tr><td>现金净增加</td><td class="r">26.502</td><td class="r">33.628</td><td class="r">-7.126</td><td class="r">10.892</td><td class="r">+15.610</td></tr></tbody></table></div><ul class="tight"><li>经营现金流与简化FCF同比大幅增长，但环比分别下降16.6%和23.5%，与经营利润环比增长37.6%不同步。</li><li>投资现金流包含长期金融投资净流出30.845万亿，不能全部视为产能资本开支。</li></ul><div class="scrollx"><table class="mdt" id="t-5-1" style="min-width:1080px"><thead><tr><th>补充指标</th><th class="r">3Q26</th><th class="r">2Q26</th><th class="r">变化</th><th>解读</th></tr></thead><tbody><tr><td>经营现金流／经营利润</td><td class="r">65.7%</td><td class="r">108.5%</td><td class="r">-42.8pct</td><td>本季经营利润向经营现金流转化减弱</td></tr><tr><td>简化FCF利润率</td><td class="r">40.3%</td><td class="r">69.4%</td><td class="r">-29.1pct</td><td>仍高，但环比回落</td></tr><tr><td>应收账款</td><td class="r">59.116</td><td class="r">47.821</td><td class="r">+23.6%</td><td>增速低于收入31.9%，未显示应收跑赢收入</td></tr><tr><td>存货</td><td class="r">19.356</td><td class="r">17.986</td><td class="r">+7.6%</td><td>增速低于收入与PP&amp;E投入</td></tr><tr><td>期末现金及短期金融工具</td><td class="r">114.460</td><td class="r">87.958</td><td class="r">+26.502</td><td>现金净增还含融资净流入10.781与汇率影响3.831</td></tr><tr><td>有息负债</td><td class="r">15.800</td><td class="r">18.587</td><td class="r">-2.787</td><td>净现金98.660，财务缓冲增强</td></tr></tbody></table></div><div class="take">结论：现金流“跟得上”体现在绝对规模和净现金，不体现在本季环比增速；长期金融投资、融资及汇率也影响现金余额。</div><div class="footrow"><div class="srcline"><div>来源：S1第7、16、19页；S3第15、18页；S5第14、17页。</div><div></div></div></div></section><section id="s6"><div class="kick">YTD</div><div class="accrule"></div><div class="sat"><span class="no">六、</span>累计口径：前九个月现金创造显著强于去年同期</div><div class="ssub">累计为各季度初步数据之和，与单季度分开；毛利润等按官方十亿韩元四舍五入后累加。</div><hr class="heavy"><div class="scrollx"><table class="mdt" id="t-6-0" style="min-width:900px"><thead><tr><th>指标</th><th class="r">2026年1—9月</th><th class="r">2025年1—9月</th><th class="r">同比／变化</th></tr></thead><tbody><tr><td>收入</td><td class="r">236.511</td><td class="r">64.320</td><td class="r">+267.7%</td></tr><tr><td>毛利润</td><td class="r">197.323</td><td class="r">36.114</td><td class="r">+446.4%</td></tr><tr><td>经营利润</td><td class="r">181.487</td><td class="r">28.037</td><td class="r">+547.3%</td></tr><tr><td>净利润</td><td class="r">174.044</td><td class="r">27.702</td><td class="r">+528.3%</td></tr><tr><td>经营现金流</td><td class="r">146.921</td><td class="r">32.651</td><td class="r">+350.0%</td></tr><tr><td>购置PP&amp;E</td><td class="r">30.998</td><td class="r">15.649</td><td class="r">+98.1%</td></tr><tr><td>简化自由现金流</td><td class="r">115.923</td><td class="r">17.002</td><td class="r">+581.8%</td></tr><tr><td>经营利润率</td><td class="r">76.7%</td><td class="r">43.6%</td><td class="r">+33.1pct</td></tr><tr><td>净利率</td><td class="r">73.6%</td><td class="r">43.1%</td><td class="r">+30.5pct</td></tr><tr><td>简化FCF利润率</td><td class="r">49.0%</td><td class="r">26.4%</td><td class="r">+22.6pct</td></tr></tbody></table></div><div class="take">累计收入236.511万亿、经营利润181.487万亿、简化FCF 115.923万亿；累计现金创造增长快于资本开支。</div><div class="ennote">资本配置对照：公司计划2026财年股东回报约100万亿韩元。累计简化FCF与其量级相近，但口径、实现时点及公司政策FCF定义不同，不能据此宣称回报已被完全覆盖。</div><div class="footrow"><div class="srcline"><div>来源：S1、S3、S4、S5及2025Q1/Q2官方业绩演示；累计为派生值。股东回报见S1第13页、S2。</div><div></div></div></div></section><section id="s7"><div class="kick">OUTLOOK</div><div class="accrule"></div><div class="sat"><span class="no">七、</span>后续展望：出货与HBM4继续上行，资本开支同步抬升</div><div class="ssub">公司未给出Q4收入或利润数值指引，以下为出货量、产品、需求与资本配置指引。</div><hr class="heavy"><div class="scrollx"><table class="mdt" id="t-7-0" style="min-width:1180px"><thead><tr><th>时间</th><th>项目</th><th>公司展望</th><th>经营含义</th></tr></thead><tbody><tr><td>2026Q4</td><td>DRAM出货量</td><td>环比中20%多增长</td><td>1c nm扩产与M15X爬坡共同驱动</td></tr><tr><td>2026Q4</td><td>NAND出货量</td><td>环比中个位数增长，含Solidigm</td><td>321层企业级SSD供应增加</td></tr><tr><td>2026Q4</td><td>HBM4</td><td>出货量与收入份额均超过HBM3E</td><td>产品代际切换，M15X年底达到满产</td></tr><tr><td>2026Q4</td><td>321层NAND</td><td>占韩国本土产能超过50%</td><td>支持高性能、高密度eSSD与KV cache分层需求</td></tr><tr><td>2027年</td><td>可实现需求位增长</td><td>DRAM中20%多；NAND高十几个百分点</td><td>公司认为AI需求超过供给，但仍受实际供给约束</td></tr><tr><td>2027—2028年</td><td>长期协议LTA</td><td>14家客户；已锁定产能超过50%</td><td>通常五年、含保证金与价格区间机制，提高可见度但不等于固定价</td></tr><tr><td>2027年</td><td>资本开支</td><td>较2026年显著增加</td><td>Yongin一期、先进制程设备与境内外基建投入上升</td></tr><tr><td>2026财年</td><td>股东回报</td><td>约100万亿韩元</td><td>现金分红不少于30万亿，回购并注销不少于60万亿</td></tr></tbody></table></div><div class="take">管理层预计2027年收入和利润绝对额显著提高，但未提供数值指引；HBM4价格、良率与资本开支节奏将决定兑现质量。</div><div class="footrow"><div class="srcline"><div>来源：S1第9—13页；S2；S6；S7电话会12:33—17:34。</div><div></div></div></div></section><section id="s8"><div class="kick">RISKS</div><div class="accrule"></div><div class="sat"><span class="no">八、</span>主要风险：高盈利、扩产与现金回报需要同时兑现</div><div class="ssub">风险均对应本季已披露数字或管理层指引，而非泛化行业描述。</div><hr class="heavy"><ol class="tight"><li><b>需求与价格周期：</b>当前79.7%经营利润率依赖紧缺与价格；若AI投资放缓或供给释放，ASP和利润率可能回落。</li><li><b>终端承受力：</b>公司预计PC与移动整机出货受存储涨价和缺货压制，AI需求能否持续抵消尚待验证。</li><li><b>资本开支与回报冲突：</b>2027年资本开支显著增加，同时2026财年约100万亿股东回报，可能压低后续自由现金流与净现金增速。</li><li><b>Solidigm融资：</b>停止IPO及Pre-IPO评估后，扩产融资选项减少；需关注自有资金、债务或其他融资安排。</li><li><b>非经营波动：</b>Q3汇兑与投资资产相关损失合计规模超过净利润的一半，净利润仍可能大幅偏离经营利润。</li><li><b>执行与技术：</b>M15X满产、HBM4／HBM4E认证、先进制程良率任一延迟，都可能影响Q4及2027年出货与成本。</li><li><b>LTA边界：</b>LTA覆盖2027—2028年产能超过50%，但价格采用区间并随市场调整，不能视为全部锁量锁价。</li></ol><h3>可观察催化</h3><ul class="tight"><li><b>2026Q4：</b>HBM4在HBM出货量与收入中的份额超过HBM3E。</li><li><b>2026年底：</b>M15X达到满产、321层NAND占韩国本土产能超过50%。</li><li><b>2026年末：</b>剩余Kioxia相关特别分红随全年业绩确定。</li><li><b>2027年：</b>Yongin一期投入运营及资本开支节奏进一步明确。</li></ul><div class="footrow"><div class="srcline"><div>来源：S1第6、9—13、16页；S2；S6；S7电话会22:18—58:42。</div><div></div></div></div></section><section id="s9"><div class="kick">ACTION</div><div class="accrule"></div><div class="sat"><span class="no">九、</span>综合判断：经营积极，现金转化与资本配置列入重点跟踪</div><div class="ssub">以下为基本面跟踪框架，不构成证券买卖建议。</div><hr class="heavy"><div class="scrollx"><table class="mdt" id="t-9-0" style="min-width:1050px"><thead><tr><th>维度</th><th class="c">信号</th><th>判断</th><th>依据</th></tr></thead><tbody><tr><td>经营增长</td><td class="c">▲</td><td>强</td><td>收入环比+31.9%，DRAM量价齐升，NAND价格与组合改善</td></tr><tr><td>经营盈利</td><td class="c">▲</td><td>强</td><td>经营利润率79.7%，环比+3.3pct</td></tr><tr><td>现金转化</td><td class="c">–</td><td>中性</td><td>简化FCF 42.111万亿，但环比-23.5%</td></tr><tr><td>资产负债</td><td class="c">▲</td><td>强</td><td>净现金98.660万亿，有息负债继续下降</td></tr><tr><td>净利润质量</td><td class="c">▼</td><td>弱</td><td>非经营损失32.625万亿，净利润环比-57.7%</td></tr><tr><td>资本配置</td><td class="c">–</td><td>待观察</td><td>2027年资本开支显著增加与高额股东回报并行</td></tr></tbody></table></div><div class="take">跟踪结论：不因净利润环比下降单独下调经营判断；也不以经营利润创新高替代对FCF和资本开支的审查。</div><ul class="tight"><li><b>强化条件：</b>Q4 DRAM出货指引兑现、HBM4成为主力，且简化FCF利润率企稳，可上调经营持续性评价。</li><li><b>重估条件：</b>若ASP转跌、资本开支上升且FCF利润率继续下滑，应下调盈利质量与现金回报覆盖评价。</li><li><b>核验重点：</b>后续正式季报需复核初步数据、投资资产损失明细、长期金融投资与融资现金流构成。</li></ul><div class="footrow"><div class="srcline"><div>来源：基于S1—S10的综合分析；信号▲为正面、–为中性、▼为负面。</div><div></div></div></div></section><section id="s10"><div class="kick">SOURCES</div><div class="accrule"></div><div class="sat"><span class="no">十、</span>来源与数据说明：官方材料优先，事前预期单列</div><div class="ssub">所有网页链接均可点击；关键数据表另含逐行来源。</div><hr class="heavy"><ul class="tight"><li><b>报告期：</b>2026年7月1日至9月30日；公司于2026年10月28日发布初步合并K-IFRS业绩。</li><li><b>单位与口径：</b>正文金额统一为万亿韩元；单季度与1—9月累计分列；同比与环比按未四舍五入值复算。</li><li><b>现金流定义：</b>简化FCF仅扣除购置PP&amp;E，未扣除长期金融投资，也不等同公司政策FCF。</li><li><b>一次性因素：</b>将主营经营变化与汇兑、投资估值等非经营因素分开；后者可能反复，不宣称全部属于永久一次性。</li><li><b>预期限制：</b>主一致预期有十家券商覆盖；未获得可靠的事前净利润一致预期，相关字段保留n/c。</li><li><b>审阅限制：</b>公司明确业绩仍为初步数据，外部审计审阅尚未完成，后续可能调整。</li></ul><ol class="tight"><li><b>S1：</b><a href="https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21453379321009165.pdf" target="_blank" rel="noopener">SK海力士《FY2026 Q3 Earnings Presentation》</a>（2026-10-28；官方业绩演示；收入、利润、现金流、资产负债、产品组合与展望）</li><li><b>S2：</b><a href="https://news.skhynix.com/en/q3-2026-business-results/" target="_blank" rel="noopener">SK海力士《SK hynix Announces 3Q26 Financial Results》</a>（2026-10-28；官方新闻稿；发布日期、核心数据、经营叙述与股东回报）</li><li><b>S3：</b><a href="https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21385145622881753.pdf" target="_blank" rel="noopener">SK海力士《FY2026 Q2 Earnings Presentation》</a>（2026-07-29；官方业绩演示；Q2 对照期及累计计算）</li><li><b>S4：</b><a href="https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/18333727317328069.pdf" target="_blank" rel="noopener">SK海力士《FY2026 Q1 Earnings Presentation》</a>（2026-04-23；官方业绩演示；Q1 对照期及累计计算）</li><li><b>S5：</b><a href="https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/3127648149034921.pdf" target="_blank" rel="noopener">SK海力士《FY2025 Q3 Earnings Presentation》</a>（2025-10-29；官方业绩演示；去年同期对照及累计计算）</li><li><b>S6：</b><a href="https://irsvc.teletogether.com/hynix/hynix2026Q3_eng.php" target="_blank" rel="noopener">SK海力士 2026Q3 业绩电话会入口</a>（2026-10-28；公司官方电话会；管理层说明）</li><li><b>S7：</b><a href="https://www.fool.com/earnings/call-transcripts/2026/10/28/sk-hynix-skhy-q3-2026-earnings-call-transcript/" target="_blank" rel="noopener">The Motley Fool《SK hynix Q3 2026 Earnings Call Transcript》</a>（2026-10-28；电话会英文转写；HBM4、LTA 与资本开支问答）</li><li><b>S8：</b><a href="https://www.ebn.co.kr/news/articleView.html?idxno=1729234" target="_blank" rel="noopener">EBN《실적은 역대급, 주가는 뒷걸음…》</a>（2026-10-27 07:16 KST；财报前预期；引述 Yonhap Infomax 十家券商一致预期）</li><li><b>S9：</b><a href="https://www.koreadaily.com/article/20261024225228380" target="_blank" rel="noopener">中央日报《삼성전자와 SK하이닉스 3분기 합산 영업이익 185조원…》</a>（2026-10-24 22:51 KST；财报前预期；引述 FnGuide 一致预期）</li><li><b>S10：</b><a href="https://www.hani.co.kr/arti/economy/marketing/1284039.html" target="_blank" rel="noopener">韩民族日报《삼전닉스 3분기 영업익 180조원대 전망…》</a>（2026-10-25；财报前预期交叉核验；FnGuide 与资本配置关注点）</li><li><b>S11：</b><a href="https://www.skhynix.com/ir/UI-FR-IR06/" target="_blank" rel="noopener">SK海力士 IR Earnings Release 页面</a>（持续更新；官方附件索引与发布日期）</li><li><b>S12：</b><a href="https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/116964051831620258.pdf" target="_blank" rel="noopener">SK海力士《FY2025 Q4 Earnings Presentation》</a>（2026-01-29；官方业绩演示；2025Q4图表及对照数据）</li><li><b>S13：</b><a href="https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/40103454849895488.pdf" target="_blank" rel="noopener">SK海力士《FY2025 Q2 Earnings Presentation》</a>（2025-07-24；官方业绩演示；2025年前九个月累计计算）</li><li><b>S14：</b><a href="https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/5001632852769028.pdf" target="_blank" rel="noopener">SK海力士《FY2025 Q1 Earnings Presentation》</a>（2025-04-24；官方业绩演示；2025年前九个月累计计算）</li></ol><div class="footrow"><div class="srcline"><div>检索与核对截至2026-10-29；来源日期以原始发布页为准。</div><div></div></div></div></section></div><script>
+(function(){
+  var toc=document.querySelector('.toc');
+  function setNavH(){
+    if(!toc) return;
+    document.documentElement.style.setProperty('--navh',(toc.offsetHeight+14)+'px');
+  }
+  setNavH();
+  // 导航会随窗口宽度换行，高度在 93–138px 之间跳；只听 window.resize 在某些宿主
+  // 根本不派发，必须盯导航本身。
+  if(window.ResizeObserver && toc){ new ResizeObserver(setNavH).observe(toc); }
+  window.addEventListener('resize',setNavH);
+
+  // 锚点：一律即时滚动并逐级兜底。绝不写 scroll-behavior:smooth —— 平滑滚动靠
+  // 动画帧推进，在预览器/后台 webview/隐藏标签页里帧被节流，原生锚点和 JS 双双
+  // 不动，而 preventDefault() 又掐掉了原生兜底，症状就是「点了完全没反应」。
+  function go(el){
+    var navh=parseInt(getComputedStyle(document.documentElement)
+              .getPropertyValue('--navh'),10)||96;
+    var y=el.getBoundingClientRect().top+(window.pageYOffset||0)-navh+14;
+    window.scrollTo(0,y);
+    var se=document.scrollingElement||document.documentElement;
+    if(Math.abs((window.pageYOffset||se.scrollTop)-y)>4){ se.scrollTop=y; }
+    if(Math.abs((window.pageYOffset||se.scrollTop)-y)>4){
+      el.scrollIntoView(); // 文档不是滚动容器 / 被包在可滚动外层或同源 iframe 里
+    }
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#"]');
+    if(!a) return;
+    var el=document.getElementById(a.getAttribute('href').slice(1));
+    if(!el) return;
+    e.preventDefault(); go(el);
+  });
+
+  // 表格过滤 + 高亮
+  document.querySelectorAll('input[data-filter]').forEach(function(inp){
+    inp.addEventListener('input',function(){
+      var tb=document.getElementById(inp.getAttribute('data-filter'));
+      if(!tb) return;
+      var q=inp.value.trim().toLowerCase();
+      tb.querySelectorAll('tbody tr').forEach(function(tr){
+        tr.querySelectorAll('mark').forEach(function(m){
+          m.replaceWith(document.createTextNode(m.textContent));
+        });
+        tr.normalize();
+        if(!q){ tr.style.display=''; return; }
+        var hit=tr.textContent.toLowerCase().indexOf(q)>=0;
+        tr.style.display=hit?'':'none';
+        if(!hit) return;
+        tr.querySelectorAll('td').forEach(function(td){
+          if(td.children.length) return;
+          var i=td.textContent.toLowerCase().indexOf(q);
+          if(i<0) return;
+          var s=td.textContent;
+          td.textContent='';
+          td.append(document.createTextNode(s.slice(0,i)));
+          var m=document.createElement('mark'); m.textContent=s.slice(i,i+q.length);
+          td.append(m); td.append(document.createTextNode(s.slice(i+q.length)));
+        });
+      });
+    });
+  });
+})();
+</script></body></html>

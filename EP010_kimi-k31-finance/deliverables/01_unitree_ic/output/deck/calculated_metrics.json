@@ -1,0 +1,54 @@
+{
+  "price_cny": 667.1,
+  "shares_m": 404.46434,
+  "market_cap_yi": 2698.18161214,
+  "free_float_pct": 7.439469200177203,
+  "pe_ttm_x": 482.188,
+  "pe_fy2026_consensus_x": 397.08333333333337,
+  "human_quad_share_2025_pct": 93.4,
+  "human_asp_decline_pct": -71.95820694304011,
+  "profit_gap_2025_yi": 3.125423,
+  "forecast_2028_high_low_x": 1.7643375394321767,
+  "required_return": 0.12,
+  "discount_years": 2,
+  "required_np_2028_yi": {
+    "at_100x": 33.845990142684165,
+    "at_60x": 56.40998357114028
+  },
+  "required_np_vs_low_forecast_pct": 344.8736874695606,
+  "required_np_vs_high_forecast_pct": 51.288631861022196,
+  "scenarios": {
+    "downside": {
+      "prob": 0.3,
+      "np_2028": 12.68,
+      "exit_pe": 45,
+      "future_value_yi": 570.6,
+      "pv_yi": 454.8788265306122,
+      "value_per_share": 112.46450713816012,
+      "upside_pct": -83.14128209591364
+    },
+    "base": {
+      "prob": 0.5,
+      "np_2028": 22.37,
+      "exit_pe": 60,
+      "future_value_yi": 1342.2,
+      "pv_yi": 1069.9936224489795,
+      "value_per_share": 264.54584907262273,
+      "upside_pct": -60.34389910468854
+    },
+    "upside": {
+      "prob": 0.2,
+      "np_2028": 32.02,
+      "exit_pe": 100,
+      "future_value_yi": 3202.0000000000005,
+      "pv_yi": 2552.6147959183672,
+      "value_per_share": 631.1099752127387,
+      "upside_pct": -5.394996970058652
+    }
+  },
+  "probability_weighted_price": 292.2342717203071,
+  "probability_weighted_upside_pct": -56.1933335751301,
+  "price_to_ipo_pct": 342.37400530503976,
+  "price_to_first_open_pct": -39.35454545454545,
+  "price_to_listing_low_pct": 65.11150162116677
+}

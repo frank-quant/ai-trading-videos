@@ -1,0 +1,5 @@
+
+变异自检：35 条已跑（4 条无对应样本跳过）
+FAIL MUTATION_SILENT       HOUSE_MODEL_SCOPE
+     「house_model 点脱离估值锚链」之后 lint 仍不报 —— 这类检查是哑的，本轮的「失败 0」不算数
+FAIL  71 点 / 50 进交付物 / locator 覆盖 94%（交付物引用点） · FAIL 0 WARN 0

@@ -1,0 +1,3 @@
+* -text
+*.htm linguist-documentation=true
+*.html linguist-documentation=true

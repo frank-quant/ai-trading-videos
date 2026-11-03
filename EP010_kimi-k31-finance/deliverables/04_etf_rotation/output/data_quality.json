@@ -1,0 +1,79 @@
+{
+  "provider": "Yahoo Finance",
+  "tickers": {
+    "SOXX": {
+      "rows": 1760,
+      "first_date": "2019-01-02",
+      "last_date": "2025-12-31",
+      "duplicate_dates": 0,
+      "missing_critical_fields": 0,
+      "nonpositive_prices": 0,
+      "dividend_events_2019_2025": 29,
+      "dividend_events_backtest": 25,
+      "split_events": {
+        "2024-03-07": 3.0
+      }
+    },
+    "SPY": {
+      "rows": 1760,
+      "first_date": "2019-01-02",
+      "last_date": "2025-12-31",
+      "duplicate_dates": 0,
+      "missing_critical_fields": 0,
+      "nonpositive_prices": 0,
+      "dividend_events_2019_2025": 28,
+      "dividend_events_backtest": 24,
+      "split_events": {}
+    },
+    "BIL": {
+      "rows": 1760,
+      "first_date": "2019-01-02",
+      "last_date": "2025-12-31",
+      "duplicate_dates": 0,
+      "missing_critical_fields": 0,
+      "nonpositive_prices": 0,
+      "dividend_events_2019_2025": 62,
+      "dividend_events_backtest": 50,
+      "split_events": {}
+    }
+  },
+  "checks": {
+    "identical_calendars": true,
+    "no_duplicate_dates": true,
+    "no_missing_critical_fields": true,
+    "positive_prices": true,
+    "covers_initial_signal": true,
+    "covers_backtest": true,
+    "adequate_60_session_warmup": true
+  },
+  "backtest": {
+    "start": "2020-01-02",
+    "end": "2025-12-31",
+    "sessions": 1508,
+    "initial_signal_date": "2019-12-31",
+    "initial_lookback_start": "2019-10-04",
+    "initial_target": "SOXX",
+    "executable_signal_count": 72,
+    "no_trade_signal_count": 46,
+    "december_2025_signal_excluded_from_trading": true,
+    "end_liquidation": false
+  },
+  "validation_assertions": "all passed",
+  "connector_cross_validation": {
+    "SOXX": {
+      "overlap_rows": 1758,
+      "max_abs_adj_close_difference": 7.629395801700412e-05,
+      "max_abs_dividend_difference": 0.0
+    },
+    "SPY": {
+      "overlap_rows": 1758,
+      "max_abs_adj_close_difference": 0.0002441406120397005,
+      "max_abs_dividend_difference": 0.0
+    },
+    "BIL": {
+      "overlap_rows": 1758,
+      "max_abs_adj_close_difference": 7.629399100039791e-05,
+      "max_abs_dividend_difference": 0.0
+    }
+  }
+}

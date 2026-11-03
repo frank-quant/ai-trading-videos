@@ -1,0 +1,34 @@
+{
+  "run_id": "META-20261030-QUARTERLY-V1",
+  "workbook": "output/meta_model_quarterly.xlsx",
+  "native_excel_recalc": "success",
+  "formula_count": 3931,
+  "formula_cache_missing": 0,
+  "excel_errors": 0,
+  "model_status": "PASS",
+  "annual_reported_status": "PASS",
+  "sensitivity_direction": "PASS",
+  "bs_balance_max_abs": 0,
+  "annual_model_unchanged": true,
+  "annual_model_sha256": "bda42491d721f2c7db7e3ee7da6e68b4b9af8e737fe84b9b1f219d9acaacf286",
+  "valuation_status": "VALUATION_REVIEW_REQUIRED",
+  "key_outputs": {
+    "enterprise_value_gordon_usd_mn": 1278353.6214206356,
+    "equity_value_gordon_usd_mn": 1309757.6214206356,
+    "gordon_value_per_share": 509.03910665395864,
+    "exit_multiple_value_per_share": 575.7292683482093,
+    "market_price": 624.52,
+    "gordon_upside": -0.18491144134061577,
+    "wacc": 0.10499310708876144,
+    "terminal_growth": 0.03,
+    "terminal_pv_share": 0.9611114390469608,
+    "scenario_values_per_share": {
+      "base": 509.03910665395864,
+      "upside": 780.1580704117524,
+      "downside": 324.2977910575633
+    },
+    "fy2030_revenue_usd_mn": 428253.13238399994,
+    "fy2030_ebit_usd_mn": 175818.73886783997,
+    "fy2030_diluted_eps": 55.08204234869835
+  }
+}

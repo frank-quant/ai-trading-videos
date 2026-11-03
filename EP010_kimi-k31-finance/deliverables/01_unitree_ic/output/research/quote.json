@@ -1,0 +1,35 @@
+{
+  "ok": true,
+  "scenario": "quote",
+  "ticker": "688836.SH",
+  "data": {
+    "text": "{'type': 'text', 'text': '{\\n  \"is_success\": \"wind, Wind get_stock_price_indicators fetched for 1 ticker(s)\",\\n  \"data_preview\": \"最新成交价,涨跌幅,市盈率(TTM),市净率(LF),流通市值,52周最高,52周最低,wind_code\\\\n667.10,0.71,482.188,30.281,2.00685e+10,1100,404.03,688836.SH\\\\n\",\\n  \"notice\": \"All the data have been provided and can be used directly. And above table saved to /tmp/finance-data-ifind-688836.SH.csv.If the user has the need for analysis, you can use pandas to read the file.\"\\n}'}",
+    "files_saved": {
+      "finance-data-ifind-688836.SH.csv": 115
+    },
+    "files": [
+      {
+        "name": "/tmp/finance-data-ifind-688836.SH.csv",
+        "content": "最新成交价,涨跌幅,市盈率(TTM),市净率(LF),流通市值,52周最高,52周最低,wind_code\n667.10,0.71,482.188,30.281,2.00685e+10,1100,404.03,688836.SH\n"
+      }
+    ],
+    "params_used": {
+      "ticker": "688836.SH",
+      "indexes": "最新成交价,涨跌幅,市盈率(TTM),市净率(LF),流通市值,52周最高,52周最低",
+      "file_path": "/tmp/finance-data-ifind-688836.SH.csv"
+    }
+  },
+  "provenance": {
+    "layer": "L1",
+    "source": "wind",
+    "latency_ms": 1500,
+    "asof": "2026-10-30",
+    "fetched_at": "2026-10-30",
+    "fallbacks": [],
+    "warnings": [
+      "period 缺省取最近自然季度末 2026-09-30"
+    ],
+    "profile": "personal",
+    "ssot_revision": "2026-09-25"
+  }
+}

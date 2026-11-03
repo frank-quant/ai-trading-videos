@@ -1,0 +1,21 @@
+              scenario     final_nav  total_return     CAGR  annualized_volatility  Sharpe_rf0  max_drawdown  trade_legs   total_fees  dividend_cash_received
+    rotation_fee_0.001 221714.879925      1.217149 0.142012               0.269233    0.629836     -0.364016          51  6554.284762            10801.119859
+SPY_buy_hold_fee_0.001 222509.135754      1.225091 0.142694               0.202386    0.762039     -0.336892           1    99.900100            11951.329556
+    rotation_fee_0.002 210706.844629      1.107068 0.132354               0.269290    0.598145     -0.366555          51 12749.383573            10444.392547
+SPY_buy_hold_fee_0.002 222287.070749      1.222871 0.142503               0.202384    0.761219     -0.336892           1   199.600798            11939.402082
+
+Initial signal:
+signal_date                     2019-12-31 00:00:00
+lookback_start_date             2019-10-04 00:00:00
+lookback_sessions                                60
+SOXX_total_return                          0.180329
+SPY_total_return                           0.098836
+target                                         SOXX
+selection_rule                 SOXX_higher_positive
+execution_date                  2020-01-02 00:00:00
+executed_in_backtest                           True
+position_unchanged_no_trade                   False
+
+Data quality: {'start': '2020-01-02', 'end': '2025-12-31', 'sessions': 1508, 'initial_signal_date': '2019-12-31', 'initial_lookback_start': '2019-10-04', 'initial_target': 'SOXX', 'executable_signal_count': 72, 'no_trade_signal_count': 46, 'december_2025_signal_excluded_from_trading': True, 'end_liquidation': False}
+Wrote report.md, report.html and D:\quant-videos\Kimi_K3.1_金融实测\05_实际测试\CASE05_ETF量化分析\output\charts\nav_drawdown.png
+Embedded PNG bytes: 336,107; HTML bytes: 462,298
