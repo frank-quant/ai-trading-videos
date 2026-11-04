@@ -1,6 +1,6 @@
 ﻿# EP010 · Kimi K3.1 Pro金融实测：提示词与交付物
 
-观看视频：[YouTube](https://youtu.be/W6erR8g0Ci4)
+观看视频：[B站](https://www.bilibili.com/video/BV1uExX6cE1W/) · [YouTube](https://youtu.be/W6erR8g0Ci4)
 
 本目录整理视频中的六个任务：宇树投委会、海力士财报、Meta估值、ETF回测、数据库财务筛选、Anthropic IPO问询。
 

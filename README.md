@@ -22,7 +22,7 @@
 | EP007 | [14 个大模型同一道量化题](EP007_fourteen-llm-quant-benchmark/) | 同题同数据,14 个模型写量化策略,扔进跌 45% 的样本外年份 | 题目 + 14 个模型的交付物 + 审计脚本 + 完整结果 | [B站](https://www.bilibili.com/video/BV1ijYB6QE1Y/) · [YouTube](https://youtu.be/5wEQiwCwGY0) |
 | EP008 | [Jev 做中高频交易靠不靠谱](EP008_jev-mid-frequency-benchmark/) | 每 0.3 秒问一次 Jev 涨跌,跟 8 条中高频策略、DeepSeek、抛硬币在币安 BTC 上比 24 小时 | 测试台代码(网页操作) + 完整结果 + 补算脚本 | [B站](https://www.bilibili.com/video/BV1FApP6TE2Y/) · [YouTube](https://youtu.be/UU-1z_Se4LU) |
 | EP009 | [用 ZCode Workflow 做 A 股策略研究](EP009_zcode-quant-workflow/) | 八步研究、AI/随机对照与测试集评估，严格达标为0，保留三条研究候选 | 干净研究工程 + 八步提示词 + 最终实验结果 + 收益复核 | [B站](https://www.bilibili.com/video/BV1r6nW6RESd/) · [YouTube](https://youtu.be/cDk9BZJKVZI) |
-| EP010 | [Kimi K3.1 Pro金融实测](EP010_kimi-k31-finance/) | 6个金融任务，从研报获取到模型、回测与IPO问询报告 | 提示词 + 原始交付 + 数据代码 + 复核说明 | [YouTube](https://youtu.be/W6erR8g0Ci4) |
+| EP010 | [Kimi K3.1 Pro金融实测](EP010_kimi-k31-finance/) | 6个金融任务，从研报获取到模型、回测与IPO问询报告 | 提示词 + 原始交付 + 数据代码 + 复核说明 | [B站](https://www.bilibili.com/video/BV1uExX6cE1W/) · [YouTube](https://youtu.be/W6erR8g0Ci4) |
 
 ## 每期目录里有什么
 
