@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "query": "601127",
+  "normalizedQuery": "601127.SH",
+  "status": "ok",
+  "matchStatus": "exact",
+  "truncated": false,
+  "cacheStatus": "hit",
+  "asOf": null,
+  "fetchedAt": "2026-11-01T16:50:16+08:00",
+  "items": [
+    {
+      "symbol": "601127.SH",
+      "shortName": "赛力斯",
+      "exchange": "SH",
+      "exchangeName": "上交所",
+      "currency": "CNY",
+      "timezone": "Asia/Shanghai",
+      "matchType": "exact_code"
+    }
+  ],
+  "errors": []
+}

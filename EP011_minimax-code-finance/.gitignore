@@ -1,0 +1,25 @@
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.swp
+__pycache__/
+*.pyc
+
+# 内部检查与预览
+qa_*/
+work_*/
+_tmp_args/
+
+# 大体积音视频与内部材料
+*.mp4
+*.MP4
+*.wav
+*.mov

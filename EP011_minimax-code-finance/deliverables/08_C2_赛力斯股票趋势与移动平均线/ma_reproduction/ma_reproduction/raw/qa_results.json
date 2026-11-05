@@ -1,0 +1,273 @@
+{
+  "seed": 20261102,
+  "sample_indices": [
+    104,
+    126,
+    183,
+    222,
+    249,
+    256,
+    266,
+    445,
+    473,
+    483,
+    537,
+    587,
+    631,
+    639,
+    671,
+    690,
+    704,
+    715,
+    724,
+    779
+  ],
+  "boundary_indices": [
+    58,
+    59
+  ],
+  "tolerance": {
+    "indicators_4dp": 5e-05,
+    "prices_2dp": 0.005
+  },
+  "total_checks": 47,
+  "passed": 47,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "indicators.csv 与 prices.csv 行数一致",
+      "status": "PASS",
+      "detail": "822 vs 822"
+    },
+    {
+      "check": "indicators.csv 的 close 与 prices.csv 逐行相同",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "随机 20 日 + 边界行的 SMA5/20/60（前缀和法 vs 滚动差分法 vs indicators.csv）",
+      "status": "PASS",
+      "detail": "22 行 × 3 个均线 × 2 种算法全部吻合"
+    },
+    {
+      "check": "随机 20 日 + 边界行的 EMA12/26（显式循环 vs indicators.csv）",
+      "status": "PASS",
+      "detail": "22 行全部吻合"
+    },
+    {
+      "check": "全样本 822 行 EMA12/26 与显式循环一致",
+      "status": "PASS",
+      "detail": "最大偏差 5.00e-05"
+    },
+    {
+      "check": "EMA 初始化口径敏感性已量化（SMA 种子 vs 首价种子）",
+      "status": "PASS",
+      "detail": "全样本最大偏差 1.061e+00；最后 100 根K线最大偏差 0.000e+00（已收敛；属口径选择，非计算错误）"
+    },
+    {
+      "check": "随机 20 日 + 边界行的 RSI14 与 MACD(DIF/DEA)",
+      "status": "PASS",
+      "detail": "22 行全部吻合"
+    },
+    {
+      "check": "零成本 Ledger_Gross 净值复核：log(r) 累加再 exp 后还原",
+      "status": "PASS",
+      "detail": "最大偏差 2.328e-09 元（1,000,000.00 -> 1,486,924.17）"
+    },
+    {
+      "check": "含费 Ledger 净值复核：log(r) 累加再 exp 后还原",
+      "status": "PASS",
+      "detail": "最大偏差 2.328e-09 元（1,000,000.00 -> 1,442,978.92）"
+    },
+    {
+      "check": "零成本 Ledger_Gross daily_return / cum_return 与 nav 自洽",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "含费 Ledger daily_return / cum_return 与 nav 自洽",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "四条曲线最大回撤：显式循环维护峰值 vs metrics.csv",
+      "status": "PASS",
+      "detail": "赛力斯 SMA5/2: csv=-0.491872 复核=-0.491872；赛力斯 SMA5/2: csv=-0.500937 复核=-0.500937；赛力斯 买入持有: csv=-0.758816 复核=-0.758816；沪深300 价格指数: csv=-0.214231 复核=-0.214231"
+    },
+    {
+      "check": "indicators.csv 预热行数 = 59",
+      "status": "PASS",
+      "detail": "实际 59 行"
+    },
+    {
+      "check": "预热行区间为前 59 行且连续",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "预热行 sma60 与 score 为空",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "signals.csv 无任何来自预热行的信号",
+      "status": "PASS",
+      "detail": "最小 row_index = 61"
+    },
+    {
+      "check": "账本预热期 59 行空仓、无动作、净值恒定",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "首个可评估日 = 第 60 行 = 2023-08-25",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "indicators.csv 有评分的行数 = 822 − 59",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "SMA5/20 交叉信号集：独立重算 vs signals.csv 完全一致",
+      "status": "PASS",
+      "detail": "重算 40 条 / 文件 40 条"
+    },
+    {
+      "check": "首个信号落在预热期之后（无未来数据预取）",
+      "status": "PASS",
+      "detail": "首个信号 2023-09-04 位于第 66 行"
+    },
+    {
+      "check": "成交时点：仅由上一根K线的信号触发、按当日开盘价成交（无当日收盘价前视）",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "同日既有信号又有成交时，成交方向由前一日信号决定（连续信号日不误读）",
+      "status": "PASS",
+      "detail": "同时含信号与成交的行 1 个：[('2025-01-03', 'golden_cross', 'death_cross', 'BUY')]"
+    },
+    {
+      "check": "连续信号回归用例 2025-01-02/03/06 的因果链正确",
+      "status": "PASS",
+      "detail": "2025-01-02 金叉 → 2025-01-03 开盘买入（当日收盘又出死叉）→ 2025-01-06 开盘卖出"
+    },
+    {
+      "check": "MACD 交叉信号集：独立重算 vs signals.csv 完全一致",
+      "status": "PASS",
+      "detail": "重算 56 条 / 文件 56 条"
+    },
+    {
+      "check": "SMA20/SMA60 交叉信号集：独立重算 vs signals.csv 完全一致",
+      "status": "PASS",
+      "detail": "重算 15 条 / 文件 15 条"
+    },
+    {
+      "check": "策略端到端重放：从原始价格独立重算的成交清单 vs 账本逐笔一致",
+      "status": "PASS",
+      "detail": "重放 40 笔 vs 账本 40 笔"
+    },
+    {
+      "check": "重放末态与账本末态一致（均空仓）",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "零成本账本 nav = cash + shares×当日close（同一根K线内闭合）",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "含费账本 nav = cash + shares×当日close（同一根K线内闭合）",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "含费账本逐笔独立重算（份额/费用/现金，含卖出腿）",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "累计手续费 = 逐笔费用之和 = 期末 cum_fee",
+      "status": "PASS",
+      "detail": "逐笔和 56,521.26 / cum_fee 56,521.26"
+    },
+    {
+      "check": "零成本账本全表费用为 0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "含费账本费率恰为 0.075%（逐笔反解）",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "费用分解：期末净值差与实际支付费用分开列示且数值正确",
+      "status": "PASS",
+      "detail": "净值差 43,945.26 / 费用 56,521.26（费用 > 净值差，符合复利计提口径）"
+    },
+    {
+      "check": "赛力斯买入持有净值独立复核",
+      "status": "PASS",
+      "detail": "csv=1,697,804.39 复核=1,697,804.39"
+    },
+    {
+      "check": "沪深300买入持有净值独立复核",
+      "status": "PASS",
+      "detail": "csv=1,083,603.24 复核=1,083,603.24"
+    },
+    {
+      "check": "基准与策略同区间（822 个交易日、同一日期轴）",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prices.csv 可回溯到恒生原始响应 raw/seres_fwd.json（逐行 OHLC）",
+      "status": "PASS",
+      "detail": "822 行"
+    },
+    {
+      "check": "恒生响应 adjustment=forward 且 coverageComplete=true",
+      "status": "PASS",
+      "detail": "adjustment=forward basisVersion=djEvY25fcHJvZF9ydF92MS8zNTAxLzI"
+    },
+    {
+      "check": "prices_bench.csv 可回溯到 iFinD 原始响应（自然日 -> 交易日筛选）",
+      "status": "PASS",
+      "detail": "自然日 1241 行 -> 交易日 822 行"
+    },
+    {
+      "check": "外部抽检 2023-06-01 恒生未复权收盘价 = iFinD 留档值",
+      "status": "PASS",
+      "detail": "恒生 25.38 / 前收 25.78"
+    },
+    {
+      "check": "外部抽检 2024-12-31 恒生未复权收盘价 = iFinD 留档值",
+      "status": "PASS",
+      "detail": "恒生 133.39 / 前收 134.8"
+    },
+    {
+      "check": "metrics.csv 策略行与账本末值一致",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "metrics.csv 交易次数 = 账本 BUY 数",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "metrics.csv 持仓天数 = 账本持股>0 的行数",
+      "status": "PASS",
+      "detail": "317 天 / 822 天 = 38.56%"
+    },
+    {
+      "check": "metrics.csv 费用分解行未与指标行混淆（row_type 区分）",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>新能源汽车产业链研究报告 · 全离线版</title>
+<style>
+/* ============================================================
+   新能源汽车产业链研究报告 — 暖白 / 墨绿 / 细金
+   全部样式内联，零外部依赖
+   ============================================================ */
+:root{
+  --paper:#FBF8F1; --paper2:#F5F0E4; --card:#FFFDF7; --card2:#FAF6EC;
+  --ink:#1C2622; --ink2:#31413A;
+  --green:#1F4A3C; --green2:#2E6B55; --green3:#6B9B85; --green-soft:#EAF1EC;
+  --gold:#A9862F; --gold2:#C8A951; --gold-soft:#F6EFDC; --gold-line:rgba(169,134,47,.30);
+  --line:rgba(31,74,60,.16); --line2:rgba(31,74,60,.08);
+  --txt:#242E29; --txt2:#5C6762; --txt3:#8D9691;
+  --fact:#2E6B55; --judge:#A9862F; --warn:#B4552F; --inst:#4A6C9B;
+  --serif:"Source Han Serif SC","Noto Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+  --sans:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",-apple-system,"Segoe UI",Roboto,sans-serif;
+  --num:"Georgia","Times New Roman",serif;
+  --shadow:0 1px 2px rgba(28,38,34,.05),0 8px 24px rgba(28,38,34,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  background-image:
+    radial-gradient(900px 520px at 88% -8%, rgba(200,169,81,.10), transparent 60%),
+    radial-gradient(760px 460px at 4% 4%, rgba(46,107,85,.07), transparent 62%);
+  color:var(--txt); font-family:var(--sans); font-size:14px; line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--green2); text-decoration:none}
+a:hover{color:var(--green); text-decoration:underline}
+h1,h2,h3,h4{font-family:var(--serif); font-weight:600; color:var(--ink)}
+.num{font-family:var(--num); font-variant-numeric:tabular-nums}
+
+/* ---------- 顶部栏 ---------- */
+header{
+  position:sticky; top:0; z-index:40;
+  background:linear-gradient(180deg,rgba(251,248,241,.97),rgba(245,240,228,.97));
+  border-bottom:1px solid var(--gold-line);
+  backdrop-filter:blur(8px);
+}
+.hd{display:flex; align-items:center; gap:22px; max-width:1560px; margin:0 auto; padding:11px 26px}
+.seal{
+  width:38px; height:38px; flex:0 0 38px; border-radius:7px;
+  background:linear-gradient(150deg,var(--green),var(--green2));
+  box-shadow:inset 0 0 0 1px rgba(200,169,81,.55), 0 3px 10px rgba(31,74,60,.22);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--serif); color:#F6EFDC; font-size:16px; font-weight:700; letter-spacing:1px;
+}
+.brand h1{font-size:17px; letter-spacing:.4px; line-height:1.3}
+.brand p{font-size:11.5px; color:var(--txt3); line-height:1.5; margin-top:1px}
+nav#nav{display:flex; gap:2px; flex:1; flex-wrap:wrap; margin-left:6px}
+nav#nav a{
+  font-size:12.5px; color:var(--txt2); padding:5px 10px; border-radius:6px; white-space:nowrap;
+  border:1px solid transparent; transition:.15s;
+}
+nav#nav a:hover{background:var(--green-soft); color:var(--green); text-decoration:none}
+nav#nav a.on{background:var(--green-soft); color:var(--green); border-color:var(--line); font-weight:600}
+.entry{display:flex; gap:8px; flex:0 0 auto}
+.entry a{
+  font-size:11.5px; padding:6px 12px; border-radius:6px; border:1px solid var(--gold-line);
+  background:var(--gold-soft); color:#7E6320; white-space:nowrap; transition:.15s;
+}
+.entry a:hover{background:#F0E5C6; color:#5E4813; text-decoration:none; border-color:rgba(169,134,47,.5)}
+.entry a b{font-family:var(--num); font-weight:700}
+
+/* ---------- 版面 ---------- */
+main{max-width:1560px; margin:0 auto; padding:0 26px 80px}
+section{padding:46px 0 12px; scroll-margin-top:70px; border-top:1px solid var(--line2)}
+section:first-of-type{border-top:none}
+.sec-h{display:flex; align-items:baseline; gap:14px; margin-bottom:8px; flex-wrap:wrap}
+.sec-h .ix{
+  font-family:var(--num); font-size:11.5px; color:#fff; background:var(--green);
+  border-radius:4px; padding:2px 8px; letter-spacing:1px; font-weight:700;
+}
+.sec-h h2{font-size:23px; letter-spacing:.6px}
+.sec-h .note{font-size:12px; color:var(--txt3); margin-left:auto; text-align:right}
+.lead{font-size:13.2px; color:var(--txt2); max-width:1080px; margin-bottom:20px; line-height:1.85}
+.lead b{color:var(--ink2)}
+
+/* ---------- 卡片 ---------- */
+.card{background:var(--card); border:1px solid var(--line); border-radius:11px; box-shadow:var(--shadow)}
+.pad{padding:18px 20px}
+.grid{display:grid; gap:14px}
+
+/* ---------- 封面 ---------- */
+.cover{display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:26px; align-items:start; padding-top:30px}
+.cover-l h2{font-size:34px; line-height:1.35; letter-spacing:1px; margin-bottom:6px}
+.cover-l .eyebrow{font-size:11.5px; color:var(--gold); letter-spacing:3px; text-transform:uppercase; margin-bottom:10px}
+.cover-l .lede{font-size:14.5px; color:var(--txt2); line-height:1.95; margin:14px 0 18px; max-width:640px}
+.cover-l .lede b{color:var(--ink)}
+.chips{display:flex; flex-wrap:wrap; gap:7px; margin-bottom:18px}
+.chip{
+  font-size:11.5px; padding:3px 10px; border-radius:20px; background:var(--green-soft);
+  color:var(--green); border:1px solid var(--line);
+}
+.chip.gold{background:var(--gold-soft); color:#7E6320; border-color:var(--gold-line)}
+.kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(132px,1fr)); gap:10px}
+.kpi{
+  background:var(--card); border:1px solid var(--line); border-radius:9px; padding:11px 13px;
+  position:relative; overflow:hidden; cursor:default;
+}
+.kpi:before{content:""; position:absolute; left:0; top:0; bottom:0; width:2px; background:var(--gold2)}
+.kpi .k{font-size:11.5px; color:var(--txt3); line-height:1.5}
+.kpi .v{font-family:var(--num); font-size:21px; font-weight:700; color:var(--green); line-height:1.25; margin-top:2px}
+.kpi .v small{font-size:11.5px; font-weight:400; color:var(--txt2); margin-left:2px}
+.kpi .s{font-size:10.5px; color:var(--txt3); margin-top:2px}
+
+/* ---------- 观察 ---------- */
+.obs{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+.obs h4{
+  font-size:13px; display:flex; align-items:center; gap:8px; margin-bottom:9px;
+  padding-bottom:7px; border-bottom:1px solid var(--line);
+}
+.tag{font-family:var(--sans); font-size:10.5px; font-weight:600; padding:2px 8px; border-radius:4px; letter-spacing:.5px}
+.tag.fact{background:rgba(46,107,85,.12); color:var(--fact)}
+.tag.judge{background:rgba(169,134,47,.15); color:#8A6B1E}
+.tag.inst{background:rgba(74,108,155,.12); color:var(--inst)}
+.tag.warn{background:rgba(180,85,47,.12); color:var(--warn)}
+ol.obslist{padding-left:20px}
+ol.obslist li{font-size:12.6px; line-height:1.8; margin-bottom:9px; color:var(--txt)}
+ol.obslist li b{color:var(--ink2)}
+.cite{font-family:var(--num); font-size:10.5px; color:var(--txt3); white-space:nowrap}
+.cite:hover{color:var(--green2)}
+code{font-family:var(--num); font-size:11.6px; background:rgba(31,74,60,.055);
+  border:1px solid var(--line); border-radius:4px; padding:1px 5px; color:var(--ink2)}
+
+/* ---------- 表格 ---------- */
+table{width:100%; border-collapse:collapse; font-size:12.4px}
+thead th{
+  text-align:left; font-weight:600; color:var(--txt2); font-size:11.5px; letter-spacing:.4px;
+  background:var(--paper2); padding:8px 10px; border-bottom:1.5px solid var(--gold-line); white-space:nowrap;
+  position:sticky; top:0; z-index:2;
+}
+tbody td{padding:7px 10px; border-bottom:1px solid var(--line2); vertical-align:top; line-height:1.65}
+tbody tr:hover{background:var(--card2)}
+td.n{font-family:var(--num); font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right}
+.tbl-wrap{border:1px solid var(--line); border-radius:10px; overflow:auto; background:var(--card); max-height:620px}
+.tbl-wrap.tall{max-height:none}
+.tbl-note{font-size:11.5px; color:var(--txt3); margin-top:8px; line-height:1.7}
+
+/* ---------- 产业链地图 ---------- */
+.mapwrap{display:grid; grid-template-columns:minmax(0,1fr) 356px; gap:16px; align-items:start}
+.mapbox{background:var(--card); border:1px solid var(--line); border-radius:11px; padding:14px 12px; overflow:auto}
+#chainmap{display:block; width:100%; height:auto}
+.legend{display:flex; gap:14px; flex-wrap:wrap; font-size:11.5px; color:var(--txt2); margin-top:10px; padding-top:9px; border-top:1px solid var(--line2)}
+.legend i{display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:5px; vertical-align:-1px}
+.nd-box{cursor:pointer}
+.nd-box rect{transition:.15s}
+.nd-box:hover rect{filter:brightness(1.06)}
+.nd-box.sel rect{stroke-width:2px !important}
+.detail{background:var(--card); border:1px solid var(--line); border-radius:11px; padding:0; overflow:hidden; position:sticky; top:74px}
+.detail .dh{padding:14px 16px 11px; border-bottom:1px solid var(--line); background:linear-gradient(180deg,var(--green-soft),transparent)}
+.detail .dh .t{font-family:var(--serif); font-size:16.5px; color:var(--ink); line-height:1.4}
+.detail .dh .s{font-size:11.5px; color:var(--txt3); margin-top:3px}
+.detail .db{padding:13px 16px 16px; max-height:calc(100vh - 220px); overflow:auto}
+.detail .kv{display:grid; grid-template-columns:78px 1fr; gap:5px 11px; font-size:12.3px; margin-top:9px}
+.detail .kv .k{color:var(--txt3)}
+.detail .kv .v{color:var(--txt)}
+.divider{height:1px; background:var(--line); margin:13px 0}
+.mini{font-size:11.5px; color:var(--txt3); line-height:1.7}
+.empty{color:var(--txt3); font-size:12.5px; line-height:1.9; padding:22px 6px}
+
+/* ---------- 图表 ---------- */
+.chartbar{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:14px}
+.chartbar .lab{font-size:12.5px; color:var(--txt2); font-weight:600}
+select.sel{
+  font-family:inherit; font-size:12.5px; padding:7px 10px; color:var(--txt);
+  background:var(--card); border:1px solid var(--line); border-radius:7px; outline:none; min-width:260px;
+}
+select.sel:focus{border-color:var(--gold2); box-shadow:0 0 0 3px rgba(200,169,81,.18)}
+.chartbox{background:var(--card); border:1px solid var(--line); border-radius:11px; padding:16px 18px 12px}
+.chartbox .ct{font-family:var(--serif); font-size:15px; color:var(--ink)}
+.chartbox .cs{font-size:11.5px; color:var(--txt3); margin-top:2px}
+#chartsvg{display:block; width:100%; height:auto; margin-top:10px}
+.gl{stroke:var(--line2); stroke-width:1}
+.ax{stroke:var(--line); stroke-width:1}
+.tk{font-size:10.5px; fill:var(--txt3); font-family:var(--num)}
+.tkl{font-size:11px; fill:var(--txt2)}
+.vl{font-size:10.5px; fill:var(--ink2); font-family:var(--num)}
+.vlb{font-size:10.5px; fill:var(--txt2)}
+.hint{font-size:11.5px; color:var(--txt3); margin-top:8px}
+
+/* ---------- Tab ---------- */
+.tabs{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px}
+.tabs button{
+  font-family:inherit; font-size:12.5px; padding:7px 14px; border-radius:7px; cursor:pointer;
+  border:1px solid var(--line); background:var(--card); color:var(--txt2); transition:.15s;
+}
+.tabs button:hover{border-color:var(--gold2); color:var(--ink)}
+.tabs button.on{background:var(--green); border-color:var(--green); color:#F4EFE2; font-weight:600}
+.calnote{font-size:12px; color:var(--txt2); background:var(--gold-soft); border:1px solid var(--gold-line);
+  border-radius:8px; padding:9px 12px; margin-bottom:12px; line-height:1.7}
+.calnote b{color:#7E6320}
+
+/* ---------- 事实与判断 ---------- */
+.fj{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+.fj .card{padding:16px 18px}
+.fj h4{font-size:14px; margin-bottom:10px; display:flex; align-items:center; gap:8px}
+.fj table{font-size:12.2px}
+/* 两栏内的宽表在窄列中改为横向滚动，避免中文被挤成竖排 */
+.fj #fjFact{min-width:680px}
+.fj #fjJudge{min-width:640px}
+
+/* ---------- 追踪变量 ---------- */
+.vt{font-family:var(--num); color:var(--gold); font-weight:700; white-space:nowrap}
+.bound h4{font-size:14px; margin:16px 0 8px; color:var(--ink)}
+.bound ul{margin:0 0 6px 18px; font-size:12.6px; line-height:1.85; color:var(--txt)}
+.bound li b{color:var(--ink2)}
+
+/* ---------- 来源 ---------- */
+.srcgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:12px}
+.src{background:var(--card); border:1px solid var(--line); border-radius:9px; padding:12px 14px}
+.src .st{font-size:12.6px; color:var(--ink); font-weight:600; line-height:1.6}
+.src .sm{font-size:11.3px; color:var(--txt3); margin-top:4px; line-height:1.65}
+.src .sl{font-size:10.5px; margin-top:5px; word-break:break-all}
+
+footer{
+  border-top:1px solid var(--gold-line); margin-top:44px; padding:22px 26px 40px;
+  color:var(--txt3); font-size:11.8px; line-height:1.85;
+}
+footer b{color:var(--txt2)}
+
+@media (max-width:1180px){
+  .cover{grid-template-columns:1fr}
+  .mapwrap{grid-template-columns:1fr}
+  .detail{position:static}
+  .detail .db{max-height:none}
+}
+.renderwarn{display:none; margin:0 0 16px; padding:11px 14px; border-radius:8px;
+  background:rgba(169,134,47,.10); border:1px solid rgba(169,134,47,.42);
+  color:#7A5C18; font-size:12.5px; line-height:1.7;}
+@media (max-width:820px){
+  .obs,.fj{grid-template-columns:1fr}
+  .hd{flex-wrap:wrap; gap:12px}
+  nav#nav{order:3; width:100%}
+  .cover-l h2{font-size:26px}
+  main{padding:0 16px 60px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd">
+    <div class="seal">新</div>
+    <div class="brand">
+      <h1>新能源汽车产业链研究报告</h1>
+      <p>信息截止 2026-10-23｜工商快照 2026-11-01｜全离线单文件</p>
+    </div>
+    <nav id="nav"></nav>
+    <div class="entry">
+      <a href="comparison.xlsx" title="三套口径公司比较表（Excel）"><b>comparison</b>.xlsx</a>
+      <a href="investment_graph.html" title="投资关系图谱（交互式 HTML）"><b>investment_graph</b>.html</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div id="render-warn" class="renderwarn"></div>
+  <!-- ============ 首页 ============ -->
+  <section id="s-cover">
+    <div class="cover">
+      <div class="cover-l">
+        <div class="eyebrow">Research Report · C1 新能源汽车</div>
+        <h2>周期从「量」切换到「价与结构」</h2>
+        <p class="lede" id="cover-lede"></p>
+        <div class="chips" id="cover-chips"></div>
+        <div class="kpis" id="cover-kpis"></div>
+      </div>
+      <div class="card pad">
+        <h4 style="font-size:13.5px;margin-bottom:10px;display:flex;align-items:center;gap:8px">
+          <span class="tag fact">事实</span>核心观察 · 已披露数据
+        </h4>
+        <ol class="obslist" id="obs-fact"></ol>
+      </div>
+    </div>
+    <div class="obs" style="margin-top:16px">
+      <div class="card pad">
+        <h4><span class="tag judge">判断</span>核心观察 · 分析推断（可能被证伪）</h4>
+        <ol class="obslist" id="obs-judge"></ol>
+      </div>
+      <div class="card pad">
+        <h4 style="font-size:13.5px;margin-bottom:10px;display:flex;align-items:center;gap:8px">
+          <span class="tag inst">口径</span>本报告的三条硬规则
+        </h4>
+        <div class="bound">
+          <ul>
+            <li><b>事实与判断分栏标注。</b>【事实】附 M-xxxx 与 source_id 可回查；【判断】是本报告的推断，可能被证伪；【机构观点】记录发布方，不为其背书。</li>
+            <li><b>三套口径互不等价。</b>整车口径、动力电池口径、小米相关业务各自独立，不可跨表相减、合并或排序；零部件与智能化、后市场另成独立表。</li>
+            <li><b>拿不到就留空。</b>不以近似值、跨口径数据或推算值填补，留空项与原因在「研究边界」逐条列出。</li>
+          </ul>
+          <div class="divider"></div>
+          <div class="mini">数字回查路径：正文数字 → 〔M-xxxx〕→ <b>底稿/03_原始指标.csv</b> → 主 source_id → <b>sources.csv</b> → URL + 口径 + 报告期 + 可信度</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 产业链地图 ============ -->
+  <section id="s-chain">
+    <div class="sec-h"><span class="ix">01</span><h2>产业链地图</h2>
+      <span class="note">30 个节点 · 7 个层级 · 点击任一节点查看环节、示例公司、驱动变量与已披露事实</span></div>
+    <p class="lead">节点按<b>上游资源 → 中游材料 → 中游电池 → 零部件 → 智能化 → 下游整车 → 后市场</b>自上而下排列；每个节点记录代表公司、关键驱动变量、2026 年已披露变化与变化方向（后者为分析判断）。节点右侧的<b>来源</b>列给出底稿 metric 与 source_id 编号，可直接回查。</p>
+    <div class="mapwrap">
+      <div class="mapbox">
+        <svg id="chainmap" role="img" aria-label="新能源汽车产业链节点地图"></svg>
+        <div class="legend" id="chainlegend"></div>
+      </div>
+      <aside class="detail" id="chainDetail">
+        <div class="dh"><div class="t">点击节点查看详情</div><div class="s">产业链节点 · 环节 · 示例公司 · 驱动变量</div></div>
+        <div class="db"><div class="empty">在左侧地图中点击任一节点，这里显示该环节的完整信息：所属层级、代表公司与代码、关键驱动变量、2026 年已披露事实、变化方向（分析判断）、备注与来源编号。</div></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ 行业趋势 ============ -->
+  <section id="s-trend">
+    <div class="sec-h"><span class="ix">02</span><h2>行业趋势</h2>
+      <span class="note">切换指标查看不同环节的结构；每个数字标注报告期、口径与性质</span></div>
+    <p class="lead">图表<b>全部由底稿自动生成</b>，不含手工填写的数据。切换指标时同时切换报告期与口径——<b>不同口径不可直接相减或合并</b>，例如全国碳酸锂产量存在有色金属工业协会与上海钢联两套并存口径，本图并列呈现，不静默择一。</p>
+    <div class="chartbar">
+      <span class="lab">指标</span>
+      <select class="sel" id="trendSel"></select>
+      <span class="mini" id="trendHint"></span>
+    </div>
+    <div class="chartbox">
+      <div class="ct" id="trendTitle"></div>
+      <div class="cs" id="trendSub"></div>
+      <svg id="chartsvg" role="img" aria-label="行业趋势图表"></svg>
+      <div class="hint" id="trendNote"></div>
+    </div>
+  </section>
+
+  <!-- ============ 公司比较 ============ -->
+  <section id="s-company">
+    <div class="sec-h"><span class="ix">03</span><h2>公司比较</h2>
+      <span class="note">每个口径组独立成表 · 保留各公司自身披露口径 · FY2025 与 2026H1 不可直接相除</span></div>
+    <p class="lead">下表按<b>口径组</b>切分。同一口径组内，FY2025 为全年数、2026H1 为半年数，<b>两者不可直接同比相除</b>；「同比」列为公司或来源方自身给出的口径，未给出者留空。每行的<b>口径/层级</b>是该数字自己的披露口径，不做统一化处理。</p>
+    <div class="tabs" id="compTabs"></div>
+    <div class="calnote" id="compNote"></div>
+    <div class="tbl-wrap tall"><table id="compTable"></table></div>
+    <div class="tbl-note">来源编号可在 <b>sources.csv</b> 中按 source_id 回查 URL、原始来源机构与可信度；逐条数字与底稿 <b>底稿/02_公司比较.csv</b> 一致，完整 Excel 版本见 <a href="comparison.xlsx">comparison.xlsx</a>。</div>
+  </section>
+
+  <!-- ============ 事实与判断 ============ -->
+  <section id="s-fj">
+    <div class="sec-h"><span class="ix">04</span><h2>事实与判断</h2>
+      <span class="note">左栏为可回查的已披露数据，右栏为基于事实的分析推断</span></div>
+    <p class="lead">把「已经发生的」和「我们认为会发生的」放在两张表里。前者每一条都带 metric_id 与 source_id；后者是判断，可能被证伪，<b>不构成任何点位预测、评级或目标价</b>。</p>
+    <div class="fj">
+      <div class="card">
+        <h4><span class="tag fact">事实</span>已披露数据 · 可回查</h4>
+        <div class="tbl-wrap" style="max-height:560px"><table id="fjFact"></table></div>
+      </div>
+      <div class="card">
+        <h4><span class="tag judge">判断</span>分析推断 · 主观意见</h4>
+        <div class="tbl-wrap" style="max-height:560px"><table id="fjJudge"></table></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 未来跟踪变量 ============ -->
+  <section id="s-track">
+    <div class="sec-h"><span class="ix">05</span><h2>未来跟踪变量</h2>
+      <span class="note">只列变量、当前可观测状态与触发条件 · 不给出价格、股价或指数点位预测</span></div>
+    <p class="lead">每个变量给出<b>当前可观测状态</b>（截至 2026-10-23）、<b>触发条件</b>与<b>回查位置</b>。第三方机构已公开发布的价格区间判断属于来源方观点，记录在来源标注中，<b>不作为本报告的预测</b>。</p>
+    <div class="tbl-wrap tall"><table id="trackTable"></table></div>
+  </section>
+
+  <!-- ============ 数据来源 ============ -->
+  <section id="s-source">
+    <div class="sec-h"><span class="ix">06</span><h2>数据来源</h2>
+      <span class="note">主来源台账 sources.csv 共 714 条 · 本报告引用 25 条 · 可信度分级</span></div>
+    <p class="lead" id="sourceIntro"></p>
+    <div class="tbl-wrap"><table id="srcTable"></table></div>
+    <div class="tbl-note" id="srcNote"></div>
+  </section>
+
+  <!-- ============ 研究边界 ============ -->
+  <section id="s-bound">
+    <div class="sec-h"><span class="ix">07</span><h2>研究边界</h2>
+      <span class="note">留空清单 · 口径冲突并列 · 验证层级限制</span></div>
+    <p class="lead">这一节明确写出<b>本报告不能支持什么</b>。所有拿不到的数据一律留空并说明原因，不用近似值、跨口径数据或推算值填补。</p>
+    <div class="bound">
+      <h4>留空项（不以近似值填补）</h4>
+      <div class="tbl-wrap"><table id="gapTable"></table></div>
+      <h4>口径冲突并列清单</h4>
+      <div class="tbl-wrap"><table id="conflictTable"></table></div>
+      <h4>验证层级限制</h4>
+      <ul id="limitList"></ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <b>新能源汽车产业链研究报告（全离线单文件版）</b>｜信息截止日 2026-10-23；企查查工商数据为 T+0 快照（查询日 2026-11-01），晚于截止日者已在底稿逐条标注。
+  配套交付物：<b>scope.md</b>（口径与冲突清单）、<b>sources.csv</b>（主来源台账）、<b>relations.csv</b>（投资关系底稿）、<b>data_audit.md</b>（关系数据审计）、<b>comparison.xlsx</b>（三套口径比较表）、<b>investment_graph.html</b>（投资关系图谱）、<b>底稿/</b>（四份底稿）。
+  本页所有数字由底稿自动生成，不存在第二套手填数据。<br>
+  本报告不含点位预测、评级或目标价，不构成投资建议；所涉主体的股权结构与经营数据随时可能变动，引用前请按 source_id 回查原始来源。
+</footer>
+
+<script>
+var __REPORT__ = {"cover":{"lede":"本轮产业链的核心变化<b>不是需求爆发，而是利润分配重排</b>：整车总量承压，上游资源与中游材料的利润弹性显著放大，储能接棒动力成为电池端第一增长引擎，中间硬件环节普遍量增利减、定价权流失。本页所有数字均由底稿自动生成，可经 <b>M-xxxx → source_id → 原始来源</b> 逐条回查；叙述部分直接取自已审计的第二阶段报告，不存在第二套手填数据。","chips":[{"t":"信息截止日 2026-10-23"},{"t":"财务对比期 2025 全年 / 2026 上半年"},{"t":"产业链节点 30 个","gold":true},{"t":"投资关系主体 234 个","gold":true},{"t":"投资关系 284 条（300 条原始记录）","gold":true},{"t":"底稿指标 337 条"},{"t":"主来源 714 条"},{"t":"全离线单文件"}],"kpis":[{"k":"锂企板块营收","v":"约870","u":"亿元","s":"2026H1｜经济观察报统计口径(13家合计)"},{"k":"锂企板块净利","v":"264","u":"亿元","s":"2026H1｜经济观察报统计口径(13家合计)"},{"k":"储能电池累计销量","v":"318.1","u":"GWh","s":"2026H1｜行业统计口径"},{"k":"碳酸锂上半年均价","v":"16.34","u":"万元/吨","s":"2026H1｜上海有色网SMM口径"},{"k":"乘用车 1-9 月零售","v":"1333.4","u":"万辆","s":"2026-01至09｜乘联分会口径"},{"k":"比亚迪品牌销量","v":"134.41","u":"万辆","s":"2026-01至09｜中汽数研品牌口径"},{"k":"宁德时代综合毛利率","v":"23.93","u":"%","s":"2026H1｜公司半年报口径"},{"k":"回收行业产能利用率","v":"16.4","u":"%","s":"2025｜行业统计口径"}]},"obs":{"fact":["<b>利润在产业链内部显著上移。</b> 2026 年一季度锂电池环节利润占比从 2024 年的 96.43% 降至 <b>52.21%</b>，同期能源金属与电池化学品利润占比分别升至 <b>23.42%</b> 和 <b>22.33%</b><span class=\"cite\">〔M-0148 / BAT-113、M-0149 / BAT-115、M-0150 / BAT-117〕</span>。2026 年上半年上游资源、中游材料、电池、整车公司归母净利润总额从上年同期的 76.8 亿元升至 <b>339.3 亿元</b><span class=\"cite\">〔M-0151 / BAT-119〕</span>。","<b>锂价上行把资源端从周期底部拉回，但分化极大。</b> A 股 13 家规模以上锂矿及锂盐企业 2026 年上半年合计营收约 <b>870 亿元</b>（上年同期约 400 亿元，+1.2 倍），净利润合计 <b>264 亿元</b>（上年同期约 52 亿元，增长超 4 倍），12 家盈利、仅江特电机亏损<span class=\"cite\">〔M-0001 / LI-010、M-0002 / LI-012、M-0003 / LI-014〕</span>。盐湖股份锂盐产品毛利率 <b>83.46%</b>，江特电机整体毛利率仅 <b>6.92%</b>，差距超过 10 倍<span class=\"cite\">〔M-0012 / LI-036、M-0041 / LI-101〕</span>。","<b>储能接棒动力成为电池端第一增长引擎。</b> 2026 年上半年储能电池累计销量 <b>318.1GWh</b>（+83.4%），1–7 月 <b>374.2GWh</b>（+78.6%）<span class=\"cite\">〔M-0142 / BAT-101、M-0143 / BAT-103〕</span>；亿纬锂能储能电池出货 <b>44.46GWh</b> 已超过其动力电池出货 <b>35.76GWh</b><span class=\"cite\">〔M-0114 / BAT-045、M-0115 / BAT-047〕</span>。","<b>规模扩张与毛利率下行在电池端同时发生。</b> 宁德时代上半年营收 +54.80%、归母净利 +41.98%，但综合毛利率同比 <b>-1.11pct</b> 至 23.93%、动力电池毛利率同比 <b>-1.78pct</b> 至 20.63%<span class=\"cite\">〔M-0104 / BAT-025、M-0105 / BAT-027、M-0106 / BAT-029、M-0107 / BAT-031〕</span>。8 家电池厂中仅瑞浦兰钧毛利率同比提升<span class=\"cite\">〔M-0130 / BAT-077〕</span>。","<b>整车端总量承压、结构剧烈分化。</b> 2026 年 9 月国内乘用车零售 161.8 万辆，同比 <b>-28.0%</b>；1–9 月累计零售 1333.4 万辆，同比 <b>-21.7%</b><span class=\"cite\">〔M-0275 / OEM-078、M-0276 / OEM-080〕</span>。同期比亚迪品牌 1–9 月销量 134.41 万辆、份额 16.52%<span class=\"cite\">〔M-0244 / OEM-001〕</span>，零跑 50.70 万辆（+45.9%）升至第三并反超特斯拉<span class=\"cite\">〔M-0246 / OEM-007〕</span>。","<b>零部件与智驾环节普遍\"量增利减\"。</b> 拓普集团营收 +9.78% 但归母净利 <b>-21.03%</b><span class=\"cite\">〔M-0173 / ADP-001、M-0175 / ADP-007〕</span>；德赛西威智能驾驶业务收入 <b>-5.53%</b>、该业务毛利率由约 19.74% 降至 <b>14.49%</b><span class=\"cite\">〔M-0196 / ADP-050、M-0197 / ADP-052〕</span>。","<b>智驾利润池从硬件向软件/IP 迁移。</b> 地平线上半年授权及服务收入 11.29 亿元（+52.7%），首次超过总收入一半，毛利率 <b>90.4%</b><span class=\"cite\">〔M-0203 / ADP-064、M-0204 / ADP-066〕</span>；其经调整净亏损反而由 13.33 亿元扩大至 16.71 亿元<span class=\"cite\">〔M-0206 / ADP-070〕</span>。","<b>电池回收市场规模与合规产能严重错配。</b> 2026 年国内锂电回收市场规模测算 <b>527 亿元</b>（2025 年 222 亿元，+137.4%），但白名单 156 家企业名义产能 423.3 万吨、2025 年行业产能利用率仅 <b>16.4%</b>，超六成退役电池流入灰色渠道<span class=\"cite\">〔M-0291 / AFT-021、M-0293 / AFT-025、M-0294 / AFT-027、M-0295 / AFT-029、M-0304 / AFT-047〕</span>。"],"judge":["<b>本轮的核心变化不是需求爆发，而是产业链利润分配的重排。</b> 整车销量增速已明显放缓（1–9 月 NEV 销量 +11.1%，第一阶段数据），但上游资源与中游材料的利润弹性远大于销量弹性，原因是供给侧同时发生扰动（检修、换证、复产节奏）与需求侧同时发生结构切换（储能）。这意味着<b>周期位置已从\"量的故事\"切换到\"价与结构的故事\"</b>，研究重心应放在成本曲线与供需平衡表，而非单纯的销量同比。","<b>储能是当前唯一可以同时支撑\"量\"和\"价\"的终端需求。</b> 动力端增速受国内乘用车零售负增长拖累，储能端则由全球电力系统建设驱动且仍在加速。这一判断的直接含义是：<b>电池厂、锂盐厂、隔膜电解液铜箔等材料环节的景气排序，储能量产占比高的企业优于纯动力配比企业</b>。","<b>中间环节（域控、激光雷达、传统零部件）正在丧失定价权。</b> 量在增长，但毛利率被年降和整车厂议价权压缩。这不是短期现象，而是硬件标准化后的结构性结果。<b>利润会向两端迁移：一端是拥有自有资源的资源商，另一端是能跨车型复用的软件/IP 供应商。</b>","<b>固态电池的产业位置需要下调预期。</b> 已发生的商业化集中在半固态且规模有限（行业或有 10GWh 级出货<span class=\"cite\">〔M-0155 / SLD-001〕</span>），全固态普遍处于试制与验证阶段。<b>当前兑现顺序是设备 → 已供货的正极材料 → 电解质（等重复采购信号）</b>，把固态当成整车厂的量产催化来做，时点容易错。","<b>电池回收是一个\"政策确定性高、但产业盈利兑现慢\"的环节。</b> 数字身份证与车电一体报废制度已落地（2026-04-01 生效<span class=\"cite\">〔M-0309 / AFT-057〕</span>），供给侧出清也在推进（2026-07-30 100 家梯次企业移出名单<span class=\"cite\">〔M-0310 / AFT-059〕</span>），但渠道成本倒挂（合规企业要承担环保、安全、税收、溯源成本，无法与非正规渠道竞价）这一核心堵点尚未被机制性解决。<b>看到\"六大基地合规产能利用率较 Q2 提升 8–12pct\"<span class=\"cite\">〔M-0312 / AFT-063〕</span>这类边际改善时，需要区分是政策回流还是渠道建设见效。</b>"]},"chain":{"levels":["上游资源","中游材料","中游电池","零部件","智能化","下游整车","后市场"],"nodes":[{"id":"N-001","level":"上游资源","link":"锂资源","name":"锂矿与锂盐","type":"资源","companies":"盐湖股份(000792.SZ)、天齐锂业(002466.SZ)、赣锋锂业(002460.SZ)、中矿资源(002738.SZ)、盛新锂能(002240.SZ)、藏格矿业(000408.SZ)、融捷股份(002192.SZ)、永兴材料(002756.SZ)、雅化集团(002497.SZ)、天华新能(300390.SZ)、川能动力(000155.SZ)、西藏矿业(000762.SZ)、江特电机(002176.SZ)","up":"—","down":"正极材料/电池","drivers":"碳酸锂价格、提锂路线成本、自有矿源比例、矿业权审批","fact":"13家A股锂企H1合计营收约870亿元(+1.2倍)、净利264亿元(增长超4倍)；7-8月主产区集中停线检修减产约1.4万吨","direction":"改善","note":"盈利分化极大：盐湖锂盐毛利率83.46%，江特电机整体毛利率仅6.92%","src":"EE;CEN;HQ"},{"id":"N-002","level":"上游资源","link":"锂资源","name":"提锂工艺路线（盐湖/锂辉石/锂云母）","type":"工艺","companies":"盐湖股份(盐湖)、天齐锂业(锂辉石)、江特电机(锂云母)","up":"—","down":"N-001","drivers":"矿石品位、卤水浓度、换证进度、成本曲线","fact":"盐湖提锂成本3-5万元/吨、锂辉石5-7万元/吨、锂云母6-8万元/吨；锂云母路线因江西\"证矿不符\"换证收缩","direction":"分化","note":"路线成本差决定本轮盈利弹性","src":"EE"},{"id":"N-003","level":"上游资源","link":"锂资源","name":"供给扰动与复产","type":"事件","companies":"中矿资源(002738.SZ)、天华新能(300390.SZ)、九岭锂业(未上市)","up":"—","down":"N-001","drivers":"停产检修排期、枧下窝复产进度、津巴布韦到港、期货仓单","fact":"枧下窝锂矿2026-06-29正式复产（另有\"预估Q3复产\"表述差异）；7月产量环比-8.8%，年内首次回落","direction":"走弱","note":"复产口径存在并列表述，未静默择一","src":"SMM;CEN"},{"id":"N-004","level":"上游资源","link":"政策","name":"锂的战略性矿产地位","type":"政策","companies":"—","up":"—","down":"N-001","drivers":"《矿产资源法》及实施条例、出口管制","fact":"2025年7月修订《矿产资源法》将锂列为战略性矿产；2026年6月实施条例细化矿权管理，\"证矿不符\"不再允许","direction":"收紧","note":"推高合规成本，压制锂云母路线短期供给","src":"EE"},{"id":"N-005","level":"中游材料","link":"正极材料","name":"磷酸盐正极（磷酸铁锂）","type":"材料","companies":"湖南裕能(301358.SZ)、德方纳米(300769.SZ)","up":"N-001","down":"N-008","drivers":"碳酸锂价格传导、高端产品占比、储能占比、产能利用率","fact":"湖南裕能H1销量66.72万吨(+38.77%)、正极毛利率14.81%(+7.84pct)、产能利用率95.92%；H1全国磷酸铁锂产量273.7万吨(+70.1%)","direction":"改善","note":"储能占比约53%","src":"CNE3;NBD;SMM"},{"id":"N-006","level":"中游材料","link":"正极材料","name":"三元正极","type":"材料","companies":"当升科技(300073.SZ)","up":"N-001","down":"N-008","drivers":"三元材料单价、钴镍价格、高镍渗透率","fact":"当升科技三元材料毛利率12.7%，单吨毛利约2万元/吨；H1全国三元材料产量49.9万吨(+46.1%)","direction":"平稳","note":"","src":"CNE;SMM"},{"id":"N-007","level":"中游材料","link":"负极材料","name":"人造石墨负极","type":"材料","companies":"杉杉股份(600884.SH)、贝特瑞(835185.BJ)、翔丰华(300890.SZ)","up":"N-001","down":"N-008","drivers":"针焦成本、石墨化产能、储能需求","fact":"翔丰华负极产品毛利率18.61%(+6.25pct)；杉杉股份负极销量+54.92%、人造石墨出货市占21%居首","direction":"改善","note":"成本传导滞后，盈利分化","src":"CNE;TOP"},{"id":"N-008","level":"中游材料","link":"电池材料","name":"电解液与六氟磷酸锂","type":"材料","companies":"天赐材料(002709.SZ)、新宙邦(300037.SZ)","up":"N-001","down":"N-008","drivers":"六氟供需、电解液价格、海外需求","fact":"天赐材料H1营收147.10亿元(+109.28%)、归母净利28.61亿元(+967.91%)、毛利率33.55%(+14.86pct)；新宙邦电池化学品毛利率15.32%","direction":"改善","note":"电解液是材料端弹性最大环节之一","src":"CNE"},{"id":"N-009","level":"中游材料","link":"电池材料","name":"隔膜","type":"材料","companies":"恩捷股份(002812.SZ)","up":"N-001","down":"N-008","drivers":"隔膜价格、涂覆隔膜占比、供给新增","fact":"恩捷股份H1隔膜收入76.20亿元(+58.09%)、毛利率31.65%(+17.99pct)，隔膜价格较2025Q4回升","direction":"改善","note":"涨价周期开启","src":"CNE"},{"id":"N-010","level":"中游材料","link":"电池材料","name":"铜箔","type":"材料","companies":"嘉元科技(688388.SH)、诺德股份(600110.SH)","up":"N-001","down":"N-008","drivers":"铜价、加工费、动力/储能铜箔需求","fact":"嘉元科技H1营收75.13亿元(+89.57%)、归母净利3.82亿元(+940%)；铜箔产能15.5万吨以上；与宁德时代签2026-2028优先保障不低于62.6万吨框架协议","direction":"改善","note":"绑定头部电池厂保障量","src":"CNE"},{"id":"N-011","level":"中游材料","link":"设备","name":"锂电设备与固态设备","type":"设备","companies":"先导智能(300450.SZ)、利元亨(688499.SH)、海目星(688559.SH)、赢合科技(300457.SZ)","up":"N-005;N-009","down":"N-008","drivers":"扩产周期、固态新工序、订单转化","fact":"先导智能H1新增订单约180亿元(+50%~60%)，储能与动力约各占一半；利元亨已交付全固态整线设备，海目星披露固态设备订单","direction":"改善","note":"固态相关为新增工序，非全新增订单","src":"CNE"},{"id":"N-012","level":"中游电池","link":"动力电池","name":"动力电池制造","type":"电池","companies":"宁德时代(300750.SZ)、亿纬锂能(300014.SZ)、国轩高科(002074.SZ)、欣旺达(300207.SZ)、中创新航(3931.HK)、瑞浦兰钧(0666.HK)、正力新能(3677.HK)、孚能科技(688567.SH)","up":"N-005;N-006;N-007;N-008;N-009;N-010","down":"N-020","drivers":"原材料成本传导、产能利用率、客户结构、二供策略","fact":"宁德时代H1营收2769.17亿元(+54.80%)、归母净利432.84亿元、整体毛利率23.93%(-1.11pct)、动力电池毛利率20.63%(-1.78pct)、国内份额46.7%；亿纬储能出货44.46GWh已超动力35.76GWh；瑞浦兰钧净利7.78亿元扭亏","direction":"分化","note":"规模扩张与毛利率下行并存","src":"CNE;HQ"},{"id":"N-013","level":"中游电池","link":"动力电池","name":"弗迪电池（比亚迪旗下）","type":"电池","companies":"比亚迪(002594.SZ/1211.HK)","up":"N-005;N-008","down":"N-020","drivers":"外供比例、客户拓展","fact":"2026Q1装机23.2GWh、市占率17.7%、外供比例41.5%，外供客户含小米、小鹏、丰田、奔驰","direction":"改善","note":"集团口径与电池口径不可混算","src":"CNE"},{"id":"N-014","level":"中游电池","link":"储能电池","name":"储能电芯","type":"电池","companies":"宁德时代(300750.SZ)、亿纬锂能(300014.SZ)、瑞浦兰钧(0666.HK)","up":"N-005;N-008","down":"N-024","drivers":"全球储能装机、电网侧与电源侧需求、电芯价格","fact":"2026H1储能电池累计销量318.1GWh(+83.4%)，显著快于动力；1-7月374.2GWh(+78.6%)；东吴证券预计2026全球出货1100GWh(+70%以上)；瑞浦兰钧户用储能电芯出货全球第一","direction":"改善","note":"\"第一引擎更替\"：储能增速持续高于动力","src":"CNE;HQ"},{"id":"N-015","level":"中游电池","link":"固态电池","name":"半固态电池","type":"技术","companies":"宁德时代、东风、广汽、亿纬锂能、国轩高科","up":"N-005;N-008","down":"N-020","drivers":"半固态装车量、路线选择、国标口径","fact":"行业或有10GWh级半固态出货；GGII预测2026国内半固态装车82GWh、2030突破420GWh；2026年7月车用固态电池首个国标实施","direction":"早期","note":"已有商业出货，但规模有限","src":"CNRS;CE"},{"id":"N-016","level":"中游电池","link":"固态电池","name":"全固态电池","type":"技术","companies":"比亚迪、宁德时代、上汽×清陶、国轩高科、亿纬锂能","up":"N-005;N-008","down":"N-020","drivers":"车规级验证、连续生产良率、成本","fact":"比亚迪单体400Wh/kg、原型车CLTC 1218公里，2027小批量上车、2030大规模商业化；宁德时代2027小批量；工信部等七部门规划2030初步规模化","direction":"早期","note":"距大规模量产尚远，处于试制与验证阶段","src":"CNRS;CE;CNE"},{"id":"N-017","level":"中游电池","link":"供应链","name":"\"去宁德化\"与二供体系","type":"事件","companies":"小米汽车、理想汽车、问界/赛力斯","up":"N-012","down":"N-020","drivers":"整车厂议价权、供应链安全、新车型首发供应","fact":"小米\"龙甲电池\"由中创新航与欣旺达分别承担不同容量电芯定制生产；理想增资欣旺达动力持股约11.17%并保留宁德合作；问界M6配套国轩高科","direction":"分化","note":"高端车型开放二供属常规，格局短期难根本改变","src":"CNE"},{"id":"N-018","level":"零部件","link":"传统零部件","name":"底盘与内饰","type":"零部件","companies":"拓普集团(601689.SH)","up":"N-020","down":"—","drivers":"单车配套价值量、客户结构、海外产能","fact":"拓普集团H1汽车零部件收入132.61亿元(+8.9%)、毛利率17.71%(+0.15pct)；底盘42.43亿元(+14.44%)、内饰47.66亿元(+9.15%)","direction":"走弱","note":"收入增而利润总额-19.41%","src":"TOP;21J"},{"id":"N-019","level":"零部件","link":"传统零部件","name":"热管理与液冷","type":"零部件","companies":"三花智控(002050.SZ)、拓普集团(601689.SH)","up":"N-020","down":"—","drivers":"超充渗透、储能液冷、机器人液冷","fact":"三花智控H1汽车零部件收入64.55亿元(+9.89%、占38.20%)、归母净利20.44亿元(-3.12%)；拓普热管理/液冷新兴领域累计订单增至17.5亿元；中金测算2026全球智算中心液冷市场1147亿元(+273%)","direction":"走弱","note":"量增利减","src":"THS;21J;CZ"},{"id":"N-020","level":"零部件","link":"智能化","name":"智驾域控制器","type":"智能化","companies":"德赛西威(002920.SZ)、经纬恒润(688326.SH)","up":"—","down":"N-021;N-022","drivers":"整车厂年降与议价、硬件标准化、算力升级","fact":"德赛西威H1智驾业务收入39.18亿元(-5.53%)、该业务毛利率19.74%→14.49%，但总营收149.01亿元、归母净利12.45亿元；H1智驾域控装机约306万套(+18.9%)","direction":"走弱","note":"硬件规模化后接近成熟汽车零部件生意","src":"IFENG;STCN"},{"id":"N-021","level":"智能化","link":"智能化","name":"智驾芯片","type":"智能化","companies":"英伟达(NVDA)、地平线(9660.HK)、华为、比亚迪半导体","up":"—","down":"N-020","drivers":"ASIC替代、算力性价比、自研芯片、IP授权","fact":"英伟达份额2025全年52.1%→2026H1 45.0%→8月30.2%；地平线8月19.8%，与英伟达差距由35.8pct收窄至10.4pct；自主品牌乘用车全阶芯片地平线31.94%居首；H1域控芯片出货约359万颗","direction":"分化","note":"双强格局固化但缝隙收窄","src":"STCN"},{"id":"N-022","level":"智能化","link":"智能化","name":"智驾软件与算法","type":"智能化","companies":"Momenta、千里科技(601777.SH)、华为","up":"—","down":"N-020","drivers":"技术平台跨车型复用、研发杠杆、软件许可收入","fact":"Momenta技术开发服务收入9.95亿元、软件许可收入6.07亿元，距经调整盈亏平衡约1400万元；千里科技智驾收入12.35亿元、毛利率71.21%；地平线授权及服务收入11.29亿元(+52.7%)、毛利率90.4%","direction":"改善","note":"高毛利来自软件/IP/授权而非硬件","src":"IFENG"},{"id":"N-023","level":"智能化","link":"智能化","name":"激光雷达","type":"智能化","companies":"禾赛科技(2525.HK)、速腾聚创(2498.HK)","up":"—","down":"N-020","drivers":"单车配置数、降本、机器人业务","fact":"H1装机225万颗(+124.7%)；禾赛份额34.2%居首、净利8890万元连续五季度盈利、毛利率42.2%→39.7%；速腾营收+30.2%、机器人业务贡献近半产品收入、毛利率25.9%→21.8%","direction":"分化","note":"量增但毛利率下行","src":"STCN"},{"id":"N-024","level":"下游整车","link":"整车","name":"自主品牌","type":"整车","companies":"比亚迪、吉利、长安、奇瑞、长城","up":"N-012;N-013;N-018;N-019;N-020","down":"N-025;N-026","drivers":"国内车市总量、出口、产品结构、价格战","fact":"1-9月新能源品牌：比亚迪134.41万辆(份额16.52%)、吉利银河60.95万辆(-29.2%)、零跑50.70万辆(+45.9%)、特斯拉38.11万辆(-12.2%)；9月国内乘用车零售161.8万辆(-28.0%)","direction":"分化","note":"国内总量承压、出口成主要增量","src":"ZJHY;IND9"},{"id":"N-025","level":"下游整车","link":"整车","name":"新势力","type":"整车","companies":"零跑、蔚来、小鹏、理想、小米汽车、极氪","up":"N-012;N-018;N-020","down":"N-025","drivers":"月均交付、目标完成率、产品节奏","fact":"9月零跑全球交付105656辆(+59%)连续三月破10万、小鹏41256、小米首破4万、鸿蒙智行37490、蔚来37408、极氪37216、理想31817(-6.29%)；1-9月零跑66.65万(+68.5%)、蔚来30.03万(+49.2%)、小鹏28.43万(-9.24%)","direction":"分化","note":"四季度目标缺口压力已提前显现","src":"IND9;CLS"},{"id":"N-026","level":"下游整车","link":"整车","name":"合资与海外品牌","type":"整车","companies":"特斯拉、丰田、别克、大众、日产","up":"N-012","down":"—","drivers":"在华份额、本土化转型、出口","fact":"1-9月特斯拉38.11万辆(-12.2%)为至少四年最低；丰田10.75万辆(+50.4%)、别克7.95万辆(+40.2%)、奥迪新能源2.31万辆(+116%)；BBA在华上半年合计利润减少约15.35亿欧元","direction":"走弱","note":"BBA利润与销量双降","src":"ZJHY;ZJHY2"},{"id":"N-027","level":"后市场","link":"补能网络","name":"充电基础设施","type":"服务","companies":"特来电、星星充电、云快充","up":"N-024","down":"—","drivers":"桩车增量比、车网互动、超充渗透、私人桩","fact":"截至2026年6月底全国充电基础设施2305.7万个(+43.2%)，其中公共500.9万个、私人1804.8万个(+50.4%)；大功率充电枪超18万个；充电运营TOP15合计份额83.8%","direction":"改善","note":"数量短缺基本解决，关注点从规模转向效率与智能化","src":"CHG"},{"id":"N-028","level":"后市场","link":"补能网络","name":"换电","type":"服务","companies":"宁德时代(300750.SZ)、蔚来(9866.HK)","up":"N-012","down":"N-024","drivers":"换电站密度、车电分离渗透、单站利用率","fact":"宁德时代12C第二代神行超充电池；换电与超充并行推进，本轮未取到截至截止日的换电站数与利用率数据","direction":"待判断","note":"换电站规模数据本轮留空，不以超充数据替代","src":"CHG"},{"id":"N-029","level":"后市场","link":"回收再制造","name":"动力电池回收","type":"服务","companies":"格林美(002340.SZ)、邦普循环(宁德时代旗下)、天奇股份(002009.SZ)、华友钴业(603799.SH)、厦钨新能源(688778.SH)","up":"N-012","down":"N-005;N-008","drivers":"退役量、白名单产能利用率、灰色渠道分流、废料价格","fact":"2026国内锂电回收市场规模527亿元(2025年222亿元，+137.4%)；理论退役超100万吨；白名单156家名义产能423.3万吨但2025年产能利用率仅16.4%；超六成退役电池流入灰色渠道；2026-04-01《管理暂行办法》确立车电一体报废与数字身份证","direction":"分化","note":"政策收紧方向明确，但渠道与产能错配待解","src":"REC"},{"id":"N-030","level":"后市场","link":"回收再制造","name":"梯次利用","type":"服务","companies":"格林美、天奇股份","up":"N-029","down":"—","drivers":"梯次场景认证、双资质门槛、监管清理","fact":"2026-07-30工信部第20号公告废止规范条件中梯次利用条款，100家梯次利用企业被移出合规名单","direction":"收紧","note":"合规门槛提高，短期供给收缩","src":"REC"}]},"trend":{"charts":[{"id":"brand","label":"品牌销量排行（2026-01至09）","title":"新能源汽车品牌销量","sub":"报告期 2026-01至09 ｜ 口径：中汽数研品牌口径 ｜ 单位：万辆","note":"数据来自 中汽数研品牌口径 口径，报告期 2026-01至09。<b>该表声明部分企业未公布销量，不作为严格排名使用</b>；品牌口径与集团口径不等价（见「研究边界」口径冲突 C9、C10）。","hint":"共 16 个品牌","type":"hbar","unit":" 万辆","series":[{"name":"","color":"#2E6B55","values":[{"label":"比亚迪","value":134.41,"note":"中汽数研品牌口径"},{"label":"吉利银河","value":60.95,"note":"中汽数研品牌口径"},{"label":"零跑汽车","value":50.7,"note":"中汽数研品牌口径"},{"label":"特斯拉","value":38.11,"note":"中汽数研品牌口径"},{"label":"五菱汽车","value":34.55,"note":"中汽数研品牌口径"},{"label":"吉利汽车","value":34.4,"note":"中汽数研品牌口径"},{"label":"理想汽车","value":29.15,"note":"中汽数研品牌口径"},{"label":"小米汽车","value":28.65,"note":"中汽数研品牌口径"},{"label":"长安启源","value":25.45,"note":"中汽数研品牌口径"},{"label":"方程豹","value":23.02,"note":"中汽数研品牌口径"},{"label":"问界","value":22.78,"note":"中汽数研品牌口径"},{"label":"小鹏汽车","value":22.43,"note":"中汽数研品牌口径"},{"label":"极氪","value":20.51,"note":"中汽数研品牌口径"},{"label":"蔚来","value":18.16,"note":"中汽数研品牌口径"},{"label":"极狐","value":14.4,"note":"中汽数研品牌口径"},{"label":"名爵","value":11.68,"note":"中汽数研品牌口径"}]}]},{"id":"sep","label":"9 月交付（2026-09）","title":"2026 年 9 月交付量","sub":"报告期 2026-09 ｜ 口径：集团交付口径 ｜ 单位：辆","note":"均为<b>集团交付口径</b>、报告期 2026-09。与品牌销量口径不可相加或直接比较。","hint":"共 5 家","type":"hbar","unit":" 辆","series":[{"name":"","color":"#2E6B55","values":[{"label":"零跑汽车","value":105656.0,"note":"集团口径"},{"label":"小鹏集团","value":41256.0,"note":"集团口径"},{"label":"鸿蒙智行","value":37490.0,"note":"集团口径"},{"label":"极氪","value":37216.0,"note":"集团口径"},{"label":"理想汽车","value":31817.0,"note":"集团口径"}]}]},{"id":"retail","label":"乘用车零售窗口并列（2026-09）","title":"国内乘用车零售","sub":"报告期 2026-09 ｜ 口径：乘联分会 ｜ 单位：万辆","note":"同为乘联分会口径，但统计窗口不同，<b>并列呈现、不做折算</b>（口径冲突 C11）。另：1-9 月累计零售 1333.4 万辆（报告期 2026-01至09）。","hint":"两种统计窗口并列","type":"hbar","unit":" 万辆","series":[{"name":"","color":"#2E6B55","values":[{"label":"9 月全月零售","value":161.8,"note":"乘联分会口径"},{"label":"9 月 1-27 日零售","value":125.8,"note":"乘联分会口径"}]}]},{"id":"lithium","label":"碳酸锂产量结构（2026H1，双口径）","title":"碳酸锂产量：总量与路线拆分","sub":"报告期 2026H1 ｜ 口径：有色协会锂业分会 / 上海钢联（并列） ｜ 单位：万吨","note":"全国碳酸锂产量存在<b>两套并存口径</b>（有色金属工业协会锂业分会 56.3 万吨 / 上海钢联 59.5 万吨），本图并列呈现，<b>不静默择一</b>（口径冲突 C1）。分路线拆分为上海钢联口径，与全国总量不可相加。","hint":"6 项","type":"hbar","unit":" 万吨","series":[{"name":"","color":"#2E6B55","values":[{"label":"全国碳酸锂产量（中国有色金属工业协会锂业分会口径）","value":56.3,"note":"中国有色金属工业协会锂业分会口径"},{"label":"全国碳酸锂产量（上海钢联口径）","value":59.5,"note":"上海钢联口径"},{"label":"锂辉石路线碳酸锂产量（上海钢联口径）","value":37.3,"note":"上海钢联口径"},{"label":"盐湖路线碳酸锂产量（上海钢联口径）","value":9.05,"note":"上海钢联口径"},{"label":"回收端碳酸锂产量（上海钢联口径）","value":5.45,"note":"上海钢联口径"},{"label":"7月产量环比（行业统计口径）","value":-8.8,"note":"行业统计口径"}]}]},{"id":"battery","label":"动力电池出货（2026H1，含预测）","title":"动力电池出货量","sub":"报告期 2026H1 / 2026-01至07 / 2026全年 ｜ 口径：行业统计 / 东吴证券预测 ｜ 单位：GWh","note":"前两项为<b>行业统计口径</b>的实际销量；第三项为<b>东吴证券预测</b>的 2026 全年出货，属机构预测，<b>不作为本报告的预测</b>，仅作区间参照。","hint":"含 1 项机构预测","type":"hbar","unit":" GWh","series":[{"name":"","color":"#2E6B55","values":[{"label":"上半年累计销量（2026H1）","value":318.1,"note":"行业统计口径"},{"label":"1-7月累计销量（2026-01至07）","value":374.2,"note":"行业统计口径"},{"label":"全球出货预测（2026全年）","value":1100.0,"note":"东吴证券预测"}]}]},{"id":"install","label":"动力电池装机与出货（2026H1）","title":"动力电池装机与出货量","sub":"报告期 2026H1 / 2026Q1 ｜ 口径：GGII / 比亚迪公告 ｜ 单位：GWh","note":"单位相同但<b>口径不同</b>：全球装机量为 GGII 口径，中国出货量为 GGII 口径，弗迪电池为比亚迪公告口径且报告期为 2026Q1，<b>三者不可相加</b>。","hint":"3 家口径不同","type":"hbar","unit":" GWh","series":[{"name":"","color":"#2E6B55","values":[{"label":"动力电池（2026H1）","value":558.8,"note":"GGII口径(半年报援引)"},{"label":"动力电池（2026H1）","value":630.0,"note":"GGII口径(半年报援引)"},{"label":"弗迪电池(比亚迪旗下)（2026Q1）","value":23.2,"note":"比亚迪公告口径"}]}]},{"id":"solid","label":"固态电池装车预测（2026 / 2030）","title":"固态（半固态）装车与出货","sub":"报告期 2026 / 2030 ｜ 口径：GGII 预测 / 行业估计 ｜ 单位：GWh","note":"三项均为<b>机构预测或行业估计</b>（机构预测），非实测披露数据；本报告不据此判断固态电池的产业化时点。","hint":"均为机构预测","type":"hbar","unit":" GWh","series":[{"name":"","color":"#2E6B55","values":[{"label":"国内半固态装车预测（2026）","value":82.0,"note":"GGII预测"},{"label":"国内半固态装车预测（2030）","value":420.0,"note":"GGII预测"},{"label":"行业或有出货量（2026）","value":10.0,"note":"行业估计"}]}]},{"id":"ad","label":"智驾渗透率（四套口径）","title":"智能驾驶渗透率：四种统计边界","sub":"报告期 2026H1 / 2026-08 ｜ 口径：工信部 / 第一电动汽车网 / 地平线业绩会 ｜ 单位：%","note":"四套渗透率<b>统计边界不同</b>（工信部 / 第一电动汽车网 / 地平线业绩会），<b>不可合并、平均或排序</b>（口径冲突 C7）。","hint":"4 套口径并列","type":"hbar","unit":" %","series":[{"name":"","color":"#2E6B55","values":[{"label":"L2级渗透率（工信部口径）","value":70.5,"note":"工信部口径"},{"label":"NOA功能渗透率（工信部口径）","value":34.2,"note":"工信部口径"},{"label":"城市NOA渗透率（第一电动汽车网口径）","value":20.9,"note":"第一电动汽车网口径"},{"label":"智驾整体渗透率（地平线业绩会口径）","value":76.1,"note":"地平线业绩会口径"}]}]},{"id":"quote","label":"湖南裕能收盘价（非截止日）","title":"湖南裕能收盘价快照","sub":"报告期 2026-08-19 / 2026-09-23 / 2026-10-19 ｜ 口径：公告页与新闻正文标注 ｜ 单位：元/股","note":"来源为<b>公告页行情快照与新闻正文标注，非截止日口径</b>，不与截止日估值混用（留空项 G1）。恒生行情连接器不可调用，截至 2026-10-23 的收盘价与市值留空。","hint":"非截止日口径","type":"line","unit":" 元/股","series":[{"name":"收盘价","color":"#A9862F","values":[{"label":"2026-08-19","value":71.5,"note":"公告页行情快照(非截止日)"},{"label":"2026-09-23","value":51.95,"note":"新闻正文行情标注(非截止日)"},{"label":"2026-10-19","value":44.95,"note":"新闻正文行情标注(非截止日)"}]}]},{"id":"mcap","label":"湖南裕能总市值（非截止日）","title":"湖南裕能总市值快照","sub":"报告期 2026-08-19 / 2026-09-23 / 2026-10-19 ｜ 口径：公告页与新闻正文标注 ｜ 单位：亿元","note":"同上，非截止日口径；不与截止日市值混用。","hint":"非截止日口径","type":"line","unit":" 亿元","series":[{"name":"总市值","color":"#1F4A3C","values":[{"label":"2026-08-19","value":606.13,"note":"公告页行情快照(非截止日)"},{"label":"2026-09-23","value":440.4,"note":"新闻正文行情标注(非截止日)"},{"label":"2026-10-19","value":381.06,"note":"新闻正文行情标注(非截止日)"}]}]},{"id":"comp_oem_rev","label":"整车口径营收（FY2025 vs 2026H1）","title":"整车口径营业收入","sub":"口径组：整车口径 ｜ 单位：亿元","note":"口径组「整车口径」内的 营业收入。<b>FY2025 为全年数、2026H1 为半年数，两者不可直接同比相除</b>；各公司披露口径见「公司比较」表。","hint":"全年 vs 半年","type":"group","unit":" 亿元","series":[{"name":"FY2025","color":"#A9862F","values":[{"label":"赛力斯","value":1650.54},{"label":"比亚迪","value":8039.65}]},{"name":"2026H1","color":"#2E6B55","values":[{"label":"赛力斯","value":574.93},{"label":"比亚迪","value":3448.15}]}]},{"id":"comp_batt_rev","label":"动力电池口径营收（FY2025 vs 2026H1）","title":"动力电池口径营业收入","sub":"口径组：动力电池口径 ｜ 单位：亿元","note":"口径组「动力电池口径」内的 营业收入。<b>FY2025 为全年数、2026H1 为半年数，两者不可直接同比相除</b>；各公司披露口径见「公司比较」表。","hint":"全年 vs 半年","type":"group","unit":" 亿元","series":[{"name":"FY2025","color":"#A9862F","values":[{"label":"宁德时代","value":4237.01}]},{"name":"2026H1","color":"#2E6B55","values":[{"label":"宁德时代","value":2769.17},{"label":"亿纬锂能","value":456.91},{"label":"欣旺达","value":381.79},{"label":"国轩高科","value":277.76},{"label":"中创新航","value":270.84},{"label":"瑞浦兰钧","value":149.16},{"label":"正力新能","value":54.38},{"label":"孚能科技","value":36.16}]}]},{"id":"comp_batt_gm","label":"动力电池毛利率（FY2025 vs 2026H1）","title":"动力电池毛利率","sub":"口径组：动力电池口径 ｜ 单位：%","note":"口径组「动力电池口径」内的 动力电池毛利率。<b>FY2025 为全年数、2026H1 为半年数，两者不可直接同比相除</b>；各公司披露口径见「公司比较」表。","hint":"全年 vs 半年","type":"group","unit":" 亿元","series":[{"name":"FY2025","color":"#A9862F","values":[{"label":"欣旺达","value":9.77}]},{"name":"2026H1","color":"#2E6B55","values":[{"label":"欣旺达","value":18.36}]}]}]},"comp":{"groups":[{"key":"整车口径","label":"整车口径","note":"赛力斯、比亚迪的 A 股中国企业会计准则集团合并口径。H 股数据仅作补充说明，<b>不参与横比</b>；FY2025 为全年数、2026H1 为半年数，<b>两者不可直接同比相除</b>。","rows":15,"data":[{"company":"赛力斯","code":"601127.SH","metric":"营业收入","caliber":"集团合并（中国企业会计准则）","fy25":"1650.54","h1":"574.93","yoy":"-7.87","unit":"亿元","note":"FY2025为全年数，2026H1为半年数，不可直接同比相除","src":"SL-001;SL-025;SL-057;SL-058"},{"company":"赛力斯","code":"601127.SH","metric":"归母净利润","caliber":"集团合并（中国企业会计准则）","fy25":"59.57","h1":"-17.17","yoy":"由盈转亏","unit":"亿元","note":"2026H1计提减值损失17.50亿元，经营现金流-123.76亿元","src":"SL-002;SL-026;SL-055"},{"company":"赛力斯","code":"601127.SH","metric":"毛利率","caliber":"集团整体","fy25":"—","h1":"23.30","yoy":"—","unit":"%","note":"H股口径为21.81%，差1.49pct，两口径并列","src":"SL-029;SL-030;SL-006"},{"company":"赛力斯","code":"601127.SH","metric":"新能源汽车销量","caliber":"公司口径","fy25":"47.23","h1":"17.88","yoy":"—","unit":"万辆","note":"FY2025为全年，2026H1为上半年","src":"SL-005;SL-038"},{"company":"赛力斯","code":"601127.SH","metric":"问界交付量","caliber":"品牌口径","fy25":"42.6","h1":"—","yoy":"—","unit":"万辆","note":"2026H1未取到同口径品牌交付数，留空；不与赛力斯汽车销量16.08万辆混用","src":"SL-011;SL-039;SL-040"},{"company":"赛力斯","code":"601127.SH","metric":"研发投入","caliber":"公司口径","fy25":"125.12","h1":"—","yoy":"—","unit":"亿元","note":"2026H1研发投入总额(费用化+资本化)未取到；仅研发费用(费用化口径)37.34亿元见下一行","src":"SL-008;SL-036"},{"company":"赛力斯","code":"601127.SH","metric":"研发费用","caliber":"A股口径(费用化)","fy25":"—","h1":"37.34","yoy":"—","unit":"亿元","note":"研发费用与研发投入为不同口径层级，分列；FY2025研发投入125.12亿元","src":"SL-036;SL-008"},{"company":"比亚迪","code":"002594.SZ","metric":"营业收入","caliber":"集团合并（中国企业会计准则）","fy25":"8039.65","h1":"3448.15","yoy":"-7.13","unit":"亿元","note":"","src":"BYD-001;BYD-023"},{"company":"比亚迪","code":"002594.SZ","metric":"归母净利润","caliber":"集团合并（中国企业会计准则）","fy25":"326.19","h1":"123.25","yoy":"-20.54","unit":"亿元","note":"","src":"BYD-002;BYD-024"},{"company":"比亚迪","code":"002594.SZ","metric":"毛利率","caliber":"集团整体","fy25":"17.74","h1":"18.85","yoy":"+1.11","unit":"pct","note":"","src":"BYD-004;BYD-025"},{"company":"比亚迪","code":"002594.SZ","metric":"新能源汽车销量","caliber":"集团口径","fy25":"460.24","h1":"180.85","yoy":"-15.72","unit":"万辆","note":"","src":"BYD-012;BYD-031"},{"company":"比亚迪","code":"002594.SZ","metric":"出口量","caliber":"集团口径","fy25":"—","h1":"79.2","yoy":"+67.8","unit":"万辆","note":"2026H1数据","src":"BYD-032;BYD-013"},{"company":"比亚迪","code":"002594.SZ","metric":"境外收入占比","caliber":"收入结构口径","fy25":"38.65","h1":"52.57","yoy":"+13.92","unit":"pct","note":"2026H1境外收入1812.68亿元，首次超过国内","src":"BYD-010;BYD-011;BYD-029"},{"company":"比亚迪","code":"002594.SZ","metric":"研发投入","caliber":"公司口径","fy25":"634.41","h1":"289","yoy":"—","unit":"亿元","note":"2026H1数据（费用化+资本化口径），FY2025为634.41亿元","src":"BYD-014;BYD-034"},{"company":"比亚迪","code":"002594.SZ","metric":"弗迪电池装机量","caliber":"电池分部口径","fy25":"—","h1":"23.2(Q1)","yoy":"—","unit":"GWh","note":"2026Q1口径，市占率17.7%，外供比例41.5%；不与集团合并数混算","src":"BAT-095;BAT-097;BAT-099"}]},{"key":"动力电池口径","label":"动力电池口径","note":"宁德时代及二线电池厂的集团合并口径。A 股与港股同表并列，<b>准则差异已逐行标注</b>；各公司披露的指标项不同，缺失格留空并注明，不用近似值填补。","rows":32,"data":[{"company":"宁德时代","code":"300750.SZ","metric":"营业收入","caliber":"公司合并（中国企业会计准则）","fy25":"4237.01","h1":"2769.17","yoy":"+54.80","unit":"亿元","note":"","src":"CATL-001;CATL-021"},{"company":"宁德时代","code":"300750.SZ","metric":"归母净利润","caliber":"公司合并（中国企业会计准则）","fy25":"722.01","h1":"432.84","yoy":"+41.98","unit":"亿元","note":"","src":"CATL-002;CATL-022"},{"company":"宁德时代","code":"300750.SZ","metric":"毛利率","caliber":"公司整体","fy25":"26.27","h1":"23.93","yoy":"-1.11","unit":"pct","note":"","src":"CATL-004;CATL-024"},{"company":"宁德时代","code":"300750.SZ","metric":"动力系统收入","caliber":"分部口径","fy25":"—","h1":"1921.25","yoy":"+46.02","unit":"亿元","note":"","src":"CATL-010;CATL-027"},{"company":"宁德时代","code":"300750.SZ","metric":"储能系统收入","caliber":"分部口径","fy25":"—","h1":"532.61","yoy":"+87.54","unit":"亿元","note":"","src":"CATL-011;CATL-028"},{"company":"宁德时代","code":"300750.SZ","metric":"电池销量","caliber":"动力+储能合计","fy25":"661","h1":"434","yoy":"—","unit":"GWh","note":"FY2025：动力541/储能121；2026H1拆分量未取到，留空","src":"CATL-007;CATL-008;CATL-009;CATL-030;CATL-031"},{"company":"宁德时代","code":"300750.SZ","metric":"产能利用率","caliber":"公司口径","fy25":"—","h1":"94.86","yoy":"—","unit":"%","note":"","src":"CATL-032"},{"company":"宁德时代","code":"300750.SZ","metric":"国内市场份额","caliber":"份额口径","fy25":"—","h1":"46.7","yoy":"自43.42%反弹","unit":"%","note":"","src":"BAT-033"},{"company":"亿纬锂能","code":"300014.SZ","metric":"营业收入","caliber":"公司合并","fy25":"—","h1":"456.91","yoy":"+62.20","unit":"亿元","note":"FY2025未在本轮统一口径下取到，留空","src":"BAT-035"},{"company":"亿纬锂能","code":"300014.SZ","metric":"归母净利润","caliber":"公司合并","fy25":"—","h1":"33.01","yoy":"+105.66","unit":"亿元","note":"FY2025未取到，留空","src":"BAT-037"},{"company":"亿纬锂能","code":"300014.SZ","metric":"毛利率","caliber":"公司整体","fy25":"—","h1":"14.31","yoy":"-3.02","unit":"pct","note":"FY2025未取到，留空","src":"BAT-039"},{"company":"亿纬锂能","code":"300014.SZ","metric":"动力电池出货量","caliber":"公司口径","fy25":"—","h1":"35.76","yoy":"+66.47","unit":"GWh","note":"","src":"BAT-045"},{"company":"亿纬锂能","code":"300014.SZ","metric":"储能电池出货量","caliber":"公司口径","fy25":"—","h1":"44.46","yoy":"+54.88","unit":"GWh","note":"储能出货已超动力","src":"BAT-047"},{"company":"欣旺达","code":"300207.SZ","metric":"营业收入","caliber":"公司合并","fy25":"—","h1":"381.79","yoy":"+41.48","unit":"亿元","note":"FY2025未取到，留空","src":"BAT-049"},{"company":"欣旺达","code":"300207.SZ","metric":"归母净利润","caliber":"公司合并","fy25":"—","h1":"6.03","yoy":"-29.59","unit":"亿元","note":"","src":"BAT-051"},{"company":"欣旺达","code":"300207.SZ","metric":"毛利率","caliber":"公司整体","fy25":"—","h1":"15.33","yoy":"-0.46","unit":"pct","note":"","src":"BAT-053"},{"company":"欣旺达","code":"300207.SZ","metric":"动力电池毛利率","caliber":"分部口径","fy25":"9.77","h1":"18.36","yoy":"+8.59","unit":"pct","note":"上年同期9.77%","src":"BAT-128;BAT-057"},{"company":"国轩高科","code":"002074.SZ","metric":"营业收入","caliber":"公司合并","fy25":"—","h1":"277.76","yoy":"+43.22","unit":"亿元","note":"","src":"BAT-061"},{"company":"国轩高科","code":"002074.SZ","metric":"归母净利润","caliber":"公司合并","fy25":"—","h1":"13.86","yoy":"+278.05","unit":"亿元","note":"","src":"BAT-063"},{"company":"国轩高科","code":"002074.SZ","metric":"毛利率","caliber":"公司整体","fy25":"—","h1":"15.60","yoy":"-0.82","unit":"pct","note":"","src":"BAT-065"},{"company":"中创新航","code":"3931.HK","metric":"营业收入","caliber":"公司合并（港股财报口径）","fy25":"—","h1":"270.84","yoy":"+64.96","unit":"亿元","note":"","src":"BAT-067"},{"company":"中创新航","code":"3931.HK","metric":"归母净利润","caliber":"公司合并（港股财报口径）","fy25":"—","h1":"15.23","yoy":"+102.23","unit":"亿元","note":"","src":"BAT-069"},{"company":"中创新航","code":"3931.HK","metric":"毛利率","caliber":"公司整体","fy25":"—","h1":"16.71","yoy":"-0.82","unit":"pct","note":"","src":"BAT-071"},{"company":"瑞浦兰钧","code":"0666.HK","metric":"营业收入","caliber":"公司合并（港股财报口径）","fy25":"—","h1":"149.16","yoy":"+57.20","unit":"亿元","note":"","src":"BAT-073"},{"company":"瑞浦兰钧","code":"0666.HK","metric":"净利润","caliber":"公司合并（港股财报口径）","fy25":"6.81","h1":"7.78","yoy":"扭亏","unit":"亿元","note":"半年净利已超2025全年","src":"BAT-126;BAT-075"},{"company":"瑞浦兰钧","code":"0666.HK","metric":"毛利率","caliber":"公司整体","fy25":"8.7","h1":"13.30","yoy":"+4.6","unit":"pct","note":"8家中唯一同比提升","src":"BAT-127;BAT-077"},{"company":"正力新能","code":"3677.HK","metric":"营业收入","caliber":"公司合并（港股财报口径）","fy25":"—","h1":"54.38","yoy":"+71.40","unit":"亿元","note":"","src":"BAT-083"},{"company":"正力新能","code":"3677.HK","metric":"归母净利润","caliber":"公司合并（港股财报口径）","fy25":"—","h1":"3.72","yoy":"+68.60","unit":"亿元","note":"","src":"BAT-085"},{"company":"正力新能","code":"3677.HK","metric":"毛利率","caliber":"公司整体","fy25":"—","h1":"12.50","yoy":"-5.4","unit":"pct","note":"","src":"BAT-087"},{"company":"孚能科技","code":"688567.SH","metric":"营业收入","caliber":"公司合并","fy25":"—","h1":"36.16","yoy":"-16.93","unit":"亿元","note":"","src":"BAT-089"},{"company":"孚能科技","code":"688567.SH","metric":"归母净利润","caliber":"公司合并","fy25":"—","h1":"-3.97","yoy":"亏损扩大","unit":"亿元","note":"","src":"BAT-091"},{"company":"孚能科技","code":"688567.SH","metric":"毛利率","caliber":"公司整体","fy25":"—","h1":"7.36","yoy":"-1.18","unit":"pct","note":"","src":"BAT-093"}]},{"key":"零部件与智能化","label":"零部件与智能化","note":"传统零部件、智驾与智能驾驶域控的独立表，<b>不与整车、电池口径相减或合并</b>；分部与整体口径并列。","rows":21,"data":[{"company":"拓普集团","code":"601689.SH","metric":"营业收入","caliber":"公司合并","fy25":"—","h1":"141.99","yoy":"+9.78","unit":"亿元","note":"FY2025未取到，留空","src":"ADP-001"},{"company":"拓普集团","code":"601689.SH","metric":"归母净利润","caliber":"公司合并","fy25":"—","h1":"10.23","yoy":"-21.03","unit":"亿元","note":"","src":"ADP-007"},{"company":"拓普集团","code":"601689.SH","metric":"汽车零部件毛利率","caliber":"分部口径","fy25":"—","h1":"17.71","yoy":"+0.15","unit":"pct","note":"","src":"ADP-012"},{"company":"拓普集团","code":"601689.SH","metric":"机器人执行器收入","caliber":"分部口径","fy25":"—","h1":"1404.77","yoy":"+83.43","unit":"万元","note":"占营收约0.1%，毛利率27.03%","src":"ADP-024"},{"company":"三花智控","code":"002050.SZ","metric":"营业收入","caliber":"公司合并","fy25":"—","h1":"169.00","yoy":"+3.92","unit":"亿元","note":"","src":"ADP-032"},{"company":"三花智控","code":"002050.SZ","metric":"归母净利润","caliber":"公司合并","fy25":"—","h1":"20.44","yoy":"-3.12","unit":"亿元","note":"","src":"ADP-034"},{"company":"三花智控","code":"002050.SZ","metric":"扣非净利润","caliber":"公司合并","fy25":"—","h1":"21.47","yoy":"+6.82","unit":"亿元","note":"","src":"ADP-036"},{"company":"三花智控","code":"002050.SZ","metric":"汽车零部件收入","caliber":"分部口径","fy25":"—","h1":"64.55","yoy":"+9.89","unit":"亿元","note":"占营收38.20%","src":"ADP-038"},{"company":"德赛西威","code":"002920.SZ","metric":"营业收入","caliber":"公司合并","fy25":"—","h1":"149.01","yoy":"—","unit":"亿元","note":"","src":"ADP-054"},{"company":"德赛西威","code":"002920.SZ","metric":"归母净利润","caliber":"公司合并","fy25":"—","h1":"12.45","yoy":"—","unit":"亿元","note":"Q2净利润同比+22%","src":"ADP-056"},{"company":"德赛西威","code":"002920.SZ","metric":"智能驾驶业务收入","caliber":"分部口径","fy25":"—","h1":"39.18","yoy":"-5.53","unit":"亿元","note":"","src":"ADP-050"},{"company":"德赛西威","code":"002920.SZ","metric":"智能驾驶业务毛利率","caliber":"分部口径","fy25":"约19.74","h1":"14.49","yoy":"-5.25","unit":"pct","note":"硬件规模化后被年降压缩","src":"ADP-052"},{"company":"地平线","code":"9660.HK","metric":"营业收入","caliber":"公司合并（港股财报口径）","fy25":"—","h1":"20.55","yoy":"+32.9","unit":"亿元","note":"","src":"ADP-060"},{"company":"地平线","code":"9660.HK","metric":"授权及服务收入","caliber":"分部口径","fy25":"—","h1":"11.29","yoy":"+52.7","unit":"亿元","note":"占比首次过半，毛利率90.4%","src":"ADP-064"},{"company":"地平线","code":"9660.HK","metric":"经调整净亏损","caliber":"公司口径","fy25":"—","h1":"16.71","yoy":"亏损扩大","unit":"亿元","note":"上年同期13.33亿元","src":"ADP-070"},{"company":"地平线","code":"9660.HK","metric":"研发开支","caliber":"公司口径","fy25":"—","h1":"27.55","yoy":"—","unit":"亿元","note":"相当于收入的134%","src":"ADP-068"},{"company":"黑芝麻智能","code":"2533.HK","metric":"综合毛利率","caliber":"公司合并","fy25":"—","h1":"49.5","yoy":"由24.8%提升","unit":"%","note":"","src":"ADP-087"},{"company":"黑芝麻智能","code":"2533.HK","metric":"研发开支","caliber":"公司口径","fy25":"—","h1":"8.60","yoy":"—","unit":"亿元","note":"相当于收入的约188%","src":"ADP-089"},{"company":"千里科技","code":"601777.SH","metric":"智驾业务收入","caliber":"分部口径","fy25":"—","h1":"12.35","yoy":"—","unit":"亿元","note":"","src":"ADP-093"},{"company":"千里科技","code":"601777.SH","metric":"智驾业务毛利率","caliber":"分部口径","fy25":"—","h1":"71.21","yoy":"—","unit":"%","note":"","src":"ADP-095"},{"company":"经纬恒润","code":"688326.SH","metric":"归母净利润","caliber":"公司合并","fy25":"—","h1":"-3.82","yoy":"—","unit":"亿元","note":"毛利率同比-7.06pct","src":"ADP-058"}]},{"key":"小米相关业务","label":"小米相关业务","note":"小米集团「智能电动汽车及 AI 创新业务」分部，<b>单列观察，不进横比表</b>。分部内含 AI 投入，经营亏损不可全额归因于汽车。","rows":10,"data":[{"company":"小米集团","code":"1810.HK","metric":"智能电动汽车及AI创新业务分部收入","caliber":"分部口径","fy25":"1061","h1":"447.60","yoy":"+12.3","unit":"亿元","note":"FY2025含AI创新业务，2026H1同分部口径；分部内含AI投入","src":"MI-005;MI-011"},{"company":"小米集团","code":"1810.HK","metric":"智能电动汽车收入","caliber":"分部内拆分口径","fy25":"1033","h1":"约429","yoy":"—","unit":"亿元","note":"分部内智能电动汽车口径；2026H1已披露","src":"MI-006;MI-016"},{"company":"小米集团","code":"1810.HK","metric":"分部毛利率","caliber":"分部口径","fy25":"24.3","h1":"约19.6","yoy":"-4.7","unit":"pct","note":"2026Q2为19.2%","src":"MI-008;MI-013;MI-014"},{"company":"小米集团","code":"1810.HK","metric":"分部经营收益/亏损","caliber":"分部口径","fy25":"9（经营收益，首次转正）","h1":"约-57（经营亏损）","yoy":"由盈转亏","unit":"亿元","note":"Q1 -31亿元、Q2 -26亿元；含AI投入，不可全算汽车亏损","src":"MI-009;MI-012"},{"company":"小米集团","code":"1810.HK","metric":"交付量","caliber":"公司口径","fy25":"411082","h1":"185055","yoy":"+17.74","unit":"辆","note":"FY2025同比+200.4%","src":"MI-007;MI-015"},{"company":"小米集团","code":"1810.HK","metric":"ASP","caliber":"公司披露口径(2026Q2单季)","fy25":"—","h1":"229312","yoy":"Q2同比-9.6","unit":"元","note":"Q2 单季口径；2026Q2同比-9.6%","src":"MI-017"},{"company":"小米集团","code":"1810.HK","metric":"集团营业收入","caliber":"集团合并","fy25":"4573","h1":"2080.63","yoy":"-8.4","unit":"亿元","note":"FY2025同比+25.0%","src":"MI-001;MI-010"},{"company":"小米集团","code":"1810.HK","metric":"集团经调整净利润","caliber":"集团合并","fy25":"—","h1":"122.91","yoy":"-42.8","unit":"亿元","note":"","src":"MI-026"},{"company":"小米集团","code":"1810.HK","metric":"集团经营活动现金流净额","caliber":"集团合并","fy25":"280.55","h1":"20.50","yoy":"大幅下降","unit":"亿元","note":"","src":"MI-019"},{"company":"小米集团","code":"1810.HK","metric":"全年交付目标","caliber":"公司指引","fy25":"—","h1":"55","yoy":"—","unit":"万辆","note":"1-8月累计超24.5万辆，完成44.6%","src":"MI-020;MI-021"}]}]},"fj":{"facts":[{"entity":"锂企板块(13家A股锂矿及锂盐企业)","metric":"合计营业收入","value":"约870","period":"2026H1","caliber":"经济观察报统计口径(13家合计)","src":"M-0001 / LI-010"},{"entity":"锂企板块(13家A股锂矿及锂盐企业)","metric":"合计净利润","value":"264","period":"2026H1","caliber":"经济观察报统计口径(13家合计)","src":"M-0002 / LI-012"},{"entity":"锂企板块(13家A股锂矿及锂盐企业)","metric":"盈利家数","value":"12","period":"2026H1","caliber":"13家中12家盈利","src":"M-0003 / LI-014"},{"entity":"盐湖股份、赣锋锂业、天齐锂业","metric":"三家合计营收","value":"483.91","period":"2026H1","caliber":"经济观察报统计口径","src":"M-0004 / LI-016"},{"entity":"盐湖股份、赣锋锂业、天齐锂业","metric":"三家合计净利润","value":"约146.68","period":"2026H1","caliber":"经济观察报统计口径","src":"M-0005 / LI-018"},{"entity":"湖南裕能","metric":"营业收入","value":"348.77","period":"2026H1","caliber":"公司半年报口径","src":"M-0073 / MAT-001"},{"entity":"湖南裕能","metric":"归母净利润","value":"29.10","period":"2026H1","caliber":"公司半年报口径","src":"M-0074 / MAT-006"},{"entity":"湖南裕能","metric":"扣非净利润","value":"29.58","period":"2026H1","caliber":"公司半年报口径","src":"M-0075 / MAT-011"},{"entity":"湖南裕能","metric":"综合毛利率","value":"14.86","period":"2026H1","caliber":"公司半年报口径","src":"M-0076 / MAT-015"},{"entity":"湖南裕能","metric":"净利率","value":"8.4","period":"2026H1","caliber":"公司半年报口径","src":"M-0077 / MAT-018"},{"entity":"宁德时代","metric":"营业收入","value":"2769.17","period":"2026H1","caliber":"公司半年报口径","src":"M-0104 / BAT-025"},{"entity":"宁德时代","metric":"归母净利润","value":"432.84","period":"2026H1","caliber":"公司半年报口径","src":"M-0105 / BAT-027"},{"entity":"宁德时代","metric":"综合毛利率","value":"23.93","period":"2026H1","caliber":"公司半年报口径","src":"M-0106 / BAT-029"},{"entity":"宁德时代","metric":"动力电池毛利率","value":"20.63","period":"2026H1","caliber":"公司半年报分部口径","src":"M-0107 / BAT-031"},{"entity":"宁德时代","metric":"国内市场份额","value":"46.7","period":"2026H1","caliber":"份额口径","src":"M-0108 / BAT-033"},{"entity":"比亚迪","metric":"固态电池单体能量密度","value":"400","period":"2026","caliber":"公司口径","src":"M-0158 / SLD-007"},{"entity":"比亚迪","metric":"原型车续航","value":"1218","period":"2026","caliber":"公司口径","src":"M-0159 / SLD-010"},{"entity":"比亚迪","metric":"全固态电池上车节奏","value":"2027小批量上车、2030大规模商业化","period":"2027/2030","caliber":"公司技术规划","src":"M-0160 / SLD-012"},{"entity":"宁德时代","metric":"半固态凝聚态量产","value":"2026H2量产","period":"2026","caliber":"公司技术规划","src":"M-0161 / SLD-015"},{"entity":"奇瑞","metric":"固态电池能量密度目标","value":"400→600","period":"2026","caliber":"公司技术规划","src":"M-0162 / SLD-018"},{"entity":"拓普集团","metric":"营业收入","value":"141.99","period":"2026H1","caliber":"公司半年报口径","src":"M-0173 / ADP-001"},{"entity":"拓普集团","metric":"利润总额","value":"11.75","period":"2026H1","caliber":"公司半年报口径","src":"M-0174 / ADP-004"},{"entity":"拓普集团","metric":"归母净利润","value":"10.23","period":"2026H1","caliber":"公司半年报口径","src":"M-0175 / ADP-007"},{"entity":"拓普集团","metric":"汽车零部件收入","value":"132.61","period":"2026H1","caliber":"公司半年报分部口径","src":"M-0176 / ADP-010"},{"entity":"拓普集团","metric":"汽车零部件毛利率","value":"17.71","period":"2026H1","caliber":"公司半年报分部口径","src":"M-0177 / ADP-012"},{"entity":"德赛西威","metric":"智能驾驶业务收入","value":"39.18","period":"2026H1","caliber":"公司半年报分部口径","src":"M-0196 / ADP-050"},{"entity":"德赛西威","metric":"智能驾驶业务毛利率","value":"14.49","period":"2026H1","caliber":"公司半年报分部口径","src":"M-0197 / ADP-052"},{"entity":"德赛西威","metric":"营业收入","value":"149.01","period":"2026H1","caliber":"公司半年报口径","src":"M-0198 / ADP-054"},{"entity":"德赛西威","metric":"归母净利润","value":"12.45","period":"2026H1","caliber":"公司半年报口径","src":"M-0199 / ADP-056"},{"entity":"经纬恒润","metric":"归母净利润","value":"-3.82","period":"2026H1","caliber":"公司半年报口径","src":"M-0200 / ADP-058"},{"entity":"比亚迪","metric":"新能源汽车品牌销量","value":"134.41","period":"2026-01至09","caliber":"中汽数研品牌口径","src":"M-0244 / OEM-001"},{"entity":"吉利银河","metric":"新能源汽车品牌销量","value":"60.95","period":"2026-01至09","caliber":"中汽数研品牌口径","src":"M-0245 / OEM-004"},{"entity":"零跑汽车","metric":"新能源汽车品牌销量","value":"50.70","period":"2026-01至09","caliber":"中汽数研品牌口径","src":"M-0246 / OEM-007"},{"entity":"特斯拉","metric":"新能源汽车品牌销量","value":"38.11","period":"2026-01至09","caliber":"中汽数研品牌口径","src":"M-0247 / OEM-010"},{"entity":"五菱汽车","metric":"新能源汽车品牌销量","value":"34.55","period":"2026-01至09","caliber":"中汽数研品牌口径","src":"M-0248 / OEM-013"},{"entity":"充电基础设施","metric":"全国总数","value":"2305.7","period":"2026-06末","caliber":"中国充电联盟口径","src":"M-0281 / AFT-001"},{"entity":"充电基础设施","metric":"公共充电设施","value":"500.9","period":"2026-06末","caliber":"中国充电联盟口径","src":"M-0282 / AFT-003"},{"entity":"充电基础设施","metric":"私人充电设施","value":"1804.8","period":"2026-06末","caliber":"中国充电联盟口径","src":"M-0283 / AFT-005"},{"entity":"充电基础设施","metric":"大功率充电枪","value":"超过18","period":"2026-06末","caliber":"中国充电联盟口径","src":"M-0284 / AFT-007"},{"entity":"充电基础设施","metric":"县域充电设施覆盖率","value":"98.61","period":"2026H1","caliber":"中国充电联盟口径","src":"M-0285 / AFT-009"},{"entity":"湖南裕能","metric":"收盘价","value":"71.50","period":"2026-08-19","caliber":"公告页行情快照(非截止日)","src":"M-0314 / MKT-001"},{"entity":"湖南裕能","metric":"总市值","value":"606.13","period":"2026-08-19","caliber":"公告页行情快照(非截止日)","src":"M-0315 / MKT-002"},{"entity":"湖南裕能","metric":"市盈率(TTM)","value":"15.61","period":"2026-08-19","caliber":"公告页行情快照(非截止日)","src":"M-0316 / MKT-003"},{"entity":"湖南裕能","metric":"市净率(LF)","value":"2.97","period":"2026-08-19","caliber":"公告页行情快照(非截止日)","src":"M-0317 / MKT-004"},{"entity":"湖南裕能","metric":"市销率(TTM)","value":"1.1","period":"2026-08-19","caliber":"公告页行情快照(非截止日)","src":"M-0318 / MKT-005"},{"entity":"赛力斯","metric":"营业收入","value":"1648.88","period":"2025全年","caliber":"H股/另一披露口径","src":"M-0323 / SL-057"},{"entity":"赛力斯","metric":"营业收入","value":"574.19","period":"2026H1","caliber":"H股口径(营业收入)","src":"M-0324 / SL-058"},{"entity":"比亚迪","metric":"境外毛利率","value":"19.46","period":"2025全年","caliber":"A股口径 分地区","src":"M-0325 / BYD-046"},{"entity":"比亚迪","metric":"国内毛利率","value":"16.66","period":"2025全年","caliber":"A股口径 分地区","src":"M-0326 / BYD-047"},{"entity":"小米集团","metric":"经调整净利润","value":"122.91","period":"2026H1","caliber":"小米集团合并口径","src":"M-0331 / MI-026"}],"judges":[{"scope":"上游资源 · 锂矿与锂盐","dir":"改善","text":"改善。盈利分化极大：盐湖锂盐毛利率83.46%，江特电机整体毛利率仅6.92%","basis":"13家A股锂企H1合计营收约870亿元(+1.2倍)、净利264亿元(增长超4倍)；7-8月主产区集中停线检修减产约1.4万吨"},{"scope":"上游资源 · 提锂工艺路线（盐湖/锂辉石/锂云母）","dir":"分化","text":"分化。路线成本差决定本轮盈利弹性","basis":"盐湖提锂成本3-5万元/吨、锂辉石5-7万元/吨、锂云母6-8万元/吨；锂云母路线因江西\"证矿不符\"换证收缩"},{"scope":"上游资源 · 供给扰动与复产","dir":"走弱","text":"走弱。复产口径存在并列表述，未静默择一","basis":"枧下窝锂矿2026-06-29正式复产（另有\"预估Q3复产\"表述差异）；7月产量环比-8.8%，年内首次回落"},{"scope":"上游资源 · 锂的战略性矿产地位","dir":"收紧","text":"收紧。推高合规成本，压制锂云母路线短期供给","basis":"2025年7月修订《矿产资源法》将锂列为战略性矿产；2026年6月实施条例细化矿权管理，\"证矿不符\"不再允许"},{"scope":"中游材料 · 磷酸盐正极（磷酸铁锂）","dir":"改善","text":"改善。储能占比约53%","basis":"湖南裕能H1销量66.72万吨(+38.77%)、正极毛利率14.81%(+7.84pct)、产能利用率95.92%；H1全国磷酸铁锂产量273.7万吨(+70.1%)"},{"scope":"中游材料 · 三元正极","dir":"平稳","text":"平稳","basis":"当升科技三元材料毛利率12.7%，单吨毛利约2万元/吨；H1全国三元材料产量49.9万吨(+46.1%)"},{"scope":"中游材料 · 人造石墨负极","dir":"改善","text":"改善。成本传导滞后，盈利分化","basis":"翔丰华负极产品毛利率18.61%(+6.25pct)；杉杉股份负极销量+54.92%、人造石墨出货市占21%居首"},{"scope":"中游材料 · 电解液与六氟磷酸锂","dir":"改善","text":"改善。电解液是材料端弹性最大环节之一","basis":"天赐材料H1营收147.10亿元(+109.28%)、归母净利28.61亿元(+967.91%)、毛利率33.55%(+14.86pct)；新宙邦电池化学品毛利率15.32%"},{"scope":"中游材料 · 隔膜","dir":"改善","text":"改善。涨价周期开启","basis":"恩捷股份H1隔膜收入76.20亿元(+58.09%)、毛利率31.65%(+17.99pct)，隔膜价格较2025Q4回升"},{"scope":"中游材料 · 铜箔","dir":"改善","text":"改善。绑定头部电池厂保障量","basis":"嘉元科技H1营收75.13亿元(+89.57%)、归母净利3.82亿元(+940%)；铜箔产能15.5万吨以上；与宁德时代签2026-2028优先保障不低于62.6万吨框架协议"},{"scope":"中游材料 · 锂电设备与固态设备","dir":"改善","text":"改善。固态相关为新增工序，非全新增订单","basis":"先导智能H1新增订单约180亿元(+50%~60%)，储能与动力约各占一半；利元亨已交付全固态整线设备，海目星披露固态设备订单"},{"scope":"中游电池 · 动力电池制造","dir":"分化","text":"分化。规模扩张与毛利率下行并存","basis":"宁德时代H1营收2769.17亿元(+54.80%)、归母净利432.84亿元、整体毛利率23.93%(-1.11pct)、动力电池毛利率20.63%(-1.78pct)、国内份额46.7%；亿纬储能出货44.46GWh已超动力35.76GWh；瑞浦兰钧净利7.78亿元扭亏"},{"scope":"中游电池 · 弗迪电池（比亚迪旗下）","dir":"改善","text":"改善。集团口径与电池口径不可混算","basis":"2026Q1装机23.2GWh、市占率17.7%、外供比例41.5%，外供客户含小米、小鹏、丰田、奔驰"},{"scope":"中游电池 · 储能电芯","dir":"改善","text":"改善。\"第一引擎更替\"：储能增速持续高于动力","basis":"2026H1储能电池累计销量318.1GWh(+83.4%)，显著快于动力；1-7月374.2GWh(+78.6%)；东吴证券预计2026全球出货1100GWh(+70%以上)；瑞浦兰钧户用储能电芯出货全球第一"},{"scope":"中游电池 · 半固态电池","dir":"早期","text":"早期。已有商业出货，但规模有限","basis":"行业或有10GWh级半固态出货；GGII预测2026国内半固态装车82GWh、2030突破420GWh；2026年7月车用固态电池首个国标实施"},{"scope":"中游电池 · 全固态电池","dir":"早期","text":"早期。距大规模量产尚远，处于试制与验证阶段","basis":"比亚迪单体400Wh/kg、原型车CLTC 1218公里，2027小批量上车、2030大规模商业化；宁德时代2027小批量；工信部等七部门规划2030初步规模化"},{"scope":"中游电池 · \"去宁德化\"与二供体系","dir":"分化","text":"分化。高端车型开放二供属常规，格局短期难根本改变","basis":"小米\"龙甲电池\"由中创新航与欣旺达分别承担不同容量电芯定制生产；理想增资欣旺达动力持股约11.17%并保留宁德合作；问界M6配套国轩高科"},{"scope":"零部件 · 底盘与内饰","dir":"走弱","text":"走弱。收入增而利润总额-19.41%","basis":"拓普集团H1汽车零部件收入132.61亿元(+8.9%)、毛利率17.71%(+0.15pct)；底盘42.43亿元(+14.44%)、内饰47.66亿元(+9.15%)"},{"scope":"零部件 · 热管理与液冷","dir":"走弱","text":"走弱。量增利减","basis":"三花智控H1汽车零部件收入64.55亿元(+9.89%、占38.20%)、归母净利20.44亿元(-3.12%)；拓普热管理/液冷新兴领域累计订单增至17.5亿元；中金测算2026全球智算中心液冷市场1147亿元(+273%)"},{"scope":"零部件 · 智驾域控制器","dir":"走弱","text":"走弱。硬件规模化后接近成熟汽车零部件生意","basis":"德赛西威H1智驾业务收入39.18亿元(-5.53%)、该业务毛利率19.74%→14.49%，但总营收149.01亿元、归母净利12.45亿元；H1智驾域控装机约306万套(+18.9%)"},{"scope":"智能化 · 智驾芯片","dir":"分化","text":"分化。双强格局固化但缝隙收窄","basis":"英伟达份额2025全年52.1%→2026H1 45.0%→8月30.2%；地平线8月19.8%，与英伟达差距由35.8pct收窄至10.4pct；自主品牌乘用车全阶芯片地平线31.94%居首；H1域控芯片出货约359万颗"},{"scope":"智能化 · 智驾软件与算法","dir":"改善","text":"改善。高毛利来自软件/IP/授权而非硬件","basis":"Momenta技术开发服务收入9.95亿元、软件许可收入6.07亿元，距经调整盈亏平衡约1400万元；千里科技智驾收入12.35亿元、毛利率71.21%；地平线授权及服务收入11.29亿元(+52.7%)、毛利率90.4%"},{"scope":"智能化 · 激光雷达","dir":"分化","text":"分化。量增但毛利率下行","basis":"H1装机225万颗(+124.7%)；禾赛份额34.2%居首、净利8890万元连续五季度盈利、毛利率42.2%→39.7%；速腾营收+30.2%、机器人业务贡献近半产品收入、毛利率25.9%→21.8%"},{"scope":"下游整车 · 自主品牌","dir":"分化","text":"分化。国内总量承压、出口成主要增量","basis":"1-9月新能源品牌：比亚迪134.41万辆(份额16.52%)、吉利银河60.95万辆(-29.2%)、零跑50.70万辆(+45.9%)、特斯拉38.11万辆(-12.2%)；9月国内乘用车零售161.8万辆(-28.0%)"},{"scope":"下游整车 · 新势力","dir":"分化","text":"分化。四季度目标缺口压力已提前显现","basis":"9月零跑全球交付105656辆(+59%)连续三月破10万、小鹏41256、小米首破4万、鸿蒙智行37490、蔚来37408、极氪37216、理想31817(-6.29%)；1-9月零跑66.65万(+68.5%)、蔚来30.03万(+49.2%)、小鹏28.43万(-9.24%)"},{"scope":"下游整车 · 合资与海外品牌","dir":"走弱","text":"走弱。BBA利润与销量双降","basis":"1-9月特斯拉38.11万辆(-12.2%)为至少四年最低；丰田10.75万辆(+50.4%)、别克7.95万辆(+40.2%)、奥迪新能源2.31万辆(+116%)；BBA在华上半年合计利润减少约15.35亿欧元"},{"scope":"后市场 · 充电基础设施","dir":"改善","text":"改善。数量短缺基本解决，关注点从规模转向效率与智能化","basis":"截至2026年6月底全国充电基础设施2305.7万个(+43.2%)，其中公共500.9万个、私人1804.8万个(+50.4%)；大功率充电枪超18万个；充电运营TOP15合计份额83.8%"},{"scope":"后市场 · 换电","dir":"待判断","text":"待判断。换电站规模数据本轮留空，不以超充数据替代","basis":"宁德时代12C第二代神行超充电池；换电与超充并行推进，本轮未取到截至截止日的换电站数与利用率数据"},{"scope":"后市场 · 动力电池回收","dir":"分化","text":"分化。政策收紧方向明确，但渠道与产能错配待解","basis":"2026国内锂电回收市场规模527亿元(2025年222亿元，+137.4%)；理论退役超100万吨；白名单156家名义产能423.3万吨但2025年产能利用率仅16.4%；超六成退役电池流入灰色渠道；2026-04-01《管理暂行办法》确立车电一体报废与数字身份证"},{"scope":"后市场 · 梯次利用","dir":"收紧","text":"收紧。合规门槛提高，短期供给收缩","basis":"2026-07-30工信部第20号公告废止规范条件中梯次利用条款，100家梯次利用企业被移出合规名单"}]},"track":[{"id":"V1","name":"碳酸锂价格与供给恢复节奏","state":"2026-10-23 Mysteel 晚盘 96,300–101,000 元/吨；7–8 月检修减产约 1.4 万吨；枧下窝 2026-06-29 正式复产","trigger":"江西宜春\"证矿不符\"换证进度公告；枧下窝实际产量进入统计口径；期货仓单去化进度；澳矿重启与津巴布韦到港节奏","src":"LI-005、LI-148、LI-164、SMM 条目"},{"id":"V2","name":"储能电池出货增速 vs 动力电池增速","state":"2026H1 储能 318.1GWh（+83.4%）vs 动力 +37.1%；1–7 月储能 374.2GWh（+78.6%）","trigger":"两者的增速差是否收窄；亿纬、瑞浦等储能配比高的企业储能出货绝对值与毛利率","src":"BAT-101、BAT-103、BAT-045、BAT-047"},{"id":"V3","name":"材料端毛利率修复的持续性","state":"天赐 33.55%（+14.86pct）、恩捷隔膜 31.65%（+17.99pct）、裕能正极 14.81%（+7.84pct）","trigger":"六氟磷酸锂、隔膜、正极加工费的月度走势；材料厂季度毛利率环比方向","src":"MAT-066、MAT-072、MAT-029"},{"id":"V4","name":"电池厂毛利率与份额的跷跷板","state":"宁德动力电池毛利率 20.63%（-1.78pct），国内份额自 43.42% 回升至 46.7%","trigger":"份额与毛利率是否同时改善；8 家电池厂毛利率同比方向的分歧是否扩大","src":"BAT-031、BAT-033、BAT-029 ~ BAT-093"},{"id":"V5","name":"智驾芯片份额格局","state":"英伟达 45.0%（H1）/30.2%（8 月单月）；地平线 8 月 19.8%；差距 35.8pct→10.4pct","trigger":"英伟达份额是否跌破 30% 并持续；地平线 2026 年\"收入超 50 亿元\"指引兑现度","src":"ADP-125 ~ ADP-129、ADP-077"},{"id":"V6","name":"智驾收入结构（硬件 vs 授权/软件）","state":"地平线授权及服务 11.29 亿元已超产品 9.26 亿元，毛利率 90.4%；Momenta 软件许可 6.07 亿元","trigger":"授权/许可收入占比与经调整盈亏平衡距离；德赛西威智驾毛利率是否止跌","src":"ADP-064、ADP-066、ADP-081、ADP-052"},{"id":"V7","name":"整车国内总量与出口的替代","state":"1–9 月乘用车零售 1333.4 万辆（-21.7%）；NEV 出口 400.6 万辆（+1.3 倍）","trigger":"国内零售同比降幅是否收窄；出口能否继续承接产量；出口退税率 2027-04 由 13% 降至 9% 前的抢出口节奏","src":"OEM-080、POL-006、POL-001"},{"id":"V8","name":"新势力四季度目标完成度","state":"零跑 1–9 月 66.65 万辆（年度 100 万辆目标）；蔚来 30.03 万辆（缺口需月均 5 万辆+）；理想、小米、小鹏月均需超 6 万辆","trigger":"10–12 月单月交付是否达到缺口要求的月均水平","src":"OEM-051、OEM-053、CLS 条目"},{"id":"V9","name":"智驾渗透率口径分歧是否收敛","state":"工信部 NOA 34.2% / 高工前装标配 34.10% / 城市 NOA 20.9% / 地平线口径 76.1%","trigger":"统计边界是否统一披露；前装标配与搭载率口径是否区分","src":"ADP-103 ~ ADP-111"},{"id":"V10","name":"电池回收灰色渠道分流","state":"正规渠道不足四成；六大基地合规产能利用率较 Q2 +8~12pct；100 家梯次企业移出白名单","trigger":"\"白名单 + 车企 + 保险\"定向回收机制是否落地；废料价格与合规企业收车价的价差是否收窄","src":"AFT-047、AFT-059、AFT-063"},{"id":"V11","name":"固态电池兑现顺序","state":"半固态约 10GWh 级出货；2026 年 7 月首个车用固态国标实施；\"十五五\"规划定 2030 初步规模化","trigger":"①全固态整线设备验收与回款；②正极材料重复采购；③电解质客户重复采购信号；④车规级验证公告","src":"SLD-001、SLD-031、SLD-037、SLD-039"},{"id":"V12","name":"零部件利润率","state":"行业前 8 个月销售利润率 3.6%（利润总额 -16%）；拓普归母 -21.03%；三花汽车零部件 +9.89%","trigger":"年降幅度是否收敛；机器人/液冷等新业务是否出现可重复的正毛利贡献","src":"ADP-044、ADP-007、ADP-038、ADP-024"},{"id":"V13","name":"赛力斯模式调整后的盈利修复","state":"2026H1 归母 -17.17 亿元（含 17.50 亿元减值）；2026-09-15 收回 8% 渠道费、仅留 2% 技术授权费；持股引望 9.36%","trigger":"2026Q3 起是否恢复盈利；减值是否不再重复；销量与成交均价的同步性","src":"SL-026、SL-033、SL-052、SL-019、SL-055"},{"id":"V14","name":"比亚迪海外盈利结构","state":"2026H1 境外收入占比 52.57%（首超国内）；海外毛利率 19.46% vs 国内 16.66%","trigger":"海外销量能否维持 +67.8%；海外毛利率差是否扩大；汇兑对财务费用的影响","src":"BYD-029、BYD-011、BYD-030、BYD-032、BYD-046、BYD-047"},{"id":"V15","name":"政策窗口","state":"锂电池消费税自 2026-09-01 分步恢复征收；出口退税率 2027-04 由 13% 降至 9%；《智能网联新能源汽车产业发展\"十五五\"规划》2026-10 发布","trigger":"消费税分步节奏与实施细则；出口退税下调前后的抢出口与订单前置","src":"POL-001、POL-006、POL-003"}],"source":{"intro":"本报告的数字最终都指向 <b>sources.csv</b>（主来源台账，共 714 条，L2 级 56 条、L3 级 166 条、L4 级 468 条、L5 级 24 条）。本页列出第二阶段新增并被本报告实际引用的 <b>25 条</b>；第一阶段 689 条与第三阶段投资关系来源同样在台账中，只是未出现在本页图表里。每条来源都带原始来源机构、标题、发布日期、URL 与可信度分级；<b>L4 为二手汇编，关键数字建议回溯其标注的原始机构</b>。","list":[{"org":"中国能源报","type":"机构统计转述","title":"锂电材料最猛反转来了，第一引擎也换了","date":"2026-09-02","grade":"L4","count":"63","url":"https://www.toutiao.com/article/7680758424003265051/"},{"org":"环球网财经","type":"机构统计转述","title":"A股锂电板块半年报出炉！锂电池企业中期业绩现分化","date":"2026-09-01","grade":"L4","count":"33","url":"https://www.huanqiu.com/article/4T1vgRvwVkS"},{"org":"凤凰网财经","type":"媒体深度报道","title":"智驾公司的半年报，开始看得出谁能赚钱了","date":"2026-09-03","grade":"L4","count":"26","url":"https://finance.ifeng.com/c/8wASkau4jyG"},{"org":"证券时报","type":"机构统计转述","title":"2026中报季：智驾渗透率、域控与智驾芯片装机格局","date":"2026-09","grade":"L4","count":"23","url":"https://stcn.com/article/detail/4166354.html"},{"org":"三个皮匠（行业研究汇编）","type":"行业研究汇编","title":"国内做电池回收的企业","date":"2026","grade":"L4","count":"23","url":"https://www.sgpjbg.com.cn/searchtag/26293606.html"},{"org":"经济观察报","type":"媒体深度报道","title":"13家锂企2026半年报：行业走出周期底部，货源多寡决定盈利多少","date":"2026-09-03","grade":"L4","count":"21","url":"https://news.qq.com/rain/a/20260903A0AQG200?id=20260903A0AQG200"},{"org":"广东省肇庆市汽车配件工业协会（转述中汽数研）","type":"机构统计转述","title":"前三季度新能源品牌销量榜出炉 比亚迪134.41万辆断崖第一","date":"2026-10-22","grade":"L4","count":"18","url":"https://www.auto-cn.com/views-13836"},{"org":"每日经济新闻","type":"公司公告转述","title":"湖南裕能拟投不超20亿元建设磷酸铁锂六期项目","date":"2026-10-19","grade":"L4","count":"17","url":"https://www.toutiao.com/article/7698390265920307750"},{"org":"中汽数研","type":"机构统计转述","title":"2026年1-9月国内新能源汽车品牌销量排名","date":"2026-10-22","grade":"L4","count":"15","url":"https://www.toutiao.com/article/7699361996794036751/"},{"org":"乘联分会口径（行业突围2026之1-9月篇）","type":"机构统计转述","title":"汽车行业突围2026之1-9月篇","date":"2026-10","grade":"L4","count":"15","url":"https://www.toutiao.com/a7697495955331662355"},{"org":"中国能源网／证券时报","type":"机构统计转述","title":"碳酸锂价格触底反弹 7股上半年净利翻倍","date":"2026-08-26","grade":"L4","count":"14","url":"https://www.cnenergynews.cn/article/4SwtOUePTp4"},{"org":"21世纪经济报道","type":"公司公告转述","title":"拓普集团2026年上半年经营情况","date":"2026-09-18","grade":"L4","count":"14","url":"https://www.21jingji.com/article/20260918/herald/c271fb9cec93d05b01d60014cbf49482.html"},{"org":"中国能源网","type":"公司公告转述","title":"磷酸铁锂龙头，净利暴增853.51%！高端化与储能占比持续提升","date":"2026-08-19","grade":"L4","count":"12","url":"https://www.cnenergynews.cn/article/4SrzT7yzc64"},{"org":"央广网","type":"机构统计转述","title":"固态电池产业化进度：半固态先行、全固态仍在验证","date":"2026-09-16","grade":"L4","count":"12","url":"https://finance.cnr.cn/jjgd/20260916/t20260916_527815897.shtml"},{"org":"上海钢联 Mysteel（经媒体转述）","type":"价格指数转述","title":"2026年上半年锂行业运行情况与下半年供需展望","date":"2026-09","grade":"L4","count":"11","url":"https://news.10jqka.com.cn/field/20260903/679576479.shtml"},{"org":"人民网／中国能源报","type":"机构统计转述","title":"锂企整体走出低谷期","date":"2026-09-21","grade":"L4","count":"10","url":"https://paper.people.com.cn/zgnyb/pc/content/202609/21/content_30182781.html"},{"org":"三个皮匠（行业研究汇编）","type":"行业研究汇编","title":"智能充电","date":"2026","grade":"L4","count":"10","url":"https://m.sgpjbg.com.cn/news/7214994.html"},{"org":"中证网·中证智能财讯","type":"公司半年报数据表","title":"湖南裕能：2026年上半年净利润29.1亿元 同比增长853.51%","date":"2026-08-19","grade":"L4","count":"8","url":"https://newzzbcx.cs.com.cn/cxnews.html?name=new20260819222909mqvisacj"},{"org":"中国经济网","type":"机构统计转述","title":"固态电池技术路线与量产节奏","date":"2026-05-15","grade":"L4","count":"8","url":"https://www.ce.cn/xwzx/gnsz/gdxw/202605/t20260515_2967315.shtml"},{"org":"上海证券报·中国证券网","type":"公司半年报数据表","title":"三花智控2026年半年度报告","date":"2026-08","grade":"L4","count":"6","url":"https://www.cnstock.com/commonDetail/775282"},{"org":"财联社／中新经纬","type":"机构统计转述","title":"2026年前三季度车企销量目标完成率与9月零售","date":"2026-10-08","grade":"L4","count":"4","url":"https://www.jwview.com/jingwei/10-08/691568.shtml"},{"org":"央广网","type":"机构统计转述","title":"湖南裕能披露2026年半年报 归母净利润同比增长853.51%","date":"2026-08-19","grade":"L4","count":"3","url":"https://www.cnr.cn/jingji/ycbd/20260819/t20260819_527783074.shtml"},{"org":"证券时报","type":"公司半年报数据表","title":"拓普集团2026年半年度报告","date":"2026-09","grade":"L4","count":"3","url":"https://stcn.com/article/detail/4144158.html"},{"org":"车质网","type":"行业分析","title":"零部件企业跨界机器人与液冷：利润承压下的新业务","date":"2026-10-19","grade":"L4","count":"3","url":"https://www.12365auto.com/news/20261019/577463.shtml"},{"org":"每日经济新闻","type":"公司公告转述","title":"301358 西班牙正极项目扩产40%，总投资升至16.5亿元","date":"2026-09-23","grade":"L4","count":"2","url":"https://m.nbd.com.cn/articles/2026-09-23/4590324.html"}],"note":"可信度分级沿用前两阶段口径：L1 一手公告/交易所披露；L2 权威媒体转述；L3 机构数据库/研报；L4 二手汇编。本报告未逐页核对交易所与巨潮 PDF 原文，涉及减值明细、汇兑构成、收入确认口径的进一步结论需回到原始附注。"},"bound":{"gaps":[{"id":"G1","what":"截至 2026-10-23 的收盘价、总市值、PE/PB（全部公司）","why":"恒生行情连接器不可调用；个别公司公告/新闻页自带时点估值另列于 <code>comparison.xlsx</code> 表 8 与 <code>底稿/03_原始指标.csv</code>「行情与估值」环节（9 条），<b>不与截止日口径混用</b>"},{"id":"G2","what":"截至 2026-10-23 的<b>换电站数量与单站利用率</b>","why":"本轮未取到截至截止日的可回查来源。已登记的只有第一阶段口径：宁德时代 2025 全年巧克力换电超 1000 座、骐骥超 300 座、服务超 115 万次<span class=\"cite\">〔CATL-045 / M-0327〕</span>，<b>不足以推算截止日状态，且不以超充数据替代</b>"},{"id":"G3","what":"赛力斯 2026H1 <b>研发投入</b>（费用化+资本化）总额；问界 2026H1 同口径交付绝对量","why":"仅有研发费用 37.34 亿元（费用化口径，SL-036）与问界品牌交付增速 +10.2%（SL-040），<b>研发投入与研发费用为不同层级，分列不换算</b>"},{"id":"G4","what":"宁德时代 2026H1 动力/储能电池量的<b>分项拆分</b>","why":"未取到公司披露的同口径拆分（仅有合计销量 434GWh 与产量 498GWh，CATL-030/031）；券商测算值（325/109GWh）已在 sources.csv 单独标注为\"券商测算\"，不与披露值混用"},{"id":"G5","what":"亿纬锂能、欣旺达、国轩高科、中创新航、正力新能、孚能科技、拓普集团、三花智控、德赛西威、地平线、黑芝麻智能、千里科技等的 FY2025 统一口径对照数据","why":"本轮未取到可回查的同口径数据（<code>comparison.xlsx</code> 表 1–表 4 对应格标\"—\"并注明）"}],"conflicts":[{"id":"C1","what":"2026H1 全国碳酸锂产量","a":"有色协会锂业分会 约 56.3 万吨","b":"上海钢联 59.5 万吨","src":"LI-129 / LI-131"},{"id":"C2","what":"藏格矿业碳酸锂毛利率","a":"71.08%（环球网转述）","b":"71.26%（人民网转述）","src":"LI-086 / LI-169"},{"id":"C3","what":"天齐锂业 H1 归母净利","a":"42.42 亿元（公司口径）","b":"42.4 亿元（人民网转述）","src":"LI-063 / LI-170"},{"id":"C4","what":"赣锋/天齐 H1 归母净利","a":"赣锋 42.57 / 天齐 42.42 亿元（公司公告）","b":"万得锂矿指数口径：赣锋 41.25 / 天齐 35.5 亿元","src":"LI-041、LI-063 / LI-121"},{"id":"C5","what":"枧下窝复产时点","a":"2026-06-29 正式复产","b":"Mysteel 版本\"预估 Q3 复产\"","src":"LI-164 / LI-171"},{"id":"C6","what":"宁德时代 H1 净利同比","a":"+41.98%（公司公告）","b":"+42.00%（汇总表）","src":"BAT-027"},{"id":"C7","what":"智驾渗透率","a":"工信部 NOA 34.2%","b":"高工前装标配 34.10% / 城市 NOA 20.9% / 地平线口径 76.1%","src":"ADP-105、ADP-107、ADP-109、ADP-111"},{"id":"C8","what":"智驾芯片份额","a":"英伟达 45.0%（H1 累计）/ 30.2%（8 月单月）/ 52.1%（2025 全年）","b":"地平线 19.8%（8 月）","src":"ADP-125、ADP-127"},{"id":"C9","what":"小米汽车销量","a":"品牌口径 28.65 万辆（1–9 月）","b":"集团口径超 28 万辆 / 公司交付口径 185,055 辆（2026H1）","src":"OEM-022、OEM-062、MI-015"},{"id":"C10","what":"零跑销量","a":"品牌口径 50.70 万辆（1–9 月）","b":"集团口径 66.65 万辆","src":"OEM-007、OEM-051"},{"id":"C11","what":"国内乘用车零售","a":"9 月 161.8 万辆（乘联分会全月）","b":"9 月 1–27 日 125.8 万辆","src":"OEM-078、OEM-082"},{"id":"C12","what":"湖南裕能 H1 毛利率","a":"综合 14.86%（整体口径）","b":"正极分部 14.81%（分部口径）","src":"MAT-015、MAT-029"}],"limits":["<b>未直读原始 PDF。</b> 所有财务数值来自\"中证智能财讯年报数据表 + 公司官方新闻稿 + 权威媒体转述\"交叉验证，<b>未逐页核对巨潮资讯网 / 交易所 PDF 附注</b>。涉及减值明细、汇兑构成、收入确认口径的进一步结论，需回到原始附注。","<b>未接入行情与卖方一致预期。</b> Alpha 派未配置 API Key、进门财经未连接、腾讯文档未连接、知识星球 CLI 未安装、本地资料库未关联。因此<b>没有卖方一致预期、目标价、舆情评分与指标库</b>可供交叉验证。","<b>单一来源标注。</b> 底稿中来源机构为\"三个皮匠（行业研究汇编）\"\"行业研究汇编\"的条目属二手汇编，可信度标记为 L4，但引用时应视为<b>汇编转述</b>，关键数字建议回溯其标注的原始机构。","<b>数据截断时点差异。</b> 中汽数研明确声明部分企业未公布销量，该表\"不作为严格排名使用\"<span class=\"cite\">〔M-0244 / OEM-001 备注〕</span>。","<b>\"同比 -40.7%\" 类表述未采纳。</b> 比亚迪品牌销量同比 -40.7% 的转述与集团口径差异较大且未经二次验证，本报告在 §7.3 明确标注为存疑项并<b>不作为结论使用</b>。"]},"meta":{"cutoff":"2026-10-23","nodes":30,"metrics":337,"sources":714,"companies":18,"citedMetrics":38,"charts":13}};
+</script>
+<script>
+(function(){
+'use strict';
+var D = window.__REPORT__;
+var NS = 'http://www.w3.org/2000/svg';
+var $ = function(id){ return document.getElementById(id); };
+function el(tag, attrs, parent){
+  var n = document.createElementNS(NS, tag);
+  if(attrs) for(var k in attrs) n.setAttribute(k, attrs[k]);
+  if(parent) parent.appendChild(n);
+  return n;
+}
+function esc(s){
+  return String(s==null?'':s).replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+function num(s){
+  if(s==null) return null;
+  var t = String(s).replace(/[,，\s]/g,'').replace(/^约/,'').replace(/^突破/,'');
+  var m = t.match(/^-?\d+(\.\d+)?/);
+  return m ? parseFloat(m[0]) : null;
+}
+function hasClass(elx, c){ return elx.className && elx.className.indexOf(c)>=0; }
+
+/* 分块容错：任一区块渲染异常时只提示该区块，不影响其余内容 */
+var RENDER_ERRORS = [];
+function safe(name, fn){
+  try{ fn(); }
+  catch(e){
+    RENDER_ERRORS.push(name + '：' + (e && e.message ? e.message : e));
+    if(window.console && console.error) console.error('[research] ' + name + ' 渲染失败', e);
+    var box = document.getElementById('render-warn');
+    if(box){
+      box.style.display = 'block';
+      box.textContent = '以下区块渲染异常，其余内容不受影响：' + RENDER_ERRORS.join('；');
+    }
+  }
+}
+
+/* ---------------- 导航 ---------------- */
+var SECTIONS = [
+  ['s-cover','首页'],['s-chain','产业链地图'],['s-trend','行业趋势'],['s-company','公司比较'],
+  ['s-fj','事实与判断'],['s-track','未来跟踪变量'],['s-source','数据来源'],['s-bound','研究边界']
+];
+safe('顶部导航', function(){
+  var nav = $('nav');
+  SECTIONS.forEach(function(s){
+    var a = document.createElement('a');
+    a.href = '#'+s[0]; a.textContent = s[1]; a.setAttribute('data-t', s[0]);
+    nav.appendChild(a);
+  });
+  var links = nav.querySelectorAll('a');
+  window.addEventListener('scroll', function(){
+    var best = SECTIONS[0][0], y = window.scrollY + 120;
+    SECTIONS.forEach(function(s){
+      var elx = $(s[0]);
+      if(elx && elx.offsetTop <= y) best = s[0];
+    });
+    links.forEach(function(a){ a.classList.toggle('on', a.getAttribute('data-t')===best); });
+  }, {passive:true});
+});
+
+/* ---------------- 首页 ---------------- */
+safe('首页', function(){
+  $('cover-lede').innerHTML = D.cover.lede;
+  $('cover-chips').innerHTML = D.cover.chips.map(function(c){
+    return '<span class="chip'+(c.gold?' gold':'')+'">'+esc(c.t)+'</span>';
+  }).join('');
+  $('cover-kpis').innerHTML = D.cover.kpis.map(function(k){
+    return '<div class="kpi"><div class="k">'+esc(k.k)+'</div>'+
+           '<div class="v">'+esc(k.v)+(k.u?'<small>'+esc(k.u)+'</small>':'')+'</div>'+
+           '<div class="s">'+esc(k.s||'')+'</div></div>';
+  }).join('');
+  $('obs-fact').innerHTML = D.obs.fact.map(function(o){ return '<li>'+o+'</li>'; }).join('');
+  $('obs-judge').innerHTML = D.obs.judge.map(function(o){ return '<li>'+o+'</li>'; }).join('');
+});
+
+/* ---------------- 产业链地图 ---------------- */
+var CHAIN_COLORS = {
+  '上游资源':'#A9862F','中游材料':'#7A6BC4','中游电池':'#1F4A3C',
+  '零部件':'#4A6C9B','智能化':'#2E6B55','下游整车':'#B4552F','后市场':'#6B9B85'
+};
+function renderChain(){
+  var svg = $('chainmap'), W = svg.parentNode.clientWidth - 26;
+  if(W < 640) W = 640;
+  var LEFT = 96, TOP = 8, GAP = 14, ROWH = 74, PAD = 8;
+  var levels = D.chain.levels;
+  var y = TOP, bandTops = {};
+  var boxes = [];
+  levels.forEach(function(lv){
+    bandTops[lv] = y;
+    var nodes = D.chain.nodes.filter(function(n){ return n.level===lv; });
+    var x = LEFT, row = 0, rowH = 0;
+    nodes.forEach(function(n){
+      // 宽度 = 名称 + 右侧方向圆点预留位，避免圆点压住末字
+      var tw = Math.min(210, Math.max(104, n.name.length*12 + 40));
+      if(x + tw > W - 10 && x > LEFT){ row++; x = LEFT; }
+      boxes.push({n:n, x:x, y:y + row*ROWH, w:tw, h:52, row:row});
+      x += tw + 9;
+      rowH = Math.max(rowH, (row+1)*ROWH);
+    });
+    y += Math.max(ROWH, rowH) + GAP;
+  });
+  var H = y + 6;
+  svg.setAttribute('viewBox', '0 0 '+W+' '+H);
+  svg.setAttribute('width', W); svg.setAttribute('height', H);
+
+  // 层级带
+  levels.forEach(function(lv){
+    var nodes = D.chain.nodes.filter(function(n){ return n.level===lv; });
+    var bs = boxes.filter(function(b){ return b.n.level===lv; });
+    var maxRow = 0; bs.forEach(function(b){ maxRow = Math.max(maxRow, b.row); });
+    var bh = (maxRow+1)*ROWH + 8;
+    el('rect', {x:0, y:bandTops[lv]-6, width:W-4, height:bh, rx:9,
+      fill:CHAIN_COLORS[lv], 'fill-opacity':'0.045', stroke:CHAIN_COLORS[lv], 'stroke-opacity':'0.16'}, svg);
+    el('text', {x:12, y:bandTops[lv]+24, 'font-size':'12.5', 'font-weight':'700', fill:CHAIN_COLORS[lv],
+      'font-family':'"Source Han Serif SC","Songti SC",serif'}, svg).textContent = lv;
+    var sub = el('text', {x:12, y:bandTops[lv]+41, 'font-size':'10.5', fill:'#8D9691'}, svg);
+    sub.textContent = nodes.length+' 个节点';
+  });
+
+  // 节点
+  boxes.forEach(function(b){
+    var g = el('g', {class:'nd-box', 'data-id':b.n.id}, svg);
+    var c = CHAIN_COLORS[b.n.level] || '#5C6762';
+    el('rect', {x:b.x, y:b.y, width:b.w, height:b.h, rx:8, fill:'#FFFDF7',
+      stroke:c, 'stroke-opacity':'0.45', 'stroke-width':1}, g);
+    el('rect', {x:b.x, y:b.y, width:3, height:b.h, rx:1.5, fill:c}, g);
+    var t = el('text', {x:b.x+11, y:b.y+19, 'font-size':'12', fill:'#1C2622'}, g);
+    t.textContent = b.n.name.length>14 ? b.n.name.slice(0,13)+'…' : b.n.name;
+    var t2 = el('text', {x:b.x+11, y:b.y+35, 'font-size':'10.5', fill:'#8D9691'}, g);
+    t2.textContent = b.n.link;
+    var dir = b.n.direction;
+    if(dir && dir!=='—'){
+      var dc = dir==='改善' ? '#2E6B55' : (dir==='走弱' ? '#B4552F' : '#A9862F');
+      el('circle', {cx:b.w+b.x-12, cy:b.y+14, r:5, fill:dc, 'fill-opacity':'0.85'}, g);
+    }
+    g.addEventListener('click', function(){ showChain(b.n.id); });
+  });
+
+  // 层级之间的流向箭头
+  for(var i=0;i<levels.length-1;i++){
+    var y1 = bandTops[levels[i]] + (Math.max(0, boxes.filter(function(b){return b.n.level===levels[i];}).length?1:1))*ROWH;
+    var yb = bandTops[levels[i]];
+    var yb2 = bandTops[levels[i+1]];
+    var mx = LEFT - 26;
+    el('path', {d:'M'+mx+','+(yb+ROWH-14)+' L'+mx+','+(yb2-14), stroke:'#A9862F',
+      'stroke-width':'1.2', 'stroke-dasharray':'3 3', 'stroke-opacity':'0.6', fill:'none'}, svg);
+    el('path', {d:'M'+(mx-3.5)+','+(yb2-20)+' L'+mx+','+(yb2-13)+' L'+(mx+3.5)+','+(yb2-20)+' Z',
+      fill:'#A9862F', 'fill-opacity':'0.7'}, svg);
+  }
+
+  // 图例
+  $('chainlegend').innerHTML = Object.keys(CHAIN_COLORS).map(function(k){
+    return '<span><i style="background:'+CHAIN_COLORS[k]+'"></i>'+esc(k)+'</span>';
+  }).join('') +
+  '<span><i style="background:#2E6B55;border-radius:50%"></i>方向=改善</span>' +
+  '<span><i style="background:#A9862F;border-radius:50%"></i>方向=分化/持平</span>' +
+  '<span><i style="background:#B4552F;border-radius:50%"></i>方向=走弱</span>';
+}
+function showChain(id){
+  var n = null;
+  D.chain.nodes.forEach(function(x){ if(x.id===id) n=x; });
+  if(!n) return;
+  var box = $('chainDetail');
+  var dirTag = n.direction && n.direction!=='—'
+    ? '<span class="tag '+(n.direction==='改善'?'fact':(n.direction==='走弱'?'warn':'judge'))+'">'+esc(n.direction)+'</span>' : '';
+  var html = '<div class="dh"><div class="t">'+esc(n.name)+'</div>'+
+    '<div class="s">'+esc(n.level)+' · '+esc(n.link)+' · '+esc(n.type)+(dirTag?' &nbsp;'+dirTag:'')+'</div></div>'+
+    '<div class="db">'+
+    '<div class="kv"><div class="k">节点编号</div><div class="v">'+esc(n.id)+'</div>'+
+    '<div class="k">环节</div><div class="v">'+esc(n.link)+'</div>'+
+    '<div class="k">节点类型</div><div class="v">'+esc(n.type)+'</div>'+
+    '<div class="k">代表公司</div><div class="v">'+esc(n.companies)+'</div>'+
+    '<div class="k">上游关联</div><div class="v">'+esc(n.up)+'</div>'+
+    '<div class="k">下游关联</div><div class="v">'+esc(n.down)+'</div>'+
+    '<div class="k">驱动变量</div><div class="v">'+esc(n.drivers)+'</div></div>'+
+    '<div class="divider"></div>'+
+    '<div style="font-size:11.5px;color:#8D9691;margin-bottom:4px"><span class="tag fact">事实</span> 2026 年已披露变化</div>'+
+    '<div style="font-size:12.4px;line-height:1.8">'+esc(n.fact)+'</div>'+
+    '<div class="divider"></div>'+
+    '<div style="font-size:11.5px;color:#8D9691;margin-bottom:4px"><span class="tag judge">判断</span> 变化方向</div>'+
+    '<div style="font-size:12.4px;line-height:1.8">'+esc(n.direction)+'</div>'+
+    (n.note ? '<div class="divider"></div><div style="font-size:11.5px;color:#8D9691;margin-bottom:4px">备注与限制</div><div style="font-size:12.2px;line-height:1.8;color:#5C6762">'+esc(n.note)+'</div>' : '')+
+    '<div class="divider"></div>'+
+    '<div class="mini">来源编号：<b>'+esc(n.src)+'</b>（见 sources.csv 按 source_id 回查 URL 与可信度）</div>'+
+    '</div>';
+  box.innerHTML = html;
+  var svg = $('chainmap');
+  svg.querySelectorAll('.nd-box').forEach(function(g){
+    g.classList.toggle('sel', g.getAttribute('data-id')===id);
+  });
+}
+window.addEventListener('resize', function(){ clearTimeout(window.__rt); window.__rt = setTimeout(renderChain, 160); });
+
+/* ---------------- 图表 ---------------- */
+function renderChart(spec){
+  var svg = $('chartsvg');
+  while(svg.firstChild) svg.removeChild(svg.firstChild);
+  var W = svg.parentNode.clientWidth - 38;
+  if(W < 640) W = 640;
+  var unit = spec.unit || '';
+  var series = spec.series;             // [{name, color, values:[{label, value, sub, note}]}]
+  var allLabels = [];
+  series.forEach(function(s){ s.values.forEach(function(v){ allLabels.push(v.label); }); });
+  var labels = [];
+  allLabels.forEach(function(l){ if(labels.indexOf(l)<0) labels.push(l); });
+
+  if(spec.type === 'line'){
+    var H = 300, PADL = 62, PADR = 24, PADT = 18, PADB = 46;
+    svg.setAttribute('viewBox','0 0 '+W+' '+H);
+    svg.setAttribute('width',W); svg.setAttribute('height',H);
+    var vals = [];
+    series.forEach(function(s){ s.values.forEach(function(v){ if(v.value!=null) vals.push(v.value); }); });
+    var mx = Math.max.apply(null, vals), mn = Math.min.apply(null, vals);
+    var pad = (mx-mn)*0.25 || 1; mx += pad; mn = Math.max(0, mn-pad);
+    var X = function(i){ return PADL + (labels.length<2?0:(W-PADL-PADR)*i/(labels.length-1)); };
+    var Y = function(v){ return PADT + (H-PADT-PADB)*(1-(v-mn)/(mx-mn||1)); };
+    for(var g=0; g<=4; g++){
+      var yy = PADT + (H-PADT-PADB)*g/4, vv = mx - (mx-mn)*g/4;
+      el('line', {x1:PADL, y1:yy, x2:W-PADR, y2:yy, class:'gl'}, svg);
+      el('text', {x:PADL-8, y:yy+3.5, class:'tk', 'text-anchor':'end'}, svg).textContent = fmt(vv);
+    }
+    series.forEach(function(s){
+      var pts = s.values.map(function(v,i){ return X(i)+','+Y(v.value); }).join(' ');
+      el('polyline', {points:pts, fill:'none', stroke:s.color, 'stroke-width':2.2,
+        'stroke-linejoin':'round','stroke-linecap':'round'}, svg);
+      s.values.forEach(function(v,i){
+        el('circle', {cx:X(i), cy:Y(v.value), r:4, fill:s.color, stroke:'#FBF8F1','stroke-width':1.5}, svg);
+        el('text', {x:X(i), y:Y(v.value)-9, class:'vl', 'text-anchor':'middle'}, svg).textContent = fmt(v.value)+unit;
+        el('text', {x:X(i), y:H-PADB+18, class:'tkl','text-anchor':'middle'}, svg).textContent = v.label;
+      });
+    });
+    return;
+  }
+
+  // 柱状（分组或单组）
+  var horizontal = spec.type === 'hbar' || labels.length > 9;
+  var maxV = 0;
+  series.forEach(function(s){ s.values.forEach(function(v){ if(v.value!=null && v.value>maxV) maxV=v.value; }); });
+  if(maxV<=0) maxV = 1;
+
+  if(horizontal){
+    var rowH = 26, PADL = 150, PADR = 96, PADT = 26;
+    var H = PADT + labels.length*rowH + 34;
+    svg.setAttribute('viewBox','0 0 '+W+' '+H);
+    svg.setAttribute('width',W); svg.setAttribute('height',H);
+    var maxW = W - PADL - PADR;
+    labels.forEach(function(lab, i){
+      var yy = PADT + i*rowH;
+      el('text', {x:PADL-9, y:yy+15, class:'tkl', 'text-anchor':'end'}, svg).textContent = lab;
+      series.forEach(function(s, si){
+        var v = null, meta = null;
+        s.values.forEach(function(x){ if(x.label===lab){ v=x.value; meta=x; } });
+        if(v==null) return;
+        var bw = maxW * (v/maxW);
+        var bh = 15, off = si*0;
+        var yb = yy + 4 + off;
+        el('rect', {x:PADL, y:yb, width:Math.max(1,bw), height:bh, rx:3, fill:s.color, 'fill-opacity':0.9}, svg);
+        el('text', {x:PADL+Math.max(1,bw)+7, y:yb+11.5, class:'vl'}, svg).textContent = fmt(v)+unit;
+      });
+    });
+    el('line', {x1:PADL, y1:PADT-8, x2:PADL, y2:PADT+labels.length*rowH, class:'ax'}, svg);
+    return;
+  }
+
+  // 竖向分组柱
+  var H = 320, PADL = 66, PADR = 20, PADT = 24, PADB = 58;
+  svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  svg.setAttribute('width',W); svg.setAttribute('height',H);
+  for(var g2=0; g2<=4; g2++){
+    var y2 = PADT + (H-PADT-PADB)*g2/4, v2 = maxV - maxV*g2/4;
+    el('line', {x1:PADL, y1:y2, x2:W-PADR, y2:y2, class:'gl'}, svg);
+    el('text', {x:PADL-8, y:y2+3.5, class:'tk','text-anchor':'end'}, svg).textContent = fmt(v2);
+  }
+  var slot = (W-PADL-PADR)/labels.length;
+  var bw = Math.min(46, slot/(series.length+0.6));
+  labels.forEach(function(lab, i){
+    var cx = PADL + slot*i + slot/2;
+    series.forEach(function(s, si){
+      var v=null, meta=null;
+      s.values.forEach(function(x){ if(x.label===lab){ v=x.value; meta=x; } });
+      if(v==null) return;
+      var totalW = bw*series.length + 4*(series.length-1);
+      var x = cx - totalW/2 + si*(bw+4);
+      var h = (H-PADT-PADB)*(v/maxV);
+      el('rect', {x:x, y:H-PADB-h, width:bw, height:Math.max(1,h), rx:3, fill:s.color, 'fill-opacity':0.9}, svg);
+      el('text', {x:x+bw/2, y:H-PADB-h-6, class:'vl', 'text-anchor':'middle'}, svg).textContent = fmt(v);
+    });
+    var parts = lab.split(' ');
+    el('text', {x:cx, y:H-PADB+16, class:'tkl','text-anchor':'middle'}, svg).textContent = parts[0];
+    if(parts.length>1) el('text', {x:cx, y:H-PADB+30, class:'tk','text-anchor':'middle'}, svg).textContent = parts[1];
+  });
+  el('line', {x1:PADL, y1:H-PADB, x2:W-PADR, y2:H-PADB, class:'ax'}, svg);
+}
+function fmt(v){
+  if(v==null) return '—';
+  var a = Math.abs(v);
+  if(a>=100) return v.toFixed(0);
+  if(a>=10) return v.toFixed(1);
+  return (Math.round(v*100)/100).toString();
+}
+function renderTrend(){
+  var spec = D.trend.charts.filter(function(c){ return c.id===$('trendSel').value; })[0];
+  if(!spec) return;
+  $('trendTitle').textContent = spec.title;
+  $('trendSub').innerHTML = spec.sub;
+  $('trendNote').innerHTML = spec.note;
+  $('trendHint').textContent = spec.hint || '';
+  renderChart(spec);
+}
+safe('行业趋势指标切换', function(){
+  var sel = $('trendSel');
+  D.trend.charts.forEach(function(c){
+    var o = document.createElement('option');
+    o.value = c.id; o.textContent = c.label;
+    sel.appendChild(o);
+  });
+  sel.addEventListener('change', function(){ safe('趋势图「'+sel.value+'」', function(){ renderTrend(); }); });
+  renderTrend();
+});
+
+/* ---------------- 公司比较 ---------------- */
+var compGroup = D.comp.groups[0].key;
+function renderComp(){
+  var g = D.comp.groups.filter(function(x){ return x.key===compGroup; })[0];
+  var tabs = $('compTabs');
+  tabs.innerHTML = D.comp.groups.map(function(x){
+    return '<button data-k="'+esc(x.key)+'" class="'+(x.key===compGroup?'on':'')+'">'+esc(x.label)+' <span style="opacity:.65">'+x.rows+'</span></button>';
+  }).join('');
+  tabs.querySelectorAll('button').forEach(function(b){
+    b.addEventListener('click', function(){ compGroup = b.getAttribute('data-k'); safe('公司比较「'+compGroup+'」', function(){ renderComp(); }); });
+  });
+  $('compNote').innerHTML = g.note;
+  var html = '<thead><tr><th>公司</th><th>代码</th><th>指标</th><th>口径 / 层级</th>'+
+    '<th style="text-align:right">FY2025</th><th style="text-align:right">2026H1</th>'+
+    '<th style="text-align:right">同比</th><th>单位</th><th>备注</th><th>来源</th></tr></thead><tbody>';
+  (g.data || []).forEach(function(r){
+    html += '<tr><td><b>'+esc(r.company)+'</b></td><td class="n" style="text-align:left">'+esc(r.code)+'</td>'+
+      '<td>'+esc(r.metric)+'</td><td style="color:#5C6762">'+esc(r.caliber)+'</td>'+
+      '<td class="n">'+esc(r.fy25)+'</td><td class="n">'+esc(r.h1)+'</td>'+
+      '<td class="n">'+esc(r.yoy)+'</td><td style="color:#8D9691">'+esc(r.unit)+'</td>'+
+      '<td style="color:#5C6762;min-width:230px">'+esc(r.note)+'</td>'+
+      '<td style="color:#8D9691;font-size:11px">'+esc(r.src)+'</td></tr>';
+  });
+  html += '</tbody>';
+  $('compTable').innerHTML = html;
+}
+safe('公司比较', function(){ renderComp(); });
+
+/* ---------------- 事实与判断 ---------------- */
+safe('事实与判断', function(){
+  var h = '<thead><tr><th>主体 / 环节</th><th>指标</th><th>数值</th><th>报告期</th><th>口径</th><th>来源</th></tr></thead><tbody>';
+  D.fj.facts.forEach(function(r){
+    h += '<tr><td>'+esc(r.entity)+'</td><td>'+esc(r.metric)+'</td><td class="n">'+esc(r.value)+'</td>'+
+         '<td>'+esc(r.period)+'</td><td style="color:#5C6762">'+esc(r.caliber)+'</td>'+
+         '<td style="color:#8D9691;font-size:11px">'+esc(r.src)+'</td></tr>';
+  });
+  $('fjFact').innerHTML = h+'</tbody>';
+  var h2 = '<thead><tr><th>环节</th><th>判断</th><th>依据 / 事实锚点</th></tr></thead><tbody>';
+  D.fj.judges.forEach(function(r){
+    h2 += '<tr><td>'+esc(r.scope)+'</td><td><span class="tag judge">'+esc(r.dir)+'</span> '+esc(r.text)+'</td>'+
+          '<td style="color:#5C6762">'+esc(r.basis)+'</td></tr>';
+  });
+  $('fjJudge').innerHTML = h2+'</tbody>';
+});
+
+/* ---------------- 追踪变量 ---------------- */
+safe('未来跟踪变量', function(){
+  var h = '<thead><tr><th>#</th><th>变量</th><th>当前可观测状态（截至 2026-10-23）</th><th>触发条件</th><th>回查位置</th></tr></thead><tbody>';
+  D.track.forEach(function(v){
+    h += '<tr><td class="vt">'+esc(v.id)+'</td><td><b>'+esc(v.name)+'</b></td><td>'+esc(v.state)+'</td>'+
+         '<td>'+esc(v.trigger)+'</td><td style="color:#8D9691;font-size:11px">'+esc(v.src)+'</td></tr>';
+  });
+  $('trackTable').innerHTML = h+'</tbody>';
+});
+
+/* ---------------- 来源 ---------------- */
+safe('数据来源', function(){
+  $('sourceIntro').innerHTML = D.source.intro;
+  var h = '<thead><tr><th>来源机构</th><th>类型</th><th>标题</th><th>发布日期</th><th>可信度</th><th>覆盖指标</th><th>URL</th></tr></thead><tbody>';
+  D.source.list.forEach(function(s){
+    h += '<tr><td><b>'+esc(s.org)+'</b></td><td>'+esc(s.type)+'</td><td style="min-width:300px">'+esc(s.title)+'</td>'+
+         '<td class="n" style="text-align:left">'+esc(s.date)+'</td>'+
+         '<td><span class="tag '+(s.grade==='L4'?'warn':(s.grade==='L1'?'fact':'inst'))+'">'+esc(s.grade)+'</span></td>'+
+         '<td class="n">'+esc(s.count)+'</td>'+
+         '<td style="font-size:11px"><a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.url)+'</a></td></tr>';
+  });
+  $('srcTable').innerHTML = h+'</tbody>';
+  $('srcNote').innerHTML = D.source.note;
+});
+
+/* ---------------- 研究边界 ---------------- */
+safe('研究边界', function(){
+  var h = '<thead><tr><th>#</th><th>留空内容</th><th>原因</th></tr></thead><tbody>';
+  D.bound.gaps.forEach(function(g){
+    h += '<tr><td class="vt">'+esc(g.id)+'</td><td>'+g.what+'</td><td style="color:#5C6762">'+g.why+'</td></tr>';
+  });
+  $('gapTable').innerHTML = h+'</tbody>';
+  var h2 = '<thead><tr><th>#</th><th>冲突项</th><th>口径 A</th><th>口径 B</th><th>source_id</th></tr></thead><tbody>';
+  D.bound.conflicts.forEach(function(c){
+    h2 += '<tr><td class="vt">'+esc(c.id)+'</td><td>'+c.what+'</td><td>'+c.a+'</td><td>'+c.b+'</td>'+
+          '<td style="color:#8D9691;font-size:11px">'+c.src+'</td></tr>';
+  });
+  $('conflictTable').innerHTML = h2+'</tbody>';
+  $('limitList').innerHTML = D.bound.limits.map(function(l){ return '<li>'+l+'</li>'; }).join('');
+});
+
+safe('产业链地图', function(){
+  renderChain();
+  showChain(D.chain.nodes[0].id);
+});
+})();
+</script>
+</body>
+</html>

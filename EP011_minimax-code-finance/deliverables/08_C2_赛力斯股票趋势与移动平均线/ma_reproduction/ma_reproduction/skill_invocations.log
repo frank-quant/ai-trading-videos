@@ -1,0 +1,167 @@
+# Skill / Tool Invocation Log
+# 项目：赛力斯（601127.SH）均线交叉分析
+# 工作目录：D:\quant-videos\MiniMax_Code\金融功能演示\场景实战\C2_赛力斯股票表现分析
+# 会话日期：2026-11-02 (Asia/Shanghai)
+# 说明：本文件如实记录本次会话中**实际发生**的技能加载与工具调用。
+#       未调用的技能/工具一律列在「未使用」一节，不做任何修饰性描述。
+
+================================================================================
+一、加载的技能（Skill）
+================================================================================
+
+[1] mcode-tools-master
+    加载目的 : 发现并调用行情类 Connector（恒生行情、同花顺 iFinD），并了解 App/Connector
+               的调用约定。
+    实际用途 : 通过 `mcode-tools connector call <tool> --args-file <json>` 调用
+               connector__hengsheng_market__* 与 connector__thsifind__*。
+               Windows 下 CLI 输出被包成 MCP content-block，由 scripts/mc.py 统一解包。
+    结果     : 个股行情与沪深300 基准均成功取到（详见 raw/ 原始响应）。
+
+[2] xlsx
+    加载目的 : 遵循该技能的 Formula-first 规范生成 Excel 联动工作簿。
+    实际用途 :
+      - 仅 Assumptions 允许硬编码（蓝字输入 + 黄底 + 边框），其余全部写成活的 `=` 公式；
+      - 交付前必须重算验证：`total_errors == 0`、`total_formulas > 0`；
+      - 正文字体 Calibri/Arial/Times New Roman；数字格式按技能 §5.3。
+    备注     : 技能自带的 `scripts/recalc.py` 在本机 Windows 上因宏路径问题不可用，
+               改用 **Excel COM（CalculateFullRebuild）** 重算，等价且更强（全量重算）。
+               本次交付的实际重算与校验由 `scripts/recalc_verify.py` 完成。
+
+[3] browser-use:control-in-app-browser
+    加载目的 : 验证离线 HTML 报告的真实渲染与交互（不外链、图表切换、放大、下载入口）。
+    实际用途 : 打开 file:// 本地页面 → 检查控制台 0 报错 → 切换图表 tab →
+               打开全屏放大 modal → 核对各章节 DOM 内容与图表 Y 轴刻度。
+    结果     : 控制台 0 条 error/warn；7 个章节全部渲染；3 个图表 tab + 费用图均正常；
+               放大 modal、滚轮缩放、拖拽平移、下载按钮均可用。
+
+================================================================================
+二、行情 Connector 调用
+================================================================================
+
+说明：scripts/mc.py 每次调用都会把入参写一份到 raw/_args/，因此可用该目录下的
+      入参文件**逐一核对**调用次数与用途。下表按文件列出。
+
+[A] connector__hengsheng_market__search_instruments
+    用法   : 代码检索，核验 601127.SH = 赛力斯（上交所，matchType=exact_code）
+    次数   : 2
+      - raw/_args/seres_identity.json
+      - raw/_args/probe_idx_hengsheng.json   ← 探测恒生是否支持指数代码（结论：不支持）
+
+[B] connector__hengsheng_market__get_daily_bars
+    用法   : 个股日线；adjustment=forward（前复权）与原始未复权两套
+    次数   : 3
+      - raw/_args/seres_fwd.json   （822 根，adjustment=forward，coverageComplete=true）
+      - raw/_args/seres_raw.json   （822 根，未复权，用于复权核验）
+      - raw/_args/probe_W_3m.json / probe_W_4m.json（区间探测）
+    留存   : raw/seres_fwd.json（basisVersion=djEvY25fcHJvZF9ydF92MS8zNTAxLzI，
+             revision=djEvY25fcHJvZF9ydF92MS8zNTAxLzMy）
+             raw/seres_raw.json
+
+[C] connector__thsifind__get_security_indicators（market=指数 / 股票）
+    用法   : ① 沪深300 价格指数取数（因恒生不支持指数代码而换源）
+             ② 赛力斯跨源抽检与标准指标对照（MA/RSI/MACD）
+    次数   : 24
+      - raw/_args/probe_idx_ifind.json         ← 探测 iFinD 指数取数可行
+      - raw/_args/ifind_csi300_identity.json   ← 指数基础信息
+      - raw/_args/ifind_csi300_full.json       ← 探测单次 100 行上限与静默降采样
+      - raw/_args/probe_chunk_H1_2023.json / probe_chunk_H1_2024.json
+      - raw/_args/ifind_csi300_2023-06-01_2023-08-29.json
+      - raw/_args/ifind_csi300_2023-08-30_2023-11-27.json
+      - raw/_args/ifind_csi300_2023-11-28_2024-02-25.json
+      - raw/_args/ifind_csi300_2024-02-26_2024-05-25.json
+      - raw/_args/ifind_csi300_2024-05-26_2024-08-23.json
+      - raw/_args/ifind_csi300_2024-08-24_2024-11-21.json
+      - raw/_args/ifind_csi300_2024-11-22_2025-02-19.json
+      - raw/_args/ifind_csi300_2025-02-20_2025-05-20.json
+      - raw/_args/ifind_csi300_2025-05-21_2025-08-18.json
+      - raw/_args/ifind_csi300_2025-08-19_2025-11-16.json
+      - raw/_args/ifind_csi300_2025-11-17_2026-02-14.json
+      - raw/_args/ifind_csi300_2026-02-15_2026-05-15.json
+      - raw/_args/ifind_csi300_2026-05-16_2026-08-13.json
+      - raw/_args/ifind_csi300_2026-08-14_2026-10-23.json
+             ↑ 14 个 ≤90 天自然日分块（因单次 100 行上限会静默降采样），逐块校验行数完整
+      - raw/_args/ifind_seres_spotcheck.json  ← 跨源抽检收盘价/前收
+      - raw/_args/ifind_seres_d1.json / ifind_seres_d2.json
+      - raw/_args/ifind_seres_tech_check.json ← 标准指标 MA/RSI/MACD 对照
+    留存   : raw/ifind_csi300_merged.json（1241 自然日 → 822 交易日）
+             raw/ifind_csi300_2023-06-01_2023-08-29.json …（14 个分块原文）
+             raw/ifind_seres_spotcheck.json / ifind_seres_d1.json / ifind_seres_d2.json
+             raw/ifind_seres_tech_check.json
+
+--------------------------------------------------------------------------------
+Connector 调用汇总
+--------------------------------------------------------------------------------
+    connector__hengsheng_market__search_instruments      2 次
+    connector__hengsheng_market__get_daily_bars          3 次
+    connector__thsifind__get_security_indicators        24 次
+    ---------------------------------------------------------------
+    合计                                                29 次
+    （= raw/_args/ 下 27 个入参文件 + raw/args_seres_fwd.json + raw/args_seres_identity.json）
+
+================================================================================
+三、工具检索（tool_search）
+================================================================================
+
+    tool_search 查询 "excel" / "spreadsheet" 等关键词
+    结果   : 未找到专用的 Excel MCP 工具
+    处置   : 改用 Python + openpyxl 生成工作簿，用 Excel COM 重算验证（见 §一[2]）
+
+================================================================================
+四、本地工具与脚本
+================================================================================
+
+    Bash / PowerShell   : 目录管理、哈希比对、批量执行 Python 脚本
+    Write / Edit / Read / Grep / Glob : 脚本与文档的编写与核对
+    openpyxl 3.1.5     : 工作簿生成 + data_only 回读校验
+    win32com (Excel 16.0 COM) : CalculateFullRebuild 全量重算并保存
+    matplotlib 3.11.1  : charts/*.png 三张图
+    pandas 3.0.5 / Python 3.14.5 : CSV 读写与统计
+
+    执行的脚本（按依赖顺序）：
+      scripts/mc.py                 Connector 调用封装
+      scripts/fetch_index.py        沪深300 分块抓取与解析
+      scripts/build_csvs.py         完整性校验 + 行情 CSV 落盘
+      scripts/indicators.py         指标与信号计算
+      scripts/make_snapshot.py      技术快照
+      scripts/backtest.py           回测（两套账本）
+      scripts/verify_ledgers.py     账本独立校验
+      scripts/backtest_report.py    逐笔与基准对照
+      scripts/metrics.py            绩效指标与费用分解
+      scripts/charts.py             三张图
+      scripts/qa_check.py           独立复核 47 项
+      scripts/build_workbook.py     Excel 工作簿生成
+      scripts/recalc_verify.py      Excel COM 重算 + 与 CSV 比对 57 项
+      scripts/build_html_report.py  离线 HTML 报告生成
+
+================================================================================
+五、未使用的技能与工具（如实记录）
+================================================================================
+
+    - 股市 Mini App 相关的 MCP 工具（mcp__minimax-stocks__*，含 watchlist / research_search /
+      wiki_* / data_sources 等）：本次任务全部数据来自行情 Connector 与本地文件，
+      未调用这些工具。
+    - web_search / web_fetch：本次数据来源为 Connector 的原始响应，未使用网页检索。
+    - website_deploy：交付物为本地文件，未部署到公网。
+    - minimax-docx / pptx / pdf 等文档技能：交付物为 xlsx / md / html，未使用。
+    - company-value-analyzer / investment-research-analyst / stock-financial-analysis 等
+      投研技能：本项目由自建脚本完成可复现计算，未调用这些技能。
+
+================================================================================
+六、复现提示
+================================================================================
+
+    重新取数（需要网络与 Connector 授权）：
+        python scripts\fetch_index.py
+    仅用已留档的原始响应复算全部结果（无需网络）：
+        python scripts\build_csvs.py
+        python scripts\indicators.py
+        python scripts\make_snapshot.py
+        python scripts\backtest.py
+        python scripts\verify_ledgers.py
+        python scripts\backtest_report.py
+        python scripts\metrics.py
+        python scripts\charts.py
+        python scripts\qa_check.py
+        python scripts\build_workbook.py
+        python scripts\recalc_verify.py      # 需要本机安装 Excel
+        python scripts\build_html_report.py

@@ -1,0 +1,29 @@
+{
+  "recalc_seconds": 3.8,
+  "sheets": [
+    "Assumptions",
+    "Prices",
+    "Indicators",
+    "Ledger",
+    "Ledger_Gross",
+    "QA",
+    "Summary",
+    "Prices_Bench"
+  ],
+  "total_formulas": 58452,
+  "formulas_per_sheet": {
+    "Assumptions": 0,
+    "Prices": 0,
+    "Indicators": 16440,
+    "Ledger": 13974,
+    "Ledger_Gross": 13974,
+    "QA": 45,
+    "Summary": 14019,
+    "Prices_Bench": 0
+  },
+  "error_cells": 0,
+  "error_examples": [],
+  "checks_total": 57,
+  "checks_passed": 57,
+  "checks_failed": []
+}

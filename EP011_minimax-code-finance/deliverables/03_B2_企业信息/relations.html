@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>赛力斯股权关系图谱 · 601127.SH</title>
+<style>
+  :root{
+    --bg:#0a0e14; --bg2:#0d131d; --panel:#111926; --panel2:#16202f; --panel3:#1c2739;
+    --line:#243146; --line2:#2e3d56;
+    --text:#e8eef7; --muted:#8b98ad; --dim:#5c6a80;
+    --accent:#4c8dff; --share:#f5a524; --subs:#2dd4a7; --alert:#ff6b6b;
+    --shadow:0 10px 34px rgba(0,0,0,.55);
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{
+    background:
+      radial-gradient(1100px 620px at 22% -8%, #16233a 0%, transparent 62%),
+      radial-gradient(900px 560px at 96% 108%, #13272c 0%, transparent 60%),
+      var(--bg);
+    color:var(--text);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans SC",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:14px; line-height:1.6; -webkit-font-smoothing:antialiased;
+    display:flex; flex-direction:column; overflow:hidden;
+  }
+
+  /* ---------- header ---------- */
+  header{
+    flex:0 0 auto; display:flex; align-items:center; gap:22px; flex-wrap:wrap;
+    padding:14px 22px; background:linear-gradient(180deg,rgba(18,26,40,.92),rgba(13,19,29,.72));
+    border-bottom:1px solid var(--line); backdrop-filter:blur(8px);
+  }
+  .brand{display:flex; align-items:center; gap:13px; min-width:0}
+  .brand .dot{
+    width:40px;height:40px;border-radius:12px;flex:0 0 auto;
+    background:radial-gradient(circle at 32% 28%, #6ea8ff, #2b63d8 62%, #1b3f96);
+    box-shadow:0 0 0 1px rgba(120,170,255,.34), 0 0 22px rgba(76,141,255,.42);
+    display:grid;place-items:center;font-weight:700;font-size:15px;color:#eaf1ff;letter-spacing:.5px;
+  }
+  .brand h1{margin:0;font-size:17px;font-weight:650;letter-spacing:.2px;white-space:nowrap}
+  .brand .sub{margin:1px 0 0;font-size:12px;color:var(--muted);display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+  .chip{
+    font-size:11.5px;padding:2px 9px;border-radius:999px;border:1px solid var(--line2);
+    background:var(--panel2);color:var(--muted);white-space:nowrap;
+  }
+  .chip b{color:var(--text);font-weight:600}
+  .chip.ok{border-color:rgba(45,212,167,.42);background:rgba(45,212,167,.11);color:#8ce9d0}
+  .chip.ok b{color:#b9f5e6}
+
+  .spacer{flex:1 1 auto}
+  .filters{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .filters .lab{font-size:11.5px;color:var(--dim);letter-spacing:.6px;margin-right:2px}
+  .fbtn{
+    font:inherit;font-size:12.5px;cursor:pointer;padding:6px 13px;border-radius:9px;
+    border:1px solid var(--line2);background:var(--panel2);color:var(--muted);
+    transition:.16s ease; display:inline-flex;align-items:center;gap:7px;
+  }
+  .fbtn:hover{border-color:#3b5074;color:var(--text);transform:translateY(-1px)}
+  .fbtn .sw{width:9px;height:9px;border-radius:50%;background:currentColor;opacity:.85}
+  .fbtn.on{background:var(--panel3);color:var(--text);border-color:var(--line2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}
+  .fbtn.on[data-f="all"]{border-color:rgba(76,141,255,.6);color:#a9c9ff}
+  .fbtn.on[data-f="shareholder"]{border-color:rgba(245,165,36,.6);color:#ffd48a}
+  .fbtn.on[data-f="subsidiary"]{border-color:rgba(45,212,167,.6);color:#8ce9d0}
+  .fbtn .n{font-size:11px;color:var(--dim);font-family:var(--mono)}
+  .fbtn.on .n{color:inherit;opacity:.75}
+
+  /* ---------- layout ---------- */
+  main{flex:1 1 auto;display:flex;min-height:0}
+  .stage{position:relative;flex:1 1 auto;min-width:0}
+  svg#graph{width:100%;height:100%;display:block;cursor:grab;touch-action:none}
+  svg#graph.panning{cursor:grabbing}
+  svg#graph.dragging{cursor:grabbing}
+
+  /* ---------- svg pieces ---------- */
+  .edge{stroke-width:1.9;fill:none;transition:stroke-opacity .18s,stroke-width .18s}
+  .edge.shareholder{stroke:var(--share)} .edge.subsidiary{stroke:var(--subs)}
+  .edge.dim{stroke-opacity:.13}
+  .edge.hot{stroke-width:3.2;stroke-opacity:1;filter:drop-shadow(0 0 6px currentColor)}
+  .ratio{
+    font-family:var(--mono);font-size:11px;fill:var(--muted);text-anchor:middle;
+    paint-order:stroke;stroke:var(--bg);stroke-width:4px;stroke-linejoin:round;pointer-events:none;
+    transition:.18s
+  }
+  .ratio.hot{fill:#fff;font-size:12px}
+  .ratio.dim{opacity:.2}
+
+  .node{cursor:pointer}
+  .node .core{transition:stroke-width .18s,filter .18s}
+  .node.center .core{fill:url(#gradCenter);stroke:#8ab4ff;stroke-width:2.2;filter:drop-shadow(0 0 14px rgba(76,141,255,.6))}
+  .node.shareholder .core{fill:url(#gradShare);stroke:#ffca6e;stroke-width:1.6}
+  .node.subsidiary .core{fill:url(#gradSub);stroke:#7ff0d4;stroke-width:1.6}
+  .node.sel .core{stroke:#fff;stroke-width:3;filter:drop-shadow(0 0 16px currentColor)}
+  .node .ring{fill:none;stroke:#fff;stroke-opacity:0;stroke-width:2;transition:stroke-opacity .2s}
+  .node.sel .ring{stroke-opacity:.9}
+  .node:hover .core{filter:drop-shadow(0 0 12px currentColor)}
+  .node .halo{fill:none;stroke:#4c8dff;stroke-opacity:.45}
+  .node.center .halo{animation:pulse 2.9s ease-out infinite}
+  @keyframes pulse{0%{r:34px;stroke-opacity:.55}100%{r:64px;stroke-opacity:0}}
+  .node .label{
+    fill:var(--text);font-size:12px;text-anchor:middle;pointer-events:none;
+    paint-order:stroke;stroke:var(--bg);stroke-width:4px;stroke-linejoin:round;font-weight:500
+  }
+  .node.center .label{font-size:14px;font-weight:700;fill:#eaf1ff}
+  .node .sub2{fill:var(--dim);font-size:10px;text-anchor:middle;pointer-events:none;font-family:var(--mono)}
+
+  /* ---------- overlays ---------- */
+  .overlay{position:absolute;pointer-events:none}
+  .legend{
+    left:16px;bottom:16px;pointer-events:auto;background:rgba(17,25,38,.9);
+    border:1px solid var(--line);border-radius:12px;padding:11px 14px;box-shadow:var(--shadow);
+    font-size:11.5px;color:var(--muted);backdrop-filter:blur(7px);max-width:300px;
+  }
+  .panel-legend{
+    flex:0 0 auto;border-top:1px solid var(--line);background:var(--bg2);
+    padding:13px 18px 15px;font-size:11.5px;color:var(--muted)
+  }
+  .panel-legend h4{margin:0 0 9px;font-size:11px;color:var(--dim);letter-spacing:1px;font-weight:600}
+  .panel-legend .li{display:flex;align-items:center;gap:9px;margin:5px 0}
+  .panel-legend .note{
+    margin-top:9px;padding-top:8px;border-top:1px solid var(--line);color:var(--dim);line-height:1.6
+  }
+  .legend h4{margin:0 0 8px;font-size:11px;color:var(--dim);letter-spacing:1px;font-weight:600}
+  .legend .li{display:flex;align-items:center;gap:9px;margin:5px 0}
+  .legend .gl{width:26px;height:0;border-top:2px solid;position:relative;flex:0 0 auto}
+  .legend .gl::after{content:"";position:absolute;right:-1px;top:-4px;border:4px solid transparent;border-left-color:inherit}
+  .legend .gl.share{border-color:var(--share);color:var(--share)}
+  .legend .gl.sub{border-color:var(--subs);color:var(--subs)}
+  .legend .gl.center{border-color:var(--accent);color:var(--accent)}
+  .legend .note{margin-top:9px;padding-top:8px;border-top:1px solid var(--line);color:var(--dim);line-height:1.55}
+
+  .tools{right:16px;top:16px;pointer-events:auto;display:flex;flex-direction:column;gap:7px}
+  .tool{
+    width:34px;height:34px;border-radius:9px;border:1px solid var(--line);background:rgba(17,25,38,.92);
+    color:var(--muted);cursor:pointer;font-size:15px;display:grid;place-items:center;
+    transition:.15s;backdrop-filter:blur(7px);box-shadow:var(--shadow)
+  }
+  .tool:hover{color:var(--text);border-color:var(--line2);background:var(--panel3)}
+  .hint{
+    right:16px;bottom:16px;font-size:11px;color:var(--dim);text-align:right;line-height:1.7;
+    background:rgba(13,19,29,.72);border:1px solid var(--line);border-radius:10px;padding:8px 12px;
+    pointer-events:none;backdrop-filter:blur(6px)
+  }
+  .hint kbd{
+    font-family:var(--mono);font-size:10px;background:var(--panel3);border:1px solid var(--line2);
+    border-radius:4px;padding:1px 5px;color:var(--muted)
+  }
+  .stats{
+    left:16px;top:16px;pointer-events:none;display:flex;gap:8px;flex-wrap:wrap
+  }
+  .stat{
+    background:rgba(17,25,38,.86);border:1px solid var(--line);border-radius:9px;padding:6px 11px;
+    font-size:11.5px;color:var(--muted);backdrop-filter:blur(7px)
+  }
+  .stat b{font-family:var(--mono);color:var(--text);font-size:13px;margin-right:3px}
+
+  /* ---------- panel ---------- */
+  aside{
+    flex:0 0 400px;max-width:44vw;background:var(--panel);border-left:1px solid var(--line);
+    display:flex;flex-direction:column;min-height:0
+  }
+  .panel-hd{
+    flex:0 0 auto;padding:13px 18px;border-bottom:1px solid var(--line);
+    display:flex;align-items:center;gap:10px;background:var(--bg2)
+  }
+  .panel-hd h2{margin:0;font-size:13px;font-weight:650;letter-spacing:.3px}
+  .panel-hd .badge{
+    font-size:11px;padding:2px 9px;border-radius:999px;border:1px solid var(--line2);
+    color:var(--muted);background:var(--panel2)
+  }
+  .panel-bd{flex:1 1 auto;overflow-y:auto;padding:16px 18px 26px}
+  .panel-bd::-webkit-scrollbar{width:9px}
+  .panel-bd::-webkit-scrollbar-thumb{background:#27354b;border-radius:9px;border:2px solid var(--panel)}
+  .panel-bd::-webkit-scrollbar-track{background:transparent}
+
+  .empty{color:var(--dim);text-align:center;padding:46px 14px;font-size:13px;line-height:1.9}
+  .empty .big{font-size:34px;opacity:.35;display:block;margin-bottom:10px}
+
+  .node-head{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px}
+  .avatar{
+    width:46px;height:46px;border-radius:12px;flex:0 0 auto;display:grid;place-items:center;
+    font-weight:700;font-size:15px;color:#0b1018
+  }
+  .avatar.center{background:linear-gradient(140deg,#7fb0ff,#2f6ae0)}
+  .avatar.shareholder{background:linear-gradient(140deg,#ffd88a,#f2a11f)}
+  .avatar.subsidiary{background:linear-gradient(140deg,#9df3dd,#22c39a)}
+  .node-head .nm{font-size:15.5px;font-weight:650;line-height:1.35;word-break:break-all}
+  .node-head .tags{margin-top:6px;display:flex;gap:6px;flex-wrap:wrap}
+
+  h3.sec{
+    font-size:11px;letter-spacing:1.1px;color:var(--dim);font-weight:600;
+    margin:20px 0 9px;padding-bottom:6px;border-bottom:1px solid var(--line)
+  }
+  h3.sec:first-of-type{margin-top:4px}
+
+  table.kv{width:100%;border-collapse:collapse;font-size:12.5px}
+  table.kv td{padding:6px 0;vertical-align:top;border-bottom:1px dashed rgba(36,49,70,.65)}
+  table.kv tr:last-child td{border-bottom:none}
+  table.kv td.k{color:var(--muted);width:104px;white-space:nowrap}
+  table.kv td.v{color:var(--text);word-break:break-word;font-family:var(--mono);font-size:12px}
+  table.kv td.v.txt{font-family:inherit;font-size:12.5px}
+
+  .rel{
+    border:1px solid var(--line);border-radius:11px;padding:12px;margin-bottom:11px;
+    background:var(--panel2);transition:.16s;cursor:pointer
+  }
+  .rel:hover{border-color:var(--line2);background:var(--panel3);transform:translateX(2px)}
+  .rel .rt{display:flex;align-items:center;gap:8px;margin-bottom:9px;flex-wrap:wrap}
+  .pill{font-size:10.5px;padding:2px 8px;border-radius:999px;font-weight:600;letter-spacing:.2px}
+  .pill.share{background:rgba(245,165,36,.14);color:#ffc76b;border:1px solid rgba(245,165,36,.34)}
+  .pill.sub{background:rgba(45,212,167,.13);color:#7df0d3;border:1px solid rgba(45,212,167,.32)}
+  .pill.out{background:rgba(76,141,255,.13);color:#9dc2ff;border:1px solid rgba(76,141,255,.32)}
+  .rel .dir{font-size:11px;color:var(--dim);font-family:var(--mono)}
+  .rel .amt{
+    font-family:var(--mono);font-size:19px;font-weight:600;letter-spacing:-.3px;margin:2px 0 1px
+  }
+  .rel .amt small{font-size:11.5px;color:var(--muted);font-weight:400;margin-left:5px}
+  .rel .who{font-size:12.5px;color:var(--text);margin:3px 0 9px;word-break:break-all}
+  .rel .meta{
+    display:grid;grid-template-columns:auto 1fr;gap:3px 10px;font-size:11px;color:var(--dim);
+    border-top:1px solid var(--line);padding-top:8px
+  }
+  .rel .meta .lab{white-space:nowrap}
+  .rel .note{
+    font-size:11.5px;color:var(--muted);margin-top:8px;padding:8px 10px;border-radius:8px;
+    background:rgba(10,14,20,.55);border-left:2px solid var(--line2);line-height:1.65
+  }
+  .rel .note .src{
+    display:block;margin-top:6px;font-family:var(--mono);font-size:10.5px;color:var(--dim);
+    word-break:break-all
+  }
+  .foot{
+    margin-top:22px;padding-top:14px;border-top:1px solid var(--line);
+    font-size:11px;color:var(--dim);line-height:1.85
+  }
+  .foot code{font-family:var(--mono);color:var(--muted)}
+  @media (max-width:1080px){
+    aside{flex-basis:330px}
+    .brand h1{font-size:15px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="dot">赛</div>
+    <div>
+      <h1>赛力斯集团股份有限公司 · 股权关系图谱</h1>
+      <div class="sub">
+        <span class="chip">A 股 <b>601127.SH</b> 上交所主板</span>
+        <span class="chip">H 股 <b>09927.HK</b></span>
+        <span class="chip ok">登记状态 <b>存续</b></span>
+        <span class="chip">统一社会信用代码 <b>915001066608898456</b></span>
+        <span class="chip">实际控制人 <b>张兴海 11.4522%</b></span>
+      </div>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <div class="filters">
+    <span class="lab">关系类型</span>
+    <button class="fbtn on" data-f="all"><span class="sw"></span>全部<span class="n">10</span></button>
+    <button class="fbtn" data-f="shareholder" style="color:#f5a524"><span class="sw"></span>直接股东<span class="n">5</span></button>
+    <button class="fbtn" data-f="subsidiary" style="color:#2dd4a7"><span class="sw"></span>直接控股子公司<span class="n">5</span></button>
+  </div>
+</header>
+
+<main>
+  <section class="stage">
+    <svg id="graph" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid meet" aria-label="股权关系图谱">
+      <defs>
+        <radialGradient id="gradCenter" cx="35%" cy="30%">
+          <stop offset="0%" stop-color="#9cc2ff"/><stop offset="62%" stop-color="#3a72e0"/><stop offset="100%" stop-color="#1d47a8"/>
+        </radialGradient>
+        <radialGradient id="gradShare" cx="35%" cy="30%">
+          <stop offset="0%" stop-color="#ffe0a3"/><stop offset="62%" stop-color="#f0a028"/><stop offset="100%" stop-color="#a9640a"/>
+        </radialGradient>
+        <radialGradient id="gradSub" cx="35%" cy="30%">
+          <stop offset="0%" stop-color="#b6f6e6"/><stop offset="62%" stop-color="#2acda3"/><stop offset="100%" stop-color="#11795e"/>
+        </radialGradient>
+        <marker id="ar-share" viewBox="0 0 10 10" refX="9.2" refY="5" markerWidth="6.4" markerHeight="6.4" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#f5a524"/>
+        </marker>
+        <marker id="ar-sub" viewBox="0 0 10 10" refX="9.2" refY="5" markerWidth="6.4" markerHeight="6.4" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#2dd4a7"/>
+        </marker>
+        <marker id="ar-center" viewBox="0 0 10 10" refX="9.2" refY="5" markerWidth="6.4" markerHeight="6.4" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#4c8dff"/>
+        </marker>
+      </defs>
+      <g id="viewport">
+        <g id="linkLayer"></g>
+        <g id="nodeLayer"></g>
+      </g>
+    </svg>
+
+    <div class="overlay stats">
+      <div class="stat"><b id="sNodes">11</b>节点</div>
+      <div class="stat"><b id="sLinks">10</b>关系</div>
+      <div class="stat"><b id="sRatio">—</b>直接股东合计持股</div>
+      <div class="stat">查询日期 <b id="sDate">2026-11-01</b></div>
+    </div>
+
+    <div class="overlay tools">
+      <button class="tool" id="zoomIn"  title="放大">＋</button>
+      <button class="tool" id="zoomOut" title="缩小">－</button>
+      <button class="tool" id="fit"     title="适应窗口">⤢</button>
+      <button class="tool" id="reset"   title="重置布局">⟳</button>
+    </div>
+
+    <div class="overlay hint">
+      <kbd>拖动</kbd> 平移视图 · <kbd>滚轮</kbd> 缩放 · <kbd>拖节点</kbd> 调整位置<br>
+      <kbd>单击节点</kbd> 查看详情 · <kbd>空白处单击</kbd> 取消选择
+    </div>
+  </section>
+
+  <aside>
+    <div class="panel-hd">
+      <h2 id="panelTitle">主体详情</h2>
+      <span class="badge" id="panelBadge">未选择</span>
+    </div>
+    <div class="panel-bd" id="panelBody"></div>
+    <div class="panel-legend">
+      <h4>图 例</h4>
+      <div class="li"><span class="gl center"></span><span>赛力斯集团（中心主体）</span></div>
+      <div class="li"><span class="gl share"></span><span>直接股东（箭头指向赛力斯）</span></div>
+      <div class="li"><span class="gl sub"></span><span>直接控股子公司（箭头由赛力斯射出）</span></div>
+      <div class="note">节点面积对应持股比例 / 认缴出资额；连线标注为持股比例。箭头方向：由持股方指向被持股方。</div>
+    </div>
+  </aside>
+</main>
+
+<script>
+(function(){
+"use strict";
+
+/* =========================================================================
+   数据：严格取自 relations.csv 与企查查工商登记查询结果
+   ========================================================================= */
+var QUERY_DATE = "2026-11-01";
+
+var NODES = [
+  {
+    id:"seres-group", kind:"center", name:"赛力斯集团股份有限公司", short:"赛力斯集团",
+    r:34,
+    uscc:"915001066608898456", status:"存续（在营、开业、在册）", legalRep:"尹先知",
+    established:"2007-05-11", capital:"174198.5086 万元", paidIn:"174198.5086 万元",
+    regType:"股份有限公司（上市公司）", authority:"重庆市沙坪坝区市场监督管理局", approved:"2026-05-15",
+    address:"重庆市沙坪坝区五云湖路7号", region:"重庆市 / 沙坪坝区",
+    industry:"制造业 — 汽车制造业 — 汽车整车制造 — 新能源车整车制造",
+    employees:"555 人（人员规模 500-599 人）",
+    listing:"601127.SH 上交所主板（2016-06-15 上市，上市曾用名「小康股份」）／ 09927.HK",
+    control:"实际控制人：张兴海，总持股比例 11.4522%；受益所有权形成日期 2026-05-15",
+    note:"曾用名沿革：重庆渝安控股有限公司 → 重庆小康汽车控股有限公司 → 重庆小康汽车集团有限公司 → 重庆小康工业集团股份有限公司 → 赛力斯集团股份有限公司（2022-07-30）"
+  },
+  {
+    id:"xk-holding", kind:"shareholder", name:"重庆小康控股有限公司", short:"重庆小康控股", r:23,
+    uscc:"91500000565633366F", status:"存续（在营、开业、在册）", legalRep:"张兴明",
+    established:"2010-12-14", capital:"20000 万元", paidIn:"11000 万元",
+    regType:"有限责任公司", authority:"重庆市市场监督管理局", approved:"2022-09-08",
+    address:"重庆市沙坪坝区五云湖路5号附13号", region:"重庆市 / 沙坪坝区",
+    industry:"金融业 — 资本市场服务 — 资本投资服务",
+    employees:"25 人（人员规模少于 50 人）",
+    note:"注册地址与重庆渝安汽车工业有限公司（五云湖路5号附14号）相邻。"
+  },
+  {
+    id:"dfag", kind:"shareholder", name:"东风汽车集团有限公司", short:"东风汽车集团", r:22,
+    uscc:"914200001000115161", status:"存续（在营、开业、在册）", legalRep:"杨青",
+    established:"1991-06-25", capital:"1560000 万元", paidIn:"1560000 万元",
+    regType:"有限责任公司（国有独资）", authority:"湖北省市场监督管理局", approved:"2024-01-04",
+    address:"湖北省武汉市武汉经济技术开发区东风大道特1号", region:"湖北省 / 武汉市 / 蔡甸区",
+    industry:"制造业 — 汽车制造业 — 汽车整车制造 — 汽柴油车整车制造",
+    employees:"100-199 人",
+    note:"国有独资汽车集团企业，与赛力斯存在长期产业与股权合作关系。"
+  },
+  {
+    id:"hkscc", kind:"shareholder", name:"HKSCC Nominees Limited", short:"HKSCC Nominees", r:19,
+    uscc:"未披露", status:"未披露（境外主体）", legalRep:"未披露",
+    established:"未披露", capital:"未披露", paidIn:"未披露",
+    regType:"境外证券登记结算托管机构（nominee）", authority:"未披露", approved:"未披露",
+    address:"中国香港", region:"中国香港",
+    industry:"未披露",
+    employees:"未披露",
+    note:"香港证券登记结算托管机构 nominee，境外主体无中国工商登记，统一社会信用代码未披露。"
+  },
+  {
+    id:"yuan-auto", kind:"shareholder", name:"重庆渝安汽车工业有限公司", short:"重庆渝安汽车工业", r:17,
+    uscc:"915001065656385896", status:"存续（在营、开业、在册）", legalRep:"张克邦",
+    established:"2010-12-16", capital:"2940 万元", paidIn:"2940.000009 万元",
+    regType:"有限责任公司", authority:"重庆市沙坪坝区市场监督管理局", approved:"2025-11-21",
+    address:"重庆市沙坪坝区回龙坝镇五云湖路5号附14号", region:"重庆市 / 沙坪坝区",
+    industry:"制造业 — 汽车制造业 — 汽车零部件及配件制造",
+    employees:"未披露",
+    note:"注册地址与第一大股东重庆小康控股有限公司（五云湖路5号附13号）相邻。"
+  },
+  {
+    id:"fund", kind:"shareholder", name:"重庆渝富高质产业母基金私募股权投资基金管理有限公司-重庆产业投资母基金合伙企业（有限合伙）",
+    short:"重庆产业投资母基金", r:16,
+    uscc:"91500000MABUFJUF14", status:"存续（在营、开业、在册）", legalRep:"重庆渝富高质产业母基金私募股权投资基金管理有限公司",
+    established:"2022-08-18", capital:"8000100 万元", paidIn:"未披露",
+    regType:"有限合伙企业", authority:"重庆市两江新区市场监督管理局", approved:"2024-03-26",
+    address:"重庆市渝北区青枫北路20-1（通信地址：渝北区仙桃街道景融街66号渝富创新中心A座12楼）",
+    region:"重庆市 / 北碚区",
+    industry:"租赁和商务服务业 — 商务服务业 — 组织管理服务 — 投资与资产管理",
+    employees:"未披露",
+    note:"执行事务合伙人为重庆渝富高质产业母基金私募股权投资基金管理有限公司；重庆产业投资母基金合伙企业（有限合伙）为注册登记名称。"
+  },
+  {
+    id:"seres-auto", kind:"subsidiary", name:"赛力斯汽车有限公司", short:"赛力斯汽车", r:26,
+    uscc:"91500000053224526L", status:"存续（在营、开业、在册）", legalRep:"岑远川",
+    established:"2012-09-04", capital:"1063727.9999 万元", paidIn:"1063727.9999 万元",
+    regType:"有限责任公司（自然人投资或控股）", authority:"重庆市两江新区市场监督管理局", approved:"2025-12-24",
+    address:"重庆市江北区福生大道229号", region:"重庆市 / 两江新区",
+    industry:"制造业 — 汽车制造业 — 汽车零部件及配件制造",
+    employees:"8961 人（人员规模 8000-8999 人，分支机构参保 1370 人）",
+    note:"赛力斯最大经营主体。曾用名：重庆金康新能源汽车有限公司（2022-05-10 更名）、重庆东康新能源汽车有限公司（2016-07-22 更名）。"
+  },
+  {
+    id:"seres-hubei", kind:"subsidiary", name:"赛力斯汽车（湖北）有限公司", short:"赛力斯汽车（湖北）", r:20,
+    uscc:"914203007510160460", status:"存续（在营、开业、在册）", legalRep:"梁其军",
+    established:"2003-05-26", capital:"80000 万元", paidIn:"80000 万元",
+    regType:"有限责任公司（非自然人投资或控股的法人独资）", authority:"十堰经济技术开发区市场监督管理局", approved:"2026-05-12",
+    address:"十堰市茅箭区白浪街办机场大道8号", region:"湖北省 / 十堰市 / 茅箭区",
+    industry:"制造业 — 汽车制造业 — 汽车整车制造 — 汽柴油车整车制造",
+    employees:"816 人（人员规模 800-899 人，分支机构参保 1262 人）",
+    note:"曾用名东风小康汽车有限公司（2023-10-11 更名）、东风渝安车辆有限公司（2010-09-16 更名）。"
+  },
+  {
+    id:"phoenix", kind:"subsidiary", name:"重庆凤凰技术有限公司", short:"重庆凤凰技术", r:19,
+    uscc:"91500106MAEDQC5B0L", status:"存续（在营、开业、在册）", legalRep:"朱乾勇",
+    established:"2025-03-17", capital:"55000 万元", paidIn:"5000 万元",
+    regType:"有限责任公司（自然人投资或控股的法人独资）", authority:"重庆市沙坪坝区市场监督管理局", approved:"2026-08-06",
+    address:"重庆市沙坪坝区回龙坝镇五云湖路7号", region:"重庆市 / 沙坪坝区",
+    industry:"信息传输、软件和信息技术服务业 — 软件和信息技术服务业 — 信息系统集成和物联网技术服务 — 信息系统集成服务",
+    employees:"191 人（人员规模 100-199 人）",
+    note:"主营人工智能基础软件开发、信息系统集成、智能机器人与智能车载设备制造等。"
+  },
+  {
+    id:"xk-power", kind:"subsidiary", name:"重庆小康动力有限公司", short:"重庆小康动力", r:19,
+    uscc:"915000006862444043", status:"存续（在营、开业、在册）", legalRep:"凌青海",
+    established:"2009-04-07", capital:"35000 万元", paidIn:"35000 万元",
+    regType:"有限责任公司（非自然人投资或控股的法人独资）", authority:"重庆市市场监督管理局", approved:"2026-06-29",
+    address:"重庆市长寿区晏家工业园区机电材料园", region:"重庆市 / 长寿区",
+    industry:"制造业 — 汽车制造业 — 汽车零部件及配件制造",
+    employees:"1304 人（人员规模 1000-1999 人）",
+    note:"经营范围含插电式混合动力专用发动机、机电耦合系统研发与汽车零部件再制造。"
+  },
+  {
+    id:"seres-overseas", kind:"subsidiary", name:"赛力斯海外（重庆）国际贸易有限公司", short:"赛力斯海外（重庆）", r:18,
+    uscc:"91500106MAG0LU934P", status:"存续（在营、开业、在册）", legalRep:"石增超",
+    established:"2025-10-15", capital:"30000 万元", paidIn:"30000 万元",
+    regType:"有限责任公司（非自然人投资或控股的法人独资）", authority:"重庆市沙坪坝区市场监督管理局", approved:"2026-09-15",
+    address:"重庆市沙坪坝区回龙坝镇五云湖路5号附27号", region:"重庆市 / 沙坪坝区",
+    industry:"批发和零售业 — 零售业 — 汽车、摩托车、零配件和燃料及其他动力销售 — 汽车新车零售",
+    employees:"未披露",
+    note:"主营新能源汽车整车销售、货物及技术进出口、进出口代理。"
+  }
+];
+
+var LINKS = [
+  {
+    id:"l1", type:"直接股东", typeKey:"shareholder", from:"seres-group", to:"xk-holding",
+    holder:"xk-holding", held:"seres-group",
+    ratio:21.3400, ratioText:"21.3400%", amount:"371726930股",
+    infoDate:"2026-05-15", queryDate:QUERY_DATE,
+    source:"企查查-股东信息(get_shareholder_info)+工商登记信息(get_company_registration_info)",
+    note:"终点持有起点21.3400%股份，为第一大股东；重庆小康控股有限公司法定代表人为张兴明，注册资本20000万元"
+  },
+  {
+    id:"l2", type:"直接股东", typeKey:"shareholder", from:"seres-group", to:"dfag",
+    holder:"dfag", held:"seres-group",
+    ratio:18.7900, ratioText:"18.7900%", amount:"327380952股",
+    infoDate:"2026-05-15", queryDate:QUERY_DATE,
+    source:"企查查-股东信息(get_shareholder_info)+工商登记信息(get_company_registration_info)",
+    note:"终点持有起点18.7900%股份；东风汽车集团有限公司企业类型为有限责任公司（国有独资），注册资本1560000万元"
+  },
+  {
+    id:"l3", type:"直接股东", typeKey:"shareholder", from:"seres-group", to:"hkscc",
+    holder:"hkscc", held:"seres-group",
+    ratio:6.0500, ratioText:"6.0500%", amount:"105424149股",
+    infoDate:"2026-05-15", queryDate:QUERY_DATE,
+    source:"企查查-股东信息(get_shareholder_info)",
+    note:"终点持有起点6.0500%股份；HKSCC Nominees Limited 为香港证券登记结算托管机构 nominee，境外主体无中国工商登记，统一社会信用代码未披露"
+  },
+  {
+    id:"l4", type:"直接股东", typeKey:"shareholder", from:"seres-group", to:"yuan-auto",
+    holder:"yuan-auto", held:"seres-group",
+    ratio:3.7900, ratioText:"3.7900%", amount:"66090950股",
+    infoDate:"2026-05-15", queryDate:QUERY_DATE,
+    source:"企查查-股东信息(get_shareholder_info)+工商登记信息(get_company_registration_info)",
+    note:"终点持有起点3.7900%股份；注册地址五云湖路5号附14号，与第一大股东重庆小康控股有限公司（附13号）相邻"
+  },
+  {
+    id:"l5", type:"直接股东", typeKey:"shareholder", from:"seres-group", to:"fund",
+    holder:"fund", held:"seres-group",
+    ratio:3.0500, ratioText:"3.0500%", amount:"53125024股",
+    infoDate:"2026-05-15", queryDate:QUERY_DATE,
+    source:"企查查-股东信息(get_shareholder_info)+工商登记信息(get_company_registration_info)",
+    note:"终点持有起点3.0500%股份；重庆产业投资母基金合伙企业（有限合伙）执行事务合伙人为重庆渝富高质产业母基金私募股权投资基金管理有限公司，登记机关为重庆市两江新区市场监督管理局"
+  },
+  {
+    id:"l6", type:"直接控股子公司", typeKey:"subsidiary", from:"seres-group", to:"seres-auto",
+    holder:"seres-group", held:"seres-auto",
+    ratio:93.633, ratioText:"93.633%", amount:"996000万元",
+    infoDate:"2025-06-23", queryDate:QUERY_DATE,
+    source:"企查查-对外投资(get_external_investments)+工商变更记录(get_change_records)+工商登记信息(get_company_registration_info)",
+    note:"起点持有终点93.633%股权（认缴996000万元/注册资本1063727.9999万元）；2025-06-23投资人变更后由国开制造业转型升级基金、交银/工银/农银金融资产投资等共同出资，非全资；参保8961人，为最大经营主体"
+  },
+  {
+    id:"l7", type:"直接控股子公司", typeKey:"subsidiary", from:"seres-group", to:"seres-hubei",
+    holder:"seres-group", held:"seres-hubei",
+    ratio:100, ratioText:"100%", amount:"80000万元",
+    infoDate:"2020-04-10", queryDate:QUERY_DATE,
+    source:"企查查-对外投资(get_external_investments)+工商变更记录(get_change_records)+工商登记信息(get_company_registration_info)",
+    note:"起点持有终点100%股权（认缴80000万元）；2020-04-10由东风汽车公司50%股权收购至100%，企业类型为有限责任公司（非自然人投资或控股的法人独资）；注册地湖北省十堰市茅箭区，原名东风小康汽车有限公司，2023-10-11更名"
+  },
+  {
+    id:"l8", type:"直接控股子公司", typeKey:"subsidiary", from:"seres-group", to:"phoenix",
+    holder:"seres-group", held:"phoenix",
+    ratio:100, ratioText:"100%", amount:"55000万元",
+    infoDate:"2026-08-06", queryDate:QUERY_DATE,
+    source:"企查查-对外投资(get_external_investments)+工商变更记录(get_change_records)+工商登记信息(get_company_registration_info)",
+    note:"起点持有终点100%股权；2026-08-06注册资本由5000万元增至55000万元，起点认缴55000万元；该股东地位曾于2025-12-29划转至重庆蓝电汽车科技有限公司、2026-02-25转回起点；主营人工智能与信息系统集成，参保191人"
+  },
+  {
+    id:"l9", type:"直接控股子公司", typeKey:"subsidiary", from:"seres-group", to:"xk-power",
+    holder:"seres-group", held:"xk-power",
+    ratio:100, ratioText:"100%", amount:"35000万元",
+    infoDate:"2024-05-16", queryDate:QUERY_DATE,
+    source:"企查查-对外投资(get_external_investments)+工商变更记录(get_change_records)+工商登记信息(get_company_registration_info)",
+    note:"起点持有终点100%股权（认缴35000万元）；2024-05-16登记股东由重庆小康工业集团股份有限公司变更为赛力斯集团股份有限公司；经营范围含汽车零部件制造、插电式混合动力专用发动机、机电耦合系统研发；参保1304人"
+  },
+  {
+    id:"l10", type:"直接控股子公司", typeKey:"subsidiary", from:"seres-group", to:"seres-overseas",
+    holder:"seres-group", held:"seres-overseas",
+    ratio:100, ratioText:"100%", amount:"30000万元",
+    infoDate:"2025-10-15", queryDate:QUERY_DATE,
+    source:"企查查-对外投资(get_external_investments)+工商变更记录(get_change_records)+工商登记信息(get_company_registration_info)",
+    note:"起点持有终点100%股权（认缴30000万元）；2025-10-15设立即为全资子公司，该主体变更记录中无投资人变更登记，信息日期以设立日计；主营新能源汽车整车销售及货物/技术进出口"
+  }
+];
+
+/* 箭头方向：由持股方(holder)指向被持股方(held)；箭头配色按关系类型 */
+LINKS.forEach(function(l){
+  l.marker = (l.typeKey === "shareholder") ? "ar-share" : "ar-sub";
+});
+
+var NODE_BY_ID = {};
+NODES.forEach(function(n){ NODE_BY_ID[n.id] = n; });
+
+/* =========================================================================
+   力导向布局
+   ========================================================================= */
+var CFG = {
+  repulsion: 30000,
+  linkStrength: 0.052,
+  linkDistance: 270,
+  centerPull: 0.024,
+  collidePad: 18,
+  damping: 0.86,
+  alphaDecay: 0.019,
+  alphaMin: 0.0025
+};
+
+/* SVG viewBox 用户单位（与 <svg viewBox="0 0 1000 700"> 保持一致） */
+var VIEW_W = 1000, VIEW_H = 700;
+
+var sim = { alpha:1, running:true };
+var view = { x:0, y:0, k:1 };
+var filter = "all";
+var visibleLinks = [], visibleNodes = [];
+var selected = null;
+var dragNode = null, panning = false;
+
+function seedPositions(){
+  var sh = NODES.filter(function(n){return n.kind==="shareholder";});
+  var su = NODES.filter(function(n){return n.kind==="subsidiary";});
+  var cen = NODE_BY_ID["seres-group"];
+  NODES.forEach(function(n){ n.fx = null; n.fy = null; });
+  cen.x = 500; cen.y = 350; cen.vx = 0; cen.vy = 0;
+
+  sh.forEach(function(n,i){
+    var a = (180 + (i-(sh.length-1)/2)*34) * Math.PI/180;
+    n.x = 500 + Math.cos(a)*248; n.y = 350 + Math.sin(a)*248; n.vx=0; n.vy=0;
+  });
+  su.forEach(function(n,i){
+    var a = ((i-(su.length-1)/2)*30 - 12) * Math.PI/180;
+    n.x = 500 + Math.cos(a)*300; n.y = 350 + Math.sin(a)*300; n.vx=0; n.vy=0;
+  });
+}
+seedPositions();
+
+function reheat(a){
+  sim.alpha = Math.max(sim.alpha, a===undefined?0.85:a);
+  sim.running = true;   /* 仿真收敛后必须重新启动，否则位置变更不会生效 */
+}
+
+function computeVisible(){
+  visibleLinks = LINKS.filter(function(l){ return filter==="all" || l.typeKey===filter; });
+  var ids = {};
+  visibleLinks.forEach(function(l){ ids[l.from]=1; ids[l.to]=1; });
+  ids["seres-group"]=1;
+  visibleNodes = NODES.filter(function(n){ return ids[n.id]; });
+}
+
+/* =========================================================================
+   渲染
+   ========================================================================= */
+var svg = document.getElementById("graph");
+var gViewport = document.getElementById("viewport");
+var gLinks = document.getElementById("linkLayer");
+var gNodes = document.getElementById("nodeLayer");
+var NS = "http://www.w3.org/2000/svg";
+
+function el(tag, attrs){
+  var e = document.createElementNS(NS, tag);
+  for (var k in attrs) if (attrs.hasOwnProperty(k)) e.setAttribute(k, attrs[k]);
+  return e;
+}
+function txt(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+function buildScene(){
+  gLinks.textContent = ""; gNodes.textContent = "";
+  linkEls = {}; nodeEls = {};
+
+  visibleLinks.forEach(function(l){
+    var g = el("g", {"class":"link"});
+    var line = el("line", {"class":"edge "+l.typeKey, "marker-end":"url(#"+l.marker+")"});
+    var tx = el("text", {"class":"ratio"});
+    tx.textContent = l.ratioText;
+    g.appendChild(line); g.appendChild(tx);
+    gLinks.appendChild(g);
+    linkEls[l.id] = {g:g, line:line, tx:tx};
+  });
+
+  visibleNodes.forEach(function(n){
+    var g = el("g", {"class":"node "+n.kind, "data-id":n.id});
+    var halo = el("circle", {"class":"halo", "r": n.kind==="center"?34:(n.r+8)});
+    var core = el("circle", {"class":"core", "r": n.r});
+    var ring = el("circle", {"class":"ring", "r": n.r+5});
+    var lb  = el("text", {"class":"label", "y": n.r+17});
+    lb.textContent = n.short;
+    var sb  = el("text", {"class":"sub2", "y": n.r+30});
+    sb.textContent = n.kind==="center" ? "601127.SH" : n.uscc;
+    var ttl = el("title");
+    ttl.textContent = n.name + (n.kind==="center" ? "" : "（" + n.uscc + "）");
+    g.appendChild(halo); g.appendChild(ring); g.appendChild(core); g.appendChild(lb); g.appendChild(sb); g.appendChild(ttl);
+    gNodes.appendChild(g);
+    nodeEls[n.id] = {g:g, core:core, lb:lb, sb:sb};
+  });
+}
+var linkEls = {}, nodeEls = {};
+
+function draw(){
+  visibleNodes.forEach(function(n){
+    var e = nodeEls[n.id];
+    if (e) e.g.setAttribute("transform", "translate(" + n.x + "," + n.y + ")");
+  });
+  visibleLinks.forEach(function(l){
+    var a = NODE_BY_ID[l.holder], b = NODE_BY_ID[l.held];
+    if (!a || !b) return;
+    var dx = b.x-a.x, dy = b.y-a.y;
+    var len = Math.hypot(dx,dy) || 1;
+    var ux = dx/len, uy = dy/len;
+    var rA = a.r + 2, rB = b.r + 9;
+    var e = linkEls[l.id];
+    e.line.setAttribute("x1", a.x+ux*rA); e.line.setAttribute("y1", a.y+uy*rA);
+    e.line.setAttribute("x2", b.x-ux*rB); e.line.setAttribute("y2", b.y-uy*rB);
+    var mx = (a.x+b.x)/2, my = (a.y+b.y)/2;
+    e.tx.setAttribute("x", mx); e.tx.setAttribute("y", my-7);
+  });
+}
+
+function tick(){
+  if (sim.alpha <= CFG.alphaMin){ sim.running=false; return; }
+  var nodes = visibleNodes, n = nodes.length, i, j;
+
+  for (i=0;i<n;i++){
+    var a = nodes[i];
+    for (j=i+1;j<n;j++){
+      var b = nodes[j];
+      var dx = b.x-a.x, dy = b.y-a.y;
+      var d2 = dx*dx+dy*dy;
+      if (d2 < 1) { dx = (Math.random()-0.5)*2; dy=(Math.random()-0.5)*2; d2 = dx*dx+dy*dy; }
+      var d = Math.sqrt(d2);
+      var f = CFG.repulsion / d2;
+      var fx = dx/d*f, fy = dy/d*f;
+      a.vx -= fx; a.vy -= fy;
+      b.vx += fx; b.vy += fy;
+    }
+  }
+
+  visibleLinks.forEach(function(l){
+    var a = NODE_BY_ID[l.holder], b = NODE_BY_ID[l.held];
+    if (!a || !b) return;
+    var dx = b.x-a.x, dy = b.y-a.y;
+    var d = Math.hypot(dx,dy) || 1;
+    var target = CFG.linkDistance;
+    var f = (d - target) * CFG.linkStrength * sim.alpha;
+    var fx = dx/d*f, fy = dy/d*f;
+    a.vx += fx; a.vy += fy;
+    b.vx -= fx; b.vy -= fy;
+  });
+
+  nodes.forEach(function(a){
+    a.vx += (500-a.x)*CFG.centerPull*sim.alpha;
+    a.vy += (350-a.y)*CFG.centerPull*sim.alpha;
+  });
+
+  for (i=0;i<n;i++){
+    var a = nodes[i];
+    for (j=i+1;j<n;j++){
+      var b = nodes[j];
+      var dx = b.x-a.x, dy = b.y-a.y;
+      var d = Math.hypot(dx,dy) || 1;
+      var min = a.r + b.r + CFG.collidePad;
+      if (d < min){
+        var push = (min-d)/d*0.5;
+        a.x -= dx*push; a.y -= dy*push;
+        b.x += dx*push; b.y += dy*push;
+      }
+    }
+  }
+
+  nodes.forEach(function(a){
+    if (a.fx !== undefined && a.fx !== null){ a.x = a.fx; a.vx = 0; }
+    if (a.fy !== undefined && a.fy !== null){ a.y = a.fy; a.vy = 0; }
+    a.x += a.vx * CFG.damping;
+    a.y += a.vy * CFG.damping;
+    a.vx *= 0.82; a.vy *= 0.82;
+    a.x = Math.max(30, Math.min(970, a.x));
+    a.y = Math.max(20, Math.min(680, a.y));
+  });
+
+  sim.alpha *= (1 - CFG.alphaDecay);
+}
+
+var pendingFit = true;
+function frame(){
+  if (sim.running){ tick(); }
+  else if (pendingFit){ pendingFit = false; fitView(); }
+  draw();
+  requestAnimationFrame(frame);
+}
+
+/* =========================================================================
+   视图变换
+   ========================================================================= */
+function applyView(){
+  gViewport.setAttribute("transform","translate("+view.x+","+view.y+") scale("+view.k+")");
+}
+function zoomAt(cx, cy, factor){
+  var k2 = Math.max(0.35, Math.min(3.2, view.k*factor));
+  var r = k2/view.k;
+  view.x = cx - (cx - view.x)*r;
+  view.y = cy - (cy - view.y)*r;
+  view.k = k2;
+  applyView();
+}
+function svgPoint(evt){
+  var pt = svg.createSVGPoint();
+  pt.x = evt.clientX; pt.y = evt.clientY;
+  var m = svg.getScreenCTM();
+  if (!m) return {x:0,y:0};
+  var p = pt.matrixTransform(m.inverse());
+  return {x:p.x, y:p.y};
+}
+function toGraph(p){ return { x:(p.x-view.x)/view.k, y:(p.y-view.y)/view.k }; }
+
+function fitView(){
+  var xs=[], ys=[];
+  visibleNodes.forEach(function(n){ xs.push(n.x); ys.push(n.y); });
+  if (!xs.length) return;
+  var minX=Math.min.apply(null,xs), maxX=Math.max.apply(null,xs);
+  var minY=Math.min.apply(null,ys), maxY=Math.max.apply(null,ys);
+  /* 非对称留白：底部预留图例/提示条的覆盖区 */
+  var padL=140, padR=140, padT=100, padB=130;
+  var w=(maxX-minX)+padL+padR, h=(maxY-minY)+padT+padB;
+  /* viewBox 用户单位（1000×700）内做适配，避免与 CSS 像素混算 */
+  var k = Math.min(VIEW_W/w, VIEW_H/h);
+  k = Math.max(0.3, Math.min(1.6, k));
+  view.k = k;
+  view.x = padL + (VIEW_W - padL - padR - (maxX-minX)*k)/2 - minX*k;
+  view.y = padT + (VIEW_H - padT - padB - (maxY-minY)*k)/2 - minY*k;
+  applyView();
+}
+/* 元素视觉中心对应的 viewBox 用户坐标 */
+function userCenter(){
+  var rect = svg.getBoundingClientRect();
+  var m = svg.getScreenCTM();
+  if(!m) return {x:VIEW_W/2, y:VIEW_H/2};
+  var pt = svg.createSVGPoint();
+  pt.x = rect.left + rect.width/2;
+  pt.y = rect.top + rect.height/2;
+  var p = pt.matrixTransform(m.inverse());
+  return {x:p.x, y:p.y};
+}
+
+/* =========================================================================
+   交互：拖拽 / 平移 / 缩放 / 选择
+   ========================================================================= */
+var last = null;
+var pressNodeId = null;
+var pressMoved = false;
+
+svg.addEventListener("pointerdown", function(e){
+  var t = e.target.closest ? e.target.closest(".node") : null;
+  /* 命中节点要在 setPointerCapture 之前判定：捕获后兼容鼠标事件会被重定向到 svg */
+  pressNodeId = t ? t.getAttribute("data-id") : null;
+  pressMoved = false;
+  svg.setPointerCapture(e.pointerId);
+  if (t){
+    var id = pressNodeId;
+    dragNode = NODE_BY_ID[id];
+    dragNode.fx = dragNode.x; dragNode.fy = dragNode.y;
+    svg.classList.add("dragging");
+    reheat(0.55);
+  } else {
+    panning = true;
+    svg.classList.add("panning");
+  }
+  last = svgPoint(e);
+});
+
+svg.addEventListener("pointermove", function(e){
+  var p = svgPoint(e);
+  /* 轻微抖动不算拖动（阈值 3 个 viewBox 用户单位） */
+  if (dragNode || panning){
+    if (Math.abs(p.x-last.x) > 3 || Math.abs(p.y-last.y) > 3) pressMoved = true;
+  }
+  if (dragNode){
+    var g = toGraph(p);
+    dragNode.fx = g.x; dragNode.fy = g.y;
+    reheat(0.4);
+  } else if (panning){
+    /* p 为 viewBox 用户坐标，位移直接累加，不再乘 view.k */
+    view.x += (p.x-last.x);
+    view.y += (p.y-last.y);
+    last = p;
+    applyView();
+  }
+});
+
+function endDrag(e){
+  /* 保留 fx/fy：节点停留在用户放置的位置，不弹回原处（重置布局可解除固定） */
+  if (dragNode) reheat(0.3);
+  dragNode = null; panning = false; last = null;
+  svg.classList.remove("dragging","panning");
+  if (pressNodeId) selectNode(pressNodeId);
+  else if (!pressMoved) selectNode(null);
+  pressNodeId = null;
+}
+svg.addEventListener("pointerup", endDrag);
+svg.addEventListener("pointercancel", endDrag);
+svg.addEventListener("pointerleave", function(){ if (!dragNode && !panning) svg.classList.remove("dragging","panning"); });
+
+svg.addEventListener("wheel", function(e){
+  e.preventDefault();
+  var p = svgPoint(e);
+  zoomAt(p.x, p.y, e.deltaY < 0 ? 1.11 : 0.9);
+}, {passive:false});
+
+gNodes.addEventListener("mouseover", function(e){
+  var t = e.target.closest ? e.target.closest(".node") : null;
+  if (!t) return;
+  var id = t.getAttribute("data-id");
+  visibleLinks.forEach(function(l){
+    var on = (l.from===id || l.to===id);
+    linkEls[l.id].g.classList.toggle("hot", on);
+    linkEls[l.id].line.classList.toggle("hot", on);
+    linkEls[l.id].tx.classList.toggle("hot", on);
+    linkEls[l.id].tx.classList.toggle("dim", !on);
+    linkEls[l.id].line.classList.toggle("dim", !on);
+  });
+});
+gNodes.addEventListener("mouseout", function(){
+  visibleLinks.forEach(function(l){
+    linkEls[l.id].g.classList.remove("hot");
+    linkEls[l.id].line.classList.remove("hot");
+    linkEls[l.id].tx.classList.remove("hot","dim");
+    linkEls[l.id].line.classList.remove("dim");
+  });
+});
+
+document.getElementById("zoomIn").onclick  = function(){ var c=userCenter(); zoomAt(c.x, c.y, 1.18); };
+document.getElementById("zoomOut").onclick = function(){ var c=userCenter(); zoomAt(c.x, c.y, 0.85); };
+document.getElementById("fit").onclick    = function(){ fitView(); };
+document.getElementById("reset").onclick  = function(){ seedPositions(); reheat(1); pendingFit = true; };
+
+document.querySelectorAll(".fbtn").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    document.querySelectorAll(".fbtn").forEach(function(b){ b.classList.remove("on"); });
+    btn.classList.add("on");
+    filter = btn.getAttribute("data-f");
+    computeVisible();
+    buildScene();
+    reheat(1);
+    updateStats();
+    if (selected && visibleNodes.some(function(n){return n.id===selected;})) renderPanel(selected);
+    else if (selected){ selected = null; renderPanel(null); }
+    pendingFit = true;
+  });
+});
+
+/* =========================================================================
+   详情面板
+   ========================================================================= */
+var panelBody = document.getElementById("panelBody");
+var panelTitle = document.getElementById("panelTitle");
+var panelBadge = document.getElementById("panelBadge");
+
+function esc(s){ return txt(s===undefined||s===null||s===""? "未披露" : s); }
+
+function kindLabel(k){
+  return k==="center" ? "中心主体" : (k==="shareholder" ? "直接股东" : "直接控股子公司");
+}
+function kindPill(k){
+  var cls = k==="center" ? "out" : (k==="shareholder" ? "share" : "sub");
+  return '<span class="pill '+cls+'">'+kindLabel(k)+'</span>';
+}
+
+function relCard(l, nodeId){
+  var other = NODE_BY_ID[l.holder===nodeId ? l.held : l.holder];
+  var isHolder = (l.holder === nodeId);
+  var dirText = l.typeKey==="shareholder"
+    ? (isHolder ? "本主体持有 赛力斯集团 股份" : "赛力斯集团 持有 本主体 股份")
+    : (isHolder ? "本主体持有 目标公司 股权" : "目标公司 持有 本主体 股权");
+  return '<div class="rel" data-goto="'+(other?other.id:"")+'">'
+    + '<div class="rt">'
+    +   (l.typeKey==="shareholder" ? '<span class="pill share">直接股东</span>' : '<span class="pill sub">直接控股子公司</span>')
+    +   '<span class="dir">'+ (l.typeKey==="shareholder" ? "持有方向：" : "持股方向：") + esc(dirText) + '</span>'
+    + '</div>'
+    + '<div class="amt">'+esc(l.ratioText)+'<small>'+esc(l.amount)+'</small></div>'
+    + '<div class="who">'+(isHolder ? "→ " : "← ")+esc(other ? other.name : "")+'</div>'
+    + '<div class="meta">'
+    +   '<span class="lab">信息日期</span><span>'+esc(l.infoDate)+'</span>'
+    +   '<span class="lab">查询日期</span><span>'+esc(l.queryDate)+'</span>'
+    + '</div>'
+    + '<div class="note">'+esc(l.note)+'<span class="src">来源：'+esc(l.source)+'</span></div>'
+    + '</div>';
+}
+
+function renderPanel(id){
+  if (!id){
+    panelTitle.textContent = "主体详情";
+    panelBadge.textContent = "未选择";
+    panelBody.innerHTML =
+      '<div class="empty"><span class="big">◎</span>'
+      + '点击图谱中任意节点<br>查看该主体的工商信息、持股关系、比例与来源'
+      + '<br><br><span style="color:var(--dim);font-size:11.5px">'
+      + '共 '+NODES.length+' 个主体 / '+LINKS.length+' 条股权关系<br>'
+      + '数据来源：企查查 · 查询日期 '+QUERY_DATE+'</span></div>';
+    return;
+  }
+  var n = NODE_BY_ID[id];
+  var rels = LINKS.filter(function(l){ return l.from===id || l.to===id; });
+  panelTitle.textContent = "主体详情";
+  panelBadge.textContent = kindLabel(n.kind);
+
+  var html = '';
+  html += '<div class="node-head"><div class="avatar '+n.kind+'">'+esc(n.short.slice(0,2))+'</div><div style="min-width:0">'
+        + '<div class="nm">'+esc(n.name)+'</div><div class="tags">'+kindPill(n.kind)
+        + '<span class="chip">关系数 '+rels.length+'</span>'
+        + (n.kind==="center" ? '<span class="chip ok">上市主体</span>' : '')
+        + '</div></div></div>';
+
+  html += '<h3 class="sec">工商登记信息</h3><table class="kv">';
+  function row(k,v,cls){ html += '<tr><td class="k">'+k+'</td><td class="v'+(cls?' '+cls:'')+'">'+esc(v)+'</td></tr>'; }
+  row("统一社会信用代码", n.uscc);
+  row("登记状态", n.status);
+  row("法定代表人", n.legalRep);
+  row("成立日期", n.established);
+  row("注册资本", n.capital);
+  if (n.paidIn) row("实缴资本", n.paidIn);
+  row("企业类型", n.regType, "txt");
+  row("登记机关", n.authority, "txt");
+  row("核准日期", n.approved);
+  row("注册地址", n.address, "txt");
+  row("所属地区", n.region);
+  row("所属行业", n.industry, "txt");
+  row("人员规模", n.employees, "txt");
+  if (n.listing) row("上市信息", n.listing, "txt");
+  if (n.control) row("控制权", n.control, "txt");
+  html += '</table>';
+
+  if (n.note){
+    html += '<h3 class="sec">备 注</h3><div class="note" style="border-left-color:var(--line2)">'+esc(n.note)+'</div>';
+  }
+
+  html += '<h3 class="sec">持股关系 · '+rels.length+' 条</h3>';
+  if (!rels.length){
+    html += '<div style="color:var(--dim);font-size:12px;padding:8px 0">该主体在当前筛选条件下没有直接股权关系。</div>';
+  } else {
+    rels.forEach(function(l){ html += relCard(l, id); });
+  }
+
+  html += '<div class="foot">'
+        + '关系口径：<code>直接股东</code> 指持有赛力斯集团股份有限公司股份的登记在册股东；<code>直接控股子公司</code> 指由赛力斯集团股份有限公司直接持股且处于存续状态的控股子公司。<br>'
+        + '箭头方向：由持股方指向被持股方。持股比例为一层直接比例，未做穿透或相乘推算。<br>'
+        + '数据来源：企查查（qichacha）企业数据 · 查询日期 <code>'+QUERY_DATE+'</code> · 原始数据见同目录 <code>relations.csv</code> 与 <code>source_data/</code>。'
+        + '</div>';
+
+  panelBody.innerHTML = html;
+  panelBody.querySelectorAll(".rel").forEach(function(el){
+    el.addEventListener("click", function(){
+      var g = el.getAttribute("data-goto");
+      if (g && NODE_BY_ID[g]) selectNode(g);
+    });
+  });
+}
+
+function selectNode(id){
+  selected = id;
+  Object.keys(nodeEls).forEach(function(k){
+    nodeEls[k].g.classList.toggle("sel", k===id);
+  });
+  renderPanel(id);
+}
+
+function updateStats(){
+  var shSum = 0;
+  LINKS.forEach(function(l){ if (l.typeKey==="shareholder") shSum += l.ratio; });
+  document.getElementById("sNodes").textContent = visibleNodes.length;
+  document.getElementById("sLinks").textContent = visibleLinks.length;
+  document.getElementById("sRatio").textContent = shSum.toFixed(2)+"%";
+  document.getElementById("sDate").textContent = QUERY_DATE;
+}
+
+/* =========================================================================
+   启动
+   ========================================================================= */
+computeVisible();
+buildScene();
+updateStats();
+renderPanel(null);
+applyView();
+reheat(1);
+requestAnimationFrame(frame);
+setTimeout(function(){ pendingFit = true; }, 300);
+window.addEventListener("resize", function(){ applyView(); pendingFit = true; });
+
+})();
+</script>
+</body>
+</html>

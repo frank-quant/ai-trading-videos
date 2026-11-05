@@ -1,0 +1,41 @@
+{
+  "n_rows": 822,
+  "warmup_rows": 59,
+  "first_non_warmup_date": "2023-08-25",
+  "signals_total": 111,
+  "signals_by_family_type": {
+    "sma20_sma60:death_cross": 8,
+    "macd:golden_cross": 28,
+    "sma5_sma20:golden_cross": 20,
+    "sma20_sma60:golden_cross": 7,
+    "macd:death_cross": 28,
+    "sma5_sma20:death_cross": 20
+  },
+  "consecutive_repeat_signals": 0,
+  "snapshot_days": 120,
+  "snapshot_start": "2026-04-27",
+  "snapshot_end": "2026-10-23",
+  "last_day": {
+    "date": "2026-10-23",
+    "close": 42.53,
+    "sma5": 42.81799999999977,
+    "sma20": 46.42100000000011,
+    "sma60": 50.43199999999997,
+    "ema12": 44.85631298032974,
+    "ema26": 46.59591155231207,
+    "macd_dif": -1.7395985719823273,
+    "macd_dea": -1.2290852777572556,
+    "macd_hist": -1.0210265884501433,
+    "rsi14": 38.80585379454459,
+    "score": 8,
+    "band": "弱势",
+    "reasons": [
+      "均线排列「空头排列」0/30",
+      "SMA20 与 SMA60 斜率同为向下 +0/10",
+      "RSI14=38.8，弱势区 +8/15",
+      "MACD 死叉且柱体为负（DIF -1.740 ≤ DEA -1.229） +0/15",
+      "收盘价 42.53 位于 SMA5(42.82) 下方 +0/10",
+      "收盘价跌破 SMA20(46.42) 与 SMA60(50.43) +0/10"
+    ]
+  }
+}

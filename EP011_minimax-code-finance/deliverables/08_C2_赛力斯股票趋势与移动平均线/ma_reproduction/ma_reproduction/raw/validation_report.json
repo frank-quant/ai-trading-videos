@@ -1,0 +1,178 @@
+{
+  "stock": {
+    "n": 822,
+    "first": "2023-06-01",
+    "last": "2026-10-23",
+    "duplicates": [],
+    "nulls": {
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 0,
+      "previousClose": 0,
+      "volume": 0,
+      "amount": 0
+    },
+    "ohlc_violations": [],
+    "non_final_rows": [],
+    "non_provider_daily": [],
+    "long_gaps": [
+      [
+        "2023-09-28",
+        "2023-10-09",
+        11
+      ],
+      [
+        "2024-02-08",
+        "2024-02-19",
+        11
+      ],
+      [
+        "2026-02-13",
+        "2026-02-24",
+        11
+      ]
+    ],
+    "status": "ok",
+    "cacheStatus": "filled",
+    "coverageComplete": true,
+    "adjustment": "forward",
+    "basisVersion": "djEvY25fcHJvZF9ydF92MS8zNTAxLzI",
+    "revision": "djEvY25fcHJvZF9ydF92MS8zNTAxLzMy",
+    "fetchedAt": "2026-11-02T12:15:04+08:00",
+    "effectiveRange": {
+      "startDate": "2023-06-01",
+      "endDate": "2026-10-23"
+    },
+    "quality": {
+      "approximate": false
+    },
+    "errors": []
+  },
+  "index": {
+    "n_calendar_rows": 1241,
+    "n_trading": 822,
+    "first": "2023-06-01",
+    "last": "2026-10-23",
+    "duplicates": [],
+    "nulls_in_trading_rows": {
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 0,
+      "volume": 0,
+      "amount": 0
+    },
+    "ohlc_violations": [],
+    "non_positive_close": [],
+    "chunks": [
+      {
+        "start": "2023-06-01",
+        "end": "2023-08-29",
+        "rows": 90,
+        "expected": 90,
+        "status": "FULL"
+      },
+      {
+        "start": "2023-08-30",
+        "end": "2023-11-27",
+        "rows": 90,
+        "expected": 90,
+        "status": "FULL"
+      },
+      {
+        "start": "2023-11-28",
+        "end": "2024-02-25",
+        "rows": 90,
+        "expected": 90,
+        "status": "FULL"
+      },
+      {
+        "start": "2024-02-26",
+        "end": "2024-05-25",
+        "rows": 90,
+        "expected": 90,
+        "status": "FULL"
+      },
+      {
+        "start": "2024-05-26",
+        "end": "2024-08-23",
+        "rows": 90,
+        "expected": 90,
+        "status": "FULL"
+      },
+      {
+        "start": "2024-08-24",
+        "end": "2024-11-21",
+        "rows": 90,
+        "expected": 90,
+        "status": "FULL"
+      },
+      {
+        "start": "2024-11-22",
+        "end": "2025-02-19",
+        "rows": 90,
+        "expected": 90,
+        "status": "FULL"
+      },
+      {
+        "start": "2025-02-20",
+        "end": "2025-05-20",
+        "rows": 90,
+        "expected": 90,
+        "status": "FULL"
+      },
+      {
+        "start": "2025-05-21",
+        "end": "2025-08-18",
+        "rows": 90,
+        "expected": 90,
+        "status": "FULL"
+      },
+      {
+        "start": "2025-08-19",
+        "end": "2025-11-16",
+        "rows": 90,
+        "expected": 90,
+        "status": "FULL"
+      },
+      {
+        "start": "2025-11-17",
+        "end": "2026-02-14",
+        "rows": 90,
+        "expected": 90,
+        "status": "FULL"
+      },
+      {
+        "start": "2026-02-15",
+        "end": "2026-05-15",
+        "rows": 90,
+        "expected": 90,
+        "status": "FULL"
+      },
+      {
+        "start": "2026-05-16",
+        "end": "2026-08-13",
+        "rows": 90,
+        "expected": 90,
+        "status": "FULL"
+      },
+      {
+        "start": "2026-08-14",
+        "end": "2026-10-23",
+        "rows": 71,
+        "expected": 71,
+        "status": "FULL"
+      }
+    ]
+  },
+  "alignment": {
+    "common_trading_days": 822,
+    "only_in_stock": [],
+    "only_in_index": [],
+    "requested_start": "2023-06-01",
+    "requested_end": "2026-10-23",
+    "first_common": "2023-06-01",
+    "last_common": "2026-10-23"
+  }
+}
