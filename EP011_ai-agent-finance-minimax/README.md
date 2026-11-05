@@ -1,4 +1,4 @@
-# MiniMax Code 金融功能入门教程
+# AI Agent 金融入门（MiniMax Code）
 
 面向金融工作的 AI Agent 操作案例，包含实际执行提示词和主要交付物，供读者查看、复现和继续修改。
 
