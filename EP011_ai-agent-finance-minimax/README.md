@@ -54,4 +54,5 @@ deliverables/
 
 ## 视频
 
-待发布。
+- [B站视频](https://www.bilibili.com/video/BV1Yg4i6xEpN/)
+- [YouTube 视频](https://youtu.be/W0JwtPAGMvo)
