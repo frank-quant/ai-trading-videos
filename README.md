@@ -24,6 +24,7 @@
 | EP009 | [用 ZCode Workflow 做 A 股策略研究](EP009_zcode-quant-workflow/) | 八步研究、AI/随机对照与测试集评估，严格达标为0，保留三条研究候选 | 干净研究工程 + 八步提示词 + 最终实验结果 + 收益复核 | [B站](https://www.bilibili.com/video/BV1r6nW6RESd/) · [YouTube](https://youtu.be/cDk9BZJKVZI) |
 | EP010 | [Kimi K3.1 Pro金融实测](EP010_kimi-k31-finance/) | 6个金融任务，从研报获取到模型、回测与IPO问询报告 | 提示词 + 原始交付 + 数据代码 + 复核说明 | [B站](https://www.bilibili.com/video/BV1uExX6cE1W/) · [YouTube](https://youtu.be/W6erR8g0Ci4) |
 | EP011 | [AI Agent 金融入门（MiniMax Code）](EP011_ai-agent-finance-minimax/) | 5项金融功能与2个综合场景，从数据查询到研究、图谱和量化回测 | 全部提示词 + 主要交付物 + 复现材料 | [B站](https://www.bilibili.com/video/BV1Yg4i6xEpN/) · [YouTube](https://youtu.be/W0JwtPAGMvo) |
+| EP012 | [Qwen4-Max 实测｜从量化论文到可运行的交易策略](EP012_qwen4-max-quant-paper/) | 复现 Chain-of-Alpha 的因子生成与优化流程，三版策略样本外对照 | 五步提示词原文 + 实际执行交付物 | [B站](https://www.bilibili.com/video/BV1So1HzkE1t/) · [YouTube](https://youtu.be/JIZPa4mrYJU) |
 
 ## 每期目录里有什么
 
@@ -53,6 +54,7 @@
 | EP009 | A股回测引擎、数据下载、八层漏斗、八步提示词与结果复核 | 宿主机 / AI执行工具 | Python 3.14、Tushare Pro接口权限；结果复核仅需Python标准库 | [八步操作手册](EP009_zcode-quant-workflow/research/EP010_操作手册.md) |
 | EP010 | 6个金融任务提示词、PPT/Word/Excel、回测代码与数据 | Kimi客户端Work模式 / 支持文件执行的AI工具 | 金融技能与数据源权限；ETF复算需Python及pandas/numpy/matplotlib | [配套资料](EP010_kimi-k31-finance/) |
 | EP011 | 5项金融功能与2个综合场景提示词、HTML/Excel/图谱、回测与复现材料 | MiniMax Code本地项目 / 支持文件执行与金融插件的AI工具 | 金融数据、企查查、Excel等插件及相应数据权限 | [配套资料](EP011_ai-agent-finance-minimax/) |
+| EP012 | 五步提示词、候选账本、策略代码、已保存模型与三版揭盲明细 | Claude Code / Qwen4-Max | 跟做需同口径行情，查看交付物可直接打开 | [配套资料](EP012_qwen4-max-quant-paper/) |
 
 宿主机那部分(EP004 / EP007):
 
