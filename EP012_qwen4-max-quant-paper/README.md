@@ -2,6 +2,8 @@
 
 用 Qwen4-Max 和 Claude Code 复现 [Chain-of-Alpha](https://aclanthology.org/2026.findings-emnlp.506/) 的因子生成与优化流程。演示实验使用沪深 300 历史成分股、BaoStock 日线和次日开盘成交。
 
+观看视频 · [B 站](https://www.bilibili.com/video/BV1So1HzkE1t/) · [YouTube](https://youtu.be/JIZPa4mrYJU)
+
 ## 先选你要看的内容
 
 - **我想跟着做一遍** → [视频里的五步提示词](prompts/五步执行提示词.md)。按顺序复制即可，先在一个新项目里做搜索、解读、初版与优化，冻结策略后再开封存评测。
