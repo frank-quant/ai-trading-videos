@@ -2,15 +2,11 @@
 
 用 Qwen4-Max 和 Claude Code 复现 [Chain-of-Alpha](https://aclanthology.org/2026.findings-emnlp.506/) 的因子生成与优化流程。演示实验使用沪深 300 历史成分股、BaoStock 日线和次日开盘成交。
 
-## 从哪里开始
+## 先选你要看的内容
 
-| 想看什么 | 文件 |
-|---|---|
-| 用 AI 从头跟做 | [五步执行提示词](prompts/五步执行提示词.md) |
-| 初版做了哪些尝试 | [初版报告](output/report.md) · [候选账本](output/ledger.jsonl) |
-| 一条因子怎么改 | [优化报告](output/optimization_report.md) · [因子血缘](output/lineage.md) · [优化账本](output/optimization_ledger.jsonl) |
-| 看开发时保留的策略 | [optC2 交付说明](deliverable/DELIVERY.md) · [公式与配置](deliverable/strategy.json) |
-| 看最终三版揭盲 | [评测报告](evaluation/three_versions_branch_20261120/report.md) · [净值图](evaluation/three_versions_branch_20261120/nav_all_versions.png) · [逐日净值](evaluation/three_versions_branch_20261120/nav_daily.csv) · [逐笔成交示例（v2）](evaluation/three_versions_branch_20261120/trades_v2.csv) |
+- **我想跟着做一遍** → [视频里的五步提示词](prompts/五步执行提示词.md)。按顺序复制即可，先在一个新项目里做搜索、解读、初版与优化，冻结策略后再开封存评测。
+- **我想看本次实际跑出来的文件** → [执行交付物](deliverables/README.md)。报告、候选账本、模型、逐日净值和逐笔成交都在这里。
+- **我想用已经保存的模型复跑** → [复跑保存的策略](#复跑保存的策略)。
 
 ## 如何读结果
 
@@ -27,12 +23,12 @@
 
 ## 复跑保存的策略
 
-在本目录运行 `python -m pip install -r requirements.txt`。代码和已保存模型可在本地运行回测，无需 Qwen API。行情数据由使用者准备，项目附有原始实验的清单与校验值。
+进入 `deliverables/` 目录运行 `python -m pip install -r requirements.txt`。代码和已保存模型可在本地运行回测，无需 Qwen API。行情数据由使用者准备，项目附有原始实验的清单与校验值。
 
 | 用途 | 放置目录 | 对应行情 |
 |---|---|---|
-| 重载开发阶段的 optC2 | [data/](data/) | 2013 年预热至 2024-12-31 |
-| 用保存的模型跑三版样本外评测 | [evaluation/local_data_20261120/](evaluation/local_data_20261120/) | 含 2024 年预热，评测至 2026-11-20 |
+| 重载开发阶段的 optC2 | [data/](deliverables/data/) | 2013 年预热至 2024-12-31 |
+| 用保存的模型跑三版样本外评测 | [evaluation/local_data_20261120/](deliverables/evaluation/local_data_20261120/) | 含 2024 年预热，评测至 2026-11-20 |
 
 两处均需 `daily_bars.parquet`（`date`、`code`、原始 OHLC、`preclose`、`volume`、`amount`、`tradestatus`、`isST`、后复权 `adj_open`、`adj_high`、`adj_low`、`adj_close`、`adj_vwap`）和 `hs300_members.parquet`（`date`、`code`，历史月末成分快照）。新下载或不同供应商的行情可能与原快照不同，逐项复算原结果需要同一数据版本。直接检查已归档净值和成交明细无需原始行情。
 
