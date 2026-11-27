@@ -1,0 +1,16 @@
+{
+  "source": "Existing BaoStock archive extended with BaoStock native daily data",
+  "archived_through": "2026-08-31",
+  "new_through": "2026-11-20",
+  "new_days": 53,
+  "new_rows": 15928,
+  "overlap_rows_verified": 1806,
+  "sha256": {
+    "daily_bars.parquet": "97b57645082a934251ee5e8d464d84656695bfa356d98242ed071949574da792",
+    "hs300_members.parquet": "2c3459b3b087c24d5fb3429df304e0c20c277fce4f654fe03877d7dbb74203bf"
+  },
+  "legacy_holdings_without_new_quotes": [
+    "sh.600837",
+    "sh.601989"
+  ]
+}

@@ -1,0 +1,9 @@
+__pycache__/
+.venv/
+data/*.parquet
+evaluation/local_data_20261120/*.parquet
+output/factor_values/
+output/*.parquet
+output/v2/*.parquet
+deliverable/run_output/
+evaluation/reproduced_20261120/

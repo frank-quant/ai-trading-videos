@@ -1,0 +1,7 @@
+numpy
+pandas
+pyarrow
+scipy
+lightgbm
+matplotlib
+tabulate

@@ -1,0 +1,99 @@
+{
+  "data": {
+    "bars": "data/daily_bars.parquet",
+    "members": "data/hs300_members.parquet",
+    "warmup_start": "2013-01-01",
+    "train": ["2014-01-01", "2022-12-31"],
+    "validation": ["2023-01-01", "2024-12-31"],
+    "holdout_note": "2025+ not present in archive; reserved for final test"
+  },
+  "label": {
+    "horizon_trading_days": 10,
+    "definition": "adj_open[t+11] / adj_open[t+1] - 1",
+    "endpoint_rule": "both t+1 and t+11 must lie inside the same segment and be valid trading opens"
+  },
+  "formula": {
+    "fields": ["open", "high", "low", "close", "vwap", "volume", "amount", "change"],
+    "field_price_basis": "backward-adjusted (adj_*); volume/amount raw; all masked NaN on suspended days",
+    "window_range": [2, 60],
+    "lag_range": [1, 60],
+    "max_total_lookback": 120,
+    "max_operator_nodes": 15,
+    "max_distinct_fields": 3,
+    "operators": ["Add", "Sub", "Mul", "Div", "Log", "Abs", "Sign", "Mean", "Std", "Var", "Sum", "Max", "Min", "Rank", "Ref", "Delta", "Corr", "If", "Gt", "Lt"]
+  },
+  "generation": {
+    "max_batches": 4,
+    "factors_per_batch": 5,
+    "protocol": "record hypothesis + expression first, then evaluate, read batch feedback before next batch"
+  },
+  "pool_gates": {
+    "train_rankic_min_exclusive": 0.0,
+    "val_rankic_min": 0.015,
+    "val_rankicir_min": 0.20,
+    "val_coverage_min": 0.70,
+    "val_top30_turnover_max": 1.5,
+    "max_abs_mean_daily_spearman_vs_pooled": 0.80,
+    "max_pool_size": 10,
+    "min_stocks_per_cross_section": 30,
+    "truncation_test": {
+      "method": "winsorize daily cross-section at 1/99 percentiles among eligible stocks",
+      "pass_val_rankic_min": 0.015
+    }
+  },
+  "combine": {
+    "transform": "daily cross-sectional percentile among eligible stocks with a value",
+    "predict_rule": "only rows where all pooled factors are present",
+    "model": "LightGBM",
+    "params": {
+      "objective": "regression",
+      "num_leaves": 24,
+      "max_depth": 8,
+      "learning_rate": 0.005,
+      "n_estimators": 2000,
+      "reg_alpha": 0.1,
+      "reg_lambda": 0.1,
+      "early_stopping_rounds": 200,
+      "log_evaluation": 10
+    },
+    "fit": "train segment",
+    "early_stop": "validation segment"
+  },
+  "backtest": {
+    "universe_rule": "latest month-end snapshot with date <= signal day",
+    "exclusions": ["suspended (tradestatus!=1)", "ST (isST==1)", "invalid price"],
+    "initial_cash": 1000000,
+    "long_only": true,
+    "leverage": false,
+    "fractional_shares": true,
+    "signal_time": "close of day t",
+    "execution_time": "open of day t+1",
+    "first_day_max_buys": 30,
+    "daily_max_successful_buys": 3,
+    "daily_max_successful_sells": 3,
+    "swap_rule": "buys must score higher than the lowest-scoring name sold today (or lowest holding if no sells)",
+    "tie_break": "equal model scores ranked by mean pooled-factor percentile (descending); deterministic",
+    "order": "sells before buys",
+    "new_position_cap": "1/30 of opening equity",
+    "execution_price": "adj_open (backward-adjusted)",
+    "valuation_price": "adj_close; suspended holdings at last valid adj_close",
+    "block_rules": ["suspended", "missing/invalid open", "open at limit-up blocks buys", "open at limit-down blocks sells"],
+    "limit_estimation": {
+      "basis": "raw preclose (official ex-rights reference)",
+      "rounding": "half-up to 0.01",
+      "rates": {"main_board": 0.10, "chinext_before_2020_08_24": 0.10, "chinext_from_2020_08_24": 0.20, "star": 0.20}
+    },
+    "fees": {"buy": 0.0003, "sell": 0.001},
+    "benchmark": {
+      "universe": "same historical constituents, same exclusions",
+      "weight": "equal weight",
+      "signal": "last trading day of each month",
+      "execution": "next trading day open",
+      "fees_and_blocks": "same as strategy",
+      "trade_cap": "none (monthly rebalance)",
+      "initial_cash": 1000000
+    },
+    "execution_window": ["2023-01-03", "2024-12-31"]
+  },
+  "output_dir": "output"
+}

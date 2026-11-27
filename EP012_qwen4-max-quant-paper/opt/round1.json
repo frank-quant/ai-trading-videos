@@ -1,0 +1,29 @@
+{
+  "round": 1,
+  "variants": [
+    {
+      "id": "optA1", "seed": "b4_pv_diverge_amount", "parent": "b4_pv_diverge_amount",
+      "reason": "母体 val IC 0.0301 过线但 ICIR 0.193 差 0.007。对每日的10日量价(成交额)秩相关再取5日均值，平滑 IC 序列的时间波动。",
+      "target": "把 ICIR 抬过 0.20，同时保住 IC≥0.015，给池子补一条量能轴。",
+      "expression": "Sub(0, Mean(Corr(Rank($close, 5), Rank($amount, 5), 10), 5))"
+    },
+    {
+      "id": "optB1", "seed": "b3_cc_vol", "parent": "b3_cc_vol",
+      "reason": "母体 val IC 0.1049 很强但与冠军 low_range_20 相关 0.899 被闸。改用下行半偏差（只统计负收益日的波动），测度从全波幅转向下行风险。",
+      "target": "与冠军的截面相关降到 0.80 以下，同时保住 IC≥0.015/ICIR≥0.20，让第二条波动轴入池。",
+      "expression": "Sub(0, Std(If(Lt($change, 0), $change, 0), 20))"
+    },
+    {
+      "id": "optC1", "seed": "b3_low_range_20", "parent": "b3_low_range_20",
+      "reason": "冠军 val IC 0.1146/ICIR 0.456。把平均窗口从20日拉到60日，用更长的样本估计日内振幅常态。",
+      "target": "提高 ICIR（估计更稳）并争取更高 IC；换手已很低，维持。",
+      "expression": "Sub(0, Mean(Div(Sub($high, $low), $close), 60))"
+    },
+    {
+      "id": "optD1", "seed": "b4_max_lottery", "parent": "b4_max_lottery",
+      "reason": "母体 val IC 0.0872/ICIR 0.427。把最大单日涨幅的回看从20日拉到60日，捕捉更完整的彩票型炒作记忆。",
+      "target": "提高 IC 与 ICIR。",
+      "expression": "Sub(0, Max($change, 60))"
+    }
+  ]
+}

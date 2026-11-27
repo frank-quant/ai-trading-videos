@@ -1,0 +1,139 @@
+{
+  "label": "research_candidate",
+  "note": "Both fixed-protocol LightGBM versions (v1, v2) had negative validation excess. This factor-ranking strategy is a clearly-labeled research candidate, NOT the paper-protocol deliverable. Uses the SAME data splits, universe, trading rules, fees and benchmark as the initial version; only the combiner differs (single-factor percentile ranking instead of LightGBM).",
+  "combiner": "single_factor_percentile",
+  "factors": [
+    {
+      "id": "optC2",
+      "name": "b3_low_range_20 optimized",
+      "expression": "Sub(0, Mean(Div(Sub($high, $low), $vwap), 60))",
+      "lineage": [
+        "b3_low_range_20",
+        "optC1",
+        "optC2"
+      ],
+      "val_rankic": 0.1211836443189184,
+      "val_rankicir": 0.4618866607942796
+    }
+  ],
+  "selection": "daily top-30 eligible by factor percentile; deterministic tie-break by same percentile",
+  "data_spec": {
+    "bars": "data/daily_bars.parquet",
+    "members": "data/hs300_members.parquet",
+    "warmup_start": "2013-01-01",
+    "train": [
+      "2014-01-01",
+      "2022-12-31"
+    ],
+    "validation": [
+      "2023-01-01",
+      "2024-12-31"
+    ],
+    "holdout_note": "2025+ not present in archive; reserved for final test"
+  },
+  "label_spec": {
+    "horizon_trading_days": 10,
+    "definition": "adj_open[t+11] / adj_open[t+1] - 1",
+    "endpoint_rule": "both t+1 and t+11 must lie inside the same segment and be valid trading opens"
+  },
+  "universe_exclusions": [
+    "suspended (tradestatus!=1)",
+    "ST (isST==1)",
+    "invalid price"
+  ],
+  "trading": {
+    "universe_rule": "latest month-end snapshot with date <= signal day",
+    "exclusions": [
+      "suspended (tradestatus!=1)",
+      "ST (isST==1)",
+      "invalid price"
+    ],
+    "initial_cash": 1000000,
+    "long_only": true,
+    "leverage": false,
+    "fractional_shares": true,
+    "signal_time": "close of day t",
+    "execution_time": "open of day t+1",
+    "first_day_max_buys": 30,
+    "daily_max_successful_buys": 3,
+    "daily_max_successful_sells": 3,
+    "swap_rule": "buys must score higher than the lowest-scoring name sold today (or lowest holding if no sells)",
+    "tie_break": "equal model scores ranked by mean pooled-factor percentile (descending); deterministic",
+    "order": "sells before buys",
+    "new_position_cap": "1/30 of opening equity",
+    "execution_price": "adj_open (backward-adjusted)",
+    "valuation_price": "adj_close; suspended holdings at last valid adj_close",
+    "block_rules": [
+      "suspended",
+      "missing/invalid open",
+      "open at limit-up blocks buys",
+      "open at limit-down blocks sells"
+    ],
+    "limit_estimation": {
+      "basis": "raw preclose (official ex-rights reference)",
+      "rounding": "half-up to 0.01",
+      "rates": {
+        "main_board": 0.1,
+        "chinext_before_2020_08_24": 0.1,
+        "chinext_from_2020_08_24": 0.2,
+        "star": 0.2
+      }
+    },
+    "fees": {
+      "buy": 0.0003,
+      "sell": 0.001
+    },
+    "benchmark": {
+      "universe": "same historical constituents, same exclusions",
+      "weight": "equal weight",
+      "signal": "last trading day of each month",
+      "execution": "next trading day open",
+      "fees_and_blocks": "same as strategy",
+      "trade_cap": "none (monthly rebalance)",
+      "initial_cash": 1000000
+    },
+    "execution_window": [
+      "2023-01-03",
+      "2024-12-31"
+    ]
+  },
+  "validation_metrics": {
+    "strategy": {
+      "final_nav": 1573330.1511814282,
+      "total_return": 0.5710894443626895,
+      "cagr_geometric": 0.2651854629334931,
+      "annualized_return_arithmetic": 0.24614948904936385,
+      "annualized_vol": 0.1442320220839356,
+      "sharpe_no_rf": 1.7066216329277943,
+      "max_drawdown": -0.08725249666076107,
+      "trading_days": 484
+    },
+    "benchmark": {
+      "final_nav": 1071532.229459493,
+      "total_return": 0.06321560293688888,
+      "cagr_geometric": 0.03243019672864733,
+      "annualized_return_arithmetic": 0.050660995837192975,
+      "annualized_vol": 0.1944651127874606,
+      "sharpe_no_rf": 0.260514573082127,
+      "max_drawdown": -0.24937688996958562,
+      "trading_days": 484
+    },
+    "excess": {
+      "annualized_excess_arithmetic": 0.19548849321217085,
+      "information_ratio": 1.5317642195616596,
+      "win_rate_vs_benchmark": 0.5610766045548654
+    },
+    "strategy_account": {
+      "fees_paid": 20502.727779401688,
+      "buys": 409,
+      "sells": 379,
+      "blocked_attempts": 17
+    },
+    "benchmark_account": {
+      "fees_paid": 1442.3193979284372,
+      "buys": 3913,
+      "sells": 3227,
+      "blocked_attempts": 71
+    }
+  }
+}

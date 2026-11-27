@@ -1,0 +1,36 @@
+{
+  "batch": 3,
+  "rationale": "第2批 b2_low_range 全过（val IC 0.107/ICIR 0.46）→围绕低波动做窗口与测度变体；pv_diverge 与 vol_spike 卡在 ICIR→用时序平均/更长分子提稳定性；新增隔夜跳空反转。不重复提交已知失败构造。",
+  "factors": [
+    {
+      "id": "b3_low_range_20",
+      "name": "低日内波幅20日版",
+      "hypothesis": "冠军因子 b2_low_range 的窗口拉长版：20日平均日内振幅更低→收益更高。预期 IC 量级相近、ICIR 更高（估计更稳）。",
+      "expression": "Sub(0, Mean(Div(Sub($high, $low), $close), 20))"
+    },
+    {
+      "id": "b3_cc_vol",
+      "name": "低收盘波动异象",
+      "hypothesis": "用日收益率20日标准差替代日内振幅测低波动：低波动股未来收益更高。与日内波幅版测度不同，可能提供增量信息。",
+      "expression": "Sub(0, Std($change, 20))"
+    },
+    {
+      "id": "b3_pv_diverge_avg",
+      "name": "量价背离时序平均",
+      "hypothesis": "b2_pv_diverge IC 过线但 ICIR 0.128 不足。对每日的10日量价秩相关再取5日均值，平滑 IC 序列波动，预期 ICIR 抬过 0.20。",
+      "expression": "Sub(0, Mean(Corr(Rank($close, 5), Rank($volume, 5), 10), 5))"
+    },
+    {
+      "id": "b3_vol_trend_10",
+      "name": "量能趋势10日版",
+      "hypothesis": "b2_vol_spike_rev ICIR 0.147 差一步。分子从5日均量改10日均量，降低单日量能噪声，预期 ICIR 过 0.20。",
+      "expression": "Sub(0, Div(Mean($volume, 10), Mean($volume, 60)))"
+    },
+    {
+      "id": "b3_overnight_rev",
+      "name": "隔夜跳空反转",
+      "hypothesis": "近5日平均隔夜跳空 (open-昨收)/昨收 持续为正代表开盘追价情绪，预期反转。取负号后 RankIC 为正。",
+      "expression": "Sub(0, Mean(Div(Sub($open, Ref($close, 1)), Ref($close, 1)), 5))"
+    }
+  ]
+}

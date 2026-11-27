@@ -1,0 +1,36 @@
+{
+  "batch": 1,
+  "rationale": "首批覆盖五类经典价量直觉：VWAP 偏离回归、量价配合、波动调整动量、Amihud 非流动性、区间位置。方向假设先写死，用反馈修正。",
+  "factors": [
+    {
+      "id": "b1_vwap_revert",
+      "name": "VWAP 偏离回归",
+      "hypothesis": "收盘价低于近5日平均VWAP（按20日波动归一）代表相对近期成交成本的折价，10日尺度上预期反弹，RankIC 为正。",
+      "expression": "Div(Sub(Mean($vwap, 5), $close), Std($close, 20))"
+    },
+    {
+      "id": "b1_pv_corr",
+      "name": "量价秩相关",
+      "hypothesis": "5日价格秩与5日成交量秩在10日窗口内正相关，代表上涨有量配合（知情资金参与），未来10日收益更高，RankIC 为正。",
+      "expression": "Corr(Rank($close, 5), Rank($volume, 5), 10)"
+    },
+    {
+      "id": "b1_risk_mom",
+      "name": "波动调整5日动量",
+      "hypothesis": "假设大盘股存在短期动量：5日涨幅除以20日波动后仍预测正向收益。若A股短期反转主导，IC 将为负，下一批翻转方向。",
+      "expression": "Div(Delta($close, 5), Std($close, 20))"
+    },
+    {
+      "id": "b1_amihud",
+      "name": "Amihud 非流动性",
+      "hypothesis": "单位成交额引起的绝对价格变动越大，流动性越差，存在非流动性溢价，RankIC 为正。",
+      "expression": "Mean(Div(Abs(Delta($close, 1)), $amount), 10)"
+    },
+    {
+      "id": "b1_range_pos",
+      "name": "20日区间位置",
+      "hypothesis": "收盘价处于20日高低区间上沿代表突破动能，预期动量延续，RankIC 为正；若反转为负则下一批做反转版。",
+      "expression": "Div(Sub($close, Min($low, 20)), Sub(Max($high, 20), Min($low, 20)))"
+    }
+  ]
+}

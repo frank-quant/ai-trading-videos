@@ -1,0 +1,36 @@
+{
+  "batch": 2,
+  "rationale": "按第1批反馈修正：量价正相关稳定负IC→翻转并拉长窗口提稳定性；短期动量弱负→做20日反转；Amihud水平项训练/验证变号→弃水平改波动类；新增量能过热反转与日内追涨反转。",
+  "factors": [
+    {
+      "id": "b2_pv_diverge",
+      "name": "量价背离（翻转平滑版）",
+      "hypothesis": "第1批 b1_pv_corr 训练/验证 IC 均约 -0.03：价涨量缩的背离预测更高收益。翻转符号并把秩窗口拉到10日、相关窗口20日以降低噪声，预期 RankIC≈+0.03、ICIR 过 0.20。",
+      "expression": "Sub(0, Corr(Rank($close, 10), Rank($volume, 10), 20))"
+    },
+    {
+      "id": "b2_rev_20d",
+      "name": "20日波动调整反转",
+      "hypothesis": "第1批5日动量 IC 为负但太弱。把反转窗口拉长到20日、用60日波动归一，预期超跌反弹更强，RankIC 为正且量级大于5日版。",
+      "expression": "Sub(0, Div(Delta($close, 20), Std($close, 60)))"
+    },
+    {
+      "id": "b2_vol_spike_rev",
+      "name": "量能过热反转",
+      "hypothesis": "近5日均量相对60日常态放大代表关注度过热/换手过度，A股高换手股后续跑输。取负号后预期 RankIC 为正。",
+      "expression": "Sub(0, Div(Mean($volume, 5), Mean($volume, 60)))"
+    },
+    {
+      "id": "b2_low_range",
+      "name": "低日内波幅异象",
+      "hypothesis": "近5日平均日内振幅 (high-low)/close 越低，未来收益越高（低波动异象+彩票偏好反转）。取负号后预期 RankIC 为正。",
+      "expression": "Sub(0, Mean(Div(Sub($high, $low), $close), 5))"
+    },
+    {
+      "id": "b2_intraday_rev",
+      "name": "日内追涨反转",
+      "hypothesis": "近5日平均日内收益 (close-open)/open 持续为正代表日内追涨资金推动，预期反转。取负号后 RankIC 为正。",
+      "expression": "Sub(0, Mean(Div(Sub($close, $open), $open), 5))"
+    }
+  ]
+}

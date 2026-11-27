@@ -1,0 +1,29 @@
+{
+  "round": 2,
+  "variants": [
+    {
+      "id": "optA2", "seed": "b4_pv_diverge_amount", "parent": "b4_pv_diverge_amount",
+      "reason": "A1 时序平均后 ICIR 0.190 仍不足；该族三种构造 ICIR 都卡在 0.19 附近。改相关窗口 10→20 日（秩窗口仍5），用更长窗口估相关降噪声。若仍 <0.20 则按论文终止此链。",
+      "target": "ICIR 过 0.20。",
+      "expression": "Sub(0, Corr(Rank($close, 5), Rank($amount, 5), 20))"
+    },
+    {
+      "id": "optB2", "seed": "b3_cc_vol", "parent": "b3_cc_vol",
+      "reason": "B1 公式合法但引擎对标量比较 Lt($change,0) 误调 .notna() 报错（已修复）。重测下行半偏差构造。",
+      "target": "与冠军相关 ≤0.80 且 IC≥0.015/ICIR≥0.20。",
+      "expression": "Sub(0, Std(If(Lt($change, 0), $change, 0), 20))"
+    },
+    {
+      "id": "optC2", "seed": "b3_low_range_20", "parent": "optC1",
+      "reason": "C1（60日）IC 升到 0.1210。把振幅分母从收盘价换成 VWAP，衡量相对成交均价的波幅，测度略异。",
+      "target": "在 C1 基础上再提 IC 或降与同族相关。",
+      "expression": "Sub(0, Mean(Div(Sub($high, $low), $vwap), 60))"
+    },
+    {
+      "id": "optD2", "seed": "b4_max_lottery", "parent": "optD1",
+      "reason": "D1（60日 MAX）IC 升到 0.0962 但 ICIR 降到 0.4096。改用滚动5日最大值再取60日均值，平滑极值估计。",
+      "target": "保住 IC 的同时把 ICIR 抬回 0.43+。",
+      "expression": "Sub(0, Mean(Max($change, 5), 60))"
+    }
+  ]
+}

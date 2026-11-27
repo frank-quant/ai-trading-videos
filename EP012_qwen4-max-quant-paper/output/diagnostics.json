@@ -1,0 +1,19 @@
+{
+  "score_decile_mean_fwd_bp": {
+    "1": -0.8427793749132523,
+    "2": -39.44979842310915,
+    "3": 61.851916804307805,
+    "4": 35.999024368182155,
+    "5": 55.48455226906978,
+    "6": null,
+    "7": 28.77705783649806,
+    "8": null,
+    "9": 19.359866370302544,
+    "10": 4.20899377994821
+  },
+  "score_top30_mean_fwd_bp": 3.2295250614737623,
+  "universe_mean_fwd_bp": 21.88418504029375,
+  "score_bottom30_mean_fwd_bp": 1.7560534906507739,
+  "factor_only_top30_mean_fwd_bp": 90.52004810048841,
+  "note": "validation days with labels; mean 10d open-to-open forward return"
+}

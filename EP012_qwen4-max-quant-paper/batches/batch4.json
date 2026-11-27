@@ -1,0 +1,36 @@
+{
+  "batch": 4,
+  "rationale": "最后一批补正交轴：放量超跌（反转×量能）、VWAP 隐性吸筹、MAX 彩票效应、低波×量价背离交互、成交额版量价背离。低波族已有3个过线但预计相关闸只留1-2个，需要非低波信号入池。",
+  "factors": [
+    {
+      "id": "b4_capitulation",
+      "name": "放量超跌反转",
+      "hypothesis": "10日跌幅（60日波动归一）叠加近5日/60日量能放大：放量下跌=恐慌抛售出清，反弹更强。两腿相乘，预期 RankIC 为正且比纯反转稳定。",
+      "expression": "Mul(Sub(0, Div(Delta($close, 10), Std($close, 60))), Div(Mean($volume, 5), Mean($volume, 60)))"
+    },
+    {
+      "id": "b4_vwap_accum",
+      "name": "VWAP 隐性吸筹",
+      "hypothesis": "近5日收盘持续高于当日VWAP（日内净买压）且整体波动低：安静吸筹。除以20日收益波动放大低波条件下的信号，预期 RankIC 为正。",
+      "expression": "Div(Mean(Div(Sub($close, $vwap), $vwap), 5), Std($change, 20))"
+    },
+    {
+      "id": "b4_max_lottery",
+      "name": "MAX 彩票效应",
+      "hypothesis": "近20日最大单日涨幅越大，彩票型资金追逐越甚，后续跑输。取负号后预期 RankIC 为正；与低波相关但测度不同。",
+      "expression": "Sub(0, Max($change, 20))"
+    },
+    {
+      "id": "b4_lowvol_x_diverge",
+      "name": "低波×量价背离交互",
+      "hypothesis": "低波动腿（ICIR 0.43）乘以量价背离腿（IC 0.03）：安静股票里的缩量上涨更可信。预期继承低波稳定性并带入量能信息。",
+      "expression": "Mul(Sub(0, Std($change, 20)), Sub(0, Corr(Rank($close, 5), Rank($volume, 5), 10)))"
+    },
+    {
+      "id": "b4_pv_diverge_amount",
+      "name": "成交额版量价背离",
+      "hypothesis": "用成交额替代成交量做秩相关：成交额含价格权重，背离测度不同，可能比成交量版 ICIR 更高。取负号后预期 RankIC 为正。",
+      "expression": "Sub(0, Corr(Rank($close, 5), Rank($amount, 5), 10))"
+    }
+  ]
+}

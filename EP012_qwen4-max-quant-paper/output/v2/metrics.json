@@ -1,0 +1,39 @@
+{
+  "strategy": {
+    "final_nav": 891790.0581087071,
+    "total_return": -0.11810898008370019,
+    "cagr_geometric": -0.0633449709656505,
+    "annualized_return_arithmetic": -0.04834482596265212,
+    "annualized_vol": 0.1864346557877922,
+    "sharpe_no_rf": -0.2593124425197011,
+    "max_drawdown": -0.34116778470147135,
+    "trading_days": 484
+  },
+  "benchmark": {
+    "final_nav": 1071532.229459493,
+    "total_return": 0.06321560293688888,
+    "cagr_geometric": 0.03243019672864733,
+    "annualized_return_arithmetic": 0.050660995837192975,
+    "annualized_vol": 0.1944651127874606,
+    "sharpe_no_rf": 0.260514573082127,
+    "max_drawdown": -0.24937688996958562,
+    "trading_days": 484
+  },
+  "excess": {
+    "annualized_excess_arithmetic": -0.09900582179984509,
+    "information_ratio": -1.2733636311821976,
+    "win_rate_vs_benchmark": 0.463768115942029
+  },
+  "strategy_account": {
+    "fees_paid": 57259.17195442778,
+    "buys": 1479,
+    "sells": 1449,
+    "blocked_attempts": 6
+  },
+  "benchmark_account": {
+    "fees_paid": 1442.3193979284372,
+    "buys": 3913,
+    "sells": 3227,
+    "blocked_attempts": 71
+  }
+}

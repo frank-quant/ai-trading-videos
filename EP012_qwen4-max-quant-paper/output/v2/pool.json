@@ -1,0 +1,72 @@
+[
+  {
+    "id": "optC2",
+    "name": "b3_low_range_20",
+    "expression": "Sub(0, Mean(Div(Sub($high, $low), $vwap), 60))",
+    "hypothesis": "C1（60日）IC 升到 0.1210。把振幅分母从收盘价换成 VWAP，衡量相对成交均价的波幅，测度略异。",
+    "val_rankic": 0.1211836443189184,
+    "val_rankicir": 0.4618866607942796,
+    "truncation": {
+      "method": "winsorize daily cross-section at 1/99 percentiles",
+      "val_rankic_after": 0.12119291789752976,
+      "val_rankicir_after": 0.46193707975048814,
+      "passed": true
+    }
+  },
+  {
+    "id": "b2_low_range",
+    "name": "低日内波幅异象",
+    "expression": "Sub(0, Mean(Div(Sub($high, $low), $close), 5))",
+    "hypothesis": "近5日平均日内振幅 (high-low)/close 越低，未来收益越高（低波动异象+彩票偏好反转）。取负号后预期 RankIC 为正。",
+    "val_rankic": 0.10665885257657304,
+    "val_rankicir": 0.4627309492139978,
+    "truncation": {
+      "method": "winsorize daily cross-section at 1/99 percentiles",
+      "val_rankic_after": 0.10665206028577144,
+      "val_rankicir_after": 0.4626996738022387,
+      "passed": true
+    }
+  },
+  {
+    "id": "b3_cc_vol",
+    "name": "低收盘波动异象",
+    "expression": "Sub(0, Std($change, 20))",
+    "hypothesis": "用日收益率20日标准差替代日内振幅测低波动：低波动股未来收益更高。与日内波幅版测度不同，可能提供增量信息。",
+    "val_rankic": 0.10489511847792425,
+    "val_rankicir": 0.4269195306831963,
+    "truncation": {
+      "method": "winsorize daily cross-section at 1/99 percentiles",
+      "val_rankic_after": 0.10490260126379274,
+      "val_rankicir_after": 0.426956047489898,
+      "passed": true
+    }
+  },
+  {
+    "id": "optD1",
+    "name": "b4_max_lottery",
+    "expression": "Sub(0, Max($change, 60))",
+    "hypothesis": "母体 val IC 0.0872/ICIR 0.427。把最大单日涨幅的回看从20日拉到60日，捕捉更完整的彩票型炒作记忆。",
+    "val_rankic": 0.09621522435823941,
+    "val_rankicir": 0.4095633126334601,
+    "truncation": {
+      "method": "winsorize daily cross-section at 1/99 percentiles",
+      "val_rankic_after": 0.09619652636313338,
+      "val_rankicir_after": 0.40945647647671196,
+      "passed": true
+    }
+  },
+  {
+    "id": "optA2",
+    "name": "b4_pv_diverge_amount",
+    "expression": "Sub(0, Corr(Rank($close, 5), Rank($amount, 5), 20))",
+    "hypothesis": "A1 时序平均后 ICIR 0.190 仍不足；该族三种构造 ICIR 都卡在 0.19 附近。改相关窗口 10→20 日（秩窗口仍5），用更长窗口估相关降噪声。若仍 <0.20 则按论文终止此链。",
+    "val_rankic": 0.03594152779340418,
+    "val_rankicir": 0.208550397250681,
+    "truncation": {
+      "method": "winsorize daily cross-section at 1/99 percentiles",
+      "val_rankic_after": 0.03593821531783622,
+      "val_rankicir_after": 0.20853232571398528,
+      "passed": true
+    }
+  }
+]

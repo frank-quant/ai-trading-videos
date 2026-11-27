@@ -1,0 +1,12 @@
+{
+  "best_iteration": 117,
+  "train_rows": 584984,
+  "val_rows": 141216,
+  "feature_importance": {
+    "optC2": 677,
+    "b2_low_range": 304,
+    "b3_cc_vol": 514,
+    "optD1": 780,
+    "optA2": 416
+  }
+}

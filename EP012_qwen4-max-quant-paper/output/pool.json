@@ -1,0 +1,30 @@
+[
+  {
+    "id": "b3_low_range_20",
+    "name": "低日内波幅20日版",
+    "expression": "Sub(0, Mean(Div(Sub($high, $low), $close), 20))",
+    "hypothesis": "冠军因子 b2_low_range 的窗口拉长版：20日平均日内振幅更低→收益更高。预期 IC 量级相近、ICIR 更高（估计更稳）。",
+    "val_rankic": 0.11460816770598715,
+    "val_rankicir": 0.4564896170007469,
+    "truncation": {
+      "method": "winsorize daily cross-section at 1/99 percentiles",
+      "val_rankic_after": 0.11461273371932584,
+      "val_rankicir_after": 0.4565152955920011,
+      "passed": true
+    }
+  },
+  {
+    "id": "b4_max_lottery",
+    "name": "MAX 彩票效应",
+    "expression": "Sub(0, Max($change, 20))",
+    "hypothesis": "近20日最大单日涨幅越大，彩票型资金追逐越甚，后续跑输。取负号后预期 RankIC 为正；与低波相关但测度不同。",
+    "val_rankic": 0.08718605598556936,
+    "val_rankicir": 0.426921189255902,
+    "truncation": {
+      "method": "winsorize daily cross-section at 1/99 percentiles",
+      "val_rankic_after": 0.08719157931549643,
+      "val_rankicir_after": 0.42693069187938365,
+      "passed": true
+    }
+  }
+]

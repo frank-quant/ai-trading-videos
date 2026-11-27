@@ -1,0 +1,71 @@
+{
+  "v1": {
+    "final_nav": 874368.9765810671,
+    "cumulative_return": -0.12563102341893295,
+    "benchmark_cumulative": 0.07436126620225769,
+    "return_vs_benchmark": -0.19999228962119064,
+    "max_drawdown": -0.2930314006877628,
+    "benchmark_max_drawdown": -0.14859358165492342,
+    "annual_one_way_turnover": 25.630433558013,
+    "per_year": {
+      "2025": 0.17450510137434017,
+      "2026": -0.25554263190689475
+    },
+    "benchmark_per_year": {
+      "2025": 0.19024448693426832,
+      "2026": -0.09736085485301671
+    },
+    "trading_days": 456,
+    "description": "LightGBM 38 trees, pool ['b3_low_range_20', 'b4_max_lottery']",
+    "fees_paid": 62282.469788080365,
+    "buys": 1395,
+    "sells": 1365,
+    "blocked_attempts": 31
+  },
+  "v2": {
+    "final_nav": 1117112.599831315,
+    "cumulative_return": 0.11711259983131495,
+    "benchmark_cumulative": 0.07436126620225769,
+    "return_vs_benchmark": 0.04275133362905725,
+    "max_drawdown": -0.10538466355858866,
+    "benchmark_max_drawdown": -0.14859358165492342,
+    "annual_one_way_turnover": 25.58706739924073,
+    "per_year": {
+      "2025": 0.11700410431087516,
+      "2026": 9.713081628004439e-05
+    },
+    "benchmark_per_year": {
+      "2025": 0.19024448693426832,
+      "2026": -0.09736085485301671
+    },
+    "trading_days": 456,
+    "description": "LightGBM 117 trees, pool ['optC2', 'b2_low_range', 'b3_cc_vol', 'optD1', 'optA2']",
+    "fees_paid": 64879.09951552803,
+    "buys": 1395,
+    "sells": 1365,
+    "blocked_attempts": 456
+  },
+  "deliverable": {
+    "final_nav": 1040521.3155107794,
+    "cumulative_return": 0.04052131551077931,
+    "benchmark_cumulative": 0.07436126620225769,
+    "return_vs_benchmark": -0.03383995069147838,
+    "max_drawdown": -0.1729900397093329,
+    "benchmark_max_drawdown": -0.14859358165492342,
+    "annual_one_way_turnover": 7.320898667281481,
+    "per_year": {
+      "2025": 0.05990749684903629,
+      "2026": -0.018290446473762545
+    },
+    "benchmark_per_year": {
+      "2025": 0.19024448693426832,
+      "2026": -0.09736085485301671
+    },
+    "trading_days": 456,
+    "description": "single-factor percentile optC2",
+    "fees_paid": 16883.924185882577,
+    "buys": 401,
+    "sells": 371,
+    "blocked_attempts": 1
+  }
+}

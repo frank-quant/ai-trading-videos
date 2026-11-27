@@ -1,0 +1,9 @@
+{
+  "best_iteration": 38,
+  "train_rows": 614100,
+  "val_rows": 141561,
+  "feature_importance": {
+    "b3_low_range_20": 490,
+    "b4_max_lottery": 384
+  }
+}

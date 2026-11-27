@@ -1,0 +1,29 @@
+{
+  "source": "BaoStock archived daily bars and historical HS300 membership",
+  "bars_min": "2013-01-04",
+  "bars_max": "2024-12-31",
+  "bar_rows": 1675037,
+  "trading_days": 2914,
+  "bar_codes": 680,
+  "members_min": "2013-12-31",
+  "members_max": "2024-12-31",
+  "member_snapshots": 133,
+  "train": [
+    "2014-01-01",
+    "2022-12-31"
+  ],
+  "validation": [
+    "2023-01-01",
+    "2024-12-31"
+  ],
+  "files": {
+    "daily_bars.parquet": {
+      "bytes": 105919168,
+      "sha256": "332865a6e229a7f78be521df3d1f4c06932d2e34e37b7bd253996d914e453591"
+    },
+    "hs300_members.parquet": {
+      "bytes": 16244,
+      "sha256": "b1b5e63ffa29246744f26d6ace8dacf266fcdce8d923ce984e2bd7b1bf9a200e"
+    }
+  }
+}
